@@ -73,33 +73,76 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <h1 id="wb-cont">SUBMISSION CERTIFICATION</h1>
 
 <section>
-<p align="right">Drugs Directorate
-						<br />Tunney's Pasture
-						<br />OTTAWA, Ontario
-						<br />K1A 0L2
+<h3 align="center">Health Canada Submission Certification
+<br />for NDSs, S/NDSs, NCs</h3>
+<br /><br />
+<p>Type of Submission:</p>
+&nbsp;&nbsp;&nbsp;&nbsp; <div class="form-group">
+		<select name="DrugSubmission" id="DrugSubmission" >
+            <option value="">Select</option>
+			<option value="NDS">NEW DRUG SUBMISSIONS (NDSs)</option>
+			<option value="SNDS">SUPPLEMENT TO A NEW DRUG SUBMISSION (S/NDSs)</option>
+			<option value="SANDS">SUPPLEMENT ABBREVIATED NEW DRUG SUBMISSIONS (SANDSs)</option>
+			<option value="AND">ABBREVIATED NEW DRUG SUBMISSIONS (ANDSs)</option>
+			<option value="NC">NOTIFIABLE CHANGES (NCs)</option>
+		</select>
 
-						<br />
-						<br />June 5, 1995</p>
-<h3>LETTER SENT TO ASSOCIATIONS</h3>
+	</div>
+<p>We certify that, to the best of our knowledge and belief, with reference to the submission pertaining to:
+<br />
+<input type="text" size="150">
+</p>
 
-
-	<p>The Submission Certification Form that was issued on March 3, 1995 has been revised as attached.  The electronic version of the revised form is available on the Drugs Directorate Bulletin Board.  </p>
-
-	<p>As stated in the covering letter of the previously issued form, a completed Submission Certification Form is required with all original and solicited information and material related to New Drug Submissions, Supplemental New Drug Submissions and Notifiable Changes.  This includes the original submission, submission updates, and responses to Screening Deficiency Notices, Notices of Deficiency, and Notices of Noncompliance.</p>
-
-	<p>Please advise your members that only those parts of the form that are applicable to the submission being filed are to be included.  For example, a New Drug Submission that includes pre-clinical and clinical studies must include all parts of the form.  A New Drug Submission that includes only comparative bioavailability studies must include part 1 of the form.  Notifiable Changes should include only the part 1 of the form.  If you or your member have any questions about the form or its use, please contact the Submission and Information Policy Division, Bureau of Drug Policy and Coordination, at (613)941-0827.</p>
-
-						<p>o/s</p>
-
-						<p>Dann M. Michols
-						<br />Executive Director
-						<br />National Pharmaceutical
-						<br />	Strategy</p>
-<p>Enclosure</p>
-<form method="get" action="SC_index2.html">
-    <button type="submit">Continue</button>
-</form>
+<ol>
+<li>All the information and material included in the submission and solicited information are accurate and complete, and that the sectional reports and the comprehensive summaries correctly represent the information and material referred to or included in the submission.  No information is false or misleading, <u>no omissions have been</u> made that may affect its accuracy and completeness.</li>
+<li>
+	<ol type="a">
+	<li>all pivotal studies included in the submission are complete and a final comprehensive analyses provided;</li>
+	<li>all pivotal data necessary to support the proposed indications, doses and formulations have been provided;</li>
+	<li>the formulation used in the studies (clinical and pharmacokinetic) is identical to that proposed for marketing or evidence that the preparations used in the pivotal clinical efficacy and pharmacokinetic studies are bioequivalent to the preparation to be marketed.  The batch of the drug substance or the final formulation used in pre-clinical studies (especially the carcinogenicity studies) is representative of that proposed for marketing, or acceptable evidence and rationale are provided to defend that any variation does not affect the interpretation of data generated in support of both safety and efficacy.</li>
+	</ol>
+</li>
+<li>Attestion for data integrity</li>
+</ol>
+<table border="1">
+<div class="form-group">
+<form method="POST" action="process.asp" name="form1"> 
+<tr>
+<td><p><strong>Salutation</strong></p>
+		<select name="salutation" id="salutation" >
+            <option value="">Select</option>
+			<option value="mr">Mr.</option>
+			<option value="ms">Ms.</option>
+			<option value="mrs">Mrs.</option>
+			<option value="dr">Dr.</option>
+		</select>
+</td>
+<td><p><strong>Given Name</strong></p><input type="text" name="SEO_givenname" size="50"></td>
+<td><p><strong>Surname</strong></p><input type="text" name="SEO_surname" size="50"></td></td>
+<td><p><strong>Position Title</strong></p><p>Senior Executive Officer</p></td>
+</tr>
+<tr>
+<td><p><strong>Salutation</strong></p>
+		<select name="salutation" id="salutation" >
+            <option value="">Select</option>
+			<option value="mr">Mr.</option>
+			<option value="ms">Ms.</option>
+			<option value="mrs">Mrs.</option>
+			<option value="dr">Dr.</option>
+		</select>
+</td>
+<td><p><strong>Given Name</strong></p><input type="text" name="SMSO_givenname" size="50"></td>
+<td><p><strong>Surname</strong></p><input type="text" name ="SMSO_surname" size="50"></td></td>
+<td><p><strong>Position Title</strong></p><p>Senior Medical/Scientific Officer</p></td>
+</tr>
+</table>	
+<input type="submit" name="Submit" value="Submit"></td> 
 </section>
+<div class="form-inline float-right">
+    <input data-role="none" class="button button-accent" value="Generate" id="doc" name="doc" type="submit" />
+    <input data-role="none" class="button button-accent" value="Save draft" id="xml" name="xml" type="submit" formnovalidate />
+    <input data-role="none" class="button button-accent" value="Clear form" id="reset" name="reset" type="button" onClick="window.location.assign('index-eng2.html');" />
+</div>
 
 <div class="clear"></div>
 <!-- MainContentEnd -->
