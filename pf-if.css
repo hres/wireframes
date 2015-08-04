@@ -1,0 +1,38 @@
+/* CLF 2.0 TEMPLATE VERSION 1.04 | VERSION 1.04 DU GABARIT NSI 2.0 */
+/* PRINT CSS BEGINS | DEBUT DU CSS POUR L'IMPRESSION */
+@media print {
+	h1, h2, h3, h4, h5, h6, body, p, blockquote, table, td, th, li, a, ul, ol, dd, dl, dt,
+	form, button, fieldset, label, div.foot1, span.date {
+  		font-family: Verdana, Arial, Helvetica, sans-serif; 
+	}
+	select, option, input, textarea {
+		font-family: "Courier New", Courier, monospace;
+	}
+	body {
+		padding: 0;
+		background-color: #FFF;
+	}
+	div.banner, div.fp, div.left, div.right, p.redir, .navaid, 
+	div#tools, div#bottom, div.foot2, div.foot3, div.footerline { display: none; 	}
+	
+	p.breadcrumb { margin-top:10px; padding-top:10px; }
+	
+	div#subjectHeader, h1#subjectHeader { margin: 1em 0px; }
+	
+	div.colLayout { background-color: #FFF; background: none; height: auto; }
+	div.footer 		{ border-top: 1px solid #000; margin-top:14px; }
+	div.foot1		{ margin-top:2px; }
+	
+		div.blackborder {	border: none; }
+	
+		div.center, * html div.center {
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 10px;
+		width: auto;
+	}
+	
+		div.page { width: auto; }
+}
+/* PRINT CSS ENDS | FIN DU CSS POUR L'IMPRESSION */
