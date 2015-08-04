@@ -111,7 +111,7 @@
 		<!-- COMMON MENU BAR TITLE ENDS | FIN DU TITRE DE LA BARRE DE MENU COMMUNE -->
 		<ul class="commonbar">
 			<!-- FRENCH LINK BEGINS | DEBUT DU LIEN FRANCAIS -->
-			<li class="fiptexta"><div><a href="http://www.hc-sc.gc.ca/cgi-bin/lang_change.pl" lang="fr" xml:lang="fr" title="FranÁais - Version franÁaise de cette page">FranÁais</a></div></li>
+			<li class="fiptexta"><div><a href="http://www.hc-sc.gc.ca/cgi-bin/lang_change.pl" lang="fr" xml:lang="fr" title="Fran√ßais - Version fran√ßaise de cette page">Fran√ßais</a></div></li>
 			<!-- FRENCH LINK ENDS | FIN DU LIEN FRANCAIS -->
 			<li class="fiptext"><div><a href="http://www.hc-sc.gc.ca/index-eng.php" title="Home - The main page of Health Canada&#39;s Web site">Home</a></div></li>
 			<li class="fiptextc"><div><a href="http://www.hc-sc.gc.ca/contact/index-eng.php" title="Contact Us - Health Canada contact information">Contact Us</a></div></li>
@@ -172,7 +172,7 @@
         <!-- InstanceBeginEditable name="content" -->
           <h1>Protecting Canadians from Unsafe Drugs Act (Vanessa's Law): Questions/Answers</h1>
           <h2>What is the Protecting Canadians from Unsafe Drugs Act (Vanessa's Law)?</h2>
-          <p>The <img src="./Questions and Answers regarding the law Protecting Canadians from Unsafe Drugs Act (Vanessa's Law) - Health Canada_files/newwindow.gif" alt="Next link will take you to another Web site" width="18" height="13">&nbsp;<a href="http://www.parl.gc.ca/LegisInfo/BillDetails.aspx?Language=E&Mode=1&billId=6365510" title="Protecting Canadians from Unsafe Drugs Act (Vanessa&#39;s Law) (external link)"><em>Protecting Canadians from Unsafe Drugs Act (Vanessa's Law)</em></a> amends the <em>Food and Drugs Act.</em> It includes new rules that strengthen the regulation of therapeutic products and improve the reporting of adverse reactions by healthcare institutions. As well, these measures are intended to improve Health Canadaís ability to collect post-market safety information and take appropriate action when a serious health risk is identified.</p>
+          <p>The <img src="./Questions and Answers regarding the law Protecting Canadians from Unsafe Drugs Act (Vanessa's Law) - Health Canada_files/newwindow.gif" alt="Next link will take you to another Web site" width="18" height="13">&nbsp;<a href="http://www.parl.gc.ca/LegisInfo/BillDetails.aspx?Language=E&Mode=1&billId=6365510" title="Protecting Canadians from Unsafe Drugs Act (Vanessa&#39;s Law) (external link)"><em>Protecting Canadians from Unsafe Drugs Act (Vanessa's Law)</em></a> amends the <em>Food and Drugs Act.</em> It includes new rules that strengthen the regulation of therapeutic products and improve the reporting of adverse reactions by healthcare institutions. As well, these measures are intended to improve Health Canada¬ís ability to collect post-market safety information and take appropriate action when a serious health risk is identified.</p>
           <p>The law is named after Vanessa Young, daughter of the Member of Parliament from Oakville.</p>
           <h2>Where can I find a copy of this Act?</h2>
           <p><em>Protecting Canadians from Unsafe Drugs Act (Vanessa's Law) </em>can be found on the Parliament of Canada website.</p>
@@ -193,7 +193,7 @@
           <p>The Act increases patient safety in Canada by improving Health Canada's ability to collect safety information on marketed therapeutic products.</p>
           <p>The Act also allows Health Canada to take quick and appropriate action when a serious health risk is identified, such as ordering a product recall or requiring a label change/package modification to make new safety information available to patients and consumers.</p>
           <p>Fines and penalties are increased to better reflect the seriousness of the violation.</p>
-          <p>In addition to these measures, the Act was also amended by the House of Commons Standing Committee on Health to include new transparency authorities related to clinical trial registration, Health Canadaís regulatory decisions, and disclosure of confidential business information.</p>
+          <p>In addition to these measures, the Act was also amended by the House of Commons Standing Committee on Health to include new transparency authorities related to clinical trial registration, Health Canada¬ís regulatory decisions, and disclosure of confidential business information.</p>
           <p>Together, these changes will lead to improved patient safety and better health outcomes for Canadians, including vulnerable populations such as children, seniors, and pregnant or nursing women.</p>
           <p>The Act enables Health Canada to continue strengthening its <a href="http://www.hc-sc.gc.ca/home-accueil/rto-tor/index-eng.php"><em>Regulatory Transparency and Openness Framework</em></a> that was announced in April, 2014 by the Minister of Health. The Framework commits Health Canada to a set of concrete initiatives that would make easy to understand regulatory health and safety information more available to Canadians. With this information, Canadians can make well-informed decisions concerning their health and that of their families.</p>
           <h2>What else will the Act do?</h2>
@@ -277,25 +277,25 @@ function myEncode(str){
 
 
 /*  (C)Scripterlative.com
- *  Strips grave, acute, circumflex umlaut and tilde from vowels and —.
+ *  Strips grave, acute, circumflex umlaut and tilde from vowels and √ë.
  *  GratuityWare
  */
 
 function stripVowelAccent(str)
 {
  var rExps=[
- {re:/[¿-∆]/g, ch:'A'},
- {re:/[‡-Ê]/g, ch:'a'},
- {re:/[»-À]/g, ch:'E'},
- {re:/[Ë-Î]/g, ch:'e'},
- {re:/[Ã-œ]/g, ch:'I'},
- {re:/[Ï-Ô]/g, ch:'i'},
- {re:/[“-÷]/g, ch:'O'},
- {re:/[Ú-ˆ]/g, ch:'o'},
- {re:/[Ÿ-‹]/g, ch:'U'},
- {re:/[˘-¸]/g, ch:'u'},
- {re:/[—]/g, ch:'N'},
- {re:/[Ò]/g, ch:'n'} ];
+ {re:/[√Ä-√Ü]/g, ch:'A'},
+ {re:/[√†-√¶]/g, ch:'a'},
+ {re:/[√à-√ã]/g, ch:'E'},
+ {re:/[√®-√´]/g, ch:'e'},
+ {re:/[√å-√è]/g, ch:'I'},
+ {re:/[√¨-√Ø]/g, ch:'i'},
+ {re:/[√í-√ñ]/g, ch:'O'},
+ {re:/[√≤-√∂]/g, ch:'o'},
+ {re:/[√ô-√ú]/g, ch:'U'},
+ {re:/[√π-√º]/g, ch:'u'},
+ {re:/[√ë]/g, ch:'N'},
+ {re:/[√±]/g, ch:'n'} ];
  
  for(var i=0, len=rExps.length; i<len; i++)
   str=str.replace(rExps[i].re, rExps[i].ch);
