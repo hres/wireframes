@@ -1,0 +1,29 @@
+/* CLF 2.0 TEMPLATE VERSION 1.04 | VERSION 1.04 DU GABARIT NSI 2.0 */
+
+/* BREAD CRUMB CSS BEGINS | DEBUT DU CSS DE LA PISTE DE NAVIGATION */
+p.breadcrumb { font-size: 85%; }
+/* BREAD CRUMB CSS ENDS | FIN DU CSS DE LA PISTE DE NAVIGATION */
+
+/* SIDE MENU CSS BEGINS | DEBUT DU CSS DU MENU LATERAL */
+div.left ul.nav ul.nav a.menulink { font-size: 100%; }
+div.left ul.nav ul.nav ul.nav2 a.menulink { font-size: 100%; }
+div.right ul.nav ul.nav a.menulink { font-size: 100%; }
+div.right ul.nav ul.nav ul.nav2 a.menulink { font-size: 100%; }
+div.left ul.nav div.menucontent a.menulink { font-size: 100%; }
+
+/* SIDE MENU CSS ENDS | FIN DU CSS DU MENU LATERAL */
+h1#subjectHeader	{ font-size: 125%; }
+div#subjectHeader  	{ font-size: 115%; }
+#tools 			{ font-size: 90%; }
+
+h1, .h1Size	{ font-size: 115%; }
+h2, .h2Size	{ font-size: 115%; }
+h3, .h3Size	{ font-size: 110%; }
+h4, .h4Size	{ font-size: 110%; }
+h5, .h5Size	{ font-size: 100%; }
+h6, .h6Size	{ font-size: 100%; }
+
+
+div.cols-promotion	{ font-size:85%; }
+
+div.icon a {font-size: 80%;}
