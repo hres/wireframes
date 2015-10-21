@@ -145,37 +145,671 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <form>
 <details class="span-8">
 <summary class="background-accent">Clinical Trials Database</summary>
-<form action="option3_results.html">
-  CVP Search Field 1: <input type="text"><br><br>
-  CVP Search Field 2: <input type="text"><br><br>
-  CVP Search Field 3: <input type="text"><br><br>
-  CVP Search Field 4: <input type="text"><br><br>
-  CVP Search Field 5: <input type="text"><br><br>
-  CVP Search Field 6: <input type="text"><br><br>
-  <input type="submit" value="Submit">
+<form id="searchForm" method="post" action="/arquery-rechercheei/search-recherche.do?lang=eng">
+<div>
+    <!--Display error messages--> 
+     	    
+</div>
+
+<div class="row">
+	<div class="column90">Select the help&nbsp;<img src="images/question.gif" alt="" />&nbsp;icon throughout this page for definitions of particular terms.</div>	
+</div>
+<div class="row-clear"></div>
+<div class="row">
+	Unless specified, all search criteria are optional and set to default values.
+</div>
+<fieldset><legend><strong>1.  Report Search Criteria</strong></legend>
+<div class="row alignRight"><a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/instructions-eng.php#a3">Help with Report Search Criteria Section</a><br/><br/></div>
+
+<div class="row-clear"></div>
+
+<div class="row">
+	<div class="column100 alignLeft"><span class="text-note-large"><strong>This database includes data from 1965-01-01 to&nbsp;2015-06-30&nbsp;only.</strong></span></div>	
+	<br/>
+</div>
+
+<div class="row-clear"></div>
+<div class="row">
+	<div class="column3"></div>
+	<div class="column30">
+		<input type="radio" name="dateSelection" value="0" checked="checked" id="initialDateFrom" /><label for="initialDateFrom">
+				Initial Received Date
+			</label>
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#i"><img src="images/question.gif" alt="Help" /></a>
+	</div>
+	<div class="column5">
+		OR
+	</div>
+	<div class="column33">		
+		<input type="radio" name="dateSelection" value="1" id="followUpDateFrom" /><label for="followUpDateFrom">
+				Latest Received Date
+			</label>
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#lrdate"><img src="images/question.gif" alt="Help" /></a>		
+	</div><br/><br/>
+</div>
+
+
+
+
+<div class="row-clear"></div>
+<div class="row">
+	<div class="column18"></div>
+	<div class="column5"><label for="dateFrom">From</label></div>
+	<div class="column15"><span class="text-note">(yyyy-mm-dd)</span></div>
+	<div class="column18"><input type="text" name="dateFrom" size="10" value="1965-01-01" id="dateFrom" /></div>
+</div>
+<div class="row-clear"></div>
+<div class="row">
+	<div class="column18"></div>
+	<div class="column5"><label for="dateTo">To</label></div>
+	<div class="column15"><span class="text-note">(yyyy-mm-dd)</span></div>		
+	
+		<div class="column20"><input type="text" name="dateTo" size="10" value="2015-06-30" id="dateTo" /></div>		
+		
+	
+</div>
+
+<div class="row-clear"></div>
+<div class="row alignCenter"><br/></div>
+<div class="row">
+	<div class="column3"></div>
+	<div class="column35">
+		<label for="seriousnessCode">
+			Serious report?
+		</label>
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#sar"><img src="images/question.gif" alt="Help" /></a>
+	</div>
+	<div class="column40">
+		<select name="seriousnessCode" id="seriousnessCode" style="width:290px;"><option value="0">Select Both</option>				      				
+			<option value="02, No, Non">No</option>
+<option value="01, Yes, Oui">Yes</option></select>	
+	</div>
+	<br/><br/>
+</div>
+<div class="row">
+	<div class="column3"></div>
+	<div class="column35">
+		<label for="reportSourceCode">
+			Source of Report:
+		</label>
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#reps"><img src="images/question.gif" alt="Help" /></a>
+	</div>
+	<div class="column40">
+		<select name="reportSourceCode" id="reportSourceCode" style="width:290px;"><option value="0">Select All</option>				      				
+			<option value="01, Community, Communauté">Community</option>
+<option value="03, Hospital, Hôpital">Hospital</option>
+<option value="07, MAH, Fabricant">MAH</option>
+<option value="08, Other, Autre">Other</option></select>				
+	</div>
+	<br/><br/>
+</div>
+</fieldset>
+<fieldset><legend><strong>2.  Patient Search Criteria</strong></legend>
+<div class="row alignRight"><a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/instructions-eng.php#a4">Help with Patient Search Criteria Section</a><br/><br/></div>
+
+<div class="row">
+	<div class="column3"></div>
+	<div class="column35">
+		<label for="genderCode">
+			Gender:
+		</label>
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#gen"><img src="images/question.gif" alt="Help" /></a>
+	</div>
+	<div class="column40">
+		<select name="genderCode" id="genderCode" style="width:290px;"><option value="0">Select All</option>				      				
+			<option value="2, Female, Femme">Female</option>
+<option value="1, Male, Homme">Male</option>
+<option value="4, Not specified, Non spécifié">Not specified</option>
+<option value="3, Unknown, Inconnu">Unknown</option></select>					
+	</div>
+	<br/><br/>
+</div>
+<div class="row">
+	<div class="column3"></div>
+	<div class="column35">
+		<label for="outcomeCode">
+			Report Outcome:
+		</label>
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#repo"><img src="images/question.gif" alt="Help" /></a>
+	</div>
+	<div class="column40">
+		<select name="outcomeCode" id="outcomeCode" style="width:290px;"><option value="0">Select All</option>				      				
+			<option value="11, Death, Décès">Death</option>
+<option value="09, Not recovered/not resolved, Non rétabli/non résolu">Not recovered/not resolved</option>
+<option value="07, Recovered/resolved, Rétabli/résolu">Recovered/resolved</option>
+<option value="10, Recovered/resolved with sequelae, Rétabli/résolu avec séquelles">Recovered/resolved with sequelae</option>
+<option value="02, Recovering/resolving, En rétablissement/en résolution">Recovering/resolving</option>
+<option value="06, Unknown, Inconnu">Unknown</option></select>
+	</div>
+	<br/><br/>
+</div>
+
+<div class="row">
+	<div class="column3"></div>
+	<div class="column35">
+			Age:
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#age"><img src="images/question.gif" alt="Help" /></a>
+	</div>
+	<div class="column5"><label for="ageFrom">From</label></div>				
+	<div class="column15">
+		<select name="ageFrom" id="ageFrom"><option value="0">0</option>
+			<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option value="59">59</option>
+<option value="60">60</option>
+<option value="61">61</option>
+<option value="62">62</option>
+<option value="63">63</option>
+<option value="64">64</option>
+<option value="65">65</option>
+<option value="66">66</option>
+<option value="67">67</option>
+<option value="68">68</option>
+<option value="69">69</option>
+<option value="70">70</option>
+<option value="71">71</option>
+<option value="72">72</option>
+<option value="73">73</option>
+<option value="74">74</option>
+<option value="75">75</option>
+<option value="76">76</option>
+<option value="77">77</option>
+<option value="78">78</option>
+<option value="79">79</option>
+<option value="80">80</option>
+<option value="81">81</option>
+<option value="82">82</option>
+<option value="83">83</option>
+<option value="84">84</option>
+<option value="85">85</option>
+<option value="86">86</option>
+<option value="87">87</option>
+<option value="88">88</option>
+<option value="89">89</option>
+<option value="90">90</option>
+<option value="91">91</option>
+<option value="92">92</option>
+<option value="93">93</option>
+<option value="94">94</option>
+<option value="95">95</option>
+<option value="96">96</option>
+<option value="97">97</option>
+<option value="98">98</option>
+<option value="99">99</option>
+<option value="100">100</option>
+<option value="101">101</option>
+<option value="102">102</option>
+<option value="103">103</option>
+<option value="104">104</option>
+<option value="105">105</option>
+<option value="106">106</option>
+<option value="107">107</option>
+<option value="108">108</option>
+<option value="109">109</option>
+<option value="110">110</option>
+<option value="111">111</option>
+<option value="112">112</option>
+<option value="113">113</option>
+<option value="114">114</option>
+<option value="115">115</option>
+<option value="116">116</option>
+<option value="117">117</option>
+<option value="118">118</option>
+<option value="119">119</option>
+<option value="120">120</option>
+<option value="121">121</option>
+<option value="122">122</option>
+<option value="123">123</option>
+<option value="124">124</option>
+<option value="125">125</option>
+<option value="126">126</option>
+<option value="127">127</option>
+<option value="128">128</option>
+<option value="129">129</option>
+<option value="130">130</option>
+<option value="131">131</option>
+<option value="132">132</option>
+<option value="133">133</option>
+<option value="134">134</option>
+<option value="135">135</option>
+<option value="136">136</option>
+<option value="137">137</option>
+<option value="138">138</option>
+<option value="139">139</option>
+<option value="140">140</option>
+<option value="141">141</option>
+<option value="142">142</option>
+<option value="143">143</option>
+<option value="144">144</option>
+<option value="145">145</option>
+<option value="146">146</option>
+<option value="147">147</option>
+<option value="148">148</option>
+<option value="149">149</option>
+<option value="150">150</option></select>
+		Year(s)
+	</div>
+	<div class="column5"><label for="ageTo">To</label></div>
+	<div class="column15">
+		<select name="ageTo" id="ageTo"><option value="0">All</option>
+			<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option value="59">59</option>
+<option value="60">60</option>
+<option value="61">61</option>
+<option value="62">62</option>
+<option value="63">63</option>
+<option value="64">64</option>
+<option value="65">65</option>
+<option value="66">66</option>
+<option value="67">67</option>
+<option value="68">68</option>
+<option value="69">69</option>
+<option value="70">70</option>
+<option value="71">71</option>
+<option value="72">72</option>
+<option value="73">73</option>
+<option value="74">74</option>
+<option value="75">75</option>
+<option value="76">76</option>
+<option value="77">77</option>
+<option value="78">78</option>
+<option value="79">79</option>
+<option value="80">80</option>
+<option value="81">81</option>
+<option value="82">82</option>
+<option value="83">83</option>
+<option value="84">84</option>
+<option value="85">85</option>
+<option value="86">86</option>
+<option value="87">87</option>
+<option value="88">88</option>
+<option value="89">89</option>
+<option value="90">90</option>
+<option value="91">91</option>
+<option value="92">92</option>
+<option value="93">93</option>
+<option value="94">94</option>
+<option value="95">95</option>
+<option value="96">96</option>
+<option value="97">97</option>
+<option value="98">98</option>
+<option value="99">99</option>
+<option value="100">100</option>
+<option value="101">101</option>
+<option value="102">102</option>
+<option value="103">103</option>
+<option value="104">104</option>
+<option value="105">105</option>
+<option value="106">106</option>
+<option value="107">107</option>
+<option value="108">108</option>
+<option value="109">109</option>
+<option value="110">110</option>
+<option value="111">111</option>
+<option value="112">112</option>
+<option value="113">113</option>
+<option value="114">114</option>
+<option value="115">115</option>
+<option value="116">116</option>
+<option value="117">117</option>
+<option value="118">118</option>
+<option value="119">119</option>
+<option value="120">120</option>
+<option value="121">121</option>
+<option value="122">122</option>
+<option value="123">123</option>
+<option value="124">124</option>
+<option value="125">125</option>
+<option value="126">126</option>
+<option value="127">127</option>
+<option value="128">128</option>
+<option value="129">129</option>
+<option value="130">130</option>
+<option value="131">131</option>
+<option value="132">132</option>
+<option value="133">133</option>
+<option value="134">134</option>
+<option value="135">135</option>
+<option value="136">136</option>
+<option value="137">137</option>
+<option value="138">138</option>
+<option value="139">139</option>
+<option value="140">140</option>
+<option value="141">141</option>
+<option value="142">142</option>
+<option value="143">143</option>
+<option value="144">144</option>
+<option value="145">145</option>
+<option value="146">146</option>
+<option value="147">147</option>
+<option value="148">148</option>
+<option value="149">149</option>
+<option value="150">150</option></select>	
+		Year(s)		
+	</div>		
+	<br/>
+</div>
+<div class="row-clear"></div>
+</fieldset>
+<fieldset id="section3"><legend><strong>3.  Suspect Health Product Search Criteria</strong></legend>
+<div class="row alignRight"><a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/instructions-eng.php#a5">Help with Suspect Health Product Search Section</a><br/><br/></div>
+<div class="row">
+	<div class="column3"></div>
+	<div class="column90 alignLeft text-note"><strong>Section 3 is mandatory if Section 4 (below) is not completed.</strong></div>
+</div>
+<div class="row-clear"></div>
+<div class="row">
+	<div class="column3"></div>
+	<div class="column90 alignLeft">
+		<span class="text-note">
+			A search of all health products AND all adverse reactions terms is not possible.  If "Select All Health Products" is chosen in Section 3, a keyword search must be done in Section 4 and if "Select All Adverse Reaction Terms" is chosen in Section 4, a keyword search would have to be done in Section 3.
+		</span><br/><br/>
+	</div>
+</div>
+<div class="row-clear"></div>
+<div class="row">
+	<div class="column3"></div>
+	<div class="column60">
+		<input type="radio" name="nameLevel" value="0" id="allHealthProducts" /><label for="allHealthProducts">Select All Health Products</label>			
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#shp"><img src="images/question.gif" alt="Help" /></a>		
+	</div>
+	<br/><br/>
+</div>
+
+<div class="row">
+	<div class="column3">&nbsp;</div>
+	<div class="column25 alignCenter"><hr class="line"/></div>
+	<div class="column5 alignCenter">OR</div>	
+	<div class="column25 alignCenter"><hr class="line"/></div>		
+	<br/>
+</div>
+
+
+<div class="row-clear"></div>
+<div class="row">
+	<div class="column3">&nbsp;</div>
+<!--	<div class="column25">&nbsp;</div>-->
+	<div class="column70">
+<!--		<label for="keywordsSection3">-->
+<!--			Keyword Search:-->
+<!--		</label>	-->
+		<input type="radio" name="nameLevel" value="1" checked="checked" id="brandName" /><label for="brandName">By Brand Name</label>	
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#bname"><img src="images/question.gif" alt="Help" /></a>		
+		<input type="radio" name="nameLevel" value="2" id="ingredient" /><label for="ingredient">By Active Ingredient</label>
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#aing"><img src="images/question.gif" alt="Help" /></a>				
+	</div>
+	<br/><br/>
+</div>
+
+
+
+<div class="row-clear"><br/></div>
+<div class="row">
+	<div class="column3"></div>
+	<div class="column23">
+		<label for="wildcardSection3">
+			Operator:
+		</label>
+	</div>
+	<div class="column40">	
+		<select name="wildcardSection3" id="wildcardSection3" style="width:130px;"><option value="2">Contains</option>
+			<option value="1">Begins With</option></select>
+	</div>
+</div>
+
+<div class="row-clear"></div>
+<div class="row">
+	<div class="column3"></div>
+	<div class="column23">
+		<label for="keywordsSection3">
+			Keyword Search:
+		</label>	
+	</div>
+	<div class="column60">					
+		<input type="text" name="keywordsSection3" value="" id="keywordsSection3" style="width:170px;" />&nbsp;
+		<input type="submit" name="action" value="Find Health Products" class="subjectMod" />			
+		<br /><br />
+		<!-- <div class="text-note alignLeft" style="margin-left: 240px">(min. 3 characters)</div> -->
+	</div>
+	<div class="column30">	
+					
+	</div>	
+</div>
+
+<div class="row-clear"></div>
+
+
+
+
+
+
+<div class="row-clear"></div>
+</fieldset>
+<fieldset id="section4"><legend><strong>4.  Adverse Reaction Term Search Criteria</strong></legend>
+<div class="row alignRight"><a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/instructions-eng.php#a6">Help with Adverse Reaction Term Search Section</a><br/><br/></div>
+<div class="row">
+	<div class="column3"></div>
+	<div class="column90 alignLeft text-note"><strong>Section 4 is mandatory if Section 3 (above) is not completed.</strong></div>
+</div>
+<div class="row-clear"></div>
+<div class="row">
+	<div class="column3"></div>
+	<br/>
+</div>
+
+<div class="row">
+	<div class="column3">&nbsp;</div>
+	<div class="column60">
+		<input type="radio" name="meddraTermLevel" value="0" checked="checked" id="allReactions" /><label for="allReactions">Select All Adverse Reaction Terms</label>	
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#meddra"><img src="images/question.gif" alt="Help" /></a>		
+	</div>
+	<br/><br/>	
+</div>
+
+<div class="row">
+	<div class="column3">&nbsp;</div>
+	<div class="column35 alignCenter"><hr class="line"/></div>
+	<div class="column5 alignCenter">OR</div>	
+	<div class="column35 alignCenter"><hr class="line"/></div>		
+	<br/>
+</div>
+
+<div class="row-clear"></div>
+<div class="row">
+	<div class="column3">&nbsp;</div>
+	<div class="column80">
+<!--		<label for="keywordsSection4">-->
+<!--			Keyword Search:-->
+<!--		</label>	-->
+		<input type="radio" name="meddraTermLevel" value="2" id="reactionTerm" /><label for="reactionTerm">By Adverse Reaction Term</label>
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#meddrat"><img src="images/question.gif" alt="Help" /></a>				
+		<input type="radio" name="meddraTermLevel" value="1" id="soc" /><label for="soc">By System Organ Class (SOC)</label>
+		<a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/databasdon/glossary_definition-eng.php#meddrasoc"><img src="images/question.gif" alt="Help" /></a>				
+	</div>
+	<br/>
+</div>
+
+
+<div class="row-clear"><br/></div>
+
+<div class="row">
+	<div class="column3"></div>
+	<div class="column23">
+		<label for="wildcardSection4">
+			Operator:
+		</label>	
+	</div>
+	<div class="column40">		
+		<select name="wildcardSection4" id="wildcardSection4" style="width:130px;"><option value="2">Contains</option>		
+			<option value="1">Begins With</option></select>
+	</div>		
+</div>
+
+
+
+<div class="row-clear"></div>
+<div class="row">
+	<div class="column3"></div>
+	<div class="column23">
+		<label for="keywordsSection4">
+			Keyword Search:
+		</label>
+	</div>
+	<div class="column60">				
+		<input type="text" name="keywordsSection4" value="" id="keywordsSection4" style="width:170px;" />&nbsp;
+		<input type="submit" name="action" value="Find Terms" class="subjectMod" />
+		<!-- <div class="text-note alignLeft" style="margin-left: 240px">(min. 3 characters)</div> -->
+	</div><br/><br/>
+</div>
+
+
+
+<div class="row-clear"></div>
+
+
+
+
+<div class="row-clear"></div>
+</fieldset>
+
+<div class="row-clear"></div>
+<div class="row alignCenter">
+		<input type="submit" name="action" value="Search" class="subject" />&nbsp;&nbsp;&nbsp;
+		<input type="submit" name="action" value="Reset" class="subject" />		
+</div>
+
 </form>
+
 </details>
 <details class="span-8">
 <summary class="background-accent">Notice of Compliance Database</summary>
 <form action="option3_results.html">
-  NOC Search Field 1: <input type="text"><br><br>
-  NOC Search Field 2: <input type="text"><br><br>
-  NOC Search Field 3: <input type="text"><br><br>
-  NOC Search Field 4: <input type="text"><br><br>
-  NOC Search Field 5: <input type="text"><br><br>
-  NOC Search Field 6: <input type="text"><br><br>
+  NOC with conditions?: <input type="checkbox"><br><br>
+  NOC accompanied by a Notice of Decision/Summary Basis of Decision?: <input type="checkbox"><br><br>
+  Submission Class: <input type="text"><br><br>
+  Therapeutic Class: <input type="text"><br><br>
+  Product Type: <input type="text"><br><br>
+  NOC Date from (yyyy-mm-dd): <input type="text">to (yyyy-mm-dd):  NOC Search Field 5: <input type="text"><br><br>
   <input type="submit" value="Submit">
 </form>
 </details>
 <details class="span-8">
 <summary class="background-accent">Patent Register</summary>
 <form action="option3_results.html">
-  PR Search Field 1: <input type="text"><br><br>
-  PR Search Field 2: <input type="text"><br><br>
-  PR Search Field 3: <input type="text"><br><br>
-  PR Search Field 4: <input type="text"><br><br>
-  PRSearch Field 5: <input type="text"><br><br>
-  PR Search Field 6: <input type="text"><br><br>
+  Patent Number: <input type="text"><br><br>
   <input type="submit" value="Submit">
 </form>
 </details>
