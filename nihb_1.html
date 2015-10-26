@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-<title>The Drug and Health Product Register</title>
+<title>Drug Benefit List Web Search</title>
 <meta content="width=device-width,initial-scale=1" name="viewport">
 <!-- Meta data -->
 <meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
@@ -108,20 +108,20 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <div class="row">
 <ol class="breadcrumb">
 <li><a href="http://www.canada.ca/en/index.html">Home</a></li>
-<li>The Drug and Health Product Register</li>
+<li>Drug Benefit List Web Search</li>
 </ol>
 </div>
 </div>
 </nav>
 </header>
 <main role="main" property="mainContentOfPage" class="container">
-<h1 property="name" id="wb-cont">The Drug and Health Product Register</h1>
+<h1 property="name" id="wb-cont">Drug Benefit List Web Search</h1>
 <section>
 
     <br /><br />
 <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h2 class="panel-title">Drug and Health Product Search</h2>
+                            <h2 class="panel-title">Drug Benefit List Web Search</h2>
                         </div>
                         <div class="panel-body">
                             <p class="font-large">Search for consumer information on drug product use, safety and common and reported side effects.</p>
@@ -131,7 +131,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <li>By Generic</li>
 <li>Brand Name</li>
 <li>By DIN/PIN/NPN Number</li>
-</ol>
+
 </p>
 <p class="font-large">Use the asterisk (*) to broaden or refine your search. This symbol will help you find everything related to your search term.</p>
 <form action="results-resultats-eng.php" method="get">
@@ -139,51 +139,38 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search for a Drug or Health Product by drug name, manufacturer, active ingredient or DIN" class="full-width" />
     <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt"> </datalist> </div>
 </form>
-    <form align="center" method="get" action="http://www.google.ca">
-    <br />
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-<br />
 
-
-<p class="font-large">4. By Manufacturer:</p>
+<br>
+<li>By Manufacturer:</li>
 <form action="results-resultats-eng.php" method="get">
   <div>
     <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search for a Drug or Health Product by manufacturer" class="full-width" />
     <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt"> </datalist> </div>
 
-</form>
-    <form align="center" method="get" action="http://www.google.ca">
-    <br />
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-<p class="font-large">5. By AHFS Therapeutic Classification:</p>
+<br>
+<li>By AHFS Therapeutic Classification:</li>
 <form action="results-resultats-eng.php" method="get">
   <div>
     <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search for a Drug or Health Product by AHFS Therapeutic Classification" class="full-width" />
     <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt"> </datalist> </div>
 
-</form>
-    <form align="center" method="get" action="http://www.google.ca">
-    <br />
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-<p class="font-large">6. By ATC Therapeutic Classification:</p>
+<br>
+<li>By ATC Therapeutic Classification:</li>
 <form action="results-resultats-eng.php" method="get">
   <div>
     <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search for a Drug or Health Product by ATC Therapeutic Classification" class="full-width" />
     <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt"> </datalist> </div>
-
+</ol>
+<!-- 
 </form>
     <form align="center" method="get" action="http://www.google.ca">
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
+ -->
 
-
+<hr>
 <p class="font-large">As the Drug and Health Product Register is a pilot project, it currently only provides the top 100 prescribed brand name and generic drug products. These drugs have been selected based on the top Canadian sales for 2013.</p>
 <p class="font-large">An additional 250 products are included that consist largely of generic drugs, but do include some brand name products. These have the same active ingredient(s) as the top 100.</p>
 <p class="font-large">For more information about the DHPR, check out the <a href="about-propos-eng.html">About section.</a></p>
