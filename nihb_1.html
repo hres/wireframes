@@ -1,6 +1,39 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>The Drug and Health Product Register</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="./assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="./css/wet-boew.min.css">
+<!--<![endif]-->
+<link rel="stylesheet" href="./css/theme.min.css">
+<!--[if lt IE 9]>
+<link href="./assets/favicon.ico" rel="shortcut icon" />
+
+<link rel="stylesheet" href="./css/ie8-wet-boew.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+
+
+<![endif]-->
+<noscript><link rel="stylesheet" href="./css/noscript.min.css" /></noscript>
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<script>dataLayer1 = [];</script>
+<!-- End Google Tag Manager -->
+</head>
 <body vocab="http://schema.org/" typeof="WebPage">
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
-<noscript>&lt;iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
 <!-- End Google Tag Manager -->
 <ul id="wb-tphp">
@@ -75,100 +108,70 @@
 <div class="row">
 <ol class="breadcrumb">
 <li><a href="http://www.canada.ca/en/index.html">Home</a></li>
-<li>Drug Benefit List Web Search</li>
+<li>The Drug and Health Product Register</li>
 </ol>
 </div>
 </div>
 </nav>
 </header>
 <main role="main" property="mainContentOfPage" class="container">
-<h1 property="name" id="wb-cont">Drug Benefit List Web Search</h1>
+<h1 property="name" id="wb-cont">The Drug and Health Product Register</h1>
 <section>
 
-    <br><br>
+	<br /><br />
 <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h2 class="panel-title">Drug Benefit List Web Search</h2>
-                        </div>
-                        <div class="panel-body">
-                            <p class="font-large">Search for consumer information on drug product use, safety and common and reported side effects.</p>
-<p class="font-large">You may search using 6 ways: </p>
-<p class="font-large">
-</p><ol>
-<li>By Generic</li>
-<li>By Brand Name</li>
-<li>By DIN/PIN/NPN Number</li>
-
-<p></p>
+                            <h2 class="panel-title">Drug and Health Product Search</h2>
+						</div>
+						<div class="panel-body">
+							<p class="font-large">Search for consumer information on drug product use, safety and common and reported side effects.</p>
+<p class="font-large">You may search using 3 ways: </p>
+<p class="font-large">1) brand name 
+<br />2) active ingredient
+<br />3) drug identification number (DIN)</p>
 <p class="font-large">Use the asterisk (*) to broaden or refine your search. This symbol will help you find everything related to your search term.</p>
 <form action="results-resultats-eng.php" method="get">
   <div>
-    <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search for a Drug or Health Product by Generic, Brand Name or DIN/PIN/NPN" class="full-width">
-    <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt" class=" wb-data-ajax-replace-inited"> </datalist> </div>
+    <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search for a Drug or Health Product by drug name, manufacturer, active ingredient or DIN" class="full-width" />
+    <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt"> </datalist> </div>
 </form>
-
-<br>
-<li>By Manufacturer:</li>
-<form action="results-resultats-eng.php" method="get">
-  <div>
-    <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search for a Drug or Health Product by manufacturer" class="full-width">
-    <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt" class=" wb-data-ajax-replace-inited"> </datalist> </div>
-
-<br>
-<li>By AHFS Therapeutic Classification:</li>
-
-  <div>
-    <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search for a Drug or Health Product by AHFS Therapeutic Classification" class="full-width">
-    <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt" class=" wb-data-ajax-replace-inited"> </datalist> </div>
-
-<br>
-<li>By ATC Therapeutic Classification:</li>
-
-  <div>
-    <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search for a Drug or Health Product by ATC Therapeutic Classification" class="full-width">
-    <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt" class=" wb-data-ajax-replace-inited"> </datalist> </div>
-</form></ol>
-
-
-    <form align="center" method="get" action="http://demo.hres.ca/wireframes/nihb_1results.html">
-    <br>
-    <button type="submit" class="btn btn-primary">Search</button>
+	<form align="center" method="get" action="http://www.google.ca">
+    <br />
+	<button type="submit" class="btn btn-primary">Submit</button>
 </form>
- 
-
-<hr>
+<br />
 <p class="font-large">As the Drug and Health Product Register is a pilot project, it currently only provides the top 100 prescribed brand name and generic drug products. These drugs have been selected based on the top Canadian sales for 2013.</p>
 <p class="font-large">An additional 250 products are included that consist largely of generic drugs, but do include some brand name products. These have the same active ingredient(s) as the top 100.</p>
 <p class="font-large">For more information about the DHPR, check out the <a href="about-propos-eng.html">About section.</a></p>
 <p class="font-large">Help us make this website better. Provide us with <a href="feedback-retroaction-eng.html">feedback</a> on your visit today. </p>
 
-                        </div>
+						</div>
 <div class="panel panel-default">
                         <div class="panel-heading">
                             <h2 class="panel-title">Other Health Canada Database Searches</h2>
-                        </div>
-<a href="http://webprod5.hc-sc.gc.ca/lnhpd-bdpsnh/index-eng.jsp">Licensed Natural Health Products</a><br>
-<a href="http://webprod5.hc-sc.gc.ca/noc-ac/index-eng.jsp">Notice of Compliance Database</a><br>
-<a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/patregbrev/download-telecharge-eng.php">Patent Register</a><br>
-<a href="http://webprod5.hc-sc.gc.ca/mdll-limh/prepareSearch-preparerRecherche.do?type=active&amp;lang=eng">Medical Devices Active Licence Listing (MDALL)</a><br>
-<a href="http://ctdb-bdec.hc-sc.gc.ca/ctdb-bdec/index-eng.jsp">Clinical Trials Database</a><br>
-<a href="http://webprod5.hc-sc.gc.ca/dpd-bdpp/start-debuter.do?lang=eng">Drug Product Database Online Query</a><br>
-<a href="http://webprod3.hc-sc.gc.ca/arquery-rechercheei/index-eng.jsp">Canada Vigilance Adverse Reaction Online Database</a><br>
-</div>                      
+						</div>
+<a href="http://webprod5.hc-sc.gc.ca/lnhpd-bdpsnh/index-eng.jsp">Licensed Natural Health Products</a><br />
+<a href="http://webprod5.hc-sc.gc.ca/noc-ac/index-eng.jsp">Notice of Compliance Database</a><br />
+<a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/patregbrev/download-telecharge-eng.php">Patent Register</a><br />
+<a href="http://webprod5.hc-sc.gc.ca/mdll-limh/prepareSearch-preparerRecherche.do?type=active&lang=eng">Medical Devices Active Licence Listing (MDALL)</a><br />
+<a href="http://ctdb-bdec.hc-sc.gc.ca/ctdb-bdec/index-eng.jsp">Clinical Trials Database</a><br />
+<a href="http://webprod5.hc-sc.gc.ca/dpd-bdpp/start-debuter.do?lang=eng">Drug Product Database Online Query</a><br />
+<a href="http://webprod3.hc-sc.gc.ca/arquery-rechercheei/index-eng.jsp">Canada Vigilance Adverse Reaction Online Database</a><br />
+</div>						
 </div>
-  
+</div>	
 </section>
-
+</div>
 <div class="form-group">
 <div class="col-sm-offset-3 col-sm-9">
 
 </div>
 </div>
-
+</form>
 <div class="row pagedetails">
 <div class="col-xs-6 datemod">
 <dl id="wb-dtmd">
-<dt>Date modified: </dt>
+<dt>Date modified:&#32;</dt>
 <dd><time property="dateModified">2015-10-19</time></dd>
 </dl>
 </div>
@@ -262,4 +265,5 @@
 <script src="./js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
 <script src="./js/theme.min.js"></script>
- </body>
+</body>
+</html>
