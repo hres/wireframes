@@ -123,20 +123,22 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <h1 property="name" id="wb-cont">The Drug and Health Product Register</h1>
 <section>
 
-	<br /><br />
+  <br /><br />
 
 
 <div class="container">
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-pills">
     <li class="active panel-title"><a data-toggle="tab" href="#home">Basic Search</a></li>
 
     <li role="presentation" class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-        Search other databases <span class="caret"></span>
+        Advanced Search <span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
     <li class="panel-title"><a data-toggle="tab" href="#menu1">NOC</a></li>
-    <li class="panel-title"><a data-toggle="tab" href="#menu2">DPD</a></li>
+    <li class="panel-title"><a data-toggle="tab" href="#menu2">Patent Register</a></li>
+    <li class="panel-title"><a data-toggle="tab" href="#menu3">Medical Devices</a></li>
+    <li class="panel-title"><a data-toggle="tab" href="#menu4">Adverse Reports</a></li>
       </ul>
     </li>
   </ul>
@@ -146,13 +148,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
       <br>
       <p class="font-large">Search for consumer information on drug products, licenced natural health products, licenced medical devices, safety and common and reported side effects.</p>
       <p class="font-large">You may search using 3 ways: </p>
-      <p class="font-large">1) Product name 
-      <br />2) Active ingredient
-      <br />3) Identification number</p>
+      <p class="font-large">1) Brand/Product name 
+      <br />2) Manufacturer/License Holder
+      <br />3) Product identification number</p>
       <p class="font-large">Use the asterisk (*) to broaden or refine your search. This symbol will help you find everything related to your search term.</p>
       <form action="results-resultats-eng.php" method="get">
         <div>
-          <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search the Health Canada databases" class="full-width form-control" />
+          <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search by name, manufacturer or identification number" class="full-width form-control" />
           <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt"> </datalist> 
         </div>
       </form>
@@ -229,26 +231,46 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     </div>
 
     <div id="menu2" class="tab-pane fade">
-      <h2>DPD</h2>
+      <h2>Patent Register</h2>
+
 
         <div class="form-group">
-          <label for="TherapeuticClass">DIN</label>
-          <input type="TherapeuticClass" class="form-control" id="TherapeuticClass" placeholder="Example 1231231321">
-        </div>
-        <div class="form-group">
-          <label>Status</label>
-          <select class="form-control">
-            <option value=""></option>
-            <option value="ADMIN">Approved</option>
-            <option value="NEW ACTIVE SUBSTANCE (NAS)">Cancelled Post Market</option>
-            <option value="PRIORITY">Cancelled Pre Market</option>
-            <option value="PRIORITY-NAS">Marketed</option>
-            
-          </select>
+          <label> Medicinal Ingredient: </label>
+          <input class="form-control">
         </div>
 
-          <a href="dhpr_option4results.html" class="btn btn-primary">search</a>
-    </div>    
+
+
+        <div class="form-group">
+          <label> Brand Name: </label>
+          <input class="form-control">
+        </div>
+
+
+
+        <div class="form-group">
+          <label> Patent Number: </label>
+          <input class="form-control">
+        </div>
+
+
+
+        <div class="form-group">
+          <label> Drug Identification Number(DIN): </label>
+          <input class="form-control">
+        </div>
+
+        <a href="dhpr_option4results.html" class="btn btn-primary">search</a>
+    </div>
+
+    <div id="menu3" class="tab-pane fade">
+      <h2>Medical Devices</h2>
+    </div>
+
+    <div id="menu4" class="tab-pane fade">
+      <h2>Adverse Reports</h2>
+    </div>
+  </div>
   </div>
 </div>
 
@@ -258,9 +280,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- <div class="panel panel-default">
                         <div class="panel-heading">
                             <h2 class="panel-title">Drug and Health Product Search</h2>
-						</div>
-						<div class="panel-body">
-							<p class="font-large">Search for consumer information on drug product use, safety and common and reported side effects.</p>
+            </div>
+            <div class="panel-body">
+              <p class="font-large">Search for consumer information on drug product use, safety and common and reported side effects.</p>
 <p class="font-large">You may search using 3 ways: </p>
 <p class="font-large">1) brand name 
 <br />2) active ingredient
@@ -271,9 +293,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search for a Drug or Health Product by drug name, manufacturer, active ingredient or DIN" class="full-width" />
     <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt"> </datalist> </div>
 </form>
-	<form align="center" method="get" action="http://www.google.ca">
+  <form align="center" method="get" action="http://www.google.ca">
     <br />
-	<button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <br />
 <p class="font-large">As the Drug and Health Product Register is a pilot project, it currently only provides the top 100 prescribed brand name and generic drug products. These drugs have been selected based on the top Canadian sales for 2013.</p>
@@ -281,11 +303,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <p class="font-large">For more information about the DHPR, check out the <a href="about-propos-eng.html">About section.</a></p>
 <p class="font-large">Help us make this website better. Provide us with <a href="feedback-retroaction-eng.html">feedback</a> on your visit today. </p>
 
-						</div>
+            </div>
 <div class="panel panel-default">
                         <div class="panel-heading">
                             <h2 class="panel-title">Other Health Canada Database Searches</h2>
-						</div>
+            </div>
 <a href="http://webprod5.hc-sc.gc.ca/lnhpd-bdpsnh/index-eng.jsp">Licensed Natural Health Products</a><br />
 <a href="http://webprod5.hc-sc.gc.ca/noc-ac/index-eng.jsp">Notice of Compliance Database</a><br />
 <a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/patregbrev/download-telecharge-eng.php">Patent Register</a><br />
@@ -293,9 +315,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <a href="http://ctdb-bdec.hc-sc.gc.ca/ctdb-bdec/index-eng.jsp">Clinical Trials Database</a><br />
 <a href="http://webprod5.hc-sc.gc.ca/dpd-bdpp/start-debuter.do?lang=eng">Drug Product Database Online Query</a><br />
 <a href="http://webprod3.hc-sc.gc.ca/arquery-rechercheei/index-eng.jsp">Canada Vigilance Adverse Reaction Online Database</a><br />
-</div>						
+</div>            
 </div>
-</div>	
+</div>  
 </section>
 </div> -->
 <div class="form-group">
