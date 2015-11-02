@@ -30,6 +30,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
+
+<!-- Boostrap -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
@@ -119,7 +124,138 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <section>
 
 	<br /><br />
-<div class="panel panel-default">
+
+
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active panel-title"><a data-toggle="tab" href="#home">Basic Search</a></li>
+
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        Search other databases <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+    <li class="panel-title"><a data-toggle="tab" href="#menu1">NOC</a></li>
+    <li class="panel-title"><a data-toggle="tab" href="#menu2">DPD</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <br>
+      <p class="font-large">Search for consumer information on drug products, licenced natural health products, licenced medical devices, safety and common and reported side effects.</p>
+      <p class="font-large">You may search using 3 ways: </p>
+      <p class="font-large">1) Product name 
+      <br />2) Active ingredient
+      <br />3) Identification number</p>
+      <p class="font-large">Use the asterisk (*) to broaden or refine your search. This symbol will help you find everything related to your search term.</p>
+      <form action="results-resultats-eng.php" method="get">
+        <div>
+          <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search the Health Canada databases" class="full-width form-control" />
+          <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt"> </datalist> 
+        </div>
+      </form>
+      <form align="center" method="get" action="http://demo.hres.ca/wireframes/option3_results.html">
+      <br />
+      <a href="dhpr_option4results.html" class="btn btn-primary">search</a>
+      </form>
+      </div>
+
+
+    <div id="menu1" class="tab-pane fade">
+      <br>
+      <h2>Notice of Compliance Database</h2>
+      <div class="form-group">
+          <label for="TherapeuticClass">Brand/Product Name</label>
+          <input type="TherapeuticClass" class="form-control" id="TherapeuticClass" placeholder="">
+        </div>
+      <div class="form-group">
+          <label for="TherapeuticClass">Drug Identification Number (DIN)
+          </label>
+          <input type="TherapeuticClass" class="form-control" id="TherapeuticClass" placeholder="Example: 21231232131">
+        </div>  
+      <form>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">NOC with conditions?
+          </label>
+        </div>  
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">NOC accompanied by a Notice of Decision/Summary Basis of Decision?
+          </label>
+        </div>      
+        <div class="form-group">
+          <label for="SubmissionClass">Submission Class</label>
+          <select class="form-control">
+            <option value=""></option>
+            <option value="ADMIN">Administrative</option>
+            <option value="NEW ACTIVE SUBSTANCE (NAS)">New Active Substance (NAS)</option>
+            <option value="PRIORITY">Priority</option>
+            <option value="PRIORITY-NAS">Priority-NAS</option>
+            <option value="OTHER">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="TherapeuticClass">Therapeutic Class</label>
+          <input type="TherapeuticClass" class="form-control" id="TherapeuticClass" placeholder="Example Therapeutic Class">
+        </div>
+        <div class="form-group">
+          <label>Product Type</label>
+          <select class="form-control">
+            <option value=""></option>
+            <option value="ADMIN">Administrative</option>
+            <option value="NEW ACTIVE SUBSTANCE (NAS)">New Active Substance (NAS)</option>
+            <option value="PRIORITY">Priority</option>
+            <option value="PRIORITY-NAS">Priority-NAS</option>
+            <option value="OTHER">Other</option>
+          </select>
+        </div>
+
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="StartDate">NOC Date from</label>
+            <input type="date" class="form-control" id="StartDate" placeholder="yyyy-mm-dd">
+            <label for="StartDate">To</label>
+            <input type="date" class="form-control" id="EndDate" placeholder="yyyy-mm-dd">
+          </div>
+        </div>
+        
+
+
+        <a href="dhpr_option4results.html" class="btn btn-primary">search</a>
+      </form>
+    </div>
+
+    <div id="menu2" class="tab-pane fade">
+      <h2>DPD</h2>
+
+        <div class="form-group">
+          <label for="TherapeuticClass">DIN</label>
+          <input type="TherapeuticClass" class="form-control" id="TherapeuticClass" placeholder="Example 1231231321">
+        </div>
+        <div class="form-group">
+          <label>Status</label>
+          <select class="form-control">
+            <option value=""></option>
+            <option value="ADMIN">Approved</option>
+            <option value="NEW ACTIVE SUBSTANCE (NAS)">Cancelled Post Market</option>
+            <option value="PRIORITY">Cancelled Pre Market</option>
+            <option value="PRIORITY-NAS">Marketed</option>
+            
+          </select>
+        </div>
+
+          <a href="dhpr_option4results.html" class="btn btn-primary">search</a>
+    </div>    
+  </div>
+</div>
+
+
+
+
+<!-- <div class="panel panel-default">
                         <div class="panel-heading">
                             <h2 class="panel-title">Drug and Health Product Search</h2>
 						</div>
@@ -161,7 +297,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </div>
 </div>	
 </section>
-</div>
+</div> -->
 <div class="form-group">
 <div class="col-sm-offset-3 col-sm-9">
 
