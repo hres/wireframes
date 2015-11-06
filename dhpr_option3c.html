@@ -127,7 +127,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
   <div>
     <div>
       <ul class="nav nav-tabs">
-        <li class="dropdown">
+<!--         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Search For Health Products
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -148,16 +148,57 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             <li><a href="#">Regulatory Decision Summaries</a></li>
             <li><a href="#">Submissions Under Review</a></li>   
           </ul>
+        </li> -->
+        <li class="active panel-title"><a data-toggle="tab" href="#home">Search for Drugs</a></li>
+        <li><a href="dhpr_option3c_nhp.html">Search for Natural Health</a></li>
+        <li><a href="dhpr_option3c_device.html">Search for Medical Devices</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Regulatory Content
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="RDS_index-en.html">Regulatory Decision Summaries (RDS)</a></li>
+            <li><a href="#">Summary Safety Reviews (SSR)</a></li>
+            <li><a href="#">Summary Basis of Decision (SBD)</a></li> 
+          </ul>
         </li>
-
-        <li><a href="#">Report a Side effect</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="dhpr_option3c_se.html">Report a Side Effect</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">About
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="dhpr_about.html">The Drug and Health Product Register</a></li>
+            <li><a href="/hpr-rps/templates/data-donnees-eng.html" tabindex="-1" aria-posinset="2" aria-setsize="5" role="menuitem">Data Sources</a></li>
+            <li><a href="/hpr-rps/templates/disclaimers-avisdenonresponsabilite-eng.html" tabindex="-1" aria-posinset="3" aria-setsize="5" role="menuitem">Reported Side Effects - Disclaimers</a></li>
+            <li><a href="/hpr-rps/templates/feedback-retroaction-eng.html" tabindex="-1" aria-posinset="4" aria-setsize="5" role="menuitem">Feedback</a></li>
+            <li><a href="/hpr-rps/templates/qanda-qetr-eng.html" tabindex="-1" aria-posinset="5" aria-setsize="5" role="menuitem">Questions and Answers</a></li>
+          </ul>
+        </li>
       </ul>      
     </div>
-    <p>
+    <div id="home" class="tab-pane fade in active">
       <br>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed sem velit. Morbi pellentesque sapien mi, sit amet rhoncus mi posuere id. Sed quam velit, condimentum at tempor eget, condimentum vitae dolor. In non tortor a nibh ullamcorper vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi dolor, ultricies ut scelerisque et, lobortis quis magna. Aliquam consectetur nisi quis nisl sollicitudin semper. Fusce sed purus ut mi auctor accumsan. Maecenas at ante non ipsum efficitur pretium et sed erat. Nam a molestie libero. Vivamus ac tellus nunc.
-    </p>
+      <p class="font-large">Search for consumer information on drug products.</p>
+      <p class="font-large">You may search using 3 ways: </p>
+      <p class="font-large">1) brand name 
+      <br />2) active ingredient
+      <br />3) identification number</p>
+      <p class="font-large">Use the asterisk (*) to broaden or refine your search. This symbol will help you find everything related to your search term.</p>
+      <form action="results-resultats-eng.php" method="get">
+        <div>
+          <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search the Health Canada databases" class="full-width form-control" />
+          <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt"> </datalist> 
+        </div>
+      </form>
+      <br />
+      <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+      </div>
+
+      <br>
+      <p class="font-large">As the Drug and Health Product Register is a pilot project, it currently only provides the top 100 prescribed brand name and generic drug products. These drugs have been selected based on the top Canadian sales for 2013.</p>
+<p class="font-large">An additional 250 products are included that consist largely of generic drugs, but do include some brand name products. These have the same active ingredient(s) as the top 100.</p>
+<p class="font-large">For more information about the DHPR, check out the <a href="dhpr_about.html">About section.</a></p>
+<p class="font-large">Help us make this website better. Provide us with <a href="https://hpr-rps.hres.ca/hpr-rps/templates/feedback-retroaction-eng.html">feedback</a> on your visit today. </p>
   </div>
 
 
@@ -168,6 +209,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <div class="row pagedetails">
 <div class="col-xs-6 datemod">
 <dl id="wb-dtmd">
+
+<section class="sect-lnks" style="vertical-align: top; min-height: 171px;"> 
+  <h3>Related information</h3>
+  <ul class="list-unstyled">
+    <li><a href="http://sad-dev-85ap1:8085/dpd-bdpp/index-eng.jsp"> Drug Product Database Online </a></li>
+    <li><a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/notices-avis/index-eng.php"> Notice of compliance database </a></li>
+    <li><a href="http://webprod3.hc-sc.gc.ca/lnhpd-bdpsnh/index-eng.jsp">Patent Register</a></li> 
+        <li><a href="">Clinical Trials Database</a></li> 
+        <li><a href="">Inspection Database</a></li> 
+  </ul>
+</section>
+
 <dt>Date modified:&#32;</dt>
 <dd><time property="dateModified">2015-10-19</time></dd>
 </dl>
