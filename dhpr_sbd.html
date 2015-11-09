@@ -129,14 +129,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     <!-- Nav starts here-->
     <div>
       <ul class="nav nav-tabs">
-        <li class="active panel-title"><a data-toggle="tab" href="#home">Search for Drugs</a></li>
+        <li><a href="dhpr_option3c.html">Search for Drugs</a></li>
         <li><a href="dhpr_option3c_nhp.html">Search for Natural Health</a></li>
         <li><a href="dhpr_option3c_device.html">Search for Medical Devices</a></li>
-        <li class="dropdown">
+        <li class="active dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Regulatory Content
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="RDS_index-en.html">Regulatory Decision Summaries (RDS)</a></li>
+            <li><a href="dhpr_rds.html">Regulatory Decision Summaries (RDS)</a></li>
             <li><a href="dhpr_ssr.html">Summary Safety Reviews (SSR)</a></li>
             <li><a href="dhpr_sbd.html">Summary Basis of Decision (SBD)</a></li> 
           </ul>
@@ -157,31 +157,25 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     </div>
 
     <!-- Body -->
-    <div id="home" class="tab-pane fade in active">
-      <br>
-      <p class="font-large">Search for consumer information on drug products.</p>
-      <p class="font-large">You may search using 3 ways: </p>
-      <p class="font-large">1) brand name 
-      <br />2) active ingredient
-      <br />3) identification number</p>
-      <p class="font-large">Use the asterisk (*) to broaden or refine your search. This symbol will help you find everything related to your search term.</p>
-      <form action="results-resultats-eng.php" method="get">
-        <div>
-          <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search the Health Canada databases" class="full-width form-control" />
-          <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt"> </datalist> 
-        </div>
-      </form>
-      <br />    
-      </form>
-       <a class="btn btn-primary" href="dhpr_option3c_results.html">Search</a>
-      </div>
+ <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">Summary Basis of Decision </h2>
+            </div>
+            <div class="panel-body">
+              <p class="font-large">Health Canada has made available more information about regulatory decisions on health products. This expands upon the current practice of releasing information related to positive decisions for new active substances, novel medical devices and subsequent entry biologics.</p>
 
-      <br>
-      <p class="font-large">As the Drug and Health Product Register is a pilot project, it currently only provides the top 100 prescribed brand name and generic drug products. These drugs have been selected based on the top Canadian sales for 2013.</p>
-<p class="font-large">An additional 250 products are included that consist largely of generic drugs, but do include some brand name products. These have the same active ingredient(s) as the top 100.</p>
-<p class="font-large">For more information about the DHPR, check out the <a href="dhpr_about.html">About section.</a></p>
-<p class="font-large">Help us make this website better. Provide us with <a href="https://hpr-rps.hres.ca/hpr-rps/templates/feedback-retroaction-eng.html">feedback</a> on your visit today. </p>
-  </div>
+  <p class="font-large"></p>            
+<form action="RDS_SearchResults.html" method="get">
+  <div>
+    <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Enter text here to search for a Summary Basis of Decision by drug name, manufacturer, medicinal ingredient or device class" class="full-width">
+    <datalist id="list-liste" data-ajax-replace="./list-liste-eng.txt" class=" wb-data-ajax-replace-inited"> </datalist> </div>
+</form>
+  <form align="center" method="get" action="RDS_SearchResults.html">
+    <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+            </div>
+</div>
 
 
 
