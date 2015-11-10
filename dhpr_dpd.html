@@ -1,0 +1,664 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>Drug Product Database</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="./assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="./css/wet-boew.min.css">
+<!--<![endif]-->
+<link rel="stylesheet" href="./css/theme.min.css">
+<!--[if lt IE 9]>
+<link href="./assets/favicon.ico" rel="shortcut icon" />
+
+<link rel="stylesheet" href="./css/ie8-wet-boew.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+
+
+<![endif]-->
+<noscript><link rel="stylesheet" href="./css/noscript.min.css" /></noscript>
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<script>dataLayer1 = [];</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="./css/dropdown.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+
+<body vocab="http://schema.org/" typeof="WebPage">
+<!-- Google Tag Manager -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- Only for developpement, delete for production -->
+<noscript>&lt;iframe title="Google Tag Manager"
+	src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0"
+	width="0" style="display: none; visibility: hidden"&gt;&lt;/iframe&gt;</noscript>
+
+
+<script>
+	(function(w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+			'gtm.start' : new Date().getTime(),
+			event : 'gtm.js'
+		});
+		var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer1' ? '&l='
+				+ l
+				: '';
+		j.async = true;
+		j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer1', 'GTM-TLGQ9K');
+</script>
+<!-- End Google Tag Manager -->
+<ul id="wb-tphp" class=" wb-disable-inited">
+	<li class="wb-slc">
+		<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+	 </li>
+	<li class="wb-slc visible-sm visible-md visible-lg">
+		<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+	 </li>
+<li class="wb-slc"><a class="wb-sl" href="?wbdisable=true">Basic HTML version</a></li></ul>
+<!-- HEADER BEGINS  | DEBUG DE L'EN-TETE -->
+<header role="banner">
+<div id="wb-bnr" class="container">
+<section id="wb-lng" class="visible-md visible-lg text-right">
+<h2 class="wb-inv">Language selection</h2>
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline margin-bottom-none">
+<li><a lang="fr" href="content-fr.html">Français</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<div class="row">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
+<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="./assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+</div>
+<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+<h2>Search and menus</h2>
+<ul class="list-inline text-right chvrn">
+<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl" class=" wb-overlay modal-content overlay-def wb-panel-r wb-overlay-inited" aria-hidden="true"><header class="modal-header"><div class="modal-title">Search and menus</div></header><div class="modal-body"><section class="srch-pnl">
+<h2 class="wb-inv">Search</h2>
+<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q-imprt" class="wb-inv">Search website</label>
+<input id="wb-srch-q-imprt" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca">
+<datalist id="wb-srch-q-ac-imprt">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub-imprt" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section><section class="lng-ofr"><h3>Language selection</h3><ul class="list-inline"><li><a lang="fr" href="content-fr.html">Français</a></li></ul></section><nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl" class="sm-pnl wb-menu wb-navcurr-inited"><h3>Topics menu</h3><ul class="list-unstyled mb-menu" role="menu"><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="1" tabindex="0" href="http://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="2" tabindex="-1" href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="3" tabindex="-1" href="http://travel.gc.ca/">Travel</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="4" tabindex="-1" href="http://www.canada.ca/en/services/business/index.html">Business</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="5" tabindex="-1" href="http://www.canada.ca/en/services/benefits/index.html">Benefits</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="6" tabindex="-1" href="http://healthycanadians.gc.ca/index-eng.php">Health</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="7" tabindex="-1" href="http://www.canada.ca/en/services/taxes/index.html">Taxes</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="8" tabindex="-1" href="http://www.canada.ca/en/services/index.html">More services</a></li></ul></nav><nav role="navigation" typeof="SiteNavigationElement" id="info-pnl" class="info-pnl wb-menu"><h3>About this site</h3><ul class="list-unstyled mb-menu" role="menu"><li><details><summary class="mb-item" '="" role="menuitem" aria-setsize="8" aria-posinset="1" aria-haspopup="true" tabindex="0">Contact information</summary><ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true"><li><a role="menuitem" aria-setsize="3" aria-posinset="1" tabindex="-1" href="#">Link 1</a></li><li><a role="menuitem" aria-setsize="3" aria-posinset="2" tabindex="-1" href="#">Link 2</a></li><li><a role="menuitem" aria-setsize="3" aria-posinset="3" tabindex="-1" href="#">Link 3</a></li></ul></details></li><li><details><summary class="mb-item" '="" role="menuitem" aria-setsize="8" aria-posinset="2" aria-haspopup="true" tabindex="-1">News</summary><ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true"><li><a role="menuitem" aria-setsize="5" aria-posinset="1" tabindex="-1" href="http://news.gc.ca/web/index-en.do">Newsroom</a></li><li><a role="menuitem" aria-setsize="5" aria-posinset="2" tabindex="-1" href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=1">News releases</a></li><li><a role="menuitem" aria-setsize="5" aria-posinset="3" tabindex="-1" href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=3">Media advisories</a></li><li><a role="menuitem" aria-setsize="5" aria-posinset="4" tabindex="-1" href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=970">Speeches</a></li><li><a role="menuitem" aria-setsize="5" aria-posinset="5" tabindex="-1" href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=980">Statements</a></li></ul></details></li><li><details><summary class="mb-item" '="" role="menuitem" aria-setsize="8" aria-posinset="3" aria-haspopup="true" tabindex="-1">Government</summary><ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true"><li><a role="menuitem" aria-setsize="9" aria-posinset="1" tabindex="-1" href="http://www.canada.ca/en/gov/system/index.html">How government works</a></li><li><a role="menuitem" aria-setsize="9" aria-posinset="2" tabindex="-1" href="http://www.canada.ca/en/gov/dept/index.html">Departments &amp; agencies</a></li><li><a role="menuitem" aria-setsize="9" aria-posinset="3" tabindex="-1" href="http://pm.gc.ca/eng">Prime Minister</a></li><li><a role="menuitem" aria-setsize="9" aria-posinset="4" tabindex="-1" href="http://www.canada.ca/en/gov/ministers/index.html">Ministers</a></li><li><a role="menuitem" aria-setsize="9" aria-posinset="5" tabindex="-1" href="http://www.canada.ca/en/gov/policy/index.html">Policies, regulations &amp; laws</a></li><li><a role="menuitem" aria-setsize="9" aria-posinset="6" tabindex="-1" href="http://www.canada.ca/en/gov/libraries/index.html">Libraries</a></li><li><a role="menuitem" aria-setsize="9" aria-posinset="7" tabindex="-1" href="http://www.canada.ca/en/gov/publications/index.html">Publications</a></li><li><a role="menuitem" aria-setsize="9" aria-posinset="8" tabindex="-1" href="http://www.canada.ca/en/gov/statistics/index.html">Statistics &amp; data</a></li><li><a role="menuitem" aria-setsize="9" aria-posinset="9" tabindex="-1" href="http://www.canada.ca/en/newsite.html">About Canada.ca</a></li></ul></details></li><li><details><summary class="mb-item" '="" role="menuitem" aria-setsize="8" aria-posinset="4" aria-haspopup="true" tabindex="-1">Transparency</summary><ul class="list-unstyled mb-sm" role="menu" aria-expanded="false" aria-hidden="true"><li><a role="menuitem" aria-setsize="5" aria-posinset="1" tabindex="-1" href="http://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li><li><a role="menuitem" aria-setsize="5" aria-posinset="2" tabindex="-1" href="http://open.canada.ca/en/">Open government</a></li><li><a role="menuitem" aria-setsize="5" aria-posinset="3" tabindex="-1" href="http://www.canada.ca/en/transparency/disclosure.html">Proactive disclosure</a></li><li><a role="menuitem" aria-setsize="5" aria-posinset="4" tabindex="-1" href="http://www.canada.ca/en/transparency/terms.html">Terms &amp; conditions</a></li><li><a role="menuitem" aria-setsize="5" aria-posinset="5" tabindex="-1" href="http://www.canada.ca/en/transparency/privacy.html">Privacy</a></li></ul></details></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="5" tabindex="-1" href="http://www.canada.ca/en/contact/feedback.html">Feedback</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="6" tabindex="-1" href="http://www.canada.ca/en/social/index.html">Social media</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="7" tabindex="-1" href="http://www.canada.ca/en/mobile/index.html">Mobile centre</a></li><li class="no-sect"><a class="mb-item" role="menuitem" aria-setsize="8" aria-posinset="8" tabindex="-1" href="file:///L:/RMOD-NEW/BI/Mgt%20of%20IT%20GC8/Database%20Mgt%20-%2034/IP450/Scope/WireFrames/wireframes-master/dhpr_option3c.html#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></li></ul></nav></div><button class="mfp-close overlay-close" title="Close: Search and menus (escape key)">×<span class="wb-inv"> Close: Search and menus (escape key)</span></button></div>
+</section>
+<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+<h2 class="wb-inv">Search</h2>
+<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q" class="wb-inv">Search website</label>
+<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca">
+<datalist id="wb-srch-q-ac">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section>
+</div>
+</div>
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg wb-menu-inited wb-navcurr-inited" data-trgt="mb-pnl" data-ajax-fetch="./ajax/sitemenu-en.html" typeof="SiteNavigationElement">
+<h2 class="wb-inv">Topics menu</h2>
+<div class="container nvbar">
+<div class="row">
+<ul class="list-inline menu" role="menubar">
+<li><a href="http://www.esdc.gc.ca/en/jobs/index.page" tabindex="0" aria-posinset="1" aria-setsize="8" role="menuitem">Jobs</a></li>
+<li><a href="http://www.cic.gc.ca/english/index.asp" tabindex="-1" aria-posinset="2" aria-setsize="8" role="menuitem">Immigration</a></li>
+<li><a href="http://travel.gc.ca/" tabindex="-1" aria-posinset="3" aria-setsize="8" role="menuitem">Travel</a></li>
+<li><a href="http://www.canada.ca/en/services/business/index.html" tabindex="-1" aria-posinset="4" aria-setsize="8" role="menuitem">Business</a></li>
+<li><a href="http://www.canada.ca/en/services/benefits/index.html" tabindex="-1" aria-posinset="5" aria-setsize="8" role="menuitem">Benefits</a></li>
+<li><a href="http://healthycanadians.gc.ca/index-eng.php" tabindex="-1" aria-posinset="6" aria-setsize="8" role="menuitem">Health</a></li>
+<li><a href="http://www.canada.ca/en/services/taxes/index.html" tabindex="-1" aria-posinset="7" aria-setsize="8" role="menuitem">Taxes</a></li>
+<li><a href="http://www.canada.ca/en/services/index.html" tabindex="-1" aria-posinset="8" aria-setsize="8" role="menuitem">More services</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+<h2 class="wb-inv">You are here:</h2>
+<div class="container">
+<div class="row">
+
+</ol>
+</div>
+</div>
+</nav>
+</header>
+<!-- HEADER END | FIN DE L'EN-TETE -->
+
+<!-- BREADCRUMB BEGINS | DEBUT DE BREADCRUMB -->
+
+
+<nav property="breadcrumb" class="" id="wb-bc" role="navigation">
+    <h2 class="wb-inv">You are here:</h2>
+    <div class="container">
+      <div class="row">
+        <ol class="breadcrumb">
+        	<li><a href="http://www.hc-sc.gc.ca/index-eng.php">Home</a></li>
+        	<li><a href="http://www.hc-sc.gc.ca/dhp-mps/index-eng.php">Drugs &amp; Health Products</a></li>
+        	<li><a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/index-eng.php">Drug Products</a></li>
+        	<li><a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/databasdon/index-eng.php">Drug Product Database</a></li>
+        	<li>Drug Products Online Query</li>
+        </ol>
+      </div>
+    </div>
+</nav>
+<!-- BREADCRUMB ENDS | FIN DE BREADCRUMB -->
+
+<!-- CONTENT BEGINS | DEBUT DU CONTENU -->
+<main role="main" property="mainContentOfPage" class="container">
+<h1 property="name" id="wb-cont" class="wb-inv">Drug Product Database Online Query</h1>
+<span class="wb-sessto wb-sessto-inited" data-wb-sessto="{&quot;inactivity&quot;: 1740000, &quot;reactionTime&quot;: 60000, &quot;sessionalive&quot;: 1740000, &quot;logouturl&quot;: &quot;./distro/4.0.9/timeout.jsp&quot;}" id="3e6654c8-c033-4141-9b7d-619e55f70397"></span>
+
+
+
+
+
+
+<!-- #BeginEditable "body" -->
+
+
+
+
+<!--Display application error messages-->
+<div class="mrgn-tp-md mrgn-bttm-lg">
+
+
+<!--Display validation error messages-->
+
+</div>
+
+<p class="well">
+		Due to the fact that the information originated with an organization that is not subject to the Official Languages Act, the document may only appear in the language in which it was written. Translations of the document are the responsibility of the sponsor involved.
+</p>
+
+
+<h2>Search criteria</h2>
+
+<p class="help-block">You may search by <strong>either</strong> a) drug identification number (<abbr>DIN</abbr>), b) Anatomical Therapeutical Chemical (<abbr>ATC</abbr>) code, or c) by company or one or more of the various other product characteristics listed. When typing inside fields, do not include punctuation marks such as hyphens, commas, colons, brackets and wildcard characters (%).</p>
+
+<form id="search" method="post" action="/dpd-bdpp/dispatch-repartition.do" class="form-horizontal">
+<input type="hidden" name="lang" value="en"> 
+
+<fieldset class="mrgn-tp-md"><legend>Search by drug identification number</legend>
+	<div class="form-group">
+		<label for="din" class="col-sm-6 control-label">Drug identification number (<abbr>DIN</abbr>):</label> 
+		<div class="col-sm-6">
+			
+			<input type="text" name="din" maxlength="8" size="8" value="" id="din" class="form-control">
+		</div>
+	</div>
+</fieldset>	
+
+<fieldset class="mrgn-tp-md"><legend>Search by Anatomical Therapeutical Chemical</legend>
+	<div class="form-group">
+		<label for="atc" class="col-sm-6 control-label">Anatomical Therapeutical Chemical (<abbr>ATC</abbr>):</label>
+		<div class="col-sm-6">
+			<input type="text" name="atc" maxlength="7" size="7" value="" id="atc" class="form-control">
+			</div>
+	</div>
+</fieldset>
+
+<fieldset class="mrgn-tp-md"><legend>Search by other criteria</legend>
+	<div class="form-group">
+		<label for="status" class="col-sm-6 control-label">Status:</label>
+		<div class="col-sm-6 colmrgn-bttm-sm">
+			<select name="status" id="status" class="form-control"><option value="0">Discontinued (ALL)</option>
+<option value="2" selected="selected">Active</option>
+<option value="4">Discontinued (By Company Post-Market)</option></select>
+		</div>
+	</div>
+	<div class="form-group">
+			<label for="company" class="col-sm-6 control-label">Company:</label>
+	 	<div class="col-sm-6 mrgn-bttm-sm">
+			
+			<input type="text" name="companyName" maxlength="80" value="" id="company" class="form-control">
+		</div>
+	</div>
+	<div class="form-group">
+	  		<label for="product" class="col-sm-6 control-label">Product name:</label>
+	 	<div class="col-sm-6 mrgn-bttm-sm">
+			
+	 		<input type="text" name="brandName" maxlength="80" value="" id="product" class="form-control">
+		</div>
+	</div>
+	<div class="form-group">
+			<label for="activeIngredient" class="col-sm-6 control-label">Active ingredient(s):</label>
+		<div class="col-sm-6 mrgn-bttm-sm">
+			
+	 		<input type="text" name="activeIngredient" maxlength="240" value="" id="activeIngredient" class="form-control">
+		</div>
+	</div>
+	<div class="form-group">
+	 		<label for="aigNumber" class="col-sm-6 control-label">Active ingredient group number:</label>
+		<div class="col-sm-6 mrgn-bttm-sm">
+			
+			<input type="text" name="aigNumber" maxlength="10" size="10" value="" id="aigNumber" class="form-control">
+		</div>
+	</div>
+	
+	<div class="form-group">
+	 		<label for="drugClass" class="col-sm-6 control-label">Class(es):</label>
+	 	
+		<div class="col-sm-6 mrgn-bttm-sm">
+			<select name="drugClass" multiple="multiple" size="5" id="drugClass" class="form-control"><option value="0" selected="selected">Select all</option>
+<option value="6">Disinfectant</option>
+<option value="7">Human</option>
+<option value="9">Radiopharmaceutical</option>
+<option value="8">Veterinary</option></select>
+		</div>
+	</div>
+	<div class="form-group">
+	 		<label for="route" class="col-sm-6 control-label">Route(s) of administration:</label>
+	 	
+		<div class="col-sm-6 mrgn-bttm-sm">
+			<select name="route" multiple="multiple" size="5" id="route" class="form-control"><option value="0" selected="selected">Select all</option>
+<option value="0-Unassigned">0-Unassigned</option>
+<option value="Block/Infiltration">Block/Infiltration</option>
+<option value="Buccal">Buccal</option>
+<option value="Dental">Dental</option>
+<option value="Dialysis">Dialysis</option>
+<option value="Disinfectant (Barn)">Disinfectant (Barn)</option>
+<option value="Disinfectant (Contact Lens)">Disinfectant (Contact Lens)</option>
+<option value="Disinfectant (Domestic)">Disinfectant (Domestic)</option>
+<option value="Disinfectant (Food Premises)">Disinfectant (Food Premises)</option>
+<option value="Disinfectant (Hospital/Hc Facilities)">Disinfectant (Hospital/Hc Facilities)</option>
+<option value="Disinfectant (Institutional/Industrial)">Disinfectant (Institutional/Industrial)</option>
+<option value="Disinfectant (Medical Instruments)">Disinfectant (Medical Instruments)</option>
+<option value="Epidural">Epidural</option>
+<option value="Extracorporeal">Extracorporeal</option>
+<option value="Infiltration">Infiltration</option>
+<option value="Inhalation">Inhalation</option>
+<option value="Instillation">Instillation</option>
+<option value="Intra-Amniotic">Intra-Amniotic</option>
+<option value="Intra-Arterial">Intra-Arterial</option>
+<option value="Intra-Articular">Intra-Articular</option>
+<option value="Intrabranchial">Intrabranchial</option>
+<option value="Intrabursal">Intrabursal</option>
+<option value="Intracardiac">Intracardiac</option>
+<option value="Intracaudal">Intracaudal</option>
+<option value="Intracavernosal">Intracavernosal</option>
+<option value="Intracervical">Intracervical</option>
+<option value="Intracoronary">Intracoronary</option>
+<option value="Intracranial">Intracranial</option>
+<option value="Intradermal">Intradermal</option>
+<option value="Intradiscal">Intradiscal</option>
+<option value="Intraganglional">Intraganglional</option>
+<option value="Intraintestinal (Upper)">Intraintestinal (Upper)</option>
+<option value="Intralesional">Intralesional</option>
+<option value="Intramammary">Intramammary</option>
+<option value="Intramuscular">Intramuscular</option>
+<option value="Intraocular">Intraocular</option>
+<option value="Intraperitoneal">Intraperitoneal</option>
+<option value="Intrapleural">Intrapleural</option>
+<option value="Intrapulmonary">Intrapulmonary</option>
+<option value="Intraruminal">Intraruminal</option>
+<option value="Intraspinal">Intraspinal</option>
+<option value="Intrasynovial">Intrasynovial</option>
+<option value="Intratendinous">Intratendinous</option>
+<option value="Intrathecal">Intrathecal</option>
+<option value="Intrathoracic">Intrathoracic</option>
+<option value="Intratracheal">Intratracheal</option>
+<option value="Intrauterine">Intrauterine</option>
+<option value="Intravascular">Intravascular</option>
+<option value="Intravenous">Intravenous</option>
+<option value="Intraventricular">Intraventricular</option>
+<option value="Intravesical">Intravesical</option>
+<option value="Intravesicular">Intravesicular</option>
+<option value="Intravitreal">Intravitreal</option>
+<option value="Intubing">Intubing</option>
+<option value="Irrigation">Irrigation</option>
+<option value="Nasal">Nasal</option>
+<option value="Nasogastric">Nasogastric</option>
+<option value="Nerve Block">Nerve Block</option>
+<option value="Ophthalmic">Ophthalmic</option>
+<option value="Oral">Oral</option>
+<option value="Otic">Otic</option>
+<option value="Parenteral (Unspecified)">Parenteral (Unspecified)</option>
+<option value="Percutaneous">Percutaneous</option>
+<option value="Periosteal">Periosteal</option>
+<option value="Rectal">Rectal</option>
+<option value="Retrobulbar">Retrobulbar</option>
+<option value="Soft Tissue Injection">Soft Tissue Injection</option>
+<option value="Subarachnoidal">Subarachnoidal</option>
+<option value="Subcutaneous">Subcutaneous</option>
+<option value="Subgingival">Subgingival</option>
+<option value="Sublingual">Sublingual</option>
+<option value="Submucosal">Submucosal</option>
+<option value="Surgical">Surgical</option>
+<option value="Topical">Topical</option>
+<option value="Topical (Commercial)">Topical (Commercial)</option>
+<option value="Topical (Food Premises)">Topical (Food Premises)</option>
+<option value="Topical (Hospital/Hc Facilities)">Topical (Hospital/Hc Facilities)</option>
+<option value="Topical (Household)">Topical (Household)</option>
+<option value="Transdermal">Transdermal</option>
+<option value="Udder Wash">Udder Wash</option>
+<option value="Urethral">Urethral</option>
+<option value="Vaginal">Vaginal</option></select>
+		</div>
+	</div>
+	<div class="form-group">
+	 		<label for="dosage" class="col-sm-6 control-label">Dosage form(s):</label>
+	 	
+		<div class="col-sm-6 mrgn-bttm-sm">
+			<select name="dosage" multiple="multiple" size="5" id="dosage" class="form-control"><option value="0" selected="selected">Select all</option>
+<option value="0-Unassigned">0-Unassigned</option>
+<option value="Aerosol">Aerosol</option>
+<option value="Aerosol, Foam">Aerosol, Foam</option>
+<option value="Aerosol, Metered Dose">Aerosol, Metered Dose</option>
+<option value="Bar (Chewable)">Bar (Chewable)</option>
+<option value="Bolus">Bolus</option>
+<option value="Capsule">Capsule</option>
+<option value="Capsule (Controlled-Delivery)">Capsule (Controlled-Delivery)</option>
+<option value="Capsule (Delayed Release)">Capsule (Delayed Release)</option>
+<option value="Capsule (Enteric-Coated)">Capsule (Enteric-Coated)</option>
+<option value="Capsule (Extended Release)">Capsule (Extended Release)</option>
+<option value="Capsule (Immediate And Delayed Release)">Capsule (Immediate And Delayed Release)</option>
+<option value="Capsule (Immediate And Extended Release)">Capsule (Immediate And Extended Release)</option>
+<option value="Capsule (Immediate Release)">Capsule (Immediate Release)</option>
+<option value="Capsule (Sustained-Release)">Capsule (Sustained-Release)</option>
+<option value="Cord">Cord</option>
+<option value="Cream">Cream</option>
+<option value="Disc">Disc</option>
+<option value="Disc (Extended-Release)">Disc (Extended-Release)</option>
+<option value="Douche">Douche</option>
+<option value="Dressing">Dressing</option>
+<option value="Drops">Drops</option>
+<option value="Drug Premix">Drug Premix</option>
+<option value="Elixir">Elixir</option>
+<option value="Emulsion">Emulsion</option>
+<option value="Enema">Enema</option>
+<option value="Film, Soluble">Film, Soluble</option>
+<option value="Floss">Floss</option>
+<option value="Gas">Gas</option>
+<option value="Gel">Gel</option>
+<option value="Gel (Controlled-Release)">Gel (Controlled-Release)</option>
+<option value="Globules">Globules</option>
+<option value="Granules">Granules</option>
+<option value="Granules (Effervescents)">Granules (Effervescents)</option>
+<option value="Granules For Solution">Granules For Solution</option>
+<option value="Granules For Suspension">Granules For Suspension</option>
+<option value="Granules For Suspension, Delayed Release">Granules For Suspension, Delayed Release</option>
+<option value="Granules For Suspension,Extended Release">Granules For Suspension,Extended Release</option>
+<option value="Gum">Gum</option>
+<option value="Implant">Implant</option>
+<option value="Insert">Insert</option>
+<option value="Insert (Extended-Release)">Insert (Extended-Release)</option>
+<option value="Kit">Kit</option>
+<option value="Liposomes">Liposomes</option>
+<option value="Liquid">Liquid</option>
+<option value="Lotion">Lotion</option>
+<option value="Lozenge">Lozenge</option>
+<option value="Metered-Dose Aerosol">Metered-Dose Aerosol</option>
+<option value="Metered-Dose Pump">Metered-Dose Pump</option>
+<option value="Mouthwash/Gargle">Mouthwash/Gargle</option>
+<option value="Oil">Oil</option>
+<option value="Ointment">Ointment</option>
+<option value="Ovule">Ovule</option>
+<option value="Pad">Pad</option>
+<option value="Paint">Paint</option>
+<option value="Paste">Paste</option>
+<option value="Patch">Patch</option>
+<option value="Patch (Extended Release)">Patch (Extended Release)</option>
+<option value="Pellet">Pellet</option>
+<option value="Pencil">Pencil</option>
+<option value="Piece (Chewable)">Piece (Chewable)</option>
+<option value="Plaster">Plaster</option>
+<option value="Powder">Powder</option>
+<option value="Powder (Effervescent)">Powder (Effervescent)</option>
+<option value="Powder (Extended Release)">Powder (Extended Release)</option>
+<option value="Powder (Metered Dose)">Powder (Metered Dose)</option>
+<option value="Powder For Solution">Powder For Solution</option>
+<option value="Powder For Suspension">Powder For Suspension</option>
+<option value="Powder For Suspension, Sustained-Release">Powder For Suspension, Sustained-Release</option>
+<option value="Ring (Slow-Release)">Ring (Slow-Release)</option>
+<option value="Shampoo">Shampoo</option>
+<option value="Shampoo, Suspension">Shampoo, Suspension</option>
+<option value="Soap Bar">Soap Bar</option>
+<option value="Solution">Solution</option>
+<option value="Solution (Extended Release)">Solution (Extended Release)</option>
+<option value="Sponge">Sponge</option>
+<option value="Spray">Spray</option>
+<option value="Spray, Bag-On-Valve">Spray, Bag-On-Valve</option>
+<option value="Spray, Metered Dose">Spray, Metered Dose</option>
+<option value="Stick">Stick</option>
+<option value="Strip">Strip</option>
+<option value="Suppository">Suppository</option>
+<option value="Suppository (Sustained-Release)">Suppository (Sustained-Release)</option>
+<option value="Suspension">Suspension</option>
+<option value="Suspension (Extended-Release)">Suspension (Extended-Release)</option>
+<option value="Swab">Swab</option>
+<option value="Syrup">Syrup</option>
+<option value="Syrup (Extended-Release)">Syrup (Extended-Release)</option>
+<option value="Tablet">Tablet</option>
+<option value="Tablet (Chewable)">Tablet (Chewable)</option>
+<option value="Tablet (Delayed And Extended Release)">Tablet (Delayed And Extended Release)</option>
+<option value="Tablet (Delayed-Release)">Tablet (Delayed-Release)</option>
+<option value="Tablet (Effervescent)">Tablet (Effervescent)</option>
+<option value="Tablet (Enteric-Coated)">Tablet (Enteric-Coated)</option>
+<option value="Tablet (Extended-Release)">Tablet (Extended-Release)</option>
+<option value="Tablet (Immediate And Delayed-Release)">Tablet (Immediate And Delayed-Release)</option>
+<option value="Tablet (Immediate And Extended Release)">Tablet (Immediate And Extended Release)</option>
+<option value="Tablet (Immediate Release)">Tablet (Immediate Release)</option>
+<option value="Tablet (Orally Disintegrating)">Tablet (Orally Disintegrating)</option>
+<option value="Tablet For Suspension">Tablet For Suspension</option>
+<option value="Tape">Tape</option>
+<option value="Tea (Herbal)">Tea (Herbal)</option>
+<option value="Tincture">Tincture</option>
+<option value="Toothpaste">Toothpaste</option>
+<option value="Vaginal Tablet">Vaginal Tablet</option>
+<option value="Vaginal Tablet, Effervescent">Vaginal Tablet, Effervescent</option>
+<option value="Wafer">Wafer</option>
+<option value="Wipe">Wipe</option></select>
+		</div>
+	</div>
+	<div class="form-group">
+	 		<label for="schedule" class="col-sm-6 control-label">Schedule(s):</label>
+	 	
+		<div class="col-sm-6">
+			<select name="schedule" multiple="multiple" size="5" id="schedule" class="form-control"><option value="0" selected="selected">Select all</option>
+<option value="CDSA Recommended">CDSA Recommended</option>
+<option value="Ethical">Ethical</option>
+<option value="Homeopathic">Homeopathic</option>
+<option value="Narcotic">Narcotic</option>
+<option value="Narcotic (CDSA I)">Narcotic (CDSA I)</option>
+<option value="Narcotic (CDSA II)">Narcotic (CDSA II)</option>
+<option value="OTC">OTC</option>
+<option value="Prescription">Prescription</option>
+<option value="Prescription Recommended">Prescription Recommended</option>
+<option value="Schedule C">Schedule C</option>
+<option value="Schedule D">Schedule D</option>
+<option value="Schedule G (CDSA III)">Schedule G (CDSA III)</option>
+<option value="Schedule G (CDSA IV)">Schedule G (CDSA IV)</option>
+<option value="Targeted (CDSA IV)">Targeted (CDSA IV)</option></select>
+		</div>
+	</div>
+</fieldset>
+
+<div class="form-group">	
+	<div class="col-sm-offset-6">
+		<input type="submit" name="method" value="Search" class="btn btn-primary mrgn-rght-sm mrgn-lft-md">
+		<input type="reset" name="method" value="Reset" class="btn btn-default">
+ 	</div>
+</div>
+</form>
+<!-- #EndEditable -->
+
+<div class="row">
+<div class="col-xs-6 datemod">
+<dl id="wb-dtmd">
+	<dt>Date modified: </dt>
+	<dd>2015-11-06&nbsp;-&nbsp;Version 3.5</dd>
+</dl>
+</div>
+</div>
+
+<!-- SUB-HEADER START | DEBUT DU SOUS EN-TETE -->
+<!-- This is where original application specific top menu sits -->
+
+
+<div class="row">
+	
+<div class="wb-eqht wb-eqht-inited" id="1c52b439-5235-45e5-ba6b-58a76df954fb">
+		<section class="sect-lnks col-sm-4" style="vertical-align: top; min-height: 171px;">
+			<h3>Application information</h3>
+			<ul class="list-unstyled">
+				<li><a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/databasdon/search_tips_conseils_recherche-eng.php"> Search tips </a></li>
+				<li><a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/databasdon/terminolog-eng.php"> Drug product database terminology </a></li>
+				<li><a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/databasdon/dpd_bdpp_data_extract-eng.php"> Drug product database data extracts </a>
+				</li>
+			</ul>
+		</section>
+		<section class="sect-lnks col-sm-4" style="vertical-align: top; min-height: 171px;">	
+			<h3>Related information</h3>
+			<ul class="list-unstyled">
+				<li><a href="http://www.hc-sc.gc.ca/dhp-mps/medeff/advisories-avis/index-eng.php"> MedEffect Canada </a></li>
+				<li><a href="http://www.hc-sc.gc.ca/dhp-mps/vet/advers-react-neg/index-eng.php"> Adverse drug reaction - veterinary drugs </a></li>
+				<li><a href="http://www.hc-sc.gc.ca/dhp-mps/prodpharma/notices-avis/index-eng.php"> Notice of compliance database </a></li>
+				
+				<li><a href="http://webprod3.hc-sc.gc.ca/lnhpd-bdpsnh/index-eng.jsp">Licensed natural health products database</a></li>	
+			</ul>
+		</section>
+		<section class="sect-lnks col-sm-4" style="vertical-align: top; min-height: 171px;">
+			<h3>Contact us</h3>
+			<ul class="list-unstyled">
+				<li><a href="http://www.hc-sc.gc.ca/dhp-mps/contact/tpd-dpt/contact_sipdmail_dpprposte-eng.php"> Content support </a></li>
+					<li><a href="http://www.hc-sc.gc.ca/dhp-mps/contact/oimt-bgit/contact_dpd_bdpp_admin-eng.php">Technical support</a></li>
+			</ul>	
+		</section>
+	</div></div>
+<!-- SUB-HEADER END | FIN DU SOUS EN-TETE -->
+</main>
+<!-- CONTENT ENDS | FIN DU CONTENU -->
+
+	<!-- FOOTER BEGINS | DEBUT DU PIED DE LA PAGE -->
+	
+		<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
+<h2 class="wb-inv">About this site</h2>
+<div class="row">
+<div class="col-sm-3 col-lg-3">
+<section>
+<h3>Contact information</h3>
+<ul class="list-unstyled">
+<li><a href="http://healthycanadians.gc.ca/report-signalez/index-eng.php">Report a concern</a></li>
+<li><a href="http://healthycanadians.gc.ca/say-exprimez/index-eng.php">Public involvement</a></li>
+<li><a href="http://healthycanadians.gc.ca/contact-contactez/index-eng.php">General enquiries</a></li>
+<li><a href="http://healthycanadians.gc.ca/connect-connectez/index-eng.php">Stay connected</a></li>
+</ul>
+</section>
+<section>
+<h3>News</h3>
+<ul class="list-unstyled">
+<li><a href="http://news.gc.ca/web/index-en.do">Newsroom</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=1">News releases</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=3">Media advisories</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=970">Speeches</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=980">Statements</a></li>
+</ul>
+</section>
+</div>
+<section class="col-sm-3 col-lg-3">
+<h3>Government</h3>
+<ul class="list-unstyled">
+<li><a href="http://www.canada.ca/en/gov/system/index.html">How government works</a></li>
+<li><a href="http://www.canada.ca/en/gov/dept/index.html">Departments &amp; agencies</a></li>
+<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+<li><a href="http://www.canada.ca/en/gov/ministers/index.html">Ministers</a></li>
+<li><a href="http://www.canada.ca/en/gov/policy/index.html">Policies, regulations &amp; laws</a></li>
+<li><a href="http://www.canada.ca/en/gov/libraries/index.html">Libraries</a></li>
+<li><a href="http://www.canada.ca/en/gov/publications/index.html">Publications</a></li>
+<li><a href="http://www.canada.ca/en/gov/statistics/index.html">Statistics &amp; data</a></li>
+<li><a href="http://www.canada.ca/en/newsite.html">About Canada.ca</a></li>
+</ul>
+</section>
+<section class="col-sm-3 col-lg-3 brdr-lft">
+<h3>Transparency</h3>
+<ul class="list-unstyled">
+<li><a href="http://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+<li><a href="http://www.canada.ca/en/transparency/open.html">Open government</a></li>
+<li><a href="http://www.canada.ca/en/transparency/disclosure.html">Proactive disclosure</a></li>
+<li><a href="http://www.canada.ca/en/transparency/terms.html">Terms &amp; conditions</a></li>
+<li><a href="http://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+</ul>
+</section>
+<div class="col-sm-3 col-lg-3 brdr-lft">
+<section>
+<h3>Feedback</h3>
+<p><a href="http://www.canada.ca/en/contact/feedback.html"><img src="./distro/4.0.9/assets/feedback.png" alt="Feedback about this Web site"></a></p>
+</section>
+<section>
+<h3>Social media</h3>
+<p><a href="http://www.canada.ca/en/social/index.html"><img src="./distro/4.0.9/assets/social.png" alt="Social media"></a></p>
+</section>
+<section>
+<h3>Mobile centre</h3>
+<p><a href="http://www.canada.ca/en/mobile/index.html"><img src="./distro/4.0.9/assets/mobile.png" alt="Mobile centre"></a></p>
+</section>
+</div>
+</div>
+</nav>
+<div class="brand">
+<div class="container">
+<div class="row">
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-12 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="./distro/4.0.9/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+	
+	
+	<!-- FOOTER ENDS | FIN DU PIED DE LA PAGE -->
+
+
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="./distro/4.0.9/js/wet-boew.min.js"></script><span id="wb-rsz">&nbsp;</span>
+<script src="./distro/4.0.9/js/theme.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="./distro/4.0.9/js/ie8-wet-boew.min.js"></script>
+	<script src="./distro/4.0.9/js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+
+<a class="wb-lbx lbx-modal mfp-hide wb-lbx-inited" href="#wb-sessto-modal" id="b0a487a6-33c7-4259-9f01-77f4a3821fd1"></a><section id="wb-sessto-modal" class="mfp-hide modal-dialog modal-content overlay-def"><header class="modal-header"><h2 class="modal-title">Session timeout warning</h2></header><div class="modal-body"></div><div class="modal-footer"></div></section></body>
+
+</html>
