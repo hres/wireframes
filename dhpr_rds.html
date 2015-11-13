@@ -29,6 +29,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- End Google Tag Manager -->
 
 <!-- Boostrap -->
+<link rel="stylesheet" href="./css/dropdown.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -140,10 +141,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="dhpr_about.html">The Drug and Health Product Register</a></li>
-            <li><a href="/hpr-rps/templates/data-donnees-eng.html" tabindex="-1" aria-posinset="2" aria-setsize="5" role="menuitem">Data Sources</a></li>
-            <li><a href="/hpr-rps/templates/disclaimers-avisdenonresponsabilite-eng.html" tabindex="-1" aria-posinset="3" aria-setsize="5" role="menuitem">Reported Side Effects - Disclaimers</a></li>
-            <li><a href="/hpr-rps/templates/feedback-retroaction-eng.html" tabindex="-1" aria-posinset="4" aria-setsize="5" role="menuitem">Feedback</a></li>
-            <li><a href="/hpr-rps/templates/qanda-qetr-eng.html" tabindex="-1" aria-posinset="5" aria-setsize="5" role="menuitem">Questions and Answers</a></li>
+            <li class="dropdown-submenu">
+                <a tabindex="-1" href="#">Data Sources</a>
+                <ul class="dropdown-menu">
+                  <li><a href="dhpr_drug_ds.html">Drugs</a></li>
+          
+                  <li><a href="#">Medical Device</a></li>
+                  <li><a href="#">Natural Health Product</a></li>
+                </ul>
+              </li>
+            <li><a href="dhpr_report_se.html">Reported Side Effects - Disclaimers</a></li>
+            <li><a href="dhpr_feedback.html">Feedback</a></li>
+            <li><a href="dhpr_qa.html">Questions and Answers</a></li>
           </ul>
         </li>
       </ul>      
