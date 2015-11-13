@@ -342,28 +342,73 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- #BeginBody" -->
 
 	
-<div class="mrgn-tp-lg mrgn-bttm-md text-left">
-		Dear visitor,	
+<div class="mrgn-tp-md mrgn-bttm-lg">
+	<p class="help-block">
+		You may search by one of the following search options only: company name or identifier, licence name or number, device name or identifier. You must also provide a search criterion for the selected option, in the Search for field.<br>
+	</p>
 </div>
-<div class="mrgn-tp-md text-left">
-		We have reorganized our Web site.	
+
+<form id="search" method="post" action="/mdall-limh/dispatch-repartition.do?type=active"> 
+   
+ 
+<div class="mrgn-tp-md mrgn-bttm-lg">
+    <!--Display application error messages-->
+	
+	
+    <!--Display validation error messages-->
+	
 </div>
-<div class="row">
-	<div class="mrgn-tp-md mrgn-bttm-sm col-md-5">
-		Selecting the Active Licence Search link takes you to the Medical Devices Active Licence Search window. This window is identical to the original MDALL search and displays the results as before. The Licence Number query was improved to return the exact number match only.<br>
+	<div class="mrgn-tp-md mrgn-bttm-md text-right">								
+			<a href="dhpr_mdall_archived.html">Archived Licence Search</a>	
+	</div>
+
+<fieldset><legend>Search options</legend>
+	<div class="col-md-offset-2 mrgn-tp-md mrgn-bttm-lg">		
 		
-		<a href="/mdall-limh/prepareSearch-preparerRecherche.do?type=active">Active Licence Search</a>
+			<input type="radio" name="option" value="0" id="company" class="normal">
+			<label for="company">Company name</label><br>
+			<input type="radio" name="option" value="1" id="licence" class="normal">
+				<label for="licence">Licence name</label><br>
+			<input type="radio" name="option" value="2" id="device" class="normal">
+			<label for="device">Device name</label><br>		
+			<input type="radio" name="option" value="3" id="companyId" class="normal">
+				<label for="companyId">Company ID</label><br>
+			<input type="radio" name="option" value="4" id="licenceId" class="normal">
+				<label for="licenceId">Licence number</label><br>
+			<input type="radio" name="option" value="5" id="deviceId" class="normal">
+				<label for="deviceId">Device identifier</label>			
+     </div>
+</fieldset>	
+
+<fieldset><legend>Search criterion</legend>
+	
+	
+	
+	
+	
+	<div class="col-md-offset-2 form-group">	
+		<div>
+			<label for="criteria" class="control-label">Search for:</label>&nbsp;
+		</div>
+		<div>
+			<input type="text" name="name" maxlength="50" size="50" value="" id="criteria" class="form-control">
+		</div>		
 	</div>
+</fieldset>
+			
 	
-	
-	
-	<div class="mrgn-tp-md mrgn-bttm-sm col-md-5">
-		Selecting the Archived Licence Search link takes you to the new Medical Devices Licence History Archive Search window. The capability is limited to search Licence Number, Device Name and Device Identifier. The last Licence holder and Licence name are displayed. Products that are no longer authorized for sale in Canada are listed in red and with an asterisk. <br>
-		<a href="/mdall-limh/prepareSearch-preparerRecherche.do?type=archived_archive">Archived Licence Search</a>
-	</div>
-	
-	
+<div class="row mrgn-tp-md mrgn-bttm-lg form-group">     
+	     <div class="col-sm-2 col-sm-offset-3">
+	     	<input type="submit" name="method" value="Search" class="btn btn-primary">
+	     </div>
+	     <div class="col-sm-2">
+	     	<input type="reset" value="Reset" id="reset" class="btn btn-default">
+	     	
+		</div>	
 </div>
+
+		
+</form>
 
 
 <!-- #EndBody -->
