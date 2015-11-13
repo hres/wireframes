@@ -30,7 +30,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
-
+<link rel="stylesheet" href="./css/dropdown.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -145,17 +145,25 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="dhpr_about.html">The Drug and Health Product Register</a></li>
-            <li><a href="/hpr-rps/templates/data-donnees-eng.html" tabindex="-1" aria-posinset="2" aria-setsize="5" role="menuitem">Data Sources</a></li>
-            <li><a href="/hpr-rps/templates/disclaimers-avisdenonresponsabilite-eng.html" tabindex="-1" aria-posinset="3" aria-setsize="5" role="menuitem">Reported Side Effects - Disclaimers</a></li>
-            <li><a href="/hpr-rps/templates/feedback-retroaction-eng.html" tabindex="-1" aria-posinset="4" aria-setsize="5" role="menuitem">Feedback</a></li>
-            <li><a href="/hpr-rps/templates/qanda-qetr-eng.html" tabindex="-1" aria-posinset="5" aria-setsize="5" role="menuitem">Questions and Answers</a></li>
+            <li class="dropdown-submenu">
+                <a tabindex="-1" href="#">Data Sources</a>
+                <ul class="dropdown-menu">
+                  <li><a href="dhpr_drug_ds.html">Drugs</a></li>
+          
+                  <li><a href="#">Medical Device</a></li>
+                  <li><a href="#">Natural Health Product</a></li>
+                </ul>
+              </li>
+            <li><a href="dhpr_report_se.html">Reported Side Effects - Disclaimers</a></li>
+            <li><a href="dhpr_feedback.html">Feedback</a></li>
+            <li><a href="dhpr_qa.html">Questions and Answers</a></li>
           </ul>
         </li>
       </ul>      
     </div>
 
 <main role="main" property="mainContentOfPage" class="container">
-<h1 id="wb-cont">Report a Side Effect</h1>
+<h3 id="wb-cont">Report a Side Effect</h3>
 <div class="accordion" role="tablist"> <details class="acc-group off"> <summary class="wb-toggle tgl-tab wb-toggle-inited" data-toggle="{&quot;parent&quot;: &quot;.accordion&quot;, &quot;group&quot;: &quot;.acc-group&quot;}" id="wb-10" role="tab" aria-selected="false" tabindex="-1" aria-posinset="1" aria-setsize="3">Privacy Statement</summary>
   <div class="tgl-panel" role="tabpanel" aria-labelledby="wb-10" aria-expanded="false" aria-hidden="true"> <p>In the context of Health Canada's side effect reporting program(the Canada Vigilance Program), personal information is collected pursuant to section 4 of the <em>Department of Health Act</em>, for the purpose of monitoring licensed products, detecting potential emerging safety issues and trends, mitigating the risks and improving the safe use and efficacy of the health products.  Information related to the identity of the patient and/or reporter will be protected as personal information under the <em>Privacy Act</em>, and in the case of an access to information request, under the <em>Access to Information Act</em>. Suspected health product side effect-related information that is voluntarily submitted to Health Canada is maintained in a secure computerized database. The program endeavours to use and disclose only de-identified information but may use and disclose personal information that is not de-identified as permitted under the Privacy Act.</p>
         <p>For further details regarding the personal information collected under this program, visit the Personal Information Bank; Health Canada; Health Products and Food Branch; Branch Incident Reporting System; PIB#PPU 088 at: <a href="http://www.hc-sc.gc.ca/ahc-asc/activit/atip-aiprp/infosource/index-eng.php#a2">http://www.hc-sc.gc.ca/ahc-asc/activit/atip-aiprp/infosource/index-eng.php#a2</a>. Every Canadian individual has the right to access their own personal information and is entitled to request correction to ensure accuracy of their information. If you wish to exercise this right, contact the <a href="http://www.tbs-sct.gc.ca/tbsf-fsct/350-58-eng.ASP">Treasury Board of Canada Secretariat</a>.</p> </div>
@@ -685,10 +693,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
   }
 </script>
 <!-- end -->
-<dl id="wb-dtmd" property="dateModified">
-  <dt>Date modified: </dt>
-  <dd> <time>2014-11-14</time> </dd>
-</dl>
 </main>
 
 
