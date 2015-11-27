@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" dir="ltr">
@@ -25,8 +23,6 @@
     <script src="./js/ie8-wet-boew.min.js"></script>
     <![endif]-->
     <!--[if lte IE 9]>
-
-
     <![endif]-->
     <link rel="stylesheet" href="custom.css">
     <noscript><link rel="stylesheet" href="./css/noscript.min.css" /></noscript>
@@ -40,151 +36,6 @@
 
 
 <body vocab="http://schema.org/" typeof="WebPage">
-<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
-<noscript>&amp;lt;iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"&amp;gt;&amp;lt;/iframe&amp;gt;</noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
-<!-- End Google Tag Manager -->
-<ul id="wb-tphp" class=" wb-disable-inited">
-<li class="wb-slc">
-<a class="wb-sl" href="#wb-cont">Skip to main content</a>
-</li>
-<li class="wb-slc visible-sm visible-md visible-lg">
-<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
-</li>
-<li class="wb-slc"><a class="wb-sl" href="?lang=en&amp;sponName=&amp;contNum=&amp;region=&amp;drugName=&amp;phase=&amp;startDate=&amp;rating=C&amp;cat=1&amp;wbdisable=true">Basic HTML version</a></li></ul>
-
-   
-
-   <!-- Main -->
-
-
-
-
-
-
-
-<!--[if gte IE 9 | !IE ]><!-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="./wet/js/wet-boew.min.js"></script><span id="wb-rsz">&nbsp;</span>
-<!--<![endif]-->
-<!--[if lt IE 9]>
-<script src="./wet/assets/ie8-wet-boew2.min.js"></script>
-<![endif]-->
-
-<script src="./wet/js/theme.min.js"></script>
-<script src="./wet/js/inspections.js"></script>
-<!--[if lt IE 10 | !IE ]><!-->
-<script src="./wet/js/jquery.xdomainrequest.min.js"></script>
-<!--<![endif]-->
-
-    <script>
-        var sponName = getParameterByName("sponName");
-        var contNum = getParameterByName("contNum");
-        var region = getParameterByName("region");
-        var drugName = getParameterByName("drugName");
-        var phase = getParameterByName("phase");
-        var startDate = getParameterByName("startDate");
-        var rating = getParameterByName("rating");
-        var cat = getParameterByName("cat");
-        var searchUrl = "./handler/searchResult.ashx?lang=en&sponName=" + sponName + "&contNum=" + contNum + "&region=" + region + "&drugName=" + drugName + "&phase=" + phase + "&startDate=" + startDate + "&rating=" + rating + "&cat=" + cat;
-        var langUrl = "searchResult-fr.html?lang=fr&sponName=" + sponName + "&contNum=" + contNum + "&region=" + region + "&drugName=" + drugName + "&phase=" + phase + "&startDate=" + startDate + "&rating=" + rating + "&cat=" + cat;
-        $("a#langLink").attr('href', langUrl);
-
-        if (cat == '1') {
-            $('#title').text('Clinical trial inspections search results');
-            $('#subParam1').text('Below are the results for clinical trial inspections');
-            $('#subParam2').html('You can also learn about how <a href="http://healthycanadians.gc.ca/drugs-products-medicaments-produits/inspections/about-au-sujet-eng.php#s1">clinical trial inspections </a> are conducted and <a href="http://healthycanadians.gc.ca/drugs-products-medicaments-produits/inspections/about-au-sujet-eng.php#s3">what inspectors look for</a>.');
-        }
-        else if (cat == '2') {
-            $('#title').text('Non-compliant clinical trial inspections search results');
-            $('#subParam1').text('Below are the results for non-compliant clinical trial inspections.');
-            $('#subParam2').html('You can also learn about what <a href="http://healthycanadians.gc.ca/drugs-products-medicaments-produits/inspections/about-au-sujet-eng.php#s4">non-compliant clinical trial inspections</a> involve.');
-        }
-        else {
-            $('#title').text('Clinical trial inspections search results');
-            $('#subParam1').text('Below are the results for clinical trial inspections.');
-            $('#subParam2').html('You can also learn about how <a href="http://healthycanadians.gc.ca/drugs-products-medicaments-produits/inspections/about-au-sujet-eng.php#s1">clinical trial inspections </a> are conducted and <a href="http://healthycanadians.gc.ca/drugs-products-medicaments-produits/inspections/about-au-sujet-eng.php#s3">what inspectors look for</a>.');
-        }
-
-        window["wb-tables"] = {
-            "processing":true,
-            "ajax": {
-                "url": searchUrl,
-                "error": OnFail
-            },
-            "order": [[3, "desc"]],
-            "columns": [
-                                { "data": "controlNumber"},
-                                { "data": null,
-                                  "render": function (data, type, full) {
-                                      return '<a href=inspectionDetail-en.html?lang=en&gcpid=' + data.gcpID + '>' + data.sponsorName + '</a>';
-                                    }
-                                },
-                                { "data": "region" },
-                                {
-                                    "data": "insStartDate",
-                                    "render": function (data, type, full, meta) {
-                                        return formatedDate(data);
-                                    }
-                                },
-                                { "data": "drugName" },
-                                { "data": "trialPhase" },
-                                { "data": null,
-                                    "render": function (data, type, full) {
-                                        return displayRating(data, 'en');                                        
-                                    }
-                                }
-            ]
-        }
-    </script>
-
-<table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 261px; display: none; top: 85px; position: absolute; left: 940px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_51 gssb_c" style="width: 100%; display: none; top: -1px; position: absolute; left: 0px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table>
-
-
-
-
-
-
-
-<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
-
-<!--<![endif]-->
-
-    <meta charset="utf-8">
-    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
-    wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-    <title>Drug &amp; health product inspections</title>
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <!-- Meta data -->
-    <meta name="description" content="">
-    <!-- Meta data-->
-    <!--[if gte IE 9 | !IE ]><!-->
-    <link href="./assets/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="./css/wet-boew.min.css">
-    <!--<![endif]-->
-    <link rel="stylesheet" href="./css/theme.min.css">
-    <!--[if lt IE 9]>
-    <link href="./assets/favicon.ico" rel="shortcut icon" />
-    <link rel="stylesheet" href="./css/ie8-wet-boew.min.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="./js/ie8-wet-boew.min.js"></script>
-    <![endif]-->
-    <!--[if lte IE 9]>
-
-
-    <![endif]-->
-    <link rel="stylesheet" href="custom.css">
-    <noscript>&lt;link rel="stylesheet" href="./css/noscript.min.css" /&gt;</noscript>
-    <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
-    <script>dataLayer1 = [];</script>
-    <!-- End Google Tag Manager -->
-
-
-
-
-
-
-
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <noscript>&amp;lt;iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"&amp;gt;&amp;lt;/iframe&amp;gt;</noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
@@ -225,7 +76,7 @@
             <script type="text/javascript">var autoCompletionOptions = { 'validLanguages' : 'en', };
                     google.load( 'search', '1');
                     google.setOnLoadCallback( function() {google.search.CustomSearchControl.attachAutoCompletionWithOptions( '008724028898028201144:knjjdikrhq0', document.getElementById( 'wb-srch-q' ), 'cse-search-box', autoCompletionOptions );});
-                    google.setOnLoadCallback( function() {setTimeout( function(){google.search.CustomSearchControl.attachAutoCompletionWithOptions( '008724028898028201144:knjjdikrhq0', document.getElementById( 'wb-srch-q-imprt' ), 'cse-search-box',autoCompletionOptions );}, 2000);});</script><script src="https://www.google.com/uds/?file=search&amp;v=1" type="text/javascript"></script><link href="https://www.google.com/uds/api/search/1.0/432dd570d1a386253361f581254f9ca1/default+en.css" type="text/css" rel="stylesheet"><script src="https://www.google.com/uds/api/search/1.0/432dd570d1a386253361f581254f9ca1/default+en.I.js" type="text/javascript"></script><link href="https://www.google.com/uds/api/search/1.0/432dd570d1a386253361f581254f9ca1/default+en.css" type="text/css" rel="stylesheet"><script src="https://www.google.com/uds/api/search/1.0/432dd570d1a386253361f581254f9ca1/default+en.I.js" type="text/javascript"></script>
+                    google.setOnLoadCallback( function() {setTimeout( function(){google.search.CustomSearchControl.attachAutoCompletionWithOptions( '008724028898028201144:knjjdikrhq0', document.getElementById( 'wb-srch-q-imprt' ), 'cse-search-box',autoCompletionOptions );}, 2000);});</script><script src="https://www.google.com/uds/?file=search&amp;v=1" type="text/javascript"></script><link href="https://www.google.com/uds/api/search/1.0/432dd570d1a386253361f581254f9ca1/default+en.css" type="text/css" rel="stylesheet"><script src="https://www.google.com/uds/api/search/1.0/432dd570d1a386253361f581254f9ca1/default+en.I.js" type="text/javascript"></script><script src="https://www.google.com/uds/?file=search&amp;v=1" type="text/javascript"></script><link href="https://www.google.com/uds/api/search/1.0/432dd570d1a386253361f581254f9ca1/default+en.css" type="text/css" rel="stylesheet"><script src="https://www.google.com/uds/api/search/1.0/432dd570d1a386253361f581254f9ca1/default+en.I.js" type="text/javascript"></script><link href="https://www.google.com/uds/api/search/1.0/432dd570d1a386253361f581254f9ca1/default+en.css" type="text/css" rel="stylesheet"><script src="https://www.google.com/uds/api/search/1.0/432dd570d1a386253361f581254f9ca1/default+en.I.js" type="text/javascript"></script>
             <div class="form-group">
                 <label for="wb-srch-q-imprt" class="wb-inv">Search website</label>
                 <input name="cdn" value="canada" type="hidden">
@@ -399,31 +250,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </div>
     </nav>
 </header>
-
-
-<!-- main -->
-
     <main role="main" property="mainContentOfPage" class="container">
         <h1 property="name" id="wb-cont">Medical Device Establishment in Canada Inspections</h1>
                 <section>                        
                     <div class="row">
-                        <h2 id="title" class="col-sm-10 marginTop5">Non-compliant Medical Drug Establishment inspections in Canada search results</h2>
+                        <h2 id="title" class="col-sm-10 marginTop5">search results</h2>
                     </div>
                     <div>
                         <p id="subParam2">You can also learn about how <a href="http://healthycanadians.gc.ca/drugs-products-medicaments-produits/inspections/about-au-sujet-eng.php#s1">Medical Device Establishment inspections </a> are conducted and <a href="http://healthycanadians.gc.ca/drugs-products-medicaments-produits/inspections/about-au-sujet-eng.php#s3">what inspectors look for</a>.</p>
                     </div>
 
 
-                    <div id="searchResultsContainer" class="marginTop20">
+                     <div id="searchResultsContainer" class="marginTop20">
                         <div class="table-responsive" id="searchResultTable">
-                            <div id="wb-tables-id-0_wrapper" class="dataTables_wrapper no-footer"><div class="top"><div class="dataTables_info" id="wb-tables-id-0_info" role="status" aria-live="polite">Showing 1 to 10 of 64 entries</div><div class="dataTables_length" id="wb-tables-id-0_length"><label>Show <select name="wb-tables-id-0_length" aria-controls="wb-tables-id-0" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="wb-tables-id-0_filter" class="dataTables_filter"><label>Filter items<input type="search" class="" placeholder="" aria-controls="wb-tables-id-0"></label></div></div><div id="wb-tables-id-0_processing" class="dataTables_processing" style="display: none;">processing...</div><table class="wb-tables table table-striped table-hover wb-tables-inited dataTable no-footer" id="wb-tables-id-0" aria-describedby="wb-tables-id-0_info" role="grid" style="width: 1138px;">
+                            <div id="wb-tables-id-0_wrapper" class="dataTables_wrapper no-footer"><div class="top"><div class="dataTables_info" id="wb-tables-id-0_info" role="status" aria-live="polite">Showing 1 to 10 of 1,532 entries</div><div class="dataTables_length" id="wb-tables-id-0_length"><label>Show <select name="wb-tables-id-0_length" aria-controls="wb-tables-id-0" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="wb-tables-id-0_filter" class="dataTables_filter"><label>Filter items<input type="search" class="" placeholder="" aria-controls="wb-tables-id-0"></label></div></div><div id="wb-tables-id-0_processing" class="dataTables_processing" style="display: none;">processing...</div><table class="wb-tables table table-striped table-hover wb-tables-inited dataTable no-footer" id="wb-tables-id-0" aria-describedby="wb-tables-id-0_info" role="grid" style="width: 1138px;">
                                 <thead>
-                                    <tr role="row"><th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Reference Number: activate for ascending sort" style="width: 130px;">Reference Number<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Establishment Name: activate for ascending sort" style="width: 332px;">Establishment Name<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Site: activate for ascending sort" style="width: 73px;">Site<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><th class="sorting_desc" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Inspection Start Date: activate for ascending sort" aria-sort="descending" style="width: 137px;">Inspection Start Date<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Rating: activate for ascending sort" style="width: 94px;">Rating<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Currently Licensed: activate for ascending sort" style="width: 115px;">Currently Licensed<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><!-- <th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Terms and Conditions: activate for ascending sort" style="width: 131px;">Terms and Conditions<span class="sorting-cnt"><span class="sorting-icons"></span></span></th>--></tr></thead>
-                                <tbody id="tbodyMain"><tr role="row"><td>101675</td><td><a href="dhpid_mspharma.html">MS Pharma Inc.</a></td><td>A</td><td class="sorting_1">2015-07-22</td><td><a href="dhpid_mspharma_rating.html">Non-Compliant</a></td><td>Yes</td><!--<td><a class="wb-lbx wb-lbx-inited" title="Terms and Conditions" href="#inline_content1" id="wb-lbx-id-1">Yes</a><section id="inline_content1" class="mfp-hide modal-dialog modal-content overlay-def"><header class="modal-header"><h2 class="modal-title">Terms and Conditions</h2></header><div class="modal-body"><p></p><ol><li>Only chemical testing is authorized. Microbial and sterility testing are not authorized. </li><li> These Terms and Conditions are valid until such time as a revised Drug Establishment Licence is issued to MS Pharma Inc.</li></ol><p></p></div></section></td>-->
-</tr><tr role="row"><td>100585</td><td><a href="./inspectionDetail-en.html?lic=100585&amp;site=A&amp;insFrom=2015-06-16&amp;rate=NC&amp;insType=Regular">Unilever Canada Inc.</a></td><td>A</td><td class="sorting_1">2015-06-16</td><td><a href="./fullReportCard-en.html?lic=100585&amp;site=A&amp;insFrom=2015-06-16&amp;rate=NC&amp;reportCard=True&amp;insType=Regular">Non-Compliant</a></td><td>Yes</td><!-- <td>No</td>--></tr><tr role="row"><td>100550</td><td><a href="./inspectionDetail-en.html?lic=100550&amp;site=A&amp;insFrom=2015-06-08&amp;rate=NC&amp;insType=Regular">L'Oréal Canada Inc.</a></td><td>A</td><td class="sorting_1">2015-06-08</td><td><a href="./fullReportCard-en.html?lic=100550&amp;site=A&amp;insFrom=2015-06-08&amp;rate=NC&amp;reportCard=True&amp;insType=Regular">Non-Compliant</a></td><td>Yes</td><!-- <td>No</td>--></tr><tr role="row"><td>101174</td><td><a href="./inspectionDetail-en.html?lic=101174&amp;site=A&amp;insFrom=2015-05-19&amp;rate=NC&amp;insType=Regular">Orchard International Inc.</a></td><td>A</td><td class="sorting_1">2015-05-19</td><td><a href="./fullReportCard-en.html?lic=101174&amp;site=A&amp;insFrom=2015-05-19&amp;rate=NC&amp;reportCard=True&amp;insType=Regular">Non-Compliant</a></td><td>Yes</td><!--<td>No</td>--?--></tr><tr role="row"><td>100142</td><td><a href="./inspectionDetail-en.html?lic=100142&amp;site=B&amp;insFrom=2015-05-19&amp;rate=NC&amp;insType=Regular">Procter &amp; Gamble Inc.</a></td><td>B</td><td class="sorting_1">2015-05-19</td><td><a href="./fullReportCard-en.html?lic=100142&amp;site=B&amp;insFrom=2015-05-19&amp;rate=NC&amp;reportCard=True&amp;insType=Regular">Non-Compliant</a></td><td>Yes</td><!-- <td>No</td>--></tr><tr role="row"><td>100802</td><td><a href="./inspectionDetail-en.html?lic=100802&amp;site=A&amp;insFrom=2015-05-12&amp;rate=NC&amp;insType=Regular">Laboratoires Dermo-Cosmetik Inc.</a></td><td>A</td><td class="sorting_1">2015-05-12</td><td><a href="./fullReportCard-en.html?lic=100802&amp;site=A&amp;insFrom=2015-05-12&amp;rate=NC&amp;reportCard=True&amp;insType=Regular">Non-Compliant</a></td><td>No</td><!-- <td>No</td>--></tr><tr role="row"><td>100399</td><td><a href="./inspectionDetail-en.html?lic=100399&amp;site=A&amp;insFrom=2015-05-11&amp;rate=NC&amp;insType=Re-assessment">Vita Health Products Inc.</a></td><td>A</td><td class="sorting_1">2015-05-11</td><td><a href="./fullReportCard-en.html?lic=100399&amp;site=A&amp;insFrom=2015-05-11&amp;rate=NC&amp;reportCard=True&amp;insType=Re-assessment">Non-Compliant</a></td><td>Yes</td><!-- <td>No</td>--></tr><tr role="row"><td>102113</td><td><a href="./inspectionDetail-en.html?lic=102113&amp;site=A&amp;insFrom=2015-05-04&amp;rate=NC&amp;insType=Initial">Macco Organiques Inc</a></td><td>A</td><td class="sorting_1">2015-05-04</td><td><a href="./fullReportCard-en.html?lic=102113&amp;site=A&amp;insFrom=2015-05-04&amp;rate=NC&amp;reportCard=True&amp;insType=Initial">Non-Compliant</a></td><td>Yes</td><!-- <td>No</td>--></tr><tr role="row"><td>100302</td><td><a href="./inspectionDetail-en.html?lic=100302&amp;site=A&amp;insFrom=2015-04-07&amp;rate=NC&amp;insType=Regular">Pharmax Limited</a></td><td>A</td><td class="sorting_1">2015-04-07</td><td><a href="./fullReportCard-en.html?lic=100302&amp;site=A&amp;insFrom=2015-04-07&amp;rate=NC&amp;reportCard=True&amp;insType=Regular">Non-Compliant</a></td><td>No</td><!-- <td>No</td>--></tr><tr role="row"><td>100820</td><td><a href="./inspectionDetail-en.html?lic=100820&amp;site=A&amp;insFrom=2015-03-04&amp;rate=NC&amp;insType=Regular">Smiths Medical Canada Ltd.</a></td><td>A</td><td class="sorting_1">2015-03-04</td><td><a href="./fullReportCard-en.html?lic=100820&amp;site=A&amp;insFrom=2015-03-04&amp;rate=NC&amp;reportCard=False&amp;insType=Regular">Non-Compliant</a></td><td>Yes</td><!-- <td>No</td> --></tr></tbody>
-                            </table><div class="bottom"><div class="dataTables_paginate paging_simple_numbers" id="wb-tables-id-0_paginate"><a class="paginate_button previous disabled" aria-controls="wb-tables-id-0" data-dt-idx="0" tabindex="0" id="wb-tables-id-0_previous" role="button">Previous</a><span><a class="paginate_button current" aria-controls="wb-tables-id-0" data-dt-idx="1" tabindex="0" role="button" aria-pressed="true">1</a><a class="paginate_button " aria-controls="wb-tables-id-0" data-dt-idx="2" tabindex="0" role="button" aria-pressed="false">2</a><a class="paginate_button " aria-controls="wb-tables-id-0" data-dt-idx="3" tabindex="0" role="button" aria-pressed="false">3</a><a class="paginate_button " aria-controls="wb-tables-id-0" data-dt-idx="4" tabindex="0" role="button" aria-pressed="false">4</a><a class="paginate_button " aria-controls="wb-tables-id-0" data-dt-idx="5" tabindex="0" role="button" aria-pressed="false">5</a><a class="paginate_button " aria-controls="wb-tables-id-0" data-dt-idx="6" tabindex="0" role="button" aria-pressed="false">6</a><a class="paginate_button " aria-controls="wb-tables-id-0" data-dt-idx="7" tabindex="0" role="button" aria-pressed="false">7</a></span><a class="paginate_button next" aria-controls="wb-tables-id-0" data-dt-idx="8" tabindex="0" id="wb-tables-id-0_next" role="button">Next</a></div></div><div class="clear"></div></div>
+                                    <tr role="row"><th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Reference Number: activate for ascending sort" style="width: 105px;">Reference Number<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Establishment Name: activate for ascending sort" style="width: 405px;">Establishment Name<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Site: activate for ascending sort" style="width: 73px;">Site<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><th class="sorting_desc" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Inspection Start Date: activate for ascending sort" aria-sort="descending" style="width: 94px;">Inspection Start Date<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Rating: activate for ascending sort" style="width: 94px;">Rating<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Currently Licensed: activate for ascending sort" style="width: 113px;">Currently Licensed<span class="sorting-cnt"><span class="sorting-icons"></span></span></th><!-- <th class="sorting" tabindex="0" aria-controls="wb-tables-id-0" rowspan="1" colspan="1" aria-label="Terms and Conditions: activate for ascending sort" style="width: 128px;">Terms and Conditions<span class="sorting-cnt"><span class="sorting-icons"></span></span></th> --></tr></thead>
+                                <tbody id="tbodyMain"><tr role="row"><td>102120</td><td><a href="dhpid_isologic.html">Isologic Innovative Radiopharmaceuticals of Ontario Limited</a></td><td>B</td><td class="sorting_1">2015-10-21</td><td><a href="dhpid_isologic_rating.html">Inspection in progress</a></td><td>Yes</td><!-- <td>No</td> --></tr><tr role="row"><td>101796</td><td><a href="./inspectionDetail-en.html?lic=101796&amp;site=A&amp;insFrom=2015-10-19&amp;rate=I&amp;insType=Regular">Sanis Health Inc.</a></td><td>A</td><td class="sorting_1">2015-10-19</td><td><a href="./initialReportCard-en.html?lic=101796&amp;site=A&amp;insFrom=2015-10-19&amp;rate=I&amp;reportCard=False&amp;insType=Regular">Inspection in progress</a></td><td>Yes</td><!-- <td><a class="wb-lbx wb-lbx-inited" title="Terms and Conditions" href="#inline_content3" id="wb-lbx-id-1">Yes</a><section id="inline_content3" class="mfp-hide modal-dialog modal-content overlay-def"><header class="modal-header"><h2 class="modal-title">Terms and Conditions</h2></header><div class="modal-body"><p></p><ol><li>A copy of the Terms and Conditions associated with this licence can be requested at: <a href="mailto:DEL_questions_LEPPP@HC-SC.GC.CA">DEL_questions_LEPPP@HC-SC.GC.CA</a></li></ol><p></p></div></section></td> --></tr><tr role="row"><td>102272</td><td><a href="./inspectionDetail-en.html?lic=102272&amp;site=A&amp;insFrom=2015-10-19&amp;rate=I&amp;insType=Initial">Rogue Transportation Services Inc.</a></td><td>A</td><td class="sorting_1">2015-10-19</td><td><a href="./initialReportCard-en.html?lic=102272&amp;site=A&amp;insFrom=2015-10-19&amp;rate=I&amp;reportCard=False&amp;insType=Initial">Inspection in progress</a></td><td>No</td><!-- <td>No</td> --></tr><tr role="row"><td>101984</td><td><a href="./inspectionDetail-en.html?lic=101984&amp;site=A&amp;insFrom=2015-10-19&amp;rate=I&amp;insType=Regular">2047944 Ontario Inc.</a></td><td>A</td><td class="sorting_1">2015-10-19</td><td><a href="./initialReportCard-en.html?lic=101984&amp;site=A&amp;insFrom=2015-10-19&amp;rate=I&amp;reportCard=False&amp;insType=Regular">Inspection in progress</a></td><td>Yes</td><!-- <td><a class="wb-lbx wb-lbx-inited" title="Terms and Conditions" href="#inline_content5" id="wb-lbx-id-2">Yes</a><section id="inline_content5" class="mfp-hide modal-dialog modal-content overlay-def"><header class="modal-header"><h2 class="modal-title">Terms and Conditions</h2></header><div class="modal-body"><p></p><ol><li>Notify Health Canada (Chad Sheehy), Regional Manager, Inspectorate Program, Compliance and Enforcement Directorate, Ontario Region - 2301 Midland Ave, Toronto, Ontario, M1P 4R7; Fax at 416-973-1954 or via E-mail at chad.sheehy@hc-sc.gc.ca a minimum of 60 days prior to the start of drug product wholesaling.</li><li> These Terms and Conditions are valid until such time as a revised Drug Establishment Licence is issued to 2047944 Ontarion Inc.</li></ol><p></p></div></section></td> --></tr><tr role="row"><td>101570</td><td><a href="./inspectionDetail-en.html?lic=101570&amp;site=B&amp;insFrom=2015-10-19&amp;rate=I&amp;insType=Initial">Laboratoires Solartech Inc.</a></td><td>B</td><td class="sorting_1">2015-10-19</td><td><a href="./initialReportCard-en.html?lic=101570&amp;site=B&amp;insFrom=2015-10-19&amp;rate=I&amp;reportCard=False&amp;insType=Initial">Inspection in progress</a></td><td>No</td><!-- <td>No</td> --></tr><tr role="row"><td>101773</td><td><a href="./inspectionDetail-en.html?lic=101773&amp;site=A&amp;insFrom=2015-10-15&amp;rate=I&amp;insType=Regular">Immanence Integral Dermo Correction Inc.</a></td><td>A</td><td class="sorting_1">2015-10-15</td><td><a href="./initialReportCard-en.html?lic=101773&amp;site=A&amp;insFrom=2015-10-15&amp;rate=I&amp;reportCard=False&amp;insType=Regular">Inspection in progress</a></td><td>Yes</td><!-- <td>No</td> --></tr><tr role="row"><td>102164</td><td><a href="./inspectionDetail-en.html?lic=102164&amp;site=A&amp;insFrom=2015-10-14&amp;rate=I&amp;insType=Regular">1641252 Alberta Ltd.</a></td><td>A</td><td class="sorting_1">2015-10-14</td><td><a href="./initialReportCard-en.html?lic=102164&amp;site=A&amp;insFrom=2015-10-14&amp;rate=I&amp;reportCard=False&amp;insType=Regular">Inspection in progress</a></td><td>Yes</td><!-- <td>No</td> --></tr><tr role="row"><td>100520</td><td><a href="./inspectionDetail-en.html?lic=100520&amp;site=A&amp;insFrom=2015-10-14&amp;rate=I&amp;insType=Regular">CHX Technologies Inc.</a></td><td>A</td><td class="sorting_1">2015-10-14</td><td><a href="./initialReportCard-en.html?lic=100520&amp;site=A&amp;insFrom=2015-10-14&amp;rate=I&amp;reportCard=False&amp;insType=Regular">Inspection in progress</a></td><td>Yes</td><!-- <td>No</td>--></tr><tr role="row"><td>101250</td><td><a href="./inspectionDetail-en.html?lic=101250&amp;site=A&amp;insFrom=2015-10-14&amp;rate=I&amp;insType=Regular">Guthy Renker Canada Corporation</a></td><td>A</td><td class="sorting_1">2015-10-14</td><td><a href="./initialReportCard-en.html?lic=101250&amp;site=A&amp;insFrom=2015-10-14&amp;rate=I&amp;reportCard=False&amp;insType=Regular">Inspection in progress</a></td><td>Yes</td><!--<td>No</td>--></tr><tr role="row"><td>102149</td><td><a href="./inspectionDetail-en.html?lic=102149&amp;site=A&amp;insFrom=2015-10-14&amp;rate=I&amp;insType=Regular">Dechra Veterinary Products Inc.</a></td><td>A</td><td class="sorting_1">2015-10-14</td><td><a href="./initialReportCard-en.html?lic=102149&amp;site=A&amp;insFrom=2015-10-14&amp;rate=I&amp;reportCard=False&amp;insType=Regular">Inspection in progress</a></td><td>Yes</td><!-- <td>No</td> --></tr></tbody>
+                            </table><div class="bottom"><div class="dataTables_paginate paging_simple_numbers" id="wb-tables-id-0_paginate"><a class="paginate_button previous disabled" aria-controls="wb-tables-id-0" data-dt-idx="0" tabindex="0" id="wb-tables-id-0_previous" role="button">Previous</a><span><a class="paginate_button current" aria-controls="wb-tables-id-0" data-dt-idx="1" tabindex="0" role="button" aria-pressed="true">1</a><a class="paginate_button " aria-controls="wb-tables-id-0" data-dt-idx="2" tabindex="0" role="button" aria-pressed="false">2</a><a class="paginate_button " aria-controls="wb-tables-id-0" data-dt-idx="3" tabindex="0" role="button" aria-pressed="false">3</a><a class="paginate_button " aria-controls="wb-tables-id-0" data-dt-idx="4" tabindex="0" role="button" aria-pressed="false">4</a><a class="paginate_button " aria-controls="wb-tables-id-0" data-dt-idx="5" tabindex="0" role="button" aria-pressed="false">5</a><span>…</span><a class="paginate_button " aria-controls="wb-tables-id-0" data-dt-idx="6" tabindex="0" role="button" aria-pressed="false">154</a></span><a class="paginate_button next" aria-controls="wb-tables-id-0" data-dt-idx="7" tabindex="0" id="wb-tables-id-0_next" role="button">Next</a></div></div><div class="clear"></div></div>
                         </div>
                     </div>
+
 
                 </section>
                 <div class="row pagedetails">
@@ -547,7 +394,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         var searchUrl = "./handler/searchResult.ashx?lang=en&sponName=" + sponName + "&contNum=" + contNum + "&region=" + region + "&drugName=" + drugName + "&phase=" + phase + "&startDate=" + startDate + "&rating=" + rating + "&cat=" + cat;
         var langUrl = "searchResult-fr.html?lang=fr&sponName=" + sponName + "&contNum=" + contNum + "&region=" + region + "&drugName=" + drugName + "&phase=" + phase + "&startDate=" + startDate + "&rating=" + rating + "&cat=" + cat;
         $("a#langLink").attr('href', langUrl);
-
         if (cat == '1') {
             $('#title').text('Clinical trial inspections search results');
             $('#subParam1').text('Below are the results for clinical trial inspections');
@@ -563,7 +409,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             $('#subParam1').text('Below are the results for clinical trial inspections.');
             $('#subParam2').html('You can also learn about how <a href="http://healthycanadians.gc.ca/drugs-products-medicaments-produits/inspections/about-au-sujet-eng.php#s1">clinical trial inspections </a> are conducted and <a href="http://healthycanadians.gc.ca/drugs-products-medicaments-produits/inspections/about-au-sujet-eng.php#s3">what inspectors look for</a>.');
         }
-
         window["wb-tables"] = {
             "processing":true,
             "ajax": {
@@ -602,8 +447,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 
 
-
-<table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 261px; display: none; top: 85px; left: 1024px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_51 gssb_c" style="width: 261px; display: none; top: 85px; left: 1024px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_52 gssb_c" style="width: 261px; display: none; top: 85px; left: 1024px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_53 gssb_c" style="width: 261px; display: none; top: 85px; left: 1024px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_54 gssb_c" style="width: 100%; display: none; top: -1px; left: 0px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_55 gssb_c" style="width: 100%; display: none; top: -1px; left: 0px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_56 gssb_c" style="width: 100%; display: none; top: -1px; left: 0px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_57 gssb_c" style="width: 100%; display: none; top: -1px; left: 0px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body>
+<table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 261px; display: none; top: 85px; left: 1024px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_51 gssb_c" style="width: 261px; display: none; top: 85px; left: 1024px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_52 gssb_c" style="width: 100%; display: none; top: -1px; left: 0px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_53 gssb_c" style="width: 100%; display: none; top: -1px; left: 0px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body>
 
 
 </html>
