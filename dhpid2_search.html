@@ -553,7 +553,14 @@ b||null===b||"undefined"===b||0==b.trim().length)b='alt\x3d"'+a(c).find("img").a
 b.find("figcaption").text()+"\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.domain+"\x26dp\x3d"+document.documentURI+"\x26dt\x3d"+f+"\x26promoa\x3dclick\x26promo1nm\x3d"+encodeURIComponent(b.find("figcaption").text())+"\x26promo1cr\x3d"+encodeURIComponent("PopUp Items")+"\x26promo1ps\x3d"+(b.hasClass("ctr-xpr-ad")?"Footer":"Float")+"\x26z\x3d"+(new Date).getTime();a.get(e,function(a){});b.find("a").click(function(){a.get(g,function(a){})})})},1E3)})})(jQuery,wb);
 		
 		$('p select[name=iline]').change(function(e){
-  if ($('p select[name=iline]').val() == '1'){
+  
+  if ($('p select[name=iline]').val() == '0'){
+    $('#gmp').hide();
+	 $('#gcp').hide();
+	 $('#md').hide();
+	 $('#btox').hide();
+  }
+  else if ($('p select[name=iline]').val() == '1'){
     $('#gmp').show();
 	 $('#gcp').hide();
 	 $('#md').hide();
