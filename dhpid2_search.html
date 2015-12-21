@@ -31,7 +31,7 @@
     <!-- End Google Tag Manager -->
 </head>
 
-<body vocab="http://schema.org/" typeof="WebPage">
+<body vocab="http://schema.org/" typeof="WebPage" onload="myFunction()">
     <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
     <noscript>&lt;iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
     <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer1' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer1', 'GTM-TLGQ9K');</script>
@@ -336,7 +336,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                                 <input class="form-control" type="date" id="startDate" name="startDate" data-rule-dateiso="true">
                             </div>
                         </div>
-		<div>
+		<div class="product-class"  > 
 			<p>Select an Inspection Line: <select name = "iline" required>
 			<option value = ""></option>
 			<option value = "1">GMP</option>
@@ -552,6 +552,8 @@ b||null===b||"undefined"===b||0==b.trim().length)b='alt\x3d"'+a(c).find("img").a
 "\x26promo1nm\x3d"+encodeURIComponent(b.find("figcaption").text())+"\x26promo1cr\x3dPopUp\x26dr\x3d"+encodeURIComponent(document.referrer)+"\x26promo1ps\x3d"+(b.hasClass("ctr-xpr-ad")?"Footer":"Float")+"\x26z\x3d"+(new Date).getTime(),g=("https:"===document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/collect?v\x3d1\x26tid\x3dUA-25217541-7\x26cid\x3d"+c.guid()+"\x26t\x3devent\x26aip\x3d1\x26ec\x3dPopUp\x26ea\x3d"+encodeURIComponent(b.find("a").attr("href"))+"\x26el\x3dPopUp - "+
 b.find("figcaption").text()+"\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.domain+"\x26dp\x3d"+document.documentURI+"\x26dt\x3d"+f+"\x26promoa\x3dclick\x26promo1nm\x3d"+encodeURIComponent(b.find("figcaption").text())+"\x26promo1cr\x3d"+encodeURIComponent("PopUp Items")+"\x26promo1ps\x3d"+(b.hasClass("ctr-xpr-ad")?"Footer":"Float")+"\x26z\x3d"+(new Date).getTime();a.get(e,function(a){});b.find("a").click(function(){a.get(g,function(a){})})})},1E3)})})(jQuery,wb);
 		
+function myFunction() {	
+	
 		$('p select[name=iline]').change(function(e){
   
   if ($('p select[name=iline]').val() == '0'){
@@ -591,7 +593,7 @@ b.find("figcaption").text()+"\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.doma
 	 $('#btox').hide();;
   }
 });
-
+}
 
 </script><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 261px; display: none; top: 85px; left: 940px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_51 gssb_c" style="width: 100%; display: none; top: -1px; left: 0px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table>
 
