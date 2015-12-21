@@ -250,8 +250,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <h1 property="name" id="wb-cont">Drug &amp; health product inspections</h1>
-        <p>Drugs made in Canada or abroad must meet high safety and quality standards before they can be sold to Canadians. The Government of Canada (GC) licenses and regularly inspects companies that make, package, test, import, distribute and wholesale drugs.</p>
-        <p>To learn more about the drug inspections we conduct each year, you can browse the GC drug inspection lists:</p>
+        <p>Health Products made in Canada or abroad must meet high safety and quality standards before they can be sold to Canadians. The Government of Canada (GC) licenses and regularly inspects companies that make, package, test, import, distribute and wholesale drugs.</p>
+        <p>To learn more about the inspections we conduct each year, you can browse the GC drug inspection lists:</p>
         <ul>
             <li><a href="dhpid1_searchresults1.html">Drug inspections in Canada search results</a></li>
             <li><a href="dhpid1_searchresults2.html">Non-compliant drug inspections in Canada search results</a></li>
@@ -262,7 +262,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             <form name="inspectionReports" action="searchResult-en.html" method="get" class="form-horizontal" id="inspectionReports" novalidate="novalidate">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h2 class="panel-title">Drug Establishment Search</h2>
+                        <h2 class="panel-title">Search</h2>
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
@@ -336,26 +336,34 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                                 <input class="form-control" type="date" id="startDate" name="startDate" data-rule-dateiso="true">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="endDate" class="col-sm-4 control-label"><span class="field-name">Inspection End Date</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-                            <div class="col-sm-8">
-                                <input class="form-control" type="date" id="endDate" name="endDate" data-rule-dateiso="true">
-                            </div>
-                        </div>
-						<div class="form-group">
-							<label for="line" class="col-sm-4 control-label">Inspection Line:</label>
-							<select name = "Browser" required>
-							<option value = "0"></option>
-							<option value = "1">GMP</option>
-							<option value = "2">GCP</option>
-							<option value = "3">MD</option>
-							<option value = "4">BTOX</option>
-							</select>							
-							<div class="form-group" id="gcp">
-							 <label id="dname"><input name="Drug Name" type="text" placeholder="Drug Name" size="50" /></label> <br />
-							 <label id="tphase"><input name="Trial Phase" type="text" placeholder="Trial Phase" size="50" /></label>
-							</div>
-						</div>
+		<div>
+			<p>Select an Inspection Line: <select name = "iline" required>
+			<option value = "0"></option>
+			<option value = "1">GMP</option>
+			<option value = "2">GCP</option>
+			<option value = "3">MD</option>
+			<option value = "4">BTOX</option>
+			</select>
+			</p>
+			
+			<div id="gmp">
+			 <label id="site"><input name="Site" type="text" placeholder="Site" size="50" /></label> <br />
+			 <label id="licenced"><input name="Currently Licensed" type="text" placeholder="Currently Licensed" size="50" /></label>
+             <label for="endDate" class="col-sm-4 control-label"><span class="field-name">Inspection End Date</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
+				<div class="col-sm-8">
+					<input class="form-control" type="date" id="endDate" name="endDate" data-rule-dateiso="true">
+				</div>
+			</div>
+			<div id="gcp">
+			 <label id="dname"><input name="Drug Name" type="text" placeholder="Drug Name" size="50" /></label> <br />
+			 <label id="tphase"><input name="Trial Phase" type="text" placeholder="Trial Phase" size="50" /></label>			 
+			</div>
+
+		</div>
+
+		
+
+		
                     </div>
 
                     <div class="panel-footer text-center">
@@ -532,15 +540,15 @@ b||null===b||"undefined"===b||0==b.trim().length)b='alt\x3d"'+a(c).find("img").a
 (function(a,c){c.getUrlParts();var f=encodeURIComponent(a("title").text());a(function(){setTimeout(function(){a(".ctr-xpr-bnr.wb-init,.ctr-xpr-ad.wb-init").filter(":visible").each(function(){var b=a(this),e=("https:"===document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/collect?v\x3d1\x26tid\x3dUA-25217541-7\x26cid\x3d"+c.guid()+"\x26t\x3dpageview\x26aip\x3d1\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.domain+"\x26dp\x3d"+document.documentURI+"\x26dt\x3d"+encodeURIComponent(a("title").text())+
 "\x26promo1nm\x3d"+encodeURIComponent(b.find("figcaption").text())+"\x26promo1cr\x3dPopUp\x26dr\x3d"+encodeURIComponent(document.referrer)+"\x26promo1ps\x3d"+(b.hasClass("ctr-xpr-ad")?"Footer":"Float")+"\x26z\x3d"+(new Date).getTime(),g=("https:"===document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/collect?v\x3d1\x26tid\x3dUA-25217541-7\x26cid\x3d"+c.guid()+"\x26t\x3devent\x26aip\x3d1\x26ec\x3dPopUp\x26ea\x3d"+encodeURIComponent(b.find("a").attr("href"))+"\x26el\x3dPopUp - "+
 b.find("figcaption").text()+"\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.domain+"\x26dp\x3d"+document.documentURI+"\x26dt\x3d"+f+"\x26promoa\x3dclick\x26promo1nm\x3d"+encodeURIComponent(b.find("figcaption").text())+"\x26promo1cr\x3d"+encodeURIComponent("PopUp Items")+"\x26promo1ps\x3d"+(b.hasClass("ctr-xpr-ad")?"Footer":"Float")+"\x26z\x3d"+(new Date).getTime();a.get(e,function(a){});b.find("a").click(function(){a.get(g,function(a){})})})},1E3)})})(jQuery,wb);
-$('p select[name=Browser]').change(function(e){
-  if ($('p select[name=Browser]').val() == '2'){
-    $('#dname').show();
-    $('#tphase').show();
+$('p select[name=iline]').change(function(e){
+  if ($('p select[name=iline]').val() == '2'){
+    $('#gcp').show();
   }else{
-    $('#dname').hide();
+    $('#gcp').hide();
     $('#tphase').hide();
   }
 });
+
 </script><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 261px; display: none; top: 85px; left: 940px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_51 gssb_c" style="width: 100%; display: none; top: -1px; left: 0px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table>
 
 
