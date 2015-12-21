@@ -565,8 +565,23 @@ b.find("figcaption").text()+"\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.doma
 	 $('#md').hide();
 	 $('#btox').hide();;
   }
+  else if ($('p select[name=iline]').val() == '3'){
+    $('#gmp').hide();
+	 $('#gcp').hide();
+	 $('#md').show();
+	 $('#btox').hide();;
+  }
+  else if ($('p select[name=iline]').val() == '4'){
+    $('#gmp').hide();
+	 $('#gcp').hide();
+	 $('#md').hide();
+	 $('#btox').show();;
+  }
   else{
     $('#gmp').hide();
+	 $('#gcp').hide();
+	 $('#md').hide();
+	 $('#btox').hide();;
   }
 });
 
