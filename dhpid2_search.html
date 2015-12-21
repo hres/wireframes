@@ -264,6 +264,54 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                     <div class="panel-heading">
                         <h2 class="panel-title">Search</h2>
                     </div>
+		<div class="product-class"  > 
+			<p>Select an Inspection Line: <select name = "iline" required>
+			<option value = ""></option>
+			<option value = "1">GMP</option>
+			<option value = "2">GCP</option>
+			<option value = "3">MD</option>
+			<option value = "4">BTOX</option>
+			</select>
+			</p>
+			
+			<div id="gmp" style="display: none;">
+					<div class="form-group">
+						<label for="com" class="col-sm-4 control-label">Site: </label>
+						<div class="col-sm-8">
+							<input type="text" id="com" class="form-control" name="com">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="startDate" class="col-sm-4 control-label"><span class="field-name">Inspection End Date</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
+						<div class="col-sm-8">
+							<input class="form-control" type="date" id="startDate" name="endDate" data-rule-dateiso="true">
+						</div>
+					</div>
+					 <div class="form-group">
+						<label for="rate" class="col-sm-4 control-label">Terms and Conditions: </label>
+						<div class="col-sm-8">
+							<select class="form-control" name="rate" id="rate">
+								<option label=" "></option>
+								<option value="I">Yes</option>
+								<option value="C">No</option>
+							</select>
+						</div>
+					</div>						
+			</div>
+			
+			<div id="gcp" style="display: none;">
+			 <label id="dname"><input name="Drug Name" type="text" placeholder="gcp" size="50" />GCP</label> 	
+<p> in gcp</p>			 
+			</div>
+			
+			<div id="md" style="display: none;">
+			 <label id="dname"><input name="md" type="text" placeholder="md" size="50" />MD</label>
+			</div>
+			
+			<div id="btox" style="display: none;">
+			 <label id="dname"><input name="btox" type="text" placeholder="btox" size="50" />btox</label>	 
+			</div>
+		</div>					
                     <div class="panel-body">
                         <div class="form-group">
                             <label for="com" class="col-sm-4 control-label">Establishment / Sponsor Name: </label>
@@ -336,44 +384,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                                 <input class="form-control" type="date" id="startDate" name="startDate" data-rule-dateiso="true">
                             </div>
                         </div>
-		<div class="product-class"  > 
-			<p>Select an Inspection Line: <select name = "iline" required>
-			<option value = ""></option>
-			<option value = "1">GMP</option>
-			<option value = "2">GCP</option>
-			<option value = "3">MD</option>
-			<option value = "4">BTOX</option>
-			</select>
-			</p>
-			
-			<div id="gmp" style="display: none;">
-                        <div class="form-group">
-                            <label for="com" class="col-sm-4 control-label">Site: </label>
-                            <div class="col-sm-8">
-                                <input type="text" id="com" class="form-control" name="com">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="startDate" class="col-sm-4 control-label"><span class="field-name">Inspection End Date</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-                            <div class="col-sm-8">
-                                <input class="form-control" type="date" id="startDate" name="endDate" data-rule-dateiso="true">
-                            </div>
-                        </div>
-			</div>
-			
-			<div id="gcp" style="display: none;">
-			 <label id="dname"><input name="Drug Name" type="text" placeholder="gcp" size="50" />GCP</label> 	
-<p> in gcp</p>			 
-			</div>
-			
-			<div id="md" style="display: none;">
-			 <label id="dname"><input name="md" type="text" placeholder="md" size="50" />MD</label>
-			</div>
-			
-			<div id="btox" style="display: none;">
-			 <label id="dname"><input name="btox" type="text" placeholder="btox" size="50" />btox</label>	 
-			</div>
-		</div>
+
 		
 		
 		
