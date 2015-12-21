@@ -342,17 +342,19 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                                 <input class="form-control" type="date" id="endDate" name="endDate" data-rule-dateiso="true">
                             </div>
                         </div>
-<p>Chose Your Browser: <select name = "Browser" required>
-        <option value = "">-- Select an Option --</option>
-        <option value = "1">IE</option>
-        <option value = "2">FF</option>
-        <option value = "3">Safari</option>
-        <option value = "4">Opera</option>
-        <option value = "5">Other</option>
+    <div>
+        <p>Select an HC Role: <select name = "Browser" required>
+        <option value = "0">-- Select an HC Role --</option>
+        <option value = "1">GMP</option>
+        <option value = "2">GCP</option>
+        <option value = "3">MD</option>
+        <option value = "4">BTOX</option>
         </select>
-    </p>
-  <div id="browserother">
-    <p>Please Specify: <label id="browserlabel"><input name="Other Browser" type="text" placeholder="Other Browser" size="50" /></label></p>
+        </p>
+        <div id="browserother">
+         <p>Drug Name: <label id="dname"><input name="Other Browser" type="text" placeholder="Drug Name" size="50" /></label></p>
+         <p>Trial Phase: <label id="tphase"><input name="Other Browser" type="text" placeholder="Trial Phase" size="50" /></label></p>
+        </div>
     </div>
                     </div>
 
@@ -532,17 +534,11 @@ b||null===b||"undefined"===b||0==b.trim().length)b='alt\x3d"'+a(c).find("img").a
 b.find("figcaption").text()+"\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.domain+"\x26dp\x3d"+document.documentURI+"\x26dt\x3d"+f+"\x26promoa\x3dclick\x26promo1nm\x3d"+encodeURIComponent(b.find("figcaption").text())+"\x26promo1cr\x3d"+encodeURIComponent("PopUp Items")+"\x26promo1ps\x3d"+(b.hasClass("ctr-xpr-ad")?"Footer":"Float")+"\x26z\x3d"+(new Date).getTime();a.get(e,function(a){});b.find("a").click(function(){a.get(g,function(a){})})})},1E3)})})(jQuery,wb);
 $('p select[name=Browser]').change(function(e){
   if ($('p select[name=Browser]').val() == '5'){
-    $('#browserother').show();
+    $('#dname').show();
+    $('#tphase').show();
   }else{
-    $('#browserother').hide();
-  }
-});
-
-$('p select[name=OS]').change(function(){
-  if ($('p select[name=OS]').val() == 'otheros'){
-    $('#osother').show();
-  }else{
-    $('#osother').hide();
+    $('#dname').hide();
+    $('#tphase').hide();
   }
 });
 </script><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 261px; display: none; top: 85px; left: 940px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_51 gssb_c" style="width: 100%; display: none; top: -1px; left: 0px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table>
