@@ -338,7 +338,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                         </div>
 		<div>
 			<p>Select an Inspection Line: <select name = "iline" required>
-			<option value = "0"></option>
+			<option value = ""></option>
 			<option value = "1">GMP</option>
 			<option value = "2">GCP</option>
 			<option value = "3">MD</option>
@@ -355,10 +355,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 			</div>
 			<div id="gcp">
-			 <label id="dname"><input name="Drug Name" type="text" placeholder="Drug Name" size="50" /></label> <br />
-			 <label id="tphase"><input name="Trial Phase" type="text" placeholder="Trial Phase" size="50" /></label>			 
+			 <label id="dname"><input name="Drug Name" type="text" placeholder="gcp" size="50" />GCP</label> 	 
 			</div>
-
+			<div id="md">
+			 <label id="dname"><input name="md" type="text" placeholder="md" size="50" />MD</label>
+			</div>
+			<div id="btox">
+			 <label id="dname"><input name="btox" type="text" placeholder="btox" size="50" />btox</label>	 
+			</div>
 		</div>
 
 		
@@ -540,12 +544,13 @@ b||null===b||"undefined"===b||0==b.trim().length)b='alt\x3d"'+a(c).find("img").a
 (function(a,c){c.getUrlParts();var f=encodeURIComponent(a("title").text());a(function(){setTimeout(function(){a(".ctr-xpr-bnr.wb-init,.ctr-xpr-ad.wb-init").filter(":visible").each(function(){var b=a(this),e=("https:"===document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/collect?v\x3d1\x26tid\x3dUA-25217541-7\x26cid\x3d"+c.guid()+"\x26t\x3dpageview\x26aip\x3d1\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.domain+"\x26dp\x3d"+document.documentURI+"\x26dt\x3d"+encodeURIComponent(a("title").text())+
 "\x26promo1nm\x3d"+encodeURIComponent(b.find("figcaption").text())+"\x26promo1cr\x3dPopUp\x26dr\x3d"+encodeURIComponent(document.referrer)+"\x26promo1ps\x3d"+(b.hasClass("ctr-xpr-ad")?"Footer":"Float")+"\x26z\x3d"+(new Date).getTime(),g=("https:"===document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/collect?v\x3d1\x26tid\x3dUA-25217541-7\x26cid\x3d"+c.guid()+"\x26t\x3devent\x26aip\x3d1\x26ec\x3dPopUp\x26ea\x3d"+encodeURIComponent(b.find("a").attr("href"))+"\x26el\x3dPopUp - "+
 b.find("figcaption").text()+"\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.domain+"\x26dp\x3d"+document.documentURI+"\x26dt\x3d"+f+"\x26promoa\x3dclick\x26promo1nm\x3d"+encodeURIComponent(b.find("figcaption").text())+"\x26promo1cr\x3d"+encodeURIComponent("PopUp Items")+"\x26promo1ps\x3d"+(b.hasClass("ctr-xpr-ad")?"Footer":"Float")+"\x26z\x3d"+(new Date).getTime();a.get(e,function(a){});b.find("a").click(function(){a.get(g,function(a){})})})},1E3)})})(jQuery,wb);
+		
+		
 $('p select[name=iline]').change(function(e){
-  if ($('p select[name=iline]').val() == '2'){
-    $('#gcp').show();
+  if ($('p select[name=iline]').val() == '1'){
+    $('#gmp').show();
   }else{
-    $('#gcp').hide();
-    $('#tphase').hide();
+    $('#gmp').hide();
   }
 });
 
