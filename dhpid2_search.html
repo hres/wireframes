@@ -342,18 +342,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                                 <input class="form-control" type="date" id="endDate" name="endDate" data-rule-dateiso="true">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="rate" class="col-sm-4 control-label">HC Role: </label>
-                            <div class="col-sm-8">
-                                 <select class="form-control" name="role" id="rate">
-                                    <option label=" "></option>
-                                    <option value="1">Good Manufacturing Practices</option>
-                                    <option value="2">Good Clinical Practices</option>
-                                    <option value="3">Medical Devices</option>
-                                    <option value="4">Blood, Cells, Tissues, Organs (CTO) and Semen</option>
-                                </select>
-                            </div>
-                        </div>
+<p>Chose Your Browser: <select name = "Browser" required>
+        <option value = "">-- Select an Option --</option>
+        <option value = "1">IE</option>
+        <option value = "2">FF</option>
+        <option value = "3">Safari</option>
+        <option value = "4">Opera</option>
+        <option value = "5">Other</option>
+        </select>
+    </p>
+  <div id="browserother">
+    <p>Please Specify: <label id="browserlabel"><input name="Other Browser" type="text" placeholder="Other Browser" size="50" /></label></p>
+    </div>
                     </div>
 
                     <div class="panel-footer text-center">
@@ -530,5 +530,20 @@ b||null===b||"undefined"===b||0==b.trim().length)b='alt\x3d"'+a(c).find("img").a
 (function(a,c){c.getUrlParts();var f=encodeURIComponent(a("title").text());a(function(){setTimeout(function(){a(".ctr-xpr-bnr.wb-init,.ctr-xpr-ad.wb-init").filter(":visible").each(function(){var b=a(this),e=("https:"===document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/collect?v\x3d1\x26tid\x3dUA-25217541-7\x26cid\x3d"+c.guid()+"\x26t\x3dpageview\x26aip\x3d1\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.domain+"\x26dp\x3d"+document.documentURI+"\x26dt\x3d"+encodeURIComponent(a("title").text())+
 "\x26promo1nm\x3d"+encodeURIComponent(b.find("figcaption").text())+"\x26promo1cr\x3dPopUp\x26dr\x3d"+encodeURIComponent(document.referrer)+"\x26promo1ps\x3d"+(b.hasClass("ctr-xpr-ad")?"Footer":"Float")+"\x26z\x3d"+(new Date).getTime(),g=("https:"===document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/collect?v\x3d1\x26tid\x3dUA-25217541-7\x26cid\x3d"+c.guid()+"\x26t\x3devent\x26aip\x3d1\x26ec\x3dPopUp\x26ea\x3d"+encodeURIComponent(b.find("a").attr("href"))+"\x26el\x3dPopUp - "+
 b.find("figcaption").text()+"\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.domain+"\x26dp\x3d"+document.documentURI+"\x26dt\x3d"+f+"\x26promoa\x3dclick\x26promo1nm\x3d"+encodeURIComponent(b.find("figcaption").text())+"\x26promo1cr\x3d"+encodeURIComponent("PopUp Items")+"\x26promo1ps\x3d"+(b.hasClass("ctr-xpr-ad")?"Footer":"Float")+"\x26z\x3d"+(new Date).getTime();a.get(e,function(a){});b.find("a").click(function(){a.get(g,function(a){})})})},1E3)})})(jQuery,wb);</script><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 261px; display: none; top: 85px; left: 940px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_51 gssb_c" style="width: 100%; display: none; top: -1px; left: 0px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body>
+$('p select[name=Browser]').change(function(e){
+  if ($('p select[name=Browser]').val() == '5'){
+    $('#browserother').show();
+  }else{
+    $('#browserother').hide();
+  }
+});
+
+$('p select[name=OS]').change(function(){
+  if ($('p select[name=OS]').val() == 'otheros'){
+    $('#osother').show();
+  }else{
+    $('#osother').hide();
+  }
+});
 
 </html>
