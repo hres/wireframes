@@ -555,9 +555,15 @@ b.find("figcaption").text()+"\x26dl\x3d"+document.URL+"\x26dh\x3d"+document.doma
 		$('p select[name=iline]').change(function(e){
   if ($('p select[name=iline]').val() == '1'){
     $('#gmp').show();
+	 $('#gcp').hide();
+	 $('#md').hide();
+	 $('#btox').hide();
   }
   else if ($('p select[name=iline]').val() == '2'){
-    $('#gcp').show();
+    $('#gmp').hide();
+	 $('#gcp').show();
+	 $('#md').hide();
+	 $('#btox').hide();;
   }
   else{
     $('#gmp').hide();
