@@ -32,7 +32,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
 </head>
-<body vocab="http://schema.org/" typeof="WebPage">
+<body vocab="http://schema.org/" typeof="WebPage" onload="myFunction()">
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
@@ -148,7 +148,22 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<option value="4">Regulatory Transaction (RT)</option>
 			</select>
 			</p>
-			
+			<!--
+			<div id="coType" style="display: none;">
+				<div class="form-group">
+				
+				</div>
+			</div>
+			<div id="doType" style="display: none;">
+			<div class="form-group">
+				
+				</div>
+			</div>
+			<div id="raType" style="display: none;">
+			</div>
+			<div id="rtType" style="display: none;">
+			</div>
+			-->
 			<div id="gmp" style="display: none;">
 					
 					<div class="form-group">
@@ -322,7 +337,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="./js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
 <script src="./js/theme.min.js"></script>
-<script>
+<script type="text/javascript" id="">
 function myFunction() {	
 	
 		$('p select[name=iline]').change(function(e){
