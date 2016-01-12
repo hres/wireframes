@@ -148,22 +148,65 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<option value="4">Regulatory Transaction (RT)</option>
 			</select>
 			</p>
-			<!--
+			
 			<div id="coType" style="display: none;">
 				<div class="form-group">
-				
+					<h4>This is CO</h4>
+					<fieldset>
+						<label for="male" class="form-radio form-label-inline">
+						<input type="radio" />
+							Start a NEW Company Enrolment</label>
+						&nbsp;&nbsp;
+						<label for="female" class="form-radio form-label-inline">
+						<input type="radio" />
+							Complete your DRAFT Company</label>
+						<label for="female" class="form-radio form-label-inline">
+						<input type="radio" />
+							AMEND you Company Enrolment File</label>
+					</fieldset>
 				</div>
 			</div>
 			<div id="doType" style="display: none;">
-			<div class="form-group">
-				
+				<div class="form-group">
+					<h4>This is DO</h4>
+					<fieldset>
+						<label for="male" class="form-radio form-label-inline">
+						<input type="radio" />
+							Start a NEW Dossier Enrolment</label>
+						&nbsp;&nbsp;
+						<label for="female" class="form-radio form-label-inline">
+						<input type="radio" />
+							Complete your Dossier Company</label>
+						<label for="female" class="form-radio form-label-inline">
+						<input type="radio" />
+							AMEND you Dossier Enrolment File</label>
+					</fieldset>
 				</div>
 			</div>
 			<div id="raType" style="display: none;">
+				<div class="form-group">
+					<h4>This is RA</h4>
+					<fieldset>
+						<label for="male" class="form-radio form-label-inline">
+						<input type="radio" />
+							Start a NEW Regulatory Activity Enrolment</label>
+						&nbsp;&nbsp;
+						<label for="female" class="form-radio form-label-inline">
+						<input type="radio" />
+							Complete your Regulatory Activity Company</label>
+						<label for="female" class="form-radio form-label-inline">
+						<input type="radio" />
+							AMEND you Regulatory Activity Enrolment File</label>
+					</fieldset>
+				</div>
 			</div>
 			<div id="rtType" style="display: none;">
+				<div class="form-group">
+					<h4>This is RT</h4>
+					
+				</div>
 			</div>
-			-->
+			<!--
 			<div id="gmp" style="display: none;">
 					
 					<div class="form-group">
@@ -227,6 +270,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</div>
 			</div>
+			-->
 		</div>
 		
                     </div>
@@ -343,40 +387,88 @@ function myFunction() {
 		$('p select[name=iline]').change(function(e){
   
   if ($('p select[name=iline]').val() == '0'){
+  /*
     $('#gmp').hide();
 	 $('#gcp').hide();
 	 $('#md').hide();
 	 $('#btox').hide();
+	 */
+	 
+	 $('#coType').hide();
+	 $('#doType').hide();
+	 $('#raType').hide();
+	 $('#rtType').hide();
+	 
   }
   else if ($('p select[name=iline]').val() == '1'){
-    $('#gmp').show();
+    /*
+	$('#gmp').show();
 	 $('#gcp').hide();
 	 $('#md').hide();
 	 $('#btox').hide();
+	 */
+	 
+	 $('#coType').show();
+	 $('#doType').hide();
+	 $('#raType').hide();
+	 $('#rtType').hide();
+	 
   }
   else if ($('p select[name=iline]').val() == '2'){
-    $('#gmp').hide();
+    /*
+	$('#gmp').hide();
 	 $('#gcp').show();
 	 $('#md').hide();
 	 $('#btox').hide();;
+	 */
+	  
+	 $('#coType').hide();
+	 $('#doType').show();
+	 $('#raType').hide();
+	 $('#rtType').hide();
+	 
   }
   else if ($('p select[name=iline]').val() == '3'){
-    $('#gmp').hide();
+    /*
+	$('#gmp').hide();
 	 $('#gcp').hide();
 	 $('#md').show();
 	 $('#btox').hide();;
+	 */
+	  
+	 $('#coType').hide();
+	 $('#doType').hide();
+	 $('#raType').show();
+	 $('#rtType').hide();
+	 
   }
   else if ($('p select[name=iline]').val() == '4'){
-    $('#gmp').hide();
+   /*
+   $('#gmp').hide();
 	 $('#gcp').hide();
 	 $('#md').hide();
 	 $('#btox').show();;
+	 */
+	  
+	 $('#coType').hide();
+	 $('#doType').hide();
+	 $('#raType').hide();
+	 $('#rtType').show();
+	 
   }
   else{
+  /*
     $('#gmp').hide();
 	 $('#gcp').hide();
 	 $('#md').hide();
 	 $('#btox').hide();;
+	 */
+	  
+	 $('#coType').hide();
+	 $('#doType').hide();
+	 $('#raType').hide();
+	 $('#rtType').hide();
+	 
   }
 });
 
