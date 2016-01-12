@@ -137,9 +137,86 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				Medical Device</label>
 		</fieldset>
 	</div>
+	<h3>STEP 1B - Select Enrolment Type</h3>
+		<div class="form-group"> 
+			<!-- <p><strong>Select a specific Inspection Line for additional search options:</strong> -->
+			<select name="iline" required="">
+			<option value=""></option>
+			<option value="1">Company (CO)</option>
+			<option value="2">Dossier (DO)</option>
+			<option value="3">Regulatory Activity (RA)</option>
+			<option value="4">Regulatory Transaction (RT)</option>
+			</select>
+			</p>
+			
+			<div id="gmp" style="display: none;">
+					
+					<div class="form-group">
+						<label for="com" class="col-sm-4 control-label">Site: </label>
+						<div class="col-sm-8">
+							<input type="text" id="com" class="form-control" name="com">
+						</div>
+					</div>
+					 <div class="form-group">
+						<label for="rate" class="col-sm-4 control-label">Terms and Conditions: </label>
+						<div class="col-sm-8">
+							<select class="form-control" name="rate" id="rate">
+								<option label=" "></option>
+								<option value="I">Yes</option>
+								<option value="C">No</option>
+							</select>
+						</div>
+					</div>						
+			</div>			
+			<div id="gcp" style="display: none;">
+					<div class="form-group">
+						<label for="com" class="col-sm-4 control-label">Drug Name: </label>
+						<div class="col-sm-8">
+							<input type="text" id="com" class="form-control" name="com">
+						</div>
+					</div>
+					 <div class="form-group">
+						<label for="rate" class="col-sm-4 control-label">Trial Phase: </label>
+						<div class="col-sm-8">
+                                <select class="form-control" name="phase" id="phase">
+                                    <option label=" "></option>
+                                    <option value="2">Phase 1</option>
+                                    <option value="3">Phase 1/2</option>
+                                    <option value="4">Phase 2</option>
+                                    <option value="5">Phase 2/3</option>
+                                    <option value="6">Phase 3</option>
+                                    <option value="1">Other</option>
+                                </select>
+						</div>
+					</div>					
+			</div>
+			
+			<div id="md" style="display: none;">
+			</div>
+			
+			<div id="btox" style="display: none;">
+                        <div class="form-group">
+						<label for="com" class="col-sm-4 control-label">Site: </label>
+						<div class="col-sm-8">
+						<input type="text" id="com" class="form-control" name="com">
+			</div>
+					</div>
+								 <div class="form-group">
+						<label for="rate" class="col-sm-4 control-label">Terms and Conditions: </label>
+						<div class="col-sm-8">
+							<select class="form-control" name="rate" id="rate">
+								<option label=" "></option>
+								<option value="I">Yes</option>
+								<option value="C">No</option>
+							</select>
+						</div>
+					</div>
+			</div>
+		</div>
+		
+                    </div>
 						</div>
 </div>
-</div>	
 </section>
 </div>
 <div class="form-group">
@@ -245,5 +322,51 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="./js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
 <script src="./js/theme.min.js"></script>
+<script>
+function myFunction() {	
+	
+		$('p select[name=iline]').change(function(e){
+  
+  if ($('p select[name=iline]').val() == '0'){
+    $('#gmp').hide();
+	 $('#gcp').hide();
+	 $('#md').hide();
+	 $('#btox').hide();
+  }
+  else if ($('p select[name=iline]').val() == '1'){
+    $('#gmp').show();
+	 $('#gcp').hide();
+	 $('#md').hide();
+	 $('#btox').hide();
+  }
+  else if ($('p select[name=iline]').val() == '2'){
+    $('#gmp').hide();
+	 $('#gcp').show();
+	 $('#md').hide();
+	 $('#btox').hide();;
+  }
+  else if ($('p select[name=iline]').val() == '3'){
+    $('#gmp').hide();
+	 $('#gcp').hide();
+	 $('#md').show();
+	 $('#btox').hide();;
+  }
+  else if ($('p select[name=iline]').val() == '4'){
+    $('#gmp').hide();
+	 $('#gcp').hide();
+	 $('#md').hide();
+	 $('#btox').show();;
+  }
+  else{
+    $('#gmp').hide();
+	 $('#gcp').hide();
+	 $('#md').hide();
+	 $('#btox').hide();;
+  }
+});
+
+
+}
+</script>
 </body>
 </html>
