@@ -153,47 +153,71 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			
 			<div id="coType" style="display: none;">
 				<div class="form-group">
-					<fieldset>
 						<label for="male" class="form-radio form-label-inline">
 						<input type="radio" />
 							Start a NEW Company Enrolment</label>
+						<a href="#" onclick="performClick('theFile');"></a>
+						<input type="file" id="theFile" />
+				</div>
+				<div class="form-group">
 						<label for="female" class="form-radio form-label-inline">
 						<input type="radio" />
 							Complete your DRAFT Company</label>
+						<a href="#" onclick="performClick('theFile');"></a>
+						<input type="file" id="theFile" />
+				</div>
+				<div class="form-group">
 						<label for="female" class="form-radio form-label-inline">
 						<input type="radio" />
 							AMEND you Company Enrolment File</label>
-					</fieldset>
+						<a href="#" onclick="performClick('theFile');"></a>
+						<input type="file" id="theFile" />
 				</div>
 			</div>
 			<div id="doType" style="display: none;">
 				<div class="form-group">
-					<fieldset>
 						<label for="male" class="form-radio form-label-inline">
 						<input type="radio" />
 							Start a NEW Dossier Enrolment</label>
+						<a href="#" onclick="performClick('theFile');"></a>
+						<input type="file" id="theFile" />
+				</div>
+				<div class="form-group">
 						<label for="female" class="form-radio form-label-inline">
 						<input type="radio" />
-							Complete your Dossier Company</label>
+							Complete your DRAFT Dossier</label>
+						<a href="#" onclick="performClick('theFile');"></a>
+						<input type="file" id="theFile" />
+				</div>
+				<div class="form-group">
 						<label for="female" class="form-radio form-label-inline">
 						<input type="radio" />
 							AMEND you Dossier Enrolment File</label>
-					</fieldset>
+						<a href="#" onclick="performClick('theFile');"></a>
+						<input type="file" id="theFile" />
 				</div>
 			</div>
 			<div id="raType" style="display: none;">
 				<div class="form-group">
-					<fieldset>
 						<label for="male" class="form-radio form-label-inline">
 						<input type="radio" />
 							Start a NEW Regulatory Activity Enrolment</label>
+						<a href="#" onclick="performClick('theFile');"></a>
+						<input type="file" id="theFile" />
+				</div>
+				<div class="form-group">
 						<label for="female" class="form-radio form-label-inline">
 						<input type="radio" />
-							Complete your Regulatory Activity Company</label>
+							Complete your DRAFT Regulatory Activity</label>
+						<a href="#" onclick="performClick('theFile');"></a>
+						<input type="file" id="theFile" />
+				</div>
+				<div class="form-group">
 						<label for="female" class="form-radio form-label-inline">
 						<input type="radio" />
 							AMEND you Regulatory Activity Enrolment File</label>
-					</fieldset>
+						<a href="#" onclick="performClick('theFile');"></a>
+						<input type="file" id="theFile" />
 				</div>
 			</div>
 			<div id="rtType" style="display: none;">
@@ -439,6 +463,14 @@ function myFunction() {
 
 
 }
+//function for opening a file
+function performClick(elemId) {
+   var elem = document.getElementById(elemId);
+   if(elem && document.createEvent) {
+      var evt = document.createEvent("MouseEvents");
+      evt.initEvent("click", true, false);
+      elem.dispatchEvent(evt);
+   }
 </script>
 </body>
 </html>
