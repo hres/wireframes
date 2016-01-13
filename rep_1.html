@@ -153,76 +153,108 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			
 			<div id="coType" style="display: none;">
 				<div class="form-group">
-						<label for="male" class="form-radio form-label-inline">
+						<label for="coNewEnFile" class="form-radio form-label-inline">
 						<input type="radio" />
 							Start a NEW Company Enrolment</label>
 				</div>
 				<div class="form-group">
-						<label for="female" class="form-radio form-label-inline">
+						<label for="coDrftFile" class="form-radio form-label-inline">
 						<input type="radio" />
 							Complete your DRAFT Company</label>
 				</div>
 				<div class="form-group">
-	<label for="exampleInputFile">File input</label>
-	<input type="file" id="exampleInputFile" />
-</div>
+					<label for="coDrftFileUpload">Upload Draft Enrolment file:</label>
+					<input type="file" id="coDrftFileUpload" />
+				</div>
 				<div class="form-group">
-						<label for="female" class="form-radio form-label-inline">
+						<label for="coAmdFile" class="form-radio form-label-inline">
 						<input type="radio" />
 							AMEND you Company Enrolment File</label>
+				</div>
+				<div class="form-group">
+					<label for="coAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
+					<input type="file" id="coAmdFileUpload" />
 				</div>
 			</div>
 			<div id="doType" style="display: none;">
 				<div class="form-group">
-						<label for="male" class="form-radio form-label-inline">
+						<label for="doNewEnFile" class="form-radio form-label-inline">
 						<input type="radio" />
 							Start a NEW Dossier Enrolment</label>
 				</div>
 				<div class="form-group">
-						<label for="female" class="form-radio form-label-inline">
+						<label for="doDrftFile" class="form-radio form-label-inline">
 						<input type="radio" />
 							Complete your DRAFT Dossier</label>
 				</div>
 				<div class="form-group">
-						<label for="female" class="form-radio form-label-inline">
+					<label for="doDrftFileUpload">Upload Draft Enrolment file:</label>
+					<input type="file" id="doDrftFileUpload" />
+				</div>
+				<div class="form-group">
+						<label for="doAmdFile" class="form-radio form-label-inline">
 						<input type="radio" />
 							AMEND you Dossier Enrolment File</label>
+				</div>
+				<div class="form-group">
+					<label for="doAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
+					<input type="file" id="doAmdFileUpload" />
 				</div>
 			</div>
 			<div id="raType" style="display: none;">
 				<div class="form-group">
-						<label for="male" class="form-radio form-label-inline">
+						<label for="raNewEnFile" class="form-radio form-label-inline">
 						<input type="radio" />
 							Start a NEW Regulatory Activity Enrolment</label>
 				</div>
 				<div class="form-group">
-						<label for="female" class="form-radio form-label-inline">
+						<label for="raDrftFile" class="form-radio form-label-inline">
 						<input type="radio" />
 							Complete your DRAFT Regulatory Activity</label>
 				</div>
 				<div class="form-group">
-						<label for="female" class="form-radio form-label-inline">
+					<label for="raDrftFileUpload">Upload Draft Enrolment file:</label>
+					<input type="file" id="raDrftFileUpload" />
+				</div>
+				<div class="form-group">
+						<label for="raAmdFile" class="form-radio form-label-inline">
 						<input type="radio" />
 							AMEND you Regulatory Activity Enrolment File</label>
+				</div>
+				<div class="form-group">
+					<label for="raAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
+					<input type="file" id="raAmdFileUpload" />
 				</div>
 			</div>
 			<div id="rtType" style="display: none;">
 				<div class="form-group">
-					<h4>Upload and confirm your Company Enrolment file that you wish to create a regulatory transaction for:</h4>
-					<h4>Upload and confirm your Dossier Enrolment file that you wish to create a regulatory transaction for:</h4>
-					<h4>Upload and confirm your Regulatory Activity Enrolment file that you wish to create a regulatory transaction for:</h4>
-					<label for="com" class="col-sm-4 control-label" data-toggle="tooltip" title="">I confirm that the uploaded files are the most current version of the
-Enrolment XML files.</label>
+					<div class="form-group">
+						<label for="rtCOFileUpload">Upload and confirm your Company Enrolment file that you wish to create a regulatory transaction for:</label>
+						<input type="file" id="rtCOFileUpload" />
+					</div>
+					<div class="form-group">
+						<label for="rtDOFileUpload">Upload and confirm your Dossier Enrolment file that you wish to create a regulatory transaction for:</label>
+						<input type="file" id="rtDOFileUpload" />
+					</div>
+					<div class="form-group">
+						<label for="rtRAFileUpload">Upload and confirm your Regulatory Activity Enrolment file that you wish to create a regulatory transaction for:</label>
+						<input type="file" id="rtRAFileUpload" />
+					</div>
+					<div class="form-group">
+						<label for="com" class="col-sm-4 control-label" data-toggle="tooltip" title="">I confirm that the uploaded files are the most current version of the Enrolment XML files.</label>
                             <div class="col-sm-8">
                                 <input type="checkbox" id="com" class="form-control" name="com">
                             </div>
-					<label for="com" class="col-sm-4 control-label" data-toggle="tooltip" title="">I confirm that All the information within the enrolment files are
+					</div>
+					<div class="form-group">
+						<label for="com" class="col-sm-4 control-label" data-toggle="tooltip" title="">I confirm that All the information within the enrolment files are
 current and that NOTHING has changed. (i.e.: no changes to
 Company information, Brand Name, Common name, Dossier
 information, Regulatory Activity information)</label>
                             <div class="col-sm-8">
                                 <input type="checkbox" id="com" class="form-control" name="com">
                             </div>
+					</div>
 				</div>
 			</div>
 		</div>
