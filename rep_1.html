@@ -273,14 +273,14 @@ information, Regulatory Activity information)</label>
 is submitted*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
 					<input class="form-control" type="date" id="raEnDateSubmitted" name="raEnDateSubmitted" data-rule-dateiso="true">
 				</div>
-				<div class="form-group">
+				<div id="raAntDate" Enclass="form-group">
 					<label for="raEnAntiDateFiled" ><span class="field-name">Date the Regulatory Activity is
 anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
 					<input class="form-control" type="date" id="raEnAntiDateFiled" name="raEnAntiDateFiled" data-rule-dateiso="true">
 				</div>
 			</form>
 
-			<div id="MCInfo">
+			<div id="MCInfo" class="brdr-tp brdr-rght brdr-bttm brdr-lft">
 				<h4>Main Contact Information</h4>
 					<form class="form-horizontal" role="form" method="get" action="#">
 						<div class="form-group">
@@ -298,7 +298,7 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 						<div class="form-group">
 							<label for="MCInfoGivenName" class="col-sm-4 control-label">Given Name*</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" id="MCInfoGivenName" placeholder="Enter Given Name" >
+								<input type="text" class="form-control" id="MCInfoGivenName" placeholder="Enter Given Name">
 							</div>
 						</div>
 						<div class="form-group">
@@ -342,7 +342,7 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 						</div>
 					</form>
 			</div>
-			<div id="SCInfo">
+			<div id="SCInfo" class="brdr-tp brdr-rght brdr-bttm brdr-lft">
 				<h4>Secondary Contact Information</h4>
 					<form class="form-horizontal" role="form" method="get" action="#">
 						<div class="form-group">
@@ -521,88 +521,61 @@ function myFunction() {
 		$('p select[name=iline]').change(function(e){
   
   if ($('p select[name=iline]').val() == '0'){
-  /*
-    $('#gmp').hide();
-	 $('#gcp').hide();
-	 $('#md').hide();
-	 $('#btox').hide();
-	 */
 	 
 	 $('#coType').hide();
 	 $('#doType').hide();
 	 $('#raType').hide();
 	 $('#rtType').hide();
+	 $('#step1c').hide();
+	 $('#raAntDate').hide();
 	 
   }
   else if ($('p select[name=iline]').val() == '1'){
-    /*
-	$('#gmp').show();
-	 $('#gcp').hide();
-	 $('#md').hide();
-	 $('#btox').hide();
-	 */
 	 
 	 $('#coType').show();
 	 $('#doType').hide();
 	 $('#raType').hide();
 	 $('#rtType').hide();
+	 $('#step1c').show();
+	 $('#raAntDate').hide();
 	 
   }
   else if ($('p select[name=iline]').val() == '2'){
-    /*
-	$('#gmp').hide();
-	 $('#gcp').show();
-	 $('#md').hide();
-	 $('#btox').hide();;
-	 */
-	  
 	 $('#coType').hide();
 	 $('#doType').show();
 	 $('#raType').hide();
 	 $('#rtType').hide();
+	 $('#step1c').show();
+	 $('#raAntDate').show();
 	 
   }
   else if ($('p select[name=iline]').val() == '3'){
-    /*
-	$('#gmp').hide();
-	 $('#gcp').hide();
-	 $('#md').show();
-	 $('#btox').hide();;
-	 */
 	  
 	 $('#coType').hide();
 	 $('#doType').hide();
 	 $('#raType').show();
 	 $('#rtType').hide();
+	 $('#step1c').show();
+	 $('#raAntDate').show();
 	 
   }
   else if ($('p select[name=iline]').val() == '4'){
-   /*
-   $('#gmp').hide();
-	 $('#gcp').hide();
-	 $('#md').hide();
-	 $('#btox').show();;
-	 */
 	  
 	 $('#coType').hide();
 	 $('#doType').hide();
 	 $('#raType').hide();
 	 $('#rtType').show();
+	 $('#step1c').show();
+	 $('#raAntDate').hide();
 	 
   }
   else{
-  /*
-    $('#gmp').hide();
-	 $('#gcp').hide();
-	 $('#md').hide();
-	 $('#btox').hide();;
-	 */
-	  
 	 $('#coType').hide();
 	 $('#doType').hide();
 	 $('#raType').hide();
 	 $('#rtType').hide();
-	 
+	 $('#step1c').hide();
+	 $('#raAntDate').hide();
   }
 });
 
