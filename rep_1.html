@@ -279,13 +279,16 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 					<input class="form-control" type="date" id="raEnAntiDateFiled" name="raEnAntiDateFiled" data-rule-dateiso="true">
 				</div>
 			</form>
-			<div class="panel panel-default">
-				<div class="panel-heading">
+			<div class="row">
+			<!-- <div class="panel panel-default"> -->
+				<!-- <div class="panel-heading"> -->
+				<div class="col-md-12">
 				<h4>Main Contact Information</h4>
-				</div>
-				<div class="panel-body">
+				<!-- </div> -->
+				<!-- <div class="panel-body"> -->
+				<div class="row">
 					<form class="form-inline" role="form" method="get" action="#">
-						<div class="form-group">
+						<div class="form-group .col-md-2">
 							<label for="MCInfoSalutation" class="">Salutation*</label>
                             <div class="">
                                 <select class="form-control" name="MCInfoSalutation" id="MCInfoSalutation">
@@ -297,44 +300,51 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
                                 </select>
                             </div>
 						</div>
-						<div class="form-group">
+						<div class="form-group .col-md-3">
 							<label for="MCInfoGivenName">Given Name*</label>
 							<input type="email" class="form-control" id="MCInfoGivenName" placeholder="Enter Given Name" />
 						</div>
-						<div class="form-group">
+						<div class="form-group .col-md-3">
 							<label for="MCInfoSurname">Surname*</label>
 							<input type="email" class="form-control" id="MCInfoSurname" placeholder="Enter Surname" />
 						</div>
-						<div class="form-group">
+						<div class="form-group .col-md-3">
 							<label for="MCInfoTitle">Title*</label>
 							<input type="email" class="form-control" id="MCInfoTitle" placeholder="Enter Title" />
 						</div>
 					</form>
+					</div>
+					<div class="row">
 					<form class="form-inline" role="form" method="get" action="#">
-						<div class="form-group">
+						<div class="form-group .col-md-3">
 							<label for="MCInfoTelNo">Telephone No*</label>
-							<input type="email" class="form-control" id="MCInfoTelNo" placeholder="Enter Telephone Number" />
+							<input type="email" class="form-control" id="MCInfoTelNo" placeholder="Enter Telephone No." />
 						</div>
-						<div class="form-group">
+						<div class="form-group .col-md-3">
 							<label for="MCInfoTelExt">Ext</label>
 							<input type="email" class="form-control" id="MCInfoTelExt" placeholder="Enter Extension" />
 						</div>
-						<div class="form-group">
+						<div class="form-group .col-md-3">
 							<label for="MCInfoEmail">Email*</label>
 							<input type="email" class="form-control" id="MCInfoEmail" placeholder="Enter Email" />
 						</div>
-						<div class="form-group">
+						<div class="form-group .col-md-3">
 							<label for="MCInfoFaxNo">Fax No.</label>
-							<input type="email" class="form-control" id="MCInfoFaxNo" placeholder="Enter Fax Number" />
+							<input type="email" class="form-control" id="MCInfoFaxNo" placeholder="Enter Fax No." />
 						</div>
 					</form>
+				<!-- </div> -->
+			<!-- </div> -->
+					</div>
 				</div>
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">
 				<h4>Secondary Contact Information</h4>
 				</div>
-				<div class="panel-body">
+				<!-- <div class="panel-body"> -->
+				<div class="row">
+					<div class="col-md-9">
 					<form class="form-inline" role="form" method="get" action="#">
 						<div class="form-group">
 							<label for="SCInfoSalutation" class="">Salutation*</label>
@@ -361,10 +371,12 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 							<input type="email" class="form-control" id="SCInfoTitle" placeholder="Enter Title" />
 						</div>
 					</form>
+					</div>
+					<div class="col-md-9">
 					<form class="form-inline" role="form" method="get" action="#">
 						<div class="form-group">
 							<label for="SCInfoTelNo">Telephone No*</label>
-							<input type="email" class="form-control" id="SCInfoTelNo" placeholder="Enter Telephone Number" />
+							<input type="email" class="form-control" id="SCInfoTelNo" placeholder="Enter Telephone No." />
 						</div>
 						<div class="form-group">
 							<label for="SCInfoTelExt">Ext</label>
@@ -376,9 +388,10 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 						</div>
 						<div class="form-group">
 							<label for="SCInfoFaxNo">Fax No.</label>
-							<input type="email" class="form-control" id="SCInfoFaxNo" placeholder="Enter Fax Number" />
+							<input type="email" class="form-control" id="SCInfoFaxNo" placeholder="Enter Fax No." />
 						</div>
 					</form>
+					</div>
 				</div>
 			</div>
 		</div>
