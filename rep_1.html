@@ -279,16 +279,12 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 					<input class="form-control" type="date" id="raEnAntiDateFiled" name="raEnAntiDateFiled" data-rule-dateiso="true">
 				</div>
 			</form>
+			<div id="MCInfo">
 			<div class="row">
-				<div class="col-md-12">
-				<div class="well">
-				<h4>Main Contact Information</h4>
-				<div class="row">
-					<form class="form-inline" role="form" method="get" action="#">
-						<div class="form-group .col-md-2">
-						<div class="well">
-							<label for="MCInfoSalutation" class="">Salutation*</label>
-                            <div class="">
+					<!-- <form class="form-inline" role="form" method="get" action="#"> -->
+						<div class="form-group">
+							<label for="MCInfoSalutation" class="col-sm-4 control-label">Salutation*</label>
+                            <div class="col-sm-8">
                                 <select class="form-control" name="MCInfoSalutation" id="MCInfoSalutation">
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
@@ -297,58 +293,61 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 									<option value="4">Dr.</option>
                                 </select>
                             </div>
+						</div>
+						<div class="form-group">
+							<label for="MCInfoGivenName" class="col-sm-4">Given Name*</label>
+							<div class="col-sm-8">
+								<input type="email" class="form-control" id="MCInfoGivenName" placeholder="Enter Given Name" />
 							</div>
 						</div>
-						<div class="form-group .col-md-2">
-							<div class="well">
-							<label for="MCInfoGivenName">Given Name*</label>
-							<input type="email" class="form-control" id="MCInfoGivenName" placeholder="Enter Given Name" />
+						<div class="form-group">
+							<label for="MCInfoSurname" class="col-sm-4">Surname*</label>
+							<div class="col-sm-8">
+								<input type="email" class="form-control" id="MCInfoSurname" placeholder="Enter Surname" />
 							</div>
 						</div>
-						<div class="form-group .col-md-2">
-							<div class="well">
-							<label for="MCInfoSurname">Surname*</label>
-							<input type="email" class="form-control" id="MCInfoSurname" placeholder="Enter Surname" />
+						<div class="form-group ">
+							<label for="MCInfoTitle" class="col-sm-4">Title*</label>
+							<div class="col-sm-8">
+								<input type="email" class="form-control" id="MCInfoTitle" placeholder="Enter Title" />
 							</div>
 						</div>
-						<div class="form-group .col-md-2">
-							<div class="well">
-							<label for="MCInfoTitle">Title*</label>
-							<input type="email" class="form-control" id="MCInfoTitle" placeholder="Enter Title" />
+					<!-- </form> -->
+			
+					<!-- <form class="form-inline" role="form" method="get" action="#"> -->
+						<div class="form-group">
+							<label for="MCInfoTelNo" class="col-sm-4">Telephone No*</label>
+							<div class="col-sm-8">
+								<input type="email" class="form-control" id="MCInfoTelNo" placeholder="Enter Telephone No." />
 							</div>
 						</div>
-					</form>
-					</div>
-					<div class="row">
-					<form class="form-inline" role="form" method="get" action="#">
-						<div class="form-group .col-md-3">
-							<label for="MCInfoTelNo">Telephone No*</label>
-							<input type="email" class="form-control" id="MCInfoTelNo" placeholder="Enter Telephone No." />
+						<div class="form-group">
+							<label for="MCInfoTelExt" class="col-sm-4">Ext</label>
+							<div class="col-sm-8">
+								<input type="email" class="form-control" id="MCInfoTelExt" placeholder="Enter Extension" />
+							</div>
 						</div>
-						<div class="form-group .col-md-3">
-							<label for="MCInfoTelExt">Ext</label>
-							<input type="email" class="form-control" id="MCInfoTelExt" placeholder="Enter Extension" />
+						<div class="form-group">
+							<label for="MCInfoEmail" class="col-sm-4">Email*</label>
+							<div class="col-sm-8">
+								<input type="email" class="form-control" id="MCInfoEmail" placeholder="Enter Email" />
+							</div>
 						</div>
-						<div class="form-group .col-md-3">
-							<label for="MCInfoEmail">Email*</label>
-							<input type="email" class="form-control" id="MCInfoEmail" placeholder="Enter Email" />
+						<div class="form-group">
+							<label for="MCInfoFaxNo" class="col-sm-4">Fax No.</label>
+							<div class="col-sm-8">
+								<input type="email" class="form-control" id="MCInfoFaxNo" placeholder="Enter Fax No." />
+							</div>
 						</div>
-						<div class="form-group .col-md-3">
-							<label for="MCInfoFaxNo">Fax No.</label>
-							<input type="email" class="form-control" id="MCInfoFaxNo" placeholder="Enter Fax No." />
-						</div>
-					</form>
-					</div>
-					</div>
+					<!-- </form> -->
 				</div>
 			</div>
+			<!--
 			<div class="panel panel-default">
 				<div class="panel-heading">
 				<h4>Secondary Contact Information</h4>
 				</div>
-				<!-- <div class="panel-body"> -->
-				<div class="row">
-					<div class="col-md-9">
+				<div class="panel-body">
 					<form class="form-inline" role="form" method="get" action="#">
 						<div class="form-group">
 							<label for="SCInfoSalutation" class="">Salutation*</label>
@@ -375,8 +374,8 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 							<input type="email" class="form-control" id="SCInfoTitle" placeholder="Enter Title" />
 						</div>
 					</form>
-					</div>
-					<div class="col-md-9">
+
+
 					<form class="form-inline" role="form" method="get" action="#">
 						<div class="form-group">
 							<label for="SCInfoTelNo">Telephone No*</label>
@@ -395,10 +394,8 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 							<input type="email" class="form-control" id="SCInfoFaxNo" placeholder="Enter Fax No." />
 						</div>
 					</form>
-					</div>
-				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </section>
 </div>
