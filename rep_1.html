@@ -249,60 +249,140 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="checkbox">
 						<label><input type="checkbox" /> I confirm that the uploaded files are the most current version of the
 Enrolment XML files.</label>
-					<!--
-						<label for="com" class="col-sm-4 control-label" data-toggle="tooltip" title="">I confirm that the uploaded files are the most current version of the Enrolment XML files.</label>
-                            <div class="col-sm-8">
-                                <input type="checkbox" id="com" class="form-control" name="com">
-                            </div>
-						-->
 						</div>
 						<div class="checkbox">
 							<label><input type="checkbox" /> I confirm that All the information within the enrolment files are
 current and that NOTHING has changed. (i.e.: no changes to
 Company information, Brand Name, Common name, Dossier
 information, Regulatory Activity information)</label>
-					<!--
-						<label for="com" class="col-sm-4 control-label" data-toggle="tooltip" title="">I confirm that All the information within the enrolment files are
-current and that NOTHING has changed. (i.e.: no changes to
-Company information, Brand Name, Common name, Dossier
-information, Regulatory Activity information)</label>-->
-                            <div class="col-sm-8">
-                                <input type="checkbox" id="com" class="form-control" name="com">
-                            </div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> <!--end of step 1B-->
 	<div id="step1c" class="panel panel-default">
 		<div class="panel-heading">
 			<h2 class="panel-title">STEP 1C - Administrative Information for THIS Enrolment Process</h2>
 		</div>
 		
 		<div class="panel-body">
-			<form role="form" method="get" action="#">
+			<form class="form-inline" role="form" method="get" action="#">
 				<div class="form-group">
-					<label for="raEnDateSubmitted" class="col-sm-4 control-label"><span class="field-name">Date the Regulatory Activity Enrolment
+					<label for="raEnDateSubmitted" class=""><span class="field-name">Date the Regulatory Activity Enrolment
 is submitted*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-						<div class="col-sm-8">
-							<input class="form-control" type="date" id="startDate" name="endDate" data-rule-dateiso="true">
-						</div>
-				</div>
-				<div class="form-group">
-					<label for="raEnAntiDateFiled" class="col-sm-4 control-label"><span class="field-name">Date the Regulatory Activity is
-anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-					<div class="col-sm-8">
+					<div class="">
 						<input class="form-control" type="date" id="startDate" name="endDate" data-rule-dateiso="true">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="com" class="col-sm-4 control-label" data-toggle="tooltip" title="insert text here!">Establishment / Sponsor Name: </label>
-					<div class="col-sm-8">
-						<input type="text" id="com" class="form-control" name="com">
-                    </div>
+					<label for="raEnAntiDateFiled" class=""><span class="field-name">Date the Regulatory Activity is
+anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
+					<div class="">
+						<input class="form-control" type="date" id="startDate" name="endDate" data-rule-dateiso="true">
+					</div>
 				</div>
 			</form>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+				<h4>Main Contact Information</h4>
+				</div>
+				<div class="panel-body">
+					<form class="form-inline" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="MCInfoSalutation" class="">Salutation*</label>
+                            <div class="">
+                                <select class="form-control" name="MCInfoSalutation" id="MCInfoSalutation">
+                                    <option label=" "></option>
+                                    <option value="1">Mr.</option>
+                                    <option value="2">Mrs.</option>
+                                    <option value="3">Ms.</option>
+									<option value="4">Dr.</option>
+                                </select>
+                            </div>
+						<div class="form-group">
+							<label for="MCInfoGivenName">Given Name*</label>
+							<input type="email" class="form-control" id="MCInfoGivenName" placeholder="Enter Given Name" />
+						</div>
+						<div class="form-group">
+							<label for="MCInfoSurname">Surname*</label>
+							<input type="email" class="form-control" id="MCInfoSurname" placeholder="Enter Surname" />
+						</div>
+						<div class="form-group">
+							<label for="MCInfoTitle">Title*</label>
+							<input type="email" class="form-control" id="MCInfoTitle" placeholder="Enter Title" />
+						</div>
+					</form>
+					<form class="form-inline" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="MCInfoTelNo">Telephone No*</label>
+							<input type="email" class="form-control" id="MCInfoTelNo" placeholder="Enter Telephone Number" />
+						</div>
+						<div class="form-group">
+							<label for="MCInfoTelExt">Ext</label>
+							<input type="email" class="form-control" id="MCInfoTelExt" placeholder="Enter Extension" />
+						</div>
+						<div class="form-group">
+							<label for="MCInfoEmail">Email*</label>
+							<input type="email" class="form-control" id="MCInfoEmail" placeholder="Enter Email" />
+						</div>
+						<div class="form-group">
+							<label for="MCInfoFaxNo">Fax No.</label>
+							<input type="email" class="form-control" id="MCInfoFaxNo" placeholder="Enter Fax Number" />
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+				<h4>Secondary Contact Information</h4>
+				</div>
+				<div class="panel-body">
+					<form class="form-inline" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="SCInfoSalutation" class="">Salutation*</label>
+                            <div class="">
+                                <select class="form-control" name="SCInfoSalutation" id="SCInfoSalutation">
+                                    <option label=" "></option>
+                                    <option value="1">Mr.</option>
+                                    <option value="2">Mrs.</option>
+                                    <option value="3">Ms.</option>
+									<option value="4">Dr.</option>
+                                </select>
+                            </div>
+						<div class="form-group">
+							<label for="SCInfoGivenName">Given Name*</label>
+							<input type="email" class="form-control" id="SCInfoGivenName" placeholder="Enter Given Name" />
+						</div>
+						<div class="form-group">
+							<label for="SCInfoSurname">Surname*</label>
+							<input type="email" class="form-control" id="SCInfoSurname" placeholder="Enter Surname" />
+						</div>
+						<div class="form-group">
+							<label for="SCInfoTitle">Title*</label>
+							<input type="email" class="form-control" id="SCInfoTitle" placeholder="Enter Title" />
+						</div>
+					</form>
+					<form class="form-inline" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="SCInfoTelNo">Telephone No*</label>
+							<input type="email" class="form-control" id="SCInfoTelNo" placeholder="Enter Telephone Number" />
+						</div>
+						<div class="form-group">
+							<label for="SCInfoTelExt">Ext</label>
+							<input type="email" class="form-control" id="SCInfoTelExt" placeholder="Enter Extension" />
+						</div>
+						<div class="form-group">
+							<label for="SCInfoEmail">Email*</label>
+							<input type="email" class="form-control" id="SCInfoEmail" placeholder="Enter Email" />
+						</div>
+						<div class="form-group">
+							<label for="SCInfoFaxNo">Fax No.</label>
+							<input type="email" class="form-control" id="SCInfoFaxNo" placeholder="Enter Fax Number" />
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
