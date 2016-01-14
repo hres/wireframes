@@ -243,7 +243,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<p>Same as Manufacturer / Sponsor Company &amp; Address information?</p>
 				</div>
 				<div class="col-md-4">
-				<fieldset>
+				<fieldset id="opt1">
 					<div class="radio-inline">
 						<label for="coEnrolRegMailCompanyAddr1"><input type="radio" name="coEnrolRegMailCompanyAddr" value="1" id="coEnrolRegMailCompanyAddr1" />&#160;&#160;Yes</label>
 					</div>
@@ -708,15 +708,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script type="text/javascript" id="">
 $(document).ready(function() {
 
-	$("input[name='coEnrolRegMailCompanyAddr']").click(function() {
-		if ($("input[name='coEnrolRegMailCompanyAddr']").val() == 1) {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
+	$("#coEnrolmentRegMailAddr #coEnrolRegMailCompanyAddrOptions1 #opt1 input[name='coEnrolRegMailCompanyAddr']").click(function() {
+		if ($("#coEnrolmentRegMailAddr #coEnrolRegMailCompanyAddrOptions1 #opt1 input[name='coEnrolRegMailCompanyAddr']").val() == "1") {
+			$("#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo").hide();
 		}
-		else if ($("input[name='coEnrolRegMailCompanyAddr']").val() == 2) {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').show();
+		else if ($("#coEnrolmentRegMailAddr #coEnrolRegMailCompanyAddrOptions1 #opt1 input[name='coEnrolRegMailCompanyAddr']").val() == "2") {
+			$("#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo").show();
 		}
 		else {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
+			$("#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo").hide();
 		}
 	});
 });
