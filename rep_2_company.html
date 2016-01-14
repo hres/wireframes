@@ -709,15 +709,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 $(document).ready(function() {
 
 	$("#coEnrolmentRegMailAddr #coEnrolRegMailCompanyAddrOptions1 #opt1 input[name='coEnrolRegMailCompanyAddr']").click(function() {
-		if ($("#coEnrolmentRegMailAddr #coEnrolRegMailCompanyAddrOptions1 #opt1 input[name='coEnrolRegMailCompanyAddr']").val() == "1") {
+	/*(
+		if ($(this).val() == "1") {
 			$("#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo").hide();
 		}
-		else if ($("#coEnrolmentRegMailAddr #coEnrolRegMailCompanyAddrOptions1 #opt1 input[name='coEnrolRegMailCompanyAddr']").val() == "2") {
+		else if ($(this).val() == "2") {
 			$("#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo").show();
 		}
 		else {
 			$("#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo").hide();
 		}
+		*/
+		alert("This has been clicked");
 	});
 });
 
