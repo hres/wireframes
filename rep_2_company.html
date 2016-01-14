@@ -32,7 +32,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- End Google Tag Manager -->
 
 </head>
-<body vocab="http://schema.org/" typeof="WebPage" onload="myFunction()">
+<body vocab="http://schema.org/" typeof="WebPage"> <!--onload="myFunction()">-->
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
@@ -245,10 +245,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="col-md-4">
 				<fieldset>
 					<div class="radio-inline">
-						<label for="coEnrolRegMailCompanyAddr1"><input type="radio" name="coEnrolRegMailCompanyAddr" value="1" id="coEnrolRegMailCompanyAddr1" />&#160;&#160;Yes</label>
+						<label for="coEnrolRegMailCompanyAddr1"><input type="radio" name="coEnrolRegMailCompanyAddr" value="1" id="coEnrolRegMailCompanyAddr1" onchange="myFunction()"/>&#160;&#160;Yes</label>
 					</div>
 					<div class="radio-inline">
-						<label for="coEnrolRegMailCompanyAddr2"><input type="radio" name="coEnrolRegMailCompanyAddr" value="2" id="coEnrolRegMailCompanyAddr2" />&#160;&#160;No</label>
+						<label for="coEnrolRegMailCompanyAddr2"><input type="radio" name="coEnrolRegMailCompanyAddr" value="2" id="coEnrolRegMailCompanyAddr2" onchange="myFunction()"/>&#160;&#160;No</label>
 					</div>
 				</fieldset>
 				</div>
@@ -699,79 +699,43 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
 function myFunction() {	
+
+	$('div#coEnrolmentRegMailAddr div#coEnrolRegMailCompanyAddrOptions1 input[name=coEnrolRegMailCompanyAddr]').change(function() {
+		if ($('div#coEnrolmentRegMailAddr div#coEnrolRegMailCompanyAddrOptions1 input[name=coEnrolRegMailCompanyAddr]').val() == "1") {
+			$('coEnrolmentRegMailAddrCompInfo').hide();
+		else if ($('div#coEnrolmentRegMailAddr div#coEnrolRegMailCompanyAddrOptions1 input[name=coEnrolRegMailCompanyAddr]').val() == "2") {
+			$('coEnrolmentRegMailAddrCompInfo').show();
+		else {
+		}
+	});
+
+/*
 	
 		$('p select[name=iline]').change(function(e){
   
   if ($('p select[name=iline]').val() == '0'){
 	 
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').hide();
-	 $('#raAntDate').hide();
 	 
   }
   else if ($('p select[name=iline]').val() == '1'){
 	 
-	 $('#coType').show();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').show();
-	 $('#raAntDate').hide();
 	 
   }
   else if ($('p select[name=iline]').val() == '2'){
-	 $('#coType').hide();
-	 $('#doType').show();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').show();
-	 $('#raAntDate').show();
 	 
   }
   else if ($('p select[name=iline]').val() == '3'){
-	  
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').show();
-	 $('#rtType').hide();
-	 $('#step1c').show();
-	 $('#raAntDate').show();
 	 
   }
   else if ($('p select[name=iline]').val() == '4'){
-	  
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').show();
-	 $('#step1c').hide();
-	 $('#raAntDate').hide();
 	 
   }
   else{
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').hide();
-	 $('#raAntDate').hide();
   }
 });
 
-
+*/
 }
-/*
-//function for opening a file
-function performClick(elemId) {
-   var elem = document.getElementById(elemId);
-   if(elem && document.createEvent) {
-      var evt = document.createEvent("MouseEvents");
-      evt.initEvent("click", true, false);
-      elem.dispatchEvent(evt);
-   }*/
 </script>
 </body>
 </html>
