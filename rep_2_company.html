@@ -1,4 +1,3 @@
-
 <!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" dir="ltr">
 <!--<![endif]-->
@@ -123,297 +122,483 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	<br /><br />
 	<div id="step1A" class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">STEP 1A - Select Product Line</h3>
+            <h3 class="panel-title">STEP 2 - Company Information</h3>
 		</div>
 		<div class="panel-body">
-			<div class="form-group">
-				<fieldset>
-					<label for="drugProduct" class="form-radio form-label-inline">
-					<input type="radio" name="optionProductLine"  />
-					Pharmaceutical or Biologic Drug Product</label>
-					&nbsp;&nbsp;
-					<label for="medDevice" class="form-radio form-label-inline">
-						<input type="radio"  name="optionProductLine" />
-						Medical Device</label>
-				</fieldset>
-			</div>
-		</div>
-	</div><!-- end of Step 1A-->
-	
-	<div id="step1B" class="panel panel-default">
-		<div class="panel-heading">
-			<h3 class="panel-title">STEP 1B - Select Enrolment Type</h3>
-		</div>
-		<div class="panel-body">
-			<div class="form-group"> 
-				<!-- <p><strong>Select a specific Inspection Line for additional search options:</strong> -->
-				<p>
-				<select name="iline" required="">
-				<option value=""></option>
-				<option value="1">Company (CO)</option>
-				<option value="2">Dossier (DO)</option>
-				<option value="3">Regulatory Activity (RA)</option>
-				<option value="4">Regulatory Transaction (RT)</option>
-				</select>
-				</p>
-			
-				<div id="coType" style="display: none;">
-					<div class="form-group">
-						<label for="coNewEnFile" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption"/>
-								Start a NEW Company Enrolment</label>
-					</div>
-					<div class="form-group">
-						<label for="coDrftFile" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption"/>
-							Complete your DRAFT Company</label>
-					</div>
-					<div class="form-group">
-						<label for="coDrftFileUpload">Upload Draft Enrolment file:</label>
-						<input type="file" id="coDrftFileUpload" />
-					</div>
-					<div class="form-group">
-						<label for="coAmdFile" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption"/>
-							AMEND you Company Enrolment File</label>
-					</div>
-					<div class="form-group">
-						<label for="coAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-						<input type="file" id="coAmdFileUpload" />
-					</div>
-				</div>
-				<div id="doType" style="display: none;">
-					<div class="form-group">
-						<label for="doNewEnFile" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption"/>
-							Start a NEW Dossier Enrolment</label>
-					</div>
-					<div class="form-group">
-						<label for="doDrftFile" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption"/>
-							Complete your DRAFT Dossier</label>
-					</div>
-					<div class="form-group">
-						<label for="doDrftFileUpload">Upload Draft Enrolment file:</label>
-						<input type="file" id="doDrftFileUpload" />
-					</div>
-					<div class="form-group">
-						<label for="doAmdFile" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption"/>
-							AMEND you Dossier Enrolment File</label>
-					</div>
-					<div class="form-group">
-						<label for="doAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-						<input type="file" id="doAmdFileUpload" />
-					</div>
-					</div>
-				<div id="raType" style="display: none;">
-					<div class="form-group">
-						<label for="raNewEnFile" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption"/>
-							Start a NEW Regulatory Activity Enrolment</label>
-					</div>
-					<div class="form-group">
-						<label for="raDrftFile" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption"/>
-							Complete your DRAFT Regulatory Activity</label>
-					</div>
-					<div class="form-group">
-						<label for="raDrftFileUpload">Upload Draft Enrolment file:</label>
-						<input type="file" id="raDrftFileUpload" />
-					</div>
-					<div class="form-group">
-						<label for="raAmdFile" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption"/>
-							AMEND you Regulatory Activity Enrolment File</label>
-					</div>
-					<div class="form-group">
-						<label for="raAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-						<input type="file" id="raAmdFileUpload" />
-					</div>
-				</div>
-				<div id="rtType" style="display: none;">
-					<div class="form-group">
-						<div class="form-group">
-							<label for="rtCOFileUpload">Upload and confirm your Company Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtCOFileUpload" />
-						</div>
-						<div class="form-group">
-							<label for="rtDOFileUpload">Upload and confirm your Dossier Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtDOFileUpload" />
-						</div>
-						<div class="form-group">
-							<label for="rtRAFileUpload">Upload and confirm your Regulatory Activity Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtRAFileUpload" />
-						</div>
-						<div class="checkbox">
-						<label><input type="checkbox" /> I confirm that the uploaded files are the most current version of the
-Enrolment XML files.</label>
-						</div>
-						<div class="checkbox">
-							<label><input type="checkbox" /> I confirm that All the information within the enrolment files are
-current and that NOTHING has changed. (i.e.: no changes to
-Company information, Brand Name, Common name, Dossier
-information, Regulatory Activity information)</label>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> <!--end of step 1B-->
-	<div id="step1c" class="panel panel-default" style="display: none;">
-		<div class="panel-heading">
-			<h2 class="panel-title">STEP 1C - Administrative Information for THIS Enrolment Process</h2>
-		</div>
-		
-		<div class="panel-body">
-			<!-- <form class="form-inline" role="form" method="get" action="#"> -->
-			<div class="row">
-				<div class="col-md-6">
-					<div class="form-group">
-						<label for="raEnDateSubmitted" ><span class="field-name">Date the Regulatory Activity Enrolment
-is submitted*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-						<input class="form-control" type="date" id="raEnDateSubmitted" name="raEnDateSubmitted" data-rule-dateiso="true">
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div id="raAntDate" class="form-group">
-						<label for="raEnAntiDateFiled" ><span class="field-name">Date the Regulatory Activity is
-anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-						<input class="form-control" type="date" id="raEnAntiDateFiled" name="raEnAntiDateFiled" data-rule-dateiso="true">
-					</div>
-				</div>
-			<!-- </form> -->
-			</div>
-			
-			<div id="MCInfo" class="wb-frmvld">
-				<h4>Main Contact Information</h4>
-					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
-					<div class="row">
-						<div class="form-group col-sm-2">
-							<label for="MCInfoSalutation" class="control-label">Salutation*</label>
-                            <div class="">
-                                <select class="form-control" name="MCInfoSalutation" id="MCInfoSalutation">
-                                    <option label=" "></option>
-                                    <option value="1">Mr.</option>
-                                    <option value="2">Mrs.</option>
-                                    <option value="3">Ms.</option>
-									<option value="4">Dr.</option>
-                                </select>
-                            </div>
-						</div>
-						
-						<div class="form-group col-sm-3">
-							<label for="MCInfoGivenName" class="control-label">Given Name*</label>
-							<div class="">
-								<input type="text" class="form-control" id="MCInfoGivenName" placeholder="Enter Given Name">
-							</div>
-						</div>
-						<div class="form-group col-sm-3">
-							<label for="MCInfoSurname" class=control-label">Surname*</label>
-							<div class="">
-								<input type="text" class="form-control" id="MCInfoSurname" placeholder="Enter Surname" >
-							</div>
-						</div>
-						<div class="form-group col-sm-3">
-							<label for="MCInfoTitle" class="control-label">Title*</label>
-							<div class="">
-								<input type="text" class="form-control" id="MCInfoTitle" placeholder="Enter Title" >
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-sm-3">
-							<label for="MCInfoTelNo" class="control-label">Telephone No*</label>
-							<div class="">
-								<input type="text" class="form-control" id="MCInfoTelNo" placeholder="Enter Telephone No." >
-							</div>
-						</div>
-						<div class="form-group col-sm-1">
-							<label for="MCInfoTelExt" class="control-label">Ext</label>
-							<div class="">
-								<input type="text" class="form-control" id="MCInfoTelExt" placeholder="Enter Extension" >
-							</div>
-						</div>
-						<div class="form-group col-sm-4">
-							<label for="MCInfoEmail" class="control-label">Email*</label>
-							<div class="">
-								<input type="text" class="form-control" id="MCInfoEmail" placeholder="Enter Email" />
-							</div>
-						</div>
-						<div class="form-group col-sm-4">
-							<label for="MCInfoFaxNo" class="control-label">Fax No.</label>
-							<div class="">
-								<input type="text" class="form-control" id="MCInfoFaxNo" placeholder="Enter Fax No." >
-							</div>
-						</div>
-					</div>
-					<!-- </form> -->
-				</div>
-			<div id="SCInfo" class="wb-frmvld">
-				<h4>Secondary Contact Information</h4>
+		<!--Manufacturer/Sponsor Maliing Address-->
+		<div id="coEnrolmentManuMailAddr">
+			<h4>Manufacturer / Sponsor Mailing Address*:</h4>
+			<div id="coEnrolmentManuCompInfo" class="wb-frmvld">
+				<h5>Company Information:</h5>
 					<form class="form-horizontal" role="form" method="get" action="#">
 						<div class="form-group">
-							<label for="SCInfoSalutation" class="col-sm-4 control-label">Salutation*</label>
-                            <div class="col-sm-8">
-                                <select class="form-control" name="SCInfoSalutation" id="SCInfoSalutation">
-                                    <option label=" "></option>
-                                    <option value="1">Mr.</option>
-                                    <option value="2">Mrs.</option>
-                                    <option value="3">Ms.</option>
-									<option value="4">Dr.</option>
-                                </select>
-                            </div>
-						</div>
-						<div class="form-group">
-							<label for="SCInfoGivenName" class="col-sm-4 control-label">Given Name*</label>
+							<label for="coEnrolmentManuCompName" class="col-sm-4 control-label">Company Name [Full Legal Name]*</label>
 							<div class="col-sm-8">
-								<input type="text" class="form-control" id="SCInfoGivenName" placeholder="Enter Given Name" >
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="SCInfoSurname" class="col-sm-4 control-label">Surname*</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="SCInfoSurname" placeholder="Enter Surname" >
-							</div>
-						</div>
-						<div class="form-group ">
-							<label for="SCInfoTitle" class="col-sm-4 control-label">Title*</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="SCInfoTitle" placeholder="Enter Title" >
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="SCInfoTelNo" class="col-sm-4 control-label">Telephone No*</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="SCInfoTelNo" placeholder="Enter Telephone No." >
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="SCInfoTelExt" class="col-sm-4 control-label">Ext</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="SCInfoTelExt" placeholder="Enter Extension" >
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="SCInfoEmail" class="col-sm-4 control-label">Email*</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="SCInfoEmail" placeholder="Enter Email" >
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="SCInfoFaxNo" class="col-sm-4 control-label">Fax No.</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="SCInfoFaxNo" placeholder="Enter Fax No." >
+								<input type="text" class="form-control" id="coEnrolmentManuCompName" placeholder="Enter Company Name">
 							</div>
 						</div>
 					</form>
 			</div>
-	</div>
-</div>
+			<div id="coEnrolmentManuAddrInfo" class="wb-frmvld">
+				<h5>Address Information:</h5>
+					<form class="form-horizontal" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="coEnrolmentManuAddrStr" class="col-sm-4 control-label">Street / Suite *</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuAddrStr" placeholder="Enter Street/Suite">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentManuAddrCity" class="col-sm-4 control-label">City / Town*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuAddrCity" placeholder="Enter City/Town">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentManuAddrCountry" class="col-sm-4 control-label">Country*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuAddrCountry" placeholder="Enter Country">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentManuAddrProv" class="col-sm-4 control-label">Province /State*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuAddrProv" placeholder="Enter Province/State">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentManuAddrPostal" class="col-sm-4 control-label">Postal / ZIP Code*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuAddrPostal" placeholder="Enter Postal/ZIP Code">
+							</div>
+						</div>
+					</form>
+			</div> <!-- end of Manufacturer/Sponsor Mailing Address-->
+			<div id="coEnrolmentManuCompRepInfo" class="wb-frmvld">
+				<h5>Company Representative Information:</h5>
+					<form class="form-horizontal" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="coEnrolmentManuCompRepSal" class="col-sm-4 control-label">Salutation*</label>
+                            <div class="col-sm-8">
+                                <select class="form-control" name="coEnrolmentManuCompRepSal" id="coEnrolmentManuCompRepSal">
+                                    <option label=" "></option>
+                                    <option value="1">Mr.</option>
+                                    <option value="2">Mrs.</option>
+                                    <option value="3">Ms.</option>
+									<option value="4">Dr.</option>
+                                </select>
+                            </div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentManuCompRepGivenName" class="col-sm-4 control-label">Given Name*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuCompRepGivenName" placeholder="Enter Given Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentManuCompRepSurname" class="col-sm-4 control-label">Surname*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuCompRepSurname" placeholder="Enter Surname" >
+							</div>
+						</div>
+						<div class="form-group ">
+							<label for="coEnrolmentManuCompRepTitle" class="col-sm-4 control-label">Title*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuCompRepTitle" placeholder="Enter Title" >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentManuCompRepTelNo" class="col-sm-4 control-label">Telephone No*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuCompRepTelNo" placeholder="Enter Telephone No." >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentManuCompRepTelExt" class="col-sm-4 control-label">Ext</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuCompRepTelExt" placeholder="Enter Extension" >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentManuCompRepEmail" class="col-sm-4 control-label">Email*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuCompRepEmail" placeholder="Enter Email" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentManuCompRepFaxNo" class="col-sm-4 control-label">Fax No.</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentManuCompRepFaxNo" placeholder="Enter Fax No." >
+							</div>
+						</div>
+					</form>
+			</div>
+		</div>
+		<!--Regulatory Mailing Address/Annual Contact-->
+		<div id="coEnrolmentRegMailAddr">
+			<h4>Regulatory Mailing Address / Annual Contact*</h4>
+			<!-- <form class="form-inline" action="#" method="get" id="coEnrolRegMailCompanyAddrOptions1"> -->
+			<div class="row" id="coEnrolRegMailCompanyAddrOptions1">
+				<div class="col-md-8">
+				<p>Same as Manufacturer / Sponsor Company &amp; Address information?</p>
+				</div>
+				<div class="col-md-4">
+				<fieldset>
+					<div class="radio-inline">
+						<label for="coEnrolRegMailCompanyAddr1"><input type="radio" name="coEnrolRegMailCompanyAddr" value="1" id="coEnrolRegMailCompanyAddr1" />&#160;&#160;Yes</label>
+					</div>
+					<div class="radio-inline">
+						<label for="coEnrolRegMailCompanyAddr2"><input type="radio" name="coEnrolRegMailCompanyAddr" value="2" id="coEnrolRegMailCompanyAddr2" />&#160;&#160;No</label>
+					</div>
+				</fieldset>
+				</div>
+			</div>
+			<!-- </form> -->
+			<!-- <form class="form-inline" action="#" method="get" id="coEnrolRegMailCompanyRepOptions2"> -->
+			<div class="row" id="coEnrolRegMailCompanyRepOptions2">
+				<div class="col-md-8">
+				<p>Same as Manufacturer / Sponsor Company Representative information?</p>
+				</div>
+				<div class="col-md-4">
+				<fieldset>
+					<div class="radio-inline">
+						<label for="coEnrolRegMailCompanyRepInfo1"><input type="radio" name="coEnrolRegMailCompanyRepInfo" value="1" id="coEnrolRegMailCompanyRepInfo1" />&#160;&#160;Yes</label>
+					</div>
+					<div class="radio-inline">
+						<label for="coEnrolRegMailCompanyRepInfo2"><input type="radio" name="coEnrolRegMailCompanyRepInfo" value="2" id="coEnrolRegMailCompanyRepInfo2" />&#160;&#160;No</label>
+					</div>
+				</fieldset>
+				</div>
+			</div>
+			<!-- </form> -->
+			<div class="form-group">
+			<div id="coEnrolmentRegMailAddrCompInfo" class="wb-frmvld" style="display: none;">
+				<h5>Company Information:</h5>
+					<form class="form-horizontal" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrCompName" class="col-sm-4 control-label">Company Name [Full Legal Name]*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrCompName" placeholder="Enter Company Name">
+							</div>
+						</div>
+					</form>
+			</div>
+			<div id="coEnrolmentRegMailAddrInfo" class="wb-frmvld">
+				<h5>Address Information:</h5>
+					<form class="form-horizontal" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrStr" class="col-sm-4 control-label">Street / Suite *</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrStr" placeholder="Enter Street/Suite">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrCity" class="col-sm-4 control-label">City / Town*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrCity" placeholder="Enter City/Town">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrCountry" class="col-sm-4 control-label">Country*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrCountry" placeholder="Enter Country">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrProv" class="col-sm-4 control-label">Province /State*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrProv" placeholder="Enter Province/State">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrPostal" class="col-sm-4 control-label">Postal / ZIP Code*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrPostal" placeholder="Enter Postal/ZIP Code">
+							</div>
+						</div>
+					</form>
+			</div>
+			<div id="coEnrolmentRegMailAddrCompRepInfo" class="wb-frmvld">
+				<h5>Company Representative Information:</h5>
+					<form class="form-horizontal" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrCompRepSal" class="col-sm-4 control-label">Salutation*</label>
+                            <div class="col-sm-8">
+                                <select class="form-control" name="coEnrolmentRegMailAddrCompRepSal" id="coEnrolmentRegMailAddrCompRepSal">
+                                    <option label=" "></option>
+                                    <option value="1">Mr.</option>
+                                    <option value="2">Mrs.</option>
+                                    <option value="3">Ms.</option>
+									<option value="4">Dr.</option>
+                                </select>
+                            </div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrCompRepGivenName" class="col-sm-4 control-label">Given Name*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrCompRepGivenName" placeholder="Enter Given Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrCompRepSurname" class="col-sm-4 control-label">Surname*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrRepSurname" placeholder="Enter Surname" >
+							</div>
+						</div>
+						<div class="form-group ">
+							<label for="coEnrolmentRegMailAddrCompRepTitle" class="col-sm-4 control-label">Title*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrCompRepTitle" placeholder="Enter Title" >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrCompRepTelNo" class="col-sm-4 control-label">Telephone No*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrCompRepTelNo" placeholder="Enter Telephone No." >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrCompRepTelExt" class="col-sm-4 control-label">Ext</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrCompRepTelExt" placeholder="Enter Extension" >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrCompRepEmail" class="col-sm-4 control-label">Email*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrCompRepEmail" placeholder="Enter Email" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentRegMailAddrCompRepFaxNo" class="col-sm-4 control-label">Fax No.</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentRegMailAddrCompRepFaxNo" placeholder="Enter Fax No." >
+							</div>
+						</div>
+					</form>
+			</div>
+			</div>
+		</div> <!-- end of Regulatory Mailing Address/Annual Contact -->
+		<!-- Canadian Importer Mailing Address-->
+		<div id="coEnrolmentCanImporterMailAddr">
+			<h4>Canadian Importer Mailing Address:</h4>
+			<!-- <form class="form-inline" action="#" method="get" id="coEnrolmentCanImporterMailAddrOptions"> -->
+			<div class="row" id="coEnrolmentCanImporterMailAddrOptions">
+				<div class="col-md-8">
+				<p>Same as Manufacturer / Sponsor Company &amp; Address information?</p>
+				</div>
+				<div class="col-md-4">
+				<fieldset>
+					<div class="radio-inline">
+						<label for="coEnrolmentCanImporterMailCompanyAddr1"><input type="radio" name="coEnrolmentCanImporterMailCompanyAddr" value="1" id="coEnrolmentCanImporterMailCompanyAddr1" />&#160;&#160;Yes</label>
+					</div>
+					<div class="radio-inline">
+						<label for="coEnrolmentCanImporterMailCompanyAddr2"><input type="radio" name="coEnrolmentCanImporterMailCompanyAddr" value="2" id="coEnrolmentCanImporterMailCompanyAddr2" />&#160;&#160;No</label>
+					</div>
+				</fieldset>
+				</div>
+			</div>
+			<!-- </form> -->
+			<div class="form-group">
+			<div id="coEnrolmentCanImporterCompInfo" class="wb-frmvld">
+				<h5>Company Information:</h5>
+					<form class="form-horizontal" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="coEnrolmentCanImporterCompName" class="col-sm-4 control-label">Company Name [Full Legal Name]*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentCanImporterCompName" placeholder="Enter Company Name">
+							</div>
+						</div>
+					</form>
+			</div>
+			
+			<div id="coEnrolmentCanImporterAddrInfo" class="wb-frmvld">
+				<h5>Address Information:</h5>
+					<form class="form-horizontal" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="coEnrolmentCanImporterAddrStr" class="col-sm-4 control-label">Street / Suite *</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentCanImporterAddrStr" placeholder="Enter Street/Suite">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentCanImporterAddrCity" class="col-sm-4 control-label">City / Town*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentCanImporterAddrCity" placeholder="Enter City/Town">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentCanImporterAddrCountry" class="col-sm-4 control-label">Country*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentCanImporterAddrCountry" placeholder="Enter Country">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentCanImporterAddrProv" class="col-sm-4 control-label">Province /State*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentCanImporterAddrProv" placeholder="Enter Province/State">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentCanImporterAddrPostal" class="col-sm-4 control-label">Postal / ZIP Code*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentCanImporterAddrPostal" placeholder="Enter Postal/ZIP Code">
+							</div>
+						</div>
+					</form>
+			</div>
+			</div>
+		</div> <!--end of Canadian Importer Mailing Address Information-->
+		<!--Billing Address Information-->
+		<div id="coEnrolmentBillingAddr">
+			<h4>Billing Address*</h4>
+			<!-- <form class="form-inline" action="#" method="get" id="coEnrolmentBillingAddrOptions"> -->
+			<div class="row" id="coEnrolmentBillingAddrOptions">
+				<div class="col-md-8">
+				<p>Same as Manufacturer / Sponsor Company &amp; Address information?</p>
+				</div>
+				<div class="col-md-4">
+				<fieldset>
+					<div class="radio-inline">
+						<label for="coEnrolmentBillingCompanyAddr1"><input type="radio" name="coEnrolmentBillingCompanyAddr" value="1" id="coEnrolmentBillingCompanyAddr1" />&#160;&#160;Yes</label>
+					</div>
+					<div class="radio-inline">
+						<label for="coEnrolmentBillingCompanyAddr2"><input type="radio" name="coEnrolmentBillingCompanyAddr" value="2" id="coEnrolmentBillingCompanyAddr2" />&#160;&#160;No</label>
+					</div>
+				</fieldset>
+				</div>
+			</div>
+			<!-- </form> -->
+			<!-- <form class="form-inline" action="#" method="get" id="coEnrolBillingCompanyRepOptions"> -->
+			<div class="row" id="coEnrolBillingCompanyRepOptions">
+				<div class="col-md-8">
+				<p>Same as Manufacturer / Sponsor Company Representative information?</p>
+				</div>
+				<div class="col-md-4">
+				<fieldset>
+					<div class="radio-inline">
+						<label for="coEnrolBillingCompanyRepInfo1"><input type="radio" name="coEnrolBillingCompanyRepInfo" value="1" id="coEnrolBillingCompanyRepInfo1" />&#160;&#160;Yes</label>
+					</div>
+					<div class="radio-inline">
+						<label for="coEnrolBillingCompanyRepInfo2"><input type="radio" name="coEnrolBillingCompanyRepInfo" value="2" id="coEnrolBillingCompanyRepInfo2" />&#160;&#160;No</label>
+					</div>
+				</fieldset>
+				</div>
+			</div>
+			<!-- </form> -->
+			<div class="form-group">
+			<div id="coEnrolmentBillingAddrCompInfo" class="wb-frmvld">
+				<h5>Company Information:</h5>
+					<form class="form-horizontal" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrCompName" class="col-sm-4 control-label">Company Name [Full Legal Name]*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrCompName" placeholder="Enter Company Name">
+							</div>
+						</div>
+					</form>
+			</div>
+			<div id="coEnrolmentBillingAddrInfo" class="wb-frmvld">
+				<h5>Address Information:</h5>
+					<form class="form-horizontal" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrStr" class="col-sm-4 control-label">Street / Suite *</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrStr" placeholder="Enter Street/Suite">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrCity" class="col-sm-4 control-label">City / Town*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrCity" placeholder="Enter City/Town">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrCountry" class="col-sm-4 control-label">Country*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrCountry" placeholder="Enter Country">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrProv" class="col-sm-4 control-label">Province /State*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrProv" placeholder="Enter Province/State">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrPostal" class="col-sm-4 control-label">Postal / ZIP Code*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrPostal" placeholder="Enter Postal/ZIP Code">
+							</div>
+						</div>
+					</form>
+			</div>
+			<div id="coEnrolmentBillingAddrCompRepInfo" class="wb-frmvld">
+				<h5>Company Representative Information:</h5>
+					<form class="form-horizontal" role="form" method="get" action="#">
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrCompRepSal" class="col-sm-4 control-label">Salutation*</label>
+                            <div class="col-sm-8">
+                                <select class="form-control" name="coEnrolmentBillingAddrCompRepSal" id="coEnrolmentBillingAddrCompRepSal">
+                                    <option label=" "></option>
+                                    <option value="1">Mr.</option>
+                                    <option value="2">Mrs.</option>
+                                    <option value="3">Ms.</option>
+									<option value="4">Dr.</option>
+                                </select>
+                            </div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrCompRepGivenName" class="col-sm-4 control-label">Given Name*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrCompRepGivenName" placeholder="Enter Given Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrCompRepSurname" class="col-sm-4 control-label">Surname*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrRepSurname" placeholder="Enter Surname" >
+							</div>
+						</div>
+						<div class="form-group ">
+							<label for="coEnrolmentBillingAddrCompRepTitle" class="col-sm-4 control-label">Title*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrCompRepTitle" placeholder="Enter Title" >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrCompRepTelNo" class="col-sm-4 control-label">Telephone No*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrCompRepTelNo" placeholder="Enter Telephone No." >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrCompRepTelExt" class="col-sm-4 control-label">Ext</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrCompRepTelExt" placeholder="Enter Extension" >
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrCompRepEmail" class="col-sm-4 control-label">Email*</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrCompRepEmail" placeholder="Enter Email" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="coEnrolmentBillingAddrCompRepFaxNo" class="col-sm-4 control-label">Fax No.</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="coEnrolmentBillingAddrCompRepFaxNo" placeholder="Enter Fax No." >
+							</div>
+						</div>
+					</form>
+			</div>
+			</div>
+		</div> <!--end of Billing Address Information-->
+		</div>
+	</div><!-- end of Step 2 Company Enrolment-->
 <div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
-            <a class="btn btn-primary" href="rep_2_company.html">Continue to Step 2 ></a>
+            <a class="btn btn-primary" href="">Continue to Step 3 ></a>
         </div>
 </div>
 </section>
@@ -521,80 +706,48 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
-function myFunction() {	
+function myFunction() {
+
+	$('#coEnrolmentRegMailAddr #coEnrolRegMailCompanyAddrOptions1 input[name=coEnrolRegMailCompanyAddr]').click(function() {
+		if ($(this).val() == '1') {
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
+		}
+		else if ($(this).val() == '2') {
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').show();
+		}
+		else {
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
+		}
+		*/
+		//alert("This has been clicked");
+	});
+/*
 	
 		$('p select[name=iline]').change(function(e){
   
   if ($('p select[name=iline]').val() == '0'){
 	 
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').hide();
-	 $('#raAntDate').hide();
 	 
   }
   else if ($('p select[name=iline]').val() == '1'){
 	 
-	 $('#coType').show();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').show();
-	 $('#raAntDate').hide();
 	 
   }
   else if ($('p select[name=iline]').val() == '2'){
-	 $('#coType').hide();
-	 $('#doType').show();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').show();
-	 $('#raAntDate').show();
 	 
   }
   else if ($('p select[name=iline]').val() == '3'){
-	  
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').show();
-	 $('#rtType').hide();
-	 $('#step1c').show();
-	 $('#raAntDate').show();
 	 
   }
   else if ($('p select[name=iline]').val() == '4'){
-	  
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').show();
-	 $('#step1c').hide();
-	 $('#raAntDate').hide();
 	 
   }
   else{
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').hide();
-	 $('#raAntDate').hide();
   }
 });
 
-
+*/
 }
-/*
-//function for opening a file
-function performClick(elemId) {
-   var elem = document.getElementById(elemId);
-   if(elem && document.createEvent) {
-      var evt = document.createEvent("MouseEvents");
-      evt.initEvent("click", true, false);
-      elem.dispatchEvent(evt);
-   }*/
 </script>
 </body>
 </html>
