@@ -702,13 +702,13 @@ $(document).ready(function() {
 
 	$('input[name=coEnrolRegMailCompanyAddr]').change(function() {
 		if ($('input[name=coEnrolRegMailCompanyAddr]').val() == "1") {
-			$('coEnrolmentRegMailAddrCompInfo').hide();
+			$('#coEnrolmentRegMailAddrCompInfo').hide();
 		}
 		else if ($('input[name=coEnrolRegMailCompanyAddr]').val() == "2") {
-			$('coEnrolmentRegMailAddrCompInfo').show();
+			$('#coEnrolmentRegMailAddrCompInfo').show();
 		}
 		else {
-			$('coEnrolmentRegMailAddrCompInfo').hide();
+			$('#coEnrolmentRegMailAddrCompInfo').hide();
 		}
 	});
 });
