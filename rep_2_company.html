@@ -245,10 +245,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="col-md-4">
 				<fieldset>
 					<div class="radio-inline">
-						<label for="coEnrolRegMailCompanyAddr1"><input type="radio" name="coEnrolRegMailCompanyAddr" value="1" id="coEnrolRegMailCompanyAddr1" onchange="myFunction()"/>&#160;&#160;Yes</label>
+						<label for="coEnrolRegMailCompanyAddr1"><input type="radio" name="coEnrolRegMailCompanyAddr" value="1" id="coEnrolRegMailCompanyAddr1" />&#160;&#160;Yes</label>
 					</div>
 					<div class="radio-inline">
-						<label for="coEnrolRegMailCompanyAddr2"><input type="radio" name="coEnrolRegMailCompanyAddr" value="2" id="coEnrolRegMailCompanyAddr2" onchange="myFunction()"/>&#160;&#160;No</label>
+						<label for="coEnrolRegMailCompanyAddr2"><input type="radio" name="coEnrolRegMailCompanyAddr" value="2" id="coEnrolRegMailCompanyAddr2" />&#160;&#160;No</label>
 					</div>
 				</fieldset>
 				</div>
@@ -698,16 +698,20 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
-function myFunction() {	
+$(document).ready(function() {
 
-	$('div#coEnrolmentRegMailAddr div#coEnrolRegMailCompanyAddrOptions1 input[name=coEnrolRegMailCompanyAddr]').change(function(e) {
-		if ($('div#coEnrolmentRegMailAddr div#coEnrolRegMailCompanyAddrOptions1 input[name=coEnrolRegMailCompanyAddr]').val() == "1") {
+	$('input[name=coEnrolRegMailCompanyAddr]').change(function() {
+		if ($('input[name=coEnrolRegMailCompanyAddr]').val() == "1") {
 			$('coEnrolmentRegMailAddrCompInfo').hide();
-		else if ($('div#coEnrolmentRegMailAddr div#coEnrolRegMailCompanyAddrOptions1 input[name=coEnrolRegMailCompanyAddr]').val() == "2") {
+		}
+		else if ($('input[name=coEnrolRegMailCompanyAddr]').val() == "2") {
 			$('coEnrolmentRegMailAddrCompInfo').show();
+		}
 		else {
+			$('coEnrolmentRegMailAddrCompInfo').hide();
 		}
 	});
+});
 
 /*
 	
