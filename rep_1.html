@@ -128,12 +128,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		<div class="panel-body">
 			<div class="form-group">
 				<fieldset>
-					<label for="drugProduct" name="optionProductLine" class="form-radio form-label-inline">
-					<input type="radio" />
+					<label for="drugProduct" class="form-radio form-label-inline">
+					<input type="radio" name="optionProductLine"  />
 					Pharmaceutical or Biologic Drug Product</label>
 					&nbsp;&nbsp;
-					<label for="medDevice" name="optionProductLine" class="form-radio form-label-inline">
-						<input type="radio" />
+					<label for="medDevice" class="form-radio form-label-inline">
+						<input type="radio"  name="optionProductLine" />
 						Medical Device</label>
 				</fieldset>
 			</div>
@@ -160,12 +160,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div id="coType" style="display: none;">
 					<div class="form-group">
 						<label for="coNewEnFile" class="form-radio form-label-inline">
-						<input type="radio" />
+						<input type="radio" name="coTypeOption"/>
 								Start a NEW Company Enrolment</label>
 					</div>
 					<div class="form-group">
 						<label for="coDrftFile" class="form-radio form-label-inline">
-						<input type="radio" />
+						<input type="radio" name="coTypeOption"/>
 							Complete your DRAFT Company</label>
 					</div>
 					<div class="form-group">
@@ -174,7 +174,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="form-group">
 						<label for="coAmdFile" class="form-radio form-label-inline">
-						<input type="radio" />
+						<input type="radio" name="coTypeOption"/>
 							AMEND you Company Enrolment File</label>
 					</div>
 					<div class="form-group">
@@ -185,12 +185,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div id="doType" style="display: none;">
 					<div class="form-group">
 						<label for="doNewEnFile" class="form-radio form-label-inline">
-						<input type="radio" />
+						<input type="radio" name="doTypeOption"/>
 							Start a NEW Dossier Enrolment</label>
 					</div>
 					<div class="form-group">
 						<label for="doDrftFile" class="form-radio form-label-inline">
-						<input type="radio" />
+						<input type="radio" name="doTypeOption"/>
 							Complete your DRAFT Dossier</label>
 					</div>
 					<div class="form-group">
@@ -199,7 +199,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="form-group">
 						<label for="doAmdFile" class="form-radio form-label-inline">
-						<input type="radio" />
+						<input type="radio" name="doTypeOption"/>
 							AMEND you Dossier Enrolment File</label>
 					</div>
 					<div class="form-group">
@@ -207,15 +207,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<input type="file" id="doAmdFileUpload" />
 					</div>
 					</div>
-					<div id="raType" style="display: none;">
-						<div class="form-group">
-							<label for="raNewEnFile" class="form-radio form-label-inline">
-							<input type="radio" />
-								Start a NEW Regulatory Activity Enrolment</label>
+				<div id="raType" style="display: none;">
+					<div class="form-group">
+						<label for="raNewEnFile" class="form-radio form-label-inline">
+						<input type="radio" name="raTypeOption"/>
+							Start a NEW Regulatory Activity Enrolment</label>
 					</div>
 					<div class="form-group">
 						<label for="raDrftFile" class="form-radio form-label-inline">
-						<input type="radio" />
+						<input type="radio" name="raTypeOption"/>
 							Complete your DRAFT Regulatory Activity</label>
 					</div>
 					<div class="form-group">
@@ -224,7 +224,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="form-group">
 						<label for="raAmdFile" class="form-radio form-label-inline">
-						<input type="radio" />
+						<input type="radio" name="raTypeOption"/>
 							AMEND you Regulatory Activity Enrolment File</label>
 					</div>
 					<div class="form-group">
@@ -267,25 +267,32 @@ information, Regulatory Activity information)</label>
 		</div>
 		
 		<div class="panel-body">
-			<form class="form-inline" role="form" method="get" action="#">
-				<div class="form-group">
-					<label for="raEnDateSubmitted" ><span class="field-name">Date the Regulatory Activity Enrolment
+			<!-- <form class="form-inline" role="form" method="get" action="#"> -->
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="raEnDateSubmitted" ><span class="field-name">Date the Regulatory Activity Enrolment
 is submitted*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-					<input class="form-control" type="date" id="raEnDateSubmitted" name="raEnDateSubmitted" data-rule-dateiso="true">
+						<input class="form-control" type="date" id="raEnDateSubmitted" name="raEnDateSubmitted" data-rule-dateiso="true">
+					</div>
 				</div>
-				<div id="raAntDate" Enclass="form-group">
-					<label for="raEnAntiDateFiled" ><span class="field-name">Date the Regulatory Activity is
+				<div class="col-md-6">
+					<div id="raAntDate" class="form-group">
+						<label for="raEnAntiDateFiled" ><span class="field-name">Date the Regulatory Activity is
 anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-					<input class="form-control" type="date" id="raEnAntiDateFiled" name="raEnAntiDateFiled" data-rule-dateiso="true">
+						<input class="form-control" type="date" id="raEnAntiDateFiled" name="raEnAntiDateFiled" data-rule-dateiso="true">
+					</div>
 				</div>
-			</form>
-
+			<!-- </form> -->
+			</div>
+			
 			<div id="MCInfo" class="wb-frmvld">
 				<h4>Main Contact Information</h4>
-					<form class="form-horizontal" role="form" method="get" action="#">
-						<div class="form-group">
-							<label for="MCInfoSalutation" class="col-sm-4 control-label">Salutation*</label>
-                            <div class="col-sm-8">
+					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<div class="row">
+						<div class="form-group col-sm-2">
+							<label for="MCInfoSalutation" class="control-label">Salutation*</label>
+                            <div class="">
                                 <select class="form-control" name="MCInfoSalutation" id="MCInfoSalutation">
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
@@ -295,50 +302,54 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
                                 </select>
                             </div>
 						</div>
-						<div class="form-group">
-							<label for="MCInfoGivenName" class="col-sm-4 control-label">Given Name*</label>
-							<div class="col-sm-8">
+						
+						<div class="form-group col-sm-3">
+							<label for="MCInfoGivenName" class="control-label">Given Name*</label>
+							<div class="">
 								<input type="text" class="form-control" id="MCInfoGivenName" placeholder="Enter Given Name">
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="MCInfoSurname" class="col-sm-4 control-label">Surname*</label>
-							<div class="col-sm-8">
+						<div class="form-group col-sm-3">
+							<label for="MCInfoSurname" class=control-label">Surname*</label>
+							<div class="">
 								<input type="text" class="form-control" id="MCInfoSurname" placeholder="Enter Surname" >
 							</div>
 						</div>
-						<div class="form-group ">
-							<label for="MCInfoTitle" class="col-sm-4 control-label">Title*</label>
-							<div class="col-sm-8">
+						<div class="form-group col-sm-3">
+							<label for="MCInfoTitle" class="control-label">Title*</label>
+							<div class="">
 								<input type="text" class="form-control" id="MCInfoTitle" placeholder="Enter Title" >
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="MCInfoTelNo" class="col-sm-4 control-label">Telephone No*</label>
-							<div class="col-sm-8">
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-3">
+							<label for="MCInfoTelNo" class="control-label">Telephone No*</label>
+							<div class="">
 								<input type="text" class="form-control" id="MCInfoTelNo" placeholder="Enter Telephone No." >
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="MCInfoTelExt" class="col-sm-4 control-label">Ext</label>
-							<div class="col-sm-8">
+						<div class="form-group col-sm-1">
+							<label for="MCInfoTelExt" class="control-label">Ext</label>
+							<div class="">
 								<input type="text" class="form-control" id="MCInfoTelExt" placeholder="Enter Extension" >
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="MCInfoEmail" class="col-sm-4 control-label">Email*</label>
-							<div class="col-sm-8">
+						<div class="form-group col-sm-4">
+							<label for="MCInfoEmail" class="control-label">Email*</label>
+							<div class="">
 								<input type="text" class="form-control" id="MCInfoEmail" placeholder="Enter Email" />
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="MCInfoFaxNo" class="col-sm-4 control-label">Fax No.</label>
-							<div class="col-sm-8">
+						<div class="form-group col-sm-4">
+							<label for="MCInfoFaxNo" class="control-label">Fax No.</label>
+							<div class="">
 								<input type="text" class="form-control" id="MCInfoFaxNo" placeholder="Enter Fax No." >
 							</div>
 						</div>
-					</form>
-			</div>
+					</div>
+					<!-- </form> -->
+				</div>
 			<div id="SCInfo" class="wb-frmvld">
 				<h4>Secondary Contact Information</h4>
 					<form class="form-horizontal" role="form" method="get" action="#">
