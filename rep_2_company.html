@@ -125,6 +125,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             <h3 class="panel-title">STEP 2 - Company Information</h3>
 		</div>
 		<div class="panel-body">
+		<!--Manufacturer/Sponsor Maliing Address-->
 		<div id="coEnrolmentManuMailAddr">
 			<h4>Manufacturer / Sponsor Mailing Address*:</h4>
 			<div id="coEnrolmentManuCompInfo" class="wb-frmvld">
@@ -172,7 +173,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 						</div>
 					</form>
-			</div>
+			</div> <!-- end of Manufacturer/Sponsor Mailing Address-->
 			<div id="coEnrolmentManuCompRepInfo" class="wb-frmvld">
 				<h5>Company Representative Information:</h5>
 					<form class="form-horizontal" role="form" method="get" action="#">
@@ -233,9 +234,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</form>
 			</div>
 		</div>
+		<!--Regulatory Mailing Address/Annual Contact-->
 		<div id="coEnrolmentRegMailAddr">
 			<h4>Regulatory Mailing Address / Annual Contact*</h4>
-			<form class="form-inline" action="#" method="get" id="coEnrolRegMailCompanyAddrOptions">
+			<form class="form-inline" action="#" method="get" id="coEnrolRegMailCompanyAddrOptions1">
 				<p>Same as Manufacturer / Sponsor Company &amp; Address information?</p>
 				<fieldset>
 					<div class="radio">
@@ -246,18 +248,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</fieldset>
 			</form>
-			<form class="form-inline" action="#" method="get" id="coEnrolRegMailCompanyRepOptions">
+			<form class="form-inline" action="#" method="get" id="coEnrolRegMailCompanyRepOptions2">
 				<p>Same as Manufacturer / Sponsor Company Representative information?</p>
 				<fieldset>
 					<div class="radio">
-						<label for="coEnrolRegMailCompanyRepInfo1"><input type="radio" name="coEnrolRegMailCompanyRepInfo1" value="1" id="coEnrolRegMailCompanyAddr1" />&#160;&#160;Yes</label>
+						<label for="coEnrolRegMailCompanyRepInfo1"><input type="radio" name="coEnrolRegMailCompanyRepInfo" value="1" id="coEnrolRegMailCompanyAddr1" />&#160;&#160;Yes</label>
 					</div>
 					<div class="radio">
-						<label for="coEnrolRegMailCompanyRepInfo2"><input type="radio" name="coEnrolRegMailCompanyRepInfo2" value="2" id="coEnrolRegMailCompanyAddr2" />&#160;&#160;No</label>
+						<label for="coEnrolRegMailCompanyRepInfo2"><input type="radio" name="coEnrolRegMailCompanyRepInfo" value="2" id="coEnrolRegMailCompanyAddr2" />&#160;&#160;No</label>
 					</div>
 				</fieldset>
 			</form>
-			<div id="coEnrolmentRegMailAddrCompInfo" class="wb-frmvld">
+			<div id="coEnrolmentRegMailAddrCompInfo" class="wb-frmvld" style="display: none;">
 				<h5>Company Information:</h5>
 					<form class="form-horizontal" role="form" method="get" action="#">
 						<div class="form-group">
@@ -268,7 +270,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</form>
 			</div>
-			<div id="coEnrolmentRegMailAddrInfo" class="wb-frmvld">
+			<div id="coEnrolmentRegMailAddrInfo" class="wb-frmvld" style="display: none;">
 				<h5>Address Information:</h5>
 					<form class="form-horizontal" role="form" method="get" action="#">
 						<div class="form-group">
@@ -303,7 +305,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</form>
 			</div>
-			<div id="coEnrolmentRegMailAddrCompRepInfo" class="wb-frmvld">
+			<div id="coEnrolmentRegMailAddrCompRepInfo" class="wb-frmvld" style="display: none;">
 				<h5>Company Representative Information:</h5>
 					<form class="form-horizontal" role="form" method="get" action="#">
 						<div class="form-group">
@@ -362,7 +364,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</form>
 			</div>
-		</div>
+		</div> <!-- end of Regulatory Mailing Address/Annual Contact -->
+		<!-- Canadian Importer Mailing Address-->
 		<div id="coEnrolmentCanImporterMailAddr">
 			<h4>Canadian Importer Mailing Address:</h4>
 			<form class="form-inline" action="#" method="get" id="coEnrolmentCanImporterMailAddrOptions">
@@ -376,7 +379,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</fieldset>
 			</form>
-			<div id="coEnrolmentCanImporterCompInfo" class="wb-frmvld">
+			<div id="coEnrolmentCanImporterCompInfo" class="wb-frmvld" style="display: none;">
 				<h5>Company Information:</h5>
 					<form class="form-horizontal" role="form" method="get" action="#">
 						<div class="form-group">
@@ -387,7 +390,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</form>
 			</div>
-			<div id="coEnrolmentCanImporterAddrInfo" class="wb-frmvld">
+			<div id="coEnrolmentCanImporterAddrInfo" class="wb-frmvld" style="display: none;">
 				<h5>Address Information:</h5>
 					<form class="form-horizontal" role="form" method="get" action="#">
 						<div class="form-group">
@@ -422,7 +425,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</form>
 			</div>
-		</div>
+		</div> <!--end of Canadian Importer Mailing Address Information-->
+		<!--Billing Address Information-->
 		<div id="coEnrolmentBillingAddr">
 			<h4>Billing Address*</h4>
 			<form class="form-inline" action="#" method="get" id="coEnrolmentBillingAddrOptions">
@@ -436,18 +440,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</fieldset>
 			</form>
-			<form class="form-inline" action="#" method="get" id="coEnrolRegMailCompanyRepOptions">
+			<form class="form-inline" action="#" method="get" id="coEnrolBillingCompanyRepOptions">
 				<p>Same as Manufacturer / Sponsor Company Representative information?</p>
 				<fieldset>
 					<div class="radio">
-						<label for="coEnrolRegMailCompanyRepInfo1"><input type="radio" name="coEnrolRegMailCompanyRepInfo1" value="1" id="coEnrolRegMailCompanyAddr1" />&#160;&#160;Yes</label>
+						<label for="coEnrolBillingCompanyRepInfo1"><input type="radio" name="coEnrolBillingCompanyRepInfo" value="1" id="coEnrolBillingCompanyAddr1" />&#160;&#160;Yes</label>
 					</div>
 					<div class="radio">
-						<label for="coEnrolRegMailCompanyRepInfo2"><input type="radio" name="coEnrolRegMailCompanyRepInfo2" value="2" id="coEnrolRegMailCompanyAddr2" />&#160;&#160;No</label>
+						<label for="coEnrolBillingCompanyRepInfo2"><input type="radio" name="coEnrolBillingCompanyRepInfo" value="2" id="coEnrolBillingCompanyAddr2" />&#160;&#160;No</label>
 					</div>
 				</fieldset>
 			</form>
-			<div id="coEnrolmentBillingAddrCompInfo" class="wb-frmvld">
+			<div id="coEnrolmentBillingAddrCompInfo" class="wb-frmvld" style="display: none;">
 				<h5>Company Information:</h5>
 					<form class="form-horizontal" role="form" method="get" action="#">
 						<div class="form-group">
@@ -458,7 +462,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</form>
 			</div>
-			<div id="coEnrolmentBillingAddrInfo" class="wb-frmvld">
+			<div id="coEnrolmentBillingAddrInfo" class="wb-frmvld" style="display: none;">
 				<h5>Address Information:</h5>
 					<form class="form-horizontal" role="form" method="get" action="#">
 						<div class="form-group">
@@ -493,7 +497,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</form>
 			</div>
-			<div id="coEnrolmentBillingAddrCompRepInfo" class="wb-frmvld">
+			<div id="coEnrolmentBillingAddrCompRepInfo" class="wb-frmvld" style="display: none;">
 				<h5>Company Representative Information:</h5>
 					<form class="form-horizontal" role="form" method="get" action="#">
 						<div class="form-group">
@@ -552,9 +556,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</form>
 			</div>
+		</div> <!--end of Billing Address Information-->
 		</div>
-		</div>
-	</div><!-- end of Step 1A-->
+	</div><!-- end of Step 2 Company Enrolment-->
 <div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
             <a class="btn btn-primary" href="">Continue to Step 3 ></a>
