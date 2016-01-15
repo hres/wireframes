@@ -167,26 +167,31 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</div>
 			<!-- end of main information-->
 			
-			<!--Canadian Reference Product-->
-			<div id="doCanRefProduct">
-				<h4>Canadian Reference Product</h4>
+			<!--expandable/collapsible content-->
+			<ul id="doCanRefProductList" class="list-unstyled">
+				<li id="doCanRefProduct1">
+					<details open="open">
+						<summary>Canadian Reference Product 1</summary>
+						<!--Canadian Reference Product-->
+			
+				<!-- <h4>Canadian Reference Product</h4> -->
 				<div class="row">
 					<div class="form-group col-sm-12">
-						<label for="doCanRefProductBrandName">Brand Name:</label>
-						<input type="text" class="form-control input-sm" id="doCanRefProductBrandName" placeholder="Enter Name" />
+						<label for="doCanRefProductBrandName1">Brand Name:</label>
+						<input type="text" class="form-control input-sm" id="doCanRefProductBrandName1" placeholder="Enter Name" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-sm-12">
-						<label for="doCanRefProductMedIngre">Medicinal Ingredient*</label>
-						<input type="text" class="form-control input-sm" id="doCanRefProductMedIngre" placeholder="Enter Ingredient" />
+						<label for="doCanRefProductMedIngre1">Medicinal Ingredient*</label>
+						<input type="text" class="form-control input-sm" id="doCanRefProductMedIngre1" placeholder="Enter Ingredient" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-sm-4">
-						<label for="doCanRefProductDosage" class="control-label">Dosage Form:*</label>
+						<label for="doCanRefProductDosage1" class="control-label">Dosage Form:*</label>
 						<div class="">
-							<select class="form-control input-sm" name="doCanRefProductDosage" id="doCanRefProductDosage">
+							<select class="form-control input-sm" name="doCanRefProductDosage1" id="doCanRefProductDosage1">
 								<option label=" "></option>
 								<option value="1">Biologic</option>
 								<option value="2">Pharmaceutical</option>
@@ -196,18 +201,21 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						</div>
 					<div class="form-group col-sm-4">
-						<label for="doCanRefProductStrength">Strength(s)*</label>
-						<input type="text" class="form-control input-sm" id="doCanRefProductStrength" placeholder="Strength(s)" />
+						<label for="doCanRefProductStrength1">Strength(s)*</label>
+						<input type="text" class="form-control input-sm" id="doCanRefProductStrength1" placeholder="Strength(s)" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-sm-12">
-						<label for="doCanRefProductCoName">Company Name</label>
-						<input type="text" class="form-control input-sm" id="doCanRefProductCoName" placeholder="Enter Name" />
+						<label for="doCanRefProductCoName1">Company Name</label>
+						<input type="text" class="form-control input-sm" id="doCanRefProductCoName1" placeholder="Enter Name" />
 					</div>
 				</div>
-			</div>
 			<!-- end of main Canadian Reference Product-->
+					</details>
+				</li>
+			</ul>
+			<button class="btn btn-default" onclick="addNewRefProduct()" type="submit">Add Another Canadian Reference Product</button>
 		</div>
 	</div><!-- end of Step 2 Company Enrolment-->
 <div class="panel-footer text-center">
@@ -320,92 +328,23 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
-/*
-function test() {
-	$('#coEnrolmentRegMailAddr input[name=coEnrolRegMailCompanyAddrChk]').click(function() {
-		if(this.checked) {
-			alert(this.value);
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').show();
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrInfo').show();
-		} else {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide);
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrInfo').hide();
-		}
-	};
-}
-*/
-/* Regulatory Mailing Address/Annual Contact - Same as Manufacturer/Sponsor Company & Address Information Option Selection*/
-function regMailAddrCompanyAddrInfoOptionSelection() {
-	$("#coEnrolmentRegMailAddr input[name=coEnrolRegMailCompanyAddr]").click(function() {
-		if($(this).val() == '1') {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrInfo').hide();
-		} else if ($(this).val() == '2') {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').show();
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrInfo').show();
-		} else {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrInfo').hide();
-		}
-	});
+
+var canRefProductCounter = 1; //keeps track of number of current referenced products
+
+//adds a new reference product
+function addNewRefProduct() {
+	var newRefProduct = '<li id="doCanRefProduct1"><details open="open"><summary>Canadian Reference Product 1<button class="btn btn-default" onclick="deleteRefProduct(doCanRefProduct1)" type="submit">Delete</button></summary><div class="row"><div class="form-group col-sm-12"><label for="doCanRefProduct1BrandName">Brand Name</label><input type="text" class="form-control input-sm" id="doCanRefProduct1BrandName" placeholder="Enter Name" /></div></div><div class="row"><div class="form-group col-sm-12"><label for="doCanRefProduct1MedIngre">Medicinal Ingredient*</label><input type="text" class="form-control input-sm" id="doCanRefProduct1MedIngre" placeholder="Enter Ingredient" /></div></div><div class="row"><div class="form-group col-sm-4"><label for="doCanRefProduct1Dosage" class="control-label">Dosage Form:*</label><div class=""><select class="form-control input-sm" name="doCanRefProduct1Dosage" id="doCanRefProductDosage"><option label=" "></option><option value="1">Biologic</option><option value="2">Pharmaceutical</option><option value="3">Drug Master File</option><option value="4">Medical Device</option></select></div></div><div class="form-group col-sm-4"><label for="doCanRefProduct1Strength">Strength(s)*</label><input type="text" class="form-control input-sm" id="doCanRefProduct1Strength" placeholder="Strength(s)" /></div></div><div class="row"><div class="form-group col-sm-12"><label for="doCanRefProduct1CoName">Company Name</label><input type="text" class="form-control input-sm" id="doCanRefProduct1CoName" placeholder="Enter Name" /></div></div></div></li>';
+	canRefProductCounter++;
+	//replace substrings
+	var newId = newRefProduct.replace(/doCanRefProduct1/g, 'doCanRefProduct' + canRefProductCounter);
+	newId = newId.replace('Product 1', 'Product ' + canRefProductCounter);
+	$('#doCanRefProductList').append(newId);
+
 }
 
-/* Regulatory Mailing Address/Annual Contact - Same as Manufacturer/Sponsor Company Representative Information Option Selection*/
-function regMailAddrCompanyRepInfoOptionSelection() {
-	$("#coEnrolmentRegMailAddr input[name=coEnrolRegMailCompanyRepInfo]").click(function() {
-		if($(this).val() == '1') {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompRepInfo').hide();
-		} else if ($(this).val() == '2') {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompRepInfo').show();
-		} else {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompRepInfo').hide();
-		}
-	});
-}
-
-/* Canadian Importer Mailing Address - Same as Manufacturer/Sponsor Company & Address Information Option Selection*/
-function importerMailAddrCompanyAddrInfoOptionSelection() {
-	$("#coEnrolmentCanImporterMailAddr input[name=coEnrolmentCanImporterMailCompanyAddr]").click(function() {
-		if($(this).val() == '1') {
-			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterCompInfo').hide();
-			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterAddrInfo').hide();
-		} else if ($(this).val() == '2') {
-			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterCompInfo').show();
-			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterAddrInfo').show();
-		} else {
-			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterCompInfo').hide();
-			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterAddrInfo').hide();
-		}
-	});
-}
-
-/* Billing Address - Same as Manufacturer/Sponsor Company Representative Information Option Selection*/
-function billingAddrCompanyAddrInfoOptionSelection() {
-	$("#coEnrolmentBillingAddr input[name=coEnrolmentBillingCompanyAddr]").click(function() {
-		if($(this).val() == '1') {
-			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompInfo').hide();
-			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrInfo').hide();
-		} else if ($(this).val() == '2') {
-			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompInfo').show();
-			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrInfo').show();
-		} else {
-			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompInfo').hide();
-			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrInfo').hide();
-		}
-	});
-}
-
-/* Billing Address - Same as Manufacturer/Sponsor Company Representative Information Option Selection*/
-function billingAddrCompanyRepInfoOptionSelection() {
-	$("#coEnrolmentBillingAddr input[name=coEnrolBillingCompanyRepInfo]").click(function() {
-		if($(this).val() == '1') {
-			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompRepInfo').hide();
-		} else if ($(this).val() == '2') {
-			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompRepInfo').show();
-		} else {
-			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompRepInfo').hide();
-		}
-	});
+//deletes a reference product
+function deleteRefProduct(i) {
+	$('#doCanRefProductList').find(i).remove();
 }
 </script>
 </body>
