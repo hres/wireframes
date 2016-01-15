@@ -160,7 +160,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentManuAddrCountry" class="control-label">Country*</label>
-                            <div class="col-sm-8">
+                            <div class="">
                                 <select class="form-control input-sm" name="coEnrolmentManuAddrCountry" id="coEnrolmentManuAddrCountry">
                                     <option label=" "></option>
                                     <option value="1">Canada</option>
@@ -414,7 +414,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                                 </select>
                             </div>
 						</div>
-						<div class="form-group cols-sm-2">
+						<div class="form-group col-sm-2">
 							<label for="coEnrolmentRegMailAddrCompRepGivenName" class="control-label">Given Name*</label>
 							<div class="">
 								<input type="text" class="form-control input-sm" id="coEnrolmentRegMailAddrCompRepGivenName" placeholder="Enter Given Name">
@@ -423,19 +423,19 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-1">
 							<label for="coEnrolmentRegMailAddrCompRepInit" class="control-label">Initials</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="coEnrolmentRegMailAddrCompRepInit" placeholder="Enter Surname" >
+								<input type="text" class="form-control input-sm" id="coEnrolmentRegMailAddrCompRepInit" placeholder="Enter Surname">
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentRegMailAddrCompRepSurname" class="control-label">Surname*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="coEnrolmentRegMailAddrRepSurname" placeholder="Enter Surname" >
+								<input type="text" class="form-control input-sm" id="coEnrolmentRegMailAddrRepSurname" placeholder="Enter Surname">
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="coEnrolmentRegMailAddrCompRepTitle" class="control-label">Title*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="coEnrolmentRegMailAddrCompRepTitle" placeholder="Enter Title" >
+								<input type="text" class="form-control input-sm" id="coEnrolmentRegMailAddrCompRepTitle" placeholder="Enter Title">
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
@@ -876,7 +876,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
-/* Regulatory Mailing Address/Annual Contact - Same as Manufacturer/Sponsor Company & Address Information Option Selection*/
 /*
 function test() {
 	$('#coEnrolmentRegMailAddr input[name=coEnrolRegMailCompanyAddrChk]').click(function() {
@@ -891,6 +890,7 @@ function test() {
 	};
 }
 */
+/* Regulatory Mailing Address/Annual Contact - Same as Manufacturer/Sponsor Company & Address Information Option Selection*/
 function regMailAddrCompanyAddrInfoOptionSelection() {
 	$("#coEnrolmentRegMailAddr input[name=coEnrolRegMailCompanyAddr]").click(function() {
 		if($(this).val() == '1') {
