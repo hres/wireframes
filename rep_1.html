@@ -417,7 +417,7 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 </div>
 <div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
-            <a class="btn btn-primary" href="rep_2_company.html">Continue to Step 2 ></a>
+            <a class="btn btn-primary" id="nextStep2but" href="">Continue to Step 2 ></a>
         </div>
 </div>
 </section>
@@ -547,7 +547,7 @@ function myFunction() {
 	 $('#rtType').hide();
 	 $('#step1c').show();
 	 $('#raAntDate').hide();
-	 
+	 $('#nextStep2but').attr("href", "rep_2_company.html");
   }
   else if ($('p select[name=iline]').val() == '2'){
 	 $('#coType').hide();
@@ -589,16 +589,8 @@ function myFunction() {
 });
 
 
+
 }
-/*
-//function for opening a file
-function performClick(elemId) {
-   var elem = document.getElementById(elemId);
-   if(elem && document.createEvent) {
-      var evt = document.createEvent("MouseEvents");
-      evt.initEvent("click", true, false);
-      elem.dispatchEvent(evt);
-   }*/
 </script>
 </body>
 </html>
