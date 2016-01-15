@@ -30,9 +30,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
-
 </head>
-<body vocab="http://schema.org/" typeof="WebPage" onload="myFunction()">
+<body vocab="http://schema.org/" typeof="WebPage">
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
@@ -284,19 +283,30 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<h4>Regulatory Mailing Address / Annual Contact*</h4>
 			<!-- <form class="form-inline" action="#" method="get" id="coEnrolRegMailCompanyAddrOptions1"> -->
 			<div class="row" id="coEnrolRegMailCompanyAddrOptions1">
+			<!--
+			<div class="col-md-8">
+				<p>Same as Manufacturer / Sponsor Company &amp; Address information Above</p>
+				</div>
+				<div class="col-md-4">
+					<div class="checkbox">
+						<label><input name="coEnrolRegMailCompanyAddrChk" onclick="test()" type="checkbox" value="option1" /></label>
+					</div>
+				</div>-->
+			
 				<div class="col-md-8">
 				<p>Same as Manufacturer / Sponsor Company &amp; Address information?</p>
 				</div>
 				<div class="col-md-4">
 				<fieldset>
 					<div class="radio-inline">
-						<label for="coEnrolRegMailCompanyAddr1"><input type="radio" name="coEnrolRegMailCompanyAddr" value="1" id="coEnrolRegMailCompanyAddr1" />&#160;&#160;Yes</label>
+						<label for="coEnrolRegMailCompanyAddr1"><input type="radio" onchange="regMailAddrCompanyAddrInfoOptionSelection()" name="coEnrolRegMailCompanyAddr" value="1" id="coEnrolRegMailCompanyAddr1" />&#160;&#160;Yes</label>
 					</div>
 					<div class="radio-inline">
-						<label for="coEnrolRegMailCompanyAddr2"><input type="radio" name="coEnrolRegMailCompanyAddr" value="2" id="coEnrolRegMailCompanyAddr2" />&#160;&#160;No</label>
+						<label for="coEnrolRegMailCompanyAddr2"><input type="radio"  onchange="regMailAddrCompanyAddrInfoOptionSelection()" name="coEnrolRegMailCompanyAddr" value="2" id="coEnrolRegMailCompanyAddr2" />&#160;&#160;No</label>
 					</div>
 				</fieldset>
 				</div>
+				
 			</div>
 			<!-- </form> -->
 			<!-- <form class="form-inline" action="#" method="get" id="coEnrolRegMailCompanyRepOptions2"> -->
@@ -307,17 +317,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="col-md-4">
 				<fieldset>
 					<div class="radio-inline">
-						<label for="coEnrolRegMailCompanyRepInfo1"><input type="radio" name="coEnrolRegMailCompanyRepInfo" value="1" id="coEnrolRegMailCompanyRepInfo1" />&#160;&#160;Yes</label>
+						<label for="coEnrolRegMailCompanyRepInfo1"><input type="radio" onclick="regMailAddrCompanyRepInfoOptionSelection()" name="coEnrolRegMailCompanyRepInfo" value="1" id="coEnrolRegMailCompanyRepInfo1" />&#160;&#160;Yes</label>
 					</div>
 					<div class="radio-inline">
-						<label for="coEnrolRegMailCompanyRepInfo2"><input type="radio" name="coEnrolRegMailCompanyRepInfo" value="2" id="coEnrolRegMailCompanyRepInfo2" />&#160;&#160;No</label>
+						<label for="coEnrolRegMailCompanyRepInfo2"><input type="radio" onclick="regMailAddrCompanyRepInfoOptionSelection()" name="coEnrolRegMailCompanyRepInfo" value="2" id="coEnrolRegMailCompanyRepInfo2" />&#160;&#160;No</label>
 					</div>
 				</fieldset>
 				</div>
 			</div>
 			<!-- </form> -->
 			<div class="form-group">
-			<div id="coEnrolmentRegMailAddrCompInfo" class="wb-frmvld" >
+			<div id="coEnrolmentRegMailAddrCompInfo" class="wb-frmvld" style="display: none;">
 				<h5>Company Information:</h5>
 				<div class="row">
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
@@ -330,7 +340,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<!-- </form> -->
 					</div>
 			</div>
-			<div id="coEnrolmentRegMailAddrInfo" class="wb-frmvld">
+			<div id="coEnrolmentRegMailAddrInfo" class="wb-frmvld" style="display: none;">
 				<h5>Address Information:</h5>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 					<div class="row">
@@ -388,7 +398,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<!-- </form> -->
 					</div>
 			</div>
-			<div id="coEnrolmentRegMailAddrCompRepInfo" class="wb-frmvld">
+			<div id="coEnrolmentRegMailAddrCompRepInfo" class="wb-frmvld" style="display: none;">
 				<h5>Company Representative Information:</h5>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 					<div class="row">
@@ -480,17 +490,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="col-md-4">
 				<fieldset>
 					<div class="radio-inline">
-						<label for="coEnrolmentCanImporterMailCompanyAddr1"><input type="radio" name="coEnrolmentCanImporterMailCompanyAddr" value="1" id="coEnrolmentCanImporterMailCompanyAddr1" />&#160;&#160;Yes</label>
+						<label for="coEnrolmentCanImporterMailCompanyAddr1"><input type="radio" onclick="importerMailAddrCompanyAddrInfoOptionSelection()" name="coEnrolmentCanImporterMailCompanyAddr" value="1" id="coEnrolmentCanImporterMailCompanyAddr1" />&#160;&#160;Yes</label>
 					</div>
 					<div class="radio-inline">
-						<label for="coEnrolmentCanImporterMailCompanyAddr2"><input type="radio" name="coEnrolmentCanImporterMailCompanyAddr" value="2" id="coEnrolmentCanImporterMailCompanyAddr2" />&#160;&#160;No</label>
+						<label for="coEnrolmentCanImporterMailCompanyAddr2"><input type="radio" onclick="importerMailAddrCompanyAddrInfoOptionSelection()" name="coEnrolmentCanImporterMailCompanyAddr" value="2" id="coEnrolmentCanImporterMailCompanyAddr2" />&#160;&#160;No</label>
 					</div>
 				</fieldset>
 				</div>
 			</div>
 			<!-- </form> -->
 			<div class="form-group">
-			<div id="coEnrolmentCanImporterCompInfo" class="wb-frmvld">
+			<div id="coEnrolmentCanImporterCompInfo" class="wb-frmvld" style="display: none;">
 				<h5>Company Information:</h5>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 					<div class="row">
@@ -504,7 +514,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 			</div>
 			
-			<div id="coEnrolmentCanImporterAddrInfo" class="wb-frmvld">
+			<div id="coEnrolmentCanImporterAddrInfo" class="wb-frmvld" style="display: none;">
 				<h5>Address Information:</h5>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 					<div class="row">
@@ -575,10 +585,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="col-md-4">
 				<fieldset>
 					<div class="radio-inline">
-						<label for="coEnrolmentBillingCompanyAddr1"><input type="radio" name="coEnrolmentBillingCompanyAddr" value="1" id="coEnrolmentBillingCompanyAddr1" />&#160;&#160;Yes</label>
+						<label for="coEnrolmentBillingCompanyAddr1"><input type="radio" onclick="billingAddrCompanyAddrInfoOptionSelection()" name="coEnrolmentBillingCompanyAddr" value="1" id="coEnrolmentBillingCompanyAddr1" />&#160;&#160;Yes</label>
 					</div>
 					<div class="radio-inline">
-						<label for="coEnrolmentBillingCompanyAddr2"><input type="radio" name="coEnrolmentBillingCompanyAddr" value="2" id="coEnrolmentBillingCompanyAddr2" />&#160;&#160;No</label>
+						<label for="coEnrolmentBillingCompanyAddr2"><input type="radio" onclick="billingAddrCompanyAddrInfoOptionSelection()" name="coEnrolmentBillingCompanyAddr" value="2" id="coEnrolmentBillingCompanyAddr2" />&#160;&#160;No</label>
 					</div>
 				</fieldset>
 				</div>
@@ -592,17 +602,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="col-md-4">
 				<fieldset>
 					<div class="radio-inline">
-						<label for="coEnrolBillingCompanyRepInfo1"><input type="radio" name="coEnrolBillingCompanyRepInfo" value="1" id="coEnrolBillingCompanyRepInfo1" />&#160;&#160;Yes</label>
+						<label for="coEnrolBillingCompanyRepInfo1"><input type="radio" onclick="billingAddrCompanyRepInfoOptionSelection()" name="coEnrolBillingCompanyRepInfo" value="1" id="coEnrolBillingCompanyRepInfo1" />&#160;&#160;Yes</label>
 					</div>
 					<div class="radio-inline">
-						<label for="coEnrolBillingCompanyRepInfo2"><input type="radio" name="coEnrolBillingCompanyRepInfo" value="2" id="coEnrolBillingCompanyRepInfo2" />&#160;&#160;No</label>
+						<label for="coEnrolBillingCompanyRepInfo2"><input type="radio" onclick="billingAddrCompanyRepInfoOptionSelection()" name="coEnrolBillingCompanyRepInfo" value="2" id="coEnrolBillingCompanyRepInfo2" />&#160;&#160;No</label>
 					</div>
 				</fieldset>
 				</div>
 			</div>
 			<!-- </form> -->
 			<div class="form-group">
-			<div id="coEnrolmentBillingAddrCompInfo" class="wb-frmvld">
+			<div id="coEnrolmentBillingAddrCompInfo" class="wb-frmvld" style="display: none;">
 				<h5>Company Information:</h5>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 					<div class="row">
@@ -615,7 +625,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<!-- </form> -->
 					</div>
 			</div>
-			<div id="coEnrolmentBillingAddrInfo" class="wb-frmvld">
+			<div id="coEnrolmentBillingAddrInfo" class="wb-frmvld" style="display: none;">
 				<h5>Address Information:</h5>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 					<div class="row">
@@ -673,7 +683,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<!-- </form> -->
 					</div>
 			</div>
-			<div id="coEnrolmentBillingAddrCompRepInfo" class="wb-frmvld">
+			<div id="coEnrolmentBillingAddrCompRepInfo" class="wb-frmvld" style="display: none;">
 				<h5>Company Representative Information:</h5>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 					<div class="row">
@@ -866,47 +876,92 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
-function myFunction() {
-
-	$('#coEnrolmentRegMailAddr #coEnrolRegMailCompanyAddrOptions1 input[name=coEnrolRegMailCompanyAddr]').click(function() {
-		if ($(this).val() == '1') {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
-		}
-		else if ($(this).val() == '2') {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').show();
-		}
-		else {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
-		}
-		*/
-		//alert("This has been clicked");
-	});
+/* Regulatory Mailing Address/Annual Contact - Same as Manufacturer/Sponsor Company & Address Information Option Selection*/
 /*
-	
-		$('p select[name=iline]').change(function(e){
-  
-  if ($('p select[name=iline]').val() == '0'){
-	 
-	 
-  }
-  else if ($('p select[name=iline]').val() == '1'){
-	 
-	 
-  }
-  else if ($('p select[name=iline]').val() == '2'){
-	 
-  }
-  else if ($('p select[name=iline]').val() == '3'){
-	 
-  }
-  else if ($('p select[name=iline]').val() == '4'){
-	 
-  }
-  else{
-  }
-});
-
+function test() {
+	$('#coEnrolmentRegMailAddr input[name=coEnrolRegMailCompanyAddrChk]').click(function() {
+		if(this.checked) {
+			alert(this.value);
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').show();
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrInfo').show();
+		} else {
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide);
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrInfo').hide();
+		}
+	};
+}
 */
+function regMailAddrCompanyAddrInfoOptionSelection() {
+	$("#coEnrolmentRegMailAddr input[name=coEnrolRegMailCompanyAddr]").click(function() {
+		if($(this).val() == '1') {
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrInfo').hide();
+		} else if ($(this).val() == '2') {
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').show();
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrInfo').show();
+		} else {
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrInfo').hide();
+		}
+	});
+}
+
+/* Regulatory Mailing Address/Annual Contact - Same as Manufacturer/Sponsor Company Representative Information Option Selection*/
+function regMailAddrCompanyRepInfoOptionSelection() {
+	$("#coEnrolmentRegMailAddr input[name=coEnrolRegMailCompanyRepInfo]").click(function() {
+		if($(this).val() == '1') {
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompRepInfo').hide();
+		} else if ($(this).val() == '2') {
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompRepInfo').show();
+		} else {
+			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompRepInfo').hide();
+		}
+	});
+}
+
+/* Canadian Importer Mailing Address - Same as Manufacturer/Sponsor Company & Address Information Option Selection*/
+function importerMailAddrCompanyAddrInfoOptionSelection() {
+	$("#coEnrolmentCanImporterMailAddr input[name=coEnrolmentCanImporterMailCompanyAddr]").click(function() {
+		if($(this).val() == '1') {
+			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterCompInfo').hide();
+			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterAddrInfo').hide();
+		} else if ($(this).val() == '2') {
+			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterCompInfo').show();
+			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterAddrInfo').show();
+		} else {
+			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterCompInfo').hide();
+			$('#coEnrolmentCanImporterMailAddr #coEnrolmentCanImporterAddrInfo').hide();
+		}
+	});
+}
+
+/* Billing Address - Same as Manufacturer/Sponsor Company Representative Information Option Selection*/
+function billingAddrCompanyAddrInfoOptionSelection() {
+	$("#coEnrolmentBillingAddr input[name=coEnrolmentBillingCompanyAddr]").click(function() {
+		if($(this).val() == '1') {
+			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompInfo').hide();
+			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrInfo').hide();
+		} else if ($(this).val() == '2') {
+			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompInfo').show();
+			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrInfo').show();
+		} else {
+			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompInfo').hide();
+			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrInfo').hide();
+		}
+	});
+}
+
+/* Billing Address - Same as Manufacturer/Sponsor Company Representative Information Option Selection*/
+function billingAddrCompanyRepInfoOptionSelection() {
+	$("#coEnrolmentBillingAddr input[name=coEnrolBillingCompanyRepInfo]").click(function() {
+		if($(this).val() == '1') {
+			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompRepInfo').hide();
+		} else if ($(this).val() == '2') {
+			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompRepInfo').show();
+		} else {
+			$('#coEnrolmentBillingAddr #coEnrolmentBillingAddrCompRepInfo').hide();
+		}
+	});
 }
 </script>
 </body>
