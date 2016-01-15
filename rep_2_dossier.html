@@ -350,18 +350,20 @@ function replaceAll(str, find, rep) {
 
 //deletes a reference product
 function deleteRefProduct(i) {
+	var removedItemIndex = $('#doCanRefProductList').find(i).index();
 	$('#doCanRefProductList').find(i).remove();
 	//decrement counter
 	canRefProductCounter--;
 	
 	var items = document.getElementById('doCanRefProductList').getElementsByTagName('li');
-	for (var n = canRefProductCounter-1; n > 0; n--) {
+	for (var n = canRefProductCounter-1; n >= removedItemIndex; n--) {
 		var currLabel = 'doCanRefProduct' + (n+2);
 		var newLabel = 'doCanRefProduct' + (n+1);
 		var currContent = items[n].innerHTML;
 		var newContent = replaceAll(currContent, currLabel, newLabel);
 		var newStr = newContent.replace('Product ' + (n+2), 'Product ' + (n+1));
 		items[n].innerHTML = newStr;
+		items[n].id = newLabel;
 	}
 }
 </script>
