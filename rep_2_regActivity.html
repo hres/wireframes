@@ -249,11 +249,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 				</div>
 			</div>
-			<div class="row" id="raEnrolmentRel1DINdiv">
-			<div id='raEnrolmentRel1FirstRow'>
+			<div id="raEnrolmentRel1DINdiv">
+				<div class="row">
+					<label for="raEnrolmentRel1DIN" class=" col-sm-12 control-label">Associated DINs</label>
+				</div>
+				<div id="raEnrolmentRel1FirstRow" class="row">
 				<div class="col-sm-8" id="raEnrolmentRel1DIN1Set">
 				<div class="form-group col-sm-2">
-					<label for="raEnrolmentRel1DIN1" class="control-label">Associated DINs</label>
+					<!-- <label for="raEnrolmentRel1DIN1" class="control-label">Associated DINs</label> -->
 					<div class="">
 						<input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a">
 					</div>
@@ -563,7 +566,7 @@ function addDINSet(raRelDINDivId, raRelDivId) {
 	//var raDINdivId = 'raEnrolmentRel' + raRelNum + 'DINdiv';
 	
 	//get # of current DIN sets
-	var raDINCount = $('#' + raRelDINDivId).children().size() - 1; //excludes button row
+	var raDINCount = $('#' + raRelDINDivId).children().size(); // - 1; //excludes button row
 	var idDIN = raRelDivId + 'DINdiv';
 	
 	//replace substrings
