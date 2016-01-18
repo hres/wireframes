@@ -253,8 +253,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<label for="raEnrolmentRel1DIN" class=" col-sm-12 control-label">Associated DINs</label>
 				</div>
-				<div id="raEnrolmentRel1FirstRow" class="row">
-				<div class="col-sm-8" id="raEnrolmentRel1DIN1Set">
+				<!-- <div id="raEnrolmentRel1FirstRow" class="row"> -->
+				<div class="row" id="raEnrolmentRel1DIN1Set">
 				<div class="form-group col-sm-2">
 					<!-- <label for="raEnrolmentRel1DIN1" class="control-label">Associated DINs</label> -->
 					<div class="">
@@ -276,12 +276,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d">
 					</div>
 				</div>
-				</div>
 			
 				<div class="form-group col-sm-2" id="raEnrolmentRel1DIN1AddBut">
 					<button class="btn btn-default" onclick="addDINSet(raEnrolmentRel1DINdiv.id, raEnrolmentRel1.id)" type="submit">Add a DIN</button>
 				</div>
 				</div>
+				<!-- </div> -->
 			</div>
 			</details>
 			</li>
@@ -566,7 +566,7 @@ function addDINSet(raRelDINDivId, raRelDivId) {
 	//var raDINdivId = 'raEnrolmentRel' + raRelNum + 'DINdiv';
 	
 	//get # of current DIN sets
-	var raDINCount = $('#' + raRelDINDivId).children().size(); // - 1; //excludes button row
+	var raDINCount = $('#' + raRelDINDivId).children().size() - 1; //excludes button row
 	var idDIN = raRelDivId + 'DINdiv';
 	
 	//replace substrings
