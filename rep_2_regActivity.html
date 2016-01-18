@@ -253,10 +253,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<label for="raEnrolmentRel1DIN" class=" col-sm-12 control-label">Associated DINs</label>
 				</div>
-				<!-- <div id="raEnrolmentRel1FirstRow" class="row"> -->
 				<div class="row" id="raEnrolmentRel1DIN1Set">
 				<div class="form-group col-sm-2">
-					<!-- <label for="raEnrolmentRel1DIN1" class="control-label">Associated DINs</label> -->
 					<div class="">
 						<input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a">
 					</div>
@@ -276,12 +274,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d">
 					</div>
 				</div>
-			
+				
 				<div class="form-group col-sm-2" id="raEnrolmentRel1DIN1AddBut">
 					<button class="btn btn-default" onclick="addDINSet(raEnrolmentRel1DINdiv.id, raEnrolmentRel1.id)" type="submit">Add a DIN</button>
 				</div>
 				</div>
-				<!-- </div> -->
 			</div>
 			</details>
 			</li>
@@ -291,7 +288,16 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="form-group">
 				<h4>Regulatory Activity Contact [for THIS Regulatory Activity]:</h4>
 				<div id="raEnrolmentCompInfo" class="wb-frmvld">
-				<h5>Company Information:</h5>
+				<div class="row">
+					<div class="col-sm-7">
+						<h5>Company Information:</h5>
+					</div>
+					<div class="col-sm-5">
+						<div class="checkbox">
+						<label><input id="raEnrolmentCompInfoSamAs" type="checkbox" value="" /> Same as Manufacturer / Sponsor Company Information</label>
+					</div>
+					</div>
+				</div>
 				<div class="row">
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 						<div class="form-group col-sm-8">
@@ -304,7 +310,16 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 				</div>
 			<div id="raEnrolmentAddrInfo" class="wb-frmvld">
-				<h5>Address Information:</h5>
+				<div class="row">
+					<div class="col-sm-7">
+						<h5>Address Information:</h5>
+					</div>
+					<div class="col-sm-5">
+						<div class="checkbox">
+							<label><input id="raEnrolmentAddrInfoSameAs" type="checkbox" value="" /> Same as Manufacturer / Sponsor Address Information</label>
+						</div>
+					</div>
+				</div>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 					<div class="row">
 						<div class="form-group col-sm-12">
@@ -362,7 +377,16 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 			</div>
 			<div id="raEnrolmentCompRepInfo" class="wb-frmvld">
-				<h5>Company Representative [for THIS Regulatory Activity]*</h5>
+				<div class="row">
+					<div class="col-sm-7">
+						<h5>Company Representative [for THIS Regulatory Activity]*</h5>
+					</div>
+					<div class="col-sm-5">
+						<div class="checkbox">
+							<label><input id="raEnrolmentCompRepInfoSameAs" type="checkbox" value="" /> Same as Manufacturer / Sponsor Contact Information</label>
+						</div>
+					</div>
+				</div>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 					<div class="row">
 						<div class="form-group col-sm-2">
