@@ -284,14 +284,88 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</li>
 		</ul>
 		<button class="btn btn-default" onclick="addNewRelSubmission()" type="submit">Add Another Related Submission</button>
-			<!--
+		
 			<div class="form-group">
-				<h4>Authorized Official Information</h4>
+				<h4>Regulatory Activity Contact [for THIS Regulatory Activity]:</h4>
+				<div id="raEnrolmentCompInfo" class="wb-frmvld">
+				<h5>Company Information:</h5>
 				<div class="row">
-						<div class="form-group col-sm-2">
-							<label for="doEnrolmentAuthSal" class="control-label">Salutation*</label>
+					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+						<div class="form-group col-sm-8">
+							<label for="raEnrolmentCompName" class="control-label">Company Name [Full Legal Name]*</label>
+							<div class="">
+								<input type="text" class="form-control input-sm" id="raEnrolmentCompName" placeholder="Enter Company Name">
+							</div>
+						</div>
+					<!-- </form> -->
+				</div>
+				</div>
+			<div id="raEnrolmentAddrInfo" class="wb-frmvld">
+				<h5>Address Information:</h5>
+					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<div class="row">
+						<div class="form-group col-sm-12">
+							<label for="raEnrolmentAddrStr" class="control-label">Street / Suite *</label>
+							<div class="">
+								<input type="text" class="form-control input-sm" id="raEnrolmentAddrStr" size="100" placeholder="Enter Street/Suite">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-3">
+							<label for="raEnrolmentAddrCity" class="control-label">City / Town*</label>
+							<div class="">
+								<input type="text" class="form-control input-sm" id="raEnrolmentAddrCity" placeholder="Enter City/Town">
+							</div>
+						</div>
+						<div class="form-group col-sm-3">
+							<label for="raEnrolmentAddrCountry" class="control-label">Country*</label>
                             <div class="">
-                                <select class="form-control input-sm" name="doEnrolmentAuthSal" id="doEnrolmentAuthSal">
+                                <select class="form-control input-sm" name="raEnrolmentAddrCountry" id="raEnrolmentAddrCountry">
+                                    <option label=" "></option>
+                                    <option value="1">Canada</option>
+                                    <option value="2">United States</option>
+                                </select>
+                            </div>
+						</div>
+						<div class="form-group col-sm-3">
+							<label for="raEnrolmentAddrProv" class="control-label">Province/State*</label>
+                            <div class="">
+								<select class="form-control input-sm" name="raEnrolmentAddrProv" id="raEnrolmentAddrProv">
+                                    <option label=" "></option>
+                                    <option value="1">Alberta</option>
+                                    <option value="2">British Columbia</option>
+									<option value="3">Manitoba</option>
+									<option value="4">New Brunswick</option>
+									<option value="5">Newfoundland & Labrador</option>
+									<option value="6">Northwest Territories</option>
+									<option value="7">Nova Scotia</option>
+									<option value="8">Nunavut</option>
+									<option value="9">Ontario</option>
+									<option value="10">Prince Edward Island</option>
+									<option value="11">Quebec</option>
+									<option value="12">Saskatchewan</option>
+									<option value="13">Yukon</option>
+                                </select>
+                            </div>
+						</div>
+						<div class="form-group col-sm-3">
+							<label for="raEnrolmentAddrPostal" class="control-label">Postal / ZIP Code*</label>
+							<div class="">
+								<input type="text" class="form-control input-sm" id="raEnrolmentAddrPostal" placeholder="Enter Postal/ZIP Code">
+							</div>
+						</div>
+					<!-- </form> -->
+					</div>
+			</div>
+			<div id="raEnrolmentCompRepInfo" class="wb-frmvld">
+				<h5>Company Representative [for THIS Regulatory Activity]*</h5>
+					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<div class="row">
+						<div class="form-group col-sm-2">
+							<label for="raEnrolmentCompRepSal" class="control-label">Salutation*</label>
+                            <div class="">
+                                <select class="form-control input-sm" name="raEnrolmentCompRepSal" id="raEnrolmentCompRepSal">
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -300,60 +374,69 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                                 </select>
                             </div>
 						</div>
-						<div class="form-group col-sm-5">
-							<label for="doEnrolmentAuthGivenName" class="control-label">Given Name*</label>
+						<div class="form-group col-sm-2">
+							<label for="raEnrolmentCompRepGivenName" class="control-label">Given Name*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="doEnrolmentAuthGivenName" placeholder="Enter Given Name">
+								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepGivenName" placeholder="Enter Given Name">
 							</div>
 						</div>
-						<div class="form-group col-sm-5">
-							<label for="doEnrolmentAuthSurname" class="control-label">Surname*</label>
+						<div class="form-group col-sm-1">
+							<label for="raEnrolmentCompRepInit" class="control-label">Initials</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="doEnrolmentAuthSurname" placeholder="Enter Surname" >
+								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepInit" placeholder="Enter Surname" >
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-sm-6">
-							<label for="doEnrolmentAuthTitle" class="control-label">Title*</label>
-							<div class="">
-								<input type="text" class="form-control input-sm" id="doEnrolmentAuthTitle" placeholder="Enter Title" >
-							</div>
-						</div>
-						<div class="form-group col-sm-6">
-							<label for="doEnrolmentAuthCompName" class="control-label">Name of Company that the Authorized Official Belongs*</label>
-                            <div class="">
-								<input type="text" class="form-control input-sm" id="doEnrolmentAuthCompName" placeholder="Enter Company Name" >
-							</div>
-						</div>
-					</div>
-						<div class="row">
 						<div class="form-group col-sm-3">
-							<label for="doEnrolmentAuthTelNo" class="control-label">Telephone No*</label>
+							<label for="raEnrolmentCompRepSurname" class="control-label">Surname*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="doEnrolmentAuthTelNo" placeholder="Enter Telephone No." >
+								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepSurname" placeholder="Enter Surname" >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
-							<label for="doEnrolmentAuthTelExt" class="control-label">Ext</label>
+							<label for="raEnrolmentCompRepTitle" class="control-label">Title*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="doEnrolmentAuthTelExt" placeholder="Enter Extension" >
+								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepTitle" placeholder="Enter Title" >
+							</div>
+						</div>
+						<div class="form-group col-sm-2">
+							<label for="raEnrolmentCompRepLang" class="control-label">Language*</label>
+                            <div class="">
+                                <select class="form-control input-sm" name="raEnrolmentCompRepLang" id="raEnrolmentCompRepLang">
+                                    <option label=" "></option>
+                                    <option value="1">English</option>
+                                    <option value="2">French</option>
+                                </select>
+                            </div>
+						</div>
+						</div>
+						<div class="row">
+						<div class="form-group col-sm-3">
+							<label for="raEnrolmentCompRepTelNo" class="control-label">Telephone No*</label>
+							<div class="">
+								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepTelNo" placeholder="Enter Telephone No." >
+							</div>
+						</div>
+						<div class="form-group col-sm-2">
+							<label for="raEnrolmentCompRepTelExt" class="control-label">Ext</label>
+							<div class="">
+								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepTelExt" placeholder="Enter Extension" >
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
-							<label for="doEnrolmentAuthFaxNo" class="control-label">Fax No.</label>
+							<label for="raEnrolmentCompRepFaxNo" class="control-label">Fax No.</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="doEnrolmentAuthFaxNo" placeholder="Enter Fax No." >
+								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepFaxNo" placeholder="Enter Fax No." >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
-							<label for="doEnrolmentAuthEmail" class="control-label">Email*</label>
+							<label for="raEnrolmentCompRepEmail" class="control-label">Email*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="doEnrolmentAuthEmail" placeholder="Enter Email" />
+								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepEmail" placeholder="Enter Email" />
 							</div>
 						</div>
+					<!-- </form> -->
 					</div>
-			</div>-->
+			</div>
 		</div>
 	</div>
 <div class="panel-footer text-center">
