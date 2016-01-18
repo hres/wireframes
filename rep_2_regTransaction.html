@@ -32,7 +32,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- End Google Tag Manager -->
 
 </head>
-<body vocab="http://schema.org/" typeof="WebPage" onload="myFunction()">
+<body vocab="http://schema.org/" typeof="WebPage">
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
@@ -126,8 +126,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		</div>
 		<div class="panel-body">
 			<div class="row">
-				<div class="col-sm-5 form-group">
-					<label for="rtEnrolmenteCTD" class="col-sm-3 control-label">Is this an eCTD transaction?</label>
+				<div class="col-sm-6 form-group">
+					<label for="rtEnrolmenteCTD" class="col-sm-4 control-label">Is this an eCTD transaction?</label>
 					<div class="">
 						<select class="col-sm-2 form-control" name="rtEnrolmenteCTD" id="rtEnrolmenteCTD">
 						<option label=" "></option>
@@ -136,24 +136,24 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</select>
 					</div>
 				</div>
-				<div class="col-sm-7 form-group">
+				<div class="col-sm-6 form-group">
 					<label for="rtEnrolmentSeqNo" class="col-sm-3 control-label">Sequence Number*</label>
-						<div class="col-sm-4">
-							<input type="text" class="form-control input-sm" id="rtEnrolmentSeqNo" disabled="disabled">
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" id="rtEnrolmentSeqNo">  <!--disabled="disabled">-->
 						</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-7 col-sm-offset-5 form-group">
+				<div class="col-sm-6 col-sm-offset-5 form-group">
 					<label for="rtEnrolmentRelSeqNo" class="col-sm-3 control-label">Related Sequence Number:</label>
-						<div class="col-sm-4">
-							<input type="text" class="form-control input-sm" id="rtEnrolmentRelSeqNo" disabled="disabled">
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" id="rtEnrolmentRelSeqNo"> <!--disabled="disabled">-->
 						</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-5 form-group">
-					<label for="rtEnrolmentSolInfo" class="col-sm-3 control-label">Is this solicited information?</label>
+				<div class="col-sm-6 form-group">
+					<label for="rtEnrolmentSolInfo" class="col-sm-4 control-label">Is this solicited information?</label>
 					<div class="">
 						<select class="col-sm-2 form-control" name="rtEnrolmentSolInfo" id="rtEnrolmentSolInfo">
 						<option label=" "></option>
@@ -162,10 +162,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</select>
 					</div>
 				</div>
-				<div class="col-sm-7 form-group">
+				<div class="col-sm-6 form-group">
 					<label for="rtEnrolmentReqSolInfo" class="col-sm-3 control-label">Requester of Solicited Information</label>
-						<div class="col-sm-4">
-							<input type="text" class="form-control input-sm" id="rtEnrolmentReqSolInfo" disabled="disabled">
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" id="rtEnrolmentReqSolInfo"> <!--disabled="disabled">-->
 						</div>
 				</div>
 			</div>
@@ -357,6 +357,26 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 });
 
 */
+
+function eCTDSelection() {
+	var seqNo = $('#rtEnrolmentSeqNo');
+	var seqRelNo = $('#rtEnrolmentRelSeqNo');
+	/*
+	$('select[name=rtEnrolmenteCTD]').change(function() {
+		if($('select[name=rtEnrolmenteCTD]').value == '0') {
+			seqNo.disabled = true;
+			seqRelNo.disabled = true;
+		} else if ($('select[name=rtEnrolmenteCTD]').value == '1') {
+			seqNo.disabled = false;
+			seqRelNo.disabled = false;
+		} else if ($('select[name=rtEnrolmenteCTD]').value == '2') {
+			seqNo.disabled = true;
+			seqRelNo.disabled = true;
+		}
+		*/
+		seqNo.prop('disabled', ($('select[name=rtEnrolmenteCTD]').val() == '1'));
+	//});
+}
 </script>
 </body>
 </html>
