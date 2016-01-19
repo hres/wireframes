@@ -129,7 +129,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="col-sm-6 form-group">
 					<label for="rtEnrolmenteCTD" class="col-sm-4 control-label">Is this an eCTD transaction?</label>
 					<div class="">
-						<select class="col-sm-2 form-control" name="rtEnrolmenteCTD" id="rtEnrolmenteCTD">
+						<select class="col-sm-2 form-control" name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
 						<option label=" "></option>
 						<option value="1">Yes</option>
 						<option value="2">No</option>
@@ -139,7 +139,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="col-sm-6 form-group">
 					<label for="rtEnrolmentSeqNo" class="col-sm-3 control-label">Sequence Number*</label>
 						<div class="col-sm-3">
-							<input type="text" class="form-control input-sm" id="rtEnrolmentSeqNo">  <!--disabled="disabled">-->
+							<input type="text" class="form-control input-sm" id="rtEnrolmentSeqNo" disabled="disabled">
 						</div>
 				</div>
 			</div>
@@ -147,7 +147,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="col-sm-6 col-sm-offset-5 form-group">
 					<label for="rtEnrolmentRelSeqNo" class="col-sm-3 control-label">Related Sequence Number:</label>
 						<div class="col-sm-3">
-							<input type="text" class="form-control input-sm" id="rtEnrolmentRelSeqNo"> <!--disabled="disabled">-->
+							<input type="text" class="form-control input-sm" id="rtEnrolmentRelSeqNo" disabled="disabled">
 						</div>
 				</div>
 			</div>
@@ -155,7 +155,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="col-sm-6 form-group">
 					<label for="rtEnrolmentSolInfo" class="col-sm-4 control-label">Is this solicited information?</label>
 					<div class="">
-						<select class="col-sm-2 form-control" name="rtEnrolmentSolInfo" id="rtEnrolmentSolInfo">
+						<select class="col-sm-2 form-control" name="rtEnrolmentSolInfo" id="rtEnrolmentSolInfo" onchange="checkOptionSol(this)">
 						<option label=" "></option>
 						<option value="1">Yes</option>
 						<option value="2">No</option>
@@ -165,7 +165,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="col-sm-6 form-group">
 					<label for="rtEnrolmentReqSolInfo" class="col-sm-3 control-label">Requester of Solicited Information</label>
 						<div class="col-sm-3">
-							<input type="text" class="form-control input-sm" id="rtEnrolmentReqSolInfo"> <!--disabled="disabled">-->
+							<input type="text" class="form-control input-sm" id="rtEnrolmentReqSolInfo" disabled="disabled">
 						</div>
 				</div>
 			</div>
@@ -331,51 +331,23 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
-/*
-	
-		$('p select[name=iline]').change(function(e){
-  
-  if ($('p select[name=iline]').val() == '0'){
-	 
-	 
-  }
-  else if ($('p select[name=iline]').val() == '1'){
-	 
-	 
-  }
-  else if ($('p select[name=iline]').val() == '2'){
-	 
-  }
-  else if ($('p select[name=iline]').val() == '3'){
-	 
-  }
-  else if ($('p select[name=iline]').val() == '4'){
-	 
-  }
-  else{
-  }
-});
+function checkOptioneCTD(obj) {
+    var input1 = document.getElementById("rtEnrolmentSeqNo");
+	var input2 = document.getElementById("rtEnrolmentRelSeqNo");
+    if ((obj.value == "2") || (obj.value == "")) {
+		input1.disabled = input2.disabled = true;
+	}else {
+		input1.disabled = input2.disabled = false;
+	}
+}
 
-*/
-
-function eCTDSelection() {
-	var seqNo = $('#rtEnrolmentSeqNo');
-	var seqRelNo = $('#rtEnrolmentRelSeqNo');
-	/*
-	$('select[name=rtEnrolmenteCTD]').change(function() {
-		if($('select[name=rtEnrolmenteCTD]').value == '0') {
-			seqNo.disabled = true;
-			seqRelNo.disabled = true;
-		} else if ($('select[name=rtEnrolmenteCTD]').value == '1') {
-			seqNo.disabled = false;
-			seqRelNo.disabled = false;
-		} else if ($('select[name=rtEnrolmenteCTD]').value == '2') {
-			seqNo.disabled = true;
-			seqRelNo.disabled = true;
-		}
-		*/
-		seqNo.prop('disabled', ($('select[name=rtEnrolmenteCTD]').val() == '1'));
-	//});
+function checkOptionSol(obj) {
+    var input = document.getElementById("rtEnrolmentReqSolInfo");
+	 if ((obj.value == "2") || (obj.value == "")) {
+		input.disabled = true;
+	}else {
+		input.disabled = false;
+	}
 }
 </script>
 </body>
