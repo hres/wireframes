@@ -142,10 +142,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-							<label><input id="rtEnrolmentAuthSameAs" type="checkbox" value="" /> Same Official as uploaded RA</label>
+							<label><input id="rtEnrolmentAuthSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, rtEnrolmentAuthInfo)"/> Same Official as uploaded RA</label>
 						</div>
 					</div>
 				</div>
+				<div id="rtEnrolmentAuthInfo">
 				<div class="row">
 						<div class="form-group col-sm-2">
 							<label for="rtEnrolmentAuthSal" class="control-label">Salutation*</label>
@@ -212,6 +213,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 						</div>
 					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -325,48 +327,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
-function myFunction() {
-
-	$('#coEnrolmentRegMailAddr #coEnrolRegMailCompanyAddrOptions1 input[name=coEnrolRegMailCompanyAddr]').click(function() {
-		if ($(this).val() == '1') {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
-		}
-		else if ($(this).val() == '2') {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').show();
-		}
-		else {
-			$('#coEnrolmentRegMailAddr #coEnrolmentRegMailAddrCompInfo').hide();
-		}
-		
-		//alert("This has been clicked");
-	});
-/*
-	
-		$('p select[name=iline]').change(function(e){
-  
-  if ($('p select[name=iline]').val() == '0'){
-	 
-	 
-  }
-  else if ($('p select[name=iline]').val() == '1'){
-	 
-	 
-  }
-  else if ($('p select[name=iline]').val() == '2'){
-	 
-  }
-  else if ($('p select[name=iline]').val() == '3'){
-	 
-  }
-  else if ($('p select[name=iline]').val() == '4'){
-	 
-  }
-  else{
-  }
-});
-
-*/
-}
+/*To Show and Hide Div -> if optYes is selected, content will hide; otherwise it will show*/
+       function ShowHideDivGen(optYes, content) { //general case
+        content.style.display = optYes.checked ? "none" : "block";
+       }
 </script>
 </body>
 </html>
