@@ -285,20 +285,20 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		</ul>
 		<button class="btn btn-default" onclick="addNewRelSubmission()" type="submit">Add Another Related Submission</button>
 		
-			<div class="form-group">
+			<div class="form-group" id="raEnrolmentCompInfoDiv">
 				<h4>Regulatory Activity Contact [for THIS Regulatory Activity]:</h4>
-				<div id="raEnrolmentCompInfo" class="wb-frmvld">
+				<div class="wb-frmvld">
 				<div class="row">
 					<div class="col-sm-7">
 						<h5>Company Information:</h5>
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-						<label><input id="raEnrolmentCompInfoSamAs" type="checkbox" value="" /> Same as Manufacturer / Sponsor Company Information</label>
+						<label><input id="raEnrolmentCompInfoSamAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentCompInfo)"/> Same as Manufacturer / Sponsor Company Information</label>
 					</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row" id="raEnrolmentCompInfo" >
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 						<div class="form-group col-sm-8">
 							<label for="raEnrolmentCompName" class="control-label">Company Name [Full Legal Name]*</label>
@@ -309,18 +309,21 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<!-- </form> -->
 				</div>
 				</div>
-			<div id="raEnrolmentAddrInfo" class="wb-frmvld">
+			</div>
+			<div class="form-group" id="raEnrolmentAddrInfoDiv">
+			<div class="wb-frmvld">
 				<div class="row">
 					<div class="col-sm-7">
 						<h5>Address Information:</h5>
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-							<label><input id="raEnrolmentAddrInfoSameAs" type="checkbox" value="" /> Same as Manufacturer / Sponsor Address Information</label>
+							<label><input id="raEnrolmentAddrInfoSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentAddrInfo)"/> Same as Manufacturer / Sponsor Address Information</label>
 						</div>
 					</div>
 				</div>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<div id="raEnrolmentAddrInfo">
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label for="raEnrolmentAddrStr" class="control-label">Street / Suite *</label>
@@ -373,21 +376,25 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								<input type="text" class="form-control input-sm" id="raEnrolmentAddrPostal" placeholder="Enter Postal/ZIP Code">
 							</div>
 						</div>
+						</div>
 					<!-- </form> -->
 					</div>
 			</div>
-			<div id="raEnrolmentCompRepInfo" class="wb-frmvld">
+			</div>
+			<div class="form-group" id="raEnrolCompRepInfoDiv">
+			<div class="wb-frmvld">
 				<div class="row">
 					<div class="col-sm-7">
 						<h5>Company Representative [for THIS Regulatory Activity]*</h5>
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-							<label><input id="raEnrolmentCompRepInfoSameAs" type="checkbox" value="" /> Same as Manufacturer / Sponsor Contact Information</label>
+							<label><input id="raEnrolmentCompRepInfoSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentCompRepInfo)"/> Same as Manufacturer / Sponsor Contact Information</label>
 						</div>
 					</div>
 				</div>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<div id="raEnrolmentCompRepInfo">
 					<div class="row">
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentCompRepSal" class="control-label">Salutation*</label>
@@ -463,6 +470,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					<!-- </form> -->
 					</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -583,12 +592,6 @@ var raRelCount = 1; //keeps track of the number of Related Regulatory Activity S
 function addDINSet(raRelDINDivId, raRelDivId) {
 	var newDINSet = '<div class="row" id="raEnrolmentRel1DIN1Set"><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1b"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1c"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d"></div></div></div>';
 	
-	//get # of related activity submissions
-	//var raRelNum = $('#raEnrolmentRelList li').length;
-	
-	//id of current DIN div
-	//var raDINdivId = 'raEnrolmentRel' + raRelNum + 'DINdiv';
-	
 	//get # of current DIN sets
 	var raDINCount = $('#' + raRelDINDivId).children().size() - 1; //excludes button row
 	var idDIN = raRelDivId + 'DINdiv';
@@ -634,6 +637,11 @@ function deleteRelSubmission(i) {
 		items[n].id = newLabel;
 	}
 }
+
+/*To Show and Hide Div -> if optYes is selected, content will show; otherwise it will hide*/
+       function ShowHideDivGen(optYes, content) { //general case
+        content.style.display = optYes.checked ? "none" : "block";
+       }
 </script>
 </body>
 </html>
