@@ -160,12 +160,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div id="coType" style="display: none;">
 					<div class="form-group">
 						<label for="coNewEnFile" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption" id="coTypeOptionNew" onclick="optButtonSelect(co,New)"/>
+						<input type="radio" name="coTypeOption" id="coTypeOptionNew" onclick="optButtonSelect('co','New')"/>
 								Start a NEW Company Enrolment</label>
 					</div>
 					<div class="form-group">
 						<label for="coDrftFile" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption" id="coTypeOptionDraft" onclick="optButtonSelect(co,Draft)"/>
+						<input type="radio" name="coTypeOption" id="coTypeOptionDraft" onclick="optButtonSelect('co','Draft')"/>
 							Complete your DRAFT Company</label>
 					</div>
 					<div class="form-group">
@@ -174,7 +174,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="form-group">
 						<label for="coAmdFile" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption" id="coTypeOptionAmend" onclick="optButtonSelect(co,Amend)"/>
+						<input type="radio" name="coTypeOption" id="coTypeOptionAmend" onclick="optButtonSelect('co','Amend')"/>
 							AMEND you Company Enrolment File</label>
 					</div>
 					<div class="form-group">
@@ -185,12 +185,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div id="doType" style="display: none;">
 					<div class="form-group">
 						<label for="doNewEnFile" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption" id="doTypeOptionNew" onclick="optButtonSelect(do,New)"/>
+						<input type="radio" name="doTypeOption" id="doTypeOptionNew" onclick="optButtonSelect('do','New')"/>
 							Start a NEW Dossier Enrolment</label>
 					</div>
 					<div class="form-group">
 						<label for="doDrftFile" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption" id="doTypeOptionDraft" onclick="optButtonSelect(do,Draft)"/>
+						<input type="radio" name="doTypeOption" id="doTypeOptionDraft" onclick="optButtonSelect('do','Draft')"/>
 							Complete your DRAFT Dossier</label>
 					</div>
 					<div class="form-group">
@@ -199,7 +199,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="form-group">
 						<label for="doAmdFile" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption" id="doTypeOptionAmend" onclick="optButtonSelect(do,Amend)"/>
+						<input type="radio" name="doTypeOption" id="doTypeOptionAmend" onclick="optButtonSelect('do','Amend')"/>
 							AMEND you Dossier Enrolment File</label>
 					</div>
 					<div class="form-group">
@@ -210,12 +210,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div id="raType" style="display: none;">
 					<div class="form-group">
 						<label for="raNewEnFile" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption" id="raTypeOptionNew" onclick="optButtonSelect(ra,New)"/>
+						<input type="radio" name="raTypeOption" id="raTypeOptionNew" onclick="optButtonSelect('ra','New')"/>
 							Start a NEW Regulatory Activity Enrolment</label>
 					</div>
 					<div class="form-group">
 						<label for="raDrftFile" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption" id="raTypeOptionDraft" onclick="optButtonSelect(ra,Draft)"/>
+						<input type="radio" name="raTypeOption" id="raTypeOptionDraft" onclick="optButtonSelect('ra','Draft')"/>
 							Complete your DRAFT Regulatory Activity</label>
 					</div>
 					<div class="form-group">
@@ -224,7 +224,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="form-group">
 						<label for="raAmdFile" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption" id="raTypeOptionAmend" onclick="optButtonSelect(ra,Amend)"/>
+						<input type="radio" name="raTypeOption" id="raTypeOptionAmend" onclick="optButtonSelect('ra','Amend')"/>
 							AMEND you Regulatory Activity Enrolment File</label>
 					</div>
 					<div class="form-group">
@@ -596,26 +596,28 @@ function optButtonSelect(type, action) {
 	var step2but = document.getElementById('nextStep2but');
 	var optId = type + "TypeOption" + action;
 	var opt = document.getElementById(optId);
-	if (type == 'co') {
-		if (action == 'New') {
-			step2but.href = "rep_2_company.html";
-		} else if (action == 'Draft') {
-		} else if (action == 'Amend') {
+	
+	if (opt.checked) {
+		if (type == 'co') {
+			if (action == 'New') {
+				step2but.href = "rep_2_company.html";
+			} else if (action == 'Draft') {
+			} else if (action == 'Amend') {
+			}
+		} else if (type == 'do') {
+			if (action == 'New') {
+				step2but.href = "rep_2_dossier.html";
+			} else if (action == 'Draft') {
+			} else if (action == 'Amend') {
 		}
-	} else if (type == 'do') {
-		if (action == 'New') {
-			step2but.href = "rep_2_dossier.html";
-		} else if (action == 'Draft') {
-		} else if (action == 'Amend') {
-		}
-	} else if (type == 'ra') {
-		if (action == 'New') {
-			step2but.href = "rep_2_regActivity.html";
-		} else if (action == 'Draft') {
-		} else if (action == 'Amend') {
-		}
-	} else if (type == 'rt') {
-		step2but.href = "rep_2_regTransaction.html";
+		} else if (type == 'ra') {
+			if (action == 'New') {
+				step2but.href = "rep_2_regActivity.html";
+			} else if (action == 'Draft') {
+			} else if (action == 'Amend') {
+			}
+		} else if (type == 'rt') {
+			step2but.href = "rep_2_regTransaction.html";
 	/*
 		if (action == 'New') {
 			step2but.href = type + "_2_regTransaction.html";
@@ -623,6 +625,7 @@ function optButtonSelect(type, action) {
 		} else if (action == 'Amend') {
 		}
 		*/
+		}
 	}
 }
 </script>
