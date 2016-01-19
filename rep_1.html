@@ -33,7 +33,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- End Google Tag Manager -->
 
 </head>
-<body vocab="http://schema.org/" typeof="WebPage" onload="myFunction()">
+<body vocab="http://schema.org/" typeof="WebPage"> <!--onload="myFunction()">-->
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
@@ -148,7 +148,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="form-group"> 
 				<!-- <p><strong>Select a specific Inspection Line for additional search options:</strong> -->
 				<p>
-				<select name="iline" required="">
+				<select name="iline" required="" onchange="checkEnrolTypeSelection(this)">
 				<option value=""></option>
 				<option value="1">Company (CO)</option>
 				<option value="2">Dossier (DO)</option>
@@ -160,12 +160,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div id="coType" style="display: none;">
 					<div class="form-group">
 						<label for="coNewEnFile" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption"/>
+						<input type="radio" name="coTypeOption" id="coTypeOptionNew" onclick="optButtonSelect(co,New)"/>
 								Start a NEW Company Enrolment</label>
 					</div>
 					<div class="form-group">
 						<label for="coDrftFile" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption"/>
+						<input type="radio" name="coTypeOption" id="coTypeOptionDraft" onclick="optButtonSelect(co,Draft)"/>
 							Complete your DRAFT Company</label>
 					</div>
 					<div class="form-group">
@@ -174,7 +174,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="form-group">
 						<label for="coAmdFile" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption"/>
+						<input type="radio" name="coTypeOption" id="coTypeOptionAmend" onclick="optButtonSelect(co,Amend)"/>
 							AMEND you Company Enrolment File</label>
 					</div>
 					<div class="form-group">
@@ -185,12 +185,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div id="doType" style="display: none;">
 					<div class="form-group">
 						<label for="doNewEnFile" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption"/>
+						<input type="radio" name="doTypeOption" id="doTypeOptionNew" onclick="optButtonSelect(do,New)"/>
 							Start a NEW Dossier Enrolment</label>
 					</div>
 					<div class="form-group">
 						<label for="doDrftFile" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption"/>
+						<input type="radio" name="doTypeOption" id="doTypeOptionDraft" onclick="optButtonSelect(do,Draft)"/>
 							Complete your DRAFT Dossier</label>
 					</div>
 					<div class="form-group">
@@ -199,7 +199,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="form-group">
 						<label for="doAmdFile" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption"/>
+						<input type="radio" name="doTypeOption" id="doTypeOptionAmend" onclick="optButtonSelect(do,Amend)"/>
 							AMEND you Dossier Enrolment File</label>
 					</div>
 					<div class="form-group">
@@ -210,12 +210,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div id="raType" style="display: none;">
 					<div class="form-group">
 						<label for="raNewEnFile" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption"/>
+						<input type="radio" name="raTypeOption" id="raTypeOptionNew" onclick="optButtonSelect(ra,New)"/>
 							Start a NEW Regulatory Activity Enrolment</label>
 					</div>
 					<div class="form-group">
 						<label for="raDrftFile" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption"/>
+						<input type="radio" name="raTypeOption" id="raTypeOptionDraft" onclick="optButtonSelect(ra,Draft)"/>
 							Complete your DRAFT Regulatory Activity</label>
 					</div>
 					<div class="form-group">
@@ -224,7 +224,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="form-group">
 						<label for="raAmdFile" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption"/>
+						<input type="radio" name="raTypeOption" id="raTypeOptionAmend" onclick="optButtonSelect(ra,Amend)"/>
 							AMEND you Regulatory Activity Enrolment File</label>
 					</div>
 					<div class="form-group">
@@ -525,74 +525,105 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
-function myFunction() {	
+function checkEnrolTypeSelection(obj) {
+	//divs to show/hide
+    var coType = document.getElementById('coType');
+	var doType = document.getElementById('doType');
+	var raType = document.getElementById('raType');
+	var rtType = document.getElementById('rtType');
+	var step1c = document.getElementById('step1c');
+	var raAntDate = document.getElementById('raAntDate');
+	//var step2but = document.getElementById('nextStep2but');
 	
-		$('p select[name=iline]').change(function(e){
-  
-  if ($('p select[name=iline]').val() == '0'){
-	 
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').hide();
-	 $('#raAntDate').hide();
-	 
-  }
-  else if ($('p select[name=iline]').val() == '1'){
-	 
-	 $('#coType').show();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').show();
-	 $('#raAntDate').hide();
-	 $('#nextStep2but').attr("href", "rep_2_company.html");
-  }
-  else if ($('p select[name=iline]').val() == '2'){
-	 $('#coType').hide();
-	 $('#doType').show();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').show();
-	 $('#raAntDate').show();
-	 $('#nextStep2but').attr("href", "rep_2_dossier.html");
-	 
-  }
-  else if ($('p select[name=iline]').val() == '3'){
-	  
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').show();
-	 $('#rtType').hide();
-	 $('#step1c').show();
-	 $('#raAntDate').show();
-	 $('#nextStep2but').attr("href", "rep_2_regActivity.html");
-	 
-  }
-  else if ($('p select[name=iline]').val() == '4'){
-	  
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').show();
-	 $('#step1c').hide();
-	 $('#raAntDate').hide();
-	 $('#nextStep2but').attr("href", "rep_2_regTransaction.html");
-	 
-  }
-  else{
-	 $('#coType').hide();
-	 $('#doType').hide();
-	 $('#raType').hide();
-	 $('#rtType').hide();
-	 $('#step1c').hide();
-	 $('#raAntDate').hide();
-  }
-});
+	 if (obj.value == "0") {
+		coType.style.display = "none";
+		doType.style.display = "none";
+		raType.style.display = "none";
+		rtType.style.display = "none";
+		step1c.style.display = "none";
+		raAntDate.style.display = "none";
+	} else if (obj.value == "1") {
+		coType.style.display = "block";
+		doType.style.display = "none";
+		raType.style.display = "none";
+		rtType.style.display = "none";
+		step1c.style.display = "block";
+		raAntDate.style.display = "none";
+		
+		//step2but.href = "rep_2_company.html";
+		
+	} else if (obj.value == "2") {
+		coType.style.display = "none";
+		doType.style.display = "block";
+		raType.style.display = "none";
+		rtType.style.display = "none";
+		step1c.style.display = "block";
+		raAntDate.style.display = "block";
+		
+		//step2but.href = "rep_2_dossier.html";
+		
+	} else if (obj.value == "3") {
+		coType.style.display = "none";
+		doType.style.display = "none";
+		raType.style.display = "block";
+		rtType.style.display = "none";
+		step1c.style.display = "block";
+		raAntDate.style.display = "block";
+		
+		//step2but.href = "rep_2_regActivity.html";
+		
+	} else if (obj.value == "4") {
+		coType.style.display = "none";
+		doType.style.display = "none";
+		raType.style.display = "none";
+		rtType.style.display = "block";
+		step1c.style.display = "none";
+		raAntDate.style.display = "none";
+		
+		//step2but.href = "rep_2_regTransaction.html";
+		
+	}else {
+		coType.style.display = "none";
+		doType.style.display = "none";
+		raType.style.display = "none";
+		rtType.style.display = "none";
+		step1c.style.display = "none";
+		raAntDate.style.display = "none";
+	}
+}
 
-
-
+function optButtonSelect(type, action) {
+	var step2but = document.getElementById('nextStep2but');
+	var optId = type + "TypeOption" + action;
+	var opt = document.getElementById(optId);
+	if (type == 'co') {
+		if (action == 'New') {
+			step2but.href = "rep_2_company.html";
+		} else if (action == 'Draft') {
+		} else if (action == 'Amend') {
+		}
+	} else if (type == 'do') {
+		if (action == 'New') {
+			step2but.href = "rep_2_dossier.html";
+		} else if (action == 'Draft') {
+		} else if (action == 'Amend') {
+		}
+	} else if (type == 'ra') {
+		if (action == 'New') {
+			step2but.href = "rep_2_regActivity.html";
+		} else if (action == 'Draft') {
+		} else if (action == 'Amend') {
+		}
+	} else if (type == 'rt') {
+		step2but.href = "rep_2_regTransaction.html";
+	/*
+		if (action == 'New') {
+			step2but.href = type + "_2_regTransaction.html";
+		} else if (action == 'Draft') {
+		} else if (action == 'Amend') {
+		}
+		*/
+	}
 }
 </script>
 </body>
