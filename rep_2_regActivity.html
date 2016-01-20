@@ -121,12 +121,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <section>
 
 	<br /><br />
-	<div class="panel panel-default">
+	<div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">STEP 2 - Regulatory Activity Information</h3>
 		</div>
 		<div class="panel-body">
 		<div id="regActivityMain">
+			<div class="well well-sm">
 			<div class="row">
 				<div class="form-group">
 					<label for="raEnrolmentActivityLead" class="col-sm-4 control-label">Regulatory Activity Lead*</label>
@@ -143,7 +144,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="form-group">
 					<label for="raEnrolmentActivityType" class="col-sm-4 control-label">Regulatory Activity Type*</label>
                     <div class="">
-						<select class="col-sm-8 form-control" name="raEnrolmentActivityType" id="raEnrolmentActivityType">
+						<select class="col-sm-8 form-control input-sm full-width" name="raEnrolmentActivityType" id="raEnrolmentActivityType">
 						<option label=" "></option>
 						<option value="1"></option>
 						<option value="2"></option>
@@ -155,7 +156,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="form-group">
 					<label for="raEnrolmentFeeClass" class="col-sm-4 control-label">Fee Class*</label>
                     <div class="">
-						<select class="col-sm-8 form-control" name="raEnrolmentFeeClass" id="raEnrolmentFeeClass">
+						<select class="col-sm-8 form-control input-sm full-width" name="raEnrolmentFeeClass" id="raEnrolmentFeeClass">
 						<option label=" "></option>
 						<option value="1"></option>
 						<option value="2"></option>
@@ -177,14 +178,16 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="row">
 				<div class="col-sm-12">
 					<p>Reason for filing this Regulatory Activity:*</p>
-					<textarea class="form-control" rows="3" cols="col-sm-12"></textarea>
+					<textarea class="form-control input-sm full-width" rows="3" cols="col-sm-12"></textarea>
 				</div>
 			</div>
+			</div>
+			<div class="well well-sm">
 			<div class="row">
 				<div class="form-group">
 					<label for="raEnrolmentSubThirdParty" class="col-sm-8 control-label">Will the submission be signed / filed by a third party on behalf of the manufactuer / sponsor?*</label>
                     <div class="">
-						<select class="col-sm-4 form-control" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty">
+						<select class="col-sm-4 form-control input-sm full-width" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty">
 						<option label=" "></option>
 						<option value="1">Yes</option>
 						<option value="2">No</option>
@@ -195,11 +198,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="row">
 				<div class="form-group">
 					<label for="raAutLetterFileUpload" class="col-sm-6">If YES, please upload Authorization letter:</label>
-					<input type="file" class="col-sm-6" id="raAutLetterFileUpload" />
+					<input type="file" class="col-sm-6 input-sm full-width" id="raAutLetterFileUpload" />
 				</div>
 			</div>
+			</div>
 		</div>
-		
+		<div class="panel panel-default">
+			<header class="panel-heading"><h4 class="panel-title">Related Regulatory Activities</h4></header>
+			<div class="panel-body">
+		<div class="row">
+			<button class="btn btn-default col-sm-4 col-sm-offset-8" onclick="addNewRelSubmission()" type="submit">Add Another Related Submission</button>
+		</div>
 		<ul id="raEnrolmentRelList" class="list-unstyled">
 			<li id="raEnrolmentRel1">
 				<details open="open">
@@ -208,7 +217,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="form-group col-sm-12">
 					<label for="raEnrolmentRel1ActivityType" class="control-label">Regulatory Activity Type:*</label>
                     <div class="">
-						<select class="form-control" name="raEnrolmentRel1ActivityType" id="raEnrolmentRel1ActivityType">
+						<select class="form-control input-sm full-width" name="raEnrolmentRel1ActivityType" id="raEnrolmentRel1ActivityType">
 						<option label=" "></option>
 						<option value="1"></option>
 						<option value="2"></option>
@@ -219,18 +228,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="row">
 				<div class="form-group col-sm-3">
 					<label for="raEnrolmentRel1DateCleared" ><span class="field-name">Date Cleared*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-					<input class="form-control" type="date" id="raEnrolmentRel1DateCleared" name="raEnrolmentRel1DateCleared" data-rule-dateiso="true">
+					<input class="form-control  input-sm full-width" type="date" id="raEnrolmentRel1DateCleared" name="raEnrolmentRel1DateCleared" data-rule-dateiso="true">
 				</div>
 				<div class="form-group col-sm-3">
 					<label for="raEnrolmentRel1ControlNo" class="control-label">Control Number*</label>
 						<div class="">
-							<input type="text" class="form-control input-sm" id="raEnrolmentRel1ControlNo">
+							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ControlNo">
 						</div>
 				</div>
 				<div class="form-group col-sm-3">
 					<label for="raEnrolmentRel1FilNo" class="control-label">File Number*</label>
 						<div class="">
-							<input type="text" class="form-control input-sm" id="raEnrolmentRel1FilNo">
+							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1FilNo">
 						</div>
 				</div>
 			</div>
@@ -238,7 +247,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="form-group col-sm-12">
 					<label for="raEnrolmentRel1ManuName" class="control-label">Manufacturer / Sponsor Name [Full Legal Name - No Abbreviations]*</label>
 						<div class="">
-							<input type="text" class="form-control input-sm" id="raEnrolmentRel1ManuName">
+							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ManuName">
 						</div>
 				</div>
 			</div>
@@ -246,7 +255,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="form-group col-sm-12">
 					<label for="raEnrolmentRel1SubReason" class="control-label">Reason for Submission</label>
 						<div class="">
-							<input type="text" class="form-control input-sm" id="raEnrolmentRel1SubReason">
+							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1SubReason">
 						</div>
 				</div>
 			</div>
@@ -257,22 +266,22 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row" id="raEnrolmentRel1DIN1Set">
 				<div class="form-group col-sm-2">
 					<div class="">
-						<input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a">
+						<input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a">
 					</div>
 				</div>
 				<div class="form-group col-sm-2">
 					<div class="">
-						<input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1b">
+						<input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1b">
 					</div>
 				</div>
 				<div class="form-group col-sm-2">
 					<div class="">
-						<input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1c">
+						<input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1c">
 					</div>
 				</div>
 				<div class="form-group col-sm-2">
 					<div class="">
-						<input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d">
+						<input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d">
 					</div>
 				</div>
 				
@@ -284,10 +293,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</details>
 			</li>
 		</ul>
-		<button class="btn btn-default" onclick="addNewRelSubmission()" type="submit">Add Another Related Submission</button>
-		
+		</div>
+		</div>
+			<div class="panel panel-warning">
+				<header class="panel-heading"><h4 class="panel-title">Regulatory Activity Contact [for THIS Regulatory Activity]:</h4></header>
+				<div class="panel-body">
 			<div class="form-group" id="raEnrolmentCompInfoDiv">
-				<h4>Regulatory Activity Contact [for THIS Regulatory Activity]:</h4>
 				<div class="wb-frmvld">
 				<div class="row">
 					<div class="col-sm-7">
@@ -299,15 +310,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					</div>
 				</div>
+				<div class="well well-sm">
 				<div class="row" id="raEnrolmentCompInfo" >
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 						<div class="form-group col-sm-8">
 							<label for="raEnrolmentCompName" class="control-label">Company Name [Full Legal Name]*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentCompName" placeholder="Enter Company Name">
+								<input type="text" class="form-control input-sm  full-width" id="raEnrolmentCompName" placeholder="Enter Company Name">
 							</div>
 						</div>
 					<!-- </form> -->
+				</div>
 				</div>
 				</div>
 			</div>
@@ -324,12 +337,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</div>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
-					<div id="raEnrolmentAddrInfo">
+					<div class="well well-sm" id="raEnrolmentAddrInfo">
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label for="raEnrolmentAddrStr" class="control-label">Street / Suite *</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentAddrStr" size="100" placeholder="Enter Street/Suite">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAddrStr" size="100" placeholder="Enter Street/Suite">
 							</div>
 						</div>
 					</div>
@@ -337,13 +350,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAddrCity" class="control-label">City / Town*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentAddrCity" placeholder="Enter City/Town">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAddrCity" placeholder="Enter City/Town">
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAddrCountry" class="control-label">Country*</label>
                             <div class="">
-                                <select class="form-control input-sm" name="raEnrolmentAddrCountry" id="raEnrolmentAddrCountry">
+                                <select class="form-control input-sm full-width" name="raEnrolmentAddrCountry" id="raEnrolmentAddrCountry">
                                     <option label=" "></option>
                                     <option value="1">Canada</option>
                                     <option value="2">United States</option>
@@ -353,7 +366,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAddrProv" class="control-label">Province/State*</label>
                             <div class="">
-								<select class="form-control input-sm" name="raEnrolmentAddrProv" id="raEnrolmentAddrProv">
+								<select class="form-control input-sm full-width" name="raEnrolmentAddrProv" id="raEnrolmentAddrProv">
                                     <option label=" "></option>
                                     <option value="1">Alberta</option>
                                     <option value="2">British Columbia</option>
@@ -374,7 +387,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAddrPostal" class="control-label">Postal / ZIP Code*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentAddrPostal" placeholder="Enter Postal/ZIP Code">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAddrPostal" placeholder="Enter Postal/ZIP Code">
 							</div>
 						</div>
 						</div>
@@ -395,12 +408,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</div>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
-					<div id="raEnrolmentCompRepInfo">
+					<div class="well well-sm id="raEnrolmentCompRepInfo">
 					<div class="row">
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentCompRepSal" class="control-label">Salutation*</label>
                             <div class="">
-                                <select class="form-control input-sm" name="raEnrolmentCompRepSal" id="raEnrolmentCompRepSal">
+                                <select class="form-control input-sm full-width" name="raEnrolmentCompRepSal" id="raEnrolmentCompRepSal">
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -412,31 +425,31 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentCompRepGivenName" class="control-label">Given Name*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepGivenName" placeholder="Enter Given Name">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepGivenName" placeholder="Enter Given Name">
 							</div>
 						</div>
 						<div class="form-group col-sm-1">
 							<label for="raEnrolmentCompRepInit" class="control-label">Initials</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepInit" placeholder="Enter Surname" >
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepInit" placeholder="Enter Surname" >
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentCompRepSurname" class="control-label">Surname*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepSurname" placeholder="Enter Surname" >
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepSurname" placeholder="Enter Surname" >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentCompRepTitle" class="control-label">Title*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepTitle" placeholder="Enter Title" >
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepTitle" placeholder="Enter Title" >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentCompRepLang" class="control-label">Language*</label>
                             <div class="">
-                                <select class="form-control input-sm" name="raEnrolmentCompRepLang" id="raEnrolmentCompRepLang">
+                                <select class="form-control input-sm full-width" name="raEnrolmentCompRepLang" id="raEnrolmentCompRepLang">
                                     <option label=" "></option>
                                     <option value="1">English</option>
                                     <option value="2">French</option>
@@ -448,31 +461,33 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentCompRepTelNo" class="control-label">Telephone No*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepTelNo" placeholder="Enter Telephone No." >
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepTelNo" placeholder="Enter Telephone No." >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentCompRepTelExt" class="control-label">Ext</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepTelExt" placeholder="Enter Extension" >
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepTelExt" placeholder="Enter Extension" >
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentCompRepFaxNo" class="control-label">Fax No.</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepFaxNo" placeholder="Enter Fax No." >
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepFaxNo" placeholder="Enter Fax No." >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="raEnrolmentCompRepEmail" class="control-label">Email*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm" id="raEnrolmentCompRepEmail" placeholder="Enter Email" />
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepEmail" placeholder="Enter Email" />
 							</div>
 						</div>
 					<!-- </form> -->
 					</div>
 					</div>
 				</div>
+			</div>
+			</div>
 			</div>
 		</div>
 	</div>
@@ -591,7 +606,7 @@ var raRelCount = 1; //keeps track of the number of Related Regulatory Activity S
 
 //adds a new DIN set !Consider using an index as a parameter
 function addDINSet(raRelDINDivId, raRelDivId) {
-	var newDINSet = '<div class="row" id="raEnrolmentRel1DIN1Set"><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1b"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1c"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d"></div></div></div>';
+	var newDINSet = '<div class="row" id="raEnrolmentRel1DIN1Set"><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1b"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1c"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d"></div></div></div>';
 	
 	//get # of current DIN sets
 	var raDINCount = $('#' + raRelDINDivId).children().size() - 1; //excludes button row
