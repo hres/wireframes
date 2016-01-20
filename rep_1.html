@@ -33,7 +33,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- End Google Tag Manager -->
 
 </head>
-<body vocab="http://schema.org/" typeof="WebPage"> <!--onload="myFunction()">-->
+<body vocab="http://schema.org/" typeof="WebPage" onload="checkEnrolTypeSelection()"> <!--onload="myFunction()">-->
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
@@ -121,7 +121,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <section>
 
 	<br /><br />
-	<div id="step1A" class="panel panel-default">
+	<div id="step1A" class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">STEP 1A - Select Product Line</h3>
 		</div>
@@ -140,7 +140,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		</div>
 	</div><!-- end of Step 1A-->
 	
-	<div id="step1B" class="panel panel-default">
+	<div id="step1B" class="panel panel-primary">
 		<div class="panel-heading">
 			<h3 class="panel-title">STEP 1B - Select Enrolment Type</h3>
 		</div>
@@ -148,7 +148,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="form-group"> 
 				<!-- <p><strong>Select a specific Inspection Line for additional search options:</strong> -->
 				<p>
-				<select name="iline" required="" onchange="checkEnrolTypeSelection(this)">
+				<select name="iline" required="" onchange="checkEnrolTypeSelection()">
 				<option value=""></option>
 				<option value="1">Company (CO)</option>
 				<option value="2">Dossier (DO)</option>
@@ -261,7 +261,7 @@ information, Regulatory Activity information)</label>
 			</div>
 		</div>
 	</div> <!--end of step 1B-->
-	<div id="step1c" class="panel panel-default" style="display: none;">
+	<div id="step1c" class="panel panel-primary" style="display: none;">
 		<div class="panel-heading">
 			<h2 class="panel-title">STEP 1C - Administrative Information for THIS Enrolment Process</h2>
 		</div>
@@ -528,7 +528,7 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
-function checkEnrolTypeSelection(obj) {
+function checkEnrolTypeSelection() { //previously obj
 	//divs to show/hide
     var coType = document.getElementById('coType');
 	var doType = document.getElementById('doType');
@@ -537,6 +537,9 @@ function checkEnrolTypeSelection(obj) {
 	var step1c = document.getElementById('step1c');
 	var raAntDate = document.getElementById('raAntDate');
 	var step2but = document.getElementById('nextStep2but');
+	
+	//dropdown list
+	var obj = document.getElementsByName('iline')[0];
 	
 	 if (obj.value == "0") {
 		coType.style.display = "none";
