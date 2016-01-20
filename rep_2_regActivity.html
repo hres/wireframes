@@ -130,9 +130,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="well well-sm">
 			<div class="row">
 				<div class="form-group">
-					<label for="raEnrolmentActivityLead" class="col-sm-4 control-label">Regulatory Activity Lead*</label>
+					<label for="raEnrolmentActivityLead" class="col-sm-3 control-label">Regulatory Activity Lead*</label>
                     <div class="">
-						<select class="col-sm-8 form-control input-sm" name="raEnrolmentActivityLead" id="raEnrolmentActivityLead">
+						<select class="col-sm-5 form-control input-sm full-width" name="raEnrolmentActivityLead" id="raEnrolmentActivityLead">
 						<option label=" "></option>
 						<option value="1"></option>
 						<option value="2"></option>
@@ -142,9 +142,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</div>
 			<div class="row">
 				<div class="form-group">
-					<label for="raEnrolmentActivityType" class="col-sm-4 control-label">Regulatory Activity Type*</label>
+					<label for="raEnrolmentActivityType" class="col-sm-3 control-label">Regulatory Activity Type*</label>
                     <div class="">
-						<select class="col-sm-8 form-control input-sm" name="raEnrolmentActivityType" id="raEnrolmentActivityType">
+						<select class="col-sm-5 form-control input-sm full-width" name="raEnrolmentActivityType" id="raEnrolmentActivityType">
 						<option label=" "></option>
 						<option value="1"></option>
 						<option value="2"></option>
@@ -154,9 +154,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</div>
 			<div class="row">
 				<div class="form-group">
-					<label for="raEnrolmentFeeClass" class="col-sm-4 control-label">Fee Class*</label>
+					<label for="raEnrolmentFeeClass" class="col-sm-3 control-label">Fee Class*</label>
                     <div class="">
-						<select class="col-sm-8 form-control input-sm" name="raEnrolmentFeeClass" id="raEnrolmentFeeClass">
+						<select class="col-sm-5 form-control input-sm full-width" name="raEnrolmentFeeClass" id="raEnrolmentFeeClass">
 						<option label=" "></option>
 						<option value="1"></option>
 						<option value="2"></option>
@@ -166,7 +166,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</div>
 			
 			<div class="row" id="raEnrolmentAdmSubAttest">
-				<div class="col-sm-5 col-sm-offset-4">
+				<div class="col-sm-6 col-sm-offset-3">
 				<p>I confirm that this administrative submission type is NOT a LASA submission</p>
 				</div>
 				<div class="col-sm-3">
@@ -185,9 +185,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="well well-sm">
 			<div class="row">
 				<div class="form-group">
-					<label for="raEnrolmentSubThirdParty" class="col-sm-8 control-label">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?*</label>
+					<label for="raEnrolmentSubThirdParty" class="col-sm-9 control-label">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?*</label>
                     <div class="">
-						<select class="col-sm-4 form-control input-sm" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty">
+						<select class="col-sm-3 form-control input-sm" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty">
 						<option label=" "></option>
 						<option value="1">Yes</option>
 						<option value="2">No</option>
@@ -197,8 +197,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</div>
 			<div class="row">
 				<div class="form-group">
-					<label for="raAutLetterFileUpload" class="col-sm-6">If YES, please upload Authorization letter:</label>
-					<input type="file" class="col-sm-6 input-sm" id="raAutLetterFileUpload" />
+					<label for="raAutLetterFileUpload" class="col-sm-5">If YES, please upload Authorization letter:</label>
+					<input type="file" class="col-sm-7 input-sm" id="raAutLetterFileUpload" />
 				</div>
 			</div>
 			</div>
@@ -207,7 +207,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<header class="panel-heading"><h4 class="panel-title">Related Regulatory Activities</h4></header>
 			<div class="panel-body">
 		<div class="row">
-			<button class="btn btn-default col-sm-4 col-sm-offset-8" onclick="addNewRelSubmission()" type="submit">Add Another Related Submission</button>
+			<button class="btn btn-default btn-xs col-sm-4 col-sm-offset-8" onclick="addNewRelSubmission()" type="submit">Add Another Related Submission</button>
 		</div>
 		<ul id="raEnrolmentRelList" class="list-unstyled">
 			<li id="raEnrolmentRel1">
@@ -310,8 +310,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					</div>
 				</div>
-				<div class="well well-sm">
-				<div class="row" id="raEnrolmentCompInfo" >
+				<div class="well well-sm" id="raEnrolmentCompInfo">
+				<div class="row" >
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 						<div class="form-group col-sm-8">
 							<label for="raEnrolmentCompName" class="control-label">Company Name [Full Legal Name]*</label>
@@ -408,7 +408,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</div>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
-					<div class="well well-sm id="raEnrolmentCompRepInfo">
+					<div class="well well-sm" id="raEnrolmentCompRepInfo">
 					<div class="row">
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentCompRepSal" class="control-label">Salutation*</label>
