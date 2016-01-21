@@ -126,12 +126,53 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             <h3 class="panel-title">STEP 2 - REGULATORY TRANSACTION INFORMATION</h3>
 		</div>
 		<div class="panel-body">
+		
+		<table>
+			<tr>
+				<td><div class="form-group form-inline">
+					<label for="rtEnrolmenteCTD" class="control-label" style="margin-right:0.5cm">Is this an eCTD transaction?</label>
+						<select class="form-control input-sm"  name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
+						<option label=" "></option>
+						<option value="1">Yes</option>
+						<option value="2">No</option>
+						</select>
+				</div></td>
+				<td><div class="form-group form-inline">
+					<label for="rtEnrolmentSeqNo" class="control-label" style="margin-left:1cm; margin-right:0.5cm">Sequence Number*</label>
+							<input type="text" class="form-control input-sm" id="rtEnrolmentSeqNo" disabled="disabled">
+				</div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><div class="form-group form-inline">
+					<label for="rtEnrolmentRelSeqNo" class="control-label" style="margin-left:1cm; margin-right:0.5cm">Related Sequence Number:</label>
+							<input type="text" class="form-control input-sm" id="rtEnrolmentRelSeqNo" disabled="disabled">
+				</div></td>
+			</tr>
+			<tr>
+				<td><div class="form-group form-inline">
+					<label for="rtEnrolmentSolInfo" class="control-label" style="margin-right:0.5cm">Is this solicited information?</label>
+						<select class="form-control input-sm" name="rtEnrolmentSolInfo" id="rtEnrolmentSolInfo" onchange="checkOptionSol(this)">
+						<option label=" "></option>
+						<option value="1">Yes</option>
+						<option value="2">No</option>
+						</select>
+					</div>
+				</td>
+				<td><div class="form-group form-inline">
+					<label for="rtEnrolmentReqSolInfo" class="control-label" style="margin-left:1cm; margin-right:0.5cm">Requester of Solicited Information</label>
+							<input type="text" class="form-control input-sm" id="rtEnrolmentReqSolInfo" disabled="disabled">
+				</div></td>
+			</tr>
+		</table>
+		<!--
+		
 			<div class="row">
-				<!-- <form class="form-inline"> -->
+				<form class="form-inline">
 				<div class="form-group">
-					<label for="rtEnrolmenteCTD" class="col-sm-4 form-control-label">Is this an eCTD transaction?</label>
+					<label for="rtEnrolmenteCTD" class="control-label">Is this an eCTD transaction?</label>
 					<div class="">
-						<select class="col-sm-2 form-control input-sm" name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
+						<select class="form-control input-sm" name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
 						<option label=" "></option>
 						<option value="1">Yes</option>
 						<option value="2">No</option>
@@ -139,14 +180,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="rtEnrolmentSeqNo" class="col-sm-3 form-control-label">Sequence Number*</label>
+					<label for="rtEnrolmentSeqNo" class="control-label">Sequence Number*</label>
 						<div class="">
-							<input type="text" class="col-sm-3 form-control input-sm" id="rtEnrolmentSeqNo" disabled="disabled">
+							<input type="text" class="form-control input-sm" id="rtEnrolmentSeqNo" disabled="disabled">
 						</div>
 				</div>
-				<!-- </form> -->
 			</div>
-			<!-- <div class="row"> -->
+			<div class="row">
 				<form class="form-inline">
 				<div class="col-sm-offset-4 form-group">
 					<label for="rtEnrolmentRelSeqNo" class="col-sm-3 form-control-label">Related Sequence Number:</label>
@@ -154,10 +194,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<input type="text" class="col-sm-3 form-control input-sm" id="rtEnrolmentRelSeqNo" disabled="disabled">
 						</div>
 				</div>
-				<!-- </form> -->
 			</div>
 			<div class="row">
-				<!-- <form class="form-inline"> -->
 				<div class="form-group">
 					<label for="rtEnrolmentSolInfo" class="col-sm-4 control-label">Is this solicited information?</label>
 					<div class="">
@@ -174,8 +212,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<input type="text" class="col-sm-3 form-control input-sm" id="rtEnrolmentReqSolInfo" disabled="disabled">
 						</div>
 				</div>
-				<!-- </form> -->
-			</div>
+				</form>
+			</div>-->
 			<h5>Name of Regulatory Project Manager [if known]:</h5>
 			<div class="row">
 				<div class="col-sm-6 form-group">
