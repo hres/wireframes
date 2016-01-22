@@ -260,36 +260,53 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 				</div>
 			</div>
-			<div id="raEnrolmentRel1DINdiv">
+			<div id="raEnrolmentRel1DIN">
 				<div class="row">
-					<label for="raEnrolmentRel1DIN" class=" col-sm-12 control-label">Associated DINs</label>
+					<label for="raEnrolmentRel1DINLabel" class=" col-sm-12 control-label">Associated DINs</label>
 				</div>
-				<div class="row" id="raEnrolmentRel1DIN1Set">
-				<div class="form-group col-sm-2">
-					<div class="">
-						<input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a">
-					</div>
-				</div>
-				<div class="form-group col-sm-2">
-					<div class="">
-						<input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1b">
-					</div>
-				</div>
-				<div class="form-group col-sm-2">
-					<div class="">
-						<input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1c">
-					</div>
-				</div>
-				<div class="form-group col-sm-2">
-					<div class="">
-						<input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d">
-					</div>
-				</div>
+				<div class="row">
+				<table id="raEnrolmentRel1DINTable">
+					<tr>
+						<td>
+							<div class="col-sm-2" id="raEnrolmentRel1DIN1Grp">
+								<label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="raEnrolmentRel1DIN1" />
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="col-sm-2" id="raEnrolmentRel1DIN2Grp">
+								<label class="wb-inv" for="raEnrolmentRel1DIN2">DIN</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="raEnrolmentRel1DIN2" />
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="col-sm-2" id="raEnrolmentRel1DIN3Grp">
+								<label class="wb-inv" for="raEnrolmentRel1DIN3">DIN</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="raEnrolmentRel1DIN3" />
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="col-sm-2" id="raEnrolmentRel1DIN4Grp">
+								<label class="wb-inv" for="raEnrolmentRel1DIN4">DIN</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="raEnrolmentRel1DIN4" />
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
 				
-				<div class="form-group col-sm-2" id="raEnrolmentRel1DIN1AddBut">
-					<button class="btn btn-default btn-xs" onclick="addDINSet(raEnrolmentRel1DINdiv.id, raEnrolmentRel1.id)" type="submit">Add a DIN</button>
+				<div class="form-group col-sm-2" id="raEnrolmentRel1DINAddBut">
+					<button class="btn btn-default btn-xs" onclick="addDIN(raEnrolmentRel1DIN.id)" type="submit">Add a DIN</button>
 				</div>
 				</div>
+
 			</div>
 			</div>
 			</details>
@@ -603,30 +620,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
-//var raDINCount = 1; //keeps track of number of current DIN sets (set = 4 DINs)
+var raDINCount = 4; //keeps track of number of current DINs (initially, there are 4)
+//var raDINButCount = 1; //keeps track of the number of buttons used to add/delete DINs
 var raRelCount = 1; //keeps track of the number of Related Regulatory Activity Submissions
-
-//adds a new DIN set !Consider using an index as a parameter
-function addDINSet(raRelDINDivId, raRelDivId) {
-	var newDINSet = '<div class="row" id="raEnrolmentRel1DIN1Set"><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1b"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1c"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d"></div></div></div>';
-	
-	//get # of current DIN sets
-	var raDINCount = $('#' + raRelDINDivId).children().size() - 1; //excludes button row
-	var idDIN = raRelDivId + 'DINdiv';
-	
-	//replace substrings
-	var newId = newDINSet.replace(/raEnrolmentRel1DIN1/g, raRelDivId + 'DIN' + (raDINCount+1));
-	$('#' + idDIN).append(newId);
-
-}
 
 //adds a new reference product
 function addNewRelSubmission() {
-	var newRelSub = '<li id="raEnrolmentRel1"><details open="open"><summary>Related Regulatory Activity 1 [Referred to in this Submission]<button class="btn btn-default btn-xs" style="min-height: 20px !important; line-height: 1; margin-left: 2cm" onclick="deleteRelSubmission(raEnrolmentRel1)" type="submit">Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1ActivityType" class="control-label">Regulatory Activity Type:*</label><div class=""><select class="form-control input-sm full-width" name="raEnrolmentRel1ActivityType" id="raEnrolmentRel1ActivityType"><option label=" "></option><option value="1"></option><option value="2"></option></select></div></div></div><div class="row"><div class="form-group col-sm-3"><label for="raEnrolmentRel1DateCleared" ><span class="field-name">Date Cleared*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label><input class="form-control input-sm full-width" type="date" id="raEnrolmentRel1DateCleared" name="raEnrolmentRel1DateCleared" data-rule-dateiso="true"></div><div class="form-group col-sm-3"><label for="raEnrolmentRel1ControlNo" class="control-label">Control Number*</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ControlNo"></div></div><div class="form-group col-sm-3"><label for="raEnrolmentRel1FilNo" class="control-label">File Number*</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1FilNo"></div></div></div><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1ManuName" class="control-label">Manufacturer / Sponsor Name [Full Legal Name - No Abbreviations]*</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ManuName"></div></div></div><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1SubReason" class="control-label">Reason for Submission</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1SubReason"></div></div></div><div id="raEnrolmentRel1DINdiv"><div class="row"><label for="raEnrolmentRel1DIN" class=" col-sm-12 control-label">Associated DINs</label></div><div class="row" id="raEnrolmentRel1DIN1Set"><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1b"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1c"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d"></div></div><div class="form-group col-sm-2" id="raEnrolmentRel1DIN1AddBut"><button class="btn btn-default" onclick="addDINSet(raEnrolmentRel1DINdiv.id, raEnrolmentRel1.id)" type="submit">Add a DIN</button></div></div></div></div></details></li>';
+	var newRelSub = '<li id="raEnrolmentRel1"><details open="open"><summary>Related Regulatory Activity 1 [Referred to in this Submission]<button class="btn btn-default btn-xs" style="min-height: 20px !important; line-height: 1; margin-left: 2cm" onclick="deleteRelSubmission(raEnrolmentRel1)" type="submit">Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1ActivityType" class="control-label">Regulatory Activity Type:*</label><div class=""><select class="form-control input-sm full-width" name="raEnrolmentRel1ActivityType" id="raEnrolmentRel1ActivityType"><option label=" "></option><option value="1"></option><option value="2"></option></select></div></div></div><div class="row"><div class="form-group col-sm-3"><label for="raEnrolmentRel1DateCleared" ><span class="field-name">Date Cleared*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label><input class="form-control input-sm full-width" type="date" id="raEnrolmentRel1DateCleared" name="raEnrolmentRel1DateCleared" data-rule-dateiso="true"></div><div class="form-group col-sm-3"><label for="raEnrolmentRel1ControlNo" class="control-label">Control Number*</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ControlNo"></div></div><div class="form-group col-sm-3"><label for="raEnrolmentRel1FilNo" class="control-label">File Number*</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1FilNo"></div></div></div><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1ManuName" class="control-label">Manufacturer / Sponsor Name [Full Legal Name - No Abbreviations]*</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ManuName"></div></div></div><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1SubReason" class="control-label">Reason for Submission</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1SubReason"></div></div></div><div id="raEnrolmentRel1DIN"><div class="row"><label for="raEnrolmentRel1DINLabel" class=" col-sm-12 control-label">Associated DINs</label></div><div class="row"><table id="raEnrolmentRel1DINTable"><tr><td><div class="col-sm-2" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control" id="raEnrolmentRel1DIN1" /></div></div></td><td><div class="col-sm-2" id="raEnrolmentRel1DIN2Grp"><label class="wb-inv" for="raEnrolmentRel1DIN2">DIN</label><div class="input-group"><input type="text" class="form-control" id="raEnrolmentRel1DIN2" /></div></div></td><td><div class="col-sm-2" id="raEnrolmentRel1DIN3Grp"><label class="wb-inv" for="raEnrolmentRel1DIN3">DIN</label><div class="input-group"><input type="text" class="form-control" id="raEnrolmentRel1DIN3" /></div></div></td><td><div class="col-sm-2" id="raEnrolmentRel1DIN4Grp"><label class="wb-inv" for="raEnrolmentRel1DIN4">DIN</label><div class="input-group"><input type="text" class="form-control" id="raEnrolmentRel1DIN4" /></div></div></td></tr></table><div class="form-group col-sm-2" id="raEnrolmentRel1DINAddBut"><button class="btn btn-default btn-xs" onclick="addDIN(raEnrolmentRel1DIN.id)" type="submit">Add a DIN</button></div></div></div></div></details></li>';
 	//increment counter
 	raRelCount++;
 	//alert(canRefProductCounter);
-	//replace substrings
+	//replace sub-strings
 	var newId = newRelSub.replace(/raEnrolmentRel1/g, 'raEnrolmentRel' + raRelCount);
 	newId = newId.replace('Activity 1', 'Activity ' + raRelCount);
 	$('#raEnrolmentRelList').append(newId);
@@ -657,9 +661,123 @@ function deleteRelSubmission(i) {
 }
 
 /*To Show and Hide Div -> if optYes is selected, content will show; otherwise it will hide*/
-       function ShowHideDivGen(optYes, content) { //general case
-        content.style.display = optYes.checked ? "none" : "block";
-       }
+function ShowHideDivGen(optYes, content) { //general case
+	content.style.display = optYes.checked ? "none" : "block";
+}
+
+//parameters: raDINTableId
+function addDIN(raEnrolmentRelDINId) {
+	$("#" + raEnrolmentRelDINId + " #" + raEnrolmentRelDINId + "AddBut").unbind("click").click(function() {
+		var dinTable = raEnrolmentRelDINId + 'Table';
+		//get current number of rows in table
+		var tableRowCount = $('#' + dinTable + ' tr').length;
+		//get current number of empty cells in table
+		var totalEmptyCellCount = $('#' + dinTable + ' td:empty').length;
+		//get current number of "-" buttons
+		var totalDeleteButCount = (tableRowCount*4) - totalEmptyCellCount - 4;
+		//increment DIN count
+		raDINCount++;
+		var defaultDIN = '<div class="col-sm-2" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control" id="raEnrolmentRel1DIN1" /><span class="input-group-btn"><button class="btn btn-default" type="button" onclick="deleteDIN(this, raEnrolmentRel1DIN.id)" id="raEnrolmentRel1DINDelBut' + (totalDeleteButCount+1) + '">X</button></span></div></div>';
+		//replace labels with new DIN id
+		var changedDIN = replaceAll(defaultDIN, 'raEnrolmentRel1DIN1', raEnrolmentRelDINId + raDINCount);
+		var newDIN = changedDIN.replace(/raEnrolmentRel1DIN/g, raEnrolmentRelDINId);
+		
+		//if there is an empty cell, add the DIN to it; otherwise, create a new row in the table and add the DIN into the first cell of that row
+		if(totalEmptyCellCount > 0) {
+			//get the first empty cell in the table
+			var firstEmptyCell = $('#' + dinTable + ' td:empty:eq(0)');
+			var emptyCell = $(firstEmptyCell);
+			//add new DIN to cell
+			emptyCell.append(newDIN);
+		} else {
+			//add a new row with 4 empty cells into the table
+			$('#' + dinTable + ' tr:last').after('<tr><td></td><td></td><td></td><td></td></tr>');
+			$('#' + dinTable + ' tr:last td:first').append(newDIN);
+		}
+		
+	});
+	
+	/*EXAMPLE ->
+	<td>
+		<div class="col-sm-3" id="raEnrolmentRel1DIN4Grp">
+			<label class="wb-inv" for="raEnrolmentRel1Din4">DIN</label>
+			<div class="input-group">
+				<input type="text" class="form-control" id="raEnrolmentRel1Din4" />
+				<span class="input-group-btn">
+					<button class="btn btn-default addMoreDIN" type="button" id="raEnrolmentRe1lBut1">Add</button>
+				</span>
+			</div>
+		</div>
+	</td>
+	*/
+} 
+
+function deleteDIN(i, raEnrolmentRelDINId) {
+	var dinTable = raEnrolmentRelDINId + 'Table';
+	var cellToRemove = $('#' + dinTable).find(i).closest('td');
+	var rows = $('#' + dinTable + ' tr');
+	var numOfRows = $(rows).length;
+	var currRowIndex = $('#' + dinTable).find(i).closest('td').closest('tr').index();
+	var cellArray = []; //holds the required cells to fill current Row
+	var currRow;
+	var numOfEmptySpacesInRow = 0;
+	var numOfNonEmptyCellsInTable = $('#' + dinTable).find('tr td:not(:empty)').length;
+	var cell;
+	var nextRow;
+	$(cellToRemove).remove();
+	//stop shifting cells if last row of table has been reached
+	while (currRowIndex < (numOfRows-1)) {
+		//current row to look at
+		currRow = rows.eq(currRowIndex);
+		//find number of empty spaces to fill in current row
+		numOfEmptySpacesInRow = 4 - $(currRow).find('td').length;
+		//get the cells needed to fill in current row
+		nextRow = rows.eq(currRowIndex+1);
+		for (var i = 0; i < numOfEmptySpacesInRow; i++) {
+			cell = nextRow[0].cells[i];
+			cellArray.push(cell);
+			$(cell).remove();
+		}
+		//add the cells in cellArray into current row
+		for (var n = 0; n < numOfEmptySpacesInRow; n++) {
+			currRow.append(cellArray[n]);
+		}
+		//increment to next row
+		currRowIndex++;
+		cellArray = [];
+	}
+	var lastRow = $('#' + dinTable).find('tr:last');
+	var numOfCellsInLastRow = $(lastRow).find('td').length;
+	var numOfEmptyCellsInLastRow = $(lastRow).find('td:empty').length;
+	//remove last row if it contains just empty cells
+	if ((numOfEmptyCellsInLastRow > 0) && (numOfCellsInLastRow == numOfEmptyCellsInLastRow)) {
+		$(lastRow).remove();
+	} else {
+		//add empty cells to last row if necessary
+		var numOfEmptySpacesInLastRow = 4 - $(lastRow).find('td').length;
+		for (var t = 0 ; t < numOfEmptySpacesInLastRow; t++) {
+			$(lastRow).append('<td></td>');
+		}
+	}
+
+	raDINCount--;
+}
+	   
+/*
+//adds a new DIN set !Consider using an index as a parameter !NO LONGER IN USE!
+function addDINSet(raRelDINDivId, raRelDivId) {
+	var newDINSet = '<div class="row" id="raEnrolmentRel1DIN1Set"><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1b"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1c"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d"></div></div></div>';
+	
+	//get # of current DIN sets
+	var raDINCount = $('#' + raRelDINDivId).children().size() - 1; //excludes button row
+	var idDIN = raRelDivId + 'DINdiv';
+	
+	//replace substrings
+	var newId = newDINSet.replace(/raEnrolmentRel1DIN1/g, raRelDivId + 'DIN' + (raDINCount+1));
+	$('#' + idDIN).append(newId);
+
+}
+*/
 </script>
 </body>
 </html>
