@@ -33,7 +33,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- End Google Tag Manager -->
 
 </head>
-<body vocab="http://schema.org/" typeof="WebPage" onload="checkEnrolTypeSelection()"> <!--onload="myFunction()">-->
+<body vocab="http://schema.org/" typeof="WebPage"> <!--onload="myFunction()">-->
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
@@ -118,6 +118,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </header>
 <main role="main" property="mainContentOfPage" class="container">
 <h1 property="name" id="wb-cont">Regulatory Enrolment Process</h1>
+<div id="navigation">
+	<ul class="nav nav-pills" id="navREP">
+    	<li class="active"><a href="#" id="navStep1"><b>Step 1</b></a></li>
+    	<li><a href="#" id="navStep2"><b>Step 2</b></a></li>
+    	<li><a href="#" id="navStep3"><b>Step 3</b></a></li>
+    </ul>
+</div>
 <section>
 
 	<br /><br />
@@ -538,6 +545,20 @@ function checkEnrolTypeSelection() { //previously obj
 	var raAntDate = document.getElementById('raAntDate');
 	var step2but = document.getElementById('nextStep2but');
 	
+	/* Navigation Between Steps
+	<ul class="nav nav-pills" id="navREP">
+    	<li class="active"><a href="#" id="navStep1">Step 1</a></li>
+    	<li><a href="#" id="navStep2">Step 2</a></li>
+    	<li><a href="#" id="navStep3">Step 3</a></li>
+    </ul>
+	*/
+	var navPills = $('#navREP');
+	var txt;
+	//set navPills to default
+	for (var i = 1; i < 4; i++) {
+		$(navPills).children().find('a').eq(i-1).text('Step ' + i);
+	}
+	
 	//dropdown list
 	var obj = document.getElementsByName('iline')[0];
 	
@@ -556,6 +577,7 @@ function checkEnrolTypeSelection() { //previously obj
 		step1c.style.display = "block";
 		raAntDate.style.display = "none";
 		
+		changeNavPills('Company');
 		//step2but.href = "rep_2_company.html";
 		
 	} else if (obj.value == "2") {
@@ -565,6 +587,8 @@ function checkEnrolTypeSelection() { //previously obj
 		rtType.style.display = "none";
 		step1c.style.display = "block";
 		raAntDate.style.display = "block";
+		
+		changeNavPills('Dossier');
 		
 		//step2but.href = "rep_2_dossier.html";
 		
@@ -576,6 +600,8 @@ function checkEnrolTypeSelection() { //previously obj
 		step1c.style.display = "block";
 		raAntDate.style.display = "block";
 		
+		changeNavPills('Regulatory Activity');
+		
 		//step2but.href = "rep_2_regActivity.html";
 		
 	} else if (obj.value == "4") {
@@ -585,6 +611,8 @@ function checkEnrolTypeSelection() { //previously obj
 		rtType.style.display = "block";
 		step1c.style.display = "none";
 		raAntDate.style.display = "none";
+		
+		changeNavPills('Regulatory Transaction');
 		
 		step2but.href = "rep_2_regTransaction.html";
 		
@@ -602,37 +630,65 @@ function optButtonSelect(type, action) {
 	var step2but = document.getElementById('nextStep2but');
 	var optId = type + "TypeOption" + action;
 	var opt = document.getElementById(optId);
+	var navPills = $('#navREP');
+	var txt;
+	var index;
 	
 	if (opt.checked) {
 		if (type == 'co') {
 			if (action == 'New') {
 				step2but.href = "rep_2_company.html";
+				changeNavPills('NEW Company Enrolment');
+				$('#navStep2').prop('href', 'rep_2_company.html');
+				$('#navStep3').prop('href', 'rep_3_company.html');
 			} else if (action == 'Draft') {
+				changeNavPills('DRAFT Company Enrolment');
 			} else if (action == 'Amend') {
+				changeNavPills('AMEND Company Enrolment');
 			}
 		} else if (type == 'do') {
 			if (action == 'New') {
 				step2but.href = "rep_2_dossier.html";
+				changeNavPills('NEW Dossier Enrolment');
+				$('#navStep2').prop('href', 'rep_2_dossier.html');
+				$('#navStep3').prop('href', 'rep_3_dossier.html');
 			} else if (action == 'Draft') {
+				changeNavPills('DRAFT Dossier Enrolment');
 			} else if (action == 'Amend') {
-		}
+				changeNavPills('AMEND Dossier Enrolment');
+			}
 		} else if (type == 'ra') {
 			if (action == 'New') {
 				step2but.href = "rep_2_regActivity.html";
+				changeNavPills('NEW Regulatory Activity Enrolment');
+				$('#navStep2').prop('href', 'rep_2_regActivity.html');
+				$('#navStep3').prop('href', 'rep_3_regActivity.html');
 			} else if (action == 'Draft') {
+				changeNavPills('DRAFT Regulatory Activity Enrolment');
 			} else if (action == 'Amend') {
+				changeNavPills('AMEND Regulatory Activity Enrolment');
 			}
 		} else if (type == 'rt') {
-			//step2but.href = "rep_2_regTransaction.html";
-	/*
-		if (action == 'New') {
-			step2but.href = type + "_2_regTransaction.html";
-		} else if (action == 'Draft') {
-		} else if (action == 'Amend') {
-		}
-		*/
+			$('#navStep2').prop('href', 'rep_2_regTransaction.html');
+			$('#navStep3').prop('href', 'rep_3_regTransaction.html');
 		}
 	}
+}
+
+function changeNavPills(txtToChangeTo) {
+	//changes to navigation between steps when selecting an enrolment type
+	var navPills = $('#navREP');
+	var txt;
+	var index;
+	$(navPills).children().each(function() {
+		txt = $(this).find('a').text();
+		index = txt.indexOf('- ');
+		if (index == -1) {
+			$(this).find('a').text(txt + ' - ' + txtToChangeTo);
+		} else {
+			$(this).find('a').text(txt.substr(0,(index+2)) + txtToChangeTo);
+		}
+	});
 }
 </script>
 </body>
