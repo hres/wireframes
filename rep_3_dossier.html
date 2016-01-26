@@ -31,6 +31,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
 
+<style>
+	.boldFont {
+		font-weight: bold;
+	}
+	.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+			background-color: #2C9BEC!important;
+		}
+</style>
+
 </head>
 <body vocab="http://schema.org/" typeof="WebPage" onload="myFunction()">
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
@@ -110,8 +119,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <ol class="breadcrumb">
 <li><a href="http://www.canada.ca/en/index.html">Home</a></li>
 <li>Regulatory Enrolment Process - Step 1</li>
-<li>Regulatory Transaction (RT) Enrolment - Step 2</li>
-<li>Regulatory Transaction (RT) Enrolment - Step 3</li>
+<li>Dossier Enrolment - Step 2</li>
+<li>Dossier Enrolment - Step 3</li>
 </ol>
 </div>
 </div>
@@ -121,49 +130,52 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <h1 property="name" id="wb-cont">Regulatory Enrolment Process</h1>
 <div id="navigation">
 	<ul class="nav nav-pills" id="navREP">
-    	<li><a href="rep_1.html" id="navStep1"><b>Step 1</b> - NEW Regulatory Transaction Enrolment</a></li>
-    	<li class="active"><a href="rep_2_regTransaction.html" id="navStep2"><b>Step 2</b> - New Regulatory Transaction Enrolment</a></li>
-    	<li><a href="#" id="navStep3"><b>Step 3</b> - New Regulatory Transaction Enrolment</a></li>
+    	<li><a href="rep_1.html" class="boldFont" id="navStep1">Step 1 - NEW Dossier Enrolment</a></li>
+    	<li><a href="rep_2_dossier.html" class="boldFont" id="navStep2">Step 2 - New Dossier Enrolment</a></li>
+    	<li class="active"><a href="#" class="boldFont" id="navStep3">Step 3 - New Dossier Enrolment</a></li>
     </ul>
 </div>
 <section>
 
 	<br /><br />
-	<div class="panel panel-primary">
+	<div id="step1A" class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">STEP 3 - Attestation</h3>
 		</div>
 		<div class="panel-body">
 			<div class="well well-sm">
-			<div class="row" id="rtEnrolStep3Attest">
+			<div class="row" id="doEnrolStep3AttestOne">
 				<div class="col-sm-8">
 				<p>I, the undersigned, certify that the information in this request is accurate and complete.</p>
 				</div>
 				<div class="col-sm-4">
 					<div class="checkbox">
-						<label><input id="rtEnrolStep3Attest" type="checkbox" value="" /> I Attest</label>
+						<label><input id="doEnrolStep3AttestA" type="checkbox" value="" /> I Attest</label>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="well well-sm">
+			<div class="row" id="doEnrolStep3AttestTwo">
+				<div class="col-sm-8">
+				<p>I, the undersigned, certify that the Dossier ID issued from this request will be
+used within 6 month of the date-of-issue.</p>
+				</div>
+				<div class="col-sm-4">
+					<div class="checkbox">
+						<label><input id="doEnrolStep3AttestB" type="checkbox" value="" /> I Attest</label>
 					</div>
 				</div>
 			</div>
 			</div>
 			<div class="form-group">
-				<div class="row">
-					<div class="col-sm-7">
-						<h4>Authorized Official Information</h4>
-					</div>
-					<div class="col-sm-5">
-						<div class="checkbox">
-							<label><input id="rtEnrolmentAuthSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, rtEnrolmentAuthInfo)"/> Same Official as uploaded RA</label>
-						</div>
-					</div>
-				</div>
-				<div id="rtEnrolmentAuthInfo">
+				<h4>Authorized Official Information</h4>
 				<div class="well well-sm">
 				<div class="row">
 						<div class="form-group col-sm-2">
-							<label for="rtEnrolmentAuthSal" class="control-label">Salutation*</label>
+							<label for="doEnrolmentAuthSal" class="control-label">Salutation*</label>
                             <div class="">
-                                <select class="form-control input-sm full-width" name="rtEnrolmentAuthSal" id="rtEnrolmentAuthSal">
+                                <select class="form-control input-sm full-width" name="doEnrolmentAuthSal" id="doEnrolmentAuthSal">
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -173,66 +185,65 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                             </div>
 						</div>
 						<div class="form-group col-sm-5">
-							<label for="rtEnrolmentAuthGivenName" class="control-label">Given Name*</label>
+							<label for="doEnrolmentAuthGivenName" class="control-label">Given Name*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="rtEnrolmentAuthGivenName" placeholder="Enter Given Name">
+								<input type="text" class="form-control input-sm full-width" id="doEnrolmentAuthGivenName" placeholder="Enter Given Name">
 							</div>
 						</div>
 						<div class="form-group col-sm-5">
-							<label for="rtEnrolmentAuthSurname" class="control-label">Surname*</label>
+							<label for="doEnrolmentAuthSurname" class="control-label">Surname*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="rtEnrolmentAuthSurname" placeholder="Enter Surname" >
+								<input type="text" class="form-control input-sm full-width" id="doEnrolmentAuthSurname" placeholder="Enter Surname" >
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="form-group col-sm-6">
-							<label for="rtEnrolmentAuthTitle" class="control-label">Title*</label>
+							<label for="doEnrolmentAuthTitle" class="control-label">Title*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="rtEnrolmentAuthTitle" placeholder="Enter Title" >
+								<input type="text" class="form-control input-sm full-width" id="doEnrolmentAuthTitle" placeholder="Enter Title" >
 							</div>
 						</div>
 						<div class="form-group col-sm-6">
-							<label for="rtEnrolmentAuthCompName" class="control-label">Name of Company that the Authorized Official Belongs*</label>
+							<label for="doEnrolmentAuthCompName" class="control-label">Name of Company that the Authorized Official Belongs*</label>
                             <div class="">
-								<input type="text" class="form-control input-sm full-width" id="rtEnrolmentAuthCompName" placeholder="Enter Company Name" >
+								<input type="text" class="form-control input-sm full-width" id="doEnrolmentAuthCompName" placeholder="Enter Company Name" >
 							</div>
 						</div>
 					</div>
 						<div class="row">
 						<div class="form-group col-sm-3">
-							<label for="rtEnrolmentAuthTelNo" class="control-label">Telephone No*</label>
+							<label for="doEnrolmentAuthTelNo" class="control-label">Telephone No*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="rtEnrolmentAuthTelNo" placeholder="Enter Telephone No." >
+								<input type="text" class="form-control input-sm full-width" id="doEnrolmentAuthTelNo" placeholder="Enter Telephone No." >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
-							<label for="rtEnrolmentAuthTelExt" class="control-label">Ext</label>
+							<label for="doEnrolmentAuthTelExt" class="control-label">Ext</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="rtEnrolmentAuthTelExt" placeholder="Enter Extension" >
-							</div>
-						</div>
-						<div class="form-group col-sm-4">
-							<label for="rtEnrolmentAuthEmail" class="control-label">Email*</label>
-							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="rtEnrolmentAuthEmail" placeholder="Enter Email" />
+								<input type="text" class="form-control input-sm full-width" id="doEnrolmentAuthTelExt" placeholder="Enter Extension" >
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
-							<label for="rtEnrolmentAuthFaxNo" class="control-label">Fax No.</label>
+							<label for="doEnrolmentAuthFaxNo" class="control-label">Fax No.</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="rtEnrolmentAuthFaxNo" placeholder="Enter Fax No." >
+								<input type="text" class="form-control input-sm full-width" id="doEnrolmentAuthFaxNo" placeholder="Enter Fax No." >
+							</div>
+						</div>
+						<div class="form-group col-sm-4">
+							<label for="doEnrolmentAuthEmail" class="control-label">Email*</label>
+							<div class="">
+								<input type="text" class="form-control input-sm full-width" id="doEnrolmentAuthEmail" placeholder="Enter Email" />
 							</div>
 						</div>
 					</div>
 					</div>
-				</div>
 			</div>
 		</div>
 	</div>
 <div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
-            <a class="btn btn-primary" href="rep_2_regTransaction.html">&lt; Return to Step 2</a> <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="">Generate Regulatory Transaction File</a>
+            <a class="btn btn-primary" href="rep_2_dossier.html">&lt; Return to Step 2</a> <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="">Submit To Health Canada</a>
         </div>
 </div>
 </section>
@@ -340,10 +351,32 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
-/*To Show and Hide Div -> if optYes is selected, content will hide; otherwise it will show*/
-       function ShowHideDivGen(optYes, content) { //general case
-        content.style.display = optYes.checked ? "none" : "block";
-       }
+/*
+	
+		$('p select[name=iline]').change(function(e){
+  
+  if ($('p select[name=iline]').val() == '0'){
+	 
+	 
+  }
+  else if ($('p select[name=iline]').val() == '1'){
+	 
+	 
+  }
+  else if ($('p select[name=iline]').val() == '2'){
+	 
+  }
+  else if ($('p select[name=iline]').val() == '3'){
+	 
+  }
+  else if ($('p select[name=iline]').val() == '4'){
+	 
+  }
+  else{
+  }
+});
+
+*/
 </script>
 </body>
 </html>
