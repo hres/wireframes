@@ -32,6 +32,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
 
+<style>
+	.boldFont {
+		font-weight: bold;
+	}
+	.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+			background-color: #2C9BEC!important;
+		}
+</style>
+
 </head>
 <body vocab="http://schema.org/" typeof="WebPage"> <!--onload="myFunction()">-->
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
@@ -120,9 +129,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <h1 property="name" id="wb-cont">Regulatory Enrolment Process</h1>
 <div id="navigation">
 	<ul class="nav nav-pills" id="navREP">
-    	<li class="active"><a href="#" id="navStep1"><b>Step 1</b></a></li>
-    	<li><a href="#" id="navStep2"><b>Step 2</b></a></li>
-    	<li><a href="#" id="navStep3"><b>Step 3</b></a></li>
+    	<li class="active"><a class="boldFont" href="#" id="navStep1">Step 1</a></li>
+    	<li><a class="boldFont" href="#" id="navStep2">Step 2</a></li>
+    	<li><a class="boldFont" href="#" id="navStep3">Step 3</a></li>
     </ul>
 </div>
 <section>
@@ -135,12 +144,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		<div class="panel-body">
 			<div class="form-group">
 				<fieldset>
-					<label for="drugProduct" class="form-radio form-label-inline">
-					<input type="radio" name="optionProductLine"  />
+					<label for="productLineType1" class="form-radio form-label-inline">
+					<input id="productLineType1" type="radio" name="optionProductLine"  />
 					Pharmaceutical or Biologic Drug Product</label>
 					&nbsp;&nbsp;
-					<label for="medDevice" class="form-radio form-label-inline">
-						<input type="radio"  name="optionProductLine" />
+					<label for="productLineType2" class="form-radio form-label-inline">
+						<input id="productLineType2" type="radio"  name="optionProductLine" />
 						Medical Device</label>
 				</fieldset>
 			</div>
@@ -166,75 +175,77 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			
 				<div id="coType" style="display: none;">
 					<div class="form-group">
-						<label for="coNewEnFile" class="form-radio form-label-inline">
+						<label for="coTypeOptionNew" class="form-radio form-label-inline">
 						<input type="radio" name="coTypeOption" id="coTypeOptionNew" onclick="optButtonSelect('co','New')"/>
 								Start a NEW Company Enrolment</label>
 					</div>
-					<div class="form-group">
-						<label for="coDrftFile" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption" id="coTypeOptionDraft" onclick="optButtonSelect('co','Draft')"/>
-							Complete your DRAFT Company</label>
+					<div class="row">
+						<div class="form-group">
+							<label for="coTypeOptionDraft" class="form-radio form-label-inline">
+							<input type="radio" name="coTypeOption" id="coTypeOptionDraft" onclick="optButtonSelect('co','Draft')"/>
+								Complete your DRAFT Company</label>
+						</div>
+						<div class="form-group" id="coDrftGrp" style="display:none">
+							<label for="coDrftFileUpload">Upload Draft Enrolment file:</label>
+							<input type="file" id="coDrftFileUpload" />
+						</div>
 					</div>
 					<div class="form-group">
-						<label for="coDrftFileUpload">Upload Draft Enrolment file:</label>
-						<input type="file" id="coDrftFileUpload" />
-					</div>
-					<div class="form-group">
-						<label for="coAmdFile" class="form-radio form-label-inline">
+						<label for="coTypeOptionAmend" class="form-radio form-label-inline">
 						<input type="radio" name="coTypeOption" id="coTypeOptionAmend" onclick="optButtonSelect('co','Amend')"/>
 							AMEND you Company Enrolment File</label>
 					</div>
-					<div class="form-group">
+					<div class="form-group" id="coAmdGrp" style="display:none">
 						<label for="coAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
 						<input type="file" id="coAmdFileUpload" />
 					</div>
 				</div>
 				<div id="doType" style="display: none;">
 					<div class="form-group">
-						<label for="doNewEnFile" class="form-radio form-label-inline">
+						<label for="doTypeOptionNew" class="form-radio form-label-inline">
 						<input type="radio" name="doTypeOption" id="doTypeOptionNew" onclick="optButtonSelect('do','New')"/>
 							Start a NEW Dossier Enrolment</label>
 					</div>
 					<div class="form-group">
-						<label for="doDrftFile" class="form-radio form-label-inline">
+						<label for="doTypeOptionDraft" class="form-radio form-label-inline">
 						<input type="radio" name="doTypeOption" id="doTypeOptionDraft" onclick="optButtonSelect('do','Draft')"/>
 							Complete your DRAFT Dossier</label>
 					</div>
-					<div class="form-group">
+					<div class="form-group" id="doDrftGrp" style="display:none">
 						<label for="doDrftFileUpload">Upload Draft Enrolment file:</label>
 						<input type="file" id="doDrftFileUpload" />
 					</div>
 					<div class="form-group">
-						<label for="doAmdFile" class="form-radio form-label-inline">
+						<label for="doTypeOptionAmend" class="form-radio form-label-inline">
 						<input type="radio" name="doTypeOption" id="doTypeOptionAmend" onclick="optButtonSelect('do','Amend')"/>
 							AMEND you Dossier Enrolment File</label>
 					</div>
-					<div class="form-group">
+					<div class="form-group"  id="doAmdGrp" style="display:none">
 						<label for="doAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
 						<input type="file" id="doAmdFileUpload" />
 					</div>
 					</div>
 				<div id="raType" style="display: none;">
 					<div class="form-group">
-						<label for="raNewEnFile" class="form-radio form-label-inline">
+						<label for="raTypeOptionNew" class="form-radio form-label-inline">
 						<input type="radio" name="raTypeOption" id="raTypeOptionNew" onclick="optButtonSelect('ra','New')"/>
 							Start a NEW Regulatory Activity Enrolment</label>
 					</div>
 					<div class="form-group">
-						<label for="raDrftFile" class="form-radio form-label-inline">
+						<label for="raTypeOptionDraft" class="form-radio form-label-inline">
 						<input type="radio" name="raTypeOption" id="raTypeOptionDraft" onclick="optButtonSelect('ra','Draft')"/>
 							Complete your DRAFT Regulatory Activity</label>
 					</div>
-					<div class="form-group">
+					<div class="form-group" id="raDrftGrp" style="display:none">
 						<label for="raDrftFileUpload">Upload Draft Enrolment file:</label>
 						<input type="file" id="raDrftFileUpload" />
 					</div>
 					<div class="form-group">
-						<label for="raAmdFile" class="form-radio form-label-inline">
+						<label for="raTypeOptionAmend" class="form-radio form-label-inline">
 						<input type="radio" name="raTypeOption" id="raTypeOptionAmend" onclick="optButtonSelect('ra','Amend')"/>
 							AMEND you Regulatory Activity Enrolment File</label>
 					</div>
-					<div class="form-group">
+					<div class="form-group" id="raAmdGrp" style="display:none">
 						<label for="raAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
 						<input type="file" id="raAmdFileUpload" />
 					</div>
@@ -613,7 +624,8 @@ function checkEnrolTypeSelection() { //previously obj
 		raAntDate.style.display = "none";
 		
 		changeNavPills('Regulatory Transaction');
-		
+		$('#navStep2').prop('href', 'rep_2_regTransaction.html');
+		$('#navStep3').prop('href', 'rep_3_regTransaction.html');
 		step2but.href = "rep_2_regTransaction.html";
 		
 	}else {
@@ -641,10 +653,19 @@ function optButtonSelect(type, action) {
 				changeNavPills('NEW Company Enrolment');
 				$('#navStep2').prop('href', 'rep_2_company.html');
 				$('#navStep3').prop('href', 'rep_3_company.html');
+				$('#coDrftGrp').hide();
+				$('#coAmdGrp').hide();
 			} else if (action == 'Draft') {
 				changeNavPills('DRAFT Company Enrolment');
+				$('#coDrftGrp').show();
+				$('#coAmdGrp').hide();
 			} else if (action == 'Amend') {
 				changeNavPills('AMEND Company Enrolment');
+				$('#coDrftGrp').hide();
+				$('#coAmdGrp').show();
+			} else {
+				$('#coDrftGrp').hide();
+				$('#coAmdGrp').hide();
 			}
 		} else if (type == 'do') {
 			if (action == 'New') {
@@ -652,10 +673,19 @@ function optButtonSelect(type, action) {
 				changeNavPills('NEW Dossier Enrolment');
 				$('#navStep2').prop('href', 'rep_2_dossier.html');
 				$('#navStep3').prop('href', 'rep_3_dossier.html');
+				$('#doDrftGrp').hide();
+				$('#doAmdGrp').hide();
 			} else if (action == 'Draft') {
 				changeNavPills('DRAFT Dossier Enrolment');
+				$('#doDrftGrp').show();
+				$('#doAmdGrp').hide();
 			} else if (action == 'Amend') {
 				changeNavPills('AMEND Dossier Enrolment');
+				$('#doDrftGrp').hide();
+				$('#doAmdGrp').show();
+			} else {
+				$('#doDrftGrp').hide();
+				$('#doAmdGrp').hide();
 			}
 		} else if (type == 'ra') {
 			if (action == 'New') {
@@ -663,14 +693,22 @@ function optButtonSelect(type, action) {
 				changeNavPills('NEW Regulatory Activity Enrolment');
 				$('#navStep2').prop('href', 'rep_2_regActivity.html');
 				$('#navStep3').prop('href', 'rep_3_regActivity.html');
+				$('#raDrftGrp').hide();
+				$('#raAmdGrp').hide();
 			} else if (action == 'Draft') {
 				changeNavPills('DRAFT Regulatory Activity Enrolment');
+				$('#raDrftGrp').show();
+				$('#raAmdGrp').hide();
 			} else if (action == 'Amend') {
 				changeNavPills('AMEND Regulatory Activity Enrolment');
+				$('#raDrftGrp').hide();
+				$('#raAmdGrp').show();
+			} else {
+				$('#raDrftGrp').hide();
+				$('#raAmdGrp').hide();
 			}
 		} else if (type == 'rt') {
-			$('#navStep2').prop('href', 'rep_2_regTransaction.html');
-			$('#navStep3').prop('href', 'rep_3_regTransaction.html');
+			
 		}
 	}
 }
