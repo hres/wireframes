@@ -31,6 +31,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
 
+<style>
+	.boldFont {
+		font-weight: bold;
+	}
+	.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+			background-color: #2C9BEC!important;
+		}
+</style>
+
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
@@ -120,9 +129,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <h1 property="name" id="wb-cont">Regulatory Enrolment Process</h1>
 <div id="navigation">
 	<ul class="nav nav-pills" id="navREP">
-    	<li><a href="rep_1.html" id="navStep1"><b>Step 1</b> - NEW Regulatory Transaction Enrolment</a></li>
-    	<li class="active"><a href="#" id="navStep2"><b>Step 2</b> - New Regulatory Transaction Enrolment</a></li>
-    	<li><a href="rep_3_regTransaction.html" id="navStep3"><b>Step 3</b> - New Regulatory Transaction Enrolment</a></li>
+    	<li><a href="rep_1.html" class="boldFont" id="navStep1">Step 1 - NEW Regulatory Transaction Enrolment</a></li>
+    	<li class="active"><a href="#" class="boldFont" id="navStep2">Step 2 - New Regulatory Transaction Enrolment</a></li>
+    	<li><a href="rep_3_regTransaction.html" class="boldFont" id="navStep3">Step 3 - New Regulatory Transaction Enrolment</a></li>
     </ul>
 </div>
 <section>
@@ -134,45 +143,57 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		</div>
 		<div class="panel-body">
 		
-		<table>
-			<tr>
-				<td><div class="form-group form-inline">
-					<label for="rtEnrolmenteCTD" class="control-label" style="margin-right:0.5cm">Is this an eCTD transaction?</label>
-						<select class="form-control input-sm"  name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
-						<option label=" "></option>
-						<option value="1">Yes</option>
-						<option value="2">No</option>
-						</select>
-				</div></td>
-				<td><div class="form-group form-inline">
-					<label for="rtEnrolmentSeqNo" class="control-label col-sm-5" style="margin-left:1cm; margin-right:0.5cm">Sequence Number*</label>
-							<input type="text" class="form-control input-sm" id="rtEnrolmentSeqNo" disabled="disabled">
-				</div></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><div class="form-group form-inline">
-					<label for="rtEnrolmentRelSeqNo" class="control-label col-sm-5" style="margin-left:1cm; margin-right:0.5cm">Related Sequence Number:</label>
-							<input type="text" class="form-control input-sm" id="rtEnrolmentRelSeqNo" disabled="disabled">
-				</div></td>
-			</tr>
-			<tr><td colspan="2">&nbsp;</td></tr> <!--empty row-->
-			<tr>
-				<td><div class="form-group form-inline">
-					<label for="rtEnrolmentSolInfo" class="control-label" style="margin-right:0.5cm">Is this solicited information?</label>
-						<select class="form-control input-sm" name="rtEnrolmentSolInfo" id="rtEnrolmentSolInfo" onchange="checkOptionSol(this)">
-						<option label=" "></option>
-						<option value="1">Yes</option>
-						<option value="2">No</option>
-						</select>
+		<div id="mainInfo">
+			<div class="row">
+					<div class="col-sm-3">
+						<div class="form-group form-inline">
+							<label for="rtEnrolmenteCTD" class="control-label col-sm-9">Is this an eCTD transaction?</label>
+							<select class="form-control input-sm col-sm-3"  name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
+								<option label=" "></option>
+								<option value="1">Yes</option>
+								<option value="2">No</option>
+							</select>
+						</div>
 					</div>
-				</td>
-				<td><div class="form-group form-inline">
-					<label for="rtEnrolmentReqSolInfo" class="control-label col-sm-5" style="margin-left:1cm; margin-right:0.5cm">Requester of Solicited Information</label>
-							<input type="text" class="form-control input-sm" id="rtEnrolmentReqSolInfo" disabled="disabled">
-				</div></td>
-			</tr>
-		</table>
+					<div class="col-sm-9">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group form-inline">
+									<label for="rtEnrolmentSeqNo" class="control-label col-sm-3" >Sequence Number*</label>
+									<input type="text" class="form-control input-sm col-sm-9" id="rtEnrolmentSeqNo" disabled="disabled">
+								</div>
+							</div>
+						</div>
+						<div class="row" style="margin-top: 10px">
+							<div class="col-sm-12">
+								<div class="form-group form-inline">
+									<label for="rtEnrolmentRelSeqNo" class="control-label col-sm-3">Related Sequence Number:</label>
+									<input type="text" class="form-control input-sm" id="rtEnrolmentRelSeqNo" disabled="disabled">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="form-group form-inline">
+						<label for="rtEnrolmentSolInfo" class="control-label col-sm-9">Is this solicited information?</label>
+							<select class="form-control input-sm col-sm-3" name="rtEnrolmentSolInfo" id="rtEnrolmentSolInfo" onchange="checkOptionSol(this)">
+								<option label=" "></option>
+								<option value="1">Yes</option>
+								<option value="2">No</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-sm-9">
+						<div class="form-group form-inline">
+							<label for="rtEnrolmentReqSolInfo" class="control-label col-sm-3">Requester of Solicited Information</label>
+							<input type="text" class="form-control input-sm " id="rtEnrolmentReqSolInfo" disabled="disabled">
+						</div>
+					</div>
+				</div>
+		</div>
+		<div id="raProjManager">
 			<h5>Name of Regulatory Project Manager [if known]:</h5>
 			<div class="row">
 				<div class="col-sm-6 form-group">
@@ -184,6 +205,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<input type="text" class="form-control input-sm full-width" id="rtRegProjManagerName2">
 				</div>
 			</div>
+		</div>
 			
 			<div id="rtBox" class="well well-sm">
 				<div class="row">
