@@ -1,0 +1,22 @@
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: #2C9BEC!important;
+}
+
+span.glyphicon-trash {
+	font-size: 12px !important;
+}
+
+span.glyphicon-remove {
+	font-size: 20px !important;
+}
+
+.deleteRef {
+	min-height: 20px !important; 
+	line-height: 1; 
+	margin-left: 2cm;
+}
+
+summary.heightAdjust {
+	min-height: 1cm !important;
+    padding-top: 0.2cm !important;
+}
