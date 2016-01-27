@@ -2,8 +2,8 @@
 	background-color: #2C9BEC!important;
 }
 
-span.glyphicon-trash {
-	font-size: 27px !important;
+span.glyphicon.glyphicon-trash {
+	font-size: 15px !important;
 }
 
 span.glyphicon.glyphicon-remove.removeSize {
