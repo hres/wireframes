@@ -152,26 +152,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="row">
 				<div class="form-group">
 					<label for="raEnrolmentActivityType" class="col-sm-3 control-label">Regulatory Activity Type*</label>
-                    <div class="">
-						<select class="col-sm-6 form-control input-sm" name="raEnrolmentActivityType" id="raEnrolmentActivityType">
+					<input class="form-control input-sm full-width" type="text" id="raEnrolmentActivityType" name="raEnrolmentActivityType" list="raRegActivityTypeSuggestions" />
+                    <datalist id="raRegActivityTypeSuggestions">
+						<!--[if lte IE 9]><select><![endif]-->
 						<option label=" "></option>
-						<option value="1">Abbreviated New Drug Submission (ANDS)</option>
-						<option value="2">Administrative manufacturer name/product name change/licensing agreements (ADMIN)</option>
-						<option value="3">Clinical Trial Application (CTA)</option>
-						<option value="4">Clinical Trial Application Amendment (CTA-A)</option>
-						<option value="5">Drug Identification Number submission - all types (DIN)</option>
-						<option value="6">New Drug Submission (NDS)</option>
-						<option value="7">Notifiable Change (NC)</option>
-						<option value="8">Post-Authorization Division 1 (PDC)</option>
-						<option value="9">Supplemental Abbreviated New Drug Submission (SANDS)</option>
-						<option value="10">Supplemental New Drug Submission (SNDS)</option>
-						<option value="11">Veterinary Abbreviated New Drug Submission (VANDS)</option>
-						<option value="12">Veterinary Drug Identification Number Submission - all types (VDIN)</option>
-						<option value="13">Veterinary Investigational New Drug (VIND)</option>
-						<option value="14">Veterinary Investigational New Drug Amendment (VIND-AM)</option>
-						<option value="15">Veterinary New Drug Submission (VINDS)</option>
-						<option value="16">Veterinary Notifiable Change (VNC)</option>
-						
+						<option value="Abbreviated New Drug Submission (ANDS)">Abbreviated New Drug Submission (ANDS)</option>
+						<option value="Administrative manufacturer name/product name change/licensing agreements (ADMIN)">Administrative manufacturer name/product name change/licensing agreements (ADMIN)</option>
+						<option value="Clinical Trial Application (CTA)">Clinical Trial Application (CTA)</option>
+						<option value="Clinical Trial Application Amendment (CTA-A)">Clinical Trial Application Amendment (CTA-A)</option>
+						<option value="Drug Identification Number submission - all types (DIN)">Drug Identification Number submission - all types (DIN)</option>
+						<option value="New Drug Submission (NDS)">New Drug Submission (NDS)</option>
+						<option value="Notifiable Change (NC)">Notifiable Change (NC)</option>
+						<option value="Post-Authorization Division 1 (PDC)">Post-Authorization Division 1 (PDC)</option>
+						<option value="Supplemental Abbreviated New Drug Submission (SANDS)">Supplemental Abbreviated New Drug Submission (SANDS)</option>
+						<option value="Supplemental New Drug Submission (SNDS)">Supplemental New Drug Submission (SNDS)</option>
+						<option value="Veterinary Abbreviated New Drug Submission (VANDS)">Veterinary Abbreviated New Drug Submission (VANDS)</option>
+						<option value="Veterinary Drug Identification Number Submission - all types (VDIN)">Veterinary Drug Identification Number Submission - all types (VDIN)</option>
+						<option value="Veterinary Investigational New Drug (VIND)">Veterinary Investigational New Drug (VIND)</option>
+						<option value="Veterinary Investigational New Drug Amendment (VIND-AM)">Veterinary Investigational New Drug Amendment (VIND-AM)</option>
+						<option value="Veterinary New Drug Submission (VINDS)">Veterinary New Drug Submission (VINDS)</option>
+						<option value="Veterinary Notifiable Change (VNC)">Veterinary Notifiable Change (VNC)</option>
+						<!--[if lte IE 9]></select><![endif]-->
                         </select>
                     </div>
 				</div>
