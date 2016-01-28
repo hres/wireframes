@@ -174,7 +174,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 							<div class="form-group col-sm-3">
 								<label for="coEnrolmentManuAddrCountry" class="control-label">Country*</label>
-								<input class="form-control input-sm full-width" type="text" id="coEnrolmentManuAddrCountry" name="coEnrolmentManuAddrCountry" list="CountrySuggestions" onchange="changeCountry(this.value, 'coEnrolmentManuAddrProv')"/>
+								<input class="form-control input-sm full-width" type="text" id="coEnrolmentManuAddrCountry" name="coEnrolmentManuAddrCountry" list="CountrySuggestions" onchange="changeSuggestions(this.value, 'coEnrolmentManuAddrProv')"/>
 									<datalist id="CountrySuggestions">
 										<!--[if lte IE 9]><select><![endif]-->
 										<option label=" "></option>
@@ -653,7 +653,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentRegMailAddrCountry" class="control-label">Country*</label>
-                            <input class="form-control input-sm full-width" type="text" id="coEnrolmentRegMailAddrCountry" name="coEnrolmentManuAddrCountry" list="CountrySuggestions" onchange="changeCountry(this.value, 'coEnrolmentRegMailAddrProv')"/>
+                            <input class="form-control input-sm full-width" type="text" id="coEnrolmentRegMailAddrCountry" name="coEnrolmentManuAddrCountry" list="CountrySuggestions" onchange="changeSuggestions(this.value, 'coEnrolmentRegMailAddrProv')"/>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentRegMailAddrProv" class="control-label">Province/State*</label>
@@ -837,7 +837,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentCanImporterAddrCountry" class="control-label">Country*</label>
-                            <input class="form-control input-sm" type="text" id="coEnrolmentCanImporterAddrCountry" name="coEnrolmentCanImporterAddrCountry" list="CountrySuggestions" onchange="changeCountry(this.value, 'coEnrolmentCanImporterAddrProv')"/>
+                            <input class="form-control input-sm" type="text" id="coEnrolmentCanImporterAddrCountry" name="coEnrolmentCanImporterAddrCountry" list="CountrySuggestions" onchange="changeSuggestions(this.value, 'coEnrolmentCanImporterAddrProv')"/>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentCanImporterAddrProv" class="control-label">Province/State*</label>
@@ -917,7 +917,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentBillingAddrCountry" class="control-label">Country*</label>
-							<input type="text" id="coEnrolmentBillingAddrCountry" name="coEnrolmentBillingAddrCountry" list="CountrySuggestions" onchange="changeCountry(this.value, 'coEnrolmentBillingAddrProv')"/>
+							<input type="text" id="coEnrolmentBillingAddrCountry" name="coEnrolmentBillingAddrCountry" list="CountrySuggestions" onchange="changeSuggestions(this.value, 'coEnrolmentBillingAddrProv')"/>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentBillingAddrProv" class="control-label">Province /State*</label>
@@ -1154,7 +1154,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         content.style.display = optYes.checked ? "none" : "block";
        }
 	   
-	   function changeCountry(txtBoxCountryValue, txtBoxProvStateId) {
+	   function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
 		var provStateTextBox = document.getElementById(txtBoxProvStateId);
 			if (txtBoxCountryValue == 'Canada') {
 				provStateTextBox.setAttribute('list','canProvSuggestions');
