@@ -174,8 +174,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 							<div class="form-group col-sm-3">
 								<label for="coEnrolmentManuAddrCountry" class="control-label">Country*</label>
-								<input type="text" id="coEnrolmentManuAddrCountry" name="coEnrolmentManuAddrCountry" list="CountrySuggestions" onchange="changeCountry(this.value, 'coEnrolmentManuAddrProv')"/>
+								<input class="form-control input-sm full-width" type="text" id="coEnrolmentManuAddrCountry" name="coEnrolmentManuAddrCountry" list="CountrySuggestions" onchange="changeCountry(this.value, 'coEnrolmentManuAddrProv')"/>
 									<datalist id="CountrySuggestions">
+										<!--[if lte IE 9]><select><![endif]-->
 										<option label=" "></option>
 										<option value="Canada">Canada</option>
 										<option value="United States">United States</option>
@@ -416,12 +417,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										<option value="Yugoslavia">Yugoslavia</option>
 										<option value="Zambia">Zambia</option>
 										<option value="Zimbabwe">Zimbabwe</option>
-									</select>
+										<!--[if lte IE 9]></select><![endif]-->
+									</datalist>
 							</div>
 							<div class="form-group col-sm-3">
 								<label for="coEnrolmentManuAddrProv" class="control-label">Province/State*</label>
-								<input type="text" id="coEnrolmentManuAddrProv" name="coEnrolmentManuAddrProv" list="" />
+								<input class="form-control input-sm full-width" type="text" id="coEnrolmentManuAddrProv" name="coEnrolmentManuAddrProv" list="" />
 									<datalist id="canProvSuggestions">
+									<!--[if lte IE 9]><select><![endif]-->
 										<option label=" "></option>
 										<option value="Alberta">Alberta</option>
 										<option value="British Columbia">British Columbia</option>
@@ -436,8 +439,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										<option value="Quebec">Quebec</option>
 										<option value="Saskatchewan">Saskatchewan</option>
 										<option value="Yukon">Yukon</option>
+										<!--[if lte IE 9]></select><![endif]-->
 									</datalist>
 									<datalist id="usStateSuggestions">
+									<!--[if lte IE 9]><select><![endif]-->
 										<option  value="Alabama">Alabama</option>
 										<option  value="Alabama">Alabama</option>
 										<option  value="Arkansas">Arkansas</option>
@@ -487,6 +492,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										<option  value="West Virginia">West Virginia</option>
 										<option  value="Wisconsin">Wisconsin</option>
 										<option  value="Wyoming">Wyoming</option>
+										<!--[if lte IE 9]></select><![endif]-->
 									</datalist>
 							</div>
 							<div class="form-group col-sm-3">
@@ -647,11 +653,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentRegMailAddrCountry" class="control-label">Country*</label>
-                            <input type="text" id="coEnrolmentRegMailAddrCountry" name="coEnrolmentManuAddrCountry" list="CountrySuggestions" onchange="changeCountry(this.value, 'coEnrolmentRegMailAddrProv')"/>
+                            <input class="form-control input-sm full-width" type="text" id="coEnrolmentRegMailAddrCountry" name="coEnrolmentManuAddrCountry" list="CountrySuggestions" onchange="changeCountry(this.value, 'coEnrolmentRegMailAddrProv')"/>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentRegMailAddrProv" class="control-label">Province/State*</label>
-							<input type="text" id="coEnrolmentRegMailAddrProv" name="coEnrolmentRegMailAddrProv" list="CountrySuggestions" />
+							<input class="form-control input-sm full-width" type="text" id="coEnrolmentRegMailAddrProv" name="coEnrolmentRegMailAddrProv" list="CountrySuggestions" />
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentRegMailAddrPostal" class="control-label">Postal / ZIP Code*</label>
@@ -831,11 +837,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentCanImporterAddrCountry" class="control-label">Country*</label>
-                            <input type="text" id="coEnrolmentCanImporterAddrCountry" name="coEnrolmentCanImporterAddrCountry" list="CountrySuggestions" onchange="changeCountry(this.value, 'coEnrolmentCanImporterAddrProv')"/>
+                            <input class="form-control input-sm" type="text" id="coEnrolmentCanImporterAddrCountry" name="coEnrolmentCanImporterAddrCountry" list="CountrySuggestions" onchange="changeCountry(this.value, 'coEnrolmentCanImporterAddrProv')"/>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentCanImporterAddrProv" class="control-label">Province/State*</label>
-                            <input type="text" id="coEnrolmentCanImporterAddrProv" name="coEnrolmentCanImporterAddrProv" list="" />
+                            <input class="form-control input-sm" type="text" id="coEnrolmentCanImporterAddrProv" name="coEnrolmentCanImporterAddrProv" list="" />
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentCanImporterAddrPostal" class="control-label">Postal / ZIP Code*</label>
