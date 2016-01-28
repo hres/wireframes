@@ -648,6 +648,7 @@ function optButtonSelect(type, action) {
 				$('#coAmdGrp').hide();
 			} else if (action == 'Draft') {
 				changeNavPills('DRAFT Company Enrolment');
+				$('#navStep2').prop('href', 'rep_2_company_amend.html');
 				$('#coDrftGrp').show();
 				$('#coAmdGrp').hide();
 			} else if (action == 'Amend') {
