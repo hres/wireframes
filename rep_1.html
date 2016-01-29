@@ -653,6 +653,7 @@ function optButtonSelect(type, action) {
 			} else if (action == 'Amend') {
 				changeNavPills('AMEND Company Enrolment');
 				$('#navStep2').prop('href', 'rep_2_company_amend.html');
+				step2but.href = "rep_2_company_amend.html";
 				$('#coDrftGrp').hide();
 				$('#coAmdGrp').show();
 			} else {
