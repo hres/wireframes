@@ -674,6 +674,8 @@ function optButtonSelect(type, action) {
 				$('#doAmdGrp').hide();
 			} else if (action == 'Amend') {
 				changeNavPills('AMEND Dossier Enrolment');
+				$('#navStep2').prop('href', 'rep_2_dossier_amend.html');
+				step2but.href = "rep_2_dossier_amend.html";
 				$('#doDrftGrp').hide();
 				$('#doAmdGrp').show();
 			} else {
