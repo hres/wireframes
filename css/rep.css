@@ -20,3 +20,8 @@ summary.heightAdjust {
 	min-height: 1cm !important;
     padding-top: 0.2cm !important;
 }
+
+div.blackBorder {
+	border: 1px solid;
+	padding: 15px;
+} 
