@@ -122,9 +122,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <h1 property="name" id="wb-cont">Regulatory Enrolment Process</h1>
 <div id="navigation">
 	<ul class="nav nav-pills" id="navREP">
-    	<li><a href="rep_1.html" id="navStep1" class="boldFont">Step 1 - NEW Dossier Enrolment</a></li>
-    	<li class="active"><a href="#" id="navStep2" class="boldFont">Step 2 - NEW Dossier Enrolment</a></li>
-    	<li><a href="rep_3_dossier.html" id="navStep3" class="boldFont">Step 3 - NEW Dossier Enrolment</a></li>
+    	<li><a href="rep_1.html" id="navStep1" class="boldFont">Step 1 - AMEND Dossier Enrolment</a></li>
+    	<li class="active"><a href="#" id="navStep2" class="boldFont">Step 2 - AMEND Dossier Enrolment</a></li>
+    	<li><a href="rep_3_dossier.html" id="navStep3" class="boldFont">Step 3 - AMEND Dossier Enrolment</a></li>
     </ul>
 </div>
 <section>
@@ -132,16 +132,29 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	<br /><br />
 	<div id="step1A" class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">STEP 2 - Dossier Information</h3>
+            <h3 class="panel-title">STEP 2 - Amend Dossier Information</h3>
 		</div>
 		<div class="panel-body">
 			<!-- main information-->
-			<div id="doMainInfo">
+			<div id="doAmendMainInfo" class="panel panel-default">
+				<header class="panel-heading">
+					<div class="row">
+						<div class="col-sm-8">
+							<h4>A - Dossier Information</h4>
+						</div>
+						<div class="col-sm-4">
+							<div class="checkbox">
+								<label><input id="doEnrolmentAmendMainInfo" type="checkbox" value="" onclick="enableDisableDivArray(this, [doAmendMainInfoBody])" />Amend Dossier Info.</label>
+							</div>
+						</div>
+					</div>
+				</header>
+			<div class="panel-body" id="doAmendMainInfoBody">
 			<div class="row">
 				<div class="form-group col-sm-4">
-					<label for="doEnrolmentType" class="control-label">Dossier Type*</label>
+					<label for="doAmendEnrolmentType" class="control-label">Dossier Type*</label>
                      <div class="">
-						<select class="form-control input-sm full-width" name="doEnrolmentType" id="doEnrolmentType">
+						<select class="form-control input-sm full-width readOnly" name="doAmendEnrolmentType" id="doAmendEnrolmentType" disabled="true">
                             <option label=" "></option>
                             <option value="1">Biologic</option>
                             <option value="2">Pharmaceutical</option>
@@ -153,40 +166,52 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</div>
 			<div class="row">
 				<div class="form-group col-sm-12">
-					<label for="doEnrolmentProductName">Brand or Proprietary or Product Name (should be the same as the brand name on the product label)*</label>
-					<input type="text" class="form-control input-sm full-width" id="doEnrolmentProductName" placeholder="Enter Name" />
+					<label for="doAmendEnrolmentProductName">Brand or Proprietary or Product Name (should be the same as the brand name on the product label)*</label>
+					<input type="text" class="form-control input-sm full-width" id="doAmendEnrolmentProductName" placeholder="Enter Name" disabled="true"/>
 				</div>
 			</div>
 			<div class="row">
 				<div class="form-group col-sm-12">
-					<label for="doEnrolmentProductName">Proper, Common or Non-Propietary Name*</label>
-					<input type="text" class="form-control input-sm full-width" id="doEnrolmentProductName" placeholder="Enter Name" />
+					<label for="doAmendEnrolmentProductName">Proper, Common or Non-Propietary Name*</label>
+					<input type="text" class="form-control input-sm full-width" id="doAmendEnrolmentProductName" placeholder="Enter Name" disabled="true"/>
 				</div>
 			</div>
 			<div class="row">
 				<div class="form-group col-sm-8">
-					<label for="doEnrolmentId">Related Dossier ID [If applicable]</label>
-					<input type="text" class="form-control input-sm full-width" id="doEnrolmentId" placeholder="Enter ID" />
+					<label for="doAmendEnrolmentId">Related Dossier ID [If applicable]</label>
+					<input type="text" class="form-control input-sm full-width readOnly" id="doAmendEnrolmentId" placeholder="Enter ID" readonly />
 				</div>
 			</div>
 			<div class="row">
 				<div class="form-group col-sm-8">
-					<label for="doEnrolmentClassification">Therapeutic Classification:*</label>
-					<input type="text" class="form-control input-sm full-width" id="doEnrolmentClassification" placeholder="Enter Classification" />
+					<label for="doAmendEnrolmentClassification">Therapeutic Classification:*</label>
+					<input type="text" class="form-control input-sm full-width" id="doAmendEnrolmentClassification" placeholder="Enter Classification" disabled="true"/>
 				</div>
+			</div>
 			</div>
 			</div>
 			<!-- end of main information-->
 			
 			<!--expandable/collapsible content-->
 			<div class="panel panel-default">
-				<header class="panel-heading"><h4 class="panel-title">Canadian Reference Product(s)</h4></header>
-				<div class="panel-body">
+				<header class="panel-heading">
+					<div class="row">
+						<div class="col-sm-8">
+							<h4>B - Canadian Reference Product</h4>
+						</div>
+						<div class="col-sm-4">
+							<div class="checkbox">
+								<label><input id="doEnrolmentAmendCanRefInfo" type="checkbox" value="" onclick="enableDisableDivArray(this, [doEnrolmentAmendCanRefBody])" />Amend Canadian Reference Product Info.</label>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="panel-body" id="doEnrolmentAmendCanRefBody">
 				<div class="row">
-					<button class="btn btn-default btn-sm col-sm-4 pull-right" onclick="addNewRefProduct()" type="submit">Add Another Canadian Reference Product</button>
+					<button class="btn btn-default btn-sm col-sm-4 pull-right" disabled="true" onclick="addNewRefProduct(); enableDisableDivArray(doEnrolmentAmendCanRefInfo, [doAmendCanRefProductList])" type="submit">Add Another Canadian Reference Product</button>
 				</div>
-			<ul id="doCanRefProductList" class="list-unstyled">
-				<li id="doCanRefProduct1">
+			<ul id="doAmendCanRefProductList" class="list-unstyled">
+				<li id="doAmendCanRefProduct1">
 					<details open="open">
 						<summary class="heightAdjust">Canadian Reference Product 1</summary>
 						<!--Canadian Reference Product-->
@@ -195,21 +220,21 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="well well-sm">
 				<div class="row">
 					<div class="form-group col-sm-12">
-						<label for="doCanRefProductBrandName1">Brand Name:</label>
-						<input type="text" class="form-control input-sm full-width" id="doCanRefProductBrandName1" placeholder="Enter Name" />
+						<label for="doAmendCanRefProductBrandName1">Brand Name:</label>
+						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProductBrandName1" placeholder="Enter Name" disabled="true"/>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-sm-12">
-						<label for="doCanRefProductMedIngre1">Medicinal Ingredient*</label>
-						<input type="text" class="form-control input-sm full-width" id="doCanRefProductMedIngre1" placeholder="Enter Ingredient" />
+						<label for="doAmendCanRefProductMedIngre1">Medicinal Ingredient*</label>
+						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProductMedIngre1" placeholder="Enter Ingredient" disabled="true"/>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-sm-4">
-						<label for="doCanRefProductDosage1" class="control-label">Dosage Form:*</label>
+						<label for="doAmendCanRefProductDosage1" class="control-label">Dosage Form:*</label>
 						<div class="">
-							<select class="form-control input-sm full-width" name="doCanRefProductDosage1" id="doCanRefProductDosage1">
+							<select class="form-control input-sm full-width" name="doAmendCanRefProductDosage1" id="doAmendCanRefProductDosage1" disabled="true">
 								<option label=" "></option>
 								<option value="1">Biologic</option>
 								<option value="2">Pharmaceutical</option>
@@ -219,14 +244,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						</div>
 					<div class="form-group col-sm-4">
-						<label for="doCanRefProductStrength1">Strength(s)*</label>
-						<input type="text" class="form-control input-sm full-width" id="doCanRefProductStrength1" placeholder="Strength(s)" />
+						<label for="doAmendCanRefProductStrength1">Strength(s)*</label>
+						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProductStrength1" placeholder="Strength(s)" disabled="true"/>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-sm-12">
-						<label for="doCanRefProductCoName1">Company Name</label>
-						<input type="text" class="form-control input-sm full-width" id="doCanRefProductCoName1" placeholder="Enter Name" />
+						<label for="doAmendCanRefProductCoName1">Company Name</label>
+						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProductCoName1" placeholder="Enter Name" disabled="true"/>
 					</div>
 				</div>
 				</div>
@@ -236,10 +261,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</ul>
 			</div>
 		</div>
+		
+		<div class="row">
+				<div class="col-sm-12">
+					<p>Reason for filing this Amendment:*</p>
+					<textarea class="form-control input-sm full-width" id="doAmendReasonForAmend" rows="3" cols="col-sm-12"></textarea>
+				</div>
+		</div>
+		
 	</div><!-- end of Step 2 Company Enrolment-->
 <div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
-            <a class="btn btn-primary" href="rep_1.html">&lt; Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="rep_3_dossier.html">Continue to Step 3 &gt;</a>
+            <a class="btn btn-primary" href="rep_1.html">&lt; Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="">Continue to Step 3 &gt;</a>
         </div>
 </div>
 </section>
@@ -352,14 +385,14 @@ var canRefProductCounter = 1; //keeps track of number of current referenced prod
 
 //adds a new reference product
 function addNewRefProduct() {
-	var newRefProduct = '<li id="doCanRefProduct1"><details open="open"><summary class="heightAdjust">Canadian Reference Product 1<button class="btn btn-danger btn-xs deleteRef" onclick="deleteRefProduct(doCanRefProduct1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="doCanRefProduct1BrandName">Brand Name</label><input type="text" class="form-control input-sm full-width" id="doCanRefProduct1BrandName" placeholder="Enter Name" /></div></div><div class="row"><div class="form-group col-sm-12"><label for="doCanRefProduct1MedIngre">Medicinal Ingredient*</label><input type="text" class="form-control input-sm full-width" id="doCanRefProduct1MedIngre" placeholder="Enter Ingredient" /></div></div><div class="row"><div class="form-group col-sm-4"><label for="doCanRefProduct1Dosage" class="control-label">Dosage Form:*</label><div class=""><select class="form-control input-sm full-width" name="doCanRefProduct1Dosage" id="doCanRefProductDosage"><option label=" "></option><option value="1">Biologic</option><option value="2">Pharmaceutical</option><option value="3">Drug Master File</option><option value="4">Medical Device</option></select></div></div><div class="form-group col-sm-4"><label for="doCanRefProduct1Strength">Strength(s)*</label><input type="text" class="form-control input-sm full-width" id="doCanRefProduct1Strength" placeholder="Strength(s)" /></div></div><div class="row"><div class="form-group col-sm-12"><label for="doCanRefProduct1CoName">Company Name</label><input type="text" class="form-control input-sm full-width" id="doCanRefProduct1CoName" placeholder="Enter Name" /></div></div></div></div></li>';
+	var newRefProduct = '<li id="doAmendCanRefProduct1"><details open="open"><summary class="heightAdjust">Canadian Reference Product 1<button class="btn btn-danger btn-xs deleteRef" disabled="true" onclick="deleteRefProduct(doAmendCanRefProduct1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1BrandName">Brand Name</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1BrandName" placeholder="Enter Name" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1MedIngre">Medicinal Ingredient*</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1MedIngre" placeholder="Enter Ingredient" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-4"><label for="doAmendCanRefProduct1Dosage" class="control-label">Dosage Form:*</label><div class=""><select class="form-control input-sm full-width" name="doAmendCanRefProduct1Dosage" id="doAmendCanRefProductDosage" disabled="true"><option label=" "></option><option value="1">Biologic</option><option value="2">Pharmaceutical</option><option value="3">Drug Master File</option><option value="4">Medical Device</option></select></div></div><div class="form-group col-sm-4"><label for="doAmendCanRefProduct1Strength">Strength(s)*</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1Strength" placeholder="Strength(s)" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1CoName">Company Name</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1CoName" placeholder="Enter Name" disabled="true"/></div></div></div></div></li>';
 	//increment counter
 	canRefProductCounter++;
 	//alert(canRefProductCounter);
 	//replace substrings
-	var newId = newRefProduct.replace(/doCanRefProduct1/g, 'doCanRefProduct' + canRefProductCounter);
+	var newId = newRefProduct.replace(/doAmendCanRefProduct1/g, 'doAmendCanRefProduct' + canRefProductCounter);
 	newId = newId.replace('Product 1', 'Product ' + canRefProductCounter);
-	$('#doCanRefProductList').append(newId);
+	$('#doAmendCanRefProductList').append(newId);
 
 }
 
@@ -369,20 +402,28 @@ function replaceAll(str, find, rep) {
 
 //deletes a reference product
 function deleteRefProduct(i) {
-	var removedItemIndex = $('#doCanRefProductList').find(i).index();
-	$('#doCanRefProductList').find(i).remove();
+	var removedItemIndex = $('#doAmendCanRefProductList').find(i).index();
+	$('#doAmendCanRefProductList').find(i).remove();
 	//decrement counter
 	canRefProductCounter--;
 	
-	var items = document.getElementById('doCanRefProductList').getElementsByTagName('li');
+	var items = document.getElementById('doAmendCanRefProductList').getElementsByTagName('li');
 	for (var n = canRefProductCounter-1; n >= removedItemIndex; n--) {
-		var currLabel = 'doCanRefProduct' + (n+2);
-		var newLabel = 'doCanRefProduct' + (n+1);
+		var currLabel = 'doAmendCanRefProduct' + (n+2);
+		var newLabel = 'doAmendCanRefProduct' + (n+1);
 		var currContent = items[n].innerHTML;
 		var newContent = replaceAll(currContent, currLabel, newLabel);
 		var newStr = newContent.replace('Product ' + (n+2), 'Product ' + (n+1));
 		items[n].innerHTML = newStr;
 		items[n].id = newLabel;
+	}
+}
+
+function enableDisableDivArray(opt, contentArray) {
+	for (var i = 0; i < contentArray.length; i++) {
+		$(contentArray[i]).find('input, select, button').not('.readOnly').each(function() {
+			$(this).prop("disabled", !(opt.checked));
+		});
 	}
 }
 </script>
