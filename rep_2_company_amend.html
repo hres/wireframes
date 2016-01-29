@@ -151,13 +151,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-6">
 						<div class="checkbox">
-							<label><input id="coEnrolmentAmendManuAddr" type="checkbox" value="" onclick="ShowHideDivGen(this, coEnrolmentAmendManuMailAddr)" /> Amend Manufacturer / Sponsor Mailing Address*</label>
+							<label><input id="coEnrolmentAmendManuAddr" type="checkbox" value="" onclick="ShowHideDivGenArray(this, [coEnrolmentAmendManuMailAddr])" /> Amend Manufacturer / Sponsor Mailing Address*</label>
 						</div>
 					</div>
 				</div>
 			</header>
-		<div class="panel-body">
-		<div id="coEnrolmentAmendManuMailAddr" style="display: none">
+		<!--<div class="panel-body">-->
+		<div class="panel-body" id="coEnrolmentAmendManuMailAddr" style="display: none">
 			<h5>Company Information:</h5>
 			<div id="coEnrolmentAmendManuCompInfo" class="wb-frmvld well well-sm">
 				<div class="row">
@@ -619,71 +619,58 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-6">
 						<div class="checkbox">
-							<label><input id="coEnrolmentAmendRegMailAddr" type="checkbox" value="" onclick="enableDisableDiv(this, coEnrolmentAmendMailAddrDiv1); enableDisableDiv(this, coEnrolmentAmendRegMailAddrInfoDiv)"/> Amend Regulatory Mailing Address / Annual Contact*</label>
+							<!--<label><input id="coEnrolmentAmendRegMailAddr" type="checkbox" value="" onclick="enableDisableDiv(this, coEnrolmentAmendMailAddrDiv1); enableDisableDiv(this, coEnrolmentAmendRegMailAddrInfoDiv)"/> Amend Regulatory Mailing Address / Annual Contact*</label>-->
+							<label><input id="coEnrolmentAmendRegMailAddr" type="checkbox" value="" onclick="enableDisableDivArray(this, [coEnrolmentAmendRegMailAddrInfo])"/> Amend Regulatory Mailing Address / Annual Contact*</label>
 						</div>
 					</div>
 				</div>
 			</header>
 			<!-- <form class="form-inline" action="#" method="get" id="coEnrolRegMailCompanyAddrOptions1"> -->
 			<div class="panel-body">
-			<div class="row" id="coEnrolRegMailCompanyAddrOptions1">
-				<div class="col-sm-6 col-sm-offset-6" id="coEnrolmentAmendMailAddrDiv1">
+				<div id="coEnrolmentAmendRegMailAddrInfo">
+				<div class="blackBorder mrgn-bttm-sm" id="coEnrolRegMailCompanyAddrOptions1">
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-7">
 							<p>Same as Manufacturer / Sponsor Company &amp; Address information?</p>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-5">
 							<fieldset>
 								<div class="radio-inline">
-									<label for="coEnrolmentAmendRegMailCompanyAddr1"><input type="radio" disabled="disabled"onclick="ShowHideDivGen(coEnrolmentAmendRegMailCompanyAddr2, coEnrolmentAmendRegMailAddrCompInfo); ShowHideDivGen(coEnrolmentAmendRegMailCompanyAddr2, coEnrolmentAmendRegMailAddrInfo)" name="coEnrolmentAmendRegMailCompanyAddr" value="1" id="coEnrolmentAmendRegMailCompanyAddr1" />&#160;&#160;Yes</label>
+									<label for="coEnrolmentAmendRegMailCompanyAddr1"><input type="radio" disabled="disabled"onclick="ShowHideDivGenArray(coEnrolmentAmendRegMailCompanyAddr2, [coEnrolmentAmendRegMailAddrInfoDiv1])" name="coEnrolmentAmendRegMailCompanyAddr" value="1" id="coEnrolmentAmendRegMailCompanyAddr1" />&#160;&#160;Yes</label>
 								</div>
 								<div class="radio-inline">
-									<label for="coEnrolmentAmendRegMailCompanyAddr2"><input type="radio" disabled="disabled" onclick="ShowHideDivGen(coEnrolmentAmendRegMailCompanyAddr2, coEnrolmentAmendRegMailAddrCompInfo); ShowHideDivGen(coEnrolmentAmendRegMailCompanyAddr2, coEnrolmentAmendRegMailAddrInfo)" name="coEnrolmentAmendRegMailCompanyAddr" value="2" id="coEnrolmentAmendRegMailCompanyAddr2" />&#160;&#160;No</label>
+									<label for="coEnrolmentAmendRegMailCompanyAddr2"><input type="radio" disabled="disabled" onclick="ShowHideDivGenArray(coEnrolmentAmendRegMailCompanyAddr2, [coEnrolmentAmendRegMailAddrInfoDiv1])" name="coEnrolmentAmendRegMailCompanyAddr" value="2" id="coEnrolmentAmendRegMailCompanyAddr2" />&#160;&#160;No</label>
 								</div>
 							</fieldset>
 						</div>
 					</div>
+					<div id="coEnrolmentAmendRegMailAddrInfoDiv1" style="display:none">
+					<div id="coEnrolmentAmendRegMailAddrCompInfo" class="wb-frmvld" >
+					<h5>Company Information:</h5>
+					<div class="well well-sm">
 					<div class="row">
-						<div class="col-sm-6">
-							<p>Same as Manufacturer / Sponsor Company Representative information?</p>
-						</div>
-						<div class="col-sm-6">
-							<fieldset>
-								<div class="radio-inline">
-									<label for="coEnrolmentAmendRegMailCompanyRepInfo1"><input type="radio" disabled="disabled" onclick="ShowHideDivGen(coEnrolmentAmendRegMailCompanyRepInfo2, coEnrolmentAmendRegMailAddrCompRepInfo)" name="coEnrolmentAmendRegMailCompanyRepInfo" value="1" id="coEnrolmentAmendRegMailCompanyRepInfo1" />&#160;&#160;Yes</label>
+						<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+							<div class="form-group col-sm-8">
+								<label for="coEnrolmentAmendRegMailAddrCompName" class="control-label">Company Name [Full Legal Name]*</label>
+								<div class="">
+									<input type="text" class="form-control input-sm full-width readOnly" id="coEnrolmentAmendRegMailAddrCompName" readonly>
 								</div>
-								<div class="radio-inline">
-									<label for="coEnrolmentAmendRegMailCompanyRepInfo2"><input type="radio" disabled="disabled" onclick="ShowHideDivGen(coEnrolmentAmendRegMailCompanyRepInfo2, coEnrolmentAmendRegMailAddrCompRepInfo)" name="coEnrolmentAmendRegMailCompanyRepInfo" value="2" id="coEnrolmentAmendRegMailCompanyRepInfo2" />&#160;&#160;No</label>
+							</div>
+							<div class="form-group col-sm-4">
+								<label for="coEnrolmentAmendRegMailCompCode" class="control-label">Company Code [if assigned]</label>
+								<div class="">
+									<input type="text" class="form-control input-sm full-width readOnly" readonly id="coEnrolmentAmendRegMailCompCode">
 								</div>
-							</fieldset>
+							</div>
+						<!-- </form> -->
 						</div>
-					</div>
+						</div>
 				</div>
-			</div>
 
-			<div class="form-group" id="coEnrolmentAmendRegMailAddrInfoDiv">
-			<h5>Company Information:</h5>
-			<div id="coEnrolmentAmendRegMailAddrCompInfo" class="wb-frmvld well well-sm" style="display: none;">
-				<div class="row">
+			<div id="coEnrolmentAmendRegMailAddrInfo" class="wb-frmvld">
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
-						<div class="form-group col-sm-8">
-							<label for="coEnrolmentAmendRegMailAddrCompName" class="control-label">Company Name [Full Legal Name]*</label>
-							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendRegMailAddrCompName" readonly>
-							</div>
-						</div>
-						<div class="form-group col-sm-4">
-							<label for="coEnrolmentAmendRegMailCompCode" class="control-label">Company Code [if assigned]</label>
-							<div class="">
-								<input type="text" class="form-control input-sm full-width" readonly id="coEnrolmentAmendRegMailCompCode">
-							</div>
-						</div>
-					<!-- </form> -->
-					</div>
-			</div>
-			<h5>Address Information:</h5>
-			<div id="coEnrolmentAmendRegMailAddrInfo" class="wb-frmvld well well-sm" style="display: none;">
-					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<h5>Address Information:</h5>
+					<div class="well well-sm">
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label for="coEnrolmentAmendRegMailAddrStr" class="control-label">Street / Suite *</label>
@@ -715,10 +702,33 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					<!-- </form> -->
 					</div>
+					</div>
 			</div>
-			<h5>Company Representative Information:</h5>
-			<div id="coEnrolmentAmendRegMailAddrCompRepInfo" class="wb-frmvld well well-sm" style="display: none;">
+			</div>
+				</div>
+				<div class="blackBorder" id="coEnrolRegMailCompanyAddrOptions2">
+					<div class="row">
+						<div class="col-sm-7">
+							<p>Same as Manufacturer / Sponsor Company Representative information?</p>
+						</div>
+						<div class="col-sm-5">
+							<fieldset>
+								<div class="radio-inline">
+									<label for="coEnrolmentAmendRegMailCompanyRepInfo1"><input type="radio" disabled="disabled" onclick="ShowHideDivGenArray(coEnrolmentAmendRegMailCompanyRepInfo2, [coEnrolmentAmendRegMailAddrCompRepInfo])" name="coEnrolmentAmendRegMailCompanyRepInfo" value="1" id="coEnrolmentAmendRegMailCompanyRepInfo1" />&#160;&#160;Yes</label>
+								</div>
+								<div class="radio-inline">
+									<label for="coEnrolmentAmendRegMailCompanyRepInfo2"><input type="radio" disabled="disabled" onclick="ShowHideDivGenArray(coEnrolmentAmendRegMailCompanyRepInfo2, [coEnrolmentAmendRegMailAddrCompRepInfo])" name="coEnrolmentAmendRegMailCompanyRepInfo" value="2" id="coEnrolmentAmendRegMailCompanyRepInfo2" />&#160;&#160;No</label>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				
+
+			
+			<div id="coEnrolmentAmendRegMailAddrCompRepInfo" class="wb-frmvld" style="display: none;">
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<h5>Company Representative Information:</h5>
+					<div class="well well-sm">
 					<div class="row">
 						<div class="form-group col-sm-2">
 							<label for="coEnrolmentAmendRegMailAddrCompRepSal" class="control-label">Salutation*</label>
@@ -794,6 +804,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					<!-- </form> -->
 					</div>
+					</div>
+			</div>
+			</div>
 			</div>
 			</div>
 			</div>
@@ -807,26 +820,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-6">
 						<div class="checkbox">
-							<label><input id="coEnrolmentAmendImpMailAddr" type="checkbox" value="" onclick="enableDisableDiv(this, coEnrolmentAmendCanImporterMailAddrDiv1); enableDisableDiv(this, coEnrolmentAmendCanImporterMailAddrDiv)" /> Amend Canadian Importer Mailing Address:</label>
+							<label><input id="coEnrolmentAmendImpMailAddr" type="checkbox" value="" onclick="enableDisableDivArray(this, [coEnrolmentAmendCanImporterMailAddrDiv1, coEnrolmentAmendCanImporterMailAddrDiv])" /> Amend Canadian Importer Mailing Address:</label>
 						</div>
 					</div>
 				</div>
 			</header>
 			<div class="panel-body">
+			<div class="blackBorder">
 			<!-- <form class="form-inline" action="#" method="get" id="coEnrolmentAmendCanImporterMailAddrOptions"> -->
 			<div class="row" id="coEnrolmentAmendCanImporterMailAddrOptions">
 				<div class="col-sm-6">
 					<div class="row" id="coEnrolmentAmendCanImporterMailAddrDiv1">
-					<div class="col-sm-6">
+					<div class="col-sm-7">
 					<p>Same as Manufacturer / Sponsor Company &amp; Address information?</p>
 					</div>
-					<div class="col-sm-6">
+					<div class="col-sm-5">
 					<fieldset>
 						<div class="radio-inline">
-							<label for="coEnrolmentAmendCanImporterMailCompanyAddr1"><input type="radio" disabled="disabled" onclick="ShowHideDivGen(coEnrolmentAmendCanImporterMailCompanyAddr2, coEnrolmentAmendCanImporterCompInfo); ShowHideDivGen(coEnrolmentAmendCanImporterMailCompanyAddr2, coEnrolmentAmendCanImporterAddrInfo)" name="coEnrolmentAmendCanImporterMailCompanyAddr" value="1" id="coEnrolmentAmendCanImporterMailCompanyAddr1" />&#160;&#160;Yes</label>
+							<label for="coEnrolmentAmendCanImporterMailCompanyAddr1"><input type="radio" disabled="disabled" onclick="ShowHideDivGenArray(coEnrolmentAmendCanImporterMailCompanyAddr2, [coEnrolmentAmendCanImporterMailAddrDiv])" name="coEnrolmentAmendCanImporterMailCompanyAddr" value="1" id="coEnrolmentAmendCanImporterMailCompanyAddr1" />&#160;&#160;Yes</label>
 						</div>
 						<div class="radio-inline">
-							<label for="coEnrolmentAmendCanImporterMailCompanyAddr2"><input type="radio" disabled="disabled" onclick="ShowHideDivGen(coEnrolmentAmendCanImporterMailCompanyAddr2, coEnrolmentAmendCanImporterCompInfo); ShowHideDivGen(coEnrolmentAmendCanImporterMailCompanyAddr2, coEnrolmentAmendCanImporterAddrInfo)" name="coEnrolmentAmendCanImporterMailCompanyAddr" value="2" id="coEnrolmentAmendCanImporterMailCompanyAddr2" />&#160;&#160;No</label>
+							<label for="coEnrolmentAmendCanImporterMailCompanyAddr2"><input type="radio" disabled="disabled" onclick="ShowHideDivGenArray(coEnrolmentAmendCanImporterMailCompanyAddr2, [coEnrolmentAmendCanImporterMailAddrDiv])" name="coEnrolmentAmendCanImporterMailCompanyAddr" value="2" id="coEnrolmentAmendCanImporterMailCompanyAddr2" />&#160;&#160;No</label>
 						</div>
 					</fieldset>
 					</div>
@@ -835,29 +849,33 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 			</div>
 			<!-- </form> -->
-			<div class="form-group" id="coEnrolmentAmendCanImporterMailAddrDiv">
-			<h5>Company Information:</h5>
-			<div id="coEnrolmentAmendCanImporterCompInfo" class="wb-frmvld well well-sm" style="display: none;">
+			<div class="form-group" id="coEnrolmentAmendCanImporterMailAddrDiv" style="display: none">
+			<div id="coEnrolmentAmendCanImporterCompInfo" class="wb-frmvld">
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<h5>Company Information:</h5>
+					<div class="well well-sm">
 					<div class="row">
 						<div class="form-group col-sm-8">
 							<label for="coEnrolmentAmendCanImporterCompName" class="control-label">Company Name [Full Legal Name]*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendCanImporterCompName" readonly>
+								<input type="text" class="form-control input-sm full-width readOnly" id="coEnrolmentAmendCanImporterCompName" readonly>
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="coEnrolmentAmendCanImporterCompCode" class="control-label">Company Code [if assigned]</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" readonly id="coEnrolmentAmendCanImporterCompCode">
+								<input type="text" class="form-control input-sm full-width readOnly" id="coEnrolmentAmendCanImporterCompCode" readonly>
 							</div>
 						</div>
 					<!-- </form> -->
 					</div>
+					</div>
 			</div>
-			<h5>Address Information:</h5>
-			<div id="coEnrolmentAmendCanImporterAddrInfo" class="wb-frmvld well well-sm" style="display: none;">
+			
+			<div id="coEnrolmentAmendCanImporterAddrInfo" class="wb-frmvld">
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<h5>Address Information:</h5>
+					<div class="well well-sm">
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label for="coEnrolmentAmendCanImporterAddrStr" class="control-label">Street / Suite *</label>
@@ -890,6 +908,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<!-- </form> -->
 					</div>
 					</div>
+					</div>
+			</div>
 			</div>
 			</div>
 		</div> <!--end of Canadian Importer Mailing Address Information-->
@@ -902,71 +922,57 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-6">
 						<div class="checkbox">
-						<label><input id="coEnrolmentAmendBillingAddr" type="checkbox" value="" onclick="enableDisableDiv(this, coEnrolmentAmendBillingAddrDiv1); enableDisableDiv(this, coEnrolmentAmendBillingAddrDiv)" />Amend Billing Address*</label>
+						<label><input id="coEnrolmentAmendBillingAddr" type="checkbox" value="" onclick="enableDisableDivArray(this, [coEnrolmentAmendBillingAddrInfo])" />Amend Billing Address*</label>
 						</div>
 					</div>
 				</div>
 			</header>
 			<div class="panel-body">
-			<!-- <form class="form-inline" action="#" method="get" id="coEnrolmentAmendBillingAddrOptions"> -->
-			<div class="row" id="coEnrolmentAmendBillingAddrOptions">
-				<div class="col-sm-6" id="coEnrolmentAmendBillingAddrDiv1">
+				<div id="coEnrolmentAmendBillingAddrInfo">
+				<div class="blackBorder">
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-7">
 							<p>Same as Manufacturer / Sponsor Company &amp; Address information?</p>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-5">
 							<fieldset>
 								<div class="radio-inline">
-									<label for="coEnrolmentAmendBillingCompanyAddr1"><input type="radio" disabled="disabled" onclick="ShowHideDivGen(coEnrolmentAmendBillingCompanyAddr2, coEnrolmentAmendBillingAddrCompInfo); ShowHideDivGen(coEnrolmentAmendBillingCompanyAddr2, coEnrolmentAmendBillingAddrInfo)" name="coEnrolmentAmendBillingCompanyAddr" value="1" id="coEnrolmentAmendBillingCompanyAddr1" />&#160;&#160;Yes</label>
+									<label for="coEnrolmentAmendBillingCompanyAddr1"><input type="radio" disabled="disabled" onclick="ShowHideDivGenArray(coEnrolmentAmendBillingCompanyAddr2, [coEnrolmentAmendBillingAddrDiv1])" name="coEnrolmentAmendBillingCompanyAddr" value="1" id="coEnrolmentAmendBillingCompanyAddr1" />&#160;&#160;Yes</label>
 								</div>
 								<div class="radio-inline">
-									<label for="coEnrolmentAmendBillingCompanyAddr2"><input type="radio" disabled="disabled" onclick="ShowHideDivGen(coEnrolmentAmendBillingCompanyAddr2, coEnrolmentAmendBillingAddrCompInfo); ShowHideDivGen(coEnrolmentAmendBillingCompanyAddr2, coEnrolmentAmendBillingAddrInfo)" name="coEnrolmentAmendBillingCompanyAddr" value="2" id="coEnrolmentAmendBillingCompanyAddr2" />&#160;&#160;No</label>
+									<label for="coEnrolmentAmendBillingCompanyAddr2"><input type="radio" disabled="disabled" onclick="ShowHideDivGenArray(coEnrolmentAmendBillingCompanyAddr2, [coEnrolmentAmendBillingAddrDiv1])" name="coEnrolmentAmendBillingCompanyAddr" value="2" id="coEnrolmentAmendBillingCompanyAddr2" />&#160;&#160;No</label>
 								</div>
 							</fieldset>
 						</div>
 					</div>
-					<div class="row" id="coEnrolBillingCompanyRepOptions">
-						<div class="col-sm-6">
-							<p>Same as Manufacturer / Sponsor Company Representative information?</p>
-						</div>
-						<div class="col-sm-46">
-							<fieldset>
-								<div class="radio-inline">
-									<label for="coEnrolmentAmendBillingCompanyRepInfo1"><input type="radio" disabled="disabled" onclick="ShowHideDivGen(coEnrolmentAmendBillingCompanyRepInfo2, coEnrolmentAmendBillingAddrCompRepInfo)" name="coEnrolmentAmendBillingCompanyRepInfo" value="1" id="coEnrolmentAmendBillingCompanyRepInfo1" />&#160;&#160;Yes</label>
-								</div>
-								<div class="radio-inline">
-									<label for="coEnrolmentAmendBillingCompanyRepInfo2"><input type="radio" disabled="disabled" onclick="ShowHideDivGen(coEnrolmentAmendBillingCompanyRepInfo2, coEnrolmentAmendBillingAddrCompRepInfo)" name="coEnrolmentAmendBillingCompanyRepInfo" value="2" id="coEnrolmentAmendBillingCompanyRepInfo2" />&#160;&#160;No</label>
-								</div>
-							</fieldset>
-						</div>
-					</div>
-				</div>
-				</div>
-			<!-- </form> -->
-			<div class="form-group" id="coEnrolmentAmendBillingAddrDiv">
-			<h5>Company Information:</h5>
-			<div id="coEnrolmentAmendBillingAddrCompInfo" class="wb-frmvld well well-sm" style="display: none;">
+					
+			<div id="coEnrolmentAmendBillingAddrDiv1" style="display:none">
+				<div id="coEnrolmentAmendBillingAddrCompInfo" class="wb-frmvld">
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<h5>Company Information:</h5>
+					<div class="well well-sm">
 					<div class="row">
 						<div class="form-group col-sm-8">
 							<label for="coEnrolmentAmendBillingAddrCompName" class="control-label">Company Name [Full Legal Name]*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendBillingAddrCompName" readonly>
+								<input type="text" class="form-control input-sm full-width readOnly" id="coEnrolmentAmendBillingAddrCompName" readonly>
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="coEnrolmentAmendBillingAddrCompCode" class="control-label">Company Code [if assigned]</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" readonly id="coEnrolmentAmendBillingAddrCompCode">
+								<input type="text" class="form-control input-sm full-width readOnly" readonly id="coEnrolmentAmendBillingAddrCompCode">
 							</div>
 						</div>
 					<!-- </form> -->
 					</div>
+					</div>
 			</div>
-				<h5>Address Information:</h5>
-			<div id="coEnrolmentAmendBillingAddrInfo" class="wb-frmvld well well-sm" style="display: none;">
+				
+			<div id="coEnrolmentAmendBillingAddrInfo" class="wb-frmvld well well-sm">
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<h5>Address Information:</h5>
+					<div class="well well-sm">
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label for="coEnrolmentAmendBillingAddrStr" class="control-label">Street / Suite *</label>
@@ -998,10 +1004,31 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					<!-- </form> -->
 					</div>
+					</div>
+				</div>
 			</div>
-			<h5>Company Representative Information:</h5>
-			<div id="coEnrolmentAmendBillingAddrCompRepInfo" class="wb-frmvld well well-sm" style="display: none;">
+				</div>
+				<div class="blackBorder">
+					<div class="row" id="coEnrolBillingCompanyRepOptions">
+						<div class="col-sm-7">
+							<p>Same as Manufacturer / Sponsor Company Representative information?</p>
+						</div>
+						<div class="col-sm-5">
+							<fieldset>
+								<div class="radio-inline">
+									<label for="coEnrolmentAmendBillingCompanyRepInfo1"><input type="radio" disabled="disabled" onclick="ShowHideDivGenArray(coEnrolmentAmendBillingCompanyRepInfo2, [coEnrolmentAmendBillingAddrCompRepInfo])" name="coEnrolmentAmendBillingCompanyRepInfo" value="1" id="coEnrolmentAmendBillingCompanyRepInfo1" />&#160;&#160;Yes</label>
+								</div>
+								<div class="radio-inline">
+									<label for="coEnrolmentAmendBillingCompanyRepInfo2"><input type="radio" disabled="disabled" onclick="ShowHideDivGenArray(coEnrolmentAmendBillingCompanyRepInfo2, [coEnrolmentAmendBillingAddrCompRepInfo])" name="coEnrolmentAmendBillingCompanyRepInfo" value="2" id="coEnrolmentAmendBillingCompanyRepInfo2" />&#160;&#160;No</label>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+			
+			<div id="coEnrolmentAmendBillingAddrCompRepInfo" class="wb-frmvld" style="display: none;">
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<h5>Company Representative Information:</h5>
+					<div class="well well-sm">
 					<div class="row">
 						<div class="form-group col-sm-2">
 							<label for="coEnrolmentAmendBillingAddrCompRepSal" class="control-label">Salutation*</label>
@@ -1078,7 +1105,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<!-- </form> -->
 					</div>
 					</div>
-			</div>
+					</div>
+					</div>
+					</div>
 			</div>
 		</div> <!--end of Billing Address Information-->
 		</div>
@@ -1195,21 +1224,33 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script type="text/javascript" id="">
 
 		/*To Show and Hide Div -> if optYes is selected, content will show; otherwise it will hide*/
+/*
 function ShowHideDivGen(optYes, content) { //general case
 	content.style.display = optYes.checked ? "block" : "none";
 }
+*/
+function ShowHideDivGenArray(optYes, contentArray) {
+	for (var i = 0; i < contentArray.length; i++) {
+		contentArray[i].style.display = optYes.checked ? "block" : "none";
+	}
+}
 
+/*
 function enableDisableDiv(opt, content) {
-	/*$('#' + content.id).find('input:radio').each(function() {
-		$(this).prop("disabled", !(opt.checked));
-	});*/
-	
 	$(content).find('input').each(function() {
 		$(this).prop("disabled", !(opt.checked));
 	});
 	$(content).find('select').each(function() {
 		$(this).prop("disabled", !(opt.checked));
 	});
+}*/
+
+function enableDisableDivArray(opt, contentArray) {
+	for (var i = 0; i < contentArray.length; i++) {
+		$(contentArray[i]).find('input:not([class=readOnly]), select').each(function() {
+			$(this).prop("disabled", !(opt.checked));
+		});
+	}
 }
 
 function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
@@ -1219,7 +1260,7 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
 		   } else if (txtBoxCountryValue == 'United States') {
 				provStateTextBox.setAttribute('list', 'usStateSuggestions');
 		   }
-		}
+}
 </script>
 </body>
 </html>
