@@ -964,6 +964,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="./js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
 <script src="./js/theme.min.js"></script>
+<script src="./js/rep.js"></script>
 <script type="text/javascript" id="">
 //var raDINCount = 4; //keeps track of number of current DINs (initially, there are 4)
 //var raDINButCount = 1; //keeps track of the number of buttons used to add/delete DINs
@@ -981,11 +982,11 @@ function addNewRelSubmission() {
 	$('#raEnrolmentRelList').append(newId);
 
 }
-
+/*
 function replaceAll(str, find, rep) {
   return str.replace(new RegExp(find, 'g'), rep);
 }
-
+*/
 //deletes a reference product
 function deleteRelSubmission(i) {
 	var removedItemIndex = $('#raEnrolmentRelList').find(i).index();
@@ -1005,7 +1006,7 @@ function deleteRelSubmission(i) {
 	}
 }
 
-/*To Show and Hide Div -> if optYes is selected, content will show; otherwise it will hide*/
+/*To Show and Hide Div -> if optYes is selected, content will show; otherwise it will hide
 function ShowHideDivGen(optYes, content) { //general case
 	content.style.display = optYes.checked ? "none" : "block";
 }
@@ -1021,7 +1022,7 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
 		   }
 		   provStateTextBox.value = '';
 }
-
+*/
 //parameters: but = button; relId = related submission Id (i.e. relEnrolmentRel1DIN)
       function addDIN(but, relId) {
           //get the number of div.row
