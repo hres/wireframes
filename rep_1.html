@@ -138,11 +138,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="form-group">
 				<fieldset>
 					<label for="productLineType1" class="form-radio form-label-inline">
-					<input id="productLineType1" type="radio" name="optionProductLine"  />
+					<input id="productLineType1" type="radio" name="optionProductLine" onclick="enableDisableDivArray(this, [step1B, step1c])"/>
 					Pharmaceutical or Biologic Drug Product</label>
 					&nbsp;&nbsp;
 					<label for="productLineType2" class="form-radio form-label-inline">
-						<input id="productLineType2" type="radio"  name="optionProductLine" />
+						<input id="productLineType2" type="radio"  name="optionProductLine" onclick="enableDisableDivArray(this, [step1B, step1c])"/>
 						Medical Device</label>
 				</fieldset>
 			</div>
@@ -157,7 +157,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="form-group"> 
 				<!-- <p><strong>Select a specific Inspection Line for additional search options:</strong> -->
 				<p>
-				<select name="iline" required="" onchange="checkEnrolTypeSelection()">
+				<select name="iline" required="" onchange="checkEnrolTypeSelection()" disabled="true">
 				<option value=""></option>
 				<option value="1">Company (CO)</option>
 				<option value="2">Dossier (DO)</option>
@@ -169,98 +169,98 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div id="coType" style="display: none;">
 					<div class="form-group">
 						<label for="coTypeOptionNew" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption" id="coTypeOptionNew" onclick="optButtonSelect('co','New')"/>
+						<input type="radio" name="coTypeOption" id="coTypeOptionNew" onclick="optButtonSelect('co','New')" disabled="true"/>
 								Start a NEW Company Enrolment</label>
 					</div>
 						<div class="form-group">
 							<label for="coTypeOptionDraft" class="form-radio form-label-inline">
-							<input type="radio" name="coTypeOption" id="coTypeOptionDraft" onclick="optButtonSelect('co','Draft')"/>
+							<input type="radio" name="coTypeOption" id="coTypeOptionDraft" onclick="optButtonSelect('co','Draft')" disabled="true"/>
 								Complete your DRAFT Company</label>
 						</div>
 						<div class="form-group" id="coDrftGrp" style="display:none">
 							<label for="coDrftFileUpload">Upload Draft Enrolment file:</label>
-							<input type="file" id="coDrftFileUpload" />
+							<input type="file" id="coDrftFileUpload"  disabled="true"/>
 						</div>
 					<div class="form-group">
 						<label for="coTypeOptionAmend" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption" id="coTypeOptionAmend" onclick="optButtonSelect('co','Amend')"/>
+						<input type="radio" name="coTypeOption" id="coTypeOptionAmend" onclick="optButtonSelect('co','Amend')" disabled="true"/>
 							AMEND you Company Enrolment File</label>
 					</div>
 					<div class="form-group" id="coAmdGrp" style="display:none">
 						<label for="coAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-						<input type="file" id="coAmdFileUpload" />
+						<input type="file" id="coAmdFileUpload"  disabled="true"/>
 					</div>
 				</div>
 				<div id="doType" style="display: none;">
 					<div class="form-group">
 						<label for="doTypeOptionNew" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption" id="doTypeOptionNew" onclick="optButtonSelect('do','New')"/>
+						<input type="radio" name="doTypeOption" id="doTypeOptionNew" onclick="optButtonSelect('do','New')" disabled="true"/>
 							Start a NEW Dossier Enrolment</label>
 					</div>
 					<div class="form-group">
 						<label for="doTypeOptionDraft" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption" id="doTypeOptionDraft" onclick="optButtonSelect('do','Draft')"/>
+						<input type="radio" name="doTypeOption" id="doTypeOptionDraft" onclick="optButtonSelect('do','Draft')" disabled="true"/>
 							Complete your DRAFT Dossier</label>
 					</div>
 					<div class="form-group" id="doDrftGrp" style="display:none">
 						<label for="doDrftFileUpload">Upload Draft Enrolment file:</label>
-						<input type="file" id="doDrftFileUpload" />
+						<input type="file" id="doDrftFileUpload" disabled="true" />
 					</div>
 					<div class="form-group">
 						<label for="doTypeOptionAmend" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption" id="doTypeOptionAmend" onclick="optButtonSelect('do','Amend')"/>
+						<input type="radio" name="doTypeOption" id="doTypeOptionAmend" onclick="optButtonSelect('do','Amend')" disabled="true"/>
 							AMEND you Dossier Enrolment File</label>
 					</div>
 					<div class="form-group"  id="doAmdGrp" style="display:none">
 						<label for="doAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-						<input type="file" id="doAmdFileUpload" />
+						<input type="file" id="doAmdFileUpload"  disabled="true"/>
 					</div>
 					</div>
 				<div id="raType" style="display: none;">
 					<div class="form-group">
 						<label for="raTypeOptionNew" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption" id="raTypeOptionNew" onclick="optButtonSelect('ra','New')"/>
+						<input type="radio" name="raTypeOption" id="raTypeOptionNew" onclick="optButtonSelect('ra','New')" disabled="true"/>
 							Start a NEW Regulatory Activity Enrolment</label>
 					</div>
 					<div class="form-group">
 						<label for="raTypeOptionDraft" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption" id="raTypeOptionDraft" onclick="optButtonSelect('ra','Draft')"/>
+						<input type="radio" name="raTypeOption" id="raTypeOptionDraft" onclick="optButtonSelect('ra','Draft')" disabled="true"/>
 							Complete your DRAFT Regulatory Activity</label>
 					</div>
 					<div class="form-group" id="raDrftGrp" style="display:none">
 						<label for="raDrftFileUpload">Upload Draft Enrolment file:</label>
-						<input type="file" id="raDrftFileUpload" />
+						<input type="file" id="raDrftFileUpload"  disabled="true"/>
 					</div>
 					<div class="form-group">
 						<label for="raTypeOptionAmend" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption" id="raTypeOptionAmend" onclick="optButtonSelect('ra','Amend')"/>
+						<input type="radio" name="raTypeOption" id="raTypeOptionAmend" onclick="optButtonSelect('ra','Amend')" disabled="true"/>
 							AMEND you Regulatory Activity Enrolment File</label>
 					</div>
 					<div class="form-group" id="raAmdGrp" style="display:none">
 						<label for="raAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-						<input type="file" id="raAmdFileUpload" />
+						<input type="file" id="raAmdFileUpload"  disabled="true"/>
 					</div>
 				</div>
 				<div id="rtType" style="display: none;">
 					<div class="form-group">
 						<div class="form-group">
 							<label for="rtCOFileUpload">Upload and confirm your Company Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtCOFileUpload" />
+							<input type="file" id="rtCOFileUpload"  disabled="true"/>
 						</div>
 						<div class="form-group">
 							<label for="rtDOFileUpload">Upload and confirm your Dossier Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtDOFileUpload" />
+							<input type="file" id="rtDOFileUpload"  disabled="true"/>
 						</div>
 						<div class="form-group">
 							<label for="rtRAFileUpload">Upload and confirm your Regulatory Activity Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtRAFileUpload" />
+							<input type="file" id="rtRAFileUpload"  disabled="true"/>
 						</div>
 						<div class="checkbox">
-						<label><input type="checkbox" /> I confirm that the uploaded files are the most current version of the
+						<label><input type="checkbox"  disabled="true"/> I confirm that the uploaded files are the most current version of the
 Enrolment XML files.</label>
 						</div>
 						<div class="checkbox">
-							<label><input type="checkbox" /> I confirm that All the information within the enrolment files are
+							<label><input type="checkbox"  disabled="true"/> I confirm that All the information within the enrolment files are
 current and that NOTHING has changed. (i.e.: no changes to
 Company information, Brand Name, Common name, Dossier
 information, Regulatory Activity information)</label>
@@ -282,14 +282,14 @@ information, Regulatory Activity information)</label>
 					<div class="form-group">
 						<label for="raEnDateSubmitted" ><span class="field-name">Date the Regulatory Activity Enrolment
 is submitted*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-						<input class="form-control" type="date" id="raEnDateSubmitted" name="raEnDateSubmitted" data-rule-dateiso="true">
+						<input class="form-control" type="date" id="raEnDateSubmitted" name="raEnDateSubmitted" data-rule-dateiso="true" disabled="true">
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div id="raAntDate" class="form-group">
 						<label for="raEnAntiDateFiled" ><span class="field-name">Date the Regulatory Activity is
 anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-						<input class="form-control" type="date" id="raEnAntiDateFiled" name="raEnAntiDateFiled" data-rule-dateiso="true">
+						<input class="form-control" type="date" id="raEnAntiDateFiled" name="raEnAntiDateFiled" data-rule-dateiso="true" disabled="true">
 					</div>
 				</div>
 			<!-- </form> -->
@@ -303,7 +303,7 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 						<div class="form-group col-sm-2">
 							<label for="MCInfoSalutation" class="control-label">Salutation*</label>
                             <div class="">
-                                <select class="form-control full-width" name="MCInfoSalutation" id="MCInfoSalutation">
+                                <select class="form-control full-width" name="MCInfoSalutation" id="MCInfoSalutation" disabled="true">
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -316,19 +316,19 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 						<div class="form-group col-sm-4">
 							<label for="MCInfoGivenName" class="control-label">Given Name*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="MCInfoGivenName" placeholder="Enter Given Name">
+								<input type="text" class="form-control full-width" id="MCInfoGivenName" placeholder="Enter Given Name" disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="MCInfoSurname" class="control-label">Surname*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="MCInfoSurname" placeholder="Enter Surname" >
+								<input type="text" class="form-control full-width" id="MCInfoSurname" placeholder="Enter Surname"  disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="MCInfoTitle" class="control-label">Title*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="MCInfoTitle" placeholder="Enter Title" >
+								<input type="text" class="form-control full-width" id="MCInfoTitle" placeholder="Enter Title"  disabled="true">
 							</div>
 						</div>
 					</div>
@@ -336,25 +336,25 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 						<div class="form-group col-sm-3">
 							<label for="MCInfoTelNo" class="control-label">Telephone No*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="MCInfoTelNo" placeholder="Enter Telephone No." >
+								<input type="text" class="form-control full-width" id="MCInfoTelNo" placeholder="Enter Telephone No."  disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="MCInfoTelExt" class="control-label">Ext</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="MCInfoTelExt" placeholder="Enter Extension" >
+								<input type="text" class="form-control full-width" id="MCInfoTelExt" placeholder="Enter Extension"  disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="MCInfoEmail" class="control-label">Email*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="MCInfoEmail" placeholder="Enter Email" />
+								<input type="text" class="form-control full-width" id="MCInfoEmail" placeholder="Enter Email"  disabled="true"/>
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="MCInfoFaxNo" class="control-label">Fax No.</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="MCInfoFaxNo" placeholder="Enter Fax No." >
+								<input type="text" class="form-control full-width" id="MCInfoFaxNo" placeholder="Enter Fax No."  disabled="true">
 							</div>
 						</div>
 					</div>
@@ -369,7 +369,7 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 						<div class="form-group col-sm-2">
 							<label for="SCInfoSalutation" class="control-label">Salutation*</label>
                             <div class="">
-                                <select class="form-control full-width" name="SCInfoSalutation" id="SCInfoSalutation">
+                                <select class="form-control full-width" name="SCInfoSalutation" id="SCInfoSalutation" disabled="true">
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -381,19 +381,19 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 						<div class="form-group col-sm-4">
 							<label for="SCInfoGivenName" class="control-label">Given Name*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoGivenName" placeholder="Enter Given Name" >
+								<input type="text" class="form-control full-width" id="SCInfoGivenName" placeholder="Enter Given Name" disabled="true" >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="SCInfoSurname" class="control-label">Surname*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoSurname" placeholder="Enter Surname" >
+								<input type="text" class="form-control full-width" id="SCInfoSurname" placeholder="Enter Surname" disabled="true" >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="SCInfoTitle" class="control-label">Title*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoTitle" placeholder="Enter Title" >
+								<input type="text" class="form-control full-width" id="SCInfoTitle" placeholder="Enter Title"  disabled="true">
 							</div>
 						</div>
 					</div>
@@ -401,25 +401,25 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 						<div class="form-group col-sm-3">
 							<label for="SCInfoTelNo" class="control-label">Telephone No*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoTelNo" placeholder="Enter Telephone No." >
+								<input type="text" class="form-control full-width" id="SCInfoTelNo" placeholder="Enter Telephone No."  disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="SCInfoTelExt" class="control-label">Ext</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoTelExt" placeholder="Enter Extension" >
+								<input type="text" class="form-control full-width" id="SCInfoTelExt" placeholder="Enter Extension"  disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="SCInfoEmail" class="control-label">Email*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoEmail" placeholder="Enter Email" >
+								<input type="text" class="form-control full-width" id="SCInfoEmail" placeholder="Enter Email"  disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="SCInfoFaxNo" class="control-label">Fax No.</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoFaxNo" placeholder="Enter Fax No." >
+								<input type="text" class="form-control full-width" id="SCInfoFaxNo" placeholder="Enter Fax No."  disabled="true">
 							</div>
 						</div>
 					<!-- </form> -->
@@ -537,6 +537,11 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script type="text/javascript" id="">
+
+$(document).ready(function() {
+   $.cookie("currentURL",window.location.href);
+});
+
 function checkEnrolTypeSelection() { //previously obj
 	//divs to show/hide
     var coType = document.getElementById('coType');
@@ -626,6 +631,11 @@ function checkEnrolTypeSelection() { //previously obj
 		rtType.style.display = "none";
 		step1c.style.display = "none";
 		raAntDate.style.display = "none";
+		
+		changeNavPills('');
+		$('#navStep2').prop('href', '');
+		$('#navStep3').prop('href', '');
+		step2but.href = "";
 	}
 }
 
@@ -653,12 +663,16 @@ function optButtonSelect(type, action) {
 			} else if (action == 'Amend') {
 				changeNavPills('AMEND Company Enrolment');
 				$('#navStep2').prop('href', 'rep_2_company_amend.html');
+				$('#navStep3').prop('href', '');
 				step2but.href = "rep_2_company_amend.html";
 				$('#coDrftGrp').hide();
 				$('#coAmdGrp').show();
 			} else {
 				$('#coDrftGrp').hide();
 				$('#coAmdGrp').hide();
+				changeNavPills('Company Enrolment');
+				$('#navStep2').prop('href', '');
+				$('#navStep3').prop('href', '');
 			}
 		} else if (type == 'do') {
 			if (action == 'New') {
@@ -675,12 +689,16 @@ function optButtonSelect(type, action) {
 			} else if (action == 'Amend') {
 				changeNavPills('AMEND Dossier Enrolment');
 				$('#navStep2').prop('href', 'rep_2_dossier_amend.html');
+				$('#navStep3').prop('href', '');
 				step2but.href = "rep_2_dossier_amend.html";
 				$('#doDrftGrp').hide();
 				$('#doAmdGrp').show();
 			} else {
 				$('#doDrftGrp').hide();
 				$('#doAmdGrp').hide();
+				changeNavPills('Dossier Enrolment');
+				$('#navStep2').prop('href', '');
+				$('#navStep3').prop('href', '');
 			}
 		} else if (type == 'ra') {
 			if (action == 'New') {
@@ -696,11 +714,17 @@ function optButtonSelect(type, action) {
 				$('#raAmdGrp').hide();
 			} else if (action == 'Amend') {
 				changeNavPills('AMEND Regulatory Activity Enrolment');
+				step2but.href = "rep_2_regActivity_amend.html";
+				$('#navStep2').prop('href', 'rep_2_regActivity_amend.html');
+				$('#navStep3').prop('href', '');
 				$('#raDrftGrp').hide();
 				$('#raAmdGrp').show();
 			} else {
 				$('#raDrftGrp').hide();
 				$('#raAmdGrp').hide();
+				changeNavPills('Regulatory Activity');
+				$('#navStep2').prop('href', '');
+				$('#navStep3').prop('href', '');
 			}
 		} else if (type == 'rt') {
 			
@@ -722,6 +746,14 @@ function changeNavPills(txtToChangeTo) {
 			$(this).find('a').text(txt.substr(0,(index+2)) + txtToChangeTo);
 		}
 	});
+}
+
+function enableDisableDivArray(opt, contentArray) {
+	for (var i = 0; i < contentArray.length; i++) {
+		$(contentArray[i]).find('input, select').not('.readOnly').each(function() {
+			$(this).prop("disabled", !(opt.checked));
+		});
+	}
 }
 </script>
 </body>
