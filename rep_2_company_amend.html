@@ -151,13 +151,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-6">
 						<div class="checkbox">
-							<label><input id="coEnrolmentAmendManuAddr" type="checkbox" value="" onclick="ShowHideDivGenArray(this, [coEnrolmentAmendManuMailAddr])" /> Amend Manufacturer / Sponsor Mailing Address*</label>
+							<label><input id="coEnrolmentAmendManuAddr" type="checkbox" value="" onclick="enableDisableDivArray(this, [coEnrolmentAmendManuMailAddr])" /> Amend Manufacturer / Sponsor Mailing Address*</label>
 						</div>
 					</div>
 				</div>
 			</header>
 		<!--<div class="panel-body">-->
-		<div class="panel-body" id="coEnrolmentAmendManuMailAddr" style="display: none">
+		<div class="panel-body" id="coEnrolmentAmendManuMailAddr">
 			<h5>Company Information:</h5>
 			<div id="coEnrolmentAmendManuCompInfo" class="wb-frmvld well well-sm">
 				<div class="row">
@@ -165,13 +165,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-8">
 							<label for="coEnrolmentAmendManuCompName" class="control-label">Company Name [Full Legal Name]*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" readonly id="coEnrolmentAmendManuCompName">
+								<input type="text" class="form-control input-sm full-width" readonly id="coEnrolmentAmendManuCompName" disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="coEnrolmentAmendManuCompCode" class="control-label">Company Code [if assigned]</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" readonly id="coEnrolmentAmendManuCompCode">
+								<input type="text" class="form-control input-sm full-width" readonly id="coEnrolmentAmendManuCompCode"  disabled="true">
 							</div>
 						</div>
 					<!-- </form> -->
@@ -184,7 +184,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-12">
 							<label for="coEnrolmentAmendManuAddrStr" class="control-label">Street / Suite *</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuAddrStr" size="100" placeholder="Enter Street/Suite">
+								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuAddrStr" placeholder="Enter Street/Suite" disabled="true">
 							</div>
 						</div>
 					</div>
@@ -192,12 +192,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentAmendManuAddrCity" class="control-label">City / Town*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuAddrCity" placeholder="Enter City/Town">
+								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuAddrCity" placeholder="Enter City/Town" disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentAmendManuAddrCountry" class="control-label">Country*</label>
-                            <input class="form-control input-sm full-width" type="text" id="coEnrolmentAmendManuAddrCountry" name="coEnrolmentAmendManuAddrCountry" list="CountrySuggestions" onchange="changeSuggestions(this.value, 'coEnrolmentAmendManuAddrProv')"/>
+                            <input class="form-control input-sm full-width" type="text" id="coEnrolmentAmendManuAddrCountry" name="coEnrolmentAmendManuAddrCountry" list="CountrySuggestions" onchange="changeSuggestions(this.value, 'coEnrolmentAmendManuAddrProv')" disabled="true"/>
 									<datalist id="CountrySuggestions">
 										<!--[if lte IE 9]><select><![endif]-->
 										<option label=" "></option>
@@ -521,7 +521,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentAmendManuAddrPostal" class="control-label">Postal / ZIP Code*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuAddrPostal" placeholder="Enter Postal/ZIP Code">
+								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuAddrPostal" placeholder="Enter Postal/ZIP Code" disabled="true">
 							</div>
 						</div>
 					<!-- </form> -->
@@ -534,7 +534,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-2">
 							<label for="coEnrolmentAmendManuCompRepSal" class="control-label">Salutation*</label>
                             <div class="">
-                                <select class="form-control input-sm full-width" name="coEnrolmentAmendManuCompRepSal" id="coEnrolmentAmendManuCompRepSal">
+                                <select class="form-control input-sm full-width" name="coEnrolmentAmendManuCompRepSal" id="coEnrolmentAmendManuCompRepSal" disabled="true">
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -546,31 +546,31 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-2">
 							<label for="coEnrolmentAmendManuCompRepGivenName" class="control-label">Given Name*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepGivenName" placeholder="Enter Given Name">
+								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepGivenName" placeholder="Enter Given Name" disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-1">
 							<label for="coEnrolmentAmendManuCompRepInit" class="control-label">Initials</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepInit" placeholder="Enter Surname" >
+								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepInit" placeholder="Enter Surname"  disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentAmendManuCompRepSurname" class="control-label">Surname*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepSurname" placeholder="Enter Surname" >
+								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepSurname" placeholder="Enter Surname"  disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="coEnrolmentAmendManuCompRepTitle" class="control-label">Title*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepTitle" placeholder="Enter Title" >
+								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepTitle" placeholder="Enter Title"  disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="coEnrolmentAmendManuCompRepLang" class="control-label">Language*</label>
                             <div class="">
-                                <select class="form-control input-sm full-width" name="coEnrolmentAmendManuCompRepLang" id="coEnrolmentAmendManuCompRepLang">
+                                <select class="form-control input-sm full-width" name="coEnrolmentAmendManuCompRepLang" id="coEnrolmentAmendManuCompRepLang" disabled="true">
                                     <option label=" "></option>
                                     <option value="1">English</option>
                                     <option value="2">French</option>
@@ -582,25 +582,25 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentAmendManuCompRepTelNo" class="control-label">Telephone No*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepTelNo" placeholder="Enter Telephone No." >
+								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepTelNo" placeholder="Enter Telephone No."  disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="coEnrolmentAmendManuCompRepTelExt" class="control-label">Ext</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width"  id="coEnrolmentAmendManuCompRepTelExt" placeholder="Enter Extension" >
+								<input type="text" class="form-control input-sm full-width"  id="coEnrolmentAmendManuCompRepTelExt" placeholder="Enter Extension"  disabled="true">
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="coEnrolmentAmendManuCompRepFaxNo" class="control-label">Fax No.</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepFaxNo" placeholder="Enter Fax No." >
+								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepFaxNo" placeholder="Enter Fax No." disabled="true" >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="coEnrolmentAmendManuCompRepEmail" class="control-label">Email*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepEmail" placeholder="Enter Email" />
+								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAmendManuCompRepEmail" placeholder="Enter Email"  disabled="true"/>
 							</div>
 						</div>
 					<!-- </form> -->
@@ -1217,6 +1217,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="./js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
 <script src="./js/theme.min.js"></script>
+<script src="./js/rep.js"></script>
 <script type="text/javascript" id="">
 
 		/*To Show and Hide Div -> if optYes is selected, content will show; otherwise it will hide*/
@@ -1225,12 +1226,13 @@ function ShowHideDivGen(optYes, content) { //general case
 	content.style.display = optYes.checked ? "block" : "none";
 }
 */
+/*
 function ShowHideDivGenArray(optYes, contentArray) {
 	for (var i = 0; i < contentArray.length; i++) {
 		contentArray[i].style.display = optYes.checked ? "block" : "none";
 	}
 }
-
+*/
 /*
 function enableDisableDiv(opt, content) {
 	$(content).find('input').each(function() {
@@ -1240,7 +1242,7 @@ function enableDisableDiv(opt, content) {
 		$(this).prop("disabled", !(opt.checked));
 	});
 }*/
-
+/*
 function enableDisableDivArray(opt, contentArray) {
 	for (var i = 0; i < contentArray.length; i++) {
 		$(contentArray[i]).find('input, select').not('.readOnly').each(function() {
@@ -1260,6 +1262,7 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
 		   }
 		   provStateTextBox.value = '';
 }
+*/
 </script>
 </body>
 </html>
