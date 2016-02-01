@@ -1048,7 +1048,7 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
           $(lastRow).each(function() {
             numOfDINsInLastRow = $(this).find('div.col-sm-3').length;
           });
-          if (numOfDINsInLastRow%4 == 0) { //add new row (with newDIN) beneath
+          if ((numOfDINsInLastRow%4 == 0) && (numOfDINsInLastRow != 0)) { //add new row (with newDIN) beneath
             raDINRowCount++;
             var newRow = '<div class="row" id="' + relId + 'Row' + raDINRowCount + '">' + newDIN + '</div>';
             $('#' + relId).append(newRow);
@@ -1098,10 +1098,12 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
           }
           //if lastRow contains no elements, remove it
           if ($(currentRow).children().length == 0) {
-            $(currentRow).remove();
+			if ((raDINRowCount-1) > 1) {
+				$(currentRow).remove();
             //raDINRowCount--;
-          } 
-		  
+			}
+		}
+		
 		  //must rename the labels starting from the removed DIN
 		  //get total number of DINs
 		  var raDINRowCount = $('#' + relId + ' .row').length;
@@ -1115,6 +1117,7 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
 			var replacedGrp = replaceAll(DINGrp[0].outerHTML, relId + (parseInt(w) + 1), relId + parseInt(w));
 			DINGrp[0].outerHTML = replacedGrp;
 		  }
+		  
       }
 
 /*
