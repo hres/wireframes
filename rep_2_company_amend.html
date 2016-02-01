@@ -1243,7 +1243,7 @@ function enableDisableDiv(opt, content) {
 
 function enableDisableDivArray(opt, contentArray) {
 	for (var i = 0; i < contentArray.length; i++) {
-		$(contentArray[i]).find('input:not([class=readOnly]), select').each(function() {
+		$(contentArray[i]).find('input, select').not('.readOnly').each(function() {
 			$(this).prop("disabled", !(opt.checked));
 		});
 	}
@@ -1255,7 +1255,10 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
 				provStateTextBox.setAttribute('list','canProvSuggestions');
 		   } else if (txtBoxCountryValue == 'United States') {
 				provStateTextBox.setAttribute('list', 'usStateSuggestions');
+		   } else {
+				provStateTextBox.setAttribute('list', '');
 		   }
+		   provStateTextBox.value = '';
 }
 </script>
 </body>
