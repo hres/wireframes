@@ -33,6 +33,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 <link rel="stylesheet" href="./css/rep.css">
 
+
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
@@ -811,38 +812,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="./js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
 <script src="./js/theme.min.js"></script>
-<script type="text/javascript" id="">
-
-function replaceAll(str, find, rep) {
-  return str.replace(new RegExp(find, 'g'), rep);
-}
-
-
-/*To Show and Hide Div -> if optYes is selected, content will show; otherwise it will hide*/
-function ShowHideDivGen(optYes, content) { //general case
-	content.style.display = optYes.checked ? "none" : "block";
-}
-
-	  
-function enableDisableDivArray(opt, contentArray) {
-	for (var i = 0; i < contentArray.length; i++) {
-		$(contentArray[i]).find('input, select, button').not('.readOnly').each(function() {
-			$(this).prop("disabled", !(opt.checked));
-		});
-	}
-}
-
-function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
-		var provStateTextBox = document.getElementById(txtBoxProvStateId);
-			if (txtBoxCountryValue == 'Canada') {
-				provStateTextBox.setAttribute('list','canProvSuggestions');
-		   } else if (txtBoxCountryValue == 'United States') {
-				provStateTextBox.setAttribute('list', 'usStateSuggestions');
-		   } else {
-				provStateTextBox.setAttribute('list', '');
-		   }
-		   provStateTextBox.value = '';
-}
-</script>
+<script src="./js/rep.js"></script>
 </body>
 </html>
