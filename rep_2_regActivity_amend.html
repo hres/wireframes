@@ -126,6 +126,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     	<li><a href="rep_1.html" class="boldFont" id="navStep1">Step 1 - AMEND Regulatory Activity Enrolment</a></li>
     	<li class="active"><a href="#" class="boldFont" id="navStep2">Step 2 - AMEND Regulatory Activity Enrolment</a></li>
     	<li><a href="rep_3_regActivity_amend.html" class="boldFont" id="navStep3">Step 3 - AMEND Regulatory Activity Enrolment</a></li>
+		<li><a class="boldFont" href="#" id="navStep4">HC Internal</a></li>
     </ul>
 </div>
 <section>
@@ -815,5 +816,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script src="./js/rep.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+   setCookie("currentURL",window.location.href);
+});
+
+var prevURL = readCookie("currentURL");
+</script>
 </body>
 </html>
