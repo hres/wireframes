@@ -125,6 +125,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     	<li class="active"><a class="boldFont" href="#" id="navStep1">Step 1</a></li>
     	<li><a class="boldFont" href="#" id="navStep2">Step 2</a></li>
     	<li><a class="boldFont" href="#" id="navStep3">Step 3</a></li>
+		<li><a class="boldFont" href="#" id="navStep4">HC Internal</a></li>
     </ul>
 </div>
 <section>
@@ -655,6 +656,7 @@ function optButtonSelect(type, action) {
 				changeNavPills('NEW Company Enrolment');
 				$('#navStep2').prop('href', 'rep_2_company.html');
 				$('#navStep3').prop('href', 'rep_3_company.html');
+				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
 				$('#coDrftGrp').hide();
 				$('#coAmdGrp').hide();
 			} else if (action == 'Draft') {
@@ -674,6 +676,7 @@ function optButtonSelect(type, action) {
 				changeNavPills('Company Enrolment');
 				$('#navStep2').prop('href', '');
 				$('#navStep3').prop('href', '');
+				$('#navStep4').prop('href', '');
 			}
 		} else if (type == 'do') {
 			if (action == 'New') {
@@ -681,6 +684,7 @@ function optButtonSelect(type, action) {
 				changeNavPills('NEW Dossier Enrolment');
 				$('#navStep2').prop('href', 'rep_2_dossier.html');
 				$('#navStep3').prop('href', 'rep_3_dossier.html');
+				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
 				$('#doDrftGrp').hide();
 				$('#doAmdGrp').hide();
 			} else if (action == 'Draft') {
@@ -700,6 +704,7 @@ function optButtonSelect(type, action) {
 				changeNavPills('Dossier Enrolment');
 				$('#navStep2').prop('href', '');
 				$('#navStep3').prop('href', '');
+				$('#navStep4').prop('href', '');
 			}
 		} else if (type == 'ra') {
 			if (action == 'New') {
@@ -707,6 +712,7 @@ function optButtonSelect(type, action) {
 				changeNavPills('NEW Regulatory Activity Enrolment');
 				$('#navStep2').prop('href', 'rep_2_regActivity.html');
 				$('#navStep3').prop('href', 'rep_3_regActivity.html');
+				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
 				$('#raDrftGrp').hide();
 				$('#raAmdGrp').hide();
 			} else if (action == 'Draft') {
@@ -726,6 +732,7 @@ function optButtonSelect(type, action) {
 				changeNavPills('Regulatory Activity');
 				$('#navStep2').prop('href', '');
 				$('#navStep3').prop('href', '');
+				$('#navStep4').prop('href', '');
 			}
 		} else if (type == 'rt') {
 			
@@ -733,21 +740,6 @@ function optButtonSelect(type, action) {
 	}
 }
 
-function changeNavPills(txtToChangeTo) {
-	//changes to navigation between steps when selecting an enrolment type
-	var navPills = $('#navREP');
-	var txt;
-	var index;
-	$(navPills).children().each(function() {
-		txt = $(this).find('a').text();
-		index = txt.indexOf('- ');
-		if (index == -1) {
-			$(this).find('a').text(txt + ' - ' + txtToChangeTo);
-		} else {
-			$(this).find('a').text(txt.substr(0,(index+2)) + txtToChangeTo);
-		}
-	});
-}
 /*
 function enableDisableDivArray(opt, contentArray) {
 	for (var i = 0; i < contentArray.length; i++) {
