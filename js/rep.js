@@ -52,7 +52,7 @@ function setCookie(cname, cvalue, exdays) {
 	} else {
 		expire = "";
 	}
-	document.cookie = name+"="+value+expires+"; path=/";
+	document.cookie = cname+"="+cvalue+expires+"; path=/";
 } 
 
 //gets the value of a cookie
