@@ -126,6 +126,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     	<li><a href="rep_1.html" class="boldFont" id="navStep1">Step 1 - NEW Regulatory Transaction Enrolment</a></li>
     	<li><a href="rep_2_regTransaction.html" class="boldFont" id="navStep2">Step 2 - NEW Regulatory Transaction Enrolment</a></li>
     	<li class="active"><a href="#" id="navStep3" class="boldFont">Step 3 - NEW Regulatory Transaction Enrolment</a></li>
+		<li><a class="boldFont" href="#" id="navStep4">HC Internal</a></li>
     </ul>
 </div>
 <section>
@@ -343,6 +344,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="./js/theme.min.js"></script>
 <script src="./js/rep.js"></script>
 <script type="text/javascript" id="">
+$(document).ready(function() {
+   setCookie("currentURL",window.location.href);
+});
+
+var prevURL = readCookie("currentURL");
+
 /*To Show and Hide Div -> if optYes is selected, content will hide; otherwise it will show
        function ShowHideDivGen(optYes, content) { //general case
         content.style.display = optYes.checked ? "none" : "block";
