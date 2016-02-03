@@ -39,3 +39,35 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
 		   }
 }
 
+
+//FOR STORING COOKIES - for storing previous URL accessed
+
+//creates a cookie with the name cname, with the value cvalue and expires in exdays
+function setCookie(cname, cvalue, exdays) {
+	var expires;
+	if (exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		expires = "; expires="+d.toUTCString();
+	} else {
+		expire = "";
+	}
+	document.cookie = name+"="+value+expires+"; path=/";
+} 
+
+//gets the value of a cookie
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+//removes a cookie with name
+function eraseCookie(name) {
+	setCookie(name,"",-1);
+}
