@@ -139,53 +139,69 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		
 		<div id="mainInfo">
 			<div class="row">
-					<div class="col-sm-3">
-						<div class="form-group form-inline">
-							<label for="rtEnrolmenteCTD" class="control-label col-sm-9">Is this an eCTD transaction?</label>
-							<select class="form-control input-sm col-sm-3"  name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
-								<option label=" "></option>
-								<option value="1">Yes</option>
-								<option value="2">No</option>
-							</select>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<div class="col-sm-8">
+								<label for="rtEnrolmenteCTD" class="control-label">Is this an eCTD transaction?</label>
+							</div>
+							<div class="col-sm-4">
+								<select class="form-control input-sm"  name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
+									<option label=" "></option>
+									<option value="1">Yes</option>
+									<option value="2">No</option>
+								</select>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-9">
+					<div class="col-sm-6">
 						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group form-inline">
-									<label for="rtEnrolmentSeqNo" class="control-label col-sm-3" >Sequence Number*</label>
-									<input type="text" class="form-control input-sm col-sm-9" id="rtEnrolmentSeqNo" disabled="disabled">
+							<div class="form-group">
+								<div class="col-sm-5">
+									<label for="rtEnrolmentSeqNo" class="control-label" >Sequence Number*</label>
+								</div>
+								<div class="col-sm-7">
+									<input type="text" class="form-control input-sm full-width" id="rtEnrolmentSeqNo" disabled="disabled">
 								</div>
 							</div>
 						</div>
 						<div class="row" style="margin-top: 10px">
-							<div class="col-sm-12">
-								<div class="form-group form-inline">
+							<div class="form-group">
+								<div class="col-sm-5">
 									<label for="rtEnrolmentRelSeqNo" class="control-label col-sm-3">Related Sequence Number:</label>
-									<input type="text" class="form-control input-sm" id="rtEnrolmentRelSeqNo" disabled="disabled">
+								</div>
+								<div class="col-sm-7">
+									<input type="text" class="form-control input-sm full-width" id="rtEnrolmentRelSeqNo" disabled="disabled">
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-3">
-						<div class="form-group form-inline">
-						<label for="rtEnrolmentSolInfo" class="control-label col-sm-9">Is this solicited information?</label>
-							<select class="form-control input-sm col-sm-3" name="rtEnrolmentSolInfo" id="rtEnrolmentSolInfo" onchange="checkOptionSol(this)">
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<div class="col-sm-8">
+							<label for="rtEnrolmentSolInfo" class="control-label">Is this solicited information?</label>
+						</div>
+						<div class="col-sm-4">
+							<select class="form-control input-sm" name="rtEnrolmentSolInfo" id="rtEnrolmentSolInfo" onchange="checkOptionSol(this)">
 								<option label=" "></option>
 								<option value="1">Yes</option>
 								<option value="2">No</option>
 							</select>
 						</div>
 					</div>
-					<div class="col-sm-9">
-						<div class="form-group form-inline">
-							<label for="rtEnrolmentReqSolInfo" class="control-label col-sm-3">Requester of Solicited Information</label>
-							<input type="text" class="form-control input-sm " id="rtEnrolmentReqSolInfo" disabled="disabled">
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<div class="col-sm-5">
+							<label for="rtEnrolmentReqSolInfo" class="control-label">Requester of Solicited Information</label>
+						</div>
+						<div class="col-sm-7">
+							<input type="text" class="form-control input-sm full-width" id="rtEnrolmentReqSolInfo" disabled="disabled">
 						</div>
 					</div>
 				</div>
+			</div>
 		</div>
 		<div id="raProjManager">
 			<h5>Name of Regulatory Project Manager [if known]:</h5>
