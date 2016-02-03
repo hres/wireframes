@@ -125,6 +125,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     	<li><a href="rep_1.html" class="boldFont" id="navStep1">Step 1 - NEW Regulatory Activity Enrolment</a></li>
     	<li class="active"><a href="#" class="boldFont" id="navStep2">Step 2 - NEW Regulatory Activity Enrolment</a></li>
     	<li><a href="rep_3_regActivity.html" class="boldFont" id="navStep3">Step 3 - NEW Regulatory Activity Enrolment</a></li>
+		<li><a class="boldFont" href="#" id="navStep4">HC Internal</a></li>
     </ul>
 </div>
 <section>
@@ -966,6 +967,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <script src="./js/theme.min.js"></script>
 <script src="./js/rep.js"></script>
 <script type="text/javascript" id="">
+
+$(document).ready(function() {
+   setCookie("currentURL",window.location.href);
+});
+
+var prevURL = readCookie("currentURL");
+
 //var raDINCount = 4; //keeps track of number of current DINs (initially, there are 4)
 //var raDINButCount = 1; //keeps track of the number of buttons used to add/delete DINs
 var raRelCount = 1; //keeps track of the number of Related Regulatory Activity Submissions
