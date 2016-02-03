@@ -25,3 +25,7 @@ div.blackBorder {
 	border: 1px solid;
 	padding: 15px;
 } 
+
+boldFont {
+	font-weight: bold;
+}
