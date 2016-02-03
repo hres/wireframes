@@ -542,6 +542,7 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 
 $(document).ready(function() {
    setCookie("currentURL",window.location.href);
+   setCookie("typeREP", "");
 });
 
 function checkEnrolTypeSelection() { //previously obj
@@ -650,6 +651,7 @@ function optButtonSelect(type, action) {
 	var index;
 	
 	if (opt.checked) {
+		setCookie("typeREP", action);
 		if (type == 'co') {
 			if (action == 'New') {
 				step2but.href = "rep_2_company.html";
