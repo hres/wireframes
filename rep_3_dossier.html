@@ -126,6 +126,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     	<li><a href="rep_1.html" class="boldFont" id="navStep1">Step 1 - NEW Dossier Enrolment</a></li>
     	<li><a href="rep_2_dossier.html" class="boldFont" id="navStep2">Step 2 - NEW Dossier Enrolment</a></li>
     	<li class="active"><a href="#" class="boldFont" id="navStep3">Step 3 - NEW Dossier Enrolment</a></li>
+		<li><a class="boldFont" href="#" id="navStep4">HC Internal</a></li>
     </ul>
 </div>
 <section>
@@ -345,7 +346,11 @@ used within 6 month of the date-of-issue.</p>
 <script src="./js/theme.min.js"></script>
 <script src="./js/rep.js"></script>
 <script type="text/javascript" id="">
+$(document).ready(function() {
+   setCookie("currentURL",window.location.href);
+});
 
+var prevURL = readCookie("currentURL");
 </script>
 </body>
 </html>
