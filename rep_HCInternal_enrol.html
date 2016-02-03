@@ -147,6 +147,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 			</div>
 			</div>
+			</div>
 			<div id="coHCInfo" disabled="true" style="display:none">
 				<h4>Company Information</h4>
 				<div class="well well-sm">
@@ -195,12 +196,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 			</div>
 		</div>
-	</div>
 <div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
             <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="">Generate Enrolment File</a>
         </div>
-	</div>
+</div>
 </div>
 </section>
 <div class="form-group">
@@ -313,6 +313,7 @@ $(document).ready(function() {
 });
 
 var prevURL = readCookie("currentURL");
+var repType = readCookie("typeREP");
 
 function displayContent() {
 	var coHCInfo = document.getElementById('coHCInfo');
@@ -321,34 +322,60 @@ function displayContent() {
 	var navStep2 = document.getElementById('navStep2');
 	var navStep3 = document.getElementById('navStep2');
 	if (prevURL.indexOf('company') > -1) {
-		coHCInfo.style.display = "block";
-		doHCInfo.style.display = "none";
-		raHCInfo.style.display = "none";
-		navStep2.href = "rep_2_company.html";
-		navStep3.href = "rep_3_company.html";
-		changeNavPills("NEW Company Enrolment");
+		enableCompany();
 	} else if (prevURL.indexOf('dossier') > -1) {
-		coHCInfo.style.display = "none";
-		doHCInfo.style.display = "block";
-		raHCInfo.style.display = "none";
-		navStep2.href = "rep_2_dossier.html";
-		navStep3.href = "rep_3_dossier.html";
-		changeNavPills("NEW Dossier Enrolment");
+		enableDossier();
 	} else if (prevURL.indexOf('regActivity') > -1) {
-		coHCInfo.style.display = "none";
-		doHCInfo.style.display = "none";
-		raHCInfo.style.display = "block";
-		navStep2.href = "rep_2_regActivity.html";
-		navStep3.href = "rep_3_regActivity.html";
-		changeNavPills("NEW Regulatory Activity (RA) Enrolment");
+		enableRegActivity();
+	} else if (prevURL.indexOf('rep_1') > -1) {
+		if (repType == 'co') {
+			enableCompany();
+		} else if (repType == 'do') {
+			enableDossier();
+		} else if (repType == 'ra') {
+			enableRegActivity();
+		} else {
+			disableAll();
+		}
 	} else {
-		coHCInfo.style.display = "none";
-		doHCInfo.style.display = "none";
-		raHCInfo.style.display = "none";
-		navStep2.href = "#";
-		navStep3.href = "#";
-		changeNavPills("");
+		disableAll();
 	}
+}
+
+function enableCompany() {
+	coHCInfo.style.display = "block";
+	doHCInfo.style.display = "none";
+	raHCInfo.style.display = "none";
+	navStep2.href = "rep_2_company.html";
+	navStep3.href = "rep_3_company.html";
+	changeNavPills("NEW Company Enrolment");
+}
+
+function enableDossier() {
+	coHCInfo.style.display = "none";
+	doHCInfo.style.display = "block";
+	raHCInfo.style.display = "none";
+	navStep2.href = "rep_2_dossier.html";
+	navStep3.href = "rep_3_dossier.html";
+	changeNavPills("NEW Dossier Enrolment");
+}
+
+function enableRegActivity() {
+	coHCInfo.style.display = "none";
+	doHCInfo.style.display = "none";
+	raHCInfo.style.display = "block";
+	navStep2.href = "rep_2_regActivity.html";
+	navStep3.href = "rep_3_regActivity.html";
+	changeNavPills("NEW Regulatory Activity (RA) Enrolment");
+}
+
+function disableAll() {
+	coHCInfo.style.display = "none";
+	doHCInfo.style.display = "none";
+	raHCInfo.style.display = "none";
+	navStep2.href = "#";
+	navStep3.href = "#";
+	changeNavPills("");
 }
 </script>
 </body>
