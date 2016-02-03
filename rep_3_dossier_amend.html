@@ -126,6 +126,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     	<li><a href="rep_1.html" class="boldFont" id="navStep1">Step 1 - AMEND Dossier Enrolment</a></li>
     	<li><a href="rep_2_dossier_amend.html" class="boldFont" id="navStep2">Step 2 - AMEND Dossier Enrolment</a></li>
     	<li class="active"><a href="#" class="boldFont" id="navStep3">Step 3 - AMEND Dossier Enrolment</a></li>
+		<li><a class="boldFont" href="#" id="navStep4">HC Internal</a></li>
     </ul>
 </div>
 <section>
@@ -333,6 +334,12 @@ accurate and complete.</p>
 <script src="./js/theme.min.js"></script>
 <script src="./js/rep.js"></script>
 <script type="text/javascript" id="">
+
+$(document).ready(function() {
+   setCookie("currentURL",window.location.href);
+});
+
+var prevURL = readCookie("currentURL");
 /*
 	
 		$('p select[name=iline]').change(function(e){
