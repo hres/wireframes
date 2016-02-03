@@ -71,19 +71,3 @@ function readCookie(name) {
 function eraseCookie(name) {
 	setCookie(name,"",-1);
 }
-
-function changeNavPills(txtToChangeTo) {
-	//changes to navigation between steps when selecting an enrolment type
-	var navPills = $('#navREP');
-	var txt;
-	var index;
-	$(navPills).children().each(function() {
-		txt = $(this).find('a').text();
-		index = txt.indexOf('- ');
-		if (index == -1) {
-			$(this).find('a').text(txt + ' - ' + txtToChangeTo);
-		} else {
-			$(this).find('a').text(txt.substr(0,(index+2)) + txtToChangeTo);
-		}
-	});
-}
