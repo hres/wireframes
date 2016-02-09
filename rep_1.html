@@ -257,11 +257,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<input type="file" id="rtRAFileUpload"  disabled="true"/>
 						</div>
 						<div class="checkbox">
-						<label><input type="checkbox"  disabled="true"/> I confirm that the uploaded files are the most current version of the
+						<label><input type="checkbox" id="rtCheck1"  onclick="rtCheck()" disabled="true"/> I confirm that the uploaded files are the most current version of the
 Enrolment XML files.</label>
 						</div>
 						<div class="checkbox">
-							<label><input type="checkbox"  disabled="true"/> I confirm that All the information within the enrolment files are
+							<label><input type="checkbox" id="rtCheck2"  onclick="rtCheck()" disabled="true"/> I confirm that All the information within the enrolment files are
 current and that NOTHING has changed. (i.e.: no changes to
 Company information, Brand Name, Common name, Dossier
 information, Regulatory Activity information)</label>
@@ -281,25 +281,96 @@ information, Regulatory Activity information)</label>
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="form-group">
-						<label for="raEnDateSubmitted" ><span class="field-name">Date the Regulatory Activity Enrolment
-is submitted*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
+						<label for="raEnDateSubmitted" ><span class="field-name"></span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
 						<input class="form-control" type="date" id="raEnDateSubmitted" name="raEnDateSubmitted" data-rule-dateiso="true" disabled="true">
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div id="raAntDate" class="form-group">
-						<label for="raEnAntiDateFiled" ><span class="field-name">Date the Regulatory Activity is
-anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
+						<label for="raEnAntiDateFiled" ><span class="field-name"></span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
 						<input class="form-control" type="date" id="raEnAntiDateFiled" name="raEnAntiDateFiled" data-rule-dateiso="true" disabled="true">
 					</div>
 				</div>
 			<!-- </form> -->
 			</div>
-			
-			<h4>Main Contact Information</h4>
-			<div id="MCInfo" class="wb-frmvld well well-sm">
+			<div class="row">
+					<button class="btn btn-default btn-sm col-sm-4 pull-right" id="contactAddBut" onclick="addNewContact()" type="submit">Add Another Contact</button>
+				</div>
+			<ul id="contactInfoList" class="list-unstyled">
+				<li id="contactInfo1">
+					<details open="open">
+						<summary>Main Contact Information (Recommended: Two Contact Submissions)</summary>
+						<div id="contactInfo1Main" class="wb-frmvld well well-sm">
 				
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
+					<div class="row">
+						<div class="form-group col-sm-2">
+							<label for="contactInfo1Salutation" class="control-label">Salutation*</label>
+                            <div class="">
+                                <select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" disabled="true">
+                                    <option label=" "></option>
+                                    <option value="1">Mr.</option>
+                                    <option value="2">Mrs.</option>
+                                    <option value="3">Ms.</option>
+									<option value="4">Dr.</option>
+                                </select>
+                            </div>
+						</div>
+						
+						<div class="form-group col-sm-4">
+							<label for="contactInfo1GivenName" class="control-label">Given Name*</label>
+							<div class="">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name" disabled="true">
+							</div>
+						</div>
+						<div class="form-group col-sm-4">
+							<label for="contactInfo1Surname" class="control-label">Surname*</label>
+							<div class="">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  disabled="true">
+							</div>
+						</div>
+						<div class="form-group col-sm-2">
+							<label for="contactInfo1Title" class="control-label">Title*</label>
+							<div class="">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title"  disabled="true">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-3">
+							<label for="contactInfo1TelNo" class="control-label">Telephone No*</label>
+							<div class="">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone No."  disabled="true">
+							</div>
+						</div>
+						<div class="form-group col-sm-2">
+							<label for="contactInfo1TelExt" class="control-label">Ext</label>
+							<div class="">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  disabled="true">
+							</div>
+						</div>
+						<div class="form-group col-sm-4">
+							<label for="contactInfo1Email" class="control-label">Email*</label>
+							<div class="">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  disabled="true"/>
+							</div>
+						</div>
+						<div class="form-group col-sm-3">
+							<label for="contactInfo1FaxNo" class="control-label">Fax No.</label>
+							<div class="">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax No."  disabled="true">
+							</div>
+						</div>
+					</div>
+					<!-- </form> -->
+				</div>
+					</details>
+				</li>
+			</ul>
+			<!--
+			<h4>Main Contact Information (Recommended: Two Contact Submissions)</h4>
+			<div id="MCInfo" class="wb-frmvld well well-sm">
+				
 					<div class="row">
 						<div class="form-group col-sm-2">
 							<label for="MCInfoSalutation" class="control-label">Salutation*</label>
@@ -359,13 +430,11 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 							</div>
 						</div>
 					</div>
-					<!-- </form> -->
 				</div>
 				
 				<h4>Secondary Contact Information</h4>
 			<div id="SCInfo" class="wb-frmvld well well-sm">
 				
-					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 					<div class="row">
 						<div class="form-group col-sm-2">
 							<label for="SCInfoSalutation" class="control-label">Salutation*</label>
@@ -423,9 +492,8 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 								<input type="text" class="form-control full-width" id="SCInfoFaxNo" placeholder="Enter Fax No."  disabled="true">
 							</div>
 						</div>
-					<!-- </form> -->
 					</div>
-			</div>
+			</div> -->
 	</div>
 </div>
 <div class="panel-footer text-center">
@@ -539,6 +607,9 @@ anticipated to be filed*</span><span class="datepicker-format"> (<abbr title="Fo
 <script src="./js/theme.min.js"></script>
 <script src="./js/rep.js"></script>
 <script type="text/javascript" id="">
+var contactCounter = 1;
+var contactArray = ['Main', 'Secondary', 'Tertiary'];
+var numOfContactsCreated = 1;
 
 $(document).ready(function() {
    setCookie("currentURL",window.location.href);
@@ -579,6 +650,8 @@ function checkEnrolTypeSelection() { //previously obj
 		rtType.style.display = "none";
 		step1c.style.display = "none";
 		raAntDate.style.display = "none";
+		changeDateText('raEnDateSubmitted', 'Date the Regulatory Enrolment is submitted*');
+		changeDateText('raEnAntiDateFiled', 'Date the Regulatory Enrolment is anticipated to be filed*');
 	} else if (obj.value == "1") {
 		coType.style.display = "block";
 		doType.style.display = "none";
@@ -589,6 +662,8 @@ function checkEnrolTypeSelection() { //previously obj
 		
 		changeNavPills('Company');
 		//step2but.href = "rep_2_company.html";
+		changeDateText('raEnDateSubmitted', 'Date the Company Enrolment is submitted*');
+		changeDateText('raEnAntiDateFiled', 'Date the Company Enrolment is anticipated to be filed*');
 		
 	} else if (obj.value == "2") {
 		coType.style.display = "none";
@@ -599,6 +674,9 @@ function checkEnrolTypeSelection() { //previously obj
 		raAntDate.style.display = "block";
 		
 		changeNavPills('Dossier');
+		changeDateText('raEnDateSubmitted', 'Date the Dossier Enrolment is submitted*');
+		changeDateText('raEnAntiDateFiled', 'Date the Dossier Enrolment is anticipated to be filed*');
+		//changeDateText('raEnAntiDateFiled', 'Date the First RA is anticipated to be filed');
 		
 		//step2but.href = "rep_2_dossier.html";
 		
@@ -611,6 +689,9 @@ function checkEnrolTypeSelection() { //previously obj
 		raAntDate.style.display = "block";
 		
 		changeNavPills('Regulatory Activity');
+		changeDateText('raEnDateSubmitted', 'Date the Regulatory Activity Enrolment is submitted*');
+		changeDateText('raEnAntiDateFiled', 'Date the Regulatory Activity Enrolment is anticipated to be filed*');
+		//changeDateText('raEnAntiDateFiled', 'Date the First RA is anticipated to be filed');
 		
 		//step2but.href = "rep_2_regActivity.html";
 		
@@ -625,7 +706,7 @@ function checkEnrolTypeSelection() { //previously obj
 		changeNavPills('Regulatory Transaction');
 		$('#navStep2').prop('href', 'rep_2_regTransaction.html');
 		$('#navStep3').prop('href', 'rep_3_regTransaction.html');
-		step2but.href = "rep_2_regTransaction.html";
+		step2but.href = "";
 		
 	}else {
 		coType.style.display = "none";
@@ -639,6 +720,8 @@ function checkEnrolTypeSelection() { //previously obj
 		$('#navStep2').prop('href', '');
 		$('#navStep3').prop('href', '');
 		step2but.href = "";
+		changeDateText('raEnDateSubmitted', 'Date the Regulatory Enrolment is submitted*');
+		changeDateText('raEnAntiDateFiled', 'Date the Regulatory Enrolment is anticipated to be filed*');
 	}
 }
 
@@ -688,6 +771,7 @@ function optButtonSelect(type, action) {
 				$('#navStep2').prop('href', 'rep_2_dossier.html');
 				$('#navStep3').prop('href', 'rep_3_dossier.html');
 				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
+				changeDateText('raEnAntiDateFiled', 'Date the First RA is anticipated to be filed');
 				$('#doDrftGrp').hide();
 				$('#doAmdGrp').hide();
 			} else if (action == 'Draft') {
@@ -759,6 +843,55 @@ function changeNavPills(txtToChangeTo) {
 			$(this).find('a').text(txt.substr(0,(index+2)) + txtToChangeTo);
 		}
 	});
+}
+
+function changeDateText(txtboxDate, txtToChangeTo) {
+	$('label[for=' + txtboxDate + ']')[0].childNodes[0].textContent = txtToChangeTo;
+}
+
+//adds contact
+function addNewContact() {
+	if (contactCounter < 3) {
+		var newContact = '<li id="contactInfo1"><details open="open"><summary>Main Contact Information <button class="btn btn-danger btn-xs deleteRef" onclick="deleteContact(contactInfo1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div id="contactInfo1Main" class="wb-frmvld well well-sm"><div class="row"><div class="form-group col-sm-2"><label for="contactInfo1Salutation" class="control-label">Salutation*</label><div class=""><select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" ><option label=" "></option><option value="1">Mr.</option><option value="2">Mrs.</option><option value="3">Ms.</option><option value="4">Dr.</option></select></div></div><div class="form-group col-sm-4"><label for="contactInfo1GivenName" class="control-label">Given Name*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name"></div></div><div class="form-group col-sm-4"><label for="contactInfo1Surname" class="control-label">Surname*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Title" class="control-label">Title*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title" ></div></div></div><div class="row"><div class="form-group col-sm-3"><label for="contactInfo1TelNo" class="control-label">Telephone No*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone No."  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1TelExt" class="control-label">Ext</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  ></div></div><div class="form-group col-sm-4"><label for="contactInfo1Email" class="control-label">Email*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  /></div></div><div class="form-group col-sm-3"><label for="contactInfo1FaxNo" class="control-label">Fax No.</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax No."  ></div></div></div></div></details></li>';
+		//increment counter
+		contactCounter++;
+		numOfContactsCreated++;
+		//replace substrings
+		var newId = newContact.replace(/contactInfo1/g, 'contactInfo' + numOfContactsCreated);
+		newId = newId.replace('Main', contactArray[contactCounter-1]);
+		$('#contactInfoList').append(newId);
+	}
+}
+
+function deleteContact(i) {
+	var removedItemIndex = $('#contactInfoList').find(i).index();
+	$('#contactInfoList').find(i).remove();
+	//decrement counter
+	contactCounter--;
+	
+	//<button class="btn btn-danger btn-xs deleteRef" onclick="deleteContact(contactInfo1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+	
+	var items = document.getElementById('contactInfoList').getElementsByTagName('li');
+	for (var n = contactCounter-1; n >= removedItemIndex; n--) {
+		//var currLabel = 'contactInfo' + (n+2);
+		//var newLabel = 'contactInfo' + (n+1);
+		//var currContent = items[n].innerHTML;
+		//var newContent = replaceAll(currContent, currLabel, newLabel);
+		var text = $(items[n]).find('summary')[0].innerHTML;
+		var newStr = text.replace(contactArray[n+1], contactArray[n]);
+		$(items[n]).find('summary')[0].innerHTML = newStr;
+		//items[n].id = newLabel;
+	}
+}
+
+function rtCheck() {
+	var check1 = $('#rtCheck1');
+	var check2 = $('#rtCheck2');
+	if (check1[0].checked && check2[0].checked) {
+		$('#nextStep2but').prop('href', 'rep_2_regTransaction.html');
+	} else {
+		$('#nextStep2but').prop('href', '');
+	}
 }
 
 /*
