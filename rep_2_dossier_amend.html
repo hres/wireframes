@@ -397,16 +397,18 @@ $(document).ready(function() {
 var prevURL = readCookie("currentURL");
 
 var canRefProductCounter = 1; //keeps track of number of current referenced products
+var numOfRefProductsCreated = 1;
 
 //adds a new reference product
 function addNewRefProduct() {
 	var newRefProduct = '<li id="doAmendCanRefProduct1"><details open="open"><summary class="heightAdjust">Canadian Reference Product 1<button class="btn btn-danger btn-xs deleteRef" disabled="true" onclick="deleteRefProduct(doAmendCanRefProduct1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1BrandName">Brand Name</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1BrandName" placeholder="Enter Name" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1MedIngre">Medicinal Ingredient*</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1MedIngre" placeholder="Enter Ingredient" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-4"><label for="doAmendCanRefProduct1Dosage" class="control-label">Dosage Form:*</label><div class=""><select class="form-control input-sm full-width" name="doAmendCanRefProduct1Dosage" id="doAmendCanRefProductDosage" disabled="true"><option label=" "></option><option value="1">Biologic</option><option value="2">Pharmaceutical</option><option value="3">Drug Master File</option><option value="4">Medical Device</option></select></div></div><div class="form-group col-sm-4"><label for="doAmendCanRefProduct1Strength">Strength(s)*</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1Strength" placeholder="Strength(s)" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1CoName">Company Name</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1CoName" placeholder="Enter Name" disabled="true"/></div></div></div></div></li>';
 	//increment counter
 	canRefProductCounter++;
+	numOfRefProductsCreated++;
 	//alert(canRefProductCounter);
 	//replace substrings
 	var newId = newRefProduct.replace(/doAmendCanRefProduct1/g, 'doAmendCanRefProduct' + canRefProductCounter);
-	newId = newId.replace('Product 1', 'Product ' + canRefProductCounter);
+	newId = newId.replace('Product 1', 'Product ' + numOfRefProductsCreated);
 	$('#doAmendCanRefProductList').append(newId);
 
 }
@@ -424,13 +426,14 @@ function deleteRefProduct(i) {
 	
 	var items = document.getElementById('doAmendCanRefProductList').getElementsByTagName('li');
 	for (var n = canRefProductCounter-1; n >= removedItemIndex; n--) {
-		var currLabel = 'doAmendCanRefProduct' + (n+2);
-		var newLabel = 'doAmendCanRefProduct' + (n+1);
-		var currContent = items[n].innerHTML;
-		var newContent = replaceAll(currContent, currLabel, newLabel);
-		var newStr = newContent.replace('Product ' + (n+2), 'Product ' + (n+1));
-		items[n].innerHTML = newStr;
-		items[n].id = newLabel;
+		//var currLabel = 'doAmendCanRefProduct' + (n+2);
+		//var newLabel = 'doAmendCanRefProduct' + (n+1);
+		//var currContent = items[n].innerHTML;
+		//var newContent = replaceAll(currContent, currLabel, newLabel);
+		var text = $(items[n]).find('summary')[0].innerHTML;
+		var newStr = text.replace('Product ' + (n+2), 'Product ' + (n+1));
+		$(items[n]).find('summary')[0].innerHTML = newStr;
+		//items[n].id = newLabel;
 	}
 }
 
