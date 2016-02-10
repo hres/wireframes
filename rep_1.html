@@ -294,7 +294,7 @@ information, Regulatory Activity information)</label>
 			<!-- </form> -->
 			</div>
 			<div class="row">
-					<button class="btn btn-default btn-sm col-sm-4 pull-right" id="contactAddBut" onclick="addNewContact()" type="submit">Add Another Contact</button>
+					<button class="btn btn-default btn-sm col-sm-2 pull-right" id="contactAddBut" onclick="addNewContact()" type="submit">Add Another Contact</button>
 				</div>
 			<ul id="contactInfoList" class="list-unstyled">
 				<li id="contactInfo1">
@@ -861,6 +861,12 @@ function addNewContact() {
 		newId = newId.replace('Main', contactArray[contactCounter-1]);
 		$('#contactInfoList').append(newId);
 	}
+	//disable "Add Contact" Button when # of contacts > 3
+	if (contactCounter == 3) {
+		$('#contactAddBut').prop('disabled', true);
+	} else {
+		$('#contactAddBut').prop('disabled', false);
+	}
 }
 
 function deleteContact(i) {
@@ -882,6 +888,8 @@ function deleteContact(i) {
 		$(items[n]).find('summary')[0].innerHTML = newStr;
 		//items[n].id = newLabel;
 	}
+	//re-enable "Add Contact Button"
+	$('#contactAddBut').prop('disabled', false);
 }
 
 function rtCheck() {
