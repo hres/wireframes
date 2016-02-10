@@ -153,6 +153,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 						</div>
 					</div>
+					<!--
 					<div class="col-sm-7">
 						<div class="row">
 							<div class="form-group">
@@ -175,6 +176,83 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 						</div>
 					</div>
+					-->
+			</div>
+			<div id="rtLCM" style="display:none">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label for="rtEctdCompName" class="control-label">Company ID</label>
+							<input type="text" class="form-control input-sm full-width" id="rtEctdCompName">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label for="rtEctdDossierName" class="control-label">Dossier Name</label>
+							<input type="text" class="form-control input-sm full-width" id="rtEctdDossierName">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label for="rtEctdDossierId" class="control-label">Dossier ID</label>
+							<input type="text" class="form-control input-sm full-width" id="rtEctdDossierId">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="form-group">
+							<label for="rtEctdSeqNum" class="control-label">Sequence Number (most recent last)</label>
+							<input type="text" class="form-control input-sm full-width" id="rtEctdSeqNum">
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="form-group">
+							<label for="rtEctdDateFiled" ><span class="field-name">Date Filed</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
+							<input class="form-control" type="date" id="rtEctdDateFiled" name="rtEctdDateFiled" data-rule-dateiso="true">
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="form-group">
+							<label for="rtEctdControlNum" class="control-label">Control Number</label>
+							<input type="text" class="form-control input-sm full-width" id="rtEctdSeqNum">
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="form-group">
+							<label for="rtEctdRelSeq" class="control-label">Related Sequence Number</label>
+							<input type="text" class="form-control input-sm full-width" id="rtEctdRelSeq">
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="form-group">
+							<label for="rtEctdRegActivityType" class="control-label">Regulatory Type</label>
+							<div class="">
+								<select class="form-control input-sm" name="rtEctdRegActivityType" id="rtEctdRegActivityType">
+								<option label=" "></option>
+								<option value="1"></option>
+								<option value="2"></option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="form-group">
+							<label for="rtEctdSeqDesc" class="control-label">Sequence Description</label>
+							<div class="">
+								<select class= "form-control input-sm" name="rtEctdSeqDesc" id="rtEctdSeqDesc">
+								<option label=" "></option>
+								<option value="1"></option>
+								<option value="2"></option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="row" style="margin-top: 10px">
 				<div class="col-sm-5">
@@ -232,6 +310,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</div>
 				</div>
+				<!--
 				<div class="row">
 					<div class="form-group">
 						<label for="rtEnrolmentRegActivityType" class="col-sm-4 control-label">Regulatory Activity Type:</label>
@@ -255,7 +334,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</select>
 						</div>
 					</div>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>
@@ -378,12 +457,11 @@ $(document).ready(function() {
 var prevURL = readCookie("currentURL");
 
 function checkOptioneCTD(obj) {
-    var input1 = document.getElementById("rtEnrolmentSeqNo");
-	var input2 = document.getElementById("rtEnrolmentRelSeqNo");
+    var eCTD = $('#rtLCM');
     if ((obj.value == "2") || (obj.value == "")) {
-		input1.disabled = input2.disabled = true;
+		$(eCTD)[0].style.display = 'none';
 	}else {
-		input1.disabled = input2.disabled = false;
+		$(eCTD)[0].style.display = 'block';
 	}
 }
 
