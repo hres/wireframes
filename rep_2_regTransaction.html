@@ -146,7 +146,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								<label for="rtEnrolmenteCTD" class="control-label">Is this an eCTD transaction?</label>
 							</div>
 							<div class="col-sm-3">
-								<select class="form-control input-sm"  name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
+								<select class="form-control input-sm" name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
 									<option label=" "></option>
 									<option value="1">Yes</option>
 									<option value="2">No</option>
@@ -204,33 +204,49 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<button id="ectdAddBut" class="btn btn-default btn-sm col-sm-4 pull-right" onclick="addNewSequence()" type="submit">Add Sequence</button>
+				</div>
 				<div class="table-responsive">
-					<table class="table table-bordered">
+					<table id="ectdTable" class="table table-bordered">
 						<thead>
 							<th class="col-sm-2"><label for="rtEctdSeqNum" class="control-label">Sequence Number (most recent last)</label></th>
-							<th class="col-sm-2"><label for="rtEctdDateFiled" ><span class="field-name">Date Filed</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label></th>
+							<th class="col-sm-1"><label for="rtEctdDateFiled" ><span class="field-name">Date Filed</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label></th>
 							<th class="col-sm-2"><label for="rtEctdControlNum" class="control-label">Control Number</label></th>
 							<th class="col-sm-2"><label for="rtEctdRelSeq" class="control-label">Related Sequence Number</label></th>
-							<th class="col-sm-2"><label for="rtEctdRegActivityType" class="control-label">Regulatory Type</label></th>
 							<th class="col-sm-2"><label for="rtEctdSeqDesc" class="control-label">Sequence Description</label></th>
+							<th class="col-sm-1"></th>
 						</thead>
 						<tbody>
-							<td class="col-sm-2"><input type="text" class="form-control input-sm full-width" id="rtEctdSeqNum"></td>
-							<td class="col-sm-2"><input class="form-control input-sm" type="date" id="rtEctdDateFiled" name="rtEctdDateFiled" data-rule-dateiso="true"></td>
-							<td class="col-sm-2"><input type="text" class="form-control input-sm full-width" id="rtEctdSeqNum"></td>
-							<td class="col-sm-2"><input type="text" class="form-control input-sm full-width" id="rtEctdRelSeq"></td>
-							<td class="col-sm-2">
-								<select class="form-control input-sm" name="rtEctdRegActivityType" id="rtEctdRegActivityType">
-								<option label=" "></option>
-								<option value="1"></option>
-								<option value="2"></option>
-								</select>
-							</td>
-							<td class="col-sm-2"><select class= "form-control input-sm" name="rtEctdSeqDesc" id="rtEctdSeqDesc">
-								<option label=" "></option>
-								<option value="1"></option>
-								<option value="2"></option>
-								</select></td>
+							<tr>
+								<td class="col-sm-2"><input type="text" class="form-control input-sm full-width" id="rtEctd1SeqNum"></td>
+								<td class="col-sm-1"><input class="form-control input-sm" type="date" id="rtEctd1DateFiled" name="rtEctd1DateFiled" data-rule-dateiso="true"></td>
+								<td class="col-sm-2"><input type="text" class="form-control input-sm full-width" id="rtEctd1ControlNum"></td>
+								<td class="col-sm-2"><input type="text" class="form-control input-sm full-width" id="rtEctd1RelSeq"></td>
+								<td class="col-sm-2">
+									<div class="row">
+										<select class= "form-control input-sm" name="rtEctd1DossierType" id="rtEctd1DossierType">
+											<option label=" "></option>
+											<option value="1"></option>
+											<option value="2"></option>
+										</select>
+									</div>
+									<div class="row">
+										<select class= "form-control input-sm" name="rtEctd1RegActivityType" id="rtEctd1RegActivityType">
+											<option label=" "></option>
+											<option value="1"></option>
+											<option value="2"></option>
+										</select>
+									</div>
+									<div class="row">
+										<select class= "form-control input-sm" name="rtEctd1SeqDesc" id="rtEctd1SeqDesc">
+											<option label=" "></option>
+											<option value="1"></option>
+											<option value="2"></option>
+										</select>
+									</div>
+								</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -329,8 +345,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 			</div>
 		</div>
-			<!--
-			<div id="rtBox" class="well well-sm">
+			
+			<div id="rtBox" class="well well-sm" style="display:none">
 				<div class="row">
 					<div class="form-group">
 						<label for="rtEnrolmentDossierType" class="col-sm-4 control-label">Dossier Type:</label>
@@ -367,7 +383,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</select>
 						</div>
 					</div>
-				</div>-->
+				</div>
 			</div>
 		</div>
 	
@@ -490,12 +506,19 @@ $(document).ready(function() {
 
 var prevURL = readCookie("currentURL");
 
+var ectdTableSeqCreatedCount = 1;
+
 function checkOptioneCTD(obj) {
     var eCTD = $('#rtLCM');
-    if ((obj.value == "2") || (obj.value == "")) {
+    if (obj.value == "2") {
 		$(eCTD)[0].style.display = 'none';
-	}else {
+		$('#rtBox')[0].style.display = 'block';
+	} else if (obj.value == "1") {
 		$(eCTD)[0].style.display = 'block';
+		$('#rtBox')[0].style.display = 'none';
+	} else {
+		$(eCTD)[0].style.display = 'none';
+		$('#rtBox')[0].style.display = 'none';
 	}
 }
 
@@ -508,6 +531,19 @@ function checkOptionSol(obj) {
 	}
 }
 
+function addNewSequence() {
+	ectdTableSeqCreatedCount++;
+	var tableBody = $('#ectdTable tbody');
+	var defaultRow = '<tr><td class="col-sm-2"><input type="text" class="form-control input-sm full-width" id="rtEctd1SeqNum"></td><td class="col-sm-1"><input class="form-control input-sm" type="date" id="rtEctd1DateFiled" name="rtEctd1DateFiled" data-rule-dateiso="true"></td><td class="col-sm-2"><input type="text" class="form-control input-sm full-width" id="rtEctd1ControlNum"></td><td class="col-sm-2"><input type="text" class="form-control input-sm full-width" id="rtEctd1RelSeq"></td><td class="col-sm-2"><div class="row"><select class= "form-control input-sm" name="rtEctd1DossierType" id="rtEctd1DossierType"><option label=" "></option><option value="1"></option><option value="2"></option></select></div><div class="row"><select class= "form-control input-sm" name="rtEctd1RegActivityType" id="rtEctd1RegActivityType"><option label=" "></option><option value="1"></option><option value="2"></option></select></div><div class="row"><select class= "form-control input-sm" name="rtEctd1SeqDesc" id="rtEctd1SeqDesc"><option label=" "></option><option value="1"></option><option value="2"></option></select></div></td><td class="col-sm-1"><span class="input-group-btn"><button class="btn btn-danger btn-xs" onclick="deleteSeq(this)" id="rtEctd1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></td></tr>';
+	var newRow = replaceAll(defaultRow, 'rtEctd1', 'rtEctd' + ectdTableSeqCreatedCount);
+	tableBody.append(newRow);
+}
+
+function deleteSeq(delBut) {
+	//gets row containing delBut
+	var row = $(delBut).closest('tr');
+	$(row).remove();
+}
 </script>
 </body>
 </html>
