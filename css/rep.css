@@ -30,11 +30,11 @@ boldFont {
 	font-weight: bold;
 }
 
-table.ectdTableBorder {
+table.ectdTableBorder th, td {
 	border: 1px solid #ddd;
 }
 
-table.ectdTableBorder th.noBorder, table.ectdTableBorder td.noBorder {
+table.ectdTableBorder th.noBorder, td.noBorder {
 	border-top: 0px !important;
 	border-right: 0px !important;
 	border-bottom: 0px !important;
