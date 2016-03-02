@@ -250,10 +250,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										<div class="col-sm-12">
 											<div class="form-group">
 												<label for="rtEctd1DossierType" class="control-label">Dossier Type</label>
-												<select class= "form-control full-width input-sm" name="rtEctd1DossierType" id="rtEctd1DossierType">
-													<option label=" "></option>
-													<option value="1">Pharmaceutical</option>
-													<option value="2">Biologic</option>
+												<select class= "form-control full-width input-sm" name="rtEctd1DossierType" id="rtEctd1DossierType" onchange="ectdFilter(this, rtEctd1ActivityType, rtEctd1SeqDesc)">
+													<option value="all" label=" "></option>
+													<option value="dType1">Pharmaceutical</option>
+													<option value="dType2">Biologic</option>
 												</select>
 											</div>
 										</div>
@@ -261,14 +261,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									<div class="row">
 										<div class="col-sm-12">
 											<div class="form-group">
-												<label for="rtEctd1RegActivityType" class="control-label">Activity Type</label>
-												<select class= "form-control full-width input-sm" name="rtEctd1RegActivityType" id="rtEctd1RegActivityType">
-													<option label=" "></option>
-													<option value="1">Type 1</option>
-													<option value="2">Type 2</option>
-													<option value="3">Type 3</option>
-													<option value="4">Type 4</option>
-													<option value="5">Type 5</option>
+												<label for="rtEctd1ActivityType" class="control-label">Activity Type</label>
+												<select class= "form-control full-width input-sm" name="rtEctd1ActivityType" id="rtEctd1ActivityType" onchange="ectdFilter(this, rtEctd1SeqDesc)">
+													<option value="all" label=" "></option>
+													<option class="all dType1" value="acType1">Type 1</option>
+													<option class="all dType1" value="acType2">Type 2</option>
+													<option class="all dType1" value="acType3">Type 3</option>
+													<option class="all dType2" value="acType4">Type 4</option>
+													<option class="all dType2" value="acType5">Type 5</option>
 												</select>
 											</div>
 										</div>
@@ -278,12 +278,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 											<div class="form-group">
 												<label for="rtEctd1SeqDesc" class="control-label">Sequence Description</label>
 												<select class= "form-control full-width input-sm" name="rtEctd1SeqDesc" id="rtEctd1SeqDesc">
-													<option label=" "></option>
-													<option value="1">Description 1</option>
-													<option value="2">Description 2</option>
-													<option value="3">Description 3</option>
-													<option value="4">Description 4</option>
-													<option value="5">Description 5</option>
+													<option value="all" label=" "></option>
+													<option class="all dType1 acTyp2" value="seqDesc1">Description 1</option>
+													<option class="all dType1 acType4" value="seqDesc2">Description 2</option>
+													<option class="all dType2 acType2" value="seqDesc3">Description 3</option>
+													<option class="all dType2 acType3" value="seqDesc4">Description 4</option>
+													<option class="all dType2 acType3" value="seqDesc5">Description 5</option>
 												</select>
 											</div>
 										</div>
@@ -578,7 +578,7 @@ function checkOptionSol(obj) {
 function addNewSequence() {
 	ectdTableSeqCreatedCount++;
 	var tableBody = $('#ectdTable tbody');
-	var defaultRow = '<tr><td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1SeqNum">Sequence Number (most recent last)</label><input type="text" class="form-control input-sm full-width" id="rtEctd1SeqNum"></div></td><td class="col-sm-2"><div class="form-group"><label class="hiddenLabel control-label" for="rtEctd1DateFiled" ><span class="field-name">Date Filed</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label><input class="form-control input-sm" type="date" id="rtEctd1DateFiled" name="rtEctd1DateFiled" data-rule-dateiso="true"/></div></td><td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1ControlNum">Control Number</label><input type="text" class="form-control input-sm full-width" id="rtEctd1ControlNum"></div></td><td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1RelSeq">Related Sequence Number</label><input type="text" class="form-control input-sm full-width" id="rtEctd1RelSeq"></div></td><td class="col-sm-3"><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1DossierType" class="control-label">Dossier Type</label><select class= "form-control full-width input-sm" name="rtEctd1DossierType" id="rtEctd1DossierType"><option label=" "></option><option value="1">Pharmaceutical</option><option value="2">Biologic</option></select></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1RegActivityType" class="control-label">Activity Type</label><select class= "form-control full-width input-sm" name="rtEctd1RegActivityType" id="rtEctd1RegActivityType"><option label=" "></option><option value="1">Type 1</option><option value="2">Type 2</option><option value="3">Type 3</option><option value="4">Type 4</option><option value="5">Type 5</option></select></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1SeqDesc" class="control-label">Sequence Description</label><select class= "form-control full-width input-sm" name="rtEctd1SeqDesc" id="rtEctd1SeqDesc"><option label=" "></option><option value="1">Description 1</option><option value="2">Description 2</option><option value="3">Description 3</option><option value="4">Description 4</option><option value="5">Description 5</option></select></div></div></div></td><td class="col-sm-1 noBorder"></td></tr>';
+	var defaultRow = '<tr><td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1SeqNum">Sequence Number (most recent last)</label><input type="text" class="form-control input-sm full-width" id="rtEctd1SeqNum"></div></td><td class="col-sm-2"><div class="form-group"><label class="hiddenLabel control-label" for="rtEctd1DateFiled" ><span class="field-name">Date Filed</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label><input class="form-control input-sm" type="date" id="rtEctd1DateFiled" name="rtEctd1DateFiled" data-rule-dateiso="true"/></div></td><td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1ControlNum">Control Number</label><input type="text" class="form-control input-sm full-width" id="rtEctd1ControlNum"></div></td><td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1RelSeq">Related Sequence Number</label><input type="text" class="form-control input-sm full-width" id="rtEctd1RelSeq"></div></td><td class="col-sm-3"><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1DossierType" class="control-label">Dossier Type</label><select class= "form-control full-width input-sm" name="rtEctd1DossierType" id="rtEctd1DossierType" onchange="ectdFilter(this, rtEctd1ActivityType, rtEctd1SeqDesc)"><option value="all" label=" "></option><option value="dType1">Pharmaceutical</option><option value="dType2">Biologic</option></select></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1ActivityType" class="control-label">Activity Type</label><select class= "form-control full-width input-sm" name="rtEctd1ActivityType" id="rtEctd1ActivityType" onchange="ectdFilter(this, rtEctd1SeqDesc)"><option value="all" label=" "></option><option class="all dType1" value="acType1">Type 1</option><option class="all dType1" value="acType2">Type 2</option><option class="all dType1" value="acType3">Type 3</option><option class="all dType2" value="acType4">Type 4</option><option class="all dType2" value="acType5">Type 5</option></select></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1SeqDesc" class="control-label">Sequence Description</label><select class= "form-control full-width input-sm" name="rtEctd1SeqDesc" id="rtEctd1SeqDesc"><option value="all" label=" "></option><option class="all dType1 acTyp2" value="seqDesc1">Description 1</option><option class="all dType1 acType4" value="seqDesc2">Description 2</option><option class="all dType2 acType2" value="seqDesc3">Description 3</option><option class="all dType2 acType3" value="seqDesc4">Description 4</option><option class="all dType2 acType3" value="seqDesc5">Description 5</option></select></div></div></div></td><td class="col-sm-1 noBorder"></td></tr>';
 	var newRow = replaceAll(defaultRow, 'rtEctd1', 'rtEctd' + ectdTableSeqCreatedCount);
 	tableBody.append(newRow);
 }
@@ -587,6 +587,24 @@ function deleteSeq(delBut) {
 	//gets row containing delBut
 	var row = $(delBut).closest('tr');
 	$(row).remove();
+}
+
+function ectdFilter(doType, actType, seqDesc) {
+	var filters = $.map($(doType).toArray(), function(e){
+        return $(e).val();
+    }).join(".");
+    $(acType).find("option").hide();
+    $(acType).find("option." + filters).show();
+	$(seqDesc).find("option").hide();
+    $(seqDesc).find("option." + filters).show();
+}
+
+function ectdFilter(actType, seqDesc) {
+	var filters = $.map($(actType).toArray(), function(e){
+        return $(e).val();
+    }).join(".");
+	$(seqDesc).find("option").hide();
+    $(seqDesc).find("option." + filters).show();
 }
 </script>
 </body>
