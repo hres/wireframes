@@ -39,3 +39,7 @@ table.ectdTableBorder th.noBorder, td.noBorder {
 	border-right: 0px !important;
 	border-bottom: 0px !important;
 }
+
+label.hiddenLabel {
+	display: none;
+}
