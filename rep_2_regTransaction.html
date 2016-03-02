@@ -583,6 +583,7 @@ function addNewSequence() {
 	var rowText = '<tr>' + defaultRow + delButText + '</tr>';
 	var newRow = replaceAll(rowText, 'rtEctd1', 'rtEctd' + ectdTableSeqCreatedCount);
 	tableBody.append(newRow);
+	$(newRow).find("input[type=date]").trigger("wb-init.wb-date");
 }
 
 function deleteSeq(delBut) {
