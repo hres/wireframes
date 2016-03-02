@@ -252,8 +252,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 												<label for="rtEctd1DossierType" class="control-label">Dossier Type</label>
 												<select class= "form-control full-width input-sm" name="rtEctd1DossierType" id="rtEctd1DossierType" onchange="ectdFilter1(this, rtEctd1ActivityType, rtEctd1SeqDesc)">
 													<option value="all"></option>
-													<option value="dType1">Pharmaceutical</option>
-													<option value="dType2">Biologic</option>
+													<option value="pharma">Pharmaceutical</option>
+													<option value="bio">Biologic</option>
 												</select>
 											</div>
 										</div>
@@ -263,12 +263,28 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 											<div class="form-group">
 												<label for="rtEctd1ActivityType" class="control-label">Activity Type</label>
 												<select class= "form-control full-width input-sm" name="rtEctd1ActivityType" id="rtEctd1ActivityType" onchange="ectdFilter2(this, rtEctd1SeqDesc)">
-													<option class="all dType1 dType2" value="all"></option>
-													<option class="all dType1" value="acType1">Type 1</option>
-													<option class="all dType1" value="acType2">Type 2</option>
-													<option class="all dType1" value="acType3">Type 3</option>
-													<option class="all dType2" value="acType4">Type 4</option>
-													<option class="all dType2" value="acType5">Type 5</option>
+													<option class="all pharma bio" value="all"></option>
+													<option class="all pharma bio" value="preSubMeetings">All pre-submission meetings</option>
+													<option class="all pharma bio" value="ANDS">ANDS</option>
+													<option class="all pharma bio" value="DINA">DINA</option>
+													<option class="all pharma bio" value="DINB">DINB</option>
+													<option class="all pharma bio" value="EUNDS">EUNDS</option>
+													<option class="all pharma bio" value="EUSNDS">EUSNDS</option>
+													<option class="all pharma bio" value="LevelIII">Level III</option>
+													<option class="all pharma bio" value="NC">NC</option>
+													<option class="all pharma bio" value="NDS">NDS</option>
+													<option class="all pharma bio" value="PDC">PDC</option>
+													<option class="all pharma bio" value="PDC-B">PDC-B</option>
+													<option class="all pharma bio" value="PSUR-C">PSUR-C</option>
+													<option class="all pharma bio" value="PSUR-PV">PSUR-PV</option>
+													<option class="all pharma bio" value="RMP-PV">RMP-PV</option>
+													<option class="all pharma bio" value="SANDS">SANDS</option>
+													<option class="all pharma bio" value="SNDS">SNDS</option>
+													<option class="all pharma bio" value="SNDS-C">SNDS-C</option>
+													<option class="all pharma bio" value="UD-PV">UD-PV</option>
+													<option class="all pharma bio" value="UDRA">UDRA</option>
+													<option class="all pharma bio" value="UpConsul">Upon Consultation</option>
+													<option class="all bio" value="YBPR">YBPR</option>
 												</select>
 											</div>
 										</div>
@@ -278,12 +294,50 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 											<div class="form-group">
 												<label for="rtEctd1SeqDesc" class="control-label">Sequence Description</label>
 												<select class= "form-control full-width input-sm" name="rtEctd1SeqDesc" id="rtEctd1SeqDesc">
-													<option class="all dType1 dType2 acType1 acType2 acType3 acType4 acType5" value="all"></option>
-													<option class="all dType1 acTyp2" value="seqDesc1">Description 1</option>
-													<option class="all dType1 acType4" value="seqDesc2">Description 2</option>
-													<option class="all dType2 acType2" value="seqDesc3">Description 3</option>
-													<option class="all dType2 acType3" value="seqDesc4">Description 4</option>
-													<option class="all dType2 acType3" value="seqDesc5">Description 5</option>
+													<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA UpConsul YBPR" value="all"></option>
+													<option class="all pharma bio UD-PV" value="BftRiskAssess">Benefit Risk Assessment</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC SANDS SNDS" value="Admin">Administrative</option>
+													<option class="all pharma bio preSubMeetings LevelIII NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SNDS-C UDRA YBPR" value="CancelLetter">Cancellation Letter</option>
+													<option class="all pharma bio DINA DINB" value="changeDIN">Change to DIN</option>
+													<option class="all pharma bio NDS" value="CommentND">Comments on Notice of Decision dated mmm. dd, yyyy</option>
+													<option class="all pharma bio EUNDS EUSNDS NC NDS SNDS" value="CommentSBD">Comments on Summary Basis of Decision dated mmm. dd, yyyy</option>
+													<option class="all pharma bio UDRA" value="DINDiscont">DIN Discontinued</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="DNF">Drug Notification Form</option>
+													<option class="all pharma bio PSUR-C PSUR-PV YBPR" value="Period">For Period of mmm. dd, yyyy to mmm. dd, yyyy</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS NDS" value="init">INITIAL</option>
+													<option class="all pharma bio preSubMeetings" value="MinMeet">Minutes of Meeting, mmm. dd, yyyy</option>
+													<option class="all pharma bio UD-PV" value="NotifChange">Notification of Change in benefit-risk profile</option>
+													<option class="all pharma bio UpConsul" value="panApp">Pandemic Application</option>
+													<option class="all pharma bio PDC PDC-B" value="posAutDiv">Post-Authorization Division 1 Change</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="posClearData">Post Clearance Data</option>
+													<option class="all pharma bio UD-PV" value="posMarkSurv">Post Marketing Surveillance</option>
+													<option class="all pharma bio EUSNDS NC SANDS SNDS SNDS-C" value="posNOCChange">Post NOC Change</option>
+													<option class="all pharma bio DINA DINB NC NDS SNDS" value="preSubMeetPk">Pre-Submission Meeting Package</option>
+													<option class="all pharma bio NDS SNDS" value="priRevReq">Priority Review Request</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="pristinePM">Pristine PM</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="pristinePMSL">Pristine PM - Second Language</option>
+													<option class="all pharma bio UDRA" value="responseAdviseLetter">Response to Advisement Letter dated mmm. dd, yyyy</option>
+													<option class="all pharma bio ANDS NDS SANDS SNDS" value="responseBEClariReq">Response to BE Clarification Request dated mmm. dd, yyyy</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS PSUR-C SANDS SNDS SNDS-C" value="responseClinicalClariReq">Response to Clinical Clarification Request dated mmm. dd, yyyy</option>
+													<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseEReq">Response to e-mail Request dated mmm. dd, yyyy</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseLabClariReq">Response to Labeling Clarification Request dated mmm. dd, yyyy</option>
+													<option class="all pharma bio UD-PV" value="responseMHPDReq">Response to MHPD Requests dated mmm. dd, yyyy</option>
+													<option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNOC">Response to NOC/c-QN dated mmm.dd, yyyy</option>
+													<option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNOD">Response to NOD dated mmm. dd, yyyy</option>
+													<option class="all pharma bio NC" value="responseNOL">Response to NOL dated mmm. dd, yyyy</option>
+													<option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNON">Response to NON dated mmm. dd, yyyy</option>
+													<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseProcessClariReq">Response to Processing Clarification Request dated mmm. dd, yyyy</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="responseQualClinicClariReq">Response to Quality and Clinical Clarification Request dated mmm. dd, yyyy</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="responseClariReq">Response to Quality Clarification Request dated mmm. dd, yyyy</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseScreenAcptLetter">Response to Screening Acceptance Letter dated mmm. dd, yyyy</option>
+													<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseScreenClariReq">Response to Screening Clarification Request dated mmm. dd, yyyy</option>
+													<option class="all pharma bio ANDS EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseSDN">Response to SDN dated mmm. dd, yyyy</option>
+													<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseTelReq">Response to Telephone Request dated mmm. dd, yyyy</option>
+													<option class="all pharma bio UD-PV" value="riskComDoc">Risk communication document</option>
+													<option class="all pharma bio RMP-PV" value="RMPNum">RMP version &lt;number&gt; dated mmm. dd, yyyy</option>
+													<option class="all pharma bio UD-PV" value="signalWrkUp">Signal Work Up</option>
+													<option class="all pharma bio DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C UDRA" value="unSolData">Unsolicited Data, &lt;Brief Description&gt; </option>
+													<option class="all pharma bio LevelIII" value="yearListChangeNum">Year, list of change number (for example: 2012, 15, 19a,….)</option>
 												</select>
 											</div>
 										</div>
@@ -297,57 +351,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 				</div>
 				<div class="well well-sm">
-				<!--
-				<div class="row">
-					<div class="col-sm-2">
-						<div class="form-group">
-							<label for="rtEctdSeqNum" class="control-label">Sequence Number (most recent last)</label>
-							<input type="text" class="form-control input-sm full-width" id="rtEctdSeqNum">
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="form-group">
-							<label for="rtEctdDateFiled" ><span class="field-name">Date Filed</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-							<input class="form-control input-sm" type="date" id="rtEctdDateFiled" name="rtEctdDateFiled" data-rule-dateiso="true">
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="form-group">
-							<label for="rtEctdControlNum" class="control-label">Control Number</label>
-							<input type="text" class="form-control input-sm full-width" id="rtEctdSeqNum">
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="form-group">
-							<label for="rtEctdRelSeq" class="control-label">Related Sequence Number</label>
-							<input type="text" class="form-control input-sm full-width" id="rtEctdRelSeq">
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="form-group">
-							<label for="rtEctdRegActivityType" class="control-label">Regulatory Type</label>
-							<div class="">
-								<select class="form-control input-sm" name="rtEctdRegActivityType" id="rtEctdRegActivityType">
-								<option label=" "></option>
-								<option value="1"></option>
-								<option value="2"></option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="form-group">
-							<label for="rtEctdSeqDesc" class="control-label">Sequence Description</label>
-							<div class="">
-								<select class= "form-control input-sm" name="rtEctdSeqDesc" id="rtEctdSeqDesc">
-								<option label=" "></option>
-								<option value="1"></option>
-								<option value="2"></option>
-								</select>
-							</div>
-						</div>
-					</div>
-				</div>-->
 			
 			
 			<div class="row" style="margin-top: 10px">
@@ -395,10 +398,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<div class="form-group">
 						<label for="rtEnrolmentDossierType" class="col-sm-4 control-label">Dossier Type:</label>
 						<div class="">
-							<select class="col-sm-4 form-control" name="rtEnrolmentDossierType" id="rtEnrolmentDossierType">
-							<option label=" "></option>
-							<option value="1"></option>
-							<option value="2"></option>
+							<select class="col-sm-4 form-control" name="rtEnrolmentDossierType" id="rtEnrolmentDossierType" onchange="ectdFilter1(this, rtEnrolmentRegActivityType, rtEnrolmentSeqDesc")>
+								<option value="all"></option>
+								<option value="pharma">Pharmaceutical</option>
+								<option value="bio">Biologic</option>
 							</select>
 						</div>
 					</div>
@@ -408,10 +411,29 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<div class="form-group">
 						<label for="rtEnrolmentRegActivityType" class="col-sm-4 control-label">Regulatory Activity Type:</label>
 						<div class="">
-							<select class="col-sm-4 form-control input-sm" name="rtEnrolmentRegActivityType" id="rtEnrolmentRegActivityType">
-							<option label=" "></option>
-							<option value="1"></option>
-							<option value="2"></option>
+							<select class="col-sm-4 form-control input-sm" name="rtEnrolmentRegActivityType" id="rtEnrolmentRegActivityType" onchange="ectdFilter2(this, rtEnrolmentSeqDesc)">
+								<option class="all pharma bio" value="all"></option>
+								<option class="all pharma bio" value="preSubMeetings">All pre-submission meetings</option>
+								<option class="all pharma bio" value="ANDS">ANDS</option>
+								<option class="all pharma bio" value="DINA">DINA</option>
+								<option class="all pharma bio" value="DINB">DINB</option>
+								<option class="all pharma bio" value="EUNDS">EUNDS</option>
+								<option class="all pharma bio" value="EUSNDS">EUSNDS</option>
+								<option class="all pharma bio" value="LevelIII">Level III</option>
+								<option class="all pharma bio" value="NC">NC</option>
+								<option class="all pharma bio" value="NDS">NDS</option>
+								<option class="all pharma bio" value="PDC">PDC</option>
+								<option class="all pharma bio" value="PDC-B">PDC-B</option>
+								<option class="all pharma bio" value="PSUR-C">PSUR-C</option>
+								<option class="all pharma bio" value="PSUR-PV">PSUR-PV</option>
+								<option class="all pharma bio" value="RMP-PV">RMP-PV</option>
+								<option class="all pharma bio" value="SANDS">SANDS</option>
+								<option class="all pharma bio" value="SNDS">SNDS</option>
+								<option class="all pharma bio" value="SNDS-C">SNDS-C</option>
+								<option class="all pharma bio" value="UD-PV">UD-PV</option>
+								<option class="all pharma bio" value="UDRA">UDRA</option>
+								<option class="all pharma bio" value="UpConsul">Upon Consultation</option>
+								<option class="all bio" value="YBPR">YBPR</option>
 							</select>
 						</div>
 					</div>
@@ -421,9 +443,50 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<label for="rtEnrolmentSeqDesc" class="col-sm-4 control-label">Sequence Description:</label>
 						<div class="">
 							<select class="col-sm-4 form-control input-sm" name="rtEnrolmentSeqDesc" id="rtEnrolmentSeqDesc">
-							<option label=" "></option>
-							<option value="1"></option>
-							<option value="2"></option>
+								<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA UpConsul YBPR" value="all"></option>
+								<option class="all pharma bio UD-PV" value="BftRiskAssess">Benefit Risk Assessment</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC SANDS SNDS" value="Admin">Administrative</option>
+								<option class="all pharma bio preSubMeetings LevelIII NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SNDS-C UDRA YBPR" value="CancelLetter">Cancellation Letter</option>
+								<option class="all pharma bio DINA DINB" value="changeDIN">Change to DIN</option>
+								<option class="all pharma bio NDS" value="CommentND">Comments on Notice of Decision dated mmm. dd, yyyy</option>
+								<option class="all pharma bio EUNDS EUSNDS NC NDS SNDS" value="CommentSBD">Comments on Summary Basis of Decision dated mmm. dd, yyyy</option>
+								<option class="all pharma bio UDRA" value="DINDiscont">DIN Discontinued</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="DNF">Drug Notification Form</option>
+								<option class="all pharma bio PSUR-C PSUR-PV YBPR" value="Period">For Period of mmm. dd, yyyy to mmm. dd, yyyy</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS NDS" value="init">INITIAL</option>
+								<option class="all pharma bio preSubMeetings" value="MinMeet">Minutes of Meeting, mmm. dd, yyyy</option>
+								<option class="all pharma bio UD-PV" value="NotifChange">Notification of Change in benefit-risk profile</option>
+								<option class="all pharma bio UpConsul" value="panApp">Pandemic Application</option>
+								<option class="all pharma bio PDC PDC-B" value="posAutDiv">Post-Authorization Division 1 Change</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="posClearData">Post Clearance Data</option>
+								<option class="all pharma bio UD-PV" value="posMarkSurv">Post Marketing Surveillance</option>
+								<option class="all pharma bio EUSNDS NC SANDS SNDS SNDS-C" value="posNOCChange">Post NOC Change</option>
+								<option class="all pharma bio DINA DINB NC NDS SNDS" value="preSubMeetPk">Pre-Submission Meeting Package</option>
+								<option class="all pharma bio NDS SNDS" value="priRevReq">Priority Review Request</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="pristinePM">Pristine PM</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="pristinePMSL">Pristine PM - Second Language</option>
+								<option class="all pharma bio UDRA" value="responseAdviseLetter">Response to Advisement Letter dated mmm. dd, yyyy</option>
+								<option class="all pharma bio ANDS NDS SANDS SNDS" value="responseBEClariReq">Response to BE Clarification Request dated mmm. dd, yyyy</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS PSUR-C SANDS SNDS SNDS-C" value="responseClinicalClariReq">Response to Clinical Clarification Request dated mmm. dd, yyyy</option>
+								<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseEReq">Response to e-mail Request dated mmm. dd, yyyy</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseLabClariReq">Response to Labeling Clarification Request dated mmm. dd, yyyy</option>
+								<option class="all pharma bio UD-PV" value="responseMHPDReq">Response to MHPD Requests dated mmm. dd, yyyy</option>
+								<option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNOC">Response to NOC/c-QN dated mmm.dd, yyyy</option>
+								<option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNOD">Response to NOD dated mmm. dd, yyyy</option>
+								<option class="all pharma bio NC" value="responseNOL">Response to NOL dated mmm. dd, yyyy</option>
+								<option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNON">Response to NON dated mmm. dd, yyyy</option>
+								<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseProcessClariReq">Response to Processing Clarification Request dated mmm. dd, yyyy</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="responseQualClinicClariReq">Response to Quality and Clinical Clarification Request dated mmm. dd, yyyy</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="responseClariReq">Response to Quality Clarification Request dated mmm. dd, yyyy</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseScreenAcptLetter">Response to Screening Acceptance Letter dated mmm. dd, yyyy</option>
+								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseScreenClariReq">Response to Screening Clarification Request dated mmm. dd, yyyy</option>
+								<option class="all pharma bio ANDS EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseSDN">Response to SDN dated mmm. dd, yyyy</option>
+								<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseTelReq">Response to Telephone Request dated mmm. dd, yyyy</option>
+								<option class="all pharma bio UD-PV" value="riskComDoc">Risk communication document</option>
+								<option class="all pharma bio RMP-PV" value="RMPNum">RMP version &lt;number&gt; dated mmm. dd, yyyy</option>
+								<option class="all pharma bio UD-PV" value="signalWrkUp">Signal Work Up</option>
+								<option class="all pharma bio DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C UDRA" value="unSolData">Unsolicited Data, &lt;Brief Description&gt; </option>
+								<option class="all pharma bio LevelIII" value="yearListChangeNum">Year, list of change number (for example: 2012, 15, 19a,….)</option>
 							</select>
 						</div>
 					</div>
@@ -578,8 +641,8 @@ function checkOptionSol(obj) {
 function addNewSequence() {
 	ectdTableSeqCreatedCount++;
 	var tableBody = $('#ectdTable tbody');
-	var defaultRow = '<td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1SeqNum">Sequence Number (most recent last)</label><input type="text" class="form-control input-sm full-width" id="rtEctd1SeqNum"></div></td><td class="col-sm-2"><div class="form-group"><label class="hiddenLabel control-label" for="rtEctd1DateFiled" ><span class="field-name">Date Filed</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label><input class="form-control input-sm" type="date" id="rtEctd1DateFiled" name="rtEctd1DateFiled" data-rule-dateiso="true"/></div></td><td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1ControlNum">Control Number</label><input type="text" class="form-control input-sm full-width" id="rtEctd1ControlNum"></div></td><td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1RelSeq">Related Sequence Number</label><input type="text" class="form-control input-sm full-width" id="rtEctd1RelSeq"></div></td><td class="col-sm-3"><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1DossierType" class="control-label">Dossier Type</label><select class= "form-control full-width input-sm" name="rtEctd1DossierType" id="rtEctd1DossierType" onchange="ectdFilter1(this, rtEctd1ActivityType, rtEctd1SeqDesc)"><option value="all" label=" "></option><option value="dType1">Pharmaceutical</option><option value="dType2">Biologic</option></select></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1ActivityType" class="control-label">Activity Type</label><select class= "form-control full-width input-sm" name="rtEctd1ActivityType" id="rtEctd1ActivityType" onchange="ectdFilter2(this, rtEctd1SeqDesc)"><option value="all" label=" "></option><option class="all dType1" value="acType1">Type 1</option><option class="all dType1" value="acType2">Type 2</option><option class="all dType1" value="acType3">Type 3</option><option class="all dType2" value="acType4">Type 4</option><option class="all dType2" value="acType5">Type 5</option></select></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1SeqDesc" class="control-label">Sequence Description</label><select class= "form-control full-width input-sm" name="rtEctd1SeqDesc" id="rtEctd1SeqDesc"><option value="all" label=" "></option><option class="all dType1 acTyp2" value="seqDesc1">Description 1</option><option class="all dType1 acType4" value="seqDesc2">Description 2</option><option class="all dType2 acType2" value="seqDesc3">Description 3</option><option class="all dType2 acType3" value="seqDesc4">Description 4</option><option class="all dType2 acType3" value="seqDesc5">Description 5</option></select></div></div></div></td><td class="col-sm-1 noBorder"></td>';
-	var delButText = '<td><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteSeq(this)" id="rtEctd1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></td>';
+	var defaultRow = '<td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1SeqNum">Sequence Number (most recent last)</label><input type="text" class="form-control input-sm full-width" id="rtEctd1SeqNum"></div></td><td class="col-sm-2"><div class="form-group"><label class="hiddenLabel control-label" for="rtEctd1DateFiled" ><span class="field-name">Date Filed</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label><input class="form-control input-sm" type="date" id="rtEctd1DateFiled" name="rtEctd1DateFiled" data-rule-dateiso="true"/></div></td><td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1ControlNum">Control Number</label><input type="text" class="form-control input-sm full-width" id="rtEctd1ControlNum"></div></td><td class="col-sm-2"><div class="form-group"><label class="control-label hiddenLabel" for="rtEctd1RelSeq">Related Sequence Number</label><input type="text" class="form-control input-sm full-width" id="rtEctd1RelSeq"></div></td><td class="col-sm-3"><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1DossierType" class="control-label">Dossier Type</label><select class= "form-control full-width input-sm" name="rtEctd1DossierType" id="rtEctd1DossierType" onchange="ectdFilter1(this, rtEctd1ActivityType, rtEctd1SeqDesc)"><option value="all"></option><option value="pharma">Pharmaceutical</option><option value="bio">Biologic</option></select></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1ActivityType" class="control-label">Activity Type</label><select class= "form-control full-width input-sm" name="rtEctd1ActivityType" id="rtEctd1ActivityType" onchange="ectdFilter2(this, rtEctd1SeqDesc)"><option class="all pharma bio" value="all"></option><option class="all pharma bio" value="preSubMeetings">All pre-submission meetings</option><option class="all pharma bio" value="ANDS">ANDS</option><option class="all pharma bio" value="DINA">DINA</option><option class="all pharma bio" value="DINB">DINB</option><option class="all pharma bio" value="EUNDS">EUNDS</option><option class="all pharma bio" value="EUSNDS">EUSNDS</option><option class="all pharma bio" value="LevelIII">Level III</option><option class="all pharma bio" value="NC">NC</option><option class="all pharma bio" value="NDS">NDS</option><option class="all pharma bio" value="PDC">PDC</option><option class="all pharma bio" value="PDC-B">PDC-B</option><option class="all pharma bio" value="PSUR-C">PSUR-C</option><option class="all pharma bio" value="PSUR-PV">PSUR-PV</option><option class="all pharma bio" value="RMP-PV">RMP-PV</option><option class="all pharma bio" value="SANDS">SANDS</option><option class="all pharma bio" value="SNDS">SNDS</option><option class="all pharma bio" value="SNDS-C">SNDS-C</option><option class="all pharma bio" value="UD-PV">UD-PV</option><option class="all pharma bio" value="UDRA">UDRA</option><option class="all pharma bio" value="UpConsul">Upon Consultation</option><option class="all bio" value="YBPR">YBPR</option></select></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="rtEctd1SeqDesc" class="control-label">Sequence Description</label><select class= "form-control full-width input-sm" name="rtEctd1SeqDesc" id="rtEctd1SeqDesc"><option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA UpConsul YBPR" value="all"></option><option class="all pharma bio UD-PV" value="BftRiskAssess">Benefit Risk Assessment</option><option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC SANDS SNDS" value="Admin">Administrative</option><option class="all pharma bio preSubMeetings LevelIII NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SNDS-C UDRA YBPR" value="CancelLetter">Cancellation Letter</option><option class="all pharma bio DINA DINB" value="changeDIN">Change to DIN</option><option class="all pharma bio NDS" value="CommentND">Comments on Notice of Decision dated mmm. dd, yyyy</option><option class="all pharma bio EUNDS EUSNDS NC NDS SNDS" value="CommentSBD">Comments on Summary Basis of Decision dated mmm. dd, yyyy</option><option class="all pharma bio UDRA" value="DINDiscont">DIN Discontinued</option><option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="DNF">Drug Notification Form</option><option class="all pharma bio PSUR-C PSUR-PV YBPR" value="Period">For Period of mmm. dd, yyyy to mmm. dd, yyyy</option><option class="all pharma bio ANDS DINA DINB EUNDS NDS" value="init">INITIAL</option><option class="all pharma bio preSubMeetings" value="MinMeet">Minutes of Meeting, mmm. dd, yyyy</option><option class="all pharma bio UD-PV" value="NotifChange">Notification of Change in benefit-risk profile</option><option class="all pharma bio UpConsul" value="panApp">Pandemic Application</option><option class="all pharma bio PDC PDC-B" value="posAutDiv">Post-Authorization Division 1 Change</option><option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="posClearData">Post Clearance Data</option><option class="all pharma bio UD-PV" value="posMarkSurv">Post Marketing Surveillance</option><option class="all pharma bio EUSNDS NC SANDS SNDS SNDS-C" value="posNOCChange">Post NOC Change</option><option class="all pharma bio DINA DINB NC NDS SNDS" value="preSubMeetPk">Pre-Submission Meeting Package</option><option class="all pharma bio NDS SNDS" value="priRevReq">Priority Review Request</option><option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="pristinePM">Pristine PM</option><option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="pristinePMSL">Pristine PM - Second Language</option><option class="all pharma bio UDRA" value="responseAdviseLetter">Response to Advisement Letter dated mmm. dd, yyyy</option><option class="all pharma bio ANDS NDS SANDS SNDS" value="responseBEClariReq">Response to BE Clarification Request dated mmm. dd, yyyy</option><option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS PSUR-C SANDS SNDS SNDS-C" value="responseClinicalClariReq">Response to Clinical Clarification Request dated mmm. dd, yyyy</option><option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseEReq">Response to e-mail Request dated mmm. dd, yyyy</option><option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseLabClariReq">Response to Labeling Clarification Request dated mmm. dd, yyyy</option><option class="all pharma bio UD-PV" value="responseMHPDReq">Response to MHPD Requests dated mmm. dd, yyyy</option><option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNOC">Response to NOC/c-QN dated mmm.dd, yyyy</option><option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNOD">Response to NOD dated mmm. dd, yyyy</option><option class="all pharma bio NC" value="responseNOL">Response to NOL dated mmm. dd, yyyy</option><option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNON">Response to NON dated mmm. dd, yyyy</option><option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseProcessClariReq">Response to Processing Clarification Request dated mmm. dd, yyyy</option><option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="responseQualClinicClariReq">Response to Quality and Clinical Clarification Request dated mmm. dd, yyyy</option><option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="responseClariReq">Response to Quality Clarification Request dated mmm. dd, yyyy</option><option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseScreenAcptLetter">Response to Screening Acceptance Letter dated mmm. dd, yyyy</option><option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseScreenClariReq">Response to Screening Clarification Request dated mmm. dd, yyyy</option><option class="all pharma bio ANDS EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseSDN">Response to SDN dated mmm. dd, yyyy</option><option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseTelReq">Response to Telephone Request dated mmm. dd, yyyy</option><option class="all pharma bio UD-PV" value="riskComDoc">Risk communication document</option><option class="all pharma bio RMP-PV" value="RMPNum">RMP version &lt;number&gt; dated mmm. dd, yyyy</option><option class="all pharma bio UD-PV" value="signalWrkUp">Signal Work Up</option><option class="all pharma bio DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C UDRA" value="unSolData">Unsolicited Data, &lt;Brief Description&gt; </option><option class="all pharma bio LevelIII" value="yearListChangeNum">Year, list of change number (for example: 2012, 15, 19a,….)</option></select></div></div></div></td>';
+	var delButText = '<td class="noBorder"><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteSeq(this)" id="rtEctd1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></td>';
 	var rowText = '<tr id="rtEctd1Row">' + defaultRow + delButText + '</tr>';
 	var newRow = replaceAll(rowText, 'rtEctd1', 'rtEctd' + ectdTableSeqCreatedCount);
 	tableBody.append(newRow);
@@ -600,11 +663,8 @@ function ectdFilter1(doType, actType, seqDesc) {
     $(actType).find("option." + filters).show();
 	$(seqDesc).find("option").hide();
     $(seqDesc).find("option." + filters).show();
-	
-	if ($(doType).find("option:selected").val() == "all") {
-		$(actType).val("all");
-		$(seqDesc).val("all");
-	}
+	$(actType).val("all");
+	$(seqDesc).val("all");
 }
 
 function ectdFilter2(actType, seqDesc) {
@@ -613,10 +673,7 @@ function ectdFilter2(actType, seqDesc) {
     }).join(".");
 	$(seqDesc).find("option").hide();
     $(seqDesc).find("option." + filters).show();
-	
-	if ($(actType).find("option:selected").val() == "all") {
-		$(seqDesc).val("all");
-	}
+	$(seqDesc).val("all");
 }
 </script>
 </body>
