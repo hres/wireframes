@@ -43,3 +43,7 @@ table.ectdTableBorder th.noBorder, td.noBorder {
 label.hiddenLabel {
 	display: none;
 }
+
+label.smallLabel {
+	font-size: small;
+}
