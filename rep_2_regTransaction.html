@@ -140,45 +140,20 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		<div id="mainInfo">
 			<div class="well well-sm">
 			<div class="row">
-					<!-- <div class="col-sm-5"> -->
-						<div class="form-group">
-							<div class="col-sm-3">
-								<label for="rtEnrolmenteCTD" class="control-label">Is this an eCTD transaction?</label>
-							</div>
-							<div class="col-sm-3">
-								<select class="form-control input-sm" name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
-									<option label=" "></option>
-									<option value="1">Yes</option>
-									<option value="2">No</option>
-								</select>
-							</div>
-						</div>
-					<!-- </div> -->
-					<!--
-					<div class="col-sm-7">
-						<div class="row">
-							<div class="form-group">
-								<div class="col-sm-5">
-									<label for="rtEnrolmentSeqNo" class="control-label" >Sequence Number*</label>
-								</div>
-								<div class="col-sm-7">
-									<input type="text" class="form-control input-sm full-width" id="rtEnrolmentSeqNo" disabled="disabled">
-								</div>
-							</div>
-						</div>
-						<div class="row" style="margin-top: 10px">
-							<div class="form-group">
-								<div class="col-sm-5">
-									<label for="rtEnrolmentRelSeqNo" class="control-label">Related Sequence Number:</label>
-								</div>
-								<div class="col-sm-7">
-									<input type="text" class="form-control input-sm full-width" id="rtEnrolmentRelSeqNo" disabled="disabled">
-								</div>
-							</div>
-						</div>
+				<div class="form-group">
+					<div class="col-sm-3">
+						<label for="rtEnrolmenteCTD" class="control-label">Is this an eCTD transaction?</label>
 					</div>
-					-->
+					<div class="col-sm-3">
+						<select class="form-control input-sm" name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
+							<option label=" "></option>
+							<option value="1">Yes</option>
+							<option value="2">No</option>
+						</select>
+					</div>
+				</div>		
 			</div>
+			<div class="row">
 			<div id="rtLCM" class="blackBorder" style="display:none; margin-top: 15px">
 				<div class="row">
 					<div class="col-sm-4">
@@ -349,6 +324,29 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</table>
 				</div>
 				</div>
+				</div>
+				</div>
+			<div class="well well-sm">
+			<div class="row">
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label for="rtEnrolmentInitialSeq" class="control-label">Is this transaction an initial sequence?</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<select class="form-control input-sm" name="rtEnrolmentInitialSeq" id="rtEnrolmentInitialSeq" onchange="checkSelectShowHide(this, [rtInitalSeq], ['1'])">
+							<option label=" "></option>
+							<option value="1">Yes</option>
+							<option value="2">No</option>
+						</select>
+					</div>
+				<div class="col-sm-6" id="rtInitalSeq" style="display:none">
+					<div class="form-group">
+						<label for="rtInitalSeqFileUpload">Upload the latest Reg. Transaction XML file that you wish to add a sequence to.</label>
+						<input type="file" id="rtInitalSeqFileUpload" accept="text/xml"/>
+					</div>
+				</div>
+			</div>
 				</div>
 				<div class="well well-sm">
 			
@@ -626,6 +624,25 @@ function checkOptioneCTD(obj) {
 	} else {
 		$(eCTD).css("display", "none");
 		$('#rtBox').css("display", "none");
+	}
+}
+/*for hiding and showing based on select box selection
+parameters:
+- selectBox: selectBox to check
+- arrayToShowHide: array of elements to show or hide based on selected value of selectBox
+- arrayOfValuesToCheck: array of values such that if the selected value of selectBox matches one of the values in this array,
+	the elements in arrayToShowHide will be displayed (and hidden if the values do not match)
+*/
+function checkSelectShowHide(selectBox, arrayToShowHide, arrayOfValuesToCheck) {
+	for (var i = 0; i < arrayToShowHide.length; i++) {
+		for (var n = 0; n < arrayOfValuesToCheck.length; n++) {
+			if ($(selectBox).val() == arrayOfValuesToCheck[n]) {
+				$(arrayToShowHide[i]).css("display", "block");
+				break;
+			} else {
+				$(arrayToShowHide[i]).css("display", "none");
+			}
+		}
 	}
 }
 
