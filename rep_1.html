@@ -155,10 +155,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<h3 class="panel-title">STEP 1B - Select Enrolment Type</h3>
 		</div>
 		<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-8">
 			<div class="form-group"> 
 				<!-- <p><strong>Select a specific Inspection Line for additional search options:</strong> -->
 				<p>
-				<select name="iline" required="" onchange="checkEnrolTypeSelection()" disabled="true">
+				<select name="iline" required="" onchange="checkEnrolTypeSelection()" >
 				<option value=""></option>
 				<option value="1">Company (CO)</option>
 				<option value="2">Dossier (DO)</option>
@@ -166,102 +168,247 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<option value="4">Regulatory Transaction (RT)</option>
 				</select>
 				</p>
+				</div>
+			</div>
+			</div>
+			
 			
 				<div id="coType" style="display: none;">
-					<div class="form-group">
-						<label for="coTypeOptionNew" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption" id="coTypeOptionNew" onclick="optButtonSelect('co','New')" disabled="true"/>
-								Start a NEW Company Enrolment</label>
+				<div class="well well-sm">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="form-group">
+							<label for="coTypeOptionNew" class="form-radio form-label-inline">
+							<input type="radio" name="coTypeOption" id="coTypeOptionNew" onclick="optButtonSelect('co','New')" />
+									Start a NEW Company Enrolment</label>
+						</div>
 					</div>
+				</div>
+				</div>
+				<div class="well well-sm">
+				<div class="row">
+					<div class="col-sm-8">
 						<div class="form-group">
 							<label for="coTypeOptionDraft" class="form-radio form-label-inline">
-							<input type="radio" name="coTypeOption" id="coTypeOptionDraft" onclick="optButtonSelect('co','Draft')" disabled="true"/>
+							<input type="radio" name="coTypeOption" id="coTypeOptionDraft" onclick="optButtonSelect('co','Draft')"/>
 								Complete your DRAFT Company</label>
 						</div>
-						<div class="form-group" id="coDrftGrp" style="display:none">
-							<label for="coDrftFileUpload">Upload Draft Enrolment file:</label>
-							<input type="file" id="coDrftFileUpload"  disabled="true"/>
+					</div>
+				</div>
+				
+				<div id="coDrftGrp" style="display:none">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label for="coDrftFileUpload ">Upload Draft Enrolment file:</label>
+							<input type="file" id="coDrftFileUpload" accept="text/xml"/>
 						</div>
+					</div>
+				</div>
+				</div>
+				</div>
+				<div class="well well-sm">
+				<div class="row">
+					<div class="col-sm-12">
 					<div class="form-group">
 						<label for="coTypeOptionAmend" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption" id="coTypeOptionAmend" onclick="optButtonSelect('co','Amend')" disabled="true"/>
+						<input type="radio" name="coTypeOption" id="coTypeOptionAmend" onclick="optButtonSelect('co','Amend')"/>
 							AMEND you Company Enrolment File</label>
 					</div>
-					<div class="form-group" id="coAmdGrp" style="display:none">
-						<label for="coAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-						<input type="file" id="coAmdFileUpload"  disabled="true"/>
 					</div>
 				</div>
+				<div id="coAmdGrp" style="display:none">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label for="coAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
+							<input type="file" id="coAmdFileUpload" accept="text/xml"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-1">
+					<div class="form-group">
+						<label class="control-label smallLabel" for="coAmdFileVersion">Amended Version</label>
+						<input type="text" class="input-sm form-control" id="coAmdFileVersion" readonly />
+					</div>
+					</div>
+					<div class="col-sm-2">
+						<p>replaces</p>
+					</div>
+					<div class="col-sm-1">
+					<div class="form-group">
+						<label class="control-label smallLabel" for="coAmdFileRepVersion">Uploaded Version</label>
+						<input type="text" class="input-sm form-control" id="coAmdFileRepVersion" readonly />
+					</div>
+					</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				
 				<div id="doType" style="display: none;">
+					<div class="well well-sm">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="doTypeOptionNew" class="form-radio form-label-inline">
+									<input type="radio" name="doTypeOption" id="doTypeOptionNew" onclick="optButtonSelect('do','New')"/>
+										Start a NEW Dossier Enrolment</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="well well-sm">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="doTypeOptionDraft" class="form-radio form-label-inline">
+									<input type="radio" name="doTypeOption" id="doTypeOptionDraft" onclick="optButtonSelect('do','Draft')"/>
+										Complete your DRAFT Dossier</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group" id="doDrftGrp" style="display:none">
+									<label for="doDrftFileUpload">Upload Draft Enrolment file:</label>
+									<input type="file" id="doDrftFileUpload"   accept="text/xml"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="well well-sm">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="doTypeOptionAmend" class="form-radio form-label-inline">
+									<input type="radio" name="doTypeOption" id="doTypeOptionAmend" onclick="optButtonSelect('do','Amend')" />
+										AMEND you Dossier Enrolment File</label>
+								</div>
+							</div>
+						</div>
+						<div id="doAmdGrp" style="display:none">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="doAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
+									<input type="file" id="doAmdFileUpload"   accept="text/xml"/>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+					<div class="col-sm-1">
 					<div class="form-group">
-						<label for="doTypeOptionNew" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption" id="doTypeOptionNew" onclick="optButtonSelect('do','New')" disabled="true"/>
-							Start a NEW Dossier Enrolment</label>
+						<label class="control-label smallLabel" for="doAmdFileVersion">Amended Version</label>
+						<input type="text" class="input-sm form-control" id="doAmdFileVersion" readonly />
 					</div>
+					</div>
+					<div class="col-sm-2">
+						<p>replaces</p>
+					</div>
+					<div class="col-sm-1">
 					<div class="form-group">
-						<label for="doTypeOptionDraft" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption" id="doTypeOptionDraft" onclick="optButtonSelect('do','Draft')" disabled="true"/>
-							Complete your DRAFT Dossier</label>
-					</div>
-					<div class="form-group" id="doDrftGrp" style="display:none">
-						<label for="doDrftFileUpload">Upload Draft Enrolment file:</label>
-						<input type="file" id="doDrftFileUpload" disabled="true" />
-					</div>
-					<div class="form-group">
-						<label for="doTypeOptionAmend" class="form-radio form-label-inline">
-						<input type="radio" name="doTypeOption" id="doTypeOptionAmend" onclick="optButtonSelect('do','Amend')" disabled="true"/>
-							AMEND you Dossier Enrolment File</label>
-					</div>
-					<div class="form-group"  id="doAmdGrp" style="display:none">
-						<label for="doAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-						<input type="file" id="doAmdFileUpload"  disabled="true"/>
+						<label class="control-label smallLabel" for="doAmdFileRepVersion">Uploaded Version</label>
+						<input type="text" class="input-sm form-control" id="doAmdFileRepVersion" readonly />
 					</div>
 					</div>
+				</div>
+					</div>
+					</div>
+					
+					
 				<div id="raType" style="display: none;">
+				<div class="well well-sm">
+					<div class="row">
+					<div class="col-sm-12">
 					<div class="form-group">
 						<label for="raTypeOptionNew" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption" id="raTypeOptionNew" onclick="optButtonSelect('ra','New')" disabled="true"/>
+						<input type="radio" name="raTypeOption" id="raTypeOptionNew" onclick="optButtonSelect('ra','New')" />
 							Start a NEW Regulatory Activity Enrolment</label>
 					</div>
+					</div>
+					</div>
+					</div>
+					<div class="well well-sm">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="raTypeOptionDraft" class="form-radio form-label-inline">
+									<input type="radio" name="raTypeOption" id="raTypeOptionDraft" onclick="optButtonSelect('ra','Draft')"/>
+										Complete your DRAFT Regulatory Activity</label>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row" id="raDrftGrp" style="display:none">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="raDrftFileUpload">Upload Draft Enrolment file:</label>
+									<input type="file" id="raDrftFileUpload"   accept="text/xml"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="well well-sm">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="raTypeOptionAmend" class="form-radio form-label-inline">
+									<input type="radio" name="raTypeOption" id="raTypeOptionAmend" onclick="optButtonSelect('ra','Amend')"/>
+										AMEND you Regulatory Activity Enrolment File</label>
+								</div>
+							</div>
+						</div>
+						<div id="raAmdGrp" style="display:none">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="raAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
+									<input type="file" id="raAmdFileUpload"   accept="text/xml"/>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+					<div class="col-sm-1">
 					<div class="form-group">
-						<label for="raTypeOptionDraft" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption" id="raTypeOptionDraft" onclick="optButtonSelect('ra','Draft')" disabled="true"/>
-							Complete your DRAFT Regulatory Activity</label>
+						<label class="control-label smallLabel" for="raAmdFileVersion">Amended Version</label>
+						<input type="text" class="input-sm form-control" id="raAmdFileVersion" readonly />
 					</div>
-					<div class="form-group" id="raDrftGrp" style="display:none">
-						<label for="raDrftFileUpload">Upload Draft Enrolment file:</label>
-						<input type="file" id="raDrftFileUpload"  disabled="true"/>
 					</div>
+					<div class="col-sm-2">
+						<p>replaces</p>
+					</div>
+					<div class="col-sm-1">
 					<div class="form-group">
-						<label for="raTypeOptionAmend" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption" id="raTypeOptionAmend" onclick="optButtonSelect('ra','Amend')" disabled="true"/>
-							AMEND you Regulatory Activity Enrolment File</label>
+						<label class="control-label smallLabel" for="raAmdFileRepVersion">Uploaded Version</label>
+						<input type="text" class="input-sm form-control" id="draAmdFileRepVersion" readonly/>
 					</div>
-					<div class="form-group" id="raAmdGrp" style="display:none">
-						<label for="raAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-						<input type="file" id="raAmdFileUpload"  disabled="true"/>
 					</div>
 				</div>
+				</div>
+				</div>
+				
 				<div id="rtType" style="display: none;">
 					<div class="form-group">
 						<div class="form-group">
 							<label for="rtCOFileUpload">Upload and confirm your Company Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtCOFileUpload"  disabled="true"/>
+							<input type="file" id="rtCOFileUpload"   accept="text/xml"/>
 						</div>
 						<div class="form-group">
 							<label for="rtDOFileUpload">Upload and confirm your Dossier Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtDOFileUpload"  disabled="true"/>
+							<input type="file" id="rtDOFileUpload"   accept="text/xml"/>
 						</div>
 						<div class="form-group">
 							<label for="rtRAFileUpload">Upload and confirm your Regulatory Activity Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtRAFileUpload"  disabled="true"/>
+							<input type="file" id="rtRAFileUpload"   accept="text/xml"/>
 						</div>
 						<div class="checkbox">
-						<label><input type="checkbox" id="rtCheck1"  onclick="rtCheck()" disabled="true"/> I confirm that the uploaded files are the most current version of the
+						<label><input type="checkbox" id="rtCheck1"  onclick="rtCheck()" /> I confirm that the uploaded files are the most current version of the
 Enrolment XML files.</label>
 						</div>
 						<div class="checkbox">
-							<label><input type="checkbox" id="rtCheck2"  onclick="rtCheck()" disabled="true"/> I confirm that All the information within the enrolment files are
+							<label><input type="checkbox" id="rtCheck2"  onclick="rtCheck()" /> I confirm that All the information within the enrolment files are
 current and that NOTHING has changed. (i.e.: no changes to
 Company information, Brand Name, Common name, Dossier
 information, Regulatory Activity information)</label>
@@ -282,13 +429,13 @@ information, Regulatory Activity information)</label>
 				<div class="col-sm-6">
 					<div class="form-group">
 						<label for="raEnDateSubmitted" ><span class="field-name"></span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-						<input class="form-control" type="date" id="raEnDateSubmitted" name="raEnDateSubmitted" data-rule-dateiso="true" disabled="true">
+						<input class="form-control" type="date" id="raEnDateSubmitted" name="raEnDateSubmitted" data-rule-dateiso="true" >
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div id="raAntDate" class="form-group">
 						<label for="raEnAntiDateFiled" ><span class="field-name"></span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-						<input class="form-control" type="date" id="raEnAntiDateFiled" name="raEnAntiDateFiled" data-rule-dateiso="true" disabled="true">
+						<input class="form-control" type="date" id="raEnAntiDateFiled" name="raEnAntiDateFiled" data-rule-dateiso="true" >
 					</div>
 				</div>
 			<!-- </form> -->
@@ -307,7 +454,7 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-2">
 							<label for="contactInfo1Salutation" class="control-label">Salutation*</label>
                             <div class="">
-                                <select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" disabled="true">
+                                <select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" >
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -320,19 +467,19 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-4">
 							<label for="contactInfo1GivenName" class="control-label">Given Name*</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name" disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name" >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="contactInfo1Surname" class="control-label">Surname*</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="contactInfo1Title" class="control-label">Title*</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title"  disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title"  >
 							</div>
 						</div>
 					</div>
@@ -340,25 +487,25 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-3">
 							<label for="contactInfo1TelNo" class="control-label">Telephone No*</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone No."  disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone No."  >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="contactInfo1TelExt" class="control-label">Ext</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="contactInfo1Email" class="control-label">Email*</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  disabled="true"/>
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  />
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="contactInfo1FaxNo" class="control-label">Fax No.</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax No."  disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax No."  >
 							</div>
 						</div>
 					</div>
@@ -375,7 +522,7 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-2">
 							<label for="MCInfoSalutation" class="control-label">Salutation*</label>
                             <div class="">
-                                <select class="form-control full-width input-sm" name="MCInfoSalutation" id="MCInfoSalutation" disabled="true">
+                                <select class="form-control full-width input-sm" name="MCInfoSalutation" id="MCInfoSalutation" >
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -388,19 +535,19 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-4">
 							<label for="MCInfoGivenName" class="control-label">Given Name*</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoGivenName" placeholder="Enter Given Name" disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="MCInfoGivenName" placeholder="Enter Given Name" >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="MCInfoSurname" class="control-label">Surname*</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoSurname" placeholder="Enter Surname"  disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="MCInfoSurname" placeholder="Enter Surname"  >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="MCInfoTitle" class="control-label">Title*</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoTitle" placeholder="Enter Title"  disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="MCInfoTitle" placeholder="Enter Title"  >
 							</div>
 						</div>
 					</div>
@@ -408,25 +555,25 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-3">
 							<label for="MCInfoTelNo" class="control-label">Telephone No*</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoTelNo" placeholder="Enter Telephone No."  disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="MCInfoTelNo" placeholder="Enter Telephone No."  >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="MCInfoTelExt" class="control-label">Ext</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoTelExt" placeholder="Enter Extension"  disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="MCInfoTelExt" placeholder="Enter Extension"  >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="MCInfoEmail" class="control-label">Email*</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoEmail" placeholder="Enter Email"  disabled="true"/>
+								<input type="text" class="form-control full-width input-sm" id="MCInfoEmail" placeholder="Enter Email"  />
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="MCInfoFaxNo" class="control-label">Fax No.</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoFaxNo" placeholder="Enter Fax No."  disabled="true">
+								<input type="text" class="form-control full-width input-sm" id="MCInfoFaxNo" placeholder="Enter Fax No."  >
 							</div>
 						</div>
 					</div>
@@ -439,7 +586,7 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-2">
 							<label for="SCInfoSalutation" class="control-label">Salutation*</label>
                             <div class="">
-                                <select class="form-control full-width" name="SCInfoSalutation" id="SCInfoSalutation" disabled="true">
+                                <select class="form-control full-width" name="SCInfoSalutation" id="SCInfoSalutation" >
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -451,19 +598,19 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-4">
 							<label for="SCInfoGivenName" class="control-label">Given Name*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoGivenName" placeholder="Enter Given Name" disabled="true" >
+								<input type="text" class="form-control full-width" id="SCInfoGivenName" placeholder="Enter Given Name"  >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="SCInfoSurname" class="control-label">Surname*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoSurname" placeholder="Enter Surname" disabled="true" >
+								<input type="text" class="form-control full-width" id="SCInfoSurname" placeholder="Enter Surname"  >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="SCInfoTitle" class="control-label">Title*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoTitle" placeholder="Enter Title"  disabled="true">
+								<input type="text" class="form-control full-width" id="SCInfoTitle" placeholder="Enter Title"  >
 							</div>
 						</div>
 					</div>
@@ -471,25 +618,25 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-3">
 							<label for="SCInfoTelNo" class="control-label">Telephone No*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoTelNo" placeholder="Enter Telephone No."  disabled="true">
+								<input type="text" class="form-control full-width" id="SCInfoTelNo" placeholder="Enter Telephone No."  >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="SCInfoTelExt" class="control-label">Ext</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoTelExt" placeholder="Enter Extension"  disabled="true">
+								<input type="text" class="form-control full-width" id="SCInfoTelExt" placeholder="Enter Extension"  >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="SCInfoEmail" class="control-label">Email*</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoEmail" placeholder="Enter Email"  disabled="true">
+								<input type="text" class="form-control full-width" id="SCInfoEmail" placeholder="Enter Email"  >
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="SCInfoFaxNo" class="control-label">Fax No.</label>
 							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoFaxNo" placeholder="Enter Fax No."  disabled="true">
+								<input type="text" class="form-control full-width" id="SCInfoFaxNo" placeholder="Enter Fax No."  >
 							</div>
 						</div>
 					</div>
