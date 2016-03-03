@@ -139,21 +139,24 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		
 		<div id="mainInfo">
 			<div class="well well-sm">
-			<div class="row">
-				<div class="form-group">
+				<div class="row">
 					<div class="col-sm-3">
+						<div class="form-group">
 						<label for="rtEnrolmenteCTD" class="control-label">Is this an eCTD transaction?</label>
+						</div>
 					</div>
 					<div class="col-sm-3">
+						<div class="form-group">
 						<select class="form-control input-sm" name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
 							<option label=" "></option>
 							<option value="1">Yes</option>
 							<option value="2">No</option>
 						</select>
+						</div>
 					</div>
 				</div>		
-			</div>
 			<div class="row">
+			<div class="col-sm-12">
 			<div id="rtLCM" class="blackBorder" style="display:none; margin-top: 15px">
 				<div class="row">
 					<div class="col-sm-4">
@@ -326,6 +329,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 				</div>
 				</div>
+				</div>
 			<div class="well well-sm">
 			<div class="row">
 					<div class="col-sm-3">
@@ -393,23 +397,31 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			
 			<div id="rtBox" class="well well-sm" style="display:none">
 				<div class="row">
-					<div class="form-group">
-						<label for="rtEnrolmentDossierType" class="col-sm-4 control-label">Dossier Type:</label>
-						<div class="">
-							<select class="col-sm-4 form-control" name="rtEnrolmentDossierType" id="rtEnrolmentDossierType" onchange="ectdFilter1(this, rtEnrolmentRegActivityType, rtEnrolmentSeqDesc)">
-								<option value="all"></option>
-								<option value="pharma">Pharmaceutical</option>
-								<option value="bio">Biologic</option>
-							</select>
+						<div class="col-sm-4">
+							<div class="form-group">
+							<label for="rtEnrolmentDossierType" class="control-label">Dossier Type:</label>
+							</div>
 						</div>
-					</div>
+						<div class="col-sm-8">
+						<div class="form-group">
+								<select class="full-width form-control input-sm" name="rtEnrolmentDossierType" id="rtEnrolmentDossierType" onchange="ectdFilter1(this, rtEnrolmentRegActivityType, rtEnrolmentSeqDesc)">
+									<option value="all"></option>
+									<option value="pharma">Pharmaceutical</option>
+									<option value="bio">Biologic</option>
+							</select>
+							</div>
+						</div>
 				</div>
 				
 				<div class="row">
-					<div class="form-group">
-						<label for="rtEnrolmentRegActivityType" class="col-sm-4 control-label">Regulatory Activity Type:</label>
-						<div class="">
-							<select class="col-sm-4 form-control input-sm" name="rtEnrolmentRegActivityType" id="rtEnrolmentRegActivityType" onchange="ectdFilter2(this, rtEnrolmentSeqDesc)" disabled="true">
+					<div class="col-sm-4">
+						<div class="form-group">
+						<label for="rtEnrolmentRegActivityType" class="control-label">Regulatory Activity Type:</label>
+						</div>
+					</div>
+						<div class="col-sm-8">
+						<div class="form-group">
+							<select class="full-width form-control input-sm" name="rtEnrolmentRegActivityType" id="rtEnrolmentRegActivityType" onchange="ectdFilter2(this, rtEnrolmentSeqDesc)" disabled="true">
 								<option class="all pharma bio" value="all"></option>
 								<option class="all pharma bio" value="preSubMeetings">All pre-submission meetings</option>
 								<option class="all pharma bio" value="ANDS">ANDS</option>
@@ -433,14 +445,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								<option class="all pharma bio" value="UpConsul">Upon Consultation</option>
 								<option class="all bio" value="YBPR">YBPR</option>
 							</select>
+							</div>
+						</div>
+				</div>
+				<div class="row"> 
+					<div class="col-sm-4">
+						<div class="form-group">
+						<label for="rtEnrolmentSeqDesc" class="control-label">Sequence Description:</label>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="form-group">
-						<label for="rtEnrolmentSeqDesc" class="col-sm-4 control-label">Sequence Description:</label>
-						<div class="">
-							<select class="col-sm-4 form-control input-sm" name="rtEnrolmentSeqDesc" id="rtEnrolmentSeqDesc" disabled="true">
+						<div class="col-sm-8">
+						<div class="form-group">
+							<select class="form-control input-sm full-width" name="rtEnrolmentSeqDesc" id="rtEnrolmentSeqDesc" disabled="true">
 								<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA UpConsul YBPR" value="all"></option>
 								<option class="all pharma bio UD-PV" value="BftRiskAssess">Benefit Risk Assessment</option>
 								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC SANDS SNDS" value="Admin">Administrative</option>
@@ -486,9 +502,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								<option class="all pharma bio DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C UDRA" value="unSolData">Unsolicited Data, &lt;Brief Description&gt; </option>
 								<option class="all pharma bio LevelIII" value="yearListChangeNum">Year, list of change number (for example: 2012, 15, 19a,….)</option>
 							</select>
+							</div>
 						</div>
 					</div>
-				</div>
 			</div>
 		</div>
 	
