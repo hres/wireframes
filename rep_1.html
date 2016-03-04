@@ -139,11 +139,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="form-group">
 				<fieldset>
 					<label for="productLineType1" class="form-radio form-label-inline">
-					<input id="productLineType1" type="radio" name="optionProductLine" onclick="enableDisableDivArray(this, [step1B, step1c])"/>
+					<input id="productLineType1" type="radio" name="optionProductLine" onclick="enableDisableDivArray(this, [selectEnrolType])"/>
 					Pharmaceutical or Biologic Drug Product</label>
 					&nbsp;&nbsp;
 					<label for="productLineType2" class="form-radio form-label-inline">
-						<input id="productLineType2" type="radio"  name="optionProductLine" onclick="enableDisableDivArray(this, [step1B, step1c])"/>
+						<input id="productLineType2" type="radio"  name="optionProductLine" onclick="enableDisableDivArray(this, [selectEnrolType])"/>
 						Medical Device</label>
 				</fieldset>
 			</div>
@@ -155,17 +155,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<h3 class="panel-title">STEP 1B - Select Enrolment Type</h3>
 		</div>
 		<div class="panel-body">
-		<div class="row">
+		<div class="row" id="selectEnrolType">
 			<div class="col-sm-8">
 			<div class="form-group"> 
 				<!-- <p><strong>Select a specific Inspection Line for additional search options:</strong> -->
 				<p>
 				<select id="iline" name="iline" required="" onchange="checkEnrolTypeSelection()" disabled="true">
 				<option value=""></option>
-				<option value="1">Company (CO)</option>
-				<option value="2">Dossier (DO)</option>
-				<option value="3">Regulatory Activity (RA)</option>
-				<option value="4">Regulatory Transaction (RT)</option>
+				<option value="co">Company (CO)</option>
+				<option value="do">Dossier (DO)</option>
+				<option value="ra">Regulatory Activity (RA)</option>
+				<option value="rt">Regulatory Transaction (RT)</option>
 				</select>
 				</p>
 				</div>
@@ -177,8 +177,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<div class="col-sm-8">
 						<div class="form-group">
-							<label for="enrolTypeOptionNew" class="form-radio form-label-inline">
-							<input type="radio" name="enrolTypeOption" id="enrolTypeOptionNew" onclick="optButtonSelect('New')" />
+							<label for="enrolTypeOptionNEW" class="form-radio form-label-inline">
+							<input type="radio" name="enrolTypeOption" id="enrolTypeOptionNEW" onclick="optButtonSelect('NEW')" />
 									</label>
 						</div>
 					</div>
@@ -188,8 +188,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<div class="col-sm-8">
 						<div class="form-group">
-							<label for="enrolTypeOptionDraft" class="form-radio form-label-inline">
-							<input type="radio" name="enrolTypeOption" id="enrolTypeOptionDraft" onclick="optButtonSelect('Draft')"/>
+							<label for="enrolTypeOptionDRAFT" class="form-radio form-label-inline">
+							<input type="radio" name="enrolTypeOption" id="enrolTypeOptionDRAFT" onclick="optButtonSelect('DRAFT')"/>
 								</label>
 						</div>
 					</div>
@@ -210,8 +210,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<div class="col-sm-12">
 					<div class="form-group">
-						<label for="enrolTypeOptionAmend" class="form-radio form-label-inline">
-						<input type="radio" name="enrolTypeOption" id="enrolTypeOptionAmend" onclick="optButtonSelect('Amend')"/>
+						<label for="enrolTypeOptionAMEND" class="form-radio form-label-inline">
+						<input type="radio" name="enrolTypeOption" id="enrolTypeOptionAMEND" onclick="optButtonSelect('AMEND')"/>
 							</label>
 					</div>
 					</div>
@@ -847,7 +847,8 @@ var numOfContactsCreated = 1;
 
 $(document).ready(function() {
    setCookie("currentURL",window.location.href);
-   setCookie("typeREP", "");
+   setCookie("typeREP", ""); //for type of enrolment (CO, DO, RA, or RT)
+   setCookie("actionREP", ""); //for type of action (NEW, DRAFT, or AMEND)
 });
 
 function checkEnrolTypeSelection() { //previously obj
@@ -890,67 +891,38 @@ function checkEnrolTypeSelection() { //previously obj
 	$(step1c).css('display', 'none');
 	$(raAntDate).css('display', 'none');
 	
-	 if (obj.value == "0") {
+	 if (obj.value == "") {
 		$(enrolType).css('display', 'none');
-	 /*
-		coType.style.display = "none";
-		doType.style.display = "none";
-		raType.style.display = "none";
-		*/
 		rtType.style.display = "none";
-		
 		step1c.style.display = "none";
 		raAntDate.style.display = "none";
+		changeNavPills(navREP, '');
 		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Enrolment is submitted*', 'Date the Regulatory Enrolment is anticipated to be filed*'], false);
-		/*
-		changeLabelText('raEnDateSubmitted', 'Date the Regulatory Enrolment is submitted*');
-		changeLabelText('raEnAntiDateFiled', 'Date the Regulatory Enrolment is anticipated to be filed*');*/
-	} else if (obj.value == "1") {
-		changeLabelText(['enrolTypeOptionNew', 'enrolTypeOptionDraft','enrolTypeOptionAmend'],
+	} else if (obj.value == "co") {
+		changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
 							['Start a New Company Enrolment', 'Complete your DRAFT Company Enrolment', 'AMEND you Company Enrolment file'], true);
-	/*
-		coType.style.display = "block";
-		doType.style.display = "none";
-		raType.style.display = "none";
-		*/
 		rtType.style.display = "none";
-		
 		$(enrolType).css('display', 'block');
 		step1c.style.display = "block";
 		raAntDate.style.display = "none";
 		
-		changeNavPills('Company');
-		//step2but.href = "rep_2_company.html";
+		changeNavPills(navREP, 'Company');
 		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Company Enrolment is submitted*', 'Date the Company Enrolment is anticipated to be filed*'], false);
-		/*
-		changeLabelText('raEnDateSubmitted', 'Date the Company Enrolment is submitted*');
-		changeLabelText('raEnAntiDateFiled', 'Date the Company Enrolment is anticipated to be filed*');*/
 		
-	} else if (obj.value == "2") {
-	changeLabelText(['enrolTypeOptionNew', 'enrolTypeOptionDraft','enrolTypeOptionAmend'],
+	} else if (obj.value == "do") {
+	changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
 							['Start a New Dossier Enrolment', 'Complete your DRAFT Dossier Enrolment', 'AMEND you Dossier Enrolment file'], true);
-	/*
-		coType.style.display = "none";
-		doType.style.display = "block";
-		raType.style.display = "none";
-		*/
 		rtType.style.display = "none";
 		
 		$(enrolType).css('display', 'block');
 		step1c.style.display = "block";
 		raAntDate.style.display = "block";
 		
-		changeNavPills('Dossier');
+		changeNavPills(navREP, 'Dossier');
 		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Dossier Enrolment is submitted*', 'Date the Dossier Enrolment is anticipated to be filed*'], false);
-		/*
-		changeLabelText('raEnDateSubmitted', 'Date the Dossier Enrolment is submitted*');
-		changeLabelText('raEnAntiDateFiled', 'Date the Dossier Enrolment is anticipated to be filed*');*/
-		//changeLabelText('raEnAntiDateFiled', 'Date the First RA is anticipated to be filed');
 		
-		//step2but.href = "rep_2_dossier.html";
-		
-	} else if (obj.value == "3") {
-	changeLabelText(['enrolTypeOptionNew', 'enrolTypeOptionDraft','enrolTypeOptionAmend'],
+	} else if (obj.value == "ra") {
+	changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
 							['Start a New Regulatory Activity Enrolment', 'Complete your DRAFT Regulatory Activity Enrolment', 'AMEND you Regulatory Activity Enrolment file'], true);
 	/*
 		coType.style.display = "none";
@@ -963,49 +935,33 @@ function checkEnrolTypeSelection() { //previously obj
 		step1c.style.display = "block";
 		raAntDate.style.display = "block";
 		
-		changeNavPills('Regulatory Activity');
+		changeNavPills(navREP, 'Regulatory Activity');
 		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Activity Enrolment is submitted*', 'Date the Regulatory Activity Enrolment is anticipated to be filed*'], false);
-		/*
-		changeLabelText('raEnDateSubmitted', 'Date the Regulatory Activity Enrolment is submitted*');
-		changeLabelText('raEnAntiDateFiled', 'Date the Regulatory Activity Enrolment is anticipated to be filed*');*/
-		//changeLabelText('raEnAntiDateFiled', 'Date the First RA is anticipated to be filed');
 		
-		//step2but.href = "rep_2_regActivity.html";
-		
-	} else if (obj.value == "4") {
-		/*
-		coType.style.display = "none";
-		doType.style.display = "none";
-		raType.style.display = "none";
-		*/
+	} else if (obj.value == "rt") {
 		$(enrolType).css('display', 'none');
 		rtType.style.display = "block";
 		step1c.style.display = "none";
 		raAntDate.style.display = "none";
 		
-		changeNavPills('Regulatory Transaction');
+		changeNavPills(navREP, 'Regulatory Transaction');
 		$('#navStep2').prop('href', 'rep_2_regTransaction.html');
-		$('#navStep3').prop('href', 'rep_3_regTransaction.html');
+		$('#navStep3').prop('href', 'rep_3.html');
+		$('#navStep4').prop('href', 'rep_HCInternal.html');
 		step2but.href = "";
+		setCookie("typeREP", obj.value);
 		
 	}else {
-	/*
-		coType.style.display = "none";
-		doType.style.display = "none";
-		raType.style.display = "none";
-		*/
 		$(enrolType).css('display', 'none');
 		rtType.style.display = "none";
 		step1c.style.display = "none";
 		raAntDate.style.display = "none";
 		
-		changeNavPills('');
+		changeNavPills(navREP,'');
 		$('#navStep2').prop('href', '');
 		$('#navStep3').prop('href', '');
 		step2but.href = "";
 		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Enrolment is submitted*', 'Date the Regulatory Enrolment is anticipated to be filed*'], false);
-		/*changeLabelText('raEnDateSubmitted', 'Date the Regulatory Enrolment is submitted*');
-		changeLabelText('raEnAntiDateFiled', 'Date the Regulatory Enrolment is anticipated to be filed*');*/
 	}
 }
 
@@ -1020,223 +976,104 @@ var selectOptionType = $('#iline').val();
 	
 	if (opt.checked) {
 		setCookie("typeREP", selectOptionType);
-		if (selectOptionType == '1') {
-			
-			if (action == 'New') {
+		setCookie("actionREP", action);
+		if (selectOptionType == 'co') {
+			if (action == 'NEW') {
 				step2but.href = "rep_2_company.html";
-				changeNavPills('NEW Company Enrolment');
+				changeNavPills(navREP, 'NEW Company Enrolment');
 				$('#navStep2').prop('href', 'rep_2_company.html');
-				$('#navStep3').prop('href', 'rep_3_company.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
+				$('#navStep3').prop('href', 'rep_3.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
-			} else if (action == 'Draft') {
-				changeNavPills('DRAFT Company Enrolment');
+			} else if (action == 'DRAFT') {
+				changeNavPills(navREP, 'DRAFT Company Enrolment');
 				$('#enrolDrftGrp').show();
 				$('#enrolAmdGrp').hide();
-			} else if (action == 'Amend') {
-				changeNavPills('AMEND Company Enrolment');
+			} else if (action == 'AMEND') {
+				changeNavPills(navREP, 'AMEND Company Enrolment');
 				$('#navStep2').prop('href', 'rep_2_company_amend.html');
-				$('#navStep3').prop('href', 'rep_3_company_amend.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
+				$('#navStep3').prop('href', 'rep_3.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
 				step2but.href = "rep_2_company_amend.html";
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').show();
 			} else {
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
-				changeNavPills('Company Enrolment');
+				changeNavPills(navREP, 'Company Enrolment');
 				$('#navStep2').prop('href', '');
 				$('#navStep3').prop('href', '');
-				$('#navStep4').prop('href', '');
+				//$('#navStep4').prop('href', '');
 			}
-		} else if (selectOptionType == '2') {
+			$('#navStep4').prop('href', 'rep_HCInternal.html');
+		} else if (selectOptionType == 'do') {
 			
-			if (action == 'New') {
+			if (action == 'NEW') {
 				step2but.href = "rep_2_dossier.html";
-				changeNavPills('NEW Dossier Enrolment');
+				changeNavPills(navREP, 'NEW Dossier Enrolment');
 				$('#navStep2').prop('href', 'rep_2_dossier.html');
-				$('#navStep3').prop('href', 'rep_3_dossier.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
+				$('#navStep3').prop('href', 'rep_3.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
 				changeLabelText(['raEnAntiDateFiled'], ['Date the First RA is anticipated to be filed'], false);
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
-			} else if (action == 'Draft') {
-				changeNavPills('DRAFT Dossier Enrolment');
+			} else if (action == 'DRAFT') {
+				changeNavPills(navREP, 'DRAFT Dossier Enrolment');
 				$('#enrolDrftGrp').show();
 				$('#enrolAmdGrp').hide();
-			} else if (action == 'Amend') {
-				changeNavPills('AMEND Dossier Enrolment');
+			} else if (action == 'AMEND') {
+				changeNavPills(navREP, 'AMEND Dossier Enrolment');
 				$('#navStep2').prop('href', 'rep_2_dossier_amend.html');
-				$('#navStep3').prop('href', 'rep_3_dossier_amend.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
+				$('#navStep3').prop('href', 'rep_3.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
 				step2but.href = "rep_2_dossier_amend.html";
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').show();
 			} else {
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
-				changeNavPills('Dossier Enrolment');
+				changeNavPills(navREP, 'Dossier Enrolment');
 				$('#navStep2').prop('href', '');
 				$('#navStep3').prop('href', '');
-				$('#navStep4').prop('href', '');
+				//$('#navStep4').prop('href', '');
 			}
-		} else if (selectOptionType == '3') {
+			$('#navStep4').prop('href', 'rep_HCInternal.html');
+		} else if (selectOptionType == 'ra') {
 			
-			if (action == 'New') {
+			if (action == 'NEW') {
 				step2but.href = "rep_2_regActivity.html";
-				changeNavPills('NEW Regulatory Activity Enrolment');
+				changeNavPills(navREP,'NEW Regulatory Activity Enrolment');
 				$('#navStep2').prop('href', 'rep_2_regActivity.html');
-				$('#navStep3').prop('href', 'rep_3_regActivity.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
+				$('#navStep3').prop('href', 'rep_3.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
-			} else if (action == 'Draft') {
-				changeNavPills('DRAFT Regulatory Activity Enrolment');
+			} else if (action == 'DRAFT') {
+				changeNavPills(navREP, 'DRAFT Regulatory Activity Enrolment');
 				$('#enrolDrftGrp').show();
 				$('#enrolAmdGrp').hide();
-			} else if (action == 'Amend') {
-				changeNavPills('AMEND Regulatory Activity Enrolment');
+			} else if (action == 'AMEND') {
+				changeNavPills(navREP, 'AMEND Regulatory Activity Enrolment');
 				step2but.href = "rep_2_regActivity_amend.html";
 				$('#navStep2').prop('href', 'rep_2_regActivity_amend.html');
-				$('#navStep3').prop('href', 'rep_3_regActivity_amend.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
+				$('#navStep3').prop('href', 'rep_3.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').show();
 			} else {
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
-				changeNavPills('Regulatory Activity');
+				changeNavPills(navREP,'Regulatory Activity');
 				$('#navStep2').prop('href', '');
 				$('#navStep3').prop('href', '');
-				$('#navStep4').prop('href', '');
+				//$('#navStep4').prop('href', '');
 			}
-		} else if (selectOptionType == '4') {
+			$('#navStep4').prop('href', 'rep_HCInternal.html');
+		} else if (selectOptionType == 'rt') {
 			
 		}
 	}
-}
-
-/*
-function optButtonSelect(type, action) {
-	var step2but = document.getElementById('nextStep2but');
-	var optId = type + "TypeOption" + action;
-	var opt = document.getElementById(optId);
-	var navPills = $('#navREP');
-	var txt;
-	var index;
-	
-	if (opt.checked) {
-		setCookie("typeREP", type);
-		if (type == 'co') {
-			if (action == 'New') {
-				step2but.href = "rep_2_company.html";
-				changeNavPills('NEW Company Enrolment');
-				$('#navStep2').prop('href', 'rep_2_company.html');
-				$('#navStep3').prop('href', 'rep_3_company.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
-				$('#coDrftGrp').hide();
-				$('#coAmdGrp').hide();
-			} else if (action == 'Draft') {
-				changeNavPills('DRAFT Company Enrolment');
-				$('#coDrftGrp').show();
-				$('#coAmdGrp').hide();
-			} else if (action == 'Amend') {
-				changeNavPills('AMEND Company Enrolment');
-				$('#navStep2').prop('href', 'rep_2_company_amend.html');
-				$('#navStep3').prop('href', 'rep_3_company_amend.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
-				step2but.href = "rep_2_company_amend.html";
-				$('#coDrftGrp').hide();
-				$('#coAmdGrp').show();
-			} else {
-				$('#coDrftGrp').hide();
-				$('#coAmdGrp').hide();
-				changeNavPills('Company Enrolment');
-				$('#navStep2').prop('href', '');
-				$('#navStep3').prop('href', '');
-				$('#navStep4').prop('href', '');
-			}
-		} else if (type == 'do') {
-			if (action == 'New') {
-				step2but.href = "rep_2_dossier.html";
-				changeNavPills('NEW Dossier Enrolment');
-				$('#navStep2').prop('href', 'rep_2_dossier.html');
-				$('#navStep3').prop('href', 'rep_3_dossier.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
-				changeLabelText('raEnAntiDateFiled', 'Date the First RA is anticipated to be filed');
-				$('#doDrftGrp').hide();
-				$('#doAmdGrp').hide();
-			} else if (action == 'Draft') {
-				changeNavPills('DRAFT Dossier Enrolment');
-				$('#doDrftGrp').show();
-				$('#doAmdGrp').hide();
-			} else if (action == 'Amend') {
-				changeNavPills('AMEND Dossier Enrolment');
-				$('#navStep2').prop('href', 'rep_2_dossier_amend.html');
-				$('#navStep3').prop('href', 'rep_3_dossier_amend.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
-				step2but.href = "rep_2_dossier_amend.html";
-				$('#doDrftGrp').hide();
-				$('#doAmdGrp').show();
-			} else {
-				$('#doDrftGrp').hide();
-				$('#doAmdGrp').hide();
-				changeNavPills('Dossier Enrolment');
-				$('#navStep2').prop('href', '');
-				$('#navStep3').prop('href', '');
-				$('#navStep4').prop('href', '');
-			}
-		} else if (type == 'ra') {
-			if (action == 'New') {
-				step2but.href = "rep_2_regActivity.html";
-				changeNavPills('NEW Regulatory Activity Enrolment');
-				$('#navStep2').prop('href', 'rep_2_regActivity.html');
-				$('#navStep3').prop('href', 'rep_3_regActivity.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
-				$('#raDrftGrp').hide();
-				$('#raAmdGrp').hide();
-			} else if (action == 'Draft') {
-				changeNavPills('DRAFT Regulatory Activity Enrolment');
-				$('#raDrftGrp').show();
-				$('#raAmdGrp').hide();
-			} else if (action == 'Amend') {
-				changeNavPills('AMEND Regulatory Activity Enrolment');
-				step2but.href = "rep_2_regActivity_amend.html";
-				$('#navStep2').prop('href', 'rep_2_regActivity_amend.html');
-				$('#navStep3').prop('href', 'rep_3_regActivity_amend.html');
-				$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
-				$('#raDrftGrp').hide();
-				$('#raAmdGrp').show();
-			} else {
-				$('#raDrftGrp').hide();
-				$('#raAmdGrp').hide();
-				changeNavPills('Regulatory Activity');
-				$('#navStep2').prop('href', '');
-				$('#navStep3').prop('href', '');
-				$('#navStep4').prop('href', '');
-			}
-		} else if (type == 'rt') {
-			
-		}
-	}
-}
-*/
-
-function changeNavPills(txtToChangeTo) {
-	//changes to navigation between steps when selecting an enrolment type
-	var navPills = $('#navREP');
-	var txt;
-	var index;
-	$(navPills).children().each(function() {
-		txt = $(this).find('a').text();
-		index = txt.indexOf('- ');
-		if (index == -1) {
-			$(this).find('a').text(txt + ' - ' + txtToChangeTo);
-		} else {
-			$(this).find('a').text(txt.substr(0,(index+2)) + txtToChangeTo);
-		}
-	});
 }
 
 /*changing label text of labels of input controls
