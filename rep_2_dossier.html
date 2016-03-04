@@ -112,7 +112,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <ol class="breadcrumb">
 <li><a href="http://www.canada.ca/en/index.html">Home</a></li>
 <li>Regulatory Enrolment Process - Step 1</li>
-<li>Dossier Enrolment - Step 2</li>
+<li>Regulatory Enrolment Process - Step 2</li>
 </ol>
 </div>
 </div>
@@ -124,8 +124,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	<ul class="nav nav-pills" id="navREP">
     	<li><a href="rep_1.html" id="navStep1" class="boldFont">Step 1 - NEW Dossier Enrolment</a></li>
     	<li class="active"><a href="#" id="navStep2" class="boldFont">Step 2 - NEW Dossier Enrolment</a></li>
-    	<li><a href="rep_3_dossier.html" id="navStep3" class="boldFont">Step 3 - NEW Dossier Enrolment</a></li>
-		<li><a class="boldFont" href="rep_HCInternal_enrol.html" id="navStep4">HC Internal - NEW Dossier Enrolment</a></li>
+    	<li><a href="rep_3.html" id="navStep3" class="boldFont">Step 3 - NEW Dossier Enrolment</a></li>
+		<li><a class="boldFont" href="rep_HCInternal.html" id="navStep4">HC Internal - NEW Dossier Enrolment</a></li>
     </ul>
 </div>
 <section>
@@ -246,7 +246,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	</div><!-- end of Step 2 Company Enrolment-->
 <div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
-            <a class="btn btn-primary" href="rep_1.html">&lt; Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="rep_3_dossier.html">Continue to Step 3 &gt;</a>
+            <a class="btn btn-primary" href="rep_1.html">&lt; Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
         </div>
 </div>
 </section>
@@ -359,6 +359,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 $(document).ready(function() {
    setCookie("currentURL",window.location.href);
    setCookie("typeREP", "do");
+   setCookie("actionREP", "NEW");
 });
 
 var prevURL = readCookie("currentURL");
