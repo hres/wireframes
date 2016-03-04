@@ -71,3 +71,28 @@ function readCookie(name) {
 function eraseCookie(name) {
 	setCookie(name,"",-1);
 }
+
+/*changes label text of navigation pills according to enrolment type
+- navPills: navigation pills/bar
+- txtToChangeTo: label text to change for ALL links in navPills
+end result will include a dash
+
+FOLLOWS the following (for all links)
+- before: STEP 1
+- after: STEP 1 - New Enrolment
+*/
+function changeNavPills(navPills, txtToChangeTo) {
+	//changes to navigation between steps when selecting an enrolment type
+	var navPills = $(navPills);
+	var txt;
+	var index;
+	$(navPills).children().each(function() {
+		txt = $(this).find('a').text();
+		index = txt.indexOf('- ');
+		if (index == -1) {
+			$(this).find('a').text(txt + ' - ' + txtToChangeTo);
+		} else {
+			$(this).find('a').text(txt.substr(0,(index+2)) + txtToChangeTo);
+		}
+	});
+}
