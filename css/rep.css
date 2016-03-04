@@ -44,6 +44,18 @@ label.hiddenLabel {
 	display: none;
 }
 
-label.smallLabel {
+.smallLabel {
 	font-size: small;
+}
+
+.fixedSmallSize {
+	height: auto;
+	width: 80px;
+	min-width: 80px;
+	max-width:80px;
+	vertical-align:middle;
+}
+
+.textAlignCenter {
+	text-align:center;
 }
