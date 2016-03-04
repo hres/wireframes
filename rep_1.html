@@ -160,7 +160,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="form-group"> 
 				<!-- <p><strong>Select a specific Inspection Line for additional search options:</strong> -->
 				<p>
-				<select name="iline" required="" onchange="checkEnrolTypeSelection()" disabled="true">
+				<select id="iline" name="iline" required="" onchange="checkEnrolTypeSelection()" disabled="true">
 				<option value=""></option>
 				<option value="1">Company (CO)</option>
 				<option value="2">Dossier (DO)</option>
@@ -172,7 +172,81 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</div>
 			</div>
 			
+			<div id="enrolType" style="display: none;">
+				<div class="well well-sm">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="form-group">
+							<label for="enrolTypeOptionNew" class="form-radio form-label-inline">
+							<input type="radio" name="enrolTypeOption" id="enrolTypeOptionNew" onclick="optButtonSelect('New')" />
+									</label>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="well well-sm">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="form-group">
+							<label for="enrolTypeOptionDraft" class="form-radio form-label-inline">
+							<input type="radio" name="enrolTypeOption" id="enrolTypeOptionDraft" onclick="optButtonSelect('Draft')"/>
+								</label>
+						</div>
+					</div>
+				</div>
+				
+				<div id="enrolDrftGrp" style="display:none">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label for="enrolDrftFileUpload ">Upload DRAFT Enrolment file</label>
+							<input type="file" id="enrolDrftFileUpload" accept="text/xml"/>
+						</div>
+					</div>
+				</div>
+				</div>
+				</div>
+				<div class="well well-sm">
+				<div class="row">
+					<div class="col-sm-12">
+					<div class="form-group">
+						<label for="enrolTypeOptionAmend" class="form-radio form-label-inline">
+						<input type="radio" name="enrolTypeOption" id="enrolTypeOptionAmend" onclick="optButtonSelect('Amend')"/>
+							</label>
+					</div>
+					</div>
+				</div>
+				<div id="enrolAmdGrp" style="display:none">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label for="enrolAmdFileUpload">Upload Enrolment file that you wish to AMEND</label>
+							<input type="file" id="enrolAmdFileUpload" accept="text/xml"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-1 fixedSmallSize">
+					<div class="form-group">
+						<label class="control-label smallLabel" for="enrolAmdFileVersion">Amended Version</label>
+						<input type="text" class="input-sm form-control" id="enrolAmdFileVersion" readonly />
+					</div>
+					</div>
+					<div class="col-xs-2 fixedSmallSize">
+						<p class="smallLabel textAlignCenter">replaces</p>
+					</div>
+					<div class="col-xs-2 fixedSmallSize">
+					<div class="form-group">
+						<label class="control-label smallLabel" for="enrolAmdFileRepVersion">Uploaded Version</label>
+						<input type="text" class="input-sm form-control" id="coAmdFileRepVersion" readonly />
+					</div>
+					</div>
+				</div>
+				</div>
+				</div>
+				</div>
 			
+				<!--
 				<div id="coType" style="display: none;">
 				<div class="well well-sm">
 				<div class="row">
@@ -388,7 +462,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 				</div>
 				</div>
-				
+				-->
 				<div id="rtType" style="display: none;">
 					<div class="form-group">
 						<div class="form-group">
@@ -778,13 +852,17 @@ $(document).ready(function() {
 
 function checkEnrolTypeSelection() { //previously obj
 	//divs to show/hide
-    var coType = document.getElementById('coType');
-	var doType = document.getElementById('doType');
-	var raType = document.getElementById('raType');
+	var enrolType = $('#enrolType');
+    //var coType = document.getElementById('coType');
+	//var doType = document.getElementById('doType');
+	//var raType = document.getElementById('raType');
 	var rtType = document.getElementById('rtType');
 	var step1c = document.getElementById('step1c');
 	var raAntDate = document.getElementById('raAntDate');
 	var step2but = document.getElementById('nextStep2but');
+	var enrolDrftGrp = document.getElementById('enrolDrftGrp');
+	var enrolAmdGrp = document.getElementById('enrolAmdGrp');
+	var selectOptionType = $('#iline').val();
 	
 	/* Navigation Between Steps
 	<ul class="nav nav-pills" id="navREP">
@@ -803,62 +881,104 @@ function checkEnrolTypeSelection() { //previously obj
 	//dropdown list
 	var obj = document.getElementsByName('iline')[0];
 	
+	//RESET
+	$('input[name=enrolTypeOption]').prop('checked', false);
+	$(enrolType).css('display', 'none');
+	$(enrolDrftGrp).css('display', 'none');
+	$(enrolAmdGrp).css('display', 'none');
+	$(rtType).css('display', 'none');
+	$(step1c).css('display', 'none');
+	$(raAntDate).css('display', 'none');
+	
 	 if (obj.value == "0") {
+		$(enrolType).css('display', 'none');
+	 /*
 		coType.style.display = "none";
 		doType.style.display = "none";
 		raType.style.display = "none";
+		*/
 		rtType.style.display = "none";
+		
 		step1c.style.display = "none";
 		raAntDate.style.display = "none";
+		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Enrolment is submitted*', 'Date the Regulatory Enrolment is anticipated to be filed*'], false);
+		/*
 		changeLabelText('raEnDateSubmitted', 'Date the Regulatory Enrolment is submitted*');
-		changeLabelText('raEnAntiDateFiled', 'Date the Regulatory Enrolment is anticipated to be filed*');
+		changeLabelText('raEnAntiDateFiled', 'Date the Regulatory Enrolment is anticipated to be filed*');*/
 	} else if (obj.value == "1") {
+		changeLabelText(['enrolTypeOptionNew', 'enrolTypeOptionDraft','enrolTypeOptionAmend'],
+							['Start a New Company Enrolment', 'Complete your DRAFT Company Enrolment', 'AMEND you Company Enrolment file'], true);
+	/*
 		coType.style.display = "block";
 		doType.style.display = "none";
 		raType.style.display = "none";
+		*/
 		rtType.style.display = "none";
+		
+		$(enrolType).css('display', 'block');
 		step1c.style.display = "block";
 		raAntDate.style.display = "none";
 		
 		changeNavPills('Company');
 		//step2but.href = "rep_2_company.html";
+		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Company Enrolment is submitted*', 'Date the Company Enrolment is anticipated to be filed*'], false);
+		/*
 		changeLabelText('raEnDateSubmitted', 'Date the Company Enrolment is submitted*');
-		changeLabelText('raEnAntiDateFiled', 'Date the Company Enrolment is anticipated to be filed*');
+		changeLabelText('raEnAntiDateFiled', 'Date the Company Enrolment is anticipated to be filed*');*/
 		
 	} else if (obj.value == "2") {
+	changeLabelText(['enrolTypeOptionNew', 'enrolTypeOptionDraft','enrolTypeOptionAmend'],
+							['Start a New Dossier Enrolment', 'Complete your DRAFT Dossier Enrolment', 'AMEND you Dossier Enrolment file'], true);
+	/*
 		coType.style.display = "none";
 		doType.style.display = "block";
 		raType.style.display = "none";
+		*/
 		rtType.style.display = "none";
+		
+		$(enrolType).css('display', 'block');
 		step1c.style.display = "block";
 		raAntDate.style.display = "block";
 		
 		changeNavPills('Dossier');
+		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Dossier Enrolment is submitted*', 'Date the Dossier Enrolment is anticipated to be filed*'], false);
+		/*
 		changeLabelText('raEnDateSubmitted', 'Date the Dossier Enrolment is submitted*');
-		changeLabelText('raEnAntiDateFiled', 'Date the Dossier Enrolment is anticipated to be filed*');
+		changeLabelText('raEnAntiDateFiled', 'Date the Dossier Enrolment is anticipated to be filed*');*/
 		//changeLabelText('raEnAntiDateFiled', 'Date the First RA is anticipated to be filed');
 		
 		//step2but.href = "rep_2_dossier.html";
 		
 	} else if (obj.value == "3") {
+	changeLabelText(['enrolTypeOptionNew', 'enrolTypeOptionDraft','enrolTypeOptionAmend'],
+							['Start a New Regulatory Activity Enrolment', 'Complete your DRAFT Regulatory Activity Enrolment', 'AMEND you Regulatory Activity Enrolment file'], true);
+	/*
 		coType.style.display = "none";
 		doType.style.display = "none";
 		raType.style.display = "block";
+		*/
 		rtType.style.display = "none";
+		
+		$(enrolType).css('display', 'block');
 		step1c.style.display = "block";
 		raAntDate.style.display = "block";
 		
 		changeNavPills('Regulatory Activity');
+		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Activity Enrolment is submitted*', 'Date the Regulatory Activity Enrolment is anticipated to be filed*'], false);
+		/*
 		changeLabelText('raEnDateSubmitted', 'Date the Regulatory Activity Enrolment is submitted*');
-		changeLabelText('raEnAntiDateFiled', 'Date the Regulatory Activity Enrolment is anticipated to be filed*');
+		changeLabelText('raEnAntiDateFiled', 'Date the Regulatory Activity Enrolment is anticipated to be filed*');*/
 		//changeLabelText('raEnAntiDateFiled', 'Date the First RA is anticipated to be filed');
 		
 		//step2but.href = "rep_2_regActivity.html";
 		
 	} else if (obj.value == "4") {
+		/*
 		coType.style.display = "none";
 		doType.style.display = "none";
 		raType.style.display = "none";
+		*/
+		$(enrolType).css('display', 'none');
 		rtType.style.display = "block";
 		step1c.style.display = "none";
 		raAntDate.style.display = "none";
@@ -869,9 +989,12 @@ function checkEnrolTypeSelection() { //previously obj
 		step2but.href = "";
 		
 	}else {
+	/*
 		coType.style.display = "none";
 		doType.style.display = "none";
 		raType.style.display = "none";
+		*/
+		$(enrolType).css('display', 'none');
 		rtType.style.display = "none";
 		step1c.style.display = "none";
 		raAntDate.style.display = "none";
@@ -880,11 +1003,121 @@ function checkEnrolTypeSelection() { //previously obj
 		$('#navStep2').prop('href', '');
 		$('#navStep3').prop('href', '');
 		step2but.href = "";
-		changeLabelText('raEnDateSubmitted', 'Date the Regulatory Enrolment is submitted*');
-		changeLabelText('raEnAntiDateFiled', 'Date the Regulatory Enrolment is anticipated to be filed*');
+		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Enrolment is submitted*', 'Date the Regulatory Enrolment is anticipated to be filed*'], false);
+		/*changeLabelText('raEnDateSubmitted', 'Date the Regulatory Enrolment is submitted*');
+		changeLabelText('raEnAntiDateFiled', 'Date the Regulatory Enrolment is anticipated to be filed*');*/
 	}
 }
 
+function optButtonSelect(action) {
+var selectOptionType = $('#iline').val();
+	var step2but = document.getElementById('nextStep2but');
+	var optId = "enrolTypeOption" + action;
+	var opt = document.getElementById(optId);
+	var navPills = $('#navREP');
+	var txt;
+	var index;
+	
+	if (opt.checked) {
+		setCookie("typeREP", selectOptionType);
+		if (selectOptionType == '1') {
+			
+			if (action == 'New') {
+				step2but.href = "rep_2_company.html";
+				changeNavPills('NEW Company Enrolment');
+				$('#navStep2').prop('href', 'rep_2_company.html');
+				$('#navStep3').prop('href', 'rep_3_company.html');
+				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
+				$('#enrolDrftGrp').hide();
+				$('#enrolAmdGrp').hide();
+			} else if (action == 'Draft') {
+				changeNavPills('DRAFT Company Enrolment');
+				$('#enrolDrftGrp').show();
+				$('#enrolAmdGrp').hide();
+			} else if (action == 'Amend') {
+				changeNavPills('AMEND Company Enrolment');
+				$('#navStep2').prop('href', 'rep_2_company_amend.html');
+				$('#navStep3').prop('href', 'rep_3_company_amend.html');
+				$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
+				step2but.href = "rep_2_company_amend.html";
+				$('#enrolDrftGrp').hide();
+				$('#enrolAmdGrp').show();
+			} else {
+				$('#enrolDrftGrp').hide();
+				$('#enrolAmdGrp').hide();
+				changeNavPills('Company Enrolment');
+				$('#navStep2').prop('href', '');
+				$('#navStep3').prop('href', '');
+				$('#navStep4').prop('href', '');
+			}
+		} else if (selectOptionType == '2') {
+			
+			if (action == 'New') {
+				step2but.href = "rep_2_dossier.html";
+				changeNavPills('NEW Dossier Enrolment');
+				$('#navStep2').prop('href', 'rep_2_dossier.html');
+				$('#navStep3').prop('href', 'rep_3_dossier.html');
+				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
+				changeLabelText(['raEnAntiDateFiled'], ['Date the First RA is anticipated to be filed'], false);
+				$('#enrolDrftGrp').hide();
+				$('#enrolAmdGrp').hide();
+			} else if (action == 'Draft') {
+				changeNavPills('DRAFT Dossier Enrolment');
+				$('#enrolDrftGrp').show();
+				$('#enrolAmdGrp').hide();
+			} else if (action == 'Amend') {
+				changeNavPills('AMEND Dossier Enrolment');
+				$('#navStep2').prop('href', 'rep_2_dossier_amend.html');
+				$('#navStep3').prop('href', 'rep_3_dossier_amend.html');
+				$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
+				step2but.href = "rep_2_dossier_amend.html";
+				$('#enrolDrftGrp').hide();
+				$('#enrolAmdGrp').show();
+			} else {
+				$('#enrolDrftGrp').hide();
+				$('#enrolAmdGrp').hide();
+				changeNavPills('Dossier Enrolment');
+				$('#navStep2').prop('href', '');
+				$('#navStep3').prop('href', '');
+				$('#navStep4').prop('href', '');
+			}
+		} else if (selectOptionType == '3') {
+			
+			if (action == 'New') {
+				step2but.href = "rep_2_regActivity.html";
+				changeNavPills('NEW Regulatory Activity Enrolment');
+				$('#navStep2').prop('href', 'rep_2_regActivity.html');
+				$('#navStep3').prop('href', 'rep_3_regActivity.html');
+				$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
+				$('#enrolDrftGrp').hide();
+				$('#enrolAmdGrp').hide();
+			} else if (action == 'Draft') {
+				changeNavPills('DRAFT Regulatory Activity Enrolment');
+				$('#enrolDrftGrp').show();
+				$('#enrolAmdGrp').hide();
+			} else if (action == 'Amend') {
+				changeNavPills('AMEND Regulatory Activity Enrolment');
+				step2but.href = "rep_2_regActivity_amend.html";
+				$('#navStep2').prop('href', 'rep_2_regActivity_amend.html');
+				$('#navStep3').prop('href', 'rep_3_regActivity_amend.html');
+				$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
+				$('#enrolDrftGrp').hide();
+				$('#enrolAmdGrp').show();
+			} else {
+				$('#enrolDrftGrp').hide();
+				$('#enrolAmdGrp').hide();
+				changeNavPills('Regulatory Activity');
+				$('#navStep2').prop('href', '');
+				$('#navStep3').prop('href', '');
+				$('#navStep4').prop('href', '');
+			}
+		} else if (selectOptionType == '4') {
+			
+		}
+	}
+}
+
+/*
 function optButtonSelect(type, action) {
 	var step2but = document.getElementById('nextStep2but');
 	var optId = type + "TypeOption" + action;
@@ -988,6 +1221,7 @@ function optButtonSelect(type, action) {
 		}
 	}
 }
+*/
 
 function changeNavPills(txtToChangeTo) {
 	//changes to navigation between steps when selecting an enrolment type
@@ -1005,8 +1239,33 @@ function changeNavPills(txtToChangeTo) {
 	});
 }
 
-function changeLabelText(elementFor, txtToChangeTo) {
-	$('label[for=' + elementFor + ']')[0].childNodes[0].textContent = txtToChangeTo;
+/*changing label text of labels of input controls
+- elementForArray: list of label ids (in order of change)
+- txtToChangeToArray: array of label texts for labels in elementForArray (must be in same order)
+- bolAddAfterNextElementSibling: check whether to add label text after nextElementSibling
+*/
+function changeLabelText(elementForArray, txtToChangeToArray, bolAddAfterNextElementSibling) {
+	var elementLabel;
+	if (elementForArray.length == txtToChangeToArray.length) {
+		for (i = 0; i < elementForArray.length; i++) {
+			elementLabel = $('label[for=' + elementForArray[i] + ']');
+			if (bolAddAfterNextElementSibling) {
+			/*
+				textNode = document.createTextNode(txtToChangeToArray[i]);
+				childNodes = $('label[for=' + elementForArray[i] + ']').contents();
+				for (j = 0; j < childNodes.length; j++) {
+					$(childNodes).find('input#' + elementForArray[i])
+				}
+				$('label[for=' + elementForArray[i] + ']')[0].childNodes[0].textContent = txtToChangeToArray[i];
+				*/
+				var contentLength = $(elementLabel).contents().length;
+				$(elementLabel)[0].childNodes[contentLength-1].textContent = "";
+				$(elementLabel).append(txtToChangeToArray[i]);
+			} else {
+				$(elementLabel)[0].childNodes[0].textContent = txtToChangeToArray[i];
+			}
+		}
+	}
 }
 
 //adds contact
