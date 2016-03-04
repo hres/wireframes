@@ -227,16 +227,16 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-1">
+					<div class="col-xs-1 fixedSmallSize">
 					<div class="form-group">
 						<label class="control-label smallLabel" for="coAmdFileVersion">Amended Version</label>
 						<input type="text" class="input-sm form-control" id="coAmdFileVersion" readonly />
 					</div>
 					</div>
-					<div class="col-sm-2">
-						<p>replaces</p>
+					<div class="col-xs-2 fixedSmallSize">
+						<p class="smallLabel textAlignCenter">replaces</p>
 					</div>
-					<div class="col-sm-1">
+					<div class="col-xs-2 fixedSmallSize">
 					<div class="form-group">
 						<label class="control-label smallLabel" for="coAmdFileRepVersion">Uploaded Version</label>
 						<input type="text" class="input-sm form-control" id="coAmdFileRepVersion" readonly />
@@ -298,16 +298,16 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 						</div>
 						<div class="row">
-					<div class="col-sm-1">
+					<div class="col-xs-2 fixedSmallSize">
 					<div class="form-group">
 						<label class="control-label smallLabel" for="doAmdFileVersion">Amended Version</label>
 						<input type="text" class="input-sm form-control" id="doAmdFileVersion" readonly />
 					</div>
 					</div>
-					<div class="col-sm-2">
-						<p>replaces</p>
+					<div class="col-xs-2 fixedSmallSize">
+						<p class="smallLabel textAlignCenter">replaces</p>
 					</div>
-					<div class="col-sm-1">
+					<div class="col-xs-1 fixedSmallSize">
 					<div class="form-group">
 						<label class="control-label smallLabel" for="doAmdFileRepVersion">Uploaded Version</label>
 						<input type="text" class="input-sm form-control" id="doAmdFileRepVersion" readonly />
@@ -370,16 +370,16 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 						</div>
 						<div class="row">
-					<div class="col-sm-1">
+					<div class="col-xs-1 fixedSmallSize">
 					<div class="form-group">
 						<label class="control-label smallLabel" for="raAmdFileVersion">Amended Version</label>
 						<input type="text" class="input-sm form-control" id="raAmdFileVersion" readonly />
 					</div>
 					</div>
-					<div class="col-sm-2">
-						<p>replaces</p>
+					<div class="col-xs-2 fixedSmallSize">
+						<p class="smallLabel textAlignCenter">replaces</p>
 					</div>
-					<div class="col-sm-1">
+					<div class="col-xs-1 fixedSmallSize">
 					<div class="form-group">
 						<label class="control-label smallLabel" for="raAmdFileRepVersion">Uploaded Version</label>
 						<input type="text" class="input-sm form-control" id="draAmdFileRepVersion" readonly/>
@@ -1011,7 +1011,7 @@ function changeLabelText(elementFor, txtToChangeTo) {
 //adds contact
 function addNewContact() {
 	if (contactCounter < 3) {
-		var newContact = '<li id="contactInfo1"><details open="open"><summary>Main Contact Information <button class="btn btn-danger btn-xs deleteRef" onclick="deleteContact(contactInfo1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div id="contactInfo1Main" class="wb-frmvld well well-sm"><div class="row"><div class="form-group col-sm-2"><label for="contactInfo1Salutation" class="control-label">Salutation*</label><div class=""><select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" ><option label=" "></option><option value="1">Mr.</option><option value="2">Mrs.</option><option value="3">Ms.</option><option value="4">Dr.</option></select></div></div><div class="form-group col-sm-4"><label for="contactInfo1GivenName" class="control-label">Given Name*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name"></div></div><div class="form-group col-sm-4"><label for="contactInfo1Surname" class="control-label">Surname*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Title" class="control-label">Title*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title" ></div></div></div><div class="row"><div class="form-group col-sm-3"><label for="contactInfo1TelNo" class="control-label">Telephone No*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone No."  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1TelExt" class="control-label">Ext</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  ></div></div><div class="form-group col-sm-4"><label for="contactInfo1Email" class="control-label">Email*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  /></div></div><div class="form-group col-sm-3"><label for="contactInfo1FaxNo" class="control-label">Fax No.</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax No."  ></div></div></div></div></details></li>';
+		var newContact = '<li id="contactInfo1"><details open="open"><summary>Main Contact Information <button class="btn btn-danger btn-xs deleteRef" onclick="deleteContact(contactInfo1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div id="contactInfo1Main" class="wb-frmvld well well-sm"><div class="row"><div class="form-group col-sm-2"><label for="contactInfo1Salutation" class="control-label">Salutation*</label><div class=""><select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" ><option label=" "></option><option value="1">Mr.</option><option value="2">Mrs.</option><option value="3">Ms.</option><option value="4">Dr.</option></select></div></div><div class="form-group col-sm-4"><label for="contactInfo1GivenName" class="control-label">Given Name*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name"></div></div><div class="form-group col-sm-4"><label for="contactInfo1Surname" class="control-label">Surname*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Title" class="control-label">Title*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title" ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Lang" class="control-label">Language</label><select id="contactInfo1Lang" name="contact1InfoLang" class="form-control input-sm full-width"><option label=""></option><option value="1">English</option><option value="2">French</option></select></div></div><div class="row"><div class="form-group col-sm-3"><label for="contactInfo1TelNo" class="control-label">Telephone No*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone No."  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1TelExt" class="control-label">Ext</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  ></div></div><div class="form-group col-sm-4"><label for="contactInfo1Email" class="control-label">Email*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  /></div></div><div class="form-group col-sm-3"><label for="contactInfo1FaxNo" class="control-label">Fax No.</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax No."  ></div></div></div></div></details></li>';
 		//increment counter
 		contactCounter++;
 		numOfContactsCreated++;
