@@ -199,8 +199,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="form-group">
-							<label for="enrolDrftFileUpload ">Upload DRAFT Enrolment file</label>
-							<input type="file" id="enrolDrftFileUpload" accept="text/xml"/>
+							<div class="col-sm-4">
+								<label for="enrolDrftFileUpload" class="control-label">Upload DRAFT Enrolment file</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="file" class="full-width"id="enrolDrftFileUpload" accept="text/xml"/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -220,26 +224,30 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="form-group">
-							<label for="enrolAmdFileUpload">Upload Enrolment file that you wish to AMEND</label>
-							<input type="file" id="enrolAmdFileUpload" accept="text/xml"/>
+							<div class="col-sm-5">
+								<label for="enrolAmdFileUpload" class="control-label">Upload Enrolment file that you wish to AMEND</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="file" class="full-width" id="enrolAmdFileUpload" accept="text/xml"/>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-1 fixedSmallSize">
-					<div class="form-group">
-						<label class="control-label smallLabel" for="enrolAmdFileVersion">Amended Version</label>
-						<input type="text" class="input-sm form-control" id="enrolAmdFileVersion" readonly />
-					</div>
-					</div>
-					<div class="col-xs-2 fixedSmallSize">
-						<p class="smallLabel textAlignCenter">replaces</p>
-					</div>
-					<div class="col-xs-2 fixedSmallSize">
-					<div class="form-group">
-						<label class="control-label smallLabel" for="enrolAmdFileRepVersion">Uploaded Version</label>
-						<input type="text" class="input-sm form-control" id="coAmdFileRepVersion" readonly />
-					</div>
+					<div class="col-sm-12">
+						<div class="form-group">
+							<div class="col-xs-1 fixedSmallSize col-sm-offset-6">
+								<label class="control-label smallLabel" for="enrolAmdFileVersion">Amended Version</label>
+								<input type="text" class="input-sm form-control" id="enrolAmdFileVersion" readonly />
+							</div>
+							<div class="col-xs-2 fixedSmallSize col-sm-offset-1">
+								<p class="smallLabel textAlignCenter boldFont">replaces</p>
+							</div>
+							<div class="col-xs-2 fixedSmallSize col-sm-offset-1">
+								<label class="control-label smallLabel" for="enrolAmdFileRepVersion">Uploaded Version</label>
+								<input type="text" class="input-sm form-control" id="coAmdFileRepVersion" readonly />
+							</div>
+						</div>
 					</div>
 				</div>
 				</div>
@@ -900,7 +908,7 @@ function checkEnrolTypeSelection() { //previously obj
 		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Enrolment is submitted*', 'Date the Regulatory Enrolment is anticipated to be filed*'], false);
 	} else if (obj.value == "co") {
 		changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
-							['  Start a New Company Enrolment', '  Complete your DRAFT Company Enrolment', '  AMEND you Company Enrolment file'], true);
+							['&nbsp;&nbsp;Start a New Company Enrolment', '&nbsp;&nbsp;Complete your DRAFT Company Enrolment', '&nbsp;&nbsp;AMEND you Company Enrolment file'], true);
 		rtType.style.display = "none";
 		$(enrolType).css('display', 'block');
 		step1c.style.display = "block";
@@ -911,7 +919,7 @@ function checkEnrolTypeSelection() { //previously obj
 		
 	} else if (obj.value == "do") {
 	changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
-							['  Start a New Dossier Enrolment', '  Complete your DRAFT Dossier Enrolment', '  AMEND you Dossier Enrolment file'], true);
+							['&nbsp;&nbsp;Start a New Dossier Enrolment', '&nbsp;&nbsp;Complete your DRAFT Dossier Enrolment', '&nbsp;&nbsp;AMEND you Dossier Enrolment file'], true);
 		rtType.style.display = "none";
 		
 		$(enrolType).css('display', 'block');
@@ -923,7 +931,7 @@ function checkEnrolTypeSelection() { //previously obj
 		
 	} else if (obj.value == "ra") {
 	changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
-							['  Start a New Regulatory Activity Enrolment', '  Complete your DRAFT Regulatory Activity Enrolment', '  AMEND you Regulatory Activity Enrolment file'], true);
+							['&nbsp;&nbsp;Start a New Regulatory Activity Enrolment', '&nbsp;&nbsp;Complete your DRAFT Regulatory Activity Enrolment', '&nbsp;&nbsp;AMEND you Regulatory Activity Enrolment file'], true);
 	/*
 		coType.style.display = "none";
 		doType.style.display = "none";
@@ -958,8 +966,8 @@ function checkEnrolTypeSelection() { //previously obj
 		raAntDate.style.display = "none";
 		
 		changeNavPills(navREP,'');
-		$('#navStep2').prop('href', '');
-		$('#navStep3').prop('href', '');
+		$('#navStep2').prop('href', '#');
+		$('#navStep3').prop('href', '#');
 		step2but.href = "";
 		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Enrolment is submitted*', 'Date the Regulatory Enrolment is anticipated to be filed*'], false);
 	}
@@ -1005,9 +1013,9 @@ var selectOptionType = $('#iline').val();
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
 				changeNavPills(navREP, 'Company Enrolment');
-				$('#navStep2').prop('href', '');
-				$('#navStep3').prop('href', '');
-				$('#navStep4').prop('href', '');
+				$('#navStep2').prop('href', '#');
+				$('#navStep3').prop('href', '#');
+				$('#navStep4').prop('href', '#');
 			}
 			$('#navStep4').prop('href', 'rep_HCInternal.html');
 		} else if (selectOptionType == 'do') {
@@ -1040,9 +1048,9 @@ var selectOptionType = $('#iline').val();
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
 				changeNavPills(navREP, 'Dossier Enrolment');
-				$('#navStep2').prop('href', '');
-				$('#navStep3').prop('href', '');
-				$('#navStep4').prop('href', '');
+				$('#navStep2').prop('href', '#');
+				$('#navStep3').prop('href', '#');
+				$('#navStep4').prop('href', '#');
 			}
 			$('#navStep4').prop('href', 'rep_HCInternal.html');
 		} else if (selectOptionType == 'ra') {
@@ -1074,9 +1082,9 @@ var selectOptionType = $('#iline').val();
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
 				changeNavPills(navREP,'Regulatory Activity');
-				$('#navStep2').prop('href', '');
-				$('#navStep3').prop('href', '');
-				$('#navStep4').prop('href', '');
+				$('#navStep2').prop('href', '#');
+				$('#navStep3').prop('href', '#');
+				$('#navStep4').prop('href', '#');
 			}
 			$('#navStep4').prop('href', 'rep_HCInternal.html');
 		} else if (selectOptionType == 'rt') {
@@ -1163,7 +1171,7 @@ function rtCheck() {
 	if (check1[0].checked && check2[0].checked) {
 		$('#nextStep2but').prop('href', 'rep_2_regTransaction.html');
 	} else {
-		$('#nextStep2but').prop('href', '');
+		$('#nextStep2but').prop('href', '#');
 	}
 }
 
