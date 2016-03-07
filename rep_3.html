@@ -382,6 +382,7 @@ function displayContent() {
 		$('#enrolStep3AttestA').css('display', 'block');
 		$('#enrolStep3AttestB').css('display', 'none');
 		$('#enrolStep3AttestC').css('display', 'none');
+		$('#enrolAttestAuthSameAs').css('display', 'none');
 		if (repAction == 'NEW' || repAction == 'DRAFT') {
 			$('#navStep2').prop('href', 'rep_2_company.html');
 			$('#returnBut').prop('href', 'rep_2_company.html');
@@ -394,6 +395,7 @@ function displayContent() {
 		$('#enrolStep3AttestA').css('display', 'block');
 		$('#enrolStep3AttestB').css('display', 'block');
 		$('#enrolStep3AttestC').css('display', 'none');
+		$('#enrolAttestAuthSameAs').css('display', 'none');
 		if (repAction == 'NEW' || repAction == 'DRAFT') {
 			$('#navStep2').prop('href', 'rep_2_dossier.html');
 			$('#returnBut').prop('href', 'rep_2_dossier.html');
@@ -406,18 +408,21 @@ function displayContent() {
 		$('#enrolStep3AttestA').css('display', 'block');
 		$('#enrolStep3AttestB').css('display', 'none');
 		$('#enrolStep3AttestC').css('display', 'block');
+		$('#enrolAttestAuthSameAs').css('display', 'none');
 		if (repAction == 'NEW' || repAction == 'DRAFT') {
 			$('#navStep2').prop('href', 'rep_2_regActivity.html');
 			$('#returnBut').prop('href', 'rep_2_regActivity.html');
 		} else if (repAction == 'AMEND') {
 			$('#navStep2').prop('href', 'rep_2_regActivity_amend.html');
 			$('#returnBut').prop('href', 'rep_2_regActivity_amend.html');
+			$('#enrolAttestAuthSameAs').css('display', 'block');
 		}
 	} else if (repType == 'rt') {
 		changeNavPills(navREP, repAction + ' Regulatory Transaction Enrolment');
 		$('#enrolStep3AttestA').css('display', 'block');
 		$('#enrolStep3AttestB').css('display', 'none');
 		$('#enrolStep3AttestC').css('display', 'none');
+		$('#enrolAttestAuthSameAs').css('display', 'block');
 		$('#navStep2').prop('href', 'rep_2_regTransaction.html');
 		$('#returnBut').prop('href', 'rep_2_regTransaction.html');
 	} else {
@@ -427,6 +432,7 @@ function displayContent() {
 		$('#enrolStep3AttestC').css('display', 'none');
 		$('#navStep2').prop('href', '');
 		$('#returnBut').prop('href', '');
+		$('#enrolAttestAuthSameAs').css('display', 'none');
 	}
 }
 </script>
