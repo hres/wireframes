@@ -33,7 +33,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 <link rel="stylesheet" href="./css/rep.css">
 
-
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
@@ -123,10 +122,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <h1 property="name" id="wb-cont">Regulatory Enrolment Process</h1>
 <div id="navigation">
 	<ul class="nav nav-pills" id="navREP">
-    	<li><a href="rep_1.html" class="boldFont" id="navStep1">Step 1 - AMEND Regulatory Activity Enrolment</a></li>
-    	<li class="active"><a href="#" class="boldFont" id="navStep2">Step 2 - AMEND Regulatory Activity Enrolment</a></li>
-    	<li><a href="rep_3.html" class="boldFont" id="navStep3">Step 3 - AMEND Regulatory Activity Enrolment</a></li>
-		<li><a class="boldFont" href="rep_HCInternal.html" id="navStep4">HC Internal - AMEND Regulatory Activity Enrolment</a></li>
+    	<li><a href="rep_1.html" class="boldFont" id="navStep1">Step 1 - NEW Regulatory Activity Enrolment</a></li>
+    	<li class="active"><a href="#" class="boldFont" id="navStep2">Step 2 - NEW Regulatory Activity Enrolment</a></li>
+    	<li><a href="rep_3.html" class="boldFont" id="navStep3">Step 3 - NEW Regulatory Activity Enrolment</a></li>
+		<li><a class="boldFont" href="rep_HCInternal.html" id="navStep4">HC Internal - NEW Regulatory Activity Enrolment</a></li>
     </ul>
 </div>
 <section>
@@ -134,37 +133,49 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	<br /><br />
 	<div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">STEP 2 - Amend Regulatory Activity Information</h3>
+            <h3 class="panel-title">STEP 2 - Regulatory Activity Information</h3>
 		</div>
 		<div class="panel-body">
 		<div id="regActivityMain">
 				<div class="row">
-					<div class="form-group col-sm-4">
-						<label for="raEnrolmentAmendCompanyId">Company Id</label>
-						<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompanyId" placeholder="Enter Company Id" />
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label for="raCompanyId">Company Id</label>
+							<input type="text" class="form-control input-sm full-width" id="raCompanyId" placeholder="Enter Company Id" />
+						</div>
 					</div>
-					<div class="form-group col-sm-4">
-						<label for="raEnrolmentAmendDossierId">Dossier Id</label>
-						<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendDossierId" placeholder="Enter Company Id" />
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label for="raDossierId">Dossier Id</label>
+							<input type="text" class="form-control input-sm full-width" id="raDossierId" placeholder="Enter Dossier Id" />
+						</div>
 					</div>
 				</div>
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="form-group">
-						<div class="checkbox">
-							<label><input id="raEnrolmentAmendActivityInfoChk" type="checkbox" value="" onclick="enableDisableDivArray(this, [raEnrolmentAmendActivityInfo])" />Amend Regulatory Activity Info.</label>
-						</div>
+						<label for="raEnrolmentActivityLead" class="control-label">Regulatory Activity Lead</label>
 					</div>
 				</div>
-				<div class="col-sm-9" id="raEnrolmentAmendActivityInfo">
-					<div class="col-sm-4">
+				<div class="col-sm-9">
+					<div class="form-group">
+						<select class="form-control input-sm full-width" name="raEnrolmentActivityLead" id="raEnrolmentActivityLead">
+							<option label=" "></option>
+							<option value="1"></option>
+							<option value="2"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+					<div class="col-sm-3">
 						<div class="form-group">
-							<label for="raEnrolmentAmendActivityType" class="control-label">Regulatory Activity Type*</label>
+							<label for="raEnrolmentActivityType" class="control-label">Regulatory Activity Type</label>
 						</div>
 					</div>
-					<div class="col-sm-8">
+					<div class="col-sm-9">
 						<div class="form-group">
-							<input class="form-control input-sm full-width" type="text" id="raEnrolmentAmendActivityType" name="raEnrolmentAmendActivityType" list="raRegActivityTypeSuggestions" disabled="true"/>
+							<input class="form-control input-sm full-width" type="text" id="raEnrolmentActivityType" name="raEnrolmentActivityType" list="raRegActivityTypeSuggestions" />
 						</div>
 					</div>
                     <datalist id="raRegActivityTypeSuggestions">
@@ -187,63 +198,216 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<option value="Veterinary New Drug Submission (VINDS)">Veterinary New Drug Submission (VINDS)</option>
 						<option value="Veterinary Notifiable Change (VNC)">Veterinary Notifiable Change (VNC)</option>
 						<!--[if lte IE 9]></select><![endif]-->
-                        </select>
-                    </div>
+					</datalist>
+				</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label for="raEnrolmentFeeClass" class="control-label">Fee Class</label>
+					</div>
+				</div>
+				<div class="col-sm-9">
+					<div class="form-group">
+						<select class="form-control input-sm" name="raEnrolmentFeeClass" id="raEnrolmentFeeClass">
+						<option label=" "></option>
+						<option value="1"></option>
+						<option value="2"></option>
+						</select>
+					</div>
+				</div>
+				</div>
+			
+			<div class="row" id="raEnrolmentAdmSubAttest">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="form-group">
+						<p>I confirm that this administrative submission type is NOT a LASA submission</p>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<div class="checkbox">
+							<label><input id="raEnrolmentAdmSubAttestA" type="checkbox" value="" /> I Attest</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="form-group">
+						<label class="control-label" for="regEnrolmentRegActReason">Reason for filing this Regulatory Activity:</label>
+						<textarea class="form-control input-sm full-width" rows="4" cols="col-sm-12" id="regEnrolmentRegActReason"></textarea>
+					</div>
+				</div>
 			</div>
 				<div class="row">
-					<div class="col-sm-3 form-group">
-						<div class="checkbox">
-						<label><input id="raEnrolmentAmendThirdPartyInfoChk" type="checkbox" value="" onclick="enableDisableDivArray(this, [raEnrolmentAmendThirdPartyInfo])" />Amend Third Party info.</label>
+					<div class="col-sm-9">
+						<div class="form-group">
+							<label for="raEnrolmentSubThirdParty" class="control-label">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</label>
 						</div>
 					</div>
-					<div class="col-sm-9" id="raEnrolmentAmendThirdPartyInfo">
-						<div class="row">
-							<div class="col-sm-10">
-								<div class="form-group">
-								<label for="raEnrolmentAmendSubThirdParty" class="control-label">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?*</label>
-								</div>
-							</div>
-							<div class="col-sm-2">
-								<div class="form-group">
-									<select class="form-control input-sm" name="raEnrolmentAmendSubThirdParty" id="raEnrolmentAmendSubThirdParty" disabled="true">
-									<option label=" "></option>
-									<option value="1">Yes</option>
-									<option value="2">No</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-5">
-								<div class="form-group">
-								<label for="raAutLetterFileUpload" class="control-label">If YES, please upload Authorization letter:</label>
-								</div>
-							</div>
-							<div class="col-sm-7">
-								<div class="form-group">
-									<input type="file" class="full-width" id="raAutLetterFileUpload" disabled="true"/>
-								</div>
-							</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+								<select class="form-control input-sm full-width" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty">
+								<option label=" "></option>
+								<option value="1">Yes</option>
+								<option value="2">No</option>
+								</select>
 						</div>
 					</div>
 				</div>
-		</div>
-		
-			<div class="panel panel-warning">
-				<header class="panel-heading">
 				<div class="row">
-					<div class="col-sm-6">
-						<h4>Regulatory Activity Contact [for THIS Regulatory Activity]:</h4>
+					<div class="col-sm-5">
+						<div class="form-group">
+							<label for="raAutLetterFileUpload" class="control-label" >If YES, please upload Authorization letter:</label>
+						</div>
 					</div>
-					<div class="col-sm-6">
-						<div class="checkbox">
-							<label><input id="raEnrolmentAmendRegActivityContact" type="checkbox" value="" onclick="enableDisableDivArray(this, [raEnrolmentAmendRegActivityContactBody])" />AMEND CONTACT MAILING ADDRESS [for THIS Regulatory Activity]:</label>
+					<div class="col-sm-7">
+						<div class="form-group">
+							<input type="file" class="full-width" id="raAutLetterFileUpload"/>
 						</div>
 					</div>
 				</div>
-				</header>
-				<div class="panel-body" id="raEnrolmentAmendRegActivityContactBody">
-			<div class="form-group blackBorder" id="raEnrolmentAmendCompInfoDiv">
+			</div>
+		
+		<div class="panel panel-default">
+			<header class="panel-heading"><h4 class="panel-title">Related Regulatory Activities</h4></header>
+			<div class="panel-body">
+		<div class="row">
+			<button class="btn btn-default btn-sm col-sm-4 pull-right" onclick="addNewRelSubmission()" type="submit">Add Another Related Submission</button>
+		</div>
+		<ul id="raEnrolmentRelList" class="list-unstyled">
+			<li id="raEnrolmentRel1">
+				<details open="open">
+			<summary class="heightAdjust">Related Regulatory Activity 1 [Referred to in this Submission]</summary>
+			<div class="well well-sm">
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<label for="raEnrolmentRel1ActivityType" class="control-label">Regulatory Activity Type:</label>
+                    <div class="">
+						<select class="form-control input-sm full-width" name="raEnrolmentRel1ActivityType" id="raEnrolmentRel1ActivityType">
+						<option label=" "></option>
+						<option value="1"></option>
+						<option value="2"></option>
+                        </select>
+                    </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-sm-3">
+					<label for="raEnrolmentRel1DateCleared" ><span class="field-name">Date Cleared</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
+					<input class="form-control  input-sm full-width" type="date" id="raEnrolmentRel1DateCleared" name="raEnrolmentRel1DateCleared" data-rule-dateiso="true">
+				</div>
+				<div class="form-group col-sm-3">
+					<label for="raEnrolmentRel1ControlNo" class="control-label">Control Number</label>
+						<div class="">
+							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ControlNo">
+						</div>
+				</div>
+				<div class="form-group col-sm-3">
+					<label for="raEnrolmentRel1FilNo" class="control-label">File Number</label>
+						<div class="">
+							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1FilNo">
+						</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<label for="raEnrolmentRel1ManuName" class="control-label">Manufacturer / Sponsor Name [Full Legal Name - No Abbreviations]</label>
+						<div class="">
+							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ManuName">
+						</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<label for="raEnrolmentRel1SubReason" class="control-label">Reason for Submission</label>
+						<div class="">
+							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1SubReason">
+						</div>
+				</div>
+			</div>
+			<div id="raEnrolmentRel1DIN">
+				<div class="row">
+					<label for="raEnrolmentRel1DINLabel" class=" col-sm-10 control-label">Associated DINs</label>
+					<div class="form-group col-sm-2" id="raEnrolmentRel1DINAddBut">
+						<button class="btn btn-default btn-sm" type="submit" id="raEnrolmentRel1AddBut" onclick="addDIN(raEnrolmentRel1AddBut,'raEnrolmentRel1DIN')">Add a DIN</button>
+					</div>
+				</div>
+				<div class="row" id="raEnrolmentRel1DINRow1">
+					<!--
+					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp">
+						<label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label>
+						<input type="text" id="raEnrolmentRel1DIN1" class="form-control input-sm col-sm-2" placeholder="">
+					</div>
+					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN2Grp">
+						<label class="wb-inv" for="raEnrolmentRel1DIN2">DIN</label>
+						<input type="text" id="raEnrolmentRel1DIN2" class="form-control input-sm col-sm-2" placeholder="">
+					</div>
+					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN3Grp">
+						<label class="wb-inv" for="raEnrolmentRel1DIN3">DIN</label>
+						<input type="text" id="raEnrolmentRel1DIN3" class="form-control input-sm col-sm-2" placeholder="">
+					</div>
+					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN4Grp">
+						<label class="wb-inv" for="raEnrolmentRel1DIN4">DIN</label>
+						<input type="text" id="raEnrolmentRel1DIN4" class="form-control input-sm col-sm-2" placeholder="">
+					</div>-->
+					
+					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp">
+						<label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label>
+						<div class="input-group">
+							<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder="">
+							<span class="input-group-btn">
+								<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN1DelBut" type="button">
+									<span class="glyphicon glyphicon-remove"></span>
+								</button>
+							</span>
+						</div>
+					</div>
+					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN2Grp">
+						<label class="wb-inv" for="raEnrolmentRel1DIN2">DIN</label>
+						<div class="input-group">
+							<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN2" placeholder="">
+							<span class="input-group-btn">
+								<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN2DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN2DelBut" type="button">
+									<span class="glyphicon glyphicon-remove"></span>
+								</button>
+							</span>
+						</div>
+					</div>
+					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN3Grp">
+						<label class="wb-inv" for="raEnrolmentRel1DIN3">DIN</label>
+						<div class="input-group">
+							<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN3" placeholder="">
+							<span class="input-group-btn">
+								<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN3DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN3DelBut" type="button">
+									<span class="glyphicon glyphicon-remove"></span>
+								</button>
+							</span>
+						</div>
+					</div>
+					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN4Grp">
+						<label class="wb-inv" for="raEnrolmentRel1DIN4">DIN</label>
+						<div class="input-group">
+							<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN4" placeholder="">
+							<span class="input-group-btn">
+								<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN4DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN4DelBut" type="button">
+									<span class="glyphicon glyphicon-remove"></span>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			</details>
+			</li>
+		</ul>
+		</div>
+		</div>
+			<div class="panel panel-warning">
+				<header class="panel-heading"><h4 class="panel-title">Regulatory Activity Contact [for THIS Regulatory Activity]:</h4></header>
+				<div class="panel-body">
+			<div class="form-group" id="raEnrolmentCompInfoDiv" style="border: 1px solid; padding:15px">
 				<div class="wb-frmvld">
 				<div class="row">
 					<div class="col-sm-7">
@@ -251,17 +415,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-						<label><input id="raEnrolmentAmendCompInfoSamAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentAmendCompInfo)" disabled="true"/> Same as Manufacturer / Sponsor Company Information</label>
+						<label><input id="raEnrolmentCompInfoSamAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentCompInfo)"/> Same as Manufacturer / Sponsor Company Information</label>
 					</div>
 					</div>
 				</div>
-				<div class="well well-sm" id="raEnrolmentAmendCompInfo">
+				<div class="well well-sm" id="raEnrolmentCompInfo">
 				<div class="row" >
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 						<div class="form-group col-sm-8">
-							<label for="raEnrolmentAmendCompName" class="control-label">Company Name [Full Legal Name]*</label>
+							<label for="raEnrolmentCompName" class="control-label">Company Name [Full Legal Name]</label>
 							<div class="">
-								<input type="text" class="form-control input-sm  full-width" id="raEnrolmentAmendCompName" placeholder="Enter Company Name" disabled="true">
+								<input type="text" class="form-control input-sm  full-width" id="raEnrolmentCompName" placeholder="Enter Company Name">
 							</div>
 						</div>
 					<!-- </form> -->
@@ -269,7 +433,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 				</div>
 			</div>
-			<div class="form-group blackBorder" id="raEnrolmentAmendAddrInfoDiv">
+			<div class="form-group" id="raEnrolmentAddrInfoDiv" style="border: 1px solid; padding:15px">
 			<div class="wb-frmvld">
 				<div class="row">
 					<div class="col-sm-7">
@@ -277,30 +441,30 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-							<label><input id="raEnrolmentAmendAddrInfoSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentAmendAddrInfo)" disabled="true"/> Same as Manufacturer / Sponsor Address Information</label>
+							<label><input id="raEnrolmentAddrInfoSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentAddrInfo)"/> Same as Manufacturer / Sponsor Address Information</label>
 						</div>
 					</div>
 				</div>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
-					<div class="well well-sm" id="raEnrolmentAmendAddrInfo">
+					<div class="well well-sm" id="raEnrolmentAddrInfo">
 					<div class="row">
 						<div class="form-group col-sm-12">
-							<label for="raEnrolmentAmendAddrStr" class="control-label">Street / Suite *</label>
+							<label for="raEnrolmentAddrStr" class="control-label">Street / Suite</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendAddrStr" placeholder="Enter Street/Suite" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAddrStr" size="100" placeholder="Enter Street/Suite">
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="form-group col-sm-3">
-							<label for="raEnrolmentAmendAddrCity" class="control-label">City / Town*</label>
+							<label for="raEnrolmentAddrCity" class="control-label">City / Town</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendAddrCity" placeholder="Enter City/Town" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAddrCity" placeholder="Enter City/Town">
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
-							<label for="raEnrolmentAmendAddrCountry" class="control-label">Country*</label>
-							<input class="form-control input-sm full-width" type="text" id="raEnrolmentAmendAddrCountry" disabled="true" name="raEnrolmentAmendAddrCountry" list="CountrySuggestions" onchange="changeSuggestions(this.value, 'raEnrolmentAmendAddrProv')"/>
+							<label for="raEnrolmentAddrCountry" class="control-label">Country</label>
+							<input class="form-control input-sm full-width" type="text" id="raEnrolmentAddrCountry" name="raEnrolmentAddrCountry" list="CountrySuggestions" onchange="changeSuggestions(this.value, 'raEnrolmentAddrProv')"/>
 									<datalist id="CountrySuggestions">
 										<!--[if lte IE 9]><select><![endif]-->
 										<option label=" "></option>
@@ -547,8 +711,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									</datalist>
 						</div>
 						<div class="form-group col-sm-3">
-							<label for="raEnrolmentAmendAddrProv" class="control-label">Province/State*</label>
-							<input class="form-control input-sm full-width" type="text" id="raEnrolmentAmendAddrProv" name="raEnrolmentAmendAddrProv" list="" disabled="true"/>
+							<label for="raEnrolmentAddrProv" class="control-label">Province/State</label>
+                            <input class="form-control input-sm full-width" type="text" id="raEnrolmentAddrProv" name="raEnrolmentAddrProv" list="" />
 									<datalist id="canProvSuggestions">
 									<!--[if lte IE 9]><select><![endif]-->
 										<option label=" "></option>
@@ -622,9 +786,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									</datalist>
 						</div>
 						<div class="form-group col-sm-3">
-							<label for="raEnrolmentAmendAddrPostal" class="control-label">Postal / ZIP Code*</label>
+							<label for="raEnrolmentAddrPostal" class="control-label">Postal / ZIP Code</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendAddrPostal" placeholder="Enter Postal/ZIP Code" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAddrPostal" placeholder="Enter Postal/ZIP Code">
 							</div>
 						</div>
 						</div>
@@ -632,25 +796,25 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 			</div>
 			</div>
-			<div class="form-group blackBorder" id="raEnrolmentAmendCompRepInfoDiv">
+			<div class="form-group" id="raEnrolCompRepInfoDiv" style="border: 1px solid; padding:15px">
 			<div class="wb-frmvld">
 				<div class="row">
 					<div class="col-sm-7">
-						<h5>Company Representative [for THIS Regulatory Activity]*</h5>
+						<h5>Company Representative [for THIS Regulatory Activity]</h5>
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-							<label><input id="raEnrolmentAmendCompRepInfoSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentAmendCompRepInfo)" disabled="true"/> Same as Manufacturer / Sponsor Contact Information</label>
+							<label><input id="raEnrolmentCompRepInfoSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentCompRepInfo)"/> Same as Manufacturer / Sponsor Contact Information</label>
 						</div>
 					</div>
 				</div>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
-					<div class="well well-sm" id="raEnrolmentAmendCompRepInfo">
+					<div class="well well-sm" id="raEnrolmentCompRepInfo">
 					<div class="row">
 						<div class="form-group col-sm-2">
-							<label for="raEnrolmentAmendCompRepSal" class="control-label">Salutation*</label>
+							<label for="raEnrolmentCompRepSal" class="control-label">Salutation</label>
                             <div class="">
-                                <select class="form-control input-sm full-width" name="raEnrolmentAmendCompRepSal" id="raEnrolmentAmendCompRepSal" disabled="true"/>
+                                <select class="form-control input-sm full-width" name="raEnrolmentCompRepSal" id="raEnrolmentCompRepSal">
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -660,33 +824,33 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                             </div>
 						</div>
 						<div class="form-group col-sm-2">
-							<label for="raEnrolmentAmendCompRepGivenName" class="control-label">Given Name*</label>
+							<label for="raEnrolmentCompRepGivenName" class="control-label">Given Name</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepGivenName" placeholder="Enter Given Name" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepGivenName" placeholder="Enter Given Name">
 							</div>
 						</div>
 						<div class="form-group col-sm-1">
-							<label for="raEnrolmentAmendCompRepInit" class="control-label">Initials</label>
+							<label for="raEnrolmentCompRepInit" class="control-label">Initials</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepInit" placeholder="Enter Surname" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepInit" placeholder="Enter Surname" >
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
-							<label for="raEnrolmentAmendCompRepSurname" class="control-label">Surname*</label>
+							<label for="raEnrolmentCompRepSurname" class="control-label">Surname</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepSurname" placeholder="Enter Surname" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepSurname" placeholder="Enter Surname" >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
-							<label for="raEnrolmentAmendCompRepTitle" class="control-label">Title*</label>
+							<label for="raEnrolmentCompRepTitle" class="control-label">Title</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepTitle" placeholder="Enter Title" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepTitle" placeholder="Enter Title" >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
-							<label for="raEnrolmentAmendCompRepLang" class="control-label">Language*</label>
+							<label for="raEnrolmentCompRepLang" class="control-label">Language</label>
                             <div class="">
-                                <select class="form-control input-sm full-width" name="raEnrolmentAmendCompRepLang" id="raEnrolmentAmendCompRepLang" disabled="true">
+                                <select class="form-control input-sm full-width" name="raEnrolmentCompRepLang" id="raEnrolmentCompRepLang">
                                     <option label=" "></option>
                                     <option value="1">English</option>
                                     <option value="2">French</option>
@@ -696,27 +860,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="row">
 						<div class="form-group col-sm-3">
-							<label for="raEnrolmentAmendCompRepTelNo" class="control-label">Telephone No*</label>
+							<label for="raEnrolmentCompRepTelNo" class="control-label">Telephone No</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepTelNo" placeholder="Enter Telephone No." disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepTelNo" placeholder="Enter Telephone No." >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
-							<label for="raEnrolmentAmendCompRepTelExt" class="control-label">Ext</label>
+							<label for="raEnrolmentCompRepTelExt" class="control-label">Ext</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepTelExt" placeholder="Enter Extension" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepTelExt" placeholder="Enter Extension" >
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
-							<label for="raEnrolmentAmendCompRepFaxNo" class="control-label">Fax No.</label>
+							<label for="raEnrolmentCompRepFaxNo" class="control-label">Fax No.</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepFaxNo" placeholder="Enter Fax No." disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepFaxNo" placeholder="Enter Fax No." >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
-							<label for="raEnrolmentAmendCompRepEmail" class="control-label">Email*</label>
+							<label for="raEnrolmentCompRepEmail" class="control-label">Email</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepEmail" placeholder="Enter Email" disabled="true"/>
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentCompRepEmail" placeholder="Enter Email" />
 							</div>
 						</div>
 					<!-- </form> -->
@@ -728,11 +892,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</div>
 		</div>
 	</div>
+	</div>
 <div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
             <a class="btn btn-primary" href="rep_1.html">&lt; Return to Step 1</a> <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
         </div>
 </div>
+
 </section>
 <div class="form-group">
 <div class="col-sm-offset-3 col-sm-9">
@@ -838,14 +1004,277 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="./js/theme.min.js"></script>
 <script src="./js/rep.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" id="">
+
 $(document).ready(function() {
    setCookie("currentURL",window.location.href);
    setCookie("typeREP", "ra");
-   setCookie("actionREP", "AMEND");
+   setCookie("actionREP", "NEW");
 });
 
 var prevURL = readCookie("currentURL");
+
+//var raDINCount = 4; //keeps track of number of current DINs (initially, there are 4)
+//var raDINButCount = 1; //keeps track of the number of buttons used to add/delete DINs
+var raRelCount = 1; //keeps track of the number of Related Regulatory Activity Submissions
+var numOfRefProductsCreated = 1;
+//adds a new reference product
+function addNewRelSubmission() {
+	var newRelSub = '<li id="raEnrolmentRel1"><details open="open"><summary class="heightAdjust">Related Regulatory Activity 1 [Referred to in this Submission]<button class="btn btn-danger btn-xs deleteRef" onclick="deleteRelSubmission(raEnrolmentRel1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1ActivityType" class="control-label">Regulatory Activity Type:</label><div class=""><select class="form-control input-sm full-width" name="raEnrolmentRel1ActivityType" id="raEnrolmentRel1ActivityType"><option label=" "></option><option value="1"></option><option value="2"></option></select></div></div></div><div class="row"><div class="form-group col-sm-3"><label for="raEnrolmentRel1DateCleared" ><span class="field-name">Date Cleared</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label><input class="form-control input-sm full-width" type="date" id="raEnrolmentRel1DateCleared" name="raEnrolmentRel1DateCleared" data-rule-dateiso="true"></div><div class="form-group col-sm-3"><label for="raEnrolmentRel1ControlNo" class="control-label">Control Number</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ControlNo"></div></div><div class="form-group col-sm-3"><label for="raEnrolmentRel1FilNo" class="control-label">File Number</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1FilNo"></div></div></div><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1ManuName" class="control-label">Manufacturer / Sponsor Name [Full Legal Name - No Abbreviations]</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ManuName"></div></div></div><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1SubReason" class="control-label">Reason for Submission</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1SubReason"></div></div></div><div id="raEnrolmentRel1DIN"><div class="row"><label for="raEnrolmentRel1DINLabel" class=" col-sm-10 control-label">Associated DINs</label><div class="form-group col-sm-2" id="raEnrolmentRel1DINAddBut"><button class="btn btn-default btn-sm" type="submit" id="raEnrolmentRel1AddBut" onclick="addDIN(raEnrolmentRel1AddBut,\'raEnrolmentRel1DIN\')">Add a DIN</button></div></div><div class="row" id="raEnrolmentRel1DINRow1"><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN1DelBut" type="button"><span class="glyphicon glyphicon-remove removeSize"></span></button></span></div></div><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN2Grp"><label class="wb-inv" for="raEnrolmentRel1DIN2">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN2" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN2DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN2DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN3Grp"><label class="wb-inv" for="raEnrolmentRel1DIN3">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN3" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN3DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN3DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN4Grp"><label class="wb-inv" for="raEnrolmentRel1DIN4">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN4" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN4DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN4DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div></div></div></div></details></li>';
+	//increment counter
+	raRelCount++;
+	numOfRefProductsCreated++;
+	//alert(canRefProductCounter);
+	//replace sub-strings
+	var newId = newRelSub.replace(/raEnrolmentRel1/g, 'raEnrolmentRel' + numOfRefProductsCreated);
+	newId = newId.replace('Activity 1', 'Activity ' + raRelCount);
+	$('#raEnrolmentRelList').append(newId);
+
+}
+/*
+function replaceAll(str, find, rep) {
+  return str.replace(new RegExp(find, 'g'), rep);
+}
+*/
+//deletes a reference product
+function deleteRelSubmission(i) {
+	var removedItemIndex = $('#raEnrolmentRelList').find(i).index();
+	$('#raEnrolmentRelList').find(i).remove();
+	//decrement counter
+	raRelCount--;
+	
+	var items = document.getElementById('raEnrolmentRelList').getElementsByTagName('li');
+	for (var n = raRelCount-1; n >= removedItemIndex; n--) {
+		//var currLabel = 'raEnrolmentRel' + (n+2);
+		//var newLabel = 'raEnrolmentRel' + (n+1);
+		//var currContent = items[n].innerHTML;
+		//var newContent = replaceAll(currContent, currLabel, newLabel);
+		var text = $(items[n]).find('summary')[0].innerHTML;
+		var newStr = newContent.replace('Activity ' + (n+2), 'Activity ' + (n+1));
+		$(items[n]).find('summary')[0].innerHTML = newStr;
+		//items[n].id = newLabel;
+	}
+}
+
+/*To Show and Hide Div -> if optYes is selected, content will show; otherwise it will hide
+function ShowHideDivGen(optYes, content) { //general case
+	content.style.display = optYes.checked ? "none" : "block";
+}
+
+function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
+		var provStateTextBox = document.getElementById(txtBoxProvStateId);
+			if (txtBoxCountryValue == 'Canada') {
+				provStateTextBox.setAttribute('list','canProvSuggestions');
+		   } else if (txtBoxCountryValue == 'United States') {
+				provStateTextBox.setAttribute('list', 'usStateSuggestions');
+		   } else {
+				provStateTextBox.setAttribute('list', '');
+		   }
+		   provStateTextBox.value = '';
+}
+*/
+//parameters: but = button; relId = related submission Id (i.e. relEnrolmentRel1DIN)
+      function addDIN(but, relId) {
+          //get the number of div.row
+          var raDINRowCount = ($('#' + relId + ' .row').length - 1);
+          //count the number of DINs in each Row
+          var raDINCount;
+          if (raDINRowCount == 0) {
+            raDINCount = 0;
+          } else {
+            raDINCount = $('#' + relId).find('div.row div.col-sm-3').length;
+          }
+		
+		//get the the id of the last DIN in the last row
+		var raLastDINId = $('#' + relId).find('div.row:eq(' + raDINRowCount + ') div.col-sm-3:last')[0].id;
+		var raLastDINIndex1 = raLastDINId.indexOf('DIN');
+		var raLastDINIndex2 = raLastDINId.indexOf('Grp');
+		var raLastDINIndexId = raLastDINId.substring(raLastDINIndex1 + 3, raLastDINIndex2);
+          //alert('Add Button has been clicked ' + raDINAddButCount + 'times');
+          var defaultDIN = '<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div>';
+          
+		  //replace id of defautDIN based on the number of current DINs
+          var replacedDIN = replaceAll(defaultDIN, 'raEnrolmentRel1DIN' + '1', relId + (parseInt(raLastDINIndexId)+1));
+          var newDIN = replacedDIN.replace('raEnrolmentRel1DIN', relId);
+          //get number of current DINs in the last row, and check if there is a need to create new row
+          var lastRow = $('#' + relId + 'Row' + raDINRowCount);
+          //get the number of divs in the lastRow
+          var numOfDINsInLastRow;
+          $(lastRow).each(function() {
+            numOfDINsInLastRow = $(this).find('div.col-sm-3').length;
+          });
+          if ((numOfDINsInLastRow%4 == 0) && (numOfDINsInLastRow != 0)) { //add new row (with newDIN) beneath
+            raDINRowCount++;
+            var newRow = '<div class="row" id="' + relId + 'Row' + raDINRowCount + '">' + newDIN + '</div>';
+            $('#' + relId).append(newRow);
+          } else { //do not add row
+            $(lastRow).append(newDIN);
+          }
+      }
+	  
+      // parameters: but - button; relId - related submission id (i.e. relEnrolmentRel1DIN)
+      function deleteDIN(delBut, relId) {
+          //get the parent div of but (i.e. the currentRow where but belongs to)
+          var currentDiv = $(delBut).parent().closest('div.col-sm-3');
+          //get row where currentDiv belonged to
+          var currentRow = $(currentDiv).parent().closest('div.row');
+          //get index of currentRow in the parent div raEnrolmentRel1DIN (which contains all the DINs)
+          var currentRowIndex = $(currentRow).index(); //NOTE: is zero-based
+		  //get currentDiv id's
+		  var currentDivId = $(currentDiv).find('input[type=text]').prop('id');
+		  var currentDivIdNum = currentDivId.substring(currentDivId.lastIndexOf("DIN") + 3);
+          //remove it
+          $(currentDiv).remove();
+		  
+          //reorganize the DINs ->
+          //if numOfDINsInCurrentRow is less than 4, we must reorganize the DINs
+          var nextRow; //row after currentRow
+          var numOfDINsToGet;
+          var numOfDINsInCurrentRow;
+		  //get the number of div.row
+          var raDINRowCount = $('#' + relId + ' .row').length;
+          while (currentRowIndex < (raDINRowCount-1)) {
+            //get the number of divs within the currentRow
+            $(currentRow).each(function(i) {
+              numOfDINsInCurrentRow = $(this).find('div.col-sm-3').length;
+            });
+            numOfDINsToGet = 4 - numOfDINsInCurrentRow;
+            //get the next row after currentRow
+            var nextRow = $('#' + relId).find('div.row:eq(' + (currentRowIndex + 1) + ')');
+            //get the DINs from the nextRow and move them to the currentRow
+            for (var i = 0; i < numOfDINsToGet; i++) {
+              var DINToGet = $(nextRow).find('div.col-sm-3:eq(' + i + ')');
+			  $(DINToGet).remove();
+              $(currentRow).append(DINToGet);
+              //$(nextRow).find(DINToGet).remove();
+            }
+            currentRowIndex++;
+            currentRow = $("#" + relId + " div.row:eq(" + currentRowIndex + ")");
+          }
+          //if lastRow contains no elements, remove it
+          if ($(currentRow).children().length == 0) {
+			if ((raDINRowCount-1) > 1) {
+				$(currentRow).remove();
+            //raDINRowCount--;
+			}
+		}
+		/*
+		  //must rename the labels starting from the removed DIN (NEVER DO THIS!)
+		  //get total number of DINs
+		  var raDINRowCount = $('#' + relId + ' .row').length;
+          //count the number of DINs in each Row
+          var raDINCount = 0;
+		  for (var t = 1; t <= raDINRowCount; t++) {
+			raDINCount += $('#' + relId + ' .row:eq(' + (t-1) + ')').children().length;
+		  }
+		  for (var w = currentDivIdNum; w <= raDINCount; w++) {
+			var DINGrp = $('#' + relId + (parseInt(w) + 1) + 'Grp');
+			var replacedGrp = replaceAll(DINGrp[0].outerHTML, relId + (parseInt(w) + 1), relId + parseInt(w));
+			DINGrp[0].outerHTML = replacedGrp;
+		  }
+		  */
+      }
+
+/*
+//parameters: raDINTableId
+function addDIN(raEnrolmentRelDINId) {
+	$("#" + raEnrolmentRelDINId + " #" + raEnrolmentRelDINId + "AddBut").unbind("click").click(function() {
+		var dinTable = raEnrolmentRelDINId + 'Table';
+		//get current number of rows in table
+		var tableRowCount = $('#' + dinTable + ' tr').length;
+		//get current number of empty cells in table
+		var totalEmptyCellCount = $('#' + dinTable + ' td:empty').length;
+		//get current number of "-" buttons
+		var totalDeleteButCount = (tableRowCount*4) - totalEmptyCellCount - 4;
+		//increment DIN count
+		raDINCount++;
+		var defaultDIN = '<div class="col-sm-2" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" /><span class="input-group-btn"><button class="btn btn-default btn-xs col-sm-1" type="button" onclick="deleteDIN(this, raEnrolmentRel1DIN.id)" id="raEnrolmentRel1DINDelBut' + (totalDeleteButCount+1) + '">X</button></span></div></div>';
+		//replace labels with new DIN id
+		var changedDIN = replaceAll(defaultDIN, 'raEnrolmentRel1DIN1', raEnrolmentRelDINId + raDINCount);
+		var newDIN = changedDIN.replace(/raEnrolmentRel1DIN/g, raEnrolmentRelDINId);
+		
+		//if there is an empty cell, add the DIN to it; otherwise, create a new row in the table and add the DIN into the first cell of that row
+		if(totalEmptyCellCount > 0) {
+			//get the first empty cell in the table
+			var firstEmptyCell = $('#' + dinTable + ' td:empty:eq(0)');
+			var emptyCell = $(firstEmptyCell);
+			//add new DIN to cell
+			emptyCell.append(newDIN);
+		} else {
+			//add a new row with 4 empty cells into the table
+			$('#' + dinTable + ' tr:last').after('<tr><td class="col-sm-3"></td><td class="col-sm-3"></td><td class="col-sm-3"></td><td class="col-sm-3"></td></tr>');
+			$('#' + dinTable + ' tr:last td:first').append(newDIN);
+		}
+		
+	});
+} 
+
+function deleteDIN(i, raEnrolmentRelDINId) {
+	var dinTable = raEnrolmentRelDINId + 'Table';
+	var cellToRemove = $('#' + dinTable).find(i).closest('td');
+	var rows = $('#' + dinTable + ' tr');
+	var numOfRows = $(rows).length;
+	var currRowIndex = $('#' + dinTable).find(i).closest('td').closest('tr').index();
+	var cellArray = []; //holds the required cells to fill current Row
+	var currRow;
+	var numOfEmptySpacesInRow = 0;
+	var numOfNonEmptyCellsInTable = $('#' + dinTable).find('tr td:not(:empty)').length;
+	var cell;
+	var nextRow;
+	$(cellToRemove).remove();
+	//stop shifting cells if last row of table has been reached
+	while (currRowIndex < (numOfRows-1)) {
+		//current row to look at
+		currRow = rows.eq(currRowIndex);
+		//find number of empty spaces to fill in current row
+		numOfEmptySpacesInRow = 4 - $(currRow).find('td').length;
+		//get the cells needed to fill in current row
+		nextRow = rows.eq(currRowIndex+1);
+		for (var i = 0; i < numOfEmptySpacesInRow; i++) {
+			cell = nextRow[0].cells[i];
+			cellArray.push(cell);
+			$(cell).remove();
+		}
+		//add the cells in cellArray into current row
+		for (var n = 0; n < numOfEmptySpacesInRow; n++) {
+			currRow.append(cellArray[n]);
+		}
+		//increment to next row
+		currRowIndex++;
+		cellArray = [];
+	}
+	var lastRow = $('#' + dinTable).find('tr:last');
+	var numOfCellsInLastRow = $(lastRow).find('td').length;
+	var numOfEmptyCellsInLastRow = $(lastRow).find('td:empty').length;
+	//remove last row if it contains just empty cells
+	if ((numOfEmptyCellsInLastRow > 0) && (numOfCellsInLastRow == numOfEmptyCellsInLastRow)) {
+		$(lastRow).remove();
+	} else {
+		//add empty cells to last row if necessary
+		var numOfEmptySpacesInLastRow = 4 - $(lastRow).find('td').length;
+		for (var t = 0 ; t < numOfEmptySpacesInLastRow; t++) {
+			$(lastRow).append('<td class="col-sm-3"></td>');
+		}
+	}
+
+	raDINCount--;
+}
+*/	   
+/*
+//adds a new DIN set !Consider using an index as a parameter !NO LONGER IN USE!
+function addDINSet(raRelDINDivId, raRelDivId) {
+	var newDINSet = '<div class="row" id="raEnrolmentRel1DIN1Set"><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1a"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1b"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1c"></div></div><div class="form-group col-sm-2"><div class=""><input type="text" class="form-control input-sm full-width" name="raEnrolmentRel1DIN1" id="raEnrolmentRel1DIN1d"></div></div></div>';
+	
+	//get # of current DIN sets
+	var raDINCount = $('#' + raRelDINDivId).children().size() - 1; //excludes button row
+	var idDIN = raRelDivId + 'DINdiv';
+	
+	//replace substrings
+	var newId = newDINSet.replace(/raEnrolmentRel1DIN1/g, raRelDivId + 'DIN' + (raDINCount+1));
+	$('#' + idDIN).append(newId);
+
+}
+*/
 </script>
 </body>
 </html>
