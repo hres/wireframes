@@ -900,7 +900,7 @@ function checkEnrolTypeSelection() { //previously obj
 		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Enrolment is submitted*', 'Date the Regulatory Enrolment is anticipated to be filed*'], false);
 	} else if (obj.value == "co") {
 		changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
-							['Start a New Company Enrolment', 'Complete your DRAFT Company Enrolment', 'AMEND you Company Enrolment file'], true);
+							['  Start a New Company Enrolment', '  Complete your DRAFT Company Enrolment', '  AMEND you Company Enrolment file'], true);
 		rtType.style.display = "none";
 		$(enrolType).css('display', 'block');
 		step1c.style.display = "block";
@@ -911,7 +911,7 @@ function checkEnrolTypeSelection() { //previously obj
 		
 	} else if (obj.value == "do") {
 	changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
-							['Start a New Dossier Enrolment', 'Complete your DRAFT Dossier Enrolment', 'AMEND you Dossier Enrolment file'], true);
+							['  Start a New Dossier Enrolment', '  Complete your DRAFT Dossier Enrolment', '  AMEND you Dossier Enrolment file'], true);
 		rtType.style.display = "none";
 		
 		$(enrolType).css('display', 'block');
@@ -923,7 +923,7 @@ function checkEnrolTypeSelection() { //previously obj
 		
 	} else if (obj.value == "ra") {
 	changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
-							['Start a New Regulatory Activity Enrolment', 'Complete your DRAFT Regulatory Activity Enrolment', 'AMEND you Regulatory Activity Enrolment file'], true);
+							['  Start a New Regulatory Activity Enrolment', '  Complete your DRAFT Regulatory Activity Enrolment', '  AMEND you Regulatory Activity Enrolment file'], true);
 	/*
 		coType.style.display = "none";
 		doType.style.display = "none";
@@ -983,18 +983,21 @@ var selectOptionType = $('#iline').val();
 				changeNavPills(navREP, 'NEW Company Enrolment');
 				$('#navStep2').prop('href', 'rep_2_company.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				//$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
+				$('#navStep4').prop('href', 'rep_HCInternal.html');
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
 			} else if (action == 'DRAFT') {
 				changeNavPills(navREP, 'DRAFT Company Enrolment');
+				$('#navStep2').prop('href', 'rep_2_company.html');
+				$('#navStep3').prop('href', 'rep_3.html');
+				$('#navStep4').prop('href', 'rep_HCInternal.html');
 				$('#enrolDrftGrp').show();
 				$('#enrolAmdGrp').hide();
 			} else if (action == 'AMEND') {
 				changeNavPills(navREP, 'AMEND Company Enrolment');
 				$('#navStep2').prop('href', 'rep_2_company_amend.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				//$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
+				$('#navStep4').prop('href', 'rep_HCInternal.html');
 				step2but.href = "rep_2_company_amend.html";
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').show();
@@ -1004,7 +1007,7 @@ var selectOptionType = $('#iline').val();
 				changeNavPills(navREP, 'Company Enrolment');
 				$('#navStep2').prop('href', '');
 				$('#navStep3').prop('href', '');
-				//$('#navStep4').prop('href', '');
+				$('#navStep4').prop('href', '');
 			}
 			$('#navStep4').prop('href', 'rep_HCInternal.html');
 		} else if (selectOptionType == 'do') {
@@ -1014,19 +1017,22 @@ var selectOptionType = $('#iline').val();
 				changeNavPills(navREP, 'NEW Dossier Enrolment');
 				$('#navStep2').prop('href', 'rep_2_dossier.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				//$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
+				$('#navStep4').prop('href', 'rep_HCInternal.html');
 				changeLabelText(['raEnAntiDateFiled'], ['Date the First RA is anticipated to be filed'], false);
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
 			} else if (action == 'DRAFT') {
 				changeNavPills(navREP, 'DRAFT Dossier Enrolment');
+				$('#navStep2').prop('href', 'rep_2_dossier.html');
+				$('#navStep3').prop('href', 'rep_3.html');
+				$('#navStep4').prop('href', 'rep_HCInternal.html');
 				$('#enrolDrftGrp').show();
 				$('#enrolAmdGrp').hide();
 			} else if (action == 'AMEND') {
 				changeNavPills(navREP, 'AMEND Dossier Enrolment');
 				$('#navStep2').prop('href', 'rep_2_dossier_amend.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				//$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
+				$('#navStep4').prop('href', 'rep_HCInternal.html');
 				step2but.href = "rep_2_dossier_amend.html";
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').show();
@@ -1036,7 +1042,7 @@ var selectOptionType = $('#iline').val();
 				changeNavPills(navREP, 'Dossier Enrolment');
 				$('#navStep2').prop('href', '');
 				$('#navStep3').prop('href', '');
-				//$('#navStep4').prop('href', '');
+				$('#navStep4').prop('href', '');
 			}
 			$('#navStep4').prop('href', 'rep_HCInternal.html');
 		} else if (selectOptionType == 'ra') {
@@ -1046,19 +1052,22 @@ var selectOptionType = $('#iline').val();
 				changeNavPills(navREP,'NEW Regulatory Activity Enrolment');
 				$('#navStep2').prop('href', 'rep_2_regActivity.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				//$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
+				$('#navStep4').prop('href', 'rep_HCInternal.html');
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
 			} else if (action == 'DRAFT') {
 				changeNavPills(navREP, 'DRAFT Regulatory Activity Enrolment');
 				$('#enrolDrftGrp').show();
 				$('#enrolAmdGrp').hide();
+				$('#navStep2').prop('href', 'rep_2_regActivity.html');
+				$('#navStep3').prop('href', 'rep_3.html');
+				$('#navStep4').prop('href', 'rep_HCInternal.html');
 			} else if (action == 'AMEND') {
 				changeNavPills(navREP, 'AMEND Regulatory Activity Enrolment');
 				step2but.href = "rep_2_regActivity_amend.html";
 				$('#navStep2').prop('href', 'rep_2_regActivity_amend.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				//$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
+				$('#navStep4').prop('href', 'rep_HCInternal.html');
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').show();
 			} else {
@@ -1067,11 +1076,11 @@ var selectOptionType = $('#iline').val();
 				changeNavPills(navREP,'Regulatory Activity');
 				$('#navStep2').prop('href', '');
 				$('#navStep3').prop('href', '');
-				//$('#navStep4').prop('href', '');
+				$('#navStep4').prop('href', '');
 			}
 			$('#navStep4').prop('href', 'rep_HCInternal.html');
 		} else if (selectOptionType == 'rt') {
-			
+			//remove if necessary
 		}
 	}
 }
