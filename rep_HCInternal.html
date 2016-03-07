@@ -324,6 +324,7 @@ var navStep3 = document.getElementById('navStep3');
 
 function displayContent() {
 	if (repType == 'co') {
+		$('label[for=HCFileUpload').append('Upload Submitted Company Enrolment File');
 		$('#coHCInfo').css('display', 'block');
 		$('#doHCInfo').css('display', 'none');
 		$('#raHCInfo').css('display', 'none');
@@ -339,6 +340,7 @@ function displayContent() {
 			$('#navStep3').prop('href', 'rep_3.html');
 		}
 	} else if (repType == 'do') {
+		$('label[for=HCFileUpload').append('Upload Submitted Dossier Enrolment File');
 		$('#coHCInfo').css('display', 'none');
 		$('#doHCInfo').css('display', 'block');
 		$('#raHCInfo').css('display', 'none');
@@ -354,6 +356,7 @@ function displayContent() {
 			$('#navStep3').prop('href', 'rep_3.html');
 		}
 	} else if (repType == 'ra') {
+		$('label[for=HCFileUpload').append('Upload Submitted Regulatory Activity Enrolment File');
 		$('#coHCInfo').css('display', 'none');
 		$('#doHCInfo').css('display', 'none');
 		$('#raHCInfo').css('display', 'block');
@@ -369,6 +372,7 @@ function displayContent() {
 			$('#navStep3').prop('href', 'rep_3.html');
 		}
 	} else {
+		$('label[for=HCFileUpload').append('');
 		$('#coHCInfo').css('display', 'none');
 		$('#doHCInfo').css('display', 'none');
 		$('#raHCInfo').css('display', 'none');
