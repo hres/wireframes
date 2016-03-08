@@ -155,6 +155,26 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</div>
 				</div>		
+				<div class="row" id="rtInitialSeqDiv" style="display:none">
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label for="rtEnrolmentInitialSeq" class="control-label">Is this transaction an initial sequence?</label>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<select class="form-control input-sm" name="rtEnrolmentInitialSeq" id="rtEnrolmentInitialSeq" onchange="checkSelectShowHide(this, [rtInitalSeq], ['1'])">
+							<option label=" "></option>
+							<option value="1">Yes</option>
+							<option value="2">No</option>
+						</select>
+					</div>
+					<div class="col-sm-6" id="rtInitalSeq" style="display:none">
+						<div class="form-group">
+							<label for="rtInitalSeqFileUpload">Upload the latest Reg. Transaction XML file that you wish to add a sequence to.</label>
+							<input type="file" id="rtInitalSeqFileUpload" accept="text/xml"/>
+						</div>
+					</div>
+				</div>
 			<div class="row">
 			<div class="col-sm-12">
 			<div id="rtLCM" class="blackBorder" style="display:none; margin-top: 15px">
@@ -330,6 +350,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 				</div>
 				</div>
+				<!--
 			<div class="well well-sm">
 			<div class="row">
 					<div class="col-sm-3">
@@ -351,7 +372,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</div>
 			</div>
-				</div>
+				</div>-->
 				<div class="well well-sm">
 			
 			
@@ -633,12 +654,15 @@ var ectdTableSeqCreatedCount = 1;
 function checkOptioneCTD(obj) {
     var eCTD = $('#rtLCM');
     if (obj.value == "2") {
+		$('#rtInitialSeqDiv').css('display', 'none');
 		$(eCTD).css("display", "none");
 		$('#rtBox').css("display", "block");
 	} else if (obj.value == "1") {
+	$('#rtInitialSeqDiv').css('display', 'block');
 		$(eCTD).css("display", "block");
 		$('#rtBox').css("display", "none");
 	} else {
+		$('#rtInitialSeqDiv').css('display', 'none');
 		$(eCTD).css("display", "none");
 		$('#rtBox').css("display", "none");
 	}
