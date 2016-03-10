@@ -133,3 +133,25 @@ label.hiddenLabel {
 	-moz-border-radius:6px 0 6px 6px;
 	border-radius:6px 0 6px 6px;
 }
+
+/*FOR DOSSIER PART 2*/
+.full-width-tabs > ul.nav.nav-tabs {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.full-width-tabs > ul.nav.nav-tabs > li {
+    float: none;
+    display: table-cell;
+}
+.full-width-tabs > ul.nav.nav-tabs > li > a {
+    text-align: center;
+}
+.tabs-full {
+    width:100%;
+}
+
+.normalLabel {
+	font-weight: normal;
+	font-size: 10pt;
+}
