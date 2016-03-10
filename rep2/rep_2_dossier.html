@@ -243,6 +243,323 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</ul>
 			</div>
 		</div>
+		
+		<!-- PART 2 - DOSSIER -->
+		<div class="panel panel-default">
+			<header class="panel-heading"><h4 class="panel-title">Part 2 - Drug Product Formation Information</h4></header>
+			<div class="panel-body">
+				<div class="row" style="margin-bottom: 15px">
+					<div class="col-sm-4">
+						<button class="btn btn-default btn-sm full-width" id="doDrugProFormAddBut1" onclick="" type="submit">Add Another Drug Product Formation</button>
+					</div>
+					<div class="col-sm-4">
+						<button class="btn btn-default btn-sm full-width" id="doDrugProFormDelBut1" onclick="" type="submit">Remove Drug Product Formation</button>
+					</div>
+					<div class="col-sm-4">
+						<button class="btn btn-default btn-sm full-width" id="doDrugProFormCopyBut1" onclick="" type="submit">Copy Drug Product Formation</button>
+					</div>
+				</div>
+				<ul id="doDrugProForm1List" class="list-unstyled">
+					<li id="doDrugProForm1">
+						<details open="open">
+							<summary class="heightAdjust">Drug Product Formulation Information 1</summary>
+							<div class="full-width-tabs tabbable">
+
+							  <!-- Nav tabs -->
+							  <ul class="nav nav-tabs drugFormTabs" role="tablist" id="myTabs">
+								<li role="presentation" class="active tabs-full"><a href="#doDrugProForm1LifeType" aria-controls="doDrugProForm1LifeType" role="tab" data-toggle="tab">Proposed Shelf Life and Container Type, Package Size</a></li>
+								<li role="presentation" class="tabs-full"><a href="#doDrugProForm1MedIngr" aria-controls="doDrugProForm1MedIngr" role="tab" data-toggle="tab">Medicinal (Active) Ingredient(s)</a></li>
+								<li role="presentation" class="tabs-full"><a href="#doDrugProForm1NonMedIngr" aria-controls="doDrugProForm1NonMedIngr" role="tab" data-toggle="tab">Non-Medicinal Ingredient(s)</a></li>
+								<li role="presentation" class="tabs-full"><a href="#doDrugProForm1AnimalHumanSrc" aria-controls="doDrugProForm1AnimalHumanSrc" role="tab" data-toggle="tab">Animal And/Or Human Sourced Material(s) Used At Any Stage in the Manufacture of the Drug</a></li>
+								<li role="presentation" class="tabs-full"><a href="#doDrugProForm1RouteOfAdm" aria-controls="doDrugProForm1RouteOfAdm" role="tab" data-toggle="tab">Route of Administration</a></li>
+							  </ul>
+
+							  <!-- Tab panes -->
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="doDrugProForm1LifeType">
+									<div class="row">
+										<div class="col-sm-4 col-sm-offset-8">
+											<button class="btn btn-default btn-sm full-width" id="doDrugProFormAddLifeTypeBut1" onclick="" type="submit">Add a Container Type</button>
+										</div>
+									</div>
+									<!--
+									<ul id="doDrugProForm1LifeTypeList"class="list-unstyled">
+										<li id="doDrugProForm1LifeType1">
+											<details open="open">
+												<summary class="heightAdjust">Container Type 1</summary>-->
+												<div class="textAlignCenter" id="doDrugProForm1LifeType1">
+													<div class="row">
+														<div class="col-sm-3 col-sm-offset-6 ">
+															<label class="control-label">Shelf Life</label>
+														</div>
+														<div class="col-sm-3 ">
+															<label class="control-label">Temp. Range</label>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-3">
+															<div class="form-group">
+																<label for="doDrugProForm1LifeType1Container" class="control-label">Container Type</label>
+																<input id="doDrugProForm1LifeType1Container" type="text" class="form-control input-sm full-width"/>
+															</div>
+														</div>
+														<div class="col-sm-3">
+															<div class="form-group">
+																<label for="doDrugProForm1LifeType1PckSize" class="control-label">Package Size</label>
+																<input id="doDrugProForm1LifeType1PckSize" type="text" class="form-control input-sm full-width"/>
+															</div>
+														</div>
+														<div class="col-sm-3">
+															<div class="row">
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<label for="doDrugProForm1LifeType1ShlfLifeYear" class="control-label normalLabel">Years</label>
+																		<input id="doDrugProForm1LifeType1ShlfLifeYear" type="text" class="form-control input-sm full-width"/>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<label for="doDrugProForm1LifeType1ShlfLifeMonth" class="control-label normalLabel">Months</label>
+																		<input id="doDrugProForm1LifeType1ShlfLifeMonth" type="text" class="form-control input-sm full-width"/>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-3">
+															<div class="row">
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<label for="doDrugProForm1LifeType1TempMin" class="control-label normalLabel">Min. Celsius</label>
+																		<input id="doDrugProForm1LifeType1TempMin" type="text" class="form-control input-sm full-width"/>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<label for="doDrugProForm1LifeType1TempMax" class="control-label normalLabel">Max. Celsius</label>
+																		<input id="doDrugProForm1LifeType1TempMax" type="text" class="form-control input-sm full-width"/>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--
+											</details>
+										</li>
+									</ul>-->
+									
+									<div id="doDrugProForm1LifeType1CountryManu">
+										<h4>Please indicate the country(ies) of manufacture for this drug product.</h4>
+										<div class="row">
+											<div class="form-group">
+												<div class="col-sm-4">
+													<label for="doDrugForm1LifeType1CountryManu1" class="control-label">Country of Manufacture</label>
+												</div>
+												<div class="col-sm-4">
+													<input id="doDrugForm1LifeType1CountryManu1" type="text" class="form-control input-sm full-width" />
+												</div>
+												<div class="col-sm-4">
+													<button type="submit" class="btn btn-default btn-sm" id="coDrugForm1LifeType1CountryManuAdd1">Add Country</button>
+													<button type="submit" class="btn btn-default btn-sm" id="coDrugForm1LifeType1CountryManuDel1">Delete Country</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								<div role="tabpanel" class="tab-pane" id="doDrugProForm1MedIngr">
+									<div class="row">
+										<div class="col-sm-4 col-sm-offset-8">
+											<button type="submit" class="btn btn-default btn-sm" id="doDrugProForm1MedIngrAdd">Add an Ingredient</button>
+										</div>
+									</div>
+									<ul id="doDrugProForm1MedIngrList" class="list-unstyled">
+										<li id="doDrugProForm1MedIngr1">
+											<details open="open">
+												<summary class="heightAdjust">Medicinal Ingredient 1</summary>
+												<div class="row">
+													<div class="col-sm-3">
+														<label for="doDrugProForm1MedIngr1ChemSerNum" class="control-label">Chemical Abstracts Service No.</label>
+														<input id="doDrugProForm1MedIngr1ChemSerNum" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-3">
+														<label for="doDrugProForm1MedIngr1Name" class="control-label">Active Ingredient Name</label>
+														<input id="doDrugProForm1MedIngr1Name" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1MedIngr1Strd" class="control-label">Standard</label>
+														<input id="doDrugProForm1MedIngr1Strd" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1MedIngr1Strgh" class="control-label">Strength</label>
+														<input id="doDrugProForm1MedIngr1Strgh" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1MedIngr1Unit" class="control-label">Units</label>
+														<input id="doDrugProForm1MedIngr1Unit" type="text" class="form-control input-sm full-width"/>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-4">
+														<label for="doDrugProForm1MedIngr1Per" class="control-label">Per</label>
+														<input id="doDrugProForm1MedIngr1Per" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1MedIngr1AsBase" class="control-label">Calculated as Base?</label>
+														<select class="form-control input-sm" name="doDrugProForm1MedIngr1AsBase" id="doDrugProForm1MedIngr1AsBase">
+															<option label=" "></option>
+															<option value="1">Yes</option>
+															<option value="2">No</option>
+														</select>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1MedIngr1AniHumanSrc" class="control-label">Animal/Human Source?</label>
+														<select class="form-control input-sm" name="doDrugProForm1MedIngr1AniHumanSrc" id="doDrugProForm1MedIngr1AniHumanSrc">
+															<option label=" "></option>
+															<option value="1">Yes</option>
+															<option value="2">No</option>
+														</select>
+													</div>
+													<div class="col-sm-4">
+														<label for="doDrugProForm1MedIngr1NanoMater" class="control-label">Nanomaterial?</label>
+														<input id="doDrugProForm1MedIngr1NanoMater" type="text" class="form-control input-sm full-width"/>
+													</div>
+												</div>
+											</details>
+										</li>
+									</ul>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="doDrugProForm1NonMedIngr">
+									<div class="row">
+										<div class="col-sm-4 col-sm-offset-8">
+											<button type="submit" class="btn btn-default btn-sm" id="doDrugProForm1NonMedIngrAdd">Add an Ingredient</button>
+										</div>
+									</div>
+									<ul id="doDrugProForm1NonMedIngrList" class="list-unstyled">
+										<li id="doDrugProForm1NonMedIngr1">
+											<details open="open">
+												<summary class="heightAdjust">Non-Medicinal Ingredient 1</summary>
+												<div class="row">
+													<div class="col-sm-3">
+														<label for="doDrugProForm1NonMedIngr1ChemSerNum" class="control-label">Chemical Abstracts Service No.</label>
+														<input id="doDrugProForm1NonMedIngr1ChemSerNum" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-3">
+														<label for="doDrugProForm1NonMedIngr1Name" class="control-label">Active Ingredient Name</label>
+														<input id="doDrugProForm1NonMedIngr1Name" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1NonMedIngr1Strd" class="control-label">Standard</label>
+														<input id="doDrugProForm1NonMedIngr1Strd" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1NonMedIngr1Strgh" class="control-label">Strength</label>
+														<input id="doDrugProForm1NonMedIngr1Strgh" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1NonMedIngr1Unit" class="control-label">Units</label>
+														<input id="doDrugProForm1NonMedIngr1Unit" type="text" class="form-control input-sm full-width"/>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-4">
+														<label for="doDrugProForm1NonMedIngr1Per" class="control-label">Per</label>
+														<input id="doDrugProForm1NonMedIngr1Per" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1NonMedIngr1AsBase" class="control-label">Calculated as Base?</label>
+														<select class="form-control input-sm" name="doDrugProForm1NonMedIngr1AsBase" id="doDrugProForm1NonMedIngr1AsBase">
+															<option label=" "></option>
+															<option value="1">Yes</option>
+															<option value="2">No</option>
+														</select>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1NonMedIngr1AniHumanSrc" class="control-label">Animal/Human Source?</label>
+														<select class="form-control input-sm" name="doDrugProForm1NonMedIngr1AniHumanSrc" id="doDrugProForm1NonMedIngr1AniHumanSrc">
+															<option label=" "></option>
+															<option value="1">Yes</option>
+															<option value="2">No</option>
+														</select>
+													</div>
+													<div class="col-sm-4">
+														<label for="doDrugProForm1NonMedIngr1NanoMater" class="control-label">Nanomaterial?</label>
+														<input id="doDrugProForm1NonMedIngr1NanoMater" type="text" class="form-control input-sm full-width"/>
+													</div>
+												</div>
+											</details>
+										</li>
+									</ul>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="doDrugProForm1AnimalHumanSrc">
+									<div class="row">
+										<div class="form-group">
+											<div class="col-sm-4">
+												<label for="doDrugProForm1AnimalHumanSrcDosageForm" class="control-label">Dosage Form</label>
+											</div>
+											<div class="col-sm-4">
+												<select id="doDrugProForm1AnimalHumanSrcDosForm" name="doDrugProForm1AnimalHumanSrcDosForm" class="form-control input-sm"/>
+													<option label=" "></option>
+													<option value="1">Aerosol</option>
+													<option value="2">Bolus</option>
+													<option value="3">Capsule</option>
+													<option value="4">Capsule, Delayed Release</option>
+													<option value="5">Capsule, Extended Release</option>
+													<option value="2">Cream</option>
+													<option value="2">Emulsion</option>
+													<option value="2">Gas</option>
+													<option value="2">Gel</option>
+													<option value="2">Implant</option>
+													<option value="2">Lotion</option>
+													<option value="2">Lozenge</option>
+													<option value="2">Ointment</option>
+													<option value="2">Patch</option>
+													<option value="2">Patch, Extended-Release</option>
+													<option value="2">Powder</option>
+													<option value="2">Powder For Solution</option>
+													<option value="2">Powder For Suspension</option>
+													<option value="2">Shampoo</option>
+													<option value="2">Solution</option>
+													<option value="2">Spray</option>
+													<option value="2">Spray, Bag-On-Valve</option>
+													<option value="2">Spray, Metered Dose</option>
+													<option value="2">Stick</option>
+													<option value="2">Strip</option>
+													<option value="2">Suppository</option>
+													<option value="2">Suspension</option>
+													<option value="2">Syrup</option>
+													<option value="2">Tablet</option>
+													<option value="2">Tablet, Chewable</option>
+													<option value="2">Tablet, Delayed Release</option>
+													<option value="2">Tablet, Extended Release</option>
+													<option value="2">Tablet, Orally Disintegrating</option>
+													<option value="2">Wipe</option>
+													<option value="2">Other</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-sm-4">
+												<label for="doDrugProForm1AnimalHumanSrcClassification" class="control-label">Therapeutic/Pharmacological Classification</label>
+											</div>
+											<div class="col-sm-4">
+												<input type="text" id="doDrugProForm1AnimalHumanSrcClassification" class="form-control input-sm"/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="doDrugProForm1RouteOfAdm">...</div>
+							</div>
+							</div>
+						</details>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- END OF PART 2 - DOSSIER -->
+		
 	</div><!-- end of Step 2 Company Enrolment-->
 <div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
@@ -404,6 +721,170 @@ function deleteRefProduct(i) {
 		//items[n].id = newLabel;
 	}
 }
+
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+/*FOR TABS */
+
+/* ========================================================================
+ * Bootstrap: tab.js v3.3.6
+ * http://getbootstrap.com/javascript/#tabs
+ * ========================================================================
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+  'use strict';
+
+  // TAB CLASS DEFINITION
+  // ====================
+
+  var Tab = function (element) {
+    // jscs:disable requireDollarBeforejQueryAssignment
+    this.element = $(element)
+    // jscs:enable requireDollarBeforejQueryAssignment
+  }
+
+  Tab.VERSION = '3.3.6'
+
+  Tab.TRANSITION_DURATION = 150
+
+  Tab.prototype.show = function () {
+    var $this    = this.element
+    var $ul      = $this.closest('ul:not(.dropdown-menu)')
+    var selector = $this.data('target')
+
+    if (!selector) {
+      selector = $this.attr('href')
+      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+    }
+
+    if ($this.parent('li').hasClass('active')) return
+
+    var $previous = $ul.find('.active:last a')
+    var hideEvent = $.Event('hide.bs.tab', {
+      relatedTarget: $this[0]
+    })
+    var showEvent = $.Event('show.bs.tab', {
+      relatedTarget: $previous[0]
+    })
+
+    $previous.trigger(hideEvent)
+    $this.trigger(showEvent)
+
+    if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) return
+
+    var $target = $(selector)
+
+    this.activate($this.closest('li'), $ul)
+    this.activate($target, $target.parent(), function () {
+      $previous.trigger({
+        type: 'hidden.bs.tab',
+        relatedTarget: $this[0]
+      })
+      $this.trigger({
+        type: 'shown.bs.tab',
+        relatedTarget: $previous[0]
+      })
+    })
+  }
+
+  Tab.prototype.activate = function (element, container, callback) {
+    var $active    = container.find('> .active')
+    var transition = callback
+      && $.support.transition
+      && ($active.length && $active.hasClass('fade') || !!container.find('> .fade').length)
+
+    function next() {
+      $active
+        .removeClass('active')
+        .find('> .dropdown-menu > .active')
+          .removeClass('active')
+        .end()
+        .find('[data-toggle="tab"]')
+          .attr('aria-expanded', false)
+
+      element
+        .addClass('active')
+        .find('[data-toggle="tab"]')
+          .attr('aria-expanded', true)
+
+      if (transition) {
+        element[0].offsetWidth // reflow for transition
+        element.addClass('in')
+      } else {
+        element.removeClass('fade')
+      }
+
+      if (element.parent('.dropdown-menu').length) {
+        element
+          .closest('li.dropdown')
+            .addClass('active')
+          .end()
+          .find('[data-toggle="tab"]')
+            .attr('aria-expanded', true)
+      }
+
+      callback && callback()
+    }
+
+    $active.length && transition ?
+      $active
+        .one('bsTransitionEnd', next)
+        .emulateTransitionEnd(Tab.TRANSITION_DURATION) :
+      next()
+
+    $active.removeClass('in')
+  }
+
+
+  // TAB PLUGIN DEFINITION
+  // =====================
+
+  function Plugin(option) {
+    return this.each(function () {
+      var $this = $(this)
+      var data  = $this.data('bs.tab')
+
+      if (!data) $this.data('bs.tab', (data = new Tab(this)))
+      if (typeof option == 'string') data[option]()
+    })
+  }
+
+  var old = $.fn.tab
+
+  $.fn.tab             = Plugin
+  $.fn.tab.Constructor = Tab
+
+
+  // TAB NO CONFLICT
+  // ===============
+
+  $.fn.tab.noConflict = function () {
+    $.fn.tab = old
+    return this
+  }
+
+
+  // TAB DATA-API
+  // ============
+
+  var clickHandler = function (e) {
+    e.preventDefault()
+    Plugin.call($(this), 'show')
+  }
+
+  $(document)
+    .on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
+    .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
+
+}(jQuery);
+
 </script>
 </body>
 </html>
