@@ -61,7 +61,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </section>
 <div class="row">
 <div class="brand col-xs-8 col-sm-9 col-sm-6">
-<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="../assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="./assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
 </div>
 <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
 <h2>Search and menus</h2>
@@ -88,7 +88,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </section>
 </div>
 </div>
-<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-fetch="../ajax/sitemenu-en.html" typeof="SiteNavigationElement">
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-fetch="./ajax/sitemenu-en.html" typeof="SiteNavigationElement">
 <h2 class="wb-inv">Topics menu</h2>
 <div class="container nvbar">
 <div class="row">
@@ -1086,6 +1086,14 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
           } else {
             raDINCount = $('#' + relId).find('div.row div.col-sm-3').length;
           }
+		  
+		  var defaultDIN = '<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div>';
+		  var replacedDin;
+		  var newDIN;
+		  if (raDINCount == 0) {
+			replacedDIN = replaceAll(defaultDIN, 'raEnrolmentRel1DIN' + '1', relId + '1');
+			newDIN = replacedDIN.replace('raEnrolmentRel1DIN', relId);
+		  } else {
 		
 		//get the the id of the last DIN in the last row
 		var raLastDINId = $('#' + relId).find('div.row:eq(' + raDINRowCount + ') div.col-sm-3:last')[0].id;
@@ -1093,11 +1101,11 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
 		var raLastDINIndex2 = raLastDINId.indexOf('Grp');
 		var raLastDINIndexId = raLastDINId.substring(raLastDINIndex1 + 3, raLastDINIndex2);
           //alert('Add Button has been clicked ' + raDINAddButCount + 'times');
-          var defaultDIN = '<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div>';
           
 		  //replace id of defautDIN based on the number of current DINs
-          var replacedDIN = replaceAll(defaultDIN, 'raEnrolmentRel1DIN' + '1', relId + (parseInt(raLastDINIndexId)+1));
-          var newDIN = replacedDIN.replace('raEnrolmentRel1DIN', relId);
+          replacedDIN = replaceAll(defaultDIN, 'raEnrolmentRel1DIN' + '1', relId + (parseInt(raLastDINIndexId)+1));
+          newDIN = replacedDIN.replace('raEnrolmentRel1DIN', relId);
+		  }
           //get number of current DINs in the last row, and check if there is a need to create new row
           var lastRow = $('#' + relId + 'Row' + raDINRowCount);
           //get the number of divs in the lastRow
