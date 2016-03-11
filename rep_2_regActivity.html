@@ -11,27 +11,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
 <!-- Meta data-->
 <!--[if gte IE 9 | !IE ]><!-->
-<link href="./assets/favicon.ico" rel="icon" type="image/x-icon">
-<link rel="stylesheet" href="./css/wet-boew.min.css">
+<link href="../assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="../css/wet-boew.min.css">
 <!--<![endif]-->
-<link rel="stylesheet" href="./css/theme.min.css">
+<link rel="stylesheet" href="../css/theme.min.css">
 <!--[if lt IE 9]>
-<link href="./assets/favicon.ico" rel="shortcut icon" />
+<link href="../assets/favicon.ico" rel="shortcut icon" />
 
-<link rel="stylesheet" href="./css/ie8-wet-boew.min.css" />
+<link rel="stylesheet" href="../css/ie8-wet-boew.min.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="./js/ie8-wet-boew.min.js"></script>
+<script src="../js/ie8-wet-boew.min.js"></script>
 <![endif]-->
 <!--[if lte IE 9]>
 
 
 <![endif]-->
-<noscript><link rel="stylesheet" href="./css/noscript.min.css" /></noscript>
+<noscript><link rel="stylesheet" href="../css/noscript.min.css" /></noscript>
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 <script>dataLayer1 = [];</script>
 <!-- End Google Tag Manager -->
 
-<link rel="stylesheet" href="./css/rep.css">
+<link rel="stylesheet" href="../css/rep.css">
 
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
@@ -999,13 +999,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </footer>
 <!--[if gte IE 9 | !IE ]><!-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="./js/wet-boew.min.js"></script>
+<script src="../js/wet-boew.min.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
-<script src="./js/ie8-wet-boew2.min.js"></script>
+<script src="../js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
-<script src="./js/theme.min.js"></script>
-<script src="./js/rep.js"></script>
+<script src="../js/theme.min.js"></script>
+<script src="../js/rep.js"></script>
 <script type="text/javascript" id="">
 
 $(document).ready(function() {
@@ -1086,6 +1086,14 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
           } else {
             raDINCount = $('#' + relId).find('div.row div.col-sm-3').length;
           }
+		  
+		  var defaultDIN = '<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div>';
+		  var replacedDin;
+		  var newDIN;
+		  if (raDINCount == 0) {
+			replacedDIN = replaceAll(defaultDIN, 'raEnrolmentRel1DIN' + '1', relId + '1');
+			newDIN = replacedDIN.replace('raEnrolmentRel1DIN', relId);
+		  } else {
 		
 		//get the the id of the last DIN in the last row
 		var raLastDINId = $('#' + relId).find('div.row:eq(' + raDINRowCount + ') div.col-sm-3:last')[0].id;
@@ -1093,11 +1101,11 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
 		var raLastDINIndex2 = raLastDINId.indexOf('Grp');
 		var raLastDINIndexId = raLastDINId.substring(raLastDINIndex1 + 3, raLastDINIndex2);
           //alert('Add Button has been clicked ' + raDINAddButCount + 'times');
-          var defaultDIN = '<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div>';
           
 		  //replace id of defautDIN based on the number of current DINs
-          var replacedDIN = replaceAll(defaultDIN, 'raEnrolmentRel1DIN' + '1', relId + (parseInt(raLastDINIndexId)+1));
-          var newDIN = replacedDIN.replace('raEnrolmentRel1DIN', relId);
+          replacedDIN = replaceAll(defaultDIN, 'raEnrolmentRel1DIN' + '1', relId + (parseInt(raLastDINIndexId)+1));
+          newDIN = replacedDIN.replace('raEnrolmentRel1DIN', relId);
+		  }
           //get number of current DINs in the last row, and check if there is a need to create new row
           var lastRow = $('#' + relId + 'Row' + raDINRowCount);
           //get the number of divs in the lastRow
