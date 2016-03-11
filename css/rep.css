@@ -134,6 +134,10 @@ label.hiddenLabel {
 	border-radius:6px 0 6px 6px;
 }
 
+.dropdown-toggle {
+text-decoration:none;
+}
+
 /*FOR DOSSIER PART 2*/
 .full-width-tabs > ul.nav.nav-tabs {
     display: table;
