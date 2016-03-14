@@ -1182,11 +1182,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 												<!-- 101. for animals -->
 												<div style="display:none;" id='animalTypeInfo2'>
 													<div class="row">
-														<div class="form-group col-sm-5">
+														<div class="form-group col-sm-4">
 															<label class="control-label">Age of animals (in months) *</label>
 															<input class="form-control full-width"/>
 														</div>
-														<div class="form-group col-sm-5">
+														<div class="form-group col-sm-4">
 															<label class="control-label">Country</label>
 															<input class="form-control full-width"/>
 														</div>
@@ -1480,7 +1480,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 											</div>
 											<div class="col-sm-2">
 												<div class="form-group">
-													<select id="doDrugProForm1RouteOfAdmScheduleAClaim" name="doDrugProForm1RouteOfAdmScheduleAClaim" class="form-control input-sm"/>
+													<select id="doDrugProForm1RouteOfAdmScheduleAClaim" name="doDrugProForm1RouteOfAdmScheduleAClaim" class="form-control input-sm" onchange="checkAppendix5Selection()"/>
 														<option label=" "></option>
 														<option value="1">Yes</option>
 														<option value="2">No</option>
@@ -1534,7 +1534,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 												<label for="doDrugProForm1RouteOfAdmPckInsert" class="control-label">Package Insert enclosed?</label>
 											</div>
 										</div>
-										<div class="col-sm-2">
+										<div class="col-sm-6">
 											<div class="form-group">
 												<select id="doDrugProForm1RouteOfAdmPckInsert" name="doDrugProForm1RouteOfAdmPckInsert" class="form-control input-sm"/>
 													<option label=" "></option>
@@ -1543,6 +1543,141 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 												</select>
 											</div>
 										</div>
+										<!-- start of appendix 5 -->
+										<div style="display:none;" class="" id="appendix5">
+											<div class="form-group col-sm-12">
+												<label >DIN</label>
+												<input  class="form-control"/>
+											</div>
+											<div class="form-group col-sm-12">
+												<label>Please check the disease(s)/disorder(s) that apply to the claims made. (select at least one)</label>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Acute alcoholism</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Acute anxiety state</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Acute infectious respiratory syndromes</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Acute inflammatory and debilitating arthritis</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Acute psychotic conditions</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Addiction (except nicotine addiction)</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Ateriosclerosis</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Appendicitis</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Asthma</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Cancer</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Congestive heart failure</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Convulsions</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Dementia</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Depression</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Diabetes</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Gangrene</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Glaucoma</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Haematologic bleeding disorders</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Hepatitis</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Hypertension</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Nausea and vomiting of pregnancy</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Obesity</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Rheumatic fever</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Septicemia</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Sexually transmitted diseases</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Strangulated hernia</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Thrombotic and Embolic disorder</span>
+													</span>
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Thyroid disease</span>
+													</span>
+												</div>
+												<div class="row">
+													<span class="col-sm-6">
+														<span><input type="checkbox" /> Ulcer of the gastro-intestinal tract</span>
+													</span>
+												
+												</div>
+											</div>
+											
+											<div class="form-group col-sm-12">
+												<label>Please list the Schedule A Claims/Indications associated with this product</label>
+												<input  class="form-control full-width"/>
+											</div>
+											</div>
+										</div>
+										<!-- end of appendix 5 -->
 									</div>
 									<ul class="pager">
 										<li><a href="#doDrugProForm1AnimalHumanSrcMain" rel="prev">Previous</a></li>
@@ -1822,7 +1957,21 @@ function checkAppendixSelection() {
 	else {
 		appendix4.style.display = "none";
 	}
+} 
+// appendix 5
+function checkAppendix5Selection() {
+	var obj = document.getElementsByName('doDrugProForm1RouteOfAdmScheduleAClaim')[0];
+	var appendix5 = document.getElementById('appendix5');
+
+	if (obj.value == '1') {
+		appendix5.style.display = "block";
+	} 
+	else {
+		appendix5.style.display = "none";
+	}
 }
+
+
 
 //adds a new reference product
 function addNewRefProduct() {
