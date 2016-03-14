@@ -745,7 +745,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													</div>
 													<div class="col-sm-3">
 														<label for="doDrugProForm1MedIngr1AniHumanSrc" class="control-label">Animal/Human Source?</label>
-														<select class="form-control input-sm" name="doDrugProForm1MedIngr1AniHumanSrc" id="doDrugProForm1MedIngr1AniHumanSrc">
+														<select class="form-control input-sm" name="doDrugProForm1MedIngr1AniHumanSrc" id="doDrugProForm1MedIngr1AniHumanSrc" onchange="checkAppendixSelection()">
 															<option label=" "></option>
 															<option value="1">Yes</option>
 															<option value="2">No</option>
@@ -758,7 +758,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 												</div>
 												
 												<!-- start of appendix 4 -->
-												<div class="row">
+												<div style="display:none;" id='appendix4'>
+													<div class="row">
 													<div class="col-sm-12">
 														<h3>Appendix 4</h3>
 													</div>
@@ -1191,6 +1192,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 														</div>
 													</div>	
 												</div>
+												</div>
+												
 												<!-- end of appendix 4 -->
 											</details>
 										</li>
@@ -1791,7 +1794,7 @@ function checkOriginTypeSelection() {
 	}
 }
 
-//
+// human or animal
 
 function checkSourceTypeSelection() {
 	var obj = document.getElementsByName('sourceType')[0];
@@ -1807,6 +1810,18 @@ function checkSourceTypeSelection() {
 		animalTypeInfo2.style.display = "none";
 	}
 
+}
+// appendix 4
+function checkAppendixSelection() {
+	var obj = document.getElementsByName('doDrugProForm1MedIngr1AniHumanSrc')[0];
+	var appendix4 = document.getElementById('appendix4');
+
+	if (obj.value == '1') {
+		appendix4.style.display = "block";
+	} 
+	else {
+		appendix4.style.display = "none";
+	}
 }
 
 //adds a new reference product
