@@ -771,12 +771,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 														<input readonly="readonly" class="form-control full-width" placeholder="active ingredient"/>
 													</div> -->
 													<div class="form-group col-sm-4">
+														
 														<label class="control-label">Sourced from</label>
+														 <input type="checkbox"  />
+    														<label >human</label> 
+														 <input type="checkbox" onchange="OnChangeSourceCheckbox (this)" id="myCheckbox" />
+    														<label for="myCheckbox">animal</label>
+    												<!--
 														<select class="form-control full-width" onchange="checkSourceTypeSelection()" name="sourceType" id="sourceType">
 															<option value="none"></option>
 														  <option value="human">human</option>
 														  <option value="animal">animal</option>
-														</select> 
+														</select>  -->
 													</div>
 												</div>
 												<!-- for only animalType, to do JS fuction for dynamic display -->
@@ -1924,7 +1930,20 @@ function checkOriginTypeSelection() {
 	}
 }
 
-// human or animal
+// human or/and animal
+ function OnChangeSourceCheckbox (checkbox) {
+
+	var animalTypeInfo = document.getElementById('animalTypeInfo');
+	var animalTypeInfo2 = document.getElementById('animalTypeInfo2');
+    if (checkbox.checked) {
+      	animalTypeInfo.style.display = "block";
+	animalTypeInfo2.style.display = "block";
+    }
+    else {
+      	animalTypeInfo.style.display = "none";
+	animalTypeInfo2.style.display = "none";
+    }
+}
 
 function checkSourceTypeSelection() {
 	var obj = document.getElementsByName('sourceType')[0];
