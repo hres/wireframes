@@ -1271,30 +1271,40 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									</ul>
 								</div>
 								<div role="tabpanel" class="tab-pane" id="doDrugProForm1AnimalHumanSrcMain">
-									<div id="doDrugProForm1AnimalHumanSrc">
-										<div class="row">
-											<div class="col-sm-4">
-												<label for="doDrugProForm1AnimalHumanSrc1Name" class="control-label">Material Name</label>
-												<input id="doDrugProForm1AnimalHumanSrc1Name" type="text" class="form-control input-sm full-width"/>
-											</div>
-											<div class="col-sm-4">
-												<label for="doDrugProForm1AnimalHumanSrc1ChemServ" class="control-label">Chemical Abstracts Service</label>
-												<input id="doDrugProForm1AnimalHumanSrc1ChemServ" type="text" class="form-control input-sm full-width"/>
-											</div>
-											<div class="col-sm-2">
-												<label for="doDrugProForm1AnimalHumanSrc1Stand" class="control-label">Standard</label>
-												<input id="doDrugProForm1AnimalHumanSrc1Stand" type="text" class="form-control input-sm full-width"/>
-											</div>
-											<div class="col-sm-2">
-												<label for="doDrugProForm1AnimalHumanSrc1FinalContainer" class="control-label">Present in Final Container</label>
-												<select id="doDrugProForm1AnimalHumanSrc1FinalContainer" name="doDrugProForm1AnimalHumanSrc1FinalContainer" class="form-control input-sm"/>
-													<option label=" "></option>
-													<option value="1">Yes</option>
-													<option value="2">No</option>
-												</select>
-											</div>
+									<div class="row">
+										<div class="col-sm-2 col-sm-offset-10">
+											<button type="submit" class="btn btn-default btn-sm" onclick="addMaterial(doDrugProForm1AnimalHumanSrcList)" id="doDrugProForm1AnimalHumanSrcAddBut">Add a Material</button>
 										</div>
 									</div>
+									<ul class="list-unstyled" id="doDrugProForm1AnimalHumanSrcList">
+										<!--<li id="doDrugProForm1AnimalHumanSrc1">
+											<details open="open">
+												<summary class="heightAdjust">Material 1</summary>
+												<div class="row">
+													<div class="col-sm-4">
+														<label for="doDrugProForm1AnimalHumanSrc1Name" class="control-label">Material Name</label>
+														<input id="doDrugProForm1AnimalHumanSrc1Name" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-4">
+														<label for="doDrugProForm1AnimalHumanSrc1ChemServ" class="control-label">Chemical Abstracts Service</label>
+														<input id="doDrugProForm1AnimalHumanSrc1ChemServ" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1AnimalHumanSrc1Stand" class="control-label">Standard</label>
+														<input id="doDrugProForm1AnimalHumanSrc1Stand" type="text" class="form-control input-sm full-width"/>
+													</div>
+													<div class="col-sm-2">
+														<label for="doDrugProForm1AnimalHumanSrc1FinalContainer" class="control-label">Present in Final Container</label>
+														<select id="doDrugProForm1AnimalHumanSrc1FinalContainer" name="doDrugProForm1AnimalHumanSrc1FinalContainer" class="form-control input-sm">
+															<option label=" "></option>
+															<option value="1">Yes</option>
+															<option value="2">No</option>
+														</select>
+													</div>
+												</div>
+											</details>
+										</li>-->
+									</ul>
 									<div class="row">
 										<div class="col-sm-4">
 											<div class="form-group">
@@ -2112,6 +2122,33 @@ function delCountryOfManufacture(delBut, container) {
 			$(previousRowForThisRow).find('.form-group').append(addCountryText);	
 		}
 		$(closestRow).remove();
+	}
+}
+
+/**For Adding Material (Animal/Human Source) **/
+var numOfMaterials = 0;
+var numOfMaterialsCreated = 0;
+function addMaterial(list) {
+	var defaultMaterial = '<li id="doDrugProForm1AnimalHumanSrc1"><details open="open"><summary class="heightAdjust">Material 1<button class="btn btn-danger btn-xs deleteRef" onclick="delMaterial(this, doDrugProForm1AnimalHumanSrcList)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="row"><div class="col-sm-4"><label for="doDrugProForm1AnimalHumanSrc1Name" class="control-label">Material Name</label><input id="doDrugProForm1AnimalHumanSrc1Name" type="text" class="form-control input-sm full-width"/></div><div class="col-sm-4"><label for="doDrugProForm1AnimalHumanSrc1ChemServ" class="control-label">Chemical Abstracts Service</label><input id="doDrugProForm1AnimalHumanSrc1ChemServ" type="text" class="form-control input-sm full-width"/></div><div class="col-sm-2"><label for="doDrugProForm1AnimalHumanSrc1Stand" class="control-label">Standard</label><input id="doDrugProForm1AnimalHumanSrc1Stand" type="text" class="form-control input-sm full-width"/></div><div class="col-sm-2"><label for="doDrugProForm1AnimalHumanSrc1FinalContainer" class="control-label">Present in Final Container</label><select id="doDrugProForm1AnimalHumanSrc1FinalContainer" name="doDrugProForm1AnimalHumanSrc1FinalContainer" class="form-control input-sm"><option label=" "></option><option value="1">Yes</option><option value="2">No</option></select></div></div></details></li>';
+	numOfMaterialsCreated++;
+	numOfMaterials++;
+	var newMaterial = defaultMaterial.replace(/doDrugProForm1AnimalHumanSrc1/g, 'doDrugProForm1AnimalHumanSrc' + numOfMaterialsCreated);
+	newMaterial = newMaterial.replace('Material 1', 'Material ' + numOfMaterialsCreated);
+	$(list).append(newMaterial);
+}
+
+function delMaterial(delBut, list) {
+	var closestLi = $(delBut).closest('li');
+	var toRemoveIndex = $(closestLi).index();
+	$(closestLi).remove();
+	numOfMaterials--;
+	var counter = numOfMaterials;
+	
+	var totalItems = $(list).find('li');
+	for (var n = counter-1; n >= toRemoveIndex; n--) {
+		var text = $(totalItems[n]).find('summary')[0].innerHTML;
+		var newStr = text.replace('Material ' + (n+2), 'Material ' + (n+1));
+		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
 	}
 }
 
