@@ -872,7 +872,22 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															</div>
 														</div>
 													</div>
+													<div class="row">
+														<div class="form-group col-sm-4">
+															<label class="control-label">Controlled population</label>
+															<input class="form-control full-width"/>
+														</div>
+														<div class="form-group col-sm-4">
+															<label class="control-label">Biotechnology derived Animal</label>
+															<input class="form-control full-width"/>
+														</div>
+														<div class="form-group col-sm-4">
+															<label class="control-label">Cell line</label>
+															<input class="form-control full-width"/>
+														</div>
+													</div>	
 												</div>
+
 												<!-- end of animal section -->
 												<!-- 100. TISSUES OR FLUIDS OF ORIGIN // both human and animal --> 
 												<div class="row">
@@ -961,9 +976,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																	<label><input type="checkbox" value="" /> small intestine other than distal ileum</label>
 																</span>
 															</div>
-
-															
-
 															<div style="display:none;" class="row" id="reproductiveAndUrinarySystem" >
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> milk/milk products</label>	
@@ -999,7 +1011,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																	<label><input type="checkbox" value="" /> other</label>
 																</span>
 															</div>
-
 															<div style="display:none;" class="row" id="reproductiveAndUrinarySystem" >
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> milk/milk products</label>	
@@ -1035,7 +1046,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																	<label><input type="checkbox" value="" /> other</label>
 																</span>
 															</div>
-
 															<div style="display:none;" class="row" id="cardioRespiratorySystem" >
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> heart/pericardium</label>	
@@ -1056,7 +1066,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																	<label><input type="checkbox" value="" /> other</label>
 																</span>
 															</div>
-
 															<div style="display:none;" class="row" id="immuneSystem" >
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> lymph nodes</label>	
@@ -1077,7 +1086,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																	<label><input type="checkbox" value="" /> other</label>
 																</span>
 															</div>
-
 															<div style="display:none;" class="row" id="skinAndGlandularSystem" >
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> adrenal gland or tissue</label>	
@@ -1104,15 +1112,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																	<label><input type="checkbox" value="" /> other</label>
 																</span>
 															</div>
-
 															<div style="display:none;" class="row" id="musculoSkeletalSystem" >
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> abdomen</label>	
 																</span>
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> skull</label>
-																</span>
-																
+																</span>																
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> collagen</label>
 																</span>
@@ -1131,16 +1137,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> other</label>
 																</span>
-															</div>
-															
+															</div>															
 															<div style="display:none;" class="row" id="otherSystem" >
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> adipose tissue/omentum</label>	
 																</span>
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> ascites</label>
-																</span>
-																
+																</span>																
 																<span class="col-sm-3">
 																	<label><input type="checkbox" value="" /> anter velvet</label>
 																</span>
@@ -1173,6 +1177,19 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																</span>
 															</div>
 													</div>
+												</div>
+												<!-- 101. for animals -->
+												<div style="display:none;" id='animalTypeInfo2'>
+													<div class="row">
+														<div class="form-group col-sm-5">
+															<label class="control-label">Age of animals (in months) *</label>
+															<input class="form-control full-width"/>
+														</div>
+														<div class="form-group col-sm-5">
+															<label class="control-label">Country</label>
+															<input class="form-control full-width"/>
+														</div>
+													</div>	
 												</div>
 												<!-- end of appendix 4 -->
 											</details>
@@ -1779,12 +1796,15 @@ function checkOriginTypeSelection() {
 function checkSourceTypeSelection() {
 	var obj = document.getElementsByName('sourceType')[0];
 	var animalTypeInfo = document.getElementById('animalTypeInfo');
+	var animalTypeInfo2 = document.getElementById('animalTypeInfo2');
 
 	if (obj.value == 'animal') {
 		animalTypeInfo.style.display = "block";
+		animalTypeInfo2.style.display = "block";
 	} 
 	else {
 		animalTypeInfo.style.display = "none";
+		animalTypeInfo2.style.display = "none";
 	}
 
 }
