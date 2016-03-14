@@ -279,16 +279,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								<div role="tabpanel" class="tab-pane active" id="doDrugProForm1LifeTypeMain">
 									<div class="row">
 										<div class="col-sm-4 col-sm-offset-8">
-											<button class="btn btn-default btn-sm full-width" id="doDrugProForm1AddLifeTypeBut1" onclick="addContainerType(doDrugProForm1LifeTypeContainer)" type="submit">Add a Container Type</button>
+											<button class="btn btn-default btn-sm full-width" id="doDrugProForm1AddLifeTypeBut1" onclick="addContainerType(doDrugProForm1LifeTypeList)" type="submit">Add a Container Type</button>
+											<!--<button class="btn btn-default btn-sm full-width" id="doDrugProForm1AddLifeTypeBut1" onclick="addContainerType(doDrugProForm1LifeTypeContainer)" type="submit">Add a Container Type</button>-->
 										</div>
 									</div>
-									
+										<!--
 									    <div class="accordion" id="doDrugProForm1LifeTypeContainer">
-											<!-- Accordion section 1 -->
 											<details class="acc-group" id="doDrugProForm1LifeTypeContainer1">
 												<summary class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>Container Type 1</summary>
 												<div class="tgl-panel">
-													<!-- Section 1's content -->
 													<div class="textAlignCenter">
 													<div class="row">
 														<div class="col-sm-3 col-sm-offset-6 ">
@@ -347,15 +346,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 												</div>
 												</div>
 											</details>
-											<!--
-												<details class="acc-group">
-													<summary class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>Section 2's heading</summary>
-													<div class="tgl-panel">
-													</div>
-												</details>-->
-										</div>
+										</div>-->
 									
-									<!--
+									
 									<ul id="doDrugProForm1LifeTypeList"class="list-unstyled">
 										<li id="doDrugProForm1LifeTypeContainer1">
 											<details open="open">
@@ -372,8 +365,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<div class="row">
 														<div class="col-sm-3">
 															<div class="form-group">
-																<label for="doDrugProForm1LifeTypeContainer1" class="control-label">Container Type</label>
-																<input id="doDrugProForm1LifeTypeContainer1" type="text" class="form-control input-sm full-width"/>
+																<label for="doDrugProForm1LifeTypeContainer1Type" class="control-label">Container Type</label>
+																<input id="doDrugProForm1LifeTypeContainer1Type" type="text" class="form-control input-sm full-width"/>
 															</div>
 														</div>
 														<div class="col-sm-3">
@@ -418,19 +411,19 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 												</div>
 											</details>
 										</li>
-									</ul>-->
+									</ul>
 									
-									<div id="doDrugProForm1LifeTypeContainerCountryManu1">
+									<div id="doDrugProForm1LifeTypeContainerCountryManu">
 										<h4>Please indicate the country(ies) of manufacture for this drug product.</h4>
 										<div class="row">
 											<div class="form-group">
 												<div class="col-sm-3">
-													<label for="doDrugProForm1LifeTypeContainerCountryManu11" class="control-label normalLabel">Country of Manufacture 1</label>
+													<label for="doDrugProForm1LifeTypeContainerCountryManu1" class="control-label normalLabel">Country of Manufacture 1</label>
 												</div>
 												<div class="col-sm-4">
 													<!--<input id="doDrugProForm1LifeTypeContainerCountryManu11" type="text" class="form-control input-sm full-width" />-->
 													<div class="input-group">
-													<input class="form-control input-sm full-width" type="text" id="doDrugProForm1LifeTypeContainerCountryManu11" name="doDrugProForm1LifeTypeContainerCountryManu11" list="CountrySuggestions"/>
+													<input class="form-control input-sm full-width" type="text" id="doDrugProForm1LifeTypeContainerCountryManu1" name="doDrugProForm1LifeTypeContainerCountryManu1" list="CountrySuggestions"/>
 													<datalist id="CountrySuggestions">
 														<!--[if lte IE 9]><select><![endif]-->
 														<option label=" "></option>
@@ -676,7 +669,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 														<!--[if lte IE 9]></select><![endif]-->
 													</datalist>
 													<span class="input-group-btn">
-														<button class="btn btn-danger btn-sm" onclick="deleteRouteOfAdm(this, 'doDrugProForm1LifeTypeContainerCountryManu1')" id="doDrugProForm1LifeTypeContainerCountryManu1DelBut" type="button">
+														<button class="btn btn-danger btn-sm" onclick="delCountryOfManufacture(this, doDrugProForm1LifeTypeContainerCountryManu)" id="doDrugProForm1LifeTypeContainerCountryManu1DelBut" type="button">
 															<span class="glyphicon glyphicon-remove"></span>
 														</button>
 													</span>
@@ -689,7 +682,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 												-->
 											</div>
 											<div class="col-sm-2 addButton">
-												<button type="submit" class="btn btn-default btn-sm" id="doDrugProForm1LifeTypeContainerCountryManu1Add" onclick="addCountryOfManufacture(doDrugProForm1LifeTypeContainerCountryManu1)">Add Country</button>
+												<button type="submit" class="btn btn-default btn-sm" id="doDrugProForm1LifeTypeContainerCountryManu1AddBut" onclick="addCountryOfManufacture(doDrugProForm1LifeTypeContainerCountryManu)">Add Country</button>
 											</div>
 										</div>
 									</div>
@@ -2018,6 +2011,39 @@ $('#myTabs a').click(function (e) {
   $(this).tab('show')
 })
 
+/**For Adding Container Type **/
+var numOfContainerTypes = 1;
+var numOfContainerTypesCreated = 1;
+
+//doDrugProForm1LifeTypeContainer1
+function addContainerType(list) {
+	var newContainerType = '<li id="doDrugProForm1LifeTypeContainer1"><details open="open"><summary class="heightAdjust">Container Type 1<button class="btn btn-danger btn-xs deleteRef" onclick="delContainerType(this, doDrugProForm1LifeTypeList)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="textAlignCenter"><div class="row"><div class="col-sm-3 col-sm-offset-6 "><label class="control-label">Shelf Life</label></div><div class="col-sm-3 "><label class="control-label">Temp. Range</label></div></div><div class="row"><div class="col-sm-3"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1Type" class="control-label">Container Type</label><input id="doDrugProForm1LifeTypeContainer1Type" type="text" class="form-control input-sm full-width"/></div></div><div class="col-sm-3"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1PckSize" class="control-label">Package Size</label><input id="doDrugProForm1LifeTypeContainer1PckSize" type="text" class="form-control input-sm full-width"/></div></div><div class="col-sm-3"><div class="row"><div class="col-sm-6"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1ShlfLifeYear" class="control-label normalLabel">Years</label><input id="doDrugProForm1LifeTypeContainer1ShlfLifeYear" type="text" class="form-control input-sm full-width"/></div></div><div class="col-sm-6"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1ShlfLifeMonth" class="control-label normalLabel">Months</label><input id="doDrugProForm1LifeTypeContainer1ShlfLifeMonth" type="text" class="form-control input-sm full-width"/></div></div></div></div><div class="col-sm-3"><div class="row"><div class="col-sm-6"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1TempMin" class="control-label normalLabel">Min. Celsius</label><input id="doDrugProForm1LifeTypeContainer1TempMin" type="text" class="form-control input-sm full-width"/></div></div><div class="col-sm-6"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1TempMax" class="control-label normalLabel">Max. Celsius</label><input id="doDrugProForm1LifeTypeContainer1TempMax" type="text" class="form-control input-sm full-width"/></div></div></div></div></div></div></details></li>';
+	//increment counter
+	numOfContainerTypes++;
+	numOfContainerTypesCreated++;
+	//replace substrings
+	var newId = newContainerType.replace(/doDrugProForm1LifeTypeContainer1/g, 'doDrugProForm1LifeTypeContainer' + numOfContainerTypesCreated);
+	newId = newId.replace('Type 1', 'Type ' + numOfContainerTypes);
+	$(list).append(newId);
+
+}
+
+function delContainerType(delBut, list) {
+	var closestLi = $(delBut).closest('li');
+	var toRemoveIndex = $(closestLi).index();
+	$(closestLi).remove();
+	numOfContainerTypes--;
+	var counter = numOfContainerTypes;
+	
+	var totalItems = $(list).find('li');
+	for (var n = counter-1; n >= toRemoveIndex; n--) {
+		var text = $(totalItems[n]).find('summary')[0].innerHTML;
+		var newStr = text.replace('Type ' + (n+2), 'Type ' + (n+1));
+		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
+	}
+}
+
+/*
 function addContainerType(accordion) {
 	var accordionId = $(accordion).prop('id');
 	var numOfContainerType = $('#' + accordionId + ' details').length;
@@ -2034,20 +2060,43 @@ function addContainerType(accordion) {
 	$(accordion).append(newId);
 	$('#doDrugProForm1LifeTypeContainer summary.wb-toggle').trigger( "wb-init.wb-toggle" );
 }
+*/
+/**For Adding Country of Manufacture **/
 
-function addCountryOfManufacture(div) {
-	var defaultSelect = '<div class="row"><div class="form-group"><div class="col-sm-3"><label for="doDrugProForm1LifeTypeContainerCountryManu11" class="control-label normalLabel">Country of Manufacture 1</label></div><div class="col-sm-4"><div class="input-group"><input class="form-control input-sm full-width" type="text" id="doDrugProForm1LifeTypeContainerCountryManu11" name="doDrugProForm1LifeTypeContainerCountryManu11" list="CountrySuggestions"/><span class="input-group-btn"><button class="btn btn-danger btn-sm" id="doDrugProForm1RouteOfAdm1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-2 addButton"><button type="submit" class="btn btn-default btn-sm" onclick="addCountryOfManufacture(doDrugProForm1LifeTypeContainerCountryManu1)"id="coDrugForm1LifeTypeContainerCountryManu1Add">Add Country</button></div></div></div>';
-	var numOfCountryManu = $(div).find('.row').length;
+var numOfCountryManu = 1; //temporary
+
+function addCountryOfManufacture(container) {
+	var defaultSelect = '<div class="row"><div class="form-group"><div class="col-sm-3"><label for="doDrugProForm1LifeTypeContainerCountryManu1" class="control-label normalLabel">Country of Manufacture 1</label></div><div class="col-sm-4"><div class="input-group"><input class="form-control input-sm full-width" type="text" id="doDrugProForm1LifeTypeContainerCountryManu1" name="doDrugProForm1LifeTypeContainerCountryManu1" list="CountrySuggestions"/><span class="input-group-btn"><button class="btn btn-danger btn-sm" id="doDrugProForm1LifeTypeContainerCountryManu1DelBut" onclick="delCountryOfManufacture(this, doDrugProForm1LifeTypeContainerCountryManu)" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-2 addButton"><button type="submit" class="btn btn-default btn-sm" onclick="addCountryOfManufacture(doDrugProForm1LifeTypeContainerCountryManu)"id="doDrugProForm1LifeTypeContainerCountryManuAddBut">Add Country</button></div></div></div>';
+	var numOfCountryManu = $(container).find('.row').length;
 	numOfCountryManu++;
-	var newSelect = defaultSelect.replace(/doDrugProForm1LifeTypeContainerCountryManu11/g, 'doDrugProForm1LifeTypeContainerCountryManu1' + numOfCountryManu);
+	var newSelect = defaultSelect.replace(/doDrugProForm1LifeTypeContainerCountryManu1/g, 'doDrugProForm1LifeTypeContainerCountryManu' + numOfCountryManu);
 	newSelect = newSelect.replace('Manufacture 1', 'Manufacture ' + numOfCountryManu);
 	//get previous row/countryOfManufacture
-	var previous = $(div).find('.row:last');
+	var previous = $(container).find('.row:last');
 	//remove add button
 	$(previous).find('.addButton').remove();
-	$(div).append(newSelect);
+	$(container).append(newSelect);
 }
 
+function delCountryOfManufacture(delBut, container) {
+	var closestRow = $(delBut).closest('.row'); // index in container
+	var closestFormGroup = $(closestRow).find('.form-group');
+	var numOfCountryManu = $(container).find('.row').length;
+	
+	if (numOfCountryManu == 1) {
+		$(doDrugProForm1LifeTypeContainerCountryManu1).val("");
+	} else {
+		if ($(closestFormGroup).find('.addButton').length > 0) {
+			//var generalId = 'doDrugProForm1LifeTypeContainerCountryManu' + ($(closestRow).index() + 1);
+			var addCountryText = '<div class="col-sm-2 addButton"><button type="submit" class="btn btn-default btn-sm" onclick="addCountryOfManufacture(doDrugProForm1LifeTypeContainerCountryManu)"id="doDrugProForm1LifeTypeContainerCountryManuAddBut">Add Country</button></div>';
+			var previousRowForThisRow = $(container).find('.row').eq($(closestRow).index() - 2);
+			$(previousRowForThisRow).find('.form-group').append(addCountryText);	
+		}
+		$(closestRow).remove();
+	}
+}
+
+/**For Adding Route of Administration**/
 //parameters: but = button; drugFormlId = drug form id
 function addRouteOfAdm(but, drugFormId) {
   //get the number of div.row
