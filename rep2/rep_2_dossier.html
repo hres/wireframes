@@ -2850,7 +2850,7 @@ function deleteRefProduct(i) {
 $('#myTabs a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
-})
+});
 
 /**For Adding Container Type **/
 var numOfContainerTypes = 1;
@@ -2938,7 +2938,7 @@ function delCountryOfManufacture(delBut, container) {
 }
 
 function addCountryAppendix4(container) {
-	var default select;
+	var defaultSelect;
 }
 
 /**For Adding Material (Animal/Human Source) **/
@@ -3062,6 +3062,14 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 			$(currentRow).remove();
 		//raDINRowCount--;
 		}
+	}
+}
+
+function changeMe(chk, div) {
+	if (chk.checked) {
+		$(div).css('display', 'block');
+	} else {
+		$(div).css('display', 'none');
 	}
 }
 
@@ -3223,14 +3231,6 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
     .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
 
 }(jQuery);
-
-function changeMe(chk, div) {
-	if (chk.checked) {
-		$(div).css('display', 'block');
-	} else {
-		$(div).css('display', 'none');
-	}
-}
 
 </script>
 </body>
