@@ -1,0 +1,819 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<title>The Drug and Health Product Register</title>
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="./assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="./css/wet-boew.min.css">
+<!--<![endif]-->
+<link rel="stylesheet" href="./css/theme.min.css">
+<!--[if lt IE 9]>
+<link href="./assets/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="./css/ie8-wet-boew.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./js/ie8-wet-boew.min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+<![endif]-->
+<noscript><link rel="stylesheet" href="./css/noscript.min.css" /></noscript>
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<script>dataLayer1 = [];</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="./css/dropdown.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body vocab="http://schema.org/" typeof="WebPage">
+<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
+<!-- End Google Tag Manager -->
+<ul id="wb-tphp">
+<li class="wb-slc">
+<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+</li>
+<li class="wb-slc visible-sm visible-md visible-lg">
+<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+</li>
+</ul>
+<header role="banner">
+<div id="wb-bnr" class="container">
+<section id="wb-lng" class="visible-md visible-lg text-right">
+<h2 class="wb-inv">Language selection</h2>
+<div class="row">
+<div class="col-md-12">
+<ul class="list-inline margin-bottom-none">
+<li><a lang="fr" href="content-fr.html">Français</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<div class="row">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
+<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="./assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+</div>
+<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+<h2>Search and menus</h2>
+<ul class="list-inline text-right chvrn">
+<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
+</ul>
+<div id="mb-pnl"></div>
+</section>
+<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
+<h2 class="wb-inv">Search</h2>
+<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+<div class="form-group">
+<label for="wb-srch-q" class="wb-inv">Search website</label>
+<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca">
+<datalist id="wb-srch-q-ac">
+<!--[if lte IE 9]><select><![endif]-->
+<!--[if lte IE 9]></select><![endif]-->
+</datalist>
+</div>
+<div class="form-group submit">
+<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+</div>
+</form>
+</section>
+</div>
+</div>
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-fetch="./ajax/sitemenu-en.html" typeof="SiteNavigationElement">
+<h2 class="wb-inv">Topics menu</h2>
+<div class="container nvbar">
+<div class="row">
+<ul class="list-inline menu">
+<li><a href="http://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li>
+<li><a href="http://www.cic.gc.ca/english/index.asp">Immigration</a></li>
+<li><a href="http://travel.gc.ca/">Travel</a></li>
+<li><a href="http://www.canada.ca/en/services/business/index.html">Business</a></li>
+<li><a href="http://www.canada.ca/en/services/benefits/index.html">Benefits</a></li>
+<li><a href="http://healthycanadians.gc.ca/index-eng.php">Health</a></li>
+<li><a href="http://www.canada.ca/en/services/taxes/index.html">Taxes</a></li>
+<li><a href="http://www.canada.ca/en/services/index.html">More services</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
+<h2 class="wb-inv">You are here:</h2>
+<div class="container">
+<div class="row">
+<ol class="breadcrumb">
+<li><a href="http://www.canada.ca/en/index.html">Home</a></li>
+<li>The Drug and Health Product Register</li>
+</ol>
+</div>
+</div>
+</nav>
+</header>
+<main role="main" property="mainContentOfPage" class="container">
+<h1 property="name" id="wb-cont">The Drug and Health Product Register</h1>
+<section>
+
+
+  <div>
+    <div>
+      <ul class="nav nav-tabs">
+        <li class="active panel-title"><a data-toggle="tab" href="dhpr_option3d.html">Search for Drugs</a></li>
+        
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Summary Reports
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="dhpr_rds.html">Regulatory Decision Summaries (RDS)</a></li>
+            <li><a href="dhpr_sbd.html">Summary Basis of Decision (SBD)</a></li> 
+            <li><a href="dhpr_ssr.html">Summary Safety Review (SSR)</a></li>
+          </ul>
+        </li>
+        <li><a href="dhpr_report_se.html">Report a Side Effect</a></li>
+        
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">About
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="dhpr_option3d_whatsnew.html">What’s New?  </a></li>
+            <li><a href="dhpr_about.html">The Drug and Health Product Register</a></li>
+            <li >
+                <a  href="dhpr_drug_ds.html">Data / Regulatory Information</a>
+              </li>
+            <li><a href="dhpr_se_disclaimer.html">Reported Side Effects - Disclaimers</a></li>
+            <li><a href="dhpr_feedback.html">Feedback</a></li>
+            <li><a href="dhpr_qa.html">Questions and Answers</a></li>
+            
+          </ul>
+        </li>
+      </ul>      
+    </div>
+    <!--Main content-->
+      <main role="main" property="mainContentOfPage" class="container">
+      <h2 id="wb-cont">Details for: <strong>ABILIFY</strong></h2>
+      <h2 id="wb-cont">Company: BRISTOL-MYERS SQUIBB CANADA</h2>
+
+            <table class="table table-hover table-bordered table-responsive" summary="">
+               <thead>
+                  <tr>
+                     <th scope="col" rowspan="1" colspan="1" id="din">DIN</th>
+                     <th scope="col" rowspan="1" colspan="1" id="active">Active Ingredient(s)</th>
+                     <th scope="col" rowspan="1" colspan="1" id="strength">Strength</th>
+                     <th scope="col" rowspan="1" colspan="1" id="form">Dosage Form</th>
+                     <th scope="col" rowspan="1" colspan="1" id="route">Route of Administration</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  
+                  
+                  
+                  
+                  
+                  
+                  <tr>
+                     <td rowspan="1" colspan="1" headers="din">02322374</td>
+                     <td rowspan="1" colspan="1" headers="active">ARIPIPRAZOLE</td>
+                     <td rowspan="1" colspan="1" headers="strength">2.0 MG</td>
+                     <td rowspan="1" colspan="1" headers="form">TABLET</td>
+                     <td rowspan="1" colspan="1" headers="route">ORAL</td>
+                  </tr>
+                  <tr>
+                     <td rowspan="1" colspan="1" headers="din">02322382</td>
+                     <td rowspan="1" colspan="1" headers="active">ARIPIPRAZOLE</td>
+                     <td rowspan="1" colspan="1" headers="strength">5.0 MG</td>
+                     <td rowspan="1" colspan="1" headers="form">TABLET</td>
+                     <td rowspan="1" colspan="1" headers="route">ORAL</td>
+                  </tr>
+                  <tr>
+                     <td rowspan="1" colspan="1" headers="din">02322390</td>
+                     <td rowspan="1" colspan="1" headers="active">ARIPIPRAZOLE</td>
+                     <td rowspan="1" colspan="1" headers="strength">10.0 MG</td>
+                     <td rowspan="1" colspan="1" headers="form">TABLET</td>
+                     <td rowspan="1" colspan="1" headers="route">ORAL</td>
+                  </tr>
+                  <tr>
+                     <td rowspan="1" colspan="1" headers="din">02322404</td>
+                     <td rowspan="1" colspan="1" headers="active">ARIPIPRAZOLE</td>
+                     <td rowspan="1" colspan="1" headers="strength">15.0 MG</td>
+                     <td rowspan="1" colspan="1" headers="form">TABLET</td>
+                     <td rowspan="1" colspan="1" headers="route">ORAL</td>
+                  </tr>
+                  <tr>
+                     <td rowspan="1" colspan="1" headers="din">02322412</td>
+                     <td rowspan="1" colspan="1" headers="active">ARIPIPRAZOLE</td>
+                     <td rowspan="1" colspan="1" headers="strength">20.0 MG</td>
+                     <td rowspan="1" colspan="1" headers="form">TABLET</td>
+                     <td rowspan="1" colspan="1" headers="route">ORAL</td>
+                  </tr>
+                  <tr>
+                     <td rowspan="1" colspan="1" headers="din">02322455</td>
+                     <td rowspan="1" colspan="1" headers="active">ARIPIPRAZOLE</td>
+                     <td rowspan="1" colspan="1" headers="strength">30.0 MG</td>
+                     <td rowspan="1" colspan="1" headers="form">TABLET</td>
+                     <td rowspan="1" colspan="1" headers="route">ORAL</td>
+                  </tr>
+               </tbody>
+            </table>
+         <!--<span class="col-md-3">-->
+         <p><a href="dhpr_report_se.html">Report a Side Effect</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="dhpr_view_report_se.html">View Reported Side Effects</a></p><!--</span>-->
+      <hr>
+      <h3>Regulatory Content</h3>
+      <ul>
+        <li><a href="dhpr_abilify_rds.html">Regulatory Decision Summaries (RDS) - New Drug Submission - Updated 2013/02/25</a></li>
+        <li><a href="dhpr_abilify_sbd.html">Summary Basis of Decision (SBD) - 2009/11/26</a></li>
+        <li><a href="dhpr_abilify_ssr.html">Summary Safety Review - ABILIFY and ABILIFY MAINTENA (aripiprazole) - Evaluating the Risk of Certain Impulse Control Behaviours - 2015/11/02</a></li>
+
+      </ul>
+
+      <!--</span>-->
+      <div class="clear"></div>
+      <hr>
+
+      <h3>Consumer Information</h3>
+      <p>This information was provided by the drug’s manufacturer when this drug product was approved for sale in Canada. It is designed for consumers and care givers. It is a summary of information about the drug and will not tell you everything about the drug. Contact your doctor or pharmacist if you have any questions about the drug.</p>
+
+
+      <div>
+      <details class="span-8">
+        <summary class="background-accent">What The Medication Is Used For</summary>
+        
+                <p>ABILIFY is used to treat symptoms of schizophrenia in adults and in adolescents (15-17 years of age). Schizophrenia is characterised by symptoms such as:</p>
+                <ul>
+                  <li>hearing, seeing or sensing things that are not there,</li>
+                  <li>suspiciousness, mistaken beliefs,</li>
+                  <li>incoherent speech and behaviour and emotional flatness.</li>
+               </ul>
+                <p>People with this condition may also feel depressed, guilty, anxious or tense.</p>
+                <p>ABILIFY is also used to treat adults and adolescent patients (13-17 years of age) who suffer from manic or mixed episodes in bipolar I disorder. Bipolar disorder is a condition with symptoms such as:</p>
+                <ul>
+                  <li>feeling invincible or an all powerful inflated self-esteem</li>
+                  <li>racing thoughts, easily losing train of thought</li>
+                  <li>overreaction to what is seen or heard</li>
+                  <li>misinterpretation of events</li>
+                  <li>sped-up activity, talking very quickly, too loudly, or more than usual,</li>
+                  <li>decreased need for sleep</li>
+                  <li>poor judgment</li>
+                  <li>sometimes exhibiting severe irritability</li>
+               </ul>
+                <p>ABILIFY is also used to treat symptoms of depression in adults when administered with your current antidepressant medicine. It is prescribed when you do not respond adequately to an antidepressant alone and after you have tried different antidepressant treatments during your current depressive episode.</p>
+                <p>Depression is a condition with symptoms such as:</p>
+                <ul>
+                  <li>feeling sad,</li>
+                  <li>a change in appetite or weight,</li>
+                  <li>difficulty concentrating or sleeping,</li>
+                  <li>feeling tired,</li>
+                  <li>headaches,</li>
+                  <li>unexplained aches and pain.</li>
+               </ul>
+                <p>It is important to discuss your depressive symptoms and possible side effects of ABILIFY with your doctor.</p>
+                <p>ABILIFY is not a cure for your condition, but it can help manage your symptoms and in adult patients may reduce the risk of relapse.</p>
+                <p>Your doctor may have prescribed ABILIFY for another reason. Ask your doctor if you have any questions about why ABILIFY has been prescribed for you.</p>
+              </details>
+      </div>
+      <div>
+      <details class="span-8">
+        <summary class="background-accent">What It Does</summary>
+        
+                <p>
+                  <strong>ABILIFY belongs to a group of medicines called atypical antipsychotic drugs.</strong>
+               </p>
+                <p>Antipsychotic medications affect the chemicals that allow communication between nerve cells (neurotransmitters). Illnesses that affect the brain may be due to certain chemicals in the brain being out of balance. These imbalances may cause some of the symptoms you may be experiencing. Doctors and scientists are not sure what causes these imbalances to occur. Exactly how ABILIFY works is unknown. However, it seems to adjust the balance of chemicals called dopamine and serotonin.</p>
+              </details>
+      </div>
+      <div>
+
+      <details class="span-8">
+        <summary class="background-accent">When It Should Not Be Used</summary>
+        
+                <p>Do not take ABILIFY if you have had an allergic reaction to ABILIFY or any of the ingredients listed in the “What the nonmedicinal ingredients are” section of this leaflet. Signs of allergic reaction may include a rash, itching, shortness of breath or swelling of the face, lips or tongue.</p>
+              </details>
+      </div>
+      <div>
+
+      <details class="span-8">
+        <summary class="background-accent">What The Medicinal Ingredient Is</summary>
+        
+                <p>ABILIFY tablets contain the active ingredient called aripiprazole.</p>
+              </details>
+      </div>
+      <div>
+
+      <details class="span-8">
+        <summary class="background-accent">What The Non-Medicinal Ingredients Are</summary>
+        
+                <p>ABILIFY tablets contain the following inactive ingredients: lactose monohydrate, maize starch, microcrystalline cellulose, hydroxypropyl cellulose, magnesium stearate and coloring agents (2 mg: FD&amp;C Blue No. 2 Aluminum Lake and iron oxide Yellow; 5 mg: FD&amp; Blue No. 2 Aluminum Lake; 10 mg and 30 mg: iron oxide red; 15 mg: iron oxide yellow).</p>
+              </details>
+      </div>
+      <div>
+
+      <details class="span-8">
+        <summary class="background-accent">What Dosage Form It Comes In</summary>
+        
+                <p>ABILIFY tablets are available in strengths of 2 mg, 5 mg, 10 mg, 15 mg, 20 mg and 30 mg.</p>
+              </details>
+      </div>
+      <div>
+
+      <details class="span-8">
+        <summary class="background-accent">Warnings And Precautions</summary>
+        
+              <seriouswarnings>
+                  <div class="well">
+                     <h3>Serious Warnings and Precautions</h3>
+                     <p>Various medicines of the group to which ABILIFY belongs, including ABILIFY, have been associated with an increased rate of death when used in elderly patients with dementia. ABILIFY is not indicated in elderly patients with dementia</p>
+                  </div>
+                  <p>ABILIFY is not for use in children with bipolar I disorder under 13 years of age or children with schizophrenia under the age of 15.</p>
+                  <p>
+                     <strong>BEFORE you use ABILIFY talk to your doctor or pharmacist if you:</strong>
+                  </p>
+                  <ul>
+                     <li>are taking any other medicines (prescriptions or over the counter medicines).</li>
+                     <li>are pregnant, think you are pregnant or plan to become pregnant. You should not take ABILIFY if you are pregnant unless you have discussed this with your doctor.</li>
+                     <li>are breast-feeding or plan to breast-feed. Breast-feeding mothers should not take ABILIFY.</li>
+                     <li>have high blood sugar or a family history of diabetes.</li>
+                     <li>have a low white blood cell count.</li>
+                     <li>have ever had blackouts or seizures.</li>
+                     <li>have involuntary, irregular muscle movements, especially in the face.</li>
+                     <li>suffer from heart disease or have a family history of heart disease, stroke or "mini" stroke.</li>
+                     <li>have a history of any problems with the way your heart beats or if you are taking any medicines that may have an impact on the way your heart beats.</li>
+                     <li>suffer from abnormal (high) blood pressure or have rapid heart beat and a drop in blood pressure when getting up.</li>
+                     <li>are an elderly patient suffering from dementia (loss of memory and other mental abilities), you or your carer/relative should tell your doctor if you have ever had a stroke or "mini" stroke.</li>
+                     <li>have risk factors for developing blood clots such as: a family history of blood clots, age over 65, smoking, obesity, recent major surgery (such as hip or knee replacement), immobility due to air travel or other reason, take oral contraceptives ("The Pill").</li>
+                     <li>exercise vigorously or work in hot, sunny places.</li>
+                     <li>drink alcoholic beverages or use recreational drugs.</li>
+                     <li>have ever abused drugs.</li>
+                     <li>suffer from lactose intolerance or have hereditary galactose intolerance or glucose-galactose malabsorption, because ABILIFY tablets contain lactose.</li>
+                  </ul>
+                  <h3>Thoughts of suicide and worsening of your depression or other mental illnesses</h3>
+                  <p>If you are depressed and/or have other mental illnesses you may sometimes have thoughts of harming or killing yourself. These may be increased when first starting treatment, since these medicines all take time to work, usually about two weeks but sometimes longer.</p>
+                  <p>If you have thoughts of harming or killing yourself at any time, contact your doctor or go to a hospital straight away.</p>
+                  <p>You may find it helpful to tell a relative or close friend that you are depressed or have other mental illnesses, and ask them to read this leaflet. You might ask them to tell you if they think your depression or mental illness is getting worse, or if they are worried about changes in your behaviour.</p>
+                  <h3>Effects on newborns</h3>
+                  <p>In some cases, babies born to a mother taking ABILIFY during pregnancy have experienced symptoms that are severe and require the newborn to be hospitalized. Sometimes, the symptoms may resolve on their own Be prepared to seek emergency medical attention for your newborn, if he/she has difficulty breathing, is overly sleepy, has muscle stiffness or floppy muscles (like a rag doll), is shaking or is having difficulty feeding.</p>
+              </seriouswarnings>
+            </details>
+      </div>
+      <div>
+
+      <details class="span-8">
+        <summary class="background-accent">Interactions With This Medication</summary>
+        
+              <p>Tell all doctors, dentists and pharmacists who are treating you that you are taking ABILIFY.</p>
+              <p>Please tell your doctor or pharmacist if you are taking or have recently taken any other medicines, including medicines obtained without a prescription.</p>
+              <ul>
+                  <li>If you are taking other medicines, your doctor may need to change your dose of ABILIFY. You should tell your doctor if you are taking ketoconazole (antifungal), quinidine (antiarrythmic), paroxetine (antidepressant) or fluoxetine (antidepressant). These medicines may lead to higher concentrations of aripiprazole in your blood.</li>
+                  <li>You should also tell your doctor if you are taking carbamazepine as it may lead to lower concentrations of aripiprazole in your blood, making ABILIFY less effective.</li>
+               </ul>
+              <p>ABILIFY may increase the effect of medicines used to lower the blood pressure. Be sure to tell your doctor if you take a medicine to keep your blood pressure under control.</p>
+              <p>The effects of alcohol could be made worse while taking ABILIFY. It is recommended that you <strong>do not</strong> drink alcohol while taking ABILIFY.</p>
+              <p>Only take other medicines while you are on ABILIFY if your doctor tells you to.</p>
+            </details>
+      </div>
+      <div>
+
+      <details class="span-8">
+          <summary class="background-accent">Proper Use Of This Medication</summary>
+        
+              <p>The most important thing about taking ABILIFY is to take it exactly the way your doctor has prescribed it, every day.  You should check with your doctor or pharmacist if you are not sure. Your doctor has decided on the best dosage for you based on your individual situation. Your doctor may increase or decrease your dose depending on your response.</p>
+              <h3>Schizophrenia</h3>
+              <p>
+                  <strong>Usual adult dose: The usual dose is 10 mg or 15 mg once a day, without regard to meals.</strong> However your doctor may prescribe a lower or higher dose to a maximum of 30 mg once a day.</p>
+              <p>
+                  <strong>Usual adolescent (15 -17 years of age) dose:</strong> The usual dose is 10 mg once a day, without regard to meals. At the start of treatment, your doctor will prescribe a lower daily dose (2 mg) and will increase the dose to 5 mg once a day after 2 days and to the target dose of 10 mg once a day after 2 additional days. Depending on how well you respond and tolerate the 10 mg dose, your doctor may prescribe a lower or higher dose, to a maximum of 30 mg once a day.</p>
+              <h3>Manic or Mixed Episodes in Bipolar I Disorder</h3>
+              <p>
+                  <strong>Usual adult dose:</strong> The usual dose is 15 mg once a day, without regard to meals. However your doctor may increase the dose to 30 mg once a day.</p>
+              <p>
+                  <strong>Usual adolescent (13 -17 years of age) dose:</strong> The usual dose is 10 mg once a day, without regard to meals. At the start of treatment, your doctor may prescribe a lower daily dose (2 mg once a day) and may increase the dose to 5 mg once a day after 2 days and to the target dose of 10 mg once a day after at least 2 additional days. Depending on how well you respond and tolerate the 10 mg dose, your doctor may prescribe a lower or higher dose, to a maximum of 30 mg once a day.</p>
+              <p>The maximum dose should not exceed 30 mg once a day</p>
+              <h3>Depression</h3>
+              <p>
+                  <strong>Usual adult dose:</strong> The usual starting dose is 2 -5 mg once a day administered with the antidepressant you are already taking. Depending on how well you respond and tolerate the initial dose, your doctor may prescribe a lower or higher dose, to a maximum of 15 mg once a day.</p>
+              <p>Try to take ABILIFY at the same time each day. It does not matter whether you take it with or without food. Always take the tablet with water and swallow it whole.</p>
+              <p>If you have the impression that the effect of ABILIFY is too strong or too weak, talk to your doctor or pharmacist.</p>
+              <p>Even if you feel better, do not change or discontinue the daily dose of ABILIFY without first consulting your doctor. Although ABILIFY cannot cure your condition, it can help relieve your symptoms. If your symptoms improve or disappear, it is probably because your treatment is working. ABILIFY should be taken for as long as you and your doctor believe it is helping you.</p>
+              <p>
+                  <strong>Do not</strong> give ABILIFY to anyone else. Your doctor has prescribed it for you and your condition.</p>
+              <p>ABILIFY is not for use in children under 13 years of age for the treatment of manic or mixed episodes in bipolar I disorder, or for use in children under the age of 15 years for the treatment of schizophrenia.</p>
+              <h3>Overdose</h3>
+              <div class="well">If you have taken more ABILIFY tablets than your doctor has prescribed (or if someone else has taken some of your ABILIFY tablets), contact your regional Poison Control Centre and talk to your doctor right away or go to your nearest hospital emergency department. Take the medication package with you.</div>
+              <h3>Missed Dose</h3>
+              <p>If you miss a dose, take the missed dose as soon as you remember but <strong>do not take two doses in one day.</strong>
+               </p>
+            </details>                 
+      </div>
+      <div>
+
+      <details class="span-8">
+          <summary class="background-accent">Side Effects And What To Do About Them</summary>
+        
+              <p>Like other medicines, ABILIFY can cause some side effects. These side effects are most likely to be minor and temporary. However, some may be serious and need medical attention.</p>
+              <p>Certain side effects occur more frequently in adolescent compared to adult patients, including abnormal movements, drowsiness and weight gain.</p>
+              <p>The most common side effects of ABILIFY are:</p>
+              <ul>
+                  <li>feeling of restlessness (akathisia)</li>
+                  <li>drowsiness</li>
+                  <li>shaking (tremors)</li>
+                  <li>abnormal movements</li>
+                  <li>nausea, vomiting, upset stomach</li>
+                  <li>dizziness</li>
+                  <li>constipation</li>
+                  <li>headaches</li>
+                  <li>insomnia</li>
+                  <li>anxiety</li>
+               </ul>
+              <p>The following other side effects may also happen in some people who take ABILIFY:</p>
+              <ul>
+                  <li>weight gain</li>
+                  <li>increase in the amount of sugar (glucose) in the blood (hyperglycemia). Symptoms of high blood sugar can include feeling very thirsty and/or hungry, needing to urinate more than usual, feeling weak or tired, feeling sick to your stomach, feeling confused, fruity smelling breath.</li>
+                  <li>decrease in the amount of white blood cells.</li>
+                  <li>difficulty swallowing, which may lead to aspiration and choking.</li>
+                  <li>decreased blood pressure. Symptoms of decreased blood pressure can include lightheadedness or fainting when rising too quickly from a sitting or lying position.</li>
+               </ul>
+              <p>Because some people experience sleepiness, you should avoid driving a car or operating machinery until you know how ABILIFY affects you.</p>
+              <p>Your doctor should check your body weight before starting ABILIFY and continue to monitor it for as long as you are being treated.</p>
+              <p>Your doctor should take blood tests before starting ABILIFY. These tests will monitor blood sugar, cholesterol, triglycerides and the number of infection fighting white blood cells. Your doctor should continue to monitor your blood for as long as you are being treated.</p>
+              <p>You should tell your doctor if you notice any symptoms that worry you, even if you think the problems are not connected with the medicine or are not listed here.</p>
+              <table border="1">
+                  <caption>Serious side effects, how often they happen and what to do about them</caption>
+                  <thead>
+                     <tr>
+                        <th scope="col" rowspan="1" colspan="1" id="sym">Symptom / effect </th>
+                        <th scope="col" rowspan="1" colspan="1" id="severe">Talk with your doctor or pharmacist <em>only if severe</em>
+                        </th>
+                        <th scope="col" rowspan="1" colspan="1" id="all">Talk with your doctor or pharmacist <em>in all cases</em>
+                        </th>
+                        <th scope="col" rowspan="1" colspan="1" id="stop">Stop taking drug and seek immediate emergency help</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th colspan="4" scope="rowgroup" rowspan="1" id="t1r1" headers="sym">Common</th>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1" headers="t1r2 sym">Skin Rash on its own</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t1r2 severe">✔</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t1r2 all">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t1r2 stop">&nbsp;</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1" headers="t1r3 sym">Constipation</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t1r3 severe">✔</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t1r3 all">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t1r3 stop">&nbsp;</td>
+                     </tr>
+                  </tbody>
+                  <tbody>
+                     <tr>
+                        <th colspan="4" scope="rowgroup" rowspan="1" id="t2r1" headers="sym">Uncommon</th>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1" headers="t2r2 sym">
+                           <strong>Tardive Dyskinesia:</strong> Muscle twitching or abnormal movement of your face or tongue</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r2 severe">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r2 all">✔</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r2 stop">&nbsp;</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1" headers="t2r3 sym">
+                           <strong>Stroke and Transient Ischemic Attacks:</strong> Sudden weakness or numbness of the face, arms, or legs and speech or vision problems</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r3 severe">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r3 all">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r3 stop">✔</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1" headers="t2r4 sym">
+                           <strong>Allergic Reaction:</strong> Symptoms include swelling in the mouth, tongue, face and throat, itching, rash.</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r4 severe">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r4 all">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r4 stop">✔</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1" headers="t2r5 sym">
+                           <strong>Seizure:</strong>Loss of consciousness with uncontrollable shaking</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r5 severe">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r5 all">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r5 stop">✔</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1" headers="t2r6 sym">
+                           <strong>Neuroleptic Malignant Syndrome:</strong> Pronounced muscle stiffness or inflexibility with high fever, rapid or irregular heartbeat, sweating, state of confusion or reduced consciousness</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r6 severe">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r6 all">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r6 stop">✔</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1" headers="t2r7 sym">
+                           <strong>Priapism:</strong> Long-lasting (greater than 4 hours in duration) and painful erection of the penis</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r7 severe">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r7 all">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r7 stop">✔</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="1" colspan="1" headers="t2r8 sym">
+                           <strong>Blood Clots:</strong> Swelling, pain and redness in an arm or leg that is warm to touch. You may develop sudden chest pain, difficulty breathing and heart palpitations</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r8 severe">&nbsp;</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r8 all">✔</td>
+                        <td style="text-align: center" rowspan="1" colspan="1" headers="t2r8 stop">&nbsp;</td>
+                     </tr>
+                  </tbody>
+               </table>
+              <p>
+                  <em>This is not a complete list of side effects. For any unexpected effects while taking ABILIFY, contact your doctor  pharmacist.</em>
+               </p>
+            </details>
+      </div>
+      <div>
+
+      <details class="span-8">
+          <summary class="background-accent">How To Store</summary>
+        
+              <p>ABILIFY should be stored at room temperature (15°C - 30°). Do not use ABILIFY after the expiry date which is stated on the label or carton after EXP. Keep out of the reach and sight of children.</p>
+            </details>
+      </div>
+      <div>
+
+      <details class="span-8">
+          <summary class="background-accent">Reporting Side Effects</summary>
+          <a href="form-formule-eng.php?lang=en" class="button float-right button-alert"><span class="wb-icon-exclamation"></span>Report a Side Effect</a>
+        
+              <p>You can report any suspected adverse reactions associated with the use of health products to the Canada Vigilance Program by one of the following 3 ways:</p>
+              <ul>
+                  <li>Report online at <a href="http://www.healthcanada.gc.ca/medeffect" shape="rect">www.healthcanada.gc.ca/medeffect</a>
+                  </li>
+                  <li>Call toll-free at 1-866-234-2345</li>
+                  <li>Complete a Canada Vigilance Reporting Form and:
+                  <ul>
+                        <li>Fax toll-free to 1-866-678-6789, or</li>
+                        <li>Mail to:<br clear="none">
+                        Canada Vigilance Program<br clear="none">
+                        Health Canada<br clear="none">
+                        Postal Locator 0701D<br clear="none">
+                        Ottawa, ON K1A 0K9
+                    </li>
+                     </ul>
+                  </li>
+               </ul>
+              <p>Postage paid labels, Canada Vigilance Reporting Form and the adverse reaction reporting guidelines are available on the MedEffect<sup>TM</sup> Canada Web site at:<br clear="none">
+                  <a href="http://www.healthcanada.gc.ca/medeffect" shape="rect">www.healthcanada.gc.ca/medeffect</a>
+               </p>
+              <p>
+                  <em>NOTE: Should you require information related to the management of side effects, contact your health professional. The Canada Vigilance Program does not provide medical advice.</em>
+               </p>
+            </details>
+      </div>
+      <div>
+
+      <details class="span-8">
+          <summary class="background-accent">More Information</summary>
+        
+              <p>This document plus the full product monograph, prepared for health professionals can be found at <a href="http://www.bmscanada.ca" shape="rect">www.bmscanada.ca</a> or obtained by contacting the sponsor, Bristol-Myers Squibb Canada, at 1-866-463-6267.</p>
+              <p>This leaflet was prepared by Bristol-Myers Squibb Canada.</p>
+              <p>Last revised: 27 May 2013</p>
+              <p>*ABILIFY is a TM of Otsuka Pharmaceutical Co., Ltd used under licence by Bristol-Myers Squibb Canada.</p>
+              <p>All other trademarks are the property of their respective owners</p>
+            </details>
+      </div>
+
+<h3>Information for Health Professionals</h3>
+    <div>
+      <details class="span-8">
+        <summary class="background-accent">Summary Product Information</summary>  
+          <table class="table table-hover table-bordered table-responsive">
+          <thead>
+          <tr><th>Route of Administration</th>
+          <th>Dosage Form / Strength</th>
+          <th>Nonmedicinal Ingredients</th>
+          </tr></thead>
+          <tbody>
+          <tr>
+          <td>oral</td>
+          <td>Tablet, 2 mg, 5 mg, 10 mg, 15 mg, 20 mg and 30 mg</td>
+          <td>Cornstarch, hydroxypropyl cellulose, lactose monohydrate, magnesium stearate, and microcrystalline cellulose. and coloring agents (2 mg: FD&amp;C Blue No. 2 Aluminum Lake and iron oxide Yellow; 5 mg: FD&amp;C Blue No. 2 Aluminum Lake; 10 mg and 30 mg: iron oxide red; 15 mg: iron oxide yellow)</td>
+          </tr>
+          </tbody>
+          </table>
+      </details>
+    </div>
+    <div>
+      <details class="span-8">
+        <summary class="background-accent">Indications and Clinical Use</summary> 
+          <h4>Adults</h4>
+          <h5>Schizophrenia</h5>
+          <p>ABILIFY (aripiprazole) is indicated for the treatment of schizophrenia and related psychotic disorders in adults. In controlled clinical trials, ABILIFY was found to improve both positive and negative symptoms.</p><p>
+    ABILIFY has been shown to be more effective than placebo in maintaining clinical improvement for up to 26 weeks in adults.</p>  
+          <h5>Bipolar Disorder</h5>
+          <p>ABILIFY (aripiprazole) is indicated for the treatment of manic or mixed episodes in bipolar I disorder in adults. ABILIFY may be used as acute monotherapy or cotherapy with lithium or divalproex sodium when there is an insufficient acute response to these agents alone.</p><p>
+    ABILIFY as cotherapy with lithium or divalproex sodium has been shown to be more effective than placebo plus mood stabilizer in maintaining clinical improvement for up to 1 year in adult patients with manic or mixed episodes associated with bipolar I disorder (see CLINICAL TRIALS).</p>  
+    <p>The physician who elects to use ABILIFY for extended periods should periodically re evaluate the long term usefulness of the drug for the individual patient.</p>
+      </details>
+    </div>
+    <div>
+      <details class="span-8">
+        <summary class="background-accent">Contraindications</summary>  
+          <p>ABILIFY (aripiprazole) is contraindicated in those patients with a known hypersensitivity to this drug or the excipients of the product. For a complete listing, see DOSAGE FORMS, COMPOSITION AND PACKAGING.</p>
+          <h4>WARNINGS AND PRECAUTIONS</h4>
+          <p>Increased Mortality in Elderly Patients with Dementia
+    Elderly patients with dementia treated with atypical antipsychotic drugs are at an increased risk of death compared to placebo. Analyses of thirteen placebo-controlled trials with various atypical antipsychotics (modal duration of 10 weeks) in these patients showed a mean 1.6-fold increase in the death rate in the drug-treated patients. Although the causes of death were varied, most of the deaths appeared to be either cardiovascular (e.g., heart failure, sudden death) or infectious (e.g., pneumonia) in nature (see WARNINGS AND PRECAUTIONS - Special Populations, Use in Elderly Patients with Dementia).</p>
+          <h4>General</h4>
+          <p>Body Temperature Regulation
+    Disruption of the body’s ability to reduce core body temperature has been attributed to antipsychotic agents. Appropriate care is advised when prescribing ABILIFY for patients who will be experiencing conditions which may contribute to an elevation in core body temperature, (eg, exercising strenuously, exposure to extreme heat, receiving concomitant medication with anticholinergic activity, or being subject to dehydration) (see ADVERSE REACTIONS).</p>
+          <h4>Carcinogenesis and Mutagenesis</h4>
+          <p>For animal data, see Part II: TOXICOLOGY section.</p>
+      </details>
+    </div>
+<div>
+  <details class="span-8">
+    <summary class="background-accent">Adverse Reactions</summary>  
+      <h4>Adverse Drug Reaction Overview</h4>
+      <p>Aripiprazole was evaluated for safety in 13,543 adult patients who participated in multiple-dose, clinical trials in schizophrenia, bipolar disorder, major depressive disorder, dementia of the Alzheimers type, Parkinson’s disease, and alcoholism, and who had approximately 7619 patient-years of exposure to oral aripiprazole and 749 patients with exposure to aripiprazole injection. A total of 3390 patients were treated with oral aripiprazole for at least 180 days and 1933 patients treated with oral aripiprazole had at least 1 year of exposure.</p>
+      <p>The conditions and duration of treatment with aripiprazole (monotherapy or adjunctive therapy with antidepressants or mood stabilizers) included (in overlapping categories) double-blind, comparative and noncomparative open-label studies, inpatient and outpatient studies, fixed- and flexible-dose studies, and short- and longer-term exposure.
+Aripiprazole was evaluated for safety in 202 adolescent patients (13 - 17 years of age) with schizophrenia in a 6 week placebo controlled clinical trial. Adolescent patients from this study were also treated with oral aripiprazole in uncontrolled, open label studies for more than 26 weeks (n=178) and more than 52 weeks (n=79). Treatment emergent adverse event frequencies are reported for adolescent patients, 13 - 17 years of age, with schizophrenia that were included in these studies, but the majority of patients were 15 - 17 years of age.</p><p>
+Aripiprazole was evaluated for safety in 233 pediatric and adolescent patients (10 -17 years) who participated in multiple-dose, clinical trials in bipolar I disorder. A total of 103 pediatric and adolescent patients with bipolar I disorder were treated with oral aripiprazole for more than 26 weeks. Treatment emergent adverse frequencies are reported for pediatric and adolescent patients, 10 - 17 years of age in a manic or mixed episode of bipolar I disorder, but the majority of patients were 13 - 17 years of age
+ABILIFY is not indicated for the treatment of schizophrenia in adolescent patients under 15 years or for the treatment of manic or mixed episodes of bipolar I disorder in patients under 13 years of age due to insufficient safety and efficacy data (see ADVERSE REACTIONS, CLINICAL TRIALS, Schizophrenia, Adolescents and Bipolar Disorder, Pediatric and Adolescent Patients).</p><p>
+Adverse events during exposure were obtained by collecting volunteered adverse events, as well as results of physical examinations, vital signs, weights, laboratory analyses, and ECG. Adverse events were recorded by clinical investigators using terminology of their own choosing. In the tables and tabulations that follow, MedDRA dictionary terminology has been used to classify reported adverse events into a smaller number of standardized event categories, in order to provide a meaningful estimate of the proportion of individuals reporting adverse events.</p><p>
+The stated frequencies of adverse events represent the proportion of individuals who reported at least once, a treatment-emergent adverse event of the type listed. An event was considered treatment emergent if it occurred for the first time or worsened while receiving therapy following baseline evaluation. There was no attempt to use investigator causality assessments; i.e. all events meeting the defined criteria, regardless of investigator causality are included.</p>
+      <h4>Clinical Trial Adverse Drug Reactions</h4><h4>
+      <p></p>
+      </h4><h4></h4><h4>
+      <p></p>
+  </h4></details>
+</div>
+
+<div>
+  <details class="span-8">
+    <summary class="background-accent">Dosage and Administration</summary>  
+      <p></p>
+  </details>
+</div>
+
+<div>
+  <details class="span-8">
+    <summary class="background-accent">Overdosage</summary> 
+      <p></p>
+  </details>
+</div>
+
+<div>
+  <details class="span-8">
+    <summary class="background-accent">Action and Clinical Pharmacology</summary> 
+      <p></p>
+  </details>
+</div>
+
+<div>
+  <details class="span-8">
+    <summary class="background-accent">Storage and Stability</summary>  
+      <p></p>
+  </details>
+</div>
+
+<div>
+  <details class="span-8">
+    <summary class="background-accent">Dosage Forms, Composition and Packaging</summary>  
+      <p></p>
+  </details>
+</div>
+<h3>Scientific Information</h3>
+<div>
+  <details class="span-8">
+    <summary class="background-accent">Pharmaceutical Information</summary> 
+      <p></p>
+  </details>
+</div>
+<div>
+  <details class="span-8">
+    <summary class="background-accent">Clinical Trials</summary>  
+      <p></p>
+  </details>
+</div>
+<div>
+  <details class="span-8">
+    <summary class="background-accent">Detailed Pharmacology</summary>  
+      <p></p>
+  </details>
+</div>
+<div>
+  <details class="span-8">
+    <summary class="background-accent">Toxicology</summary> 
+      <p></p>
+  </details>
+</div>
+<div>
+  <details class="span-8">
+    <summary class="background-accent">References</summary> 
+      <p></p>
+  </details>
+</div>
+
+
+        
+      </main>
+
+
+
+
+<dt>Date modified:&#32;</dt>
+<dd><time property="dateModified">2015-10-19</time></dd>
+</dl>
+</div>
+<div class="col-xs-6 text-right">
+<a href="http://www.canada.ca/en/contact/feedback.html" class="btn btn-default"><span class="glyphicon glyphicon-comment mrgn-rght-sm"></span>Feedback<span class="wb-inv"> about this web site</span></a>
+</div>
+</div>
+</main>
+<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
+<h2 class="wb-inv">About this site</h2>
+<div class="row">
+<div class="col-sm-3 col-lg-3">
+<section>
+<h3>Contact information</h3>
+<ul class="list-unstyled">
+<li><a href="#">Link 1</a></li>
+<li><a href="#">Link 2</a></li>
+<li><a href="#">Link 3</a></li>
+</ul>
+</section>
+<section>
+<h3>News</h3>
+<ul class="list-unstyled">
+<li><a href="http://news.gc.ca/web/index-en.do">Newsroom</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=1">News releases</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=3">Media advisories</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=970">Speeches</a></li>
+<li><a href="http://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=980">Statements</a></li>
+</ul>
+</section>
+</div>
+<section class="col-sm-3 col-lg-3">
+<h3>Government</h3>
+<ul class="list-unstyled">
+<li><a href="http://www.canada.ca/en/gov/system/index.html">How government works</a></li>
+<li><a href="http://www.canada.ca/en/gov/dept/index.html">Departments &amp; agencies</a></li>
+<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+<li><a href="http://www.canada.ca/en/gov/ministers/index.html">Ministers</a></li>
+<li><a href="http://www.canada.ca/en/gov/policy/index.html">Policies, regulations &amp; laws</a></li>
+<li><a href="http://www.canada.ca/en/gov/libraries/index.html">Libraries</a></li>
+<li><a href="http://www.canada.ca/en/gov/publications/index.html">Publications</a></li>
+<li><a href="http://www.canada.ca/en/gov/statistics/index.html">Statistics &amp; data</a></li>
+<li><a href="http://www.canada.ca/en/newsite.html">About Canada.ca</a></li>
+</ul>
+</section>
+<section class="col-sm-3 col-lg-3 brdr-lft">
+<h3>Transparency</h3>
+<ul class="list-unstyled">
+<li><a href="http://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+<li><a href="http://open.canada.ca/en/">Open government</a></li>
+<li><a href="http://www.canada.ca/en/transparency/disclosure.html">Proactive disclosure</a></li>
+<li><a href="http://www.canada.ca/en/transparency/terms.html">Terms &amp; conditions</a></li>
+<li><a href="http://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+</ul>
+</section>
+<div class="col-sm-3 col-lg-3 brdr-lft">
+<section>
+<h3>Feedback</h3>
+<p><a href="http://www.canada.ca/en/contact/feedback.html"><img src="./assets/feedback.png" alt="Feedback about this Web site"></a></p>
+</section>
+<section>
+<h3>Social media</h3>
+<p><a href="http://www.canada.ca/en/social/index.html"><img src="./assets/social.png" alt="Social media"></a></p>
+</section>
+<section>
+<h3>Mobile centre</h3>
+<p><a href="http://www.canada.ca/en/mobile/index.html"><img src="./assets/mobile.png" alt="Mobile centre"></a></p>
+</section>
+</div>
+</div>
+</nav>
+<div class="brand">
+<div class="container">
+<div class="row">
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-12 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="./assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="./js/wet-boew.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="./js/ie8-wet-boew2.min.js"></script>
+<![endif]-->
+<script src="./js/theme.min.js"></script>
+</body>
+</html>
