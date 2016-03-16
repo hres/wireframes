@@ -695,7 +695,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								<div role="tabpanel" class="tab-pane" id="doDrugProForm1MedIngrMain">
 									<div class="row marginTop-15">
 										<div class="col-sm-4 col-sm-offset-8">
-											<button type="submit" class="btn btn-default btn-sm full-width" id="doDrugProForm1MedIngrAdd">Add an Ingredient</button>
+											<button type="submit" class="btn btn-default btn-sm full-width" id="doDrugProForm1MedIngrAdd" onclick="addMedicalIngredient()>Add an Ingredient</button>
 										</div>
 									</div>
 									<ul id="doDrugProForm1MedIngrList" class="list-unstyled">
@@ -3030,6 +3030,22 @@ $('.btnPrevious').click(function() {
 /**For Adding Container Type **/
 var numOfContainerTypes = 1;
 var numOfContainerTypesCreated = 1;
+
+//add an ingrediet from
+var numOfIngredient = 1;
+var numOfIngredientCreated = 1;
+function addMedicalIngredient() {
+	
+	numOfIngredient++;
+	numOfIngredientCreated++;
+	var ingredientForm = $('#doDrugProForm1MedIngr1').clone(true)
+
+	ingredientForm.attr("id", "doDrugProForm1MedIngr" + numOfIngredientCreated).appendTo('#doDrugProForm1MedIngrList');	
+	var newId = "doDrugProForm1MedIngr" + numOfIngredientCreated
+	document.getElementById(newId).childNodes[1].childNodes[1].innerHTML = "Medicinal Ingredient " + numOfIngredientCreated;
+	
+
+}
 
 //doDrugProForm1LifeTypeContainer1
 function addContainerType(list) {
