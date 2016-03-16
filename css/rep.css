@@ -60,6 +60,10 @@ label.hiddenLabel {
 	text-align:center;
 }
 
+.textAlignRight {
+	text-align:right;
+}
+
 .dropdown:hover  ul.dropMenu {
 	display:block !important;
 }
@@ -232,6 +236,10 @@ text-decoration:none;
 	font-weight: normal;
 }
 
-.noPadding label {
+.noPadding  label {
 	padding: 0!important;
+}
+
+.normalLabel-11pt {
+	font-size: 11pt;
 }
