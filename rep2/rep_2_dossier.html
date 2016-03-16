@@ -689,7 +689,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									</div>
 									</div>
 									<ul class="pager">
-										<li><a href="#doDrugProForm1MedIngrMain" rel="next">Next</a></li>
+										<li><a href="#doDrugProForm1MedIngrMain" class="btnNext" rel="next">Next</a></li>
 									</ul>
 								</div>
 								<div role="tabpanel" class="tab-pane" id="doDrugProForm1MedIngrMain">
@@ -1207,8 +1207,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										</li>
 									</ul>
 									<ul class="pager">
-										<li><a href="#doDrugProForm1LifeTypeContainerCountryManu1Main" rel="prev">Previous</a></li>
-										<li><a href="#doDrugProForm1NonMedIngrMain" rel="next">Next</a></li>
+										<li><a href="#doDrugProForm1LifeTypeContainerCountryManu1Main" class="btnPrevious" rel="prev">Previous</a></li>
+										<li><a href="#doDrugProForm1NonMedIngrMain" class="btnNext" rel="next">Next</a></li>
 									</ul>
 								</div>
 								<div role="tabpanel" class="tab-pane" id="doDrugProForm1NonMedIngrMain">
@@ -2138,8 +2138,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									</ul>-->
 
 									<ul class="pager">
-										<li><a href="#doDrugProForm1NonMedIngrMain" rel="prev">Previous</a></li>
-										<li><a href="#doDrugProForm1AnimalHumanSrcMain" rel="next">Next</a></li>
+										<li><a href="#doDrugProForm1NonMedIngrMain" class="btnPrevious" rel="prev">Previous</a></li>
+										<li><a href="#doDrugProForm1AnimalHumanSrcMain" class="btnNext" rel="next">Next</a></li>
 									</ul>
 								</div>
 								<div role="tabpanel" class="tab-pane" id="doDrugProForm1AnimalHumanSrcMain">
@@ -2239,8 +2239,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										</div>
 									</div>
 									<ul class="pager">
-										<li><a href="#doDrugProForm1AnimalHumanSrc" rel="prev">Previous</a></li>
-										<li><a href="#doDrugProForm1RouteOfAdmMain" rel="next">Next</a></li>
+										<li><a href="#doDrugProForm1AnimalHumanSrc" class="btnPrevious" rel="prev">Previous</a></li>
+										<li><a href="#doDrugProForm1RouteOfAdmMain" class="btnNext" rel="next">Next</a></li>
 									</ul>
 								</div>
 								<div role="tabpanel" class="tab-pane" id="doDrugProForm1RouteOfAdmMain">
@@ -2907,9 +2907,19 @@ function deleteRefProduct(i) {
 	}
 }
 
+/**FOR TABS - NAVIGATION **/
+
 $('#myTabs a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
+});
+
+$('.btnNext').click(function() {
+	$('.nav-tabs > .active').next('li').find('a').trigger('click');
+});
+
+$('.btnPrevious').click(function() {
+	$('.nav-tabs > .active').prev('li').find('a').trigger('click');
 });
 
 /**For Adding Container Type **/
@@ -3084,6 +3094,24 @@ function delNonMedIngredient(delBut, list) {
 	var closestLi = $(delBut).closest('li.nonMedIngrLI');
 	var toRemoveIndex = $(closestLi).index();
 	$(closestLi).remove();
+	numOfNonIngredient--;
+	var counter = numOfNonIngredient;
+	
+	var totalItems = $(list).find('li.nonMedIngrLI');
+	for (var n = counter-1; n >= toRemoveIndex; n--) {
+		var text = $(totalItems[n]).find('summary')[0].innerHTML;
+		var newStr = text.replace('Ingredient ' + (n+2), 'Ingredient ' + (n+1));
+		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
+	}
+}
+
+function copyNonMedIngredient(copyBut, list) {
+	var closestLi = $(delBut).closest('li.nonMedIngrLI');
+	var toRemoveIndex = $(closestLi).index();
+	var copyLi = closestLi;
+	numOfNonIngredientCreated++;
+	//to do
+	$(list).eq(toRemoveIndex).after(copyLi);
 	numOfNonIngredient--;
 	var counter = numOfNonIngredient;
 	
