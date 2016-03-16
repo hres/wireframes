@@ -3042,7 +3042,9 @@ function addMedicalIngredient() {
 
 	ingredientForm.attr("id", "doDrugProForm1MedIngr" + numOfIngredientCreated).appendTo('#doDrugProForm1MedIngrList');	
 	var newId = "doDrugProForm1MedIngr" + numOfIngredientCreated
-	document.getElementById(newId).childNodes[1].childNodes[1].innerHTML = "Medicinal Ingredient " + numOfIngredientCreated;
+	var btn = '<button class="btn btn-danger btn-xs deleteRef" onclick="delContainerType(this, doDrugProForm1LifeTypeList)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button>'
+	document.getElementById(newId).childNodes[1].childNodes[1].innerHTML = "Medicinal Ingredient " + numOfIngredientCreated + " " + btn;
+
 	
 
 }
