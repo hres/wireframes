@@ -3042,7 +3042,7 @@ function addMedicalIngredient() {
 
 	ingredientForm.attr("id", "doDrugProForm1MedIngr" + numOfIngredientCreated).appendTo('#doDrugProForm1MedIngrList');	
 	var newId = "doDrugProForm1MedIngr" + numOfIngredientCreated
-	var btn = '<button class="btn btn-danger btn-xs deleteRef" onclick="delContainerType(this, doDrugProForm1LifeTypeList)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button>'
+	var btn = '<button class="btn btn-danger btn-xs deleteRef" onclick="delIngr(this, doDrugProForm1LifeTypeList)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button>'
 	document.getElementById(newId).childNodes[1].childNodes[1].innerHTML = "Medicinal Ingredient " + numOfIngredientCreated + " " + btn;
 
 	
@@ -3068,6 +3068,21 @@ function delContainerType(delBut, list) {
 	$(closestLi).remove();
 	numOfContainerTypes--;
 	var counter = numOfContainerTypes;
+	
+	var totalItems = $(list).find('li');
+	for (var n = counter-1; n >= toRemoveIndex; n--) {
+		var text = $(totalItems[n]).find('summary')[0].innerHTML;
+		var newStr = text.replace('Type ' + (n+2), 'Type ' + (n+1));
+		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
+	}
+}
+
+function delIngr(delBut, list) {
+	var closestLi = $(delBut).closest('li');
+	var toRemoveIndex = $(closestLi).index();
+	$(closestLi).remove();
+	numOfIngredientCreated--;
+	var counter = numOfIngredientCreated;
 	
 	var totalItems = $(list).find('li');
 	for (var n = counter-1; n >= toRemoveIndex; n--) {
