@@ -2358,7 +2358,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										</div>
 										<div id="doDrugProForm1RouteOfAdmRow1" class="row">
 											<div class="col-sm-3 form-group" id="doDrugProForm1RouteOfAdm1Grp">
-												<label class="wb-inv" for="doDrugProForm1RouteOfAdm1">DIN</label>
+												<label class="control-label normalLabel-11pt" for="doDrugProForm1RouteOfAdm1">Route of Administration 1</label>
 												<div class="input-group">
 													<select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1" class="form-control input-sm col-sm-2">
 														<option label=" "></option>
@@ -3210,7 +3210,7 @@ function delNonMedIngredient(delBut, list) {
 	}
 }
 
-function copyNonMedIngredient(copyBut, list) {
+/*function copyNonMedIngredient(copyBut, list) {
 	var closestLi = $(delBut).closest('li.nonMedIngrLI');
 	var toRemoveIndex = $(closestLi).index();
 	var copyLi = closestLi;
@@ -3227,7 +3227,7 @@ function copyNonMedIngredient(copyBut, list) {
 		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
 	}
 }
-
+*/
 /**For Adding Material (Animal/Human Source) **/
 var numOfMaterials = 0;
 var numOfMaterialsCreated = 0;
@@ -3268,7 +3268,7 @@ function addRouteOfAdm(but, drugFormId) {
 	routeOfAdmCount = $('#' + drugFormId).find('div.row div.col-sm-3').length;
   }
   
-  var defaultRouteOfAdm = '<div class="col-sm-3 form-group" id="doDrugProForm1RouteOfAdm1Grp"><label class="wb-inv" for="doDrugProForm1RouteOfAdm1">DIN</label><div class="input-group"><select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1" class="form-control input-sm col-sm-2"><option label=" "></option><option value="1">Block/Infiltration</option><option value="2">Buccal</option><option value="3">Dental</option><option value="4">Dialysis</option><option value="5">Epidural</option><option value="6">Inhalation</option><option value="7">Intra-Arterial</option><option value="8">Intra-Articular</option><option value="9">Intrabursal</option><option value="10">Intradermal</option><option value="11">Intramammary</option><option value="12">Intraocular</option><option value="13">Intraperitoneal</option><option value="14">Intrathecal</option><option value="15">Intratracheal</option><option value="16">Intravascular</option><option value="17">Intravenous</option><option value="18">Intravitreal</option><option value="19">Irrigation</option><option value="20">Nasal</option><option value="21">Ophthalmic</option><option value="22">Oral</option><option value="23">Otic</option><option value="24">Rectal</option><option value="25">Subcutaneous</option><option value="26">Sublingual</option><option value="27">Topical</option><option value="28">Transdermal</option><option value="29">Urethral</option><option value="30">Vaginal</option><option value="31">Other</option></select><span class="input-group-btn"><button class="btn btn-danger btn-sm" id="doDrugProForm1RouteOfAdm1DelBut" type="button" onclick="deleteRouteOfAdm(this, \'doDrugProForm1RouteOfAdm\')"><span class="glyphicon glyphicon-remove"></span></button></span></div></div>';
+  var defaultRouteOfAdm = '<div class="col-sm-3 form-group" id="doDrugProForm1RouteOfAdm1Grp"><label class="control-label normalLabel-11pt" for="doDrugProForm1RouteOfAdm1">Route of Administration 1</label><div class="input-group"><select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1" class="form-control input-sm col-sm-2"><option label=" "></option><option value="1">Block/Infiltration</option><option value="2">Buccal</option><option value="3">Dental</option><option value="4">Dialysis</option><option value="5">Epidural</option><option value="6">Inhalation</option><option value="7">Intra-Arterial</option><option value="8">Intra-Articular</option><option value="9">Intrabursal</option><option value="10">Intradermal</option><option value="11">Intramammary</option><option value="12">Intraocular</option><option value="13">Intraperitoneal</option><option value="14">Intrathecal</option><option value="15">Intratracheal</option><option value="16">Intravascular</option><option value="17">Intravenous</option><option value="18">Intravitreal</option><option value="19">Irrigation</option><option value="20">Nasal</option><option value="21">Ophthalmic</option><option value="22">Oral</option><option value="23">Otic</option><option value="24">Rectal</option><option value="25">Subcutaneous</option><option value="26">Sublingual</option><option value="27">Topical</option><option value="28">Transdermal</option><option value="29">Urethral</option><option value="30">Vaginal</option><option value="31">Other</option></select><span class="input-group-btn"><button class="btn btn-danger btn-sm" id="doDrugProForm1RouteOfAdm1DelBut" type="button" onclick="deleteRouteOfAdm(this, \'doDrugProForm1RouteOfAdm\')"><span class="glyphicon glyphicon-remove"></span></button></span></div></div>';
 	var replacedRouteOfAdm;
 	var newRouteOfAdm;
   if (routeOfAdmCount == 0) {
@@ -3287,6 +3287,14 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
   //replace id of defautDIN based on the number of current DINs
   replacedRouteOfAdm = replaceAll(defaultRouteOfAdm, 'doDrugProForm1RouteOfAdm' + '1', drugFormId + (parseInt(routeOfAdmLastIndexId)+1));
   newRouteOfAdm = replacedRouteOfAdm.replace('doDrugProForm1RouteOfAdm', drugFormId);
+  //newRouteOfAdm = newRouteOfAdm.replace('Administration 1', 'Administration ' + (parseInt(routeOfAdmLastIndexId)+1));
+  
+  var numOfDINInRow = 0;
+  $('#' + drugFormId).find('div.row:eq(' + routeOfAdmRowCount + ')').each(function() {
+	numOfDINInRow = $(this).find('div.col-sm-3').length;
+  });
+  
+  newRouteOfAdm = newRouteOfAdm.replace('Administration 1', 'Administration ' + (((routeOfAdmRowCount-1)*4) + (numOfDINInRow+1)));
   }
   //get number of current DINs in the last row, and check if there is a need to create new row
   var lastRow = $('#' + drugFormId + 'Row' + routeOfAdmRowCount);
@@ -3308,10 +3316,12 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
   function deleteRouteOfAdm(delBut, drugFormId) {
 	  //get the parent div of but (i.e. the currentRow where but belongs to)
 	  var currentDiv = $(delBut).parent().closest('div.col-sm-3');
+	  var deletedDivIndex = $(currentDiv).index();
 	  //get row where currentDiv belonged to
 	  var currentRow = $(currentDiv).parent().closest('div.row');
 	  //get index of currentRow in the parent div raEnrolmentRel1DIN (which contains all the DINs)
 	  var currentRowIndex = $(currentRow).index(); //NOTE: is zero-based
+	  var deletedRowIndex = currentRowIndex;
 	  //get currentDiv id's
 	  var currentDivId = $(currentDiv).find('select').prop('id');
 	  var currentDivIdNum = currentDivId.substring(currentDivId.lastIndexOf("Adm") + 3);
@@ -3350,6 +3360,30 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 		//raDINRowCount--;
 		}
 	}
+	
+	//rename labels
+	//get DIN at original position of DIN that was removedItemIndex
+	//var newDINAtRemovedPos = $('#' + drugFormId + ' div.row:eq(' + deletedRowIndex + ') div.col-sm-3:eq(' + deletedDivIndex + ')');
+	
+	var newLabelId = (deletedRowIndex-1)*4 + (deletedDivIndex+1);
+	var rowIndex = deletedRowIndex;
+	var rowDINCount = 0;
+	//var rowIndex = deletedRowIndex;
+	while (rowIndex <= (raDINRowCount-1)) {
+		//if (deletedDivIndex < 4) {
+			$('#' + drugFormId + ' div.row:eq(' + rowIndex + ')').each(function(i) {
+				rowDINCount = $(this).find('div.col-sm-3').length;
+			});
+			for (var k = deletedDivIndex; k < rowDINCount; k++) {
+				var DINToChangeLabel = $('#' + drugFormId + ' div.row:eq(' + rowIndex + ') div.col-sm-3:eq(' + k + ')');
+				$(DINToChangeLabel).find('label').text('Route Of Administration ' + newLabelId);
+				newLabelId++;
+			}
+		//}
+		rowIndex++;
+		deletedDivIndex = 0;
+	}
+	
 }
 
 function changeMe(chk, div) {
