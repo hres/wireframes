@@ -249,3 +249,9 @@ text-decoration:none;
 	font-size: 15px;
 	top: 18%;
 }
+
+/*EXAMPLE - to show prepopulated fields*/
+.prePopulate {
+	border-color: #F08080;
+	border-width: medium;
+}
