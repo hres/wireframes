@@ -84,6 +84,7 @@ label.hiddenLabel {
 
 .dropdown > .dropdown-menu {
 	margin-top: 0px;
+	right: 0;
 }
 
 .dropdown-submenu>.dropdown-menu{
@@ -242,4 +243,9 @@ text-decoration:none;
 
 .normalLabel-11pt {
 	font-size: 11pt;
+}
+
+.smallIconAnchor {
+	font-size: 15px;
+	top: 18%;
 }
