@@ -61,7 +61,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </section>
 <div class="row">
 <div class="brand col-xs-8 col-sm-9 col-sm-6">
-<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="../assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
+<a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="./assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
 </div>
 <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
 <h2>Search and menus</h2>
@@ -88,7 +88,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </section>
 </div>
 </div>
-<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-fetch="../ajax/sitemenu-en.html" typeof="SiteNavigationElement">
+<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-fetch="./ajax/sitemenu-en.html" typeof="SiteNavigationElement">
 <h2 class="wb-inv">Topics menu</h2>
 <div class="container nvbar">
 <div class="row">
@@ -505,7 +505,24 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<!-- </form> -->
 						</div>
 				</div>
-				<h5>Company Representative Information:</h5>
+				<div class="row">
+					<div class="col-sm-4">
+						<h5>Company Representative Information:</h5>
+					</div>
+					<div class="col-sm-5 col-sm-offset-1">
+						<p style="color: #F08080" class="boldFont">Same as Main Contact Information (From Step 1a)?</p>
+					</div>
+					<div class="col-sm-2">
+						<fieldset>
+							<div class="radio-inline">
+								<label for="coEnrolmentManuCompRepSameAsMain1"><input type="radio" onclick="prePopulate(['coEnrolmentManuCompRepInfo'], 'true')" name="coEnrolmentManuCompRepSameAsMain" value="1" id="coEnrolmentManuCompRepSameAsMain1" />&#160;&#160;Yes</label>
+							</div>
+							<div class="radio-inline">
+								<label for="coEnrolmentManuCompRepSameAsMain2"><input type="radio"  onclick="prePopulate(['coEnrolmentManuCompRepInfo'], 'false')" name="coEnrolmentManuCompRepSameAsMain" value="2" id="coEnrolmentManuCompRepSameAsMain2" />&#160;&#160;No</label>
+							</div>
+						</fieldset>
+					</div>
+				</div>
 				<div id="coEnrolmentManuCompRepInfo" class="wb-frmvld well well-sm">
 						<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 						<div class="row">
@@ -671,12 +688,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</div>	
 				</div>
+			
 				<!-- </div> -->
 				<div class="blackBorder">
 			<div class="row" id="coEnrolRegMailCompanyRepOptions2">
 			<div class="">
 				<div class="col-sm-8">
-				<p>Same as Manufacturer / Sponsor Company Representative information?</p>
+				<p>Manufacturer / Sponsor Company Representative information - Same as Main Contact Information (From Step 1a)? </p>
 				</div>
 				<div class="col-sm-4">
 				<fieldset>
@@ -939,7 +957,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="blackBorder">
 			<div class="row" id="coEnrolBillingCompanyRepOptions">
 				<div class="col-sm-8">
-				<p>Same as Manufacturer / Sponsor Company Representative information?</p>
+				<p>Manufacturer / Sponsor Company Representative information - Same as Main Contact Information (From Step 1a)?</p>
 				</div>
 				<div class="col-sm-4">
 				<fieldset>
@@ -1114,15 +1132,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <div class="col-sm-3 col-lg-3 brdr-lft">
 <section>
 <h3>Feedback</h3>
-<p><a href="http://www.canada.ca/en/contact/feedback.html"><img src="../assets/feedback.png" alt="Feedback about this Web site"></a></p>
+<p><a href="http://www.canada.ca/en/contact/feedback.html"><img src="./assets/feedback.png" alt="Feedback about this Web site"></a></p>
 </section>
 <section>
 <h3>Social media</h3>
-<p><a href="http://www.canada.ca/en/social/index.html"><img src="../assets/social.png" alt="Social media"></a></p>
+<p><a href="http://www.canada.ca/en/social/index.html"><img src="./assets/social.png" alt="Social media"></a></p>
 </section>
 <section>
 <h3>Mobile centre</h3>
-<p><a href="http://www.canada.ca/en/mobile/index.html"><img src="../assets/mobile.png" alt="Mobile centre"></a></p>
+<p><a href="http://www.canada.ca/en/mobile/index.html"><img src="./assets/mobile.png" alt="Mobile centre"></a></p>
 </section>
 </div>
 </div>
@@ -1134,7 +1152,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
 </div>
 <div class="col-xs-6 col-sm-12 text-right">
-<object type="image/svg+xml" tabindex="-1" role="img" data="../assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+<object type="image/svg+xml" tabindex="-1" role="img" data="./assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
 </div>
 </div>
 </div>
