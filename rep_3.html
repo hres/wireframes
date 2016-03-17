@@ -177,13 +177,28 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="panel-heading">
 					<h3 class="panel-title">
 						<div class="row">
-							<div class="col-sm-7">
-								<h4>Authorized Official Information</h4>
-							</div>
-							<div class="col-sm-5">
+							<div class="col-sm-6 col-sm-offset-6">
 								<div class="checkbox" id="enrolAttestAuthSameAs">
 									<label class="control-label" for="enrolAttestAuthSameAsChk" ><input id="enrolAttestAuthSameAsChk" type="checkbox" value="" onclick="ShowHideDivGen(enrolAttestAuthSameAsChk, attestationStep3)"/> Same Official as uploaded Regulatory Activity (RA)</label>
 								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<h4>Authorized Official Information</h4>
+							</div>
+							<div class="col-sm-4">
+								<p>Same as Main Contact (From Step 1a)?</p>
+							</div>
+							<div class="col-sm-2">
+								<fieldset>
+									<div class="radio-inline">
+										<label for="enrolAttestSameAsMain1"><input type="radio" onclick="prePopulate(['attestationStep3'], 'true');alert('Pre-populate data into the fields below')" name="enrolAttestSameAsMain" value="1" id="enrolAttestSameAsMain1" />&#160;&#160;Yes</label>
+									</div>
+									<div class="radio-inline">
+										<label for="enrolAttestSameAsMain2"><input type="radio"  onclick="prePopulate(['attestationStep3'], 'false');alert('Remove pre-populated data from the fields below')" name="enrolAttestSameAsMain" value="2" id="enrolAttestSameAsMain2" />&#160;&#160;No</label>
+									</div>
+								</fieldset>
 							</div>
 						</div>
 					</h3>
