@@ -96,3 +96,25 @@ function changeNavPills(navPills, txtToChangeTo) {
 		}
 	});
 }
+
+/**Sample - to display fields to pre-populate**/
+
+function prePopulate(array, bolToPopulate) {
+	if (array.length > 0) {
+		for (var k = 0; k < array.length; k++) {
+			var children = $('#' + array[k]).find('input:text, select');
+			for (var i = 0; i < children.length; i++) {
+				if (bolToPopulate == 'true') {
+					$(children[i]).addClass('prePopulate');
+				} else {
+					$(children[i]).removeClass('prePopulate');
+				}
+			}
+		}
+		if (bolToPopulate == 'true') {
+			alert('Pre-populate data into the fields below');
+		} else {
+			alert('Remove pre-populated data from the fields below');
+		}
+	}
+}
