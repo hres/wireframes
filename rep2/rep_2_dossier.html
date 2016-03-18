@@ -740,7 +740,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 														</div>
 														<div class="col-sm-3">
 															<label for="doDrugProForm1MedIngr1AniHumanSrc" class="control-label">Animal/Human Source?</label>
-															<select class="form-control input-sm" name="doDrugProForm1MedIngr1AniHumanSrc" id="doDrugProForm1MedIngr1AniHumanSrc" onchange="checkAppendixSelection()">
+															<select class="form-control input-sm" name="doDrugProForm1MedIngr1AniHumanSrc" id="doDrugProForm1MedIngr1AniHumanSrc" onchange="checkAppendixSelection(this)">
 																<option label=" "></option>
 																<option value="1">Yes</option>
 																<option value="2">No</option>
@@ -2946,18 +2946,25 @@ function checkSourceTypeSelection() {
 	}
 
 }
-// appendix 4
-function checkAppendixSelection() {
-	var obj = document.getElementsByName('doDrugProForm1MedIngr1AniHumanSrc')[0];
-	var appendix4 = document.getElementById('appendix4');
 
+
+// appendix 4
+
+function checkAppendixSelection(animalHumanSrc) {
+	var me= $(animalHumanSrc).parent().parent().parent().parent().parent().attr("id");
+	
+	var selections = $(animalHumanSrc).attr("name");
+	var obj = document.getElementsByName(selections)[0];
 	if (obj.value == '1') {
-		appendix4.style.display = "block";
+
+		$("#"+me).find("#appendix4").css('display', 'block');
 	} 
 	else {
-		appendix4.style.display = "none";
+		$("#"+me).find("#appendix4").css('display', 'none');
 	}
 } 
+
+
 // appendix 5
 function checkAppendix5Selection() {
 	var obj = document.getElementsByName('doDrugProForm1RouteOfAdmScheduleAClaim')[0];
