@@ -2918,16 +2918,17 @@ function checkOriginTypeSelection() {
 
 // human or/and animal
  function OnChangeSourceCheckbox (checkbox) {
-
-	var animalTypeInfo = document.getElementById('animalTypeInfo');
-	var animalTypeInfo2 = document.getElementById('animalTypeInfo2');
+ 	var animalTypeInfo = $(checkbox).parent().parent().parent().parent().parent().parent().attr("id");	
+	
+	
     if (checkbox.checked) {
-      	animalTypeInfo.style.display = "block";
-	animalTypeInfo2.style.display = "block";
+    	$("#"+animalTypeInfo).find("#animalTypeInfo").css('display', 'block');
+		$("#"+animalTypeInfo).find("#animalTypeInfo2").css('display', 'block');
+  
     }
     else {
-      	animalTypeInfo.style.display = "none";
-	animalTypeInfo2.style.display = "none";
+      	$("#"+animalTypeInfo).find("#animalTypeInfo").css('display', 'none');
+		$("#"+animalTypeInfo).find("#animalTypeInfo2").css('display', 'none');
     }
 }
 
@@ -2937,6 +2938,8 @@ function checkSourceTypeSelection() {
 	var animalTypeInfo2 = document.getElementById('animalTypeInfo2');
 
 	if (obj.value == 'animal') {
+		$("#"+me).find("#animalTypeInfo").css('display', 'block');
+		$("#"+me).find("#animalTypeInfo2").css('display', 'block');
 		animalTypeInfo.style.display = "block";
 		animalTypeInfo2.style.display = "block";
 	} 
@@ -2951,14 +2954,13 @@ function checkSourceTypeSelection() {
 // appendix 4
 
 function checkAppendixSelection(animalHumanSrc) {
-	var me= $(animalHumanSrc).parent().parent().parent().parent().parent().attr("id");
-	
+	var me= $(animalHumanSrc).parent().parent().parent().parent().parent().attr("id");	
 	var selections = $(animalHumanSrc).attr("name");
+
 	var obj = document.getElementsByName(selections)[0];
 	if (animalHumanSrc.value == '1') {
 
 		$("#"+me).find("#appendix4").css('display', 'block');
-	
 	} 
 	else {
 		$("#"+me).find("#appendix4").css('display', 'none');
