@@ -2804,117 +2804,7 @@ var canRefProductCounter = 1; //keeps track of number of current referenced prod
 var numOfRefProductsCreated = 1;
 
 //check origin type
-function checkOriginTypeSelection() {
-	var obj = document.getElementsByName('originType')[0];
-	var nervousSystem = document.getElementById('nervousSystem');
-	var digestiveSystem = document.getElementById('digestiveSystem');
-	var reproductiveAndUrinarySystem = document.getElementById('reproductiveAndUrinarySystem');
-	var cardioRespiratorySystem = document.getElementById('cardioRespiratorySystem');
-	var immuneSystem = document.getElementById('immuneSystem');
-	var skinAndGlandularSystem = document.getElementById('skinAndGlandularSystem');
-	var musculoSkeletalSystem = document.getElementById('musculoSkeletalSystem');
-	var otherSystem = document.getElementById('otherSystem');
 
-	if(obj.value == 'none' ){
-		nervousSystem.style.display = "none";
-		digestiveSystem.style.display = "none";
-		reproductiveAndUrinarySystem.style.display = "none";
-		cardioRespiratorySystem.style.display = "none";
-		immuneSystem.style.display = "none";
-		skinAndGlandularSystem.style.display = "none";
-		musculoSkeletalSystem.style.display = "none";
-		otherSystem.style.display = "none";
-	}
-	else if(obj.value == 'nervous' ){
-		nervousSystem.style.display = "block";
-		digestiveSystem.style.display = "none";
-		reproductiveAndUrinarySystem.style.display = "none";
-		cardioRespiratorySystem.style.display = "none";
-		immuneSystem.style.display = "none";
-		skinAndGlandularSystem.style.display = "none";
-		musculoSkeletalSystem.style.display = "none";
-		otherSystem.style.display = "none";
-	} 
-	else if(obj.value == 'digestive'){
-		nervousSystem.style.display = "none";
-		digestiveSystem.style.display = "block";
-		reproductiveAndUrinarySystem.style.display = "none";
-		cardioRespiratorySystem.style.display = "none";
-		immuneSystem.style.display = "none";
-		skinAndGlandularSystem.style.display = "none";
-		musculoSkeletalSystem.style.display = "none";
-		otherSystem.style.display = "none";
-	}
-	else if(obj.value == 'reproductiveAndUrinary'){
-		nervousSystem.style.display = "none";
-		digestiveSystem.style.display = "none";
-		reproductiveAndUrinarySystem.style.display = "block";
-		cardioRespiratorySystem.style.display = "none";
-		immuneSystem.style.display = "none";
-		skinAndGlandularSystem.style.display = "none";
-		musculoSkeletalSystem.style.display = "none";
-		otherSystem.style.display = "none";
-	}
-	else if(obj.value == 'cardioRespiratory') {
-		nervousSystem.style.display = "none";
-		digestiveSystem.style.display = "none";
-		reproductiveAndUrinarySystem.style.display = "none";
-		cardioRespiratorySystem.style.display = "block";
-		immuneSystem.style.display = "none";
-		skinAndGlandularSystem.style.display = "none";
-		musculoSkeletalSystem.style.display = "none";
-		otherSystem.style.display = "none";
-	}
-	else if(obj.value == 'immune') {
-		nervousSystem.style.display = "none";
-		digestiveSystem.style.display = "none";
-		reproductiveAndUrinarySystem.style.display = "none";
-		cardioRespiratorySystem.style.display = "none";
-		immuneSystem.style.display = "block";
-		skinAndGlandularSystem.style.display = "none";
-		musculoSkeletalSystem.style.display = "none";
-		otherSystem.style.display = "none";
-	}
-	else if (obj.value == 'skinAndGlandular'){
-		nervousSystem.style.display = "none";
-		digestiveSystem.style.display = "none";
-		reproductiveAndUrinarySystem.style.display = "none";
-		cardioRespiratorySystem.style.display = "none";
-		immuneSystem.style.display = "none";
-		skinAndGlandularSystem.style.display = "block";
-		musculoSkeletalSystem.style.display = "none";
-		otherSystem.style.display = "none";
-	} 
-	else if (obj.value == 'musculoSkeletal') {
-		nervousSystem.style.display = "none";
-		digestiveSystem.style.display = "none";
-		reproductiveAndUrinarySystem.style.display = "none";
-		cardioRespiratorySystem.style.display = "none";
-		immuneSystem.style.display = "none";
-		skinAndGlandularSystem.style.display = "none";
-		musculoSkeletalSystem.style.display = "block";
-		otherSystem.style.display = "none";
-	}
-	else if (obj.value == 'other'){
-		nervousSystem.style.display = "none";
-		digestiveSystem.style.display = "none";
-		reproductiveAndUrinarySystem.style.display = "none";
-		cardioRespiratorySystem.style.display = "none";
-		immuneSystem.style.display = "none";
-		skinAndGlandularSystem.style.display = "none";
-		musculoSkeletalSystem.style.display = "none";
-		otherSystem.style.display = "block";
-	}
-	else {
-		nervousSystem.style.display = "none";
-		digestiveSystem.style.display = "none";
-		reproductiveAndUrinarySystem.style.display = "none";
-		cardioRespiratorySystem.style.display = "none";
-		immuneSystem.style.display = "none";
-		skinAndGlandularSystem.style.display = "none";
-		otherSystem.style.display = "none";
-	}
-}
 
 // human or/and animal
  function OnChangeSourceCheckbox (checkbox) {
@@ -2924,7 +2814,6 @@ function checkOriginTypeSelection() {
     if (checkbox.checked) {
     	$("#"+animalTypeInfo).find("#animalTypeInfo").css('display', 'block');
 		$("#"+animalTypeInfo).find("#animalTypeInfo2").css('display', 'block');
-  
     }
     else {
       	$("#"+animalTypeInfo).find("#animalTypeInfo").css('display', 'none');
@@ -3047,7 +2936,8 @@ function addMedicalIngredient() {
 	
 	numOfIngredient++;
 	numOfIngredientCreated++;
-	var ingredientForm = $('#doDrugProForm1MedIngr1').clone(true)
+	var ingredientForm = $('#doDrugProForm1MedIngr1').clone();
+	ingredientForm.find('input[type=text]').val('');
 
 	ingredientForm.attr("id", "doDrugProForm1MedIngr" + numOfIngredientCreated).appendTo('#doDrugProForm1MedIngrList');	
 	var newId = "doDrugProForm1MedIngr" + numOfIngredientCreated
