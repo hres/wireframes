@@ -2955,9 +2955,10 @@ function checkAppendixSelection(animalHumanSrc) {
 	
 	var selections = $(animalHumanSrc).attr("name");
 	var obj = document.getElementsByName(selections)[0];
-	if (obj.value == '1') {
+	if (animalHumanSrc.value == '1') {
 
 		$("#"+me).find("#appendix4").css('display', 'block');
+	
 	} 
 	else {
 		$("#"+me).find("#appendix4").css('display', 'none');
