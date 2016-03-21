@@ -165,6 +165,11 @@ text-decoration:none;
 	max-height: 150px;
 }
 
+.tabs-full-min {
+	height: 1cm;
+	max-height: 1cm;
+}
+
 .normalLabel {
 	font-weight: normal;
 	font-size: 10pt;
@@ -254,4 +259,45 @@ text-decoration:none;
 .prePopulate {
 	border-color: #F08080;
 	border-width: medium;
+}
+
+/**For FULL TABS - using WET4 Tabbed Interface **/
+
+.full-tabs  ul {
+	display: table;
+	width: 100%;
+	table-layout:fixed;
+}
+
+.full-tabs ul li:not(.list-group-item) {
+	float: none;
+	display:table-cell;
+	background-color: #ffffff!important;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom: 1px solid #ccc;
+}
+
+.full-tabs ul li:not(.list-group-item) a {
+	width: 100%!important;
+	color: #000;
+	font-weight: bold;
+}
+.full-tabs ul li.active:not(.list-group-item) {
+	background-color: #249ED7!important;
+}
+
+
+.full-tabs ul li.active:not(.list-group-item)  a {
+	border-top:none!important;
+	border-bottom:none;
+	color: #fff;
+}
+
+.displayNONE {
+	display:none!important;
+}
+
+.displayBLOCK {
+	display:block !important;
 }
