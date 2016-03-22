@@ -159,11 +159,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row" id="rtInitialSeqDiv" style="display:none">
 					<div class="col-sm-4">
 						<div class="form-group">
-							<label for="rtEnrolmentInitialSeq" class="control-label">Is this transaction an initial sequence?</label>
+							<label for="rtEnrolmentInitialSeq" class="control-label">Is this transaction the first sequence?</label>
 						</div>
 					</div>
 					<div class="col-sm-2">
-						<select class="form-control input-sm" name="rtEnrolmentInitialSeq" id="rtEnrolmentInitialSeq" onchange="checkSelectShowHide(this, [rtInitalSeq], ['1'])">
+						<select class="form-control input-sm" name="rtEnrolmentInitialSeq" id="rtEnrolmentInitialSeq" onchange="checkSelectShowHide(this, [rtInitalSeq], ['0', '2'])">
 							<option label=" "></option>
 							<option value="1">Yes</option>
 							<option value="2">No</option>
@@ -213,7 +213,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<thead>
 							<th class="col-sm-1 boldFont">Sequence No.</th>
 							<th class="col-sm-2 boldFont">Date Field</th>
-							<th class="col-sm-1 boldFont" style="width:10%">Control No.</th>
+							<th class="col-sm-1 boldFont">Control No.</th>
 							<th class="col-sm-7 boldFont">Sequence Description</th>
 							<th class="col-sm-1 boldFont noBorder"></th>
 						</thead>
@@ -229,7 +229,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									<input class="form-control input-sm" type="date" id="rtEctd1DateFiled" name="rtEctd1DateFiled" data-rule-dateiso="true"/>
 									</div>
 								</td>
-								<td class="col-sm-1" style="width:10%">
+								<td class="col-sm-1">
 									<label class="control-label hiddenLabel" for="rtEctd1ControlNum">Control No.</label>
 									<input type="text" class="form-control input-sm full-width" id="rtEctd1ControlNum" maxlength="6"/>
 								</td>
@@ -253,7 +253,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>All pre-submission meetings</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Minutes of Meeting, mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
@@ -264,13 +264,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>ANDS</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText" >Cancellation Letter</a></li>
+															<li><a class="uploadText" >Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect">Response to BE Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect">Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
@@ -289,15 +289,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>DINA</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Change to DIN</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Pre-Submission Meeting Package</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Change to DIN</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Pre-Submission Meeting Package</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li>
@@ -306,21 +306,21 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect">Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>DINB</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Change to DIN</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Pre-Submission Meeting Package</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Change to DIN</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Pre-Submission Meeting Package</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li>
@@ -332,20 +332,20 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>EUNDS</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li>
@@ -355,20 +355,20 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>EUSNDS</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li>
@@ -378,32 +378,32 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>Level III</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Year, list of change number (for example: 2012, 15, 19a,….)</a></li>
+															<li><a class="uploadText">Year, list of change number (for example: 2012, 15, 19a,….)</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>NC</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Post NOC Data</a></li>
-															<li><a >Pre-Submission Meeting Package</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Post NOC Data</a></li>
+															<li><a class="uploadText">Pre-Submission Meeting Package</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to NOL dated mmm, dd, yyyy</a></li>
@@ -414,22 +414,22 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>NDS</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Comments on Notice of Decision dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Pre-Submission Meeting Package</a></li>
-															<li><a >Priority Review Request</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Pre-Submission Meeting Package</a></li>
+															<li><a class="uploadText">Priority Review Request</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
@@ -444,14 +444,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>PDC</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Post-AUthorization Division 1 Change</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Post-AUthorization Division 1 Change</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
@@ -460,8 +460,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>PDC-B</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Post-AUthorization Division 1 Change</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Post-AUthorization Division 1 Change</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
@@ -470,7 +470,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>PSUR-C</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
@@ -481,7 +481,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>PSUR-PV</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
@@ -491,7 +491,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>RMP-PV</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
@@ -501,13 +501,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>SANDS</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Post NOC Change</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Post NOC Change</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
@@ -522,22 +522,22 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>SNDS</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Post NOC Change</a></li>
-															<li><a >Pre-Submission Meeting Package</a></li>
-															<li><a >Priority Review Request</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Post NOC Change</a></li>
+															<li><a class="uploadText">Pre-Submission Meeting Package</a></li>
+															<li><a class="uploadText">Priority Review Request</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
@@ -552,16 +552,16 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>SNDS-C</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Post NOC Change</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Post NOC Change</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li>
@@ -573,40 +573,40 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>UD-PV</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Benefit Risk Assessment</a></li>
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Notification of Change in benefit-risk profile</a></li>
-															<li><a >Post Marketing Surveillance</a></li>
+															<li><a class="uploadText">Benefit Risk Assessment</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Notification of Change in benefit-risk profile</a></li>
+															<li><a class="uploadText">Post Marketing Surveillance</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to MHPD Requests dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Risk communication document</a></li>
-															<li><a >Signal Work Up</a></li>
+															<li><a class="uploadText">Risk communication document</a></li>
+															<li><a class="uploadText">Signal Work Up</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>UDRA</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
-															<li><a >DIN Discontinued</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">DIN Discontinued</a></li>
 															<li><a class="dateSelect" >Response to Advisement Letter dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>Upon Consultation</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Pandemic Application</a></li>
+															<li><a class="uploadText">Pandemic Application</a></li>
 														</ul>
 													</li>
 												</ul>
@@ -617,7 +617,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>All pre-submission meetings</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Minutes of Meeting, mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
@@ -628,13 +628,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>ANDS</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
@@ -653,15 +653,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>DINA</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Change to DIN</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Pre-Submission Meeting Package</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Change to DIN</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Pre-Submission Meeting Package</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li>
@@ -670,21 +670,21 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>DINB</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Change to DIN</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Pre-Submission Meeting Package</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Change to DIN</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Pre-Submission Meeting Package</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li>
@@ -696,20 +696,20 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>EUNDS</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li>
@@ -742,32 +742,32 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>Level III</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Year, list of change number (for example: 2012, 15, 19a,….)</a></li>
+															<li><a class="uploadText">Year, list of change number (for example: 2012, 15, 19a,….)</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>NC</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect">Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Post NOC Data</a></li>
-															<li><a >Pre-Submission Meeting Package</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Post NOC Data</a></li>
+															<li><a class="uploadText">Pre-Submission Meeting Package</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to NOL dated mmm, dd, yyyy</a></li>
@@ -778,22 +778,22 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>NDS</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Comments on Notice of Decision dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >INITIAL</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Pre-Submission Meeting Package</a></li>
-															<li><a >Priority Review Request</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">INITIAL</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Pre-Submission Meeting Package</a></li>
+															<li><a class="uploadText">Priority Review Request</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
@@ -808,14 +808,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>PDC</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Post-AUthorization Division 1 Change</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Post-AUthorization Division 1 Change</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
@@ -824,8 +824,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>PDC-B</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Post-AUthorization Division 1 Change</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Post-AUthorization Division 1 Change</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
@@ -834,7 +834,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>PSUR-C</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
@@ -845,7 +845,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>PSUR-PV</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
@@ -855,7 +855,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>RMP-PV</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
@@ -865,13 +865,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<li class="dropdown-submenu">
 														<a>SANDS</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Post NOC Change</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Post NOC Change</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
@@ -886,22 +886,22 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>SNDS</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Administrative</a></li>
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Administrative</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li>
-															<li><a >Drug Notification Form</a></li>
-															<li><a >Post Clearance Data</a></li>
-															<li><a >Post NOC Change</a></li>
-															<li><a >Pre-Submission Meeting Package</a></li>
-															<li><a >Priority Review Request</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Drug Notification Form</a></li>
+															<li><a class="uploadText">Post Clearance Data</a></li>
+															<li><a class="uploadText">Post NOC Change</a></li>
+															<li><a class="uploadText">Pre-Submission Meeting Package</a></li>
+															<li><a class="uploadText">Priority Review Request</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
@@ -916,16 +916,16 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>SNDS-C</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Post NOC Change</a></li>
-															<li><a >Pristine PM</a></li>
-															<li><a >Pristine PM - Second Language</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Post NOC Change</a></li>
+															<li><a class="uploadText">Pristine PM</a></li>
+															<li><a class="uploadText">Pristine PM - Second Language</a></li>
 															<li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li>
@@ -937,46 +937,46 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															<li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>UD-PV</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Benefit Risk Assessment</a></li>
-															<li><a >Cancellation Letter</a></li>
-															<li><a >Notification of Change in benefit-risk profile</a></li>
-															<li><a >Post Marketing Surveillance</a></li>
+															<li><a class="uploadText">Benefit Risk Assessment</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">Notification of Change in benefit-risk profile</a></li>
+															<li><a class="uploadText">Post Marketing Surveillance</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to MHPD Requests dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Risk communication document</a></li>
-															<li><a >Signal Work Up</a></li>
+															<li><a class="uploadText">Risk communication document</a></li>
+															<li><a class="uploadText">Signal Work Up</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>UDRA</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
-															<li><a >DIN Discontinued</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
+															<li><a class="uploadText">DIN Discontinued</a></li>
 															<li><a class="dateSelect" >Response to Advisement Letter dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li>
-															<li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li>
+															<li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>Upon Consultation</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Pandemic Application</a></li>
+															<li><a class="uploadText">Pandemic Application</a></li>
 														</ul>
 													</li>
 													<li class="dropdown-submenu">
 														<a>YBPR</a>
 														<ul class="dropdown-menu scroll-menu">
-															<li><a >Cancellation Letter</a></li>
+															<li><a class="uploadText">Cancellation Letter</a></li>
 															<li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li>
 															<li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li>
@@ -1327,7 +1327,7 @@ function checkOptionSol(obj) {
 function addNewSequence() {
 	ectdTableSeqCreatedCount++;
 	var tableBody = $('#ectdTable tbody');
-	var defaultRow = '<td class="col-sm-1"> <label class="control-label hiddenLabel" for="rtEctd1SeqNum">Sequence No.</label> <input type="text" class="form-control input-sm full-width" id="rtEctd1SeqNum" maxlength="4"/> </td> <td class="col-sm-2"> <div class="form-group" style="margin-top:15px"> <label class="hiddenLabel control-label" for="rtEctd1DateFiled" ><span class="field-name">Date Field</span></label> <input class="form-control input-sm" type="date" id="rtEctd1DateFiled" name="rtEctd1DateFiled" data-rule-dateiso="true"/> </div> </td> <td class="col-sm-1" style="width: 10%"> <label class="control-label hiddenLabel" for="rtEctd1ControlNum">Control No.</label> <input type="text" class="form-control input-sm full-width" id="rtEctd1ControlNum" maxlength="6"/> </td> <td class="col-sm-7"> <div class="row"> <div class="col-sm-11" style="padding-right:0"> <div id="rtEctd1SeqDescDiv" class="seqDescDiv form-control input-sm full-width" style="height: 100%; overflow: auto"><div class="form-inline"> &nbsp;</div></div> </div> <div class="col-sm-1" style="padding-left: 0"> <ul class="nav nav-pills"> <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle form-control input-sm" id="rtEctd1dropDownToggleBut" style="padding: 5px 10px;"><span class="smallIconAnchor glyphicon glyphicon-chevron-down"></span></a> <ul class="dropdown-menu dropMenu" role="menu" aria-labelledby="dropdownMenu" style="display:none; position: static; margin-bottom: 5px; *width: 180px;"> <li class="dropdown-submenu"> <a tabindex="-1" class="filterMe pharma" id="pharma">Pharmaceutical</a> <ul class="dropdown-menu"> <li class="dropdown-submenu"> <a>All pre-submission meetings</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Minutes of Meeting, mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response To Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>ANDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect">Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect">Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>DINA</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a >Change to DIN</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pre-Submission Meeting Package</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>DINB</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a >Change to DIN</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pre-Submission Meeting Package</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>EUNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>EUSNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>Level III</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Year, list of change number (for example: 2012, 15, 19a,….)</a></li> </ul> </li> <li class="dropdown-submenu"> <a>NC</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Post NOC Data</a></li> <li><a >Pre-Submission Meeting Package</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOL dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>NDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Notice of Decision dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pre-Submission Meeting Package</a></li> <li><a >Priority Review Request</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PDC</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a >Post-AUthorization Division 1 Change</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PDC-B</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a >Post-AUthorization Division 1 Change</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PSUR-C</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PSUR-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>RMP-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >RMP version &lt;number&gt; dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SANDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a >Drug Notification Form</a></li> <li><a >Post Clearance Data</a></li> <li><a >Post NOC Change</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a >Drug Notification Form</a></li> <li><a >Post Clearance Data</a></li> <li><a >Post NOC Change</a></li> <li><a >Pre-Submission Meeting Package</a></li> <li><a >Priority Review Request</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SNDS-C</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a >Post NOC Change</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>UD-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a >Benefit Risk Assessment</a></li> <li><a >Cancellation Letter</a></li> <li><a >Notification of Change in benefit-risk profile</a></li> <li><a >Post Marketing Surveillance</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to MHPD Requests dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Risk communication document</a></li> <li><a >Signal Work Up</a></li> </ul> </li> <li class="dropdown-submenu"> <a>UDRA</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a >DIN Discontinued</a></li> <li><a class="dateSelect" >Response to Advisement Letter dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>Upon Consultation</a> <ul class="dropdown-menu scroll-menu"> <li><a >Pandemic Application</a></li> </ul> </li> </ul> </li> <li class="dropdown-submenu"> <a tabindex="-1" class="bio" id="bio">Biologic</a> <ul class="dropdown-menu scrollable"> <li class="dropdown-submenu"> <a>All pre-submission meetings</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Minutes of Meeting, mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response To Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>ANDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>DINA</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a >Change to DIN</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pre-Submission Meeting Package</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>DINB</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a >Change to DIN</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pre-Submission Meeting Package</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>EUNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>EUSNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>Level III</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Year, list of change number (for example: 2012, 15, 19a,….)</a></li> </ul> </li> <li class="dropdown-submenu"> <a>NC</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Post NOC Data</a></li> <li><a >Pre-Submission Meeting Package</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOL dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>NDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Notice of Decision dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pre-Submission Meeting Package</a></li> <li><a >Priority Review Request</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PDC</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a >Post-AUthorization Division 1 Change</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PDC-B</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a >Post-AUthorization Division 1 Change</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PSUR-C</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PSUR-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>RMP-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >RMP version &lt;number&gt; dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SANDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a >Drug Notification Form</a></li> <li><a >Post Clearance Data</a></li> <li><a >Post NOC Change</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a >Drug Notification Form</a></li> <li><a >Post Clearance Data</a></li> <li><a >Post NOC Change</a></li> <li><a >Pre-Submission Meeting Package</a></li> <li><a >Priority Review Request</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SNDS-C</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a >Post NOC Change</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>UD-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a >Benefit Risk Assessment</a></li> <li><a >Cancellation Letter</a></li> <li><a >Notification of Change in benefit-risk profile</a></li> <li><a >Post Marketing Surveillance</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to MHPD Requests dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Risk communication document</a></li> <li><a >Signal Work Up</a></li> </ul> </li> <li class="dropdown-submenu"> <a>UDRA</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a >DIN Discontinued</a></li> <li><a class="dateSelect" >Response to Advisement Letter dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>Upon Consultation</a> <ul class="dropdown-menu scroll-menu"> <li><a >Pandemic Application</a></li> </ul> </li> <li class="dropdown-submenu"> <a>YBPR</a> <ul class="dropdown-menu scroll-menu"> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> </ul> </li> </ul> </li> </ul> </div></td>';
+	var defaultRow = '<td class="col-sm-1"> <label class="control-label hiddenLabel" for="rtEctd1SeqNum">Sequence No.</label> <input type="text" class="form-control input-sm full-width" id="rtEctd1SeqNum" maxlength="4"/> </td> <td class="col-sm-2"> <div class="form-group" style="margin-top:15px"> <label class="hiddenLabel control-label" for="rtEctd1DateFiled" ><span class="field-name">Date Field</span></label> <input class="form-control input-sm" type="date" id="rtEctd1DateFiled" name="rtEctd1DateFiled" data-rule-dateiso="true"/> </div> </td> <td class="col-sm-1"> <label class="control-label hiddenLabel" for="rtEctd1ControlNum">Control No.</label> <input type="text" class="form-control input-sm full-width" id="rtEctd1ControlNum" maxlength="6"/> </td><td class="col-sm-7"> <div class="row"> <div class="col-sm-11" style="padding-right:0"> <div id="rtEctd1SeqDescDiv" class="seqDescDiv form-control input-sm full-width" style="height: 100%; overflow: auto"><div class="form-inline"> &nbsp;</div></div> </div> <div class="col-sm-1" style="padding-left: 0"> <ul class="nav nav-pills"> <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle form-control input-sm" id="rtEctd1dropDownToggleBut" style="padding: 5px 10px;"><span class="smallIconAnchor glyphicon glyphicon-chevron-down"></span></a> <ul class="dropdown-menu dropMenu" role="menu" aria-labelledby="dropdownMenu" style="display:none; position: static; margin-bottom: 5px; *width: 180px;"> <li class="dropdown-submenu"> <a tabindex="-1" class="filterMe pharma" id="pharma">Pharmaceutical</a> <ul class="dropdown-menu"> <li class="dropdown-submenu"> <a>All pre-submission meetings</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Minutes of Meeting, mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response To Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>ANDS</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText" >Cancellation Letter</a></li> <li><a class="uploadText" >Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect">Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect">Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>DINA</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Change to DIN</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Pre-Submission Meeting Package</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect">Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>DINB</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Change to DIN</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Pre-Submission Meeting Package</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>EUNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>EUSNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>Level III</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Year, list of change number (for example: 2012, 15, 19a,….)</a></li> </ul> </li> <li class="dropdown-submenu"> <a>NC</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Post NOC Data</a></li> <li><a class="uploadText">Pre-Submission Meeting Package</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOL dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>NDS</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Notice of Decision dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Pre-Submission Meeting Package</a></li> <li><a class="uploadText">Priority Review Request</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PDC</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Post-AUthorization Division 1 Change</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PDC-B</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Post-AUthorization Division 1 Change</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PSUR-C</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PSUR-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>RMP-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >RMP version &lt;number&gt; dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SANDS</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Post NOC Change</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Post NOC Change</a></li> <li><a class="uploadText">Pre-Submission Meeting Package</a></li> <li><a class="uploadText">Priority Review Request</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SNDS-C</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Post NOC Change</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>UD-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Benefit Risk Assessment</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Notification of Change in benefit-risk profile</a></li> <li><a class="uploadText">Post Marketing Surveillance</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to MHPD Requests dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Risk communication document</a></li> <li><a class="uploadText">Signal Work Up</a></li> </ul> </li> <li class="dropdown-submenu"> <a>UDRA</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">DIN Discontinued</a></li> <li><a class="dateSelect" >Response to Advisement Letter dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>Upon Consultation</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Pandemic Application</a></li> </ul> </li> </ul> </li> <li class="dropdown-submenu"> <a tabindex="-1" class="bio" id="bio">Biologic</a> <ul class="dropdown-menu scrollable"> <li class="dropdown-submenu"> <a>All pre-submission meetings</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Minutes of Meeting, mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response To Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>ANDS</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>DINA</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Change to DIN</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Pre-Submission Meeting Package</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>DINB</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Change to DIN</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Pre-Submission Meeting Package</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>EUNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>EUSNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a >Administrative</a></li> <li><a >Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a >Drug Notification Form</a></li> <li><a >INITIAL</a></li> <li><a >Post Clearance Data</a></li> <li><a >Pristine PM</a></li> <li><a >Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>Level III</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Year, list of change number (for example: 2012, 15, 19a,….)</a></li> </ul> </li> <li class="dropdown-submenu"> <a>NC</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect">Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Post NOC Data</a></li> <li><a class="uploadText">Pre-Submission Meeting Package</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOL dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>NDS</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Notice of Decision dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm. dd, yyyy</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">INITIAL</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Pre-Submission Meeting Package</a></li> <li><a class="uploadText">Priority Review Request</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PDC</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Post-AUthorization Division 1 Change</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PDC-B</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Post-AUthorization Division 1 Change</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PSUR-C</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>PSUR-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>RMP-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >RMP version &lt;number&gt; dated mmm, dd, yyyy</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SANDS</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Post NOC Change</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SNDS</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Administrative</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >Comments on Summary Basis of Decision dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Drug Notification Form</a></li> <li><a class="uploadText">Post Clearance Data</a></li> <li><a class="uploadText">Post NOC Change</a></li> <li><a class="uploadText">Pre-Submission Meeting Package</a></li> <li><a class="uploadText">Priority Review Request</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to BE Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality and Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Quality Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>SNDS-C</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Post NOC Change</a></li> <li><a class="uploadText">Pristine PM</a></li> <li><a class="uploadText">Pristine PM - Second Language</a></li> <li><a class="dateSelect" >Response to Clinical Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Labeling Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOC/c-QN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NOD dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to NON dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Acceptance Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Screening Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to SDN dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>UD-PV</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Benefit Risk Assessment</a></li> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">Notification of Change in benefit-risk profile</a></li> <li><a class="uploadText">Post Marketing Surveillance</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to MHPD Requests dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Risk communication document</a></li> <li><a class="uploadText">Signal Work Up</a></li> </ul> </li> <li class="dropdown-submenu"> <a>UDRA</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="uploadText">DIN Discontinued</a></li> <li><a class="dateSelect" >Response to Advisement Letter dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> <li><a class="uploadText">Unsolicited Data, &lt;Brief Description&gt;</a></li> </ul> </li> <li class="dropdown-submenu"> <a>Upon Consultation</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Pandemic Application</a></li> </ul> </li> <li class="dropdown-submenu"> <a>YBPR</a> <ul class="dropdown-menu scroll-menu"> <li><a class="uploadText">Cancellation Letter</a></li> <li><a class="dateSelect" >For Period of mmm, dd, yyyy to mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to e-mail Request dated mmm. dd, yyyy</a></li> <li><a class="dateSelect" >Response to Processing Clarification Request dated mmm, dd, yyyy</a></li> <li><a class="dateSelect" >Response to Telephone Request dated mmm, dd, yyyy</a></li> </ul> </li> </ul> </li> </ul> </li> </ul> </div> </td>';
 	var delButText = '<td class="noBorder"><a class="btn btn-danger btn-sm" style="margin-left: 20px" onclick="deleteSeq(this)" id="rtEctd1DelBut" type="button"><i class="glyphicon glyphicon-remove"></i></a></td>';
 	var rowText = '<tr id="rtEctd1Row">' + defaultRow + delButText + '</tr>';
 	var newRow = replaceAll(rowText, 'rtEctd1', 'rtEctd' + ectdTableSeqCreatedCount);
@@ -1388,7 +1388,7 @@ $(document).on('click', '.dateSelect', function() {
 	var seqDescDiv = $(link).closest('.row').find('div.seqDescDiv');
 	var seqDescDivId = $(seqDescDiv).attr('id');
 	$(seqDescDiv).find('.form-inline').text(linkText);
-	var date = '<label class="wb-inv control-label" for="rtEctd1DateSelect"><span class="field-name">Date Field</span></label><input class="form-control input-sm full-width" style="width: 98px; max-width: 98px;" type="date" id="rtEctd1DateSelect" name="rtEctd1DateSelect" data-rule-dateiso="true"/>';
+	var date = '<label class="wb-inv control-label" for="rtEctd1DateSelect"><span class="field-name">Date Field</span></label><input class="form-control input-sm full-width" style="width: 155px; max-width: 155px" type="date" id="rtEctd1DateSelect" name="rtEctd1DateSelect" data-rule-dateiso="true"/>';
 	
 	//get index of (i.e. rtEctd1 -> id = 1)
 	var index = seqDescDivId.match('rtEctd(.*)SeqDescDiv');
@@ -1396,6 +1396,14 @@ $(document).on('click', '.dateSelect', function() {
 	
 	$(seqDescDiv).find('.form-inline').append(date);
 	$(seqDescDiv).find('input[name=rtEctd' + index[1] + 'DateSelect][type=date]').trigger("wb-init.wb-date");
+});
+
+$(document).on('click', '.uploadText', function() {
+	var link = $(this);
+	var linkText = $(link).text();
+	var seqDescDiv = $(link).closest('.row').find('div.seqDescDiv');
+	var seqDescDivId = $(seqDescDiv).attr('id');
+	$(seqDescDiv).find('.form-inline').text(linkText);
 });
 </script>
 </body>
