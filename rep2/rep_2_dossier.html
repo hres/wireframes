@@ -1428,10 +1428,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									<div class="row marginTop-15">
 										<div class="col-sm-4 col-sm-offset-4">
 											<!--<button type="submit" class="btn btn-default btn-sm full-width" onclick="addNonMedIngredientOrVariant(doDrugProForm1NonMedIngrList, 'ingredient')" id="doDrugProForm1NonMedIngrAdd">Add an Ingredient</button>-->
-											<button type="submit" class="btn btn-default btn-sm full-width" onclick="addNonMedIngredient(doDrugProForm1NonMedIngrList)" id="doDrugProForm1NonMedIngrAdd">Add an Ingredient</button>
+											<button type="submit" class="btn btn-default btn-sm full-width" onclick="addNonMedIngredient(doDrugProForm1NonMedIngrList, false)" id="doDrugProForm1NonMedIngrAdd">Add an Ingredient</button>
 										</div>
 										<div class="col-sm-4">
-											<button type="submit" class="btn btn-default btn-sm full-width" onclick="addNonMedIngredientOrVariant(doDrugProForm1NonMedIngrList, 'variant')" id="doDrugProForm1NonMedIngrVariantAdd">Add a Variant</button>
+											<button type="submit" class="btn btn-default btn-sm full-width" onclick="addNonMedIngredient(doDrugProForm1NonMedIngrList, true)" id="doDrugProForm1NonMedIngrVariantAdd">Add a Variant</button>
 										</div>
 									</div>
 									<!--
@@ -2540,6 +2540,12 @@ function addNonMedIngredient(ulList, bolIngrOrVariant) {
 	var appendix4Text = replaceAll(appendix4TextNonMedIngr, 'doDrugProForm1NonMedIngr1', drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
 	ingredientFormHTML = ingredientFormHTML.replace('Medicinal Ingredient 1', 'Non-Medicinal Ingredient ' + numOfNonMedIngredients);
 	$(ulList).append(ingredientFormHTML);
+	
+	if (bolIngrOrVariant) { //add variant input textbox
+		variantText = replaceAll(variantText, 'doDrugProForm1NonMedIngr1', drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
+		$('#' + drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated).find('div:eq(0)').prepend(variantText);
+	}
+	
 	$('#' + drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated).find('button.deleteRef')[0].outerHTML = copyDelButtonText;
 
 	//replace original Appendix 4 Tabs (must be re-initialized)
@@ -2596,6 +2602,7 @@ function copyFromList(copyBut) {
 	
 	$(closestLi).after(cloneLiHTML);
 	var newItem = $('#' + drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
+	var newItemIndex = $(newItem).index();
 	//copy text from select boxes and inputs from Appendix 4
 	var i = 0;
 	var cloneLiSelectItems = $(newItem).find('select');
