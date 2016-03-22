@@ -2577,7 +2577,7 @@ function delFromList(delBut, bolMedOrNonMed, labelTitleWithoutId) {
 		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
 	}
 }
-/*
+
 function copyFromList(copyBut) {
 	var closestLi = $(copyBut).closest('li');
 	var closestLiId = $(closestLi).attr('id');
@@ -2597,18 +2597,27 @@ function copyFromList(copyBut) {
 	var cloneLiHTML = $(cloneLi).prop('outerHTML');
 	cloneLiHTML = replaceAll(cloneLiHTML, drugFormId + 'NonMedIngr' + ingrId, drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
 	var appendix4Text = replaceAll(appendix4TextNonMedIngr, doDrugProForm1NonMedIngr1 , drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
-	cloneLiHTML = cloneLiHTML.replace('Ingredient 1', 'Ingredient ' + numOfNonMedIngredients);
+	
+	var index = $(closestLi).index() + 2;
+	cloneLiHTML = cloneLiHTML.replace('Ingredient 1', 'Ingredient ' + index);
 	
 	
 	$(closestLi).after(cloneLiHTML);
 	var newItem = $('#' + drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
 	var newItemIndex = $(newItem).index();
-	//copy text from select boxes and inputs from Appendix 4
+	//copy text from select boxes
 	var i = 0;
 	var cloneLiSelectItems = $(newItem).find('select');
 	$(closestLi).find('select').each(function() {
 		$(cloneLiSelectItems[i]).val($(this).val());
 		i++;
+	});
+	//copy checkboxes
+	var n = 0;
+	var cloneLiChkItems = $(newItem).find('input[type=checkbox]');
+	$(closestLi).find('input[type=checkbox]').each(function() {
+		$(cloneLiChkItems[n]).prop('checked', $(this).prop('checked'));
+		n++;
 	});
 	
 	//must re-initialize appendix 4 for cloned ingredient
@@ -2619,8 +2628,18 @@ function copyFromList(copyBut) {
 	$('#' + tabsID).find('.wb-tabs').removeAttr('id');
 	$('#' + tabsID).find('.wb-tabs').trigger('wb-init.wb-tabs');
 	$('#' + tabsID).find('.wb-tabs li.control').remove();
+	
+	//re-label list after adding new ingredient
+	var totalItems = $(ulParent).children('li');
+	var counter = $(totalItems).length;
+	for (var n = counter-1; n >= (index-1); n--) {
+		var text = $(totalItems[n]).find('summary')[0].innerHTML;
+		var id = text.substring(text.indexOf('Ingredient ') + 11, text.indexOf('<button'));
+		var newStr = text.replace('Ingredient ' + parseInt(id), 'Ingredient ' + (n+1));
+		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
+	}
 }
-*/
+
 //for displaying content in list-group-items in Appendix 4
 function changeMe(chk, div) {
 	if (chk.checked) {
