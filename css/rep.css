@@ -263,13 +263,14 @@ text-decoration:none;
 
 /**For FULL TABS - using WET4 Tabbed Interface **/
 
-.full-tabs  ul {
+/** APPENDIX 4 **/
+.appendix4-full-tabs  ul {
 	display: table;
 	width: 100%;
 	table-layout:fixed;
 }
 
-.full-tabs ul li:not(.list-group-item) {
+.appendix4-full-tabs ul li:not(.list-group-item) {
 	float: none;
 	display:table-cell;
 	background-color: #ffffff!important;
@@ -278,17 +279,49 @@ text-decoration:none;
 	border-bottom: 1px solid #ccc;
 }
 
-.full-tabs ul li:not(.list-group-item) a {
+.appendix4-full-tabs ul li:not(.list-group-item) a {
 	width: 100%!important;
 	color: #000;
 	font-weight: bold;
 }
-.full-tabs ul li.active:not(.list-group-item) {
+.appendix4-full-tabs ul li.active:not(.list-group-item) {
 	background-color: #249ED7!important;
 }
 
 
-.full-tabs ul li.active:not(.list-group-item)  a {
+.appendix4-full-tabs ul li.active:not(.list-group-item)  a {
+	border-top:none!important;
+	border-bottom:none;
+	color: #fff;
+}
+
+/** DRUGFORM TABS **/
+.drugForm-full-tabs  ul {
+	display: table;
+	width: 100%;
+	table-layout:fixed;
+}
+
+.drugForm-full-tabs ul li:not(.list-group-item) {
+	float: none;
+	display:table-cell;
+	background-color: #ffffff!important;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom: 1px solid #ccc;
+}
+
+.drugForm-full-tabs ul li:not(.list-group-item) a {
+	width: 100%!important;
+	color: #000;
+	font-weight: bold;
+}
+.drugForm-full-tabs ul li.active:not(.list-group-item) {
+	background-color: #ff9b00!important;
+}
+
+
+.drugForm-full-tabs ul li.active:not(.list-group-item)  a {
 	border-top:none!important;
 	border-bottom:none;
 	color: #fff;
