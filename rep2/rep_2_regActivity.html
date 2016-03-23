@@ -1062,9 +1062,9 @@ function otherCheckBox(checkbox) {
 			 if(checkbox.checked == true){
         alert('check');
         //$("#otherRationale").style.display = "block";
-        $('#otherRationale').css('display', 'block');
+        $(checkbox).next().css('display', 'block');
     }else{
-       $('#otherRationale').css('display', 'none');
+       $(checkbox).next().css('display', 'none');
    }
     	
 		}
