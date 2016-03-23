@@ -68,6 +68,10 @@ label.hiddenLabel {
 	display:block !important;
 }
 
+.dropMenu {
+	margin-top: -2px;
+}
+
 .dropdown-submenu {
 	position:relative;
 }
@@ -82,24 +86,34 @@ label.hiddenLabel {
 	text-decoration: none;
 }
 
-.dropdown > .dropdown-menu {
+.dropdown .pull-left> .dropdown-menu {
 	margin-top: 0px;
 	right: 0;
 }
 
 .dropdown-submenu>.dropdown-menu{
-	top:0;
+	top:0 !important;
 	right: 100%; /*added for having menus open from right to left*/
 	left:auto; /*changed from 100%*/
 	margin-top:-6px;
-	margin-left:-1px;
+	margin-left:1px;
 	-webkit-border-radius:0 6px 6px 6px;
 	-moz-border-radius:0 6px 6px 6px;
 	border-radius:0 6px 6px 6px;
 }
 
+.bigMenu {
+	position: static!important;
+}
+
+.bigMenu > .scroll-menu {
+	max-height: 100%;
+	height: 100%;
+}
+
 .dropdown-submenu:hover > .dropdown-menu {
 	display:block;
+	top: 0px!important;
 }
 
 .dropdown-submenu>a:after{
@@ -126,13 +140,13 @@ label.hiddenLabel {
 	border-left-color:#ffffff;
 }
 
-.dropdown-submenu.pull-left{
+.dropdown-submenu{
 	float:none;
 }
 
 .dropdown-submenu.pull-left>.dropdown-menu{
 	left:-100%;
-	top:0;
+	top:0!;
 	margin-left:10px;
 	-webkit-border-radius:6px 0 6px 6px;
 	-moz-border-radius:6px 0 6px 6px;
@@ -142,6 +156,7 @@ label.hiddenLabel {
 .dropdown-toggle {
 text-decoration:none;
 }
+
 
 /*FOR DOSSIER PART 2*/
 .full-width-tabs > ul.nav.nav-tabs {
