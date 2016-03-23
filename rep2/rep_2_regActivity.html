@@ -415,6 +415,36 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		</ul>
 		</div>
 		</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Part 2 - Drug Product Formulation Information</h3>
+				</div>
+				<div class="panel-body">
+
+					<div panel panel-default>
+						<h5>Rationale for all SNDS, SANDS , (all human drug types); Veterinary Supplemental New Drug Submission (VSNDS), Veterinary Supplemental Abbreviated New Drug Submission (VSANDS) (all veterinary drug types); or for biological drug DIN submissions </h5>
+
+						<div class="row"> 
+							<div class="col-sm-12"> 
+								<span class="col-sm-6"><input value="" type="checkbox"> New route of administration, dosage form and/or strength </span> 
+								<span class="col-sm-6"> <input value="" type="checkbox"> Replace sterility test with process parametric release </p> </span> 
+								<span class="col-sm-6"> <input value="" type="checkbox"> New claims/use, indications, recommended administration or dosage regime </span> 
+								<span class="col-sm-6"> <input value="" type="checkbox"> Change in formulation or method of manufacturing with clinical/bio data </span> 
+								<span class="col-sm-6"> <input value="" type="checkbox"> dorsal root ganglia </span> 
+								<span class="col-sm-6"> <input value="" type="checkbox" onchange="otherCheckBox(this)"> Other  (please specify):  <input  type="text" class="form-control input-sm full-width" id="otherRationale" style="display: none;"> </span> 
+								<span class="col-sm-6"> <input value="" type="checkbox"> Change in drug substance/product (site, method, equipment, process control)</span> 
+								 
+							</div> 
+						</div> 
+					</div>
+					
+					
+					
+				</div>
+			</div>
+
+
+
 			<div class="panel panel-warning">
 				<header class="panel-heading"><h4 class="panel-title">Regulatory Activity Contact [for THIS Regulatory Activity]:</h4></header>
 				<div class="panel-body">
@@ -806,6 +836,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<!-- </form> -->
 					</div>
 			</div>
+
+			
 			</div>
 			<div class="form-group" id="raEnrolCompRepInfoDiv" style="border: 1px solid; padding:15px">
 			<div class="wb-frmvld">
@@ -1025,6 +1057,18 @@ $(document).ready(function() {
 
 var prevURL = readCookie("currentURL");
 
+function otherCheckBox(checkbox) {
+			
+			 if(checkbox.checked == true){
+        alert('check');
+        //$("#otherRationale").style.display = "block";
+        $('#otherRationale').css('display', 'block');
+    }else{
+       $('#otherRationale').css('display', 'none');
+   }
+    	
+		}
+
 //var raDINCount = 4; //keeps track of number of current DINs (initially, there are 4)
 //var raDINButCount = 1; //keeps track of the number of buttons used to add/delete DINs
 var raRelCount = 1; //keeps track of the number of Related Regulatory Activity Submissions
@@ -1177,6 +1221,8 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
             //raDINRowCount--;
 			}
 		}
+
+		
 		/*
 		  //must rename the labels starting from the removed DIN (NEVER DO THIS!)
 		  //get total number of DINs
