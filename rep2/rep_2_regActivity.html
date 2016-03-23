@@ -420,26 +420,40 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<h3 class="panel-title">Part 2 - Drug Product Formulation Information</h3>
 				</div>
 				<div class="panel-body">
+					<h5>Rationale for all SNDS, SANDS , (all human drug types); Veterinary Supplemental New Drug Submission (VSNDS), Veterinary Supplemental Abbreviated New Drug Submission (VSANDS) (all veterinary drug types); or for biological drug DIN submissions </h5>
 
-					<div panel panel-default>
-						<h5>Rationale for all SNDS, SANDS , (all human drug types); Veterinary Supplemental New Drug Submission (VSNDS), Veterinary Supplemental Abbreviated New Drug Submission (VSANDS) (all veterinary drug types); or for biological drug DIN submissions </h5>
-
-						<div class="row"> 
-							<div class="col-sm-12"> 
-								<span class="col-sm-6"><input value="" type="checkbox"> New route of administration, dosage form and/or strength </span> 
-								<span class="col-sm-6"> <input value="" type="checkbox"> Replace sterility test with process parametric release </p> </span> 
-								<span class="col-sm-6"> <input value="" type="checkbox"> New claims/use, indications, recommended administration or dosage regime </span> 
-								<span class="col-sm-6"> <input value="" type="checkbox"> Change in formulation or method of manufacturing with clinical/bio data </span> 
-								<span class="col-sm-6"> <input value="" type="checkbox"> dorsal root ganglia </span> 
-								<span class="col-sm-6"> <input value="" type="checkbox" onchange="otherCheckBox(this)"> Other  (please specify):  <input  type="text" class="form-control input-sm full-width" id="otherRationale" style="display: none;"> </span> 
-								<span class="col-sm-6"> <input value="" type="checkbox"> Change in drug substance/product (site, method, equipment, process control)</span> 
-								 
-							</div> 
+					<div class="row"> 
+						<div class="col-sm-12"> 
+							<span class="col-sm-6"><input value="" type="checkbox"> New route of administration, dosage form and/or strength </span> 
+							<span class="col-sm-6"> <input value="" type="checkbox"> Replace sterility test with process parametric release </p> </span> 
+							<span class="col-sm-6"> <input value="" type="checkbox"> New claims/use, indications, recommended administration or dosage regime </span> 
+							<span class="col-sm-6"> <input value="" type="checkbox"> Change in formulation or method of manufacturing with clinical/bio data </span> 
+							<span class="col-sm-6"> <input value="" type="checkbox"> dorsal root ganglia </span> 
+							<span class="col-sm-6"> <input value="" type="checkbox" onchange="otherCheckBox(this)"> Other  (please specify):  <input  type="text" class="form-control input-sm full-width" id="otherRationale" style="display: none;"> </span> 
+							<span class="col-sm-6"> <input value="" type="checkbox"> Change in drug substance/product (site, method, equipment, process control)</span> 
+							 
 						</div> 
-					</div>
-					
-					
-					
+					</div> 
+
+					<h5> Type of Notifiable Change (NC) or Veterinary Notifiable Change (VNC) submission (if applicable)  </h5>
+
+					<div class="row"> 
+						<div class="col-sm-12"> 
+							<span class="col-sm-6"><input value="" type="checkbox"> Change in text of labelling  </span> 
+							<span class="col-sm-6"> <input value="" type="checkbox"> Change in manufacturing method </p> </span> 
+							<span class="col-sm-6"> <input value="" type="checkbox"> Change in drug substance (source, synthesis) </span> 
+							<span class="col-sm-6"> <input value="" type="checkbox"> Change in manufacturing site </span> 
+							<span class="col-sm-6"> <input value="" type="checkbox"> Change in formulation </span> 
+							<span class="col-sm-6"> <input value="" type="checkbox"> Change in container size for parenteral drug</span>
+							<span class="col-sm-6"> <input value="" type="checkbox"> Change in specifications (medicinal or non-medicinal  ingredient, pharmaceutical form, analytical method) </span>
+							<span class="col-sm-6"> <input value="" type="checkbox"> Change in packaging specifications for parenteral/inhalation drug</span>
+							<span class="col-sm-6"> <input value="" type="checkbox"> Change in packaging material composition</span>
+							<span class="col-sm-6"> <input value="" type="checkbox"> Change in expiry period/storage conditions</span>
+							<span class="col-sm-6"> <input value="" type="checkbox" onchange="otherCheckBox(this)"> Other  (please specify):  <input  type="text" class="form-control input-sm full-width" id="otherRationale" style="display: none;"> </span> 
+							
+							 
+						</div> 
+					</div> 
 				</div>
 			</div>
 
@@ -1059,15 +1073,12 @@ var prevURL = readCookie("currentURL");
 
 function otherCheckBox(checkbox) {
 			
-			 if(checkbox.checked == true){
-        alert('check');
-        //$("#otherRationale").style.display = "block";
+			if(checkbox.checked == true){
         $(checkbox).next().css('display', 'block');
-    }else{
+    	}else{
        $(checkbox).next().css('display', 'none');
    }
-    	
-		}
+}
 
 //var raDINCount = 4; //keeps track of number of current DINs (initially, there are 4)
 //var raDINButCount = 1; //keeps track of the number of buttons used to add/delete DINs
