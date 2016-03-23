@@ -2997,24 +2997,7 @@ function delIngr(delBut, list) {
 	}
 }
 
-/*
-function addContainerType(accordion) {
-	var accordionId = $(accordion).prop('id');
-	var numOfContainerType = $('#' + accordionId + ' details').length;
-	var defaultContainerType = '<details class="acc-group" id="doDrugProForm1LifeTypeContainer1"><summary class="wb-toggle tgl-tab" data-toggle="{\'parent\': \'.accordion\', \'group\': \'.acc-group\'}">Container Type 1</summary><div class="tgl-panel"><div class="textAlignCenter"><div class="row"><div class="col-sm-3 col-sm-offset-6 "><label class="control-label">Shelf Life</label></div><div class="col-sm-3 "><label class="control-label">Temp. Range</label></div></div><div class="row"><div class="col-sm-3"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1Type" class="control-label">Container Type</label><input id="doDrugProForm1LifeTypeContainer1Type" type="text" class="form-control input-sm full-width"/></div></div><div class="col-sm-3"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1PckSize" class="control-label">Package Size</label><input id="doDrugProForm1LifeTypeContainer1PckSize" type="text" class="form-control input-sm full-width"/></div></div><div class="col-sm-3"><div class="row"><div class="col-sm-6"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1ShlfLifeYear" class="control-label normalLabel">Years</label><input id="doDrugProForm1LifeTypeContainer1ShlfLifeYear" type="text" class="form-control input-sm full-width"/></div></div><div class="col-sm-6"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1ShlfLifeMonth" class="control-label normalLabel">Months</label><input id="doDrugProForm1LifeTypeContainer1ShlfLifeMonth" type="text" class="form-control input-sm full-width"/></div></div></div></div><div class="col-sm-3"><div class="row"><div class="col-sm-6"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1TempMin" class="control-label normalLabel">Min. Celsius</label><input id="doDrugProForm1LifeTypeContainer1TempMin" type="text" class="form-control input-sm full-width"/></div></div><div class="col-sm-6"><div class="form-group"><label for="doDrugProForm1LifeTypeContainer1TempMax" class="control-label normalLabel">Max. Celsius</label><input id="doDrugProForm1LifeTypeContainer1TempMax" type="text" class="form-control input-sm full-width"/></div></div></div></div></div></div></div></details>';
-	numOfContainerType++;
-	//var newRefProduct = '<li id="doCanRefProduct1"><details open="open"><summary class="heightAdjust">Canadian Reference Product 1<button class="btn btn-danger btn-xs deleteRef" onclick="deleteRefProduct(doCanRefProduct1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="doCanRefProduct1BrandName">Brand Name</label><input type="text" class="form-control input-sm full-width" id="doCanRefProduct1BrandName" placeholder="Enter Name" /></div></div><div class="row"><div class="form-group col-sm-12"><label for="doCanRefProduct1MedIngre">Medicinal Ingredient</label><input type="text" class="form-control input-sm full-width" id="doCanRefProduct1MedIngre" placeholder="Enter Ingredient" /></div></div><div class="row"><div class="form-group col-sm-4"><label for="doCanRefProduct1Dosage" class="control-label">Dosage Form:</label><div class=""><select class="form-control input-sm full-width" name="doCanRefProduct1Dosage" id="doCanRefProductDosage"><option label=" "></option><option value="1">Biologic</option><option value="2">Pharmaceutical</option><option value="3">Drug Master File</option><option value="4">Medical Device</option></select></div></div><div class="form-group col-sm-4"><label for="doCanRefProduct1Strength">Strength(s)</label><input type="text" class="form-control input-sm full-width" id="doCanRefProduct1Strength" placeholder="Strength(s)" /></div></div><div class="row"><div class="form-group col-sm-12"><label for="doCanRefProduct1CoName">Company Name</label><input type="text" class="form-control input-sm full-width" id="doCanRefProduct1CoName" placeholder="Enter Name" /></div></div></div></div></li>';
-	//increment counter
-	//canRefProductCounter++;
-	//numOfRefProductsCreated++;
-	//alert(canRefProductCounter);
-	//replace substrings
-	var newId = defaultContainerType.replace(/doDrugProForm1LifeTypeContainer1/g, 'doDrugProForm1LifeTypeContainer' + numOfContainerType);
-	newId = newId.replace('Type 1', 'Type ' + numOfContainerType);
-	$(accordion).append(newId);
-	$('#doDrugProForm1LifeTypeContainer summary.wb-toggle').trigger( "wb-init.wb-toggle" );
-}
-*/
+
 /**For Adding Country of Manufacture **/
 
 var numOfCountryManu = 1; //temporary
@@ -3050,49 +3033,7 @@ function delCountryOfManufacture(delBut, container) {
 	}
 }
 
-/** For Ingredients and Appendix 4 **/
-/*
-var numOfCountryOfOriginCreated = 1;
 
-function addCountryAppendix4(container) {
-	var defaultText = '<div class="row rowMain" style="margin-top: 10px"><div class="form-group"><div class="col-sm-3"><label for="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1" class="control-label normalLabel boldFont">Country of Origin 1</label></div><div class="col-sm-4"><div class="input-group"><input class="form-control input-sm full-width" type="text" onchange="countryAppendix4SelectUnknown(this, doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1SpecifyInput)" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1" name="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1" list="CountrySuggestionsPlusUnknown"/><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="delCountryAppendix4(this, doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3CountryList)" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-4 addButton"><button type="submit" class="btn btn-default btn-sm" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3CountryAddBut" onclick="addCountryAppendix4(doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3CountryList)">Add Country</button></div><div class="col-sm-12" style="margin-top:10px; display:none" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1Specify"><div class="row"><div class="col-sm-offset-1 col-sm-2"><label for="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1SpecifyInput" class="control-label normalLabel">Please Specify</label></div><div class="col-sm-8"><input id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1SpecifyInput" class="form-control input-sm full-width"/></div></div></div>';
-	numOfCountryOfOriginCreated++;
-	var newText = defaultText.replace(/doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1/g, 'doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country' + numOfCountryOfOriginCreated);
-	newText = newText.replace('Origin 1', 'Origin ' + numOfCountryOfOriginCreated);
-	//get previous row
-	var previous = $(container).find('.rowMain:last');
-	//remove add button
-	$(previous).find('.addButton').remove();
-	$(container).append(newText);
-}
-
-function delCountryAppendix4(delBut, container) {
-	var closestRowMain = $(delBut).closest('.rowMain');
-	var closestFormGroup = $(closestRowMain).find('.form-group');
-	var currentNumOfCountryOfOrigin = $(container).find('.rowMain').length;
-	
-	if (currentNumOfCountryOfOrigin == 1) {
-		$(doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1).val("");
-		$(doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1SpecifyInput).val("");
-		$(doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1Specify).css('display', 'none');
-	} else {
-		if ($(closestFormGroup).find('.addButton').length > 0) {
-			var addCountryButText = '<div class="col-sm-4 addButton"><button type="submit" class="btn btn-default btn-sm" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3CountryAddBut" onclick="addCountryAppendix4(doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3)">Add Country</button></div>';
-			var previousRowForThisRow = $(container).find('.rowMain').eq($(closestRowMain).index() - 1);
-			$(previousRowForThisRow).find('.form-group').append(addCountryButText);
-		}
-		$(closestRowMain).remove();
-	}
-}
-
-function countryAppendix4SelectUnknown(select, divToShow) {
-	if($(select).val() == 'Unknown') {
-		$(divToShow).css('display', 'block');
-	} else {
-		$(divToShow).css('display', 'none');
-	}
-}
-*/
 function displayAppendix4Info1And3(chk, appendix4Id) {
 	var appendix4Info1 = $(appendix4Id).attr('id') + 'AnimalSrcInfo1';
 	var appendix4Info3 = $(appendix4Id).attr('id') + 'AnimalSrcInfo3';
@@ -3136,24 +3077,7 @@ function delNonMedIngredient(delBut, list) {
 	}
 }
 
-/*function copyNonMedIngredient(copyBut, list) {
-	var closestLi = $(delBut).closest('li.nonMedIngrLI');
-	var toRemoveIndex = $(closestLi).index();
-	var copyLi = closestLi;
-	numOfNonIngredientCreated++;
-	//to do
-	$(list).eq(toRemoveIndex).after(copyLi);
-	numOfNonIngredient--;
-	var counter = numOfNonIngredient;
-	
-	var totalItems = $(list).find('li.nonMedIngrLI');
-	for (var n = counter-1; n >= toRemoveIndex; n--) {
-		var text = $(totalItems[n]).find('summary')[0].innerHTML;
-		var newStr = text.replace('Ingredient ' + (n+2), 'Ingredient ' + (n+1));
-		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
-	}
-}
-*/
+
 /**For Adding Material (Animal/Human Source) **/
 var numOfMaterials = 0;
 var numOfMaterialsCreated = 0;
