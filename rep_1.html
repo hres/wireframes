@@ -199,12 +199,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="form-group">
-							<div class="col-sm-4">
-								<label for="enrolDrftFileUpload" class="control-label">Upload DRAFT Enrolment file</label>
-							</div>
-							<div class="col-sm-7">
-								<input type="file" class="full-width"id="enrolDrftFileUpload" accept="text/xml"/>
-							</div>
+							<label for="enrolDrftFileUpload ">Upload DRAFT Enrolment file</label>
+							<input type="file" id="enrolDrftFileUpload" accept="text/xml"/>
 						</div>
 					</div>
 				</div>
@@ -224,30 +220,26 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="form-group">
-							<div class="col-sm-5">
-								<label for="enrolAmdFileUpload" class="control-label">Upload Enrolment file that you wish to AMEND</label>
-							</div>
-							<div class="col-sm-7 brdr-bttm" style="padding-bottom: 10px">
-								<input type="file" class="full-width" id="enrolAmdFileUpload" accept="text/xml"/>
-							</div>
+							<label for="enrolAmdFileUpload">Upload Enrolment file that you wish to AMEND</label>
+							<input type="file" id="enrolAmdFileUpload" accept="text/xml"/>
 						</div>
 					</div>
 				</div>
-				<div class="row" style="margin-top: 10px">
-					<div class="col-sm-12">
-						<div class="form-group">
-							<div class="col-xs-1 fixedSmallSize col-sm-offset-6">
-								<label class="control-label smallLabel" for="enrolAmdFileVersion">Amended Version</label>
-								<input type="text" class="input-sm form-control" id="enrolAmdFileVersion" readonly />
-							</div>
-							<div class="col-xs-2 fixedSmallSize col-sm-offset-1">
-								<p class="smallLabel textAlignCenter boldFont">replaces</p>
-							</div>
-							<div class="col-xs-2 fixedSmallSize col-sm-offset-1">
-								<label class="control-label smallLabel" for="enrolAmdFileRepVersion">Uploaded Version</label>
-								<input type="text" class="input-sm form-control" id="coAmdFileRepVersion" readonly />
-							</div>
-						</div>
+				<div class="row">
+					<div class="col-xs-1 fixedSmallSize">
+					<div class="form-group">
+						<label class="control-label smallLabel" for="enrolAmdFileVersion">Amended Version</label>
+						<input type="text" class="input-sm form-control" id="enrolAmdFileVersion" readonly />
+					</div>
+					</div>
+					<div class="col-xs-2 fixedSmallSize">
+						<p class="smallLabel textAlignCenter">replaces</p>
+					</div>
+					<div class="col-xs-2 fixedSmallSize">
+					<div class="form-group">
+						<label class="control-label smallLabel" for="enrolAmdFileRepVersion">Uploaded Version</label>
+						<input type="text" class="input-sm form-control" id="coAmdFileRepVersion" readonly />
+					</div>
 					</div>
 				</div>
 				</div>
@@ -528,10 +520,8 @@ information, Regulatory Activity information)</label>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-2 col-sm-offset-10">
-					<button class="btn btn-default btn-sm" id="contactAddBut" onclick="addNewContact()" type="submit">Add Another Contact</button>
+					<button class="btn btn-default btn-sm col-sm-2 pull-right" id="contactAddBut" onclick="addNewContact()" type="submit">Add Another Contact</button>
 				</div>
-			</div>
 			<ul id="contactInfoList" class="list-unstyled">
 				<li id="contactInfo1">
 					<details open="open">
@@ -541,7 +531,7 @@ information, Regulatory Activity information)</label>
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 					<div class="row">
 						<div class="form-group col-sm-2">
-							<label for="contactInfo1Salutation" class="control-label">Salutation</label>
+							<label for="contactInfo1Salutation" class="control-label">Salutation*</label>
                             <div class="">
                                 <select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" >
                                     <option label=" "></option>
@@ -554,19 +544,19 @@ information, Regulatory Activity information)</label>
 						</div>
 						
 						<div class="form-group col-sm-3">
-							<label for="contactInfo1GivenName" class="control-label">Given Name</label>
+							<label for="contactInfo1GivenName" class="control-label">Given Name*</label>
 							<div class="">
 								<input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name" >
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
-							<label for="contactInfo1Surname" class="control-label">Surname</label>
+							<label for="contactInfo1Surname" class="control-label">Surname*</label>
 							<div class="">
 								<input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
-							<label for="contactInfo1Title" class="control-label">Title</label>
+							<label for="contactInfo1Title" class="control-label">Title*</label>
 							<div class="">
 								<input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title"  >
 							</div>
@@ -582,7 +572,7 @@ information, Regulatory Activity information)</label>
 					</div>
 					<div class="row">
 						<div class="form-group col-sm-3">
-							<label for="contactInfo1TelNo" class="control-label">Telephone No.</label>
+							<label for="contactInfo1TelNo" class="control-label">Telephone No*</label>
 							<div class="">
 								<input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone No."  >
 							</div>
@@ -594,7 +584,7 @@ information, Regulatory Activity information)</label>
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
-							<label for="contactInfo1Email" class="control-label">Email</label>
+							<label for="contactInfo1Email" class="control-label">Email*</label>
 							<div class="">
 								<input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  />
 							</div>
@@ -907,21 +897,21 @@ function checkEnrolTypeSelection() { //previously obj
 		step1c.style.display = "none";
 		raAntDate.style.display = "none";
 		changeNavPills(navREP, '');
-		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Enrolment is submitted', 'Date the Regulatory Enrolment is anticipated to be filed'], false);
+		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Enrolment is submitted*', 'Date the Regulatory Enrolment is anticipated to be filed*'], false);
 	} else if (obj.value == "co") {
 		changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
-							['&nbsp;&nbsp;Start a New Company Enrolment', '&nbsp;&nbsp;Complete your DRAFT Company Enrolment', '&nbsp;&nbsp;AMEND you Company Enrolment file'], true);
+							['Start a New Company Enrolment', 'Complete your DRAFT Company Enrolment', 'AMEND you Company Enrolment file'], true);
 		rtType.style.display = "none";
 		$(enrolType).css('display', 'block');
 		step1c.style.display = "block";
 		raAntDate.style.display = "none";
 		
 		changeNavPills(navREP, 'Company');
-		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Company Enrolment is submitted', 'Date the Company Enrolment is anticipated to be filed'], false);
+		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Company Enrolment is submitted*', 'Date the Company Enrolment is anticipated to be filed*'], false);
 		
 	} else if (obj.value == "do") {
 	changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
-							['&nbsp;&nbsp;Start a New Dossier Enrolment', '&nbsp;&nbsp;Complete your DRAFT Dossier Enrolment', '&nbsp;&nbsp;AMEND you Dossier Enrolment file'], true);
+							['Start a New Dossier Enrolment', 'Complete your DRAFT Dossier Enrolment', 'AMEND you Dossier Enrolment file'], true);
 		rtType.style.display = "none";
 		
 		$(enrolType).css('display', 'block');
@@ -929,11 +919,11 @@ function checkEnrolTypeSelection() { //previously obj
 		raAntDate.style.display = "block";
 		
 		changeNavPills(navREP, 'Dossier');
-		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Dossier Enrolment is submitted', 'Date the Dossier Enrolment is anticipated to be filed'], false);
+		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Dossier Enrolment is submitted*', 'Date the Dossier Enrolment is anticipated to be filed*'], false);
 		
 	} else if (obj.value == "ra") {
 	changeLabelText(['enrolTypeOptionNEW', 'enrolTypeOptionDRAFT','enrolTypeOptionAMEND'],
-							['&nbsp;&nbsp;Start a New Regulatory Activity Enrolment', '&nbsp;&nbsp;Complete your DRAFT Regulatory Activity Enrolment', '&nbsp;&nbsp;AMEND you Regulatory Activity Enrolment file'], true);
+							['Start a New Regulatory Activity Enrolment', 'Complete your DRAFT Regulatory Activity Enrolment', 'AMEND you Regulatory Activity Enrolment file'], true);
 	/*
 		coType.style.display = "none";
 		doType.style.display = "none";
@@ -946,7 +936,7 @@ function checkEnrolTypeSelection() { //previously obj
 		raAntDate.style.display = "block";
 		
 		changeNavPills(navREP, 'Regulatory Activity');
-		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Activity Enrolment is submitted', 'Date the Regulatory Activity Enrolment is anticipated to be filed'], false);
+		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Activity Enrolment is submitted*', 'Date the Regulatory Activity Enrolment is anticipated to be filed*'], false);
 		
 	} else if (obj.value == "rt") {
 		$(enrolType).css('display', 'none');
@@ -968,10 +958,10 @@ function checkEnrolTypeSelection() { //previously obj
 		raAntDate.style.display = "none";
 		
 		changeNavPills(navREP,'');
-		$('#navStep2').prop('href', '#');
-		$('#navStep3').prop('href', '#');
+		$('#navStep2').prop('href', '');
+		$('#navStep3').prop('href', '');
 		step2but.href = "";
-		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Enrolment is submitted', 'Date the Regulatory Enrolment is anticipated to be filed'], false);
+		changeLabelText(['raEnDateSubmitted','raEnAntiDateFiled'], ['Date the Regulatory Enrolment is submitted*', 'Date the Regulatory Enrolment is anticipated to be filed*'], false);
 	}
 }
 
@@ -993,23 +983,20 @@ var selectOptionType = $('#iline').val();
 				changeNavPills(navREP, 'NEW Company Enrolment');
 				$('#navStep2').prop('href', 'rep_2_company.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				$('#navStep4').prop('href', 'rep_HCInternal.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
-				$('#nextStep2but').prop('href', 'rep_2_company.html');
 			} else if (action == 'DRAFT') {
 				changeNavPills(navREP, 'DRAFT Company Enrolment');
-				$('#navStep2').prop('href', 'rep_2_company.html');
-				$('#navStep3').prop('href', 'rep_3.html');
-				$('#navStep4').prop('href', 'rep_HCInternal.html');
 				$('#enrolDrftGrp').show();
 				$('#enrolAmdGrp').hide();
-				$('#nextStep2but').prop('href', 'rep_2_company.html');
+				$('#navStep2').prop('href', 'rep_2_company.html');
+				$('#navStep3').prop('href', 'rep_3.html');
 			} else if (action == 'AMEND') {
 				changeNavPills(navREP, 'AMEND Company Enrolment');
 				$('#navStep2').prop('href', 'rep_2_company_amend.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				$('#navStep4').prop('href', 'rep_HCInternal.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
 				step2but.href = "rep_2_company_amend.html";
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').show();
@@ -1017,11 +1004,11 @@ var selectOptionType = $('#iline').val();
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
 				changeNavPills(navREP, 'Company Enrolment');
-				$('#navStep2').prop('href', '#');
-				$('#navStep3').prop('href', '#');
-				$('#navStep4').prop('href', '#');
-				$('#nextStep2but').prop('href', '#');
+				$('#navStep2').prop('href', '');
+				$('#navStep3').prop('href', '');
+				//$('#navStep4').prop('href', '');
 			}
+			$('#navStep4').prop('href', 'rep_HCInternal.html');
 		} else if (selectOptionType == 'do') {
 			
 			if (action == 'NEW') {
@@ -1029,7 +1016,7 @@ var selectOptionType = $('#iline').val();
 				changeNavPills(navREP, 'NEW Dossier Enrolment');
 				$('#navStep2').prop('href', 'rep_2_dossier.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				$('#navStep4').prop('href', 'rep_HCInternal.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
 				changeLabelText(['raEnAntiDateFiled'], ['Date the First RA is anticipated to be filed'], false);
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
@@ -1037,15 +1024,14 @@ var selectOptionType = $('#iline').val();
 				changeNavPills(navREP, 'DRAFT Dossier Enrolment');
 				$('#navStep2').prop('href', 'rep_2_dossier.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				$('#navStep4').prop('href', 'rep_HCInternal.html');
+				changeLabelText(['raEnAntiDateFiled'], ['Date the First RA is anticipated to be filed'], false);
 				$('#enrolDrftGrp').show();
 				$('#enrolAmdGrp').hide();
-				$('#nextStep2but').prop('href', 'rep_2_dossier.html');
 			} else if (action == 'AMEND') {
 				changeNavPills(navREP, 'AMEND Dossier Enrolment');
 				$('#navStep2').prop('href', 'rep_2_dossier_amend.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				$('#navStep4').prop('href', 'rep_HCInternal.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
 				step2but.href = "rep_2_dossier_amend.html";
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').show();
@@ -1053,11 +1039,11 @@ var selectOptionType = $('#iline').val();
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
 				changeNavPills(navREP, 'Dossier Enrolment');
-				$('#navStep2').prop('href', '#');
-				$('#navStep3').prop('href', '#');
-				$('#navStep4').prop('href', '#');
-				$('#nextStep2but').prop('href', '#');
+				$('#navStep2').prop('href', '');
+				$('#navStep3').prop('href', '');
+				//$('#navStep4').prop('href', '');
 			}
+			$('#navStep4').prop('href', 'rep_HCInternal.html');
 		} else if (selectOptionType == 'ra') {
 			
 			if (action == 'NEW') {
@@ -1065,36 +1051,34 @@ var selectOptionType = $('#iline').val();
 				changeNavPills(navREP,'NEW Regulatory Activity Enrolment');
 				$('#navStep2').prop('href', 'rep_2_regActivity.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				$('#navStep4').prop('href', 'rep_HCInternal.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_enrol.html');
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
 			} else if (action == 'DRAFT') {
 				changeNavPills(navREP, 'DRAFT Regulatory Activity Enrolment');
-				$('#enrolDrftGrp').show();
-				$('#enrolAmdGrp').hide();
 				$('#navStep2').prop('href', 'rep_2_regActivity.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				$('#navStep4').prop('href', 'rep_HCInternal.html');
-				$('#nextStep2but').prop('href', 'rep_2_regActivity.html');
+				$('#enrolDrftGrp').show();
+				$('#enrolAmdGrp').hide();
 			} else if (action == 'AMEND') {
 				changeNavPills(navREP, 'AMEND Regulatory Activity Enrolment');
 				step2but.href = "rep_2_regActivity_amend.html";
 				$('#navStep2').prop('href', 'rep_2_regActivity_amend.html');
 				$('#navStep3').prop('href', 'rep_3.html');
-				$('#navStep4').prop('href', 'rep_HCInternal.html');
+				//$('#navStep4').prop('href', 'rep_HCInternal_amend.html');
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').show();
 			} else {
 				$('#enrolDrftGrp').hide();
 				$('#enrolAmdGrp').hide();
 				changeNavPills(navREP,'Regulatory Activity');
-				$('#nextStep2but').prop('href', '#');
-				$('#navStep2').prop('href', '#');
-				$('#navStep3').prop('href', '#');
-				$('#navStep4').prop('href', '#');
+				$('#navStep2').prop('href', '');
+				$('#navStep3').prop('href', '');
+				//$('#navStep4').prop('href', '');
 			}
+			$('#navStep4').prop('href', 'rep_HCInternal.html');
 		} else if (selectOptionType == 'rt') {
-			//remove if necessary
+			
 		}
 	}
 }
@@ -1131,7 +1115,7 @@ function changeLabelText(elementForArray, txtToChangeToArray, bolAddAfterNextEle
 //adds contact
 function addNewContact() {
 	if (contactCounter < 3) {
-		var newContact = '<li id="contactInfo1"><details open="open"><summary>Main Contact Information <button class="btn btn-danger btn-xs deleteRef" onclick="deleteContact(contactInfo1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div id="contactInfo1Main" class="wb-frmvld well well-sm"><div class="row"><div class="form-group col-sm-2"><label for="contactInfo1Salutation" class="control-label">Salutation</label><div class=""><select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" ><option label=" "></option><option value="1">Mr.</option><option value="2">Mrs.</option><option value="3">Ms.</option><option value="4">Dr.</option></select></div></div><div class="form-group col-sm-3"><label for="contactInfo1GivenName" class="control-label">Given Name</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name"></div></div><div class="form-group col-sm-3"><label for="contactInfo1Surname" class="control-label">Surname</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Title" class="control-label">Title</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title" ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Lang" class="control-label">Language</label><select id="contactInfo1Lang" name="contact1InfoLang" class="form-control input-sm full-width"><option label=""></option><option value="1">English</option><option value="2">French</option></select></div></div><div class="row"><div class="form-group col-sm-3"><label for="contactInfo1TelNo" class="control-label">Telephone No.</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone No."  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1TelExt" class="control-label">Ext</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  ></div></div><div class="form-group col-sm-4"><label for="contactInfo1Email" class="control-label">Email</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  /></div></div><div class="form-group col-sm-3"><label for="contactInfo1FaxNo" class="control-label">Fax No.</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax No."  ></div></div></div></div></details></li>';
+		var newContact = '<li id="contactInfo1"><details open="open"><summary>Main Contact Information <button class="btn btn-danger btn-xs deleteRef" onclick="deleteContact(contactInfo1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div id="contactInfo1Main" class="wb-frmvld well well-sm"><div class="row"><div class="form-group col-sm-2"><label for="contactInfo1Salutation" class="control-label">Salutation*</label><div class=""><select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" ><option label=" "></option><option value="1">Mr.</option><option value="2">Mrs.</option><option value="3">Ms.</option><option value="4">Dr.</option></select></div></div><div class="form-group col-sm-3"><label for="contactInfo1GivenName" class="control-label">Given Name*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name"></div></div><div class="form-group col-sm-3"><label for="contactInfo1Surname" class="control-label">Surname*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Title" class="control-label">Title*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title" ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Lang" class="control-label">Language</label><select id="contactInfo1Lang" name="contact1InfoLang" class="form-control input-sm full-width"><option label=""></option><option value="1">English</option><option value="2">French</option></select></div></div><div class="row"><div class="form-group col-sm-3"><label for="contactInfo1TelNo" class="control-label">Telephone No*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone No."  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1TelExt" class="control-label">Ext</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  ></div></div><div class="form-group col-sm-4"><label for="contactInfo1Email" class="control-label">Email*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  /></div></div><div class="form-group col-sm-3"><label for="contactInfo1FaxNo" class="control-label">Fax No.</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax No."  ></div></div></div></div></details></li>';
 		//increment counter
 		contactCounter++;
 		numOfContactsCreated++;
@@ -1177,7 +1161,7 @@ function rtCheck() {
 	if (check1[0].checked && check2[0].checked) {
 		$('#nextStep2but').prop('href', 'rep_2_regTransaction.html');
 	} else {
-		$('#nextStep2but').prop('href', '#');
+		$('#nextStep2but').prop('href', '');
 	}
 }
 
