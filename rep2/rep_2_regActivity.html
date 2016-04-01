@@ -33,6 +33,26 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 <link rel="stylesheet" href="../css/rep.css">
 
+<style>
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+</style>
+
+
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
 <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
@@ -251,14 +271,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 			</div>
 				<div class="row">
-					<div class="col-sm-9">
+					<div class="col-sm-11">
 						<div class="form-group">
 							<label for="raEnrolmentSubThirdParty" class="control-label">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</label>
 						</div>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-1">
 						<div class="form-group">
-								<select class="form-control input-sm full-width" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty">
+								<select class="form-control input-sm full-width" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty" onchange="checkRaEnrolmentSubThirdPartySelection()">
 								<option label=" "></option>
 								<option value="1">Yes</option>
 								<option value="2">No</option>
@@ -266,15 +286,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row" id="raAutLetter">
 					<div class="col-sm-5">
 						<div class="form-group">
 							<label for="raAutLetterFileUpload" class="control-label" >If YES, please upload Authorization letter:</label>
 						</div>
 					</div>
 					<div class="col-sm-7">
-						<div class="form-group">
-							<input type="file" class="full-width" id="raAutLetterFileUpload"/>
+						<input id="uploadFile" placeholder="Select File" disabled="disabled" />
+						<div class="form-group fileUpload btn btn-primary">
+							<span>Select file</span>
+							<input type="file"  class="full-width upload" onchange="uploadBtn()" id="raAutLetterFileUpload"/>
 						</div>
 					</div>
 				</div>
@@ -1206,6 +1228,23 @@ function otherCheckBox(checkbox, input) {
     	}else{
        $(input).css('display', 'none');
    }
+}
+
+function checkRaEnrolmentSubThirdPartySelection(){
+	var obj = document.getElementsByName('raEnrolmentSubThirdParty')[0];
+	var div = document.getElementById('raAutLetter');
+
+	if (obj.value == '1') {
+		div.style.display = "block";
+	} 
+	else {
+		div.style.display = "none";
+	}
+	
+}
+
+function uploadBtn() {
+	document.getElementById("uploadFile").value = document.getElementById('raAutLetterFileUpload').value;
 }
 
 //var raDINCount = 4; //keeps track of number of current DINs (initially, there are 4)
