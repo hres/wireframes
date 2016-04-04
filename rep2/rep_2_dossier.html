@@ -2745,7 +2745,7 @@ function copyFromList(copyBut) {
 	var cloneLi = $(closestLi).clone(true, true);
 	var cloneLiHTML = $(cloneLi).prop('outerHTML');
 	cloneLiHTML = replaceAll(cloneLiHTML, drugFormId + 'NonMedIngr' + ingrId, drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
-	var appendix4Text = replaceAll(appendix4TextNonMedIngr, doDrugProForm1NonMedIngr1 , drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
+	var appendix4Text = replaceAll(appendix4TextMedIngr, doDrugProForm1MedIngr1 , drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
 	
 	var index = $(closestLi).index() + 2;
 	cloneLiHTML = cloneLiHTML.replace('Ingredient 1', 'Ingredient ' + index);
