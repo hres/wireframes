@@ -1796,6 +1796,7 @@ var ectdTableSeqCreatedCount = 1;
 
 function checkSameRegActivityContactSelection(){
 	var obj = document.getElementsByName('sameRegActivityContact')[0];
+
 	var coName = document.getElementById("raEnrolmentCompName");
 	var street = document.getElementById("raEnrolmentAddrStr");
 	var city = document.getElementById("raEnrolmentAddrCity");
@@ -1812,45 +1813,22 @@ function checkSameRegActivityContactSelection(){
 	var ext = document.getElementById("raEnrolmentCompRepTelExt");
 	var faxNo = document.getElementById("raEnrolmentCompRepFaxNo");
 	var email = document.getElementById("raEnrolmentCompRepEmail");
+	var toChange = [coName, street, city, country, province, postalCode, salutaion, givenName, initital, surName, title, language, phoneNum, ext, faxNo, email];
 
+				
 	if (obj.value == '1') {
-		coName.readOnly = false;
-		street.readOnly = false;
-		city.readOnly = false;
-		country.readOnly = false;
-		province.readOnly = false;
-		postalCode.readOnly = false;
-		salutaion.disabled = false;
-		givenName.readOnly = false;
-		initital.readOnly = false;
-		surName.readOnly = false;
-		title.readOnly = false;
-		language.disabled = false;
-		phoneNum.readOnly = false;
-		ext.readOnly = false;
-		faxNo.readOnly = false;
-		email.readOnly = false;
-
+		for	(index = 0; index < toChange.length; index++) {
+    	toChange[index].readOnly = false;
+    	toChange[index].disabled = false;
+		}
 	} 
 	else {
-		coName.readOnly = true;
-		street.readOnly = true;
-		city.readOnly = true;
-		country.readOnly = true;
-		province.readOnly = true;
-		postalCode.readOnly = true;
-		salutaion.disabled = true;
-		givenName.readOnly = true;
-		initital.readOnly = true;
-		surName.readOnly = true;
-		title.readOnly = true;
-		language.disabled = true;
-		phoneNum.readOnly = true;
-		ext.readOnly = true;
-		faxNo.readOnly = true;
-		email.readOnly = true;
+		for	(index = 0; index < toChange.length; index++) {
+    	toChange[index].readOnly = true;
+    	toChange[index].disabled = true;
+		}
 	}
-	
+
 }
 
 function checkOptioneCTD(obj) {
