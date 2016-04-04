@@ -369,3 +369,13 @@ text-decoration:none;
 .displayTableCell {
 	display:table-cell!important;
 }
+
+.fixed {
+    position:fixed;
+    top:0;
+	background-color:#f9f9f9;
+	z-index:1;
+	border-bottom: 3px solid #af3c43;
+	width: 1170px;
+	max-width:1170px;
+}
