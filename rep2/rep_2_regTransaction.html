@@ -1008,7 +1008,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="row" style="margin-top: 10px">
 				<div class="form-group">
 					<div class="col-sm-6">
-							<label for="" class="control-label">Same Reg. Activity Contact for this transaction? [YES/NO]</label>
+							<label for="" class="control-label">Same Regulatory Activity Contact for this transaction? [YES/NO]</label>
 					</div>
 					<div class="col-sm-2">
 						<select class="form-control input-sm" name="sameRegActivityContact" id="" onchange="checkSameRegActivityContactSelection()">
@@ -1815,7 +1815,6 @@ function checkSameRegActivityContactSelection(){
 	var email = document.getElementById("raEnrolmentCompRepEmail");
 	var toChange = [coName, street, city, country, province, postalCode, salutaion, givenName, initital, surName, title, language, phoneNum, ext, faxNo, email];
 
-				
 	if (obj.value == '1') {
 		for	(index = 0; index < toChange.length; index++) {
     	toChange[index].readOnly = false;
