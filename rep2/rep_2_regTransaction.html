@@ -1011,7 +1011,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<label for="" class="control-label">Same Reg. Activity Contact for this transaction? [YES/NO]</label>
 					</div>
 					<div class="col-sm-2">
-						<select class="form-control input-sm" name="" id="" onchange="">
+						<select class="form-control input-sm" name="sameRegActivityContact" id="" onchange="checkSameRegActivityContactSelection()">
 							<option label=" "></option>
 							<option value="1">Yes</option>
 							<option value="2">No</option>
@@ -1788,9 +1788,70 @@ $(document).ready(function() {
    
 });
 
+
+
 var prevURL = readCookie("currentURL");
 
 var ectdTableSeqCreatedCount = 1;
+
+function checkSameRegActivityContactSelection(){
+	var obj = document.getElementsByName('sameRegActivityContact')[0];
+	var coName = document.getElementById("raEnrolmentCompName");
+	var street = document.getElementById("raEnrolmentAddrStr");
+	var city = document.getElementById("raEnrolmentAddrCity");
+	var country = document.getElementById("raEnrolmentAddrCountry");
+	var province = document.getElementById("raEnrolmentAddrProv");
+	var postalCode = document.getElementById("raEnrolmentAddrPostal");
+	var salutaion = document.getElementById("raEnrolmentCompRepSal");
+	var givenName = document.getElementById("raEnrolmentCompRepGivenName");
+	var initital = document.getElementById("raEnrolmentCompRepInit");
+	var surName = document.getElementById("raEnrolmentCompRepSurname");
+	var title = document.getElementById("raEnrolmentCompRepTitle");
+	var language = document.getElementById("raEnrolmentCompRepLang");
+	var phoneNum = document.getElementById("raEnrolmentCompRepTelNo");
+	var ext = document.getElementById("raEnrolmentCompRepTelExt");
+	var faxNo = document.getElementById("raEnrolmentCompRepFaxNo");
+	var email = document.getElementById("raEnrolmentCompRepEmail");
+
+	if (obj.value == '1') {
+		coName.readOnly = false;
+		street.readOnly = false;
+		city.readOnly = false;
+		country.readOnly = false;
+		province.readOnly = false;
+		postalCode.readOnly = false;
+		salutaion.disabled = false;
+		givenName.readOnly = false;
+		initital.readOnly = false;
+		surName.readOnly = false;
+		title.readOnly = false;
+		language.disabled = false;
+		phoneNum.readOnly = false;
+		ext.readOnly = false;
+		faxNo.readOnly = false;
+		email.readOnly = false;
+
+	} 
+	else {
+		coName.readOnly = true;
+		street.readOnly = true;
+		city.readOnly = true;
+		country.readOnly = true;
+		province.readOnly = true;
+		postalCode.readOnly = true;
+		salutaion.disabled = true;
+		givenName.readOnly = true;
+		initital.readOnly = true;
+		surName.readOnly = true;
+		title.readOnly = true;
+		language.disabled = true;
+		phoneNum.readOnly = true;
+		ext.readOnly = true;
+		faxNo.readOnly = true;
+		email.readOnly = true;
+	}
+	
+}
 
 function checkOptioneCTD(obj) {
     var eCTD = $('#rtLCM');
