@@ -2,6 +2,12 @@
 	background-color: #2C9BEC!important;
 }
 
+.nav-pills li {
+	float: none;
+	display: table-cell;
+	text-align: center;
+}
+
 span.glyphicon.glyphicon-trash {
 	font-size: 15px !important;
 }
