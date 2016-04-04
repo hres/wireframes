@@ -118,3 +118,12 @@ function prePopulate(array, bolToPopulate) {
 		}
 	}
 }
+
+/**TEMPORARY - for fixed navigation bar at top for DEMO PURPOSES ONLY **/
+$(window).bind('scroll', function () {
+    if ($(window).scrollTop() > 350) {
+        $('.nvg').addClass('fixed');
+    } else {
+        $('.nvg').removeClass('fixed');
+    }
+});
