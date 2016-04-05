@@ -170,433 +170,443 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <section>
 
 	<br /><br />
-	<div class="panel panel-primary">
-        <div class="panel-heading">
-            <h3 class="panel-title">STEP 2 - Regulatory Activity Information</h3>
-		</div>
-		<div class="panel-body">
-		<div id="regActivityMain">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="form-group">
-							<label for="raCompanyId">Company Id</label>
-							<input type="text" class="form-control input-sm full-width" id="raCompanyId" placeholder="Enter Company Id" />
-						</div>
-					</div>
-					<div style="padding-right: 0px; width: 95px;" class="col-sm-2">
-						<div class="form-group">
-							<label for="raDossierId">Dossier Id</label>
-							<input class="form-control input-sm full-width" id="raDossierId" placeholder="HC6-24-" readonly="readonly" type="text">
-							
-						</div>
-					</div>
-					
-					<div class="col-sm-4" style="padding-left:0px;">
-						<div class="form-group" style="padding-top: 28px;">
-
-							<input type="text" class="form-control input-sm full-width" id="raDossierId2" placeholder="Enter Dossier Id" />
-							
-						</div>
-					</div>
-				</div>
-			<div class="row">
-				<div class="col-sm-3">
-					<div class="form-group">
-						<label for="raEnrolmentActivityLead" class="control-label">Regulatory Activity Lead</label>
-					</div>
-				</div>
-				<div class="col-sm-9">
-					<div class="form-group">
-						<select class="form-control input-sm full-width" name="raEnrolmentActivityLead" id="raEnrolmentActivityLead">
-							<option label=" "></option>
-							<option value="1"></option>
-							<option value="2"></option>
-						</select>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-					<div class="col-sm-3">
-						<div class="form-group">
-							<label for="raEnrolmentActivityType" class="control-label">Regulatory Activity Type</label>
-						</div>
-					</div>
-					<div class="col-sm-9">
-						<div class="form-group">
-							<!-- <input class="form-control input-sm full-width" type="text" id="raEnrolmentActivityType" name="raEnrolmentActivityType" list="raRegActivityTypeSuggestions" /> -->
-							 <select  class="form-control input-sm full-width" id="raRegActivityTypeSuggestions">
-								<!--[if lte IE 9]><select><![endif]-->
-								<option label=" "></option>
-								<option value="Abbreviated New Drug Submission (ANDS)">Abbreviated New Drug Submission (ANDS)</option>
-								<option value="Administrative manufacturer name/product name change/licensing agreements (ADMIN)">Administrative manufacturer name/product name change/licensing agreements (ADMIN)</option>
-								<option value="Clinical Trial Application (CTA)">Clinical Trial Application (CTA)</option>
-								<option value="Clinical Trial Application Amendment (CTA-A)">Clinical Trial Application Amendment (CTA-A)</option>
-								<option value="Drug Identification Number submission - all types (DIN)">Drug Identification Number submission - all types (DIN)</option>
-								<option value="New Drug Submission (NDS)">New Drug Submission (NDS)</option>
-								<option value="Notifiable Change (NC)">Notifiable Change (NC)</option>
-								<option value="Post-Authorization Division 1 (PDC)">Post-Authorization Division 1 (PDC)</option>
-								<option value="Supplemental Abbreviated New Drug Submission (SANDS)">Supplemental Abbreviated New Drug Submission (SANDS)</option>
-								<option value="Supplemental New Drug Submission (SNDS)">Supplemental New Drug Submission (SNDS)</option>
-								<option value="Veterinary Abbreviated New Drug Submission (VANDS)">Veterinary Abbreviated New Drug Submission (VANDS)</option>
-								<option value="Veterinary Drug Identification Number Submission - all types (VDIN)">Veterinary Drug Identification Number Submission - all types (VDIN)</option>
-								<option value="Veterinary Investigational New Drug (VIND)">Veterinary Investigational New Drug (VIND)</option>
-								<option value="Veterinary Investigational New Drug Amendment (VIND-AM)">Veterinary Investigational New Drug Amendment (VIND-AM)</option>
-								<option value="Veterinary New Drug Submission (VINDS)">Veterinary New Drug Submission (VINDS)</option>
-								<option value="Veterinary Notifiable Change (VNC)">Veterinary Notifiable Change (VNC)</option>
-								<!--[if lte IE 9]></select><![endif]-->
-							</select>
-						</div>
-					</div>
-                   
-				</div>
-			<div class="row">
-				<div class="col-sm-3">
-					<div class="form-group">
-						<label for="raEnrolmentFeeClass" class="control-label">Fee Class</label>
-					</div>
-				</div>
-				<div class="col-sm-9">
-					<div class="form-group">
-						<select class="form-control input-sm" name="raEnrolmentFeeClass" id="raEnrolmentFeeClass">
-						<option label=" "></option>
-						<option value="1"></option>
-						<option value="2"></option>
-						</select>
-					</div>
-				</div>
-				</div>
-			
-			<div class="row" id="raEnrolmentAdmSubAttest">
-				<div class="col-sm-7 col-sm-offset-3">
-					<div class="form-group">
-						<p>I confirm that this administrative submission type is NOT a LASA submission</p>
-					</div>
-				</div>
-				<div class="col-sm-2">
-					<div class="form-group">
-						<div class="checkbox">
-							<label><input id="raEnrolmentAdmSubAttestA" type="checkbox" value="" />I Confirm
-</label>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="form-group">
-						<label class="control-label" for="regEnrolmentRegActReason">Reason for filing this Regulatory Activity:</label>
-						<textarea class="form-control input-sm full-width" rows="4" cols="col-sm-12" id="regEnrolmentRegActReason"></textarea>
-					</div>
-				</div>
-			</div>
-				<div class="row">
-					<div class="col-sm-8">
-						<div class="form-group">
-							<label for="raEnrolmentSubThirdParty" class="control-label">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</label>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="form-group">
-								<select class="form-control input-sm" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty" onchange="checkRaEnrolmentSubThirdPartySelection()">
-								<option label=" "></option>
-								<option value="1">Yes</option>
-								<option value="2">No</option>
-								</select>
-						</div>
-					</div>
-				</div>
-				<div class="row" id="raAutLetter" style="display:none">
-					<div class="col-sm-4">
-						<div class="form-group">
-							<label for="raAutLetterFileUpload" class="control-label" >Please upload Authorization letter:</label>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="form-group">
-							<label class="wb-inv" for="uploadFile">Select File</label>
-							<input class="form-control input-sm full-width" id="uploadFile" placeholder="Select File" disabled="disabled" />
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="form-group fileUpload btn btn-primary btn-sm">
-							<span>Select file</span>
-							<input type="file"  class="full-width upload input-sm" onchange="uploadBtn()" id="raAutLetterFileUpload"/>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		<div class="panel panel-default">
-			<header class="panel-heading"><h4 class="panel-title">Related Regulatory Activities</h4></header>
-			<div class="panel-body">
+	
 		<div class="row">
-			<div class="col-sm-3 col-sm-offset-9">
-				<button class="btn btn-default btn-sm" onclick="addNewRelSubmission()" type="submit">Add Another Related Submission</button>
+			<div class="col-sm-offset-9 col-sm-3">
+				<button class=" btn btn-sm btn-default wb-toggle" type="button" data-toggle='{"selector": ".raMainDetails"}'>Collapse/Expand ALL</button>
 			</div>
 		</div>
-		<ul id="raEnrolmentRelList" class="list-unstyled">
-			<li id="raEnrolmentRel1">
-				<details open="open">
-			<summary class="heightAdjust">Related Regulatory Activity 1 [Referred to in this Submission]</summary>
-			<div class="well well-sm">
-			<div class="row">
-				<div class="form-group col-sm-12">
-					<label for="raEnrolmentRel1ActivityType" class="control-label">Regulatory Activity Type:</label>
-                    <div class="">
-						<select class="form-control input-sm full-width" name="raEnrolmentRel1ActivityType" id="raEnrolmentRel1ActivityType">
-						<option label=" "></option>
-						<option value="1"></option>
-						<option value="2"></option>
-                        </select>
-                    </div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-sm-4">
-					<label for="raEnrolmentRel1DateCleared" ><span class="field-name">Date Cleared</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
-					<input class="form-control  input-sm full-width" type="date" id="raEnrolmentRel1DateCleared" name="raEnrolmentRel1DateCleared" data-rule-dateiso="true">
-				</div>
-				<div class="form-group col-sm-3">
-					<label for="raEnrolmentRel1ControlNo" class="control-label">Control No.</label>
-						<div class="">
-							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ControlNo">
+		<ul class="list-unstyled marginTop-15">
+			<li>
+				<details class="panel panel-primary raMainDetails">
+					<summary class="panel-heading"><h3 class="panel-title">STEP 2a - Regulatory Activity Information</h3></summary>
+						<div class="panel-body">
+						<div id="regActivityMain">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="form-group">
+											<label for="raCompanyId">Company Id</label>
+											<input type="text" class="form-control input-sm full-width" id="raCompanyId" placeholder="Enter Company Id" />
+										</div>
+									</div>
+										<div style="padding-right: 0px; width: 95px" class="col-sm-2">
+											<div class="form-group">
+												<label for="raDossierId">Dossier Id</label>
+												<input class="form-control input-sm full-width" style="border-top-right-radius:0; border-bottom-right-radius:0; border:1px solid black; border-right:none"id="raDossierId" placeholder="HC6-24-" readonly="readonly" type="text">
+												
+											</div>
+										</div>
+										
+										<div class="col-sm-4" style="padding-left:0px;">
+											<div class="form-group" style="padding-top: 28px;">
+
+												<input type="text" class="form-control input-sm full-width" style="border-top-left-radius:0; border-bottom-left-radius:0; border:1px solid black; border-left:none"id="raDossierId2" placeholder="Enter Dossier Id" />
+												
+											</div>
+										</div>
+								</div>
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="form-group">
+										<label for="raEnrolmentActivityLead" class="control-label">Regulatory Activity Lead</label>
+									</div>
+								</div>
+								<div class="col-sm-9">
+									<div class="form-group">
+										<select class="form-control input-sm full-width" name="raEnrolmentActivityLead" id="raEnrolmentActivityLead">
+											<option label=" "></option>
+											<option value="1"></option>
+											<option value="2"></option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label for="raEnrolmentActivityType" class="control-label">Regulatory Activity Type</label>
+										</div>
+									</div>
+									<div class="col-sm-9">
+										<div class="form-group">
+											<!-- <input class="form-control input-sm full-width" type="text" id="raEnrolmentActivityType" name="raEnrolmentActivityType" list="raRegActivityTypeSuggestions" /> -->
+											 <select  class="form-control input-sm full-width" id="raRegActivityTypeSuggestions">
+												<!--[if lte IE 9]><select><![endif]-->
+												<option label=" "></option>
+												<option value="Abbreviated New Drug Submission (ANDS)">Abbreviated New Drug Submission (ANDS)</option>
+												<option value="Administrative manufacturer name/product name change/licensing agreements (ADMIN)">Administrative manufacturer name/product name change/licensing agreements (ADMIN)</option>
+												<option value="Clinical Trial Application (CTA)">Clinical Trial Application (CTA)</option>
+												<option value="Clinical Trial Application Amendment (CTA-A)">Clinical Trial Application Amendment (CTA-A)</option>
+												<option value="Drug Identification Number submission - all types (DIN)">Drug Identification Number submission - all types (DIN)</option>
+												<option value="New Drug Submission (NDS)">New Drug Submission (NDS)</option>
+												<option value="Notifiable Change (NC)">Notifiable Change (NC)</option>
+												<option value="Post-Authorization Division 1 (PDC)">Post-Authorization Division 1 (PDC)</option>
+												<option value="Supplemental Abbreviated New Drug Submission (SANDS)">Supplemental Abbreviated New Drug Submission (SANDS)</option>
+												<option value="Supplemental New Drug Submission (SNDS)">Supplemental New Drug Submission (SNDS)</option>
+												<option value="Veterinary Abbreviated New Drug Submission (VANDS)">Veterinary Abbreviated New Drug Submission (VANDS)</option>
+												<option value="Veterinary Drug Identification Number Submission - all types (VDIN)">Veterinary Drug Identification Number Submission - all types (VDIN)</option>
+												<option value="Veterinary Investigational New Drug (VIND)">Veterinary Investigational New Drug (VIND)</option>
+												<option value="Veterinary Investigational New Drug Amendment (VIND-AM)">Veterinary Investigational New Drug Amendment (VIND-AM)</option>
+												<option value="Veterinary New Drug Submission (VINDS)">Veterinary New Drug Submission (VINDS)</option>
+												<option value="Veterinary Notifiable Change (VNC)">Veterinary Notifiable Change (VNC)</option>
+												<!--[if lte IE 9]></select><![endif]-->
+											</select>
+										</div>
+									</div>
+								   
+								</div>
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="form-group">
+										<label for="raEnrolmentFeeClass" class="control-label">Fee Class</label>
+									</div>
+								</div>
+								<div class="col-sm-9">
+									<div class="form-group">
+										<select class="form-control input-sm" name="raEnrolmentFeeClass" id="raEnrolmentFeeClass">
+										<option label=" "></option>
+										<option value="1"></option>
+										<option value="2"></option>
+										</select>
+									</div>
+								</div>
+								</div>
+							
+							<div class="row" id="raEnrolmentAdmSubAttest">
+								<div class="col-sm-7 col-sm-offset-3">
+									<div class="form-group">
+										<p>I confirm that this administrative submission type is NOT a LASA submission</p>
+									</div>
+								</div>
+								<div class="col-sm-2">
+									<div class="form-group">
+										<div class="checkbox">
+											<label><input id="raEnrolmentAdmSubAttestA" type="checkbox" value="" />I Confirm
+				</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label class="control-label" for="regEnrolmentRegActReason">Reason for filing this Regulatory Activity:</label>
+										<textarea class="form-control input-sm full-width" rows="4" cols="col-sm-12" id="regEnrolmentRegActReason"></textarea>
+									</div>
+								</div>
+							</div>
+								<div class="row">
+									<div class="col-sm-8">
+										<div class="form-group">
+											<label for="raEnrolmentSubThirdParty" class="control-label">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</label>
+										</div>
+									</div>
+									<div class="col-sm-2">
+										<div class="form-group">
+												<select class="form-control input-sm" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty" onchange="checkRaEnrolmentSubThirdPartySelection()">
+												<option label=" "></option>
+												<option value="1">Yes</option>
+												<option value="2">No</option>
+												</select>
+										</div>
+									</div>
+								</div>
+								<div class="row" id="raAutLetter" style="display:none">
+									<div class="col-sm-4">
+										<div class="form-group">
+											<label for="raAutLetterFileUpload" class="control-label" >Please upload Authorization letter:</label>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="wb-inv" for="uploadFile">Select File</label>
+											<input class="form-control input-sm full-width" id="uploadFile" placeholder="Select File" disabled="disabled" />
+										</div>
+									</div>
+									<div class="col-sm-2">
+										<div class="form-group fileUpload btn btn-primary btn-sm">
+											<span>Select file</span>
+											<input type="file"  class="full-width upload input-sm" onchange="uploadBtn()" id="raAutLetterFileUpload"/>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						<div class="panel panel-default">
+							<header class="panel-heading"><h4 class="panel-title">Related Regulatory Activities</h4></header>
+							<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-3 col-sm-offset-9">
+								<button class="btn btn-default btn-sm" onclick="addNewRelSubmission()" type="submit">Add Another Related Submission</button>
+							</div>
 						</div>
-				</div>
-				<div class="form-group col-sm-5">
-					<label for="raEnrolmentRel1FilNo" class="control-label">Dossier ID (Previously File No.)</label>
-						<div class="">
-							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1FilNo">
+						<ul id="raEnrolmentRelList" class="list-unstyled">
+							<li id="raEnrolmentRel1">
+								<details open="open">
+							<summary class="heightAdjust">Related Regulatory Activity 1 [Referred to in this Submission]</summary>
+							<div class="well well-sm">
+							<div class="row">
+								<div class="form-group col-sm-12">
+									<label for="raEnrolmentRel1ActivityType" class="control-label">Regulatory Activity Type:</label>
+									<div class="">
+										<select class="form-control input-sm full-width" name="raEnrolmentRel1ActivityType" id="raEnrolmentRel1ActivityType">
+										<option label=" "></option>
+										<option value="1"></option>
+										<option value="2"></option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-4">
+									<label for="raEnrolmentRel1DateCleared" ><span class="field-name">Date Cleared</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label>
+									<input class="form-control  input-sm full-width" type="date" id="raEnrolmentRel1DateCleared" name="raEnrolmentRel1DateCleared" data-rule-dateiso="true">
+								</div>
+								<div class="form-group col-sm-3">
+									<label for="raEnrolmentRel1ControlNo" class="control-label">Control No.</label>
+										<div class="">
+											<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ControlNo">
+										</div>
+								</div>
+								<div class="form-group col-sm-5">
+									<label for="raEnrolmentRel1FilNo" class="control-label">Dossier ID (Previously File No.)</label>
+										<div class="">
+											<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1FilNo">
+										</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-12">
+									<label for="raEnrolmentRel1ManuName" class="control-label">Manufacturer / Sponsor Name [Full Legal Name - No Abbreviations]</label>
+										<div class="">
+											<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ManuName">
+										</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-12">
+									<label for="raEnrolmentRel1SubReason" class="control-label">Reason for Submission</label>
+										<div class="">
+											<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1SubReason">
+										</div>
+								</div>
+							</div>
+							<div id="raEnrolmentRel1DIN">
+								<div class="row">
+									<label for="raEnrolmentRel1DINLabel" class=" col-sm-10 control-label">Associated DINs</label>
+									<div class="form-group col-sm-2" id="raEnrolmentRel1DINAddBut">
+										<button class="btn btn-default btn-sm" type="submit" id="raEnrolmentRel1AddBut" onclick="addDIN(raEnrolmentRel1AddBut,'raEnrolmentRel1DIN')">Add a DIN</button>
+									</div>
+								</div>
+								<div class="row" id="raEnrolmentRel1DINRow1">
+									<!--
+									<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp">
+										<label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label>
+										<input type="text" id="raEnrolmentRel1DIN1" class="form-control input-sm col-sm-2" placeholder="">
+									</div>
+									<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN2Grp">
+										<label class="wb-inv" for="raEnrolmentRel1DIN2">DIN</label>
+										<input type="text" id="raEnrolmentRel1DIN2" class="form-control input-sm col-sm-2" placeholder="">
+									</div>
+									<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN3Grp">
+										<label class="wb-inv" for="raEnrolmentRel1DIN3">DIN</label>
+										<input type="text" id="raEnrolmentRel1DIN3" class="form-control input-sm col-sm-2" placeholder="">
+									</div>
+									<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN4Grp">
+										<label class="wb-inv" for="raEnrolmentRel1DIN4">DIN</label>
+										<input type="text" id="raEnrolmentRel1DIN4" class="form-control input-sm col-sm-2" placeholder="">
+									</div>-->
+									
+									<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp">
+										<label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label>
+										<div class="input-group">
+											<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder="">
+											<span class="input-group-btn">
+												<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN1DelBut" type="button">
+													<span class="glyphicon glyphicon-remove"></span>
+												</button>
+											</span>
+										</div>
+									</div>
+									<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN2Grp">
+										<label class="wb-inv" for="raEnrolmentRel1DIN2">DIN</label>
+										<div class="input-group">
+											<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN2" placeholder="">
+											<span class="input-group-btn">
+												<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN2DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN2DelBut" type="button">
+													<span class="glyphicon glyphicon-remove"></span>
+												</button>
+											</span>
+										</div>
+									</div>
+									<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN3Grp">
+										<label class="wb-inv" for="raEnrolmentRel1DIN3">DIN</label>
+										<div class="input-group">
+											<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN3" placeholder="">
+											<span class="input-group-btn">
+												<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN3DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN3DelBut" type="button">
+													<span class="glyphicon glyphicon-remove"></span>
+												</button>
+											</span>
+										</div>
+									</div>
+									<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN4Grp">
+										<label class="wb-inv" for="raEnrolmentRel1DIN4">DIN</label>
+										<div class="input-group">
+											<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN4" placeholder="">
+											<span class="input-group-btn">
+												<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN4DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN4DelBut" type="button">
+													<span class="glyphicon glyphicon-remove"></span>
+												</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+							</details>
+							</li>
+						</ul>
 						</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-sm-12">
-					<label for="raEnrolmentRel1ManuName" class="control-label">Manufacturer / Sponsor Name [Full Legal Name - No Abbreviations]</label>
-						<div class="">
-							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ManuName">
 						</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-sm-12">
-					<label for="raEnrolmentRel1SubReason" class="control-label">Reason for Submission</label>
-						<div class="">
-							<input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1SubReason">
 						</div>
-				</div>
-			</div>
-			<div id="raEnrolmentRel1DIN">
-				<div class="row">
-					<label for="raEnrolmentRel1DINLabel" class=" col-sm-10 control-label">Associated DINs</label>
-					<div class="form-group col-sm-2" id="raEnrolmentRel1DINAddBut">
-						<button class="btn btn-default btn-sm" type="submit" id="raEnrolmentRel1AddBut" onclick="addDIN(raEnrolmentRel1AddBut,'raEnrolmentRel1DIN')">Add a DIN</button>
-					</div>
-				</div>
-				<div class="row" id="raEnrolmentRel1DINRow1">
-					<!--
-					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp">
-						<label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label>
-						<input type="text" id="raEnrolmentRel1DIN1" class="form-control input-sm col-sm-2" placeholder="">
-					</div>
-					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN2Grp">
-						<label class="wb-inv" for="raEnrolmentRel1DIN2">DIN</label>
-						<input type="text" id="raEnrolmentRel1DIN2" class="form-control input-sm col-sm-2" placeholder="">
-					</div>
-					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN3Grp">
-						<label class="wb-inv" for="raEnrolmentRel1DIN3">DIN</label>
-						<input type="text" id="raEnrolmentRel1DIN3" class="form-control input-sm col-sm-2" placeholder="">
-					</div>
-					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN4Grp">
-						<label class="wb-inv" for="raEnrolmentRel1DIN4">DIN</label>
-						<input type="text" id="raEnrolmentRel1DIN4" class="form-control input-sm col-sm-2" placeholder="">
-					</div>-->
-					
-					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp">
-						<label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label>
-						<div class="input-group">
-							<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder="">
-							<span class="input-group-btn">
-								<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN1DelBut" type="button">
-									<span class="glyphicon glyphicon-remove"></span>
-								</button>
-							</span>
+				</details>
+			</li>
+			<li>
+				<details class="panel panel-primary raMainDetails">
+					<summary class="panel-heading"><h3 class="panel-title">STEP 2b - Drug Product Formulation Information</h3></summary>
+					<div class="panel-body">
+						<h5>Rationale for all SNDS, SANDS , (all human drug types); Veterinary Supplemental New Drug Submission (VSNDS), Veterinary Supplemental Abbreviated New Drug Submission (VSANDS) (all veterinary drug types); or for biological drug DIN submissions </h5>
+						<div class="well well-sm">
+							<div class="row"> 
+								<div class="col-sm-7"> 
+									<div class="checkbox">
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> New route of administration, dosage form and/or strength</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> New claims/use, indications, recommended administration or dosage regime</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Change in formulation or method of manufacturing with clinical/bio data</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Change in drug substance/product (site, method, equipment, process control)</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-5">
+									<div class="checkbox">
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Replace sterility test with process parametric release </label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Confirmatory studies</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" onchange="otherCheckBox(this, otherRationale1)"> Other  (please specify):</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<input  type="text" class="form-control input-sm full-width" id="otherRationale1" style="display: none;">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<h5> Type of Notifiable Change (NC) or Veterinary Notifiable Change (VNC) submission (if applicable)  </h5>
+						<div class="well well-sm">
+							<div class="row"> 
+								<div class="col-sm-6"> 
+									<div class="checkbox">
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Change in text of labelling </label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Change in drug substance (source, synthesis)</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Change in formulation</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Change in specifications (medicinal or non-medicinal  ingredient, pharmaceutical form, analytical method)</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" onchange="otherCheckBox(this, otherRationale2)"> Other  (please specify):</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<input  type="text" class="form-control input-sm full-width" id="otherRationale2" style="display: none;">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="checkbox">
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Change in manufacturing method</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Change in manufacturing site</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Change in container size for parenteral drug</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Change in packaging specifications for parenteral/inhalation drug</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" /> Change in packaging material composition</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<label><input type="checkbox" value="" />Change in expiry period/storage conditions</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN2Grp">
-						<label class="wb-inv" for="raEnrolmentRel1DIN2">DIN</label>
-						<div class="input-group">
-							<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN2" placeholder="">
-							<span class="input-group-btn">
-								<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN2DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN2DelBut" type="button">
-									<span class="glyphicon glyphicon-remove"></span>
-								</button>
-							</span>
-						</div>
-					</div>
-					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN3Grp">
-						<label class="wb-inv" for="raEnrolmentRel1DIN3">DIN</label>
-						<div class="input-group">
-							<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN3" placeholder="">
-							<span class="input-group-btn">
-								<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN3DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN3DelBut" type="button">
-									<span class="glyphicon glyphicon-remove"></span>
-								</button>
-							</span>
-						</div>
-					</div>
-					<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN4Grp">
-						<label class="wb-inv" for="raEnrolmentRel1DIN4">DIN</label>
-						<div class="input-group">
-							<input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN4" placeholder="">
-							<span class="input-group-btn">
-								<button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN4DelBut, 'raEnrolmentRel1DIN')" id="raEnrolmentRel1DIN4DelBut" type="button">
-									<span class="glyphicon glyphicon-remove"></span>
-								</button>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-			</details>
+				</details>
 			</li>
 		</ul>
-		</div>
-		</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">Part 2 - Drug Product Formulation Information</h3>
-				</div>
-				<div class="panel-body">
-					<h5>Rationale for all SNDS, SANDS , (all human drug types); Veterinary Supplemental New Drug Submission (VSNDS), Veterinary Supplemental Abbreviated New Drug Submission (VSANDS) (all veterinary drug types); or for biological drug DIN submissions </h5>
-					<div class="well well-sm">
-						<div class="row"> 
-							<div class="col-sm-7"> 
-								<div class="checkbox">
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> New route of administration, dosage form and/or strength</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> New claims/use, indications, recommended administration or dosage regime</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Change in formulation or method of manufacturing with clinical/bio data</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Change in drug substance/product (site, method, equipment, process control)</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-5">
-								<div class="checkbox">
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Replace sterility test with process parametric release </label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Confirmatory studies</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" onchange="otherCheckBox(this, otherRationale1)"> Other  (please specify):</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<input  type="text" class="form-control input-sm full-width" id="otherRationale1" style="display: none;">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<h5> Type of Notifiable Change (NC) or Veterinary Notifiable Change (VNC) submission (if applicable)  </h5>
-					<div class="well well-sm">
-						<div class="row"> 
-							<div class="col-sm-6"> 
-								<div class="checkbox">
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Change in text of labelling </label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Change in drug substance (source, synthesis)</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Change in formulation</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Change in specifications (medicinal or non-medicinal  ingredient, pharmaceutical form, analytical method)</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" onchange="otherCheckBox(this, otherRationale2)"> Other  (please specify):</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<input  type="text" class="form-control input-sm full-width" id="otherRationale2" style="display: none;">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="checkbox">
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Change in manufacturing method</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Change in manufacturing site</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Change in container size for parenteral drug</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Change in packaging specifications for parenteral/inhalation drug</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" /> Change in packaging material composition</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<label><input type="checkbox" value="" />Change in expiry period/storage conditions</label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 			
 			<!--
 			<div class="panel panel-default">
