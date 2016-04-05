@@ -1020,6 +1020,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 			</div>
 			</div>
+			<div class="readOnlyDisabled">
 			<div class="form-group" id="raEnrolmentCompInfoDiv" style="border: 1px solid; padding:15px">
 				<div id="wb-frmvld-id-0" class="wb-frmvld wb-frmvld-inited">
 				<div class="row">
@@ -1506,6 +1507,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		</div>
 	</div>
 </div>
+</div>
 				
 
 
@@ -1785,6 +1787,8 @@ $(document).ready(function() {
    setCookie("currentURL",window.location.href);
    setCookie("typeREP", "rt");
    setCookie("actionREP", "");
+   $('.readOnlyDisabled').find('input, select').attr('readonly', true);
+   $('.readOnlyDisabled').find('input, select').attr('disabled', true);
    
 });
 
@@ -1795,8 +1799,10 @@ var prevURL = readCookie("currentURL");
 var ectdTableSeqCreatedCount = 1;
 
 function checkSameRegActivityContactSelection(){
+	
+	
 	var obj = document.getElementsByName('sameRegActivityContact')[0];
-
+	/*
 	var coName = document.getElementById("raEnrolmentCompName");
 	var street = document.getElementById("raEnrolmentAddrStr");
 	var city = document.getElementById("raEnrolmentAddrCity");
@@ -1814,20 +1820,28 @@ function checkSameRegActivityContactSelection(){
 	var faxNo = document.getElementById("raEnrolmentCompRepFaxNo");
 	var email = document.getElementById("raEnrolmentCompRepEmail");
 	var toChange = [coName, street, city, country, province, postalCode, salutaion, givenName, initital, surName, title, language, phoneNum, ext, faxNo, email];
-
+	*/
 	if (obj.value == '1') {
+		/*
 		for	(index = 0; index < toChange.length; index++) {
     	toChange[index].readOnly = false;
     	toChange[index].disabled = false;
 		}
+		*/
+		$('.readOnlyDisabled').find('input, select').attr('readonly', false);
+		$('.readOnlyDisabled').find('input, select').attr('disabled', false);
 	} 
 	else {
+		/*
 		for	(index = 0; index < toChange.length; index++) {
     	toChange[index].readOnly = true;
     	toChange[index].disabled = true;
 		}
+		*/
+		$('.readOnlyDisabled').find('input, select').attr('readonly', true);
+		$('.readOnlyDisabled').find('input, select').attr('disabled', true);
 	}
-
+	
 }
 
 function checkOptioneCTD(obj) {
