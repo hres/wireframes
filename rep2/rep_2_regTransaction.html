@@ -163,7 +163,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 					</div>
 					<div class="col-sm-2">
-						<select class="form-control input-sm" name="rtEnrolmentInitialSeq" id="rtEnrolmentInitialSeq" onchange="checkSelectShowHide(this, [rtInitalSeq], ['0', '2'])">
+						<select class="form-control input-sm" name="rtEnrolmentInitialSeq" id="rtEnrolmentInitialSeq" onchange="checkSelectShowHide(this, [rtInitalSeq], ['0', '2']); checkSameRegActivityContactSelectionInitial(this)">
 							<option label=" "></option>
 							<option value="1">Yes</option>
 							<option value="2">No</option>
@@ -1011,7 +1011,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<label for="" class="control-label">Same Regulatory Activity Contact for this transaction? [YES/NO]</label>
 					</div>
 					<div class="col-sm-2">
-						<select class="form-control input-sm" name="sameRegActivityContact" id="" onchange="checkSameRegActivityContactSelection()">
+						<select class="form-control input-sm" name="sameRegActivityContact" id="" onchange="checkSameRegActivityContactSelection(this)">
 							<option label=" "></option>
 							<option value="1">Yes</option>
 							<option value="2">No</option>
@@ -1798,10 +1798,22 @@ var prevURL = readCookie("currentURL");
 
 var ectdTableSeqCreatedCount = 1;
 
-function checkSameRegActivityContactSelection(){
+function checkSameRegActivityContactSelectionInitial(obj){
+	var objValue = $(obj).val();
+	if (objValue == '1') {
+		$('.readOnlyDisabled').find('input, select').attr('readonly', false);
+		$('.readOnlyDisabled').find('input, select').attr('disabled', false);
+	} else {
+		$('.readOnlyDisabled').find('input, select').attr('readonly', true);
+		$('.readOnlyDisabled').find('input, select').attr('disabled', true);
+	}
+}
+
+function checkSameRegActivityContactSelection(obj){
 	
 	
-	var obj = document.getElementsByName('sameRegActivityContact')[0];
+	//var obj = document.getElementsByName('sameRegActivityContact')[0];
+	var objValue = $(obj).val();
 	/*
 	var coName = document.getElementById("raEnrolmentCompName");
 	var street = document.getElementById("raEnrolmentAddrStr");
@@ -1821,7 +1833,7 @@ function checkSameRegActivityContactSelection(){
 	var email = document.getElementById("raEnrolmentCompRepEmail");
 	var toChange = [coName, street, city, country, province, postalCode, salutaion, givenName, initital, surName, title, language, phoneNum, ext, faxNo, email];
 	*/
-	if (obj.value == '1') {
+	if (objValue == '2') {
 		/*
 		for	(index = 0; index < toChange.length; index++) {
     	toChange[index].readOnly = false;
