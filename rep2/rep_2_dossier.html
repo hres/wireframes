@@ -1018,7 +1018,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																	</div>
 																	<div class="col-sm-3" style="padding-right:5px; padding-left:5px">
 																		<label for="doDrugProForm1MedIngr1NanoMater" class="control-label">Nanomaterial?</label>
-																		<select id="doDrugProForm1MedIngr1NanoMater" class="form-control input-sm full-width" onchange="otherSelect(this, 'Other', doDrugProForm1MedIngr1NanoMaterOtherDiv)">
+																		<select id="doDrugProForm1MedIngr1NanoMater" class="form-control input-sm full-width" onchange="otherSelectVisibility(this, 'Other', doDrugProForm1MedIngr1NanoMaterOtherDiv)">
 																			<option value="0"></option>
 																			<option value="1">Dendrimer</option>
 																			<option value="2">Liposomes</option>
@@ -1047,7 +1047,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																		<div class="col-sm-5 expnd" style="visibility:hidden">
 																			<label class="control-label" style="margin-top:30.5px" id="doDrugProForm1MedIngr1UsedAs">Used As: Active Ingredient</label>
 																		</div>
-																		<div class="col-sm-3" style="padding-left:30px; padding-right:0; display:none" id="doDrugProForm1MedIngr1NanoMaterOtherDiv">
+																		<div class="col-sm-3" style="padding-left:30px; padding-right:0; visibility:hidden" id="doDrugProForm1MedIngr1NanoMaterOtherDiv">
 																			<label class="control-label normalLabel" for="doDrugProForm1MedIngr1NanoMaterOther">Please indicate the nanomaterial type</label>
 																			<input type="text" class="form-control input-sm full-width" id="doDrugProForm1MedIngr1NanoMaterOther" />
 																		</div>
@@ -2746,6 +2746,12 @@ function addMedIngredient(ulList) {
 	//reset animal/human source radio buttons
 	$('#' + drugFormId + 'MedIngr' + numOfMedIngredientsCreated + 'AniHumanSrcSelect').css('display', 'none');
 	
+	//hide Nanomaterial input
+	$('#' + drugFormId + 'MedIngr' + numOfMedIngredientsCreated + 'NanoMaterOtherDiv').css('visibility', 'hidden');
+	
+	//hide Used As label
+	$('#' + drugFormId + 'MedIngr' + numOfMedIngredientsCreated + 'UsedAs').css('visibility', 'hidden');
+	
 	//replace original Appendix 4 Tabs (must be re-initialized)
 	var tabsID = drugFormId + 'MedIngr' + numOfMedIngredientsCreated + 'AppendixFourTab';
 	$('#' + tabsID)[0].outerHTML = appendix4Text;
@@ -2800,6 +2806,10 @@ function addNonMedIngredient(ulList, bolIngrOrVariant) {
 	
 	//change Used As label
 	$('#' + drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated + 'UsedAs').text('Used As: Non-Medicinal Ingredient');
+	//hide Used As label
+	$('#' + drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated + 'UsedAs').css('visibility', 'hidden');
+	//hide Nanomaterial input
+	$('#' + drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated + 'NanoMaterOtherDiv').css('visibility', 'hidden');
 	
 	//replace original Appendix 4 Tabs (must be re-initialized)
 	var tabsID = drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated + 'AppendixFourTab';
@@ -3477,7 +3487,7 @@ function addRouteOfAdm(but, drugFormId) {
 	routeOfAdmCount = $('#' + drugFormId).find('div.row:not(.other) div.group').length;
   }
   
-  var defaultRouteOfAdm = '<div class="col-sm-6 form-group group" id="doDrugProForm1RouteOfAdm1Grp"><label class="control-label normalLabel-11pt" for="doDrugProForm1RouteOfAdm1">Route of Administration 1</label><div class="input-group"><select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1"  onchange="otherSelect(this, "Other", doDrugProForm1RouteOfAdm1OtherSelect)" class="form-control input-sm col-sm-2"><option label=" "></option> <option value="Block/Infiltration">Block/Infiltration</option> <option value="Buccal">Buccal</option> <option value="Dental">Dental</option> <option value="Dialysis">Dialysis</option> <option value="Epidural">Epidural</option> <option value="Inhalation">Inhalation</option> <option value="Intra-Arterial">Intra-Arterial</option> <option value="Intra-Articular">Intra-Articular</option> <option value="Intrabursal">Intrabursal</option> <option value="Intradermal">Intradermal</option> <option value="Intramammary">Intramammary</option> <option value="Intraocular">Intraocular</option> <option value="Intraperitoneal">Intraperitoneal</option> <option value="Intrathecal">Intrathecal</option> <option value="Intratracheal">Intratracheal</option> <option value="Intravascular">Intravascular</option> <option value="Intravenous">Intravenous</option> <option value="Intravitreal">Intravitreal</option> <option value="Irrigation">Irrigation</option> <option value="Nasal">Nasal</option> <option value="Ophthalmic">Ophthalmic</option> <option value="Oral">Oral</option> <option value="Otic">Otic</option> <option value="Rectal">Rectal</option> <option value="Subcutaneous">Subcutaneous</option> <option value="Sublingual">Sublingual</option> <option value="Topical">Topical</option> <option value="Transdermal">Transdermal</option> <option value="Urethral">Urethral</option> <option value="Vaginal">Vaginal</option> <option value="Other">Other</option></select><span class="input-group-btn"><button class="btn btn-danger btn-sm" id="doDrugProForm1RouteOfAdm1DelBut" type="button" onclick="deleteRouteOfAdm(this, \'doDrugProForm1RouteOfAdm\')"><span class="glyphicon glyphicon-remove"></span></button></span></div><div class="row other" style="margin-top:10px; display:none" id="doDrugProForm1RouteOfAdm1OtherSelect"> <div class="form-group"> <div class="col-sm-5" style="padding-right:8px"> <label class="control-label normalLabel" for="doDrugProForm1RouteOfAdm1Other">Route of Administration Details</label> </div> <div class="col-sm-7" style="padding-left:0"> <input type="text" class="form-control input-sm full-width" id="doDrugProForm1RouteOfAdm1Other"/> </div> </div> </div></div>';
+  var defaultRouteOfAdm = '<div class="col-sm-6 form-group group" id="doDrugProForm1RouteOfAdm1Grp"><label class="control-label normalLabel-11pt" for="doDrugProForm1RouteOfAdm1">Route of Administration 1</label><div class="input-group"><select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1"  onchange="otherSelect(this, \'Other\', doDrugProForm1RouteOfAdm1OtherSelect)" class="form-control input-sm col-sm-2"><option label=" "></option> <option value="Block/Infiltration">Block/Infiltration</option> <option value="Buccal">Buccal</option> <option value="Dental">Dental</option> <option value="Dialysis">Dialysis</option> <option value="Epidural">Epidural</option> <option value="Inhalation">Inhalation</option> <option value="Intra-Arterial">Intra-Arterial</option> <option value="Intra-Articular">Intra-Articular</option> <option value="Intrabursal">Intrabursal</option> <option value="Intradermal">Intradermal</option> <option value="Intramammary">Intramammary</option> <option value="Intraocular">Intraocular</option> <option value="Intraperitoneal">Intraperitoneal</option> <option value="Intrathecal">Intrathecal</option> <option value="Intratracheal">Intratracheal</option> <option value="Intravascular">Intravascular</option> <option value="Intravenous">Intravenous</option> <option value="Intravitreal">Intravitreal</option> <option value="Irrigation">Irrigation</option> <option value="Nasal">Nasal</option> <option value="Ophthalmic">Ophthalmic</option> <option value="Oral">Oral</option> <option value="Otic">Otic</option> <option value="Rectal">Rectal</option> <option value="Subcutaneous">Subcutaneous</option> <option value="Sublingual">Sublingual</option> <option value="Topical">Topical</option> <option value="Transdermal">Transdermal</option> <option value="Urethral">Urethral</option> <option value="Vaginal">Vaginal</option> <option value="Other">Other</option></select><span class="input-group-btn"><button class="btn btn-danger btn-sm" id="doDrugProForm1RouteOfAdm1DelBut" type="button" onclick="deleteRouteOfAdm(this, \'doDrugProForm1RouteOfAdm\')"><span class="glyphicon glyphicon-remove"></span></button></span></div><div class="row other" style="margin-top:10px; display:none" id="doDrugProForm1RouteOfAdm1OtherSelect"> <div class="form-group"> <div class="col-sm-5" style="padding-right:8px"> <label class="control-label normalLabel" for="doDrugProForm1RouteOfAdm1Other">Route of Administration Details</label> </div> <div class="col-sm-7" style="padding-left:0"> <input type="text" class="form-control input-sm full-width" id="doDrugProForm1RouteOfAdm1Other"/> </div> </div> </div></div>';
 	var replacedRouteOfAdm;
 	var newRouteOfAdm;
   if (routeOfAdmCount == 0) {
@@ -3602,6 +3612,15 @@ function otherSelect(select, valueToCompare, input) {
 		$(input).css('display', 'block');
 	} else {
 		$(input).css('display', 'none');
+	}
+}
+
+//when other is selected as route of administration
+function otherSelectVisibility(select, valueToCompare, input) {
+	if ($(select).val() == valueToCompare) {
+		$(input).css('visibility', 'visible');
+	} else {
+		$(input).css('visibility', 'visible');
 	}
 }
 
