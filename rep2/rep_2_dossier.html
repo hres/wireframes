@@ -225,10 +225,41 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								<div class="">
 									<select class="form-control input-sm full-width" name="doCanRefProduct1Dosage" id="doCanRefProduct1Dosage">
 										<option label=" "></option>
-										<option value="1">Biologic</option>
-										<option value="2">Pharmaceutical</option>
-										<option value="3">Drug Master File</option>
-										<option value="4">Medical Device</option>
+										<option value="Aerosol">Aerosol</option>
+										<option value="Bolus">Bolus</option>
+										<option value="Capsule">Capsule</option>
+										<option value="Capsule, Delayed Release">Capsule, Delayed Release</option>
+										<option value="Capsule, Extended Release">Capsule, Extended Release</option>
+										<option value="Cream">Cream</option>
+										<option value="Emulsion">Emulsion</option>
+										<option value="Gas">Gas</option>
+										<option value="Gel">Gel</option>
+										<option value="Implant">Implant</option>
+										<option value="Lotion">Lotion</option>
+										<option value="Lozenge">Lozenge</option>
+										<option value="Ointment">Ointment</option>
+										<option value="Patch">Patch</option>
+										<option value="Patch, Extended-Release">Patch, Extended-Release</option>
+										<option value="Powder">Powder</option>
+										<option value="Powder For Solution">Powder For Solution</option>
+										<option value="Powder For Suspension">Powder For Suspension</option>
+										<option value="Shampoo">Shampoo</option>
+										<option value="Solution">Solution</option>
+										<option value="Spray">Spray</option>
+										<option value="Spray, Bag-On-Valve">Spray, Bag-On-Valve</option>
+										<option value="Spray, Metered Dose">Spray, Metered Dose</option>
+										<option value="Stick">Stick</option>
+										<option value="Strip">Strip</option>
+										<option value="Suppository">Suppository</option>
+										<option value="Suspension">Suspension</option>
+										<option value="Syrup">Syrup</option>
+										<option value="Tablet">Tablet</option>
+										<option value="Tablet, Chewable">Tablet, Chewable</option>
+										<option value="Tablet, Delayed Release">Tablet, Delayed Release</option>
+										<option value="Tablet, Extended Release">Tablet, Extended Release</option>
+										<option value="Tablet, Orally Disintegrating">Tablet, Orally Disintegrating</option>
+										<option value="Wipe">Wipe</option>
+										<option value="Other">Other</option>
 									</select>
 								</div>
 								</div>
@@ -298,46 +329,54 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																<label for="doDrugProForm1AnimalHumanSrcDosageForm" class="control-label">Dosage Form</label>
 															</div>
 														</div>
-														<div class="col-sm-4">
+														<div class="col-sm-3">
 															<div class="form-group">
-																<select id="doDrugProForm1AnimalHumanSrcDosForm" name="doDrugProForm1AnimalHumanSrcDosForm" class="form-control input-sm"/>
+																<select id="doDrugProForm1AnimalHumanSrcDosForm" name="doDrugProForm1AnimalHumanSrcDosForm" onchange="otherSelect(this, 'Other', doDrugProForm1AnimalHumanSrcDosFormOtherDiv)" class="form-control input-sm"/>
 																	<option label=" "></option>
-																	<option value="1">Aerosol</option>
-																	<option value="2">Bolus</option>
-																	<option value="3">Capsule</option>
-																	<option value="4">Capsule, Delayed Release</option>
-																	<option value="5">Capsule, Extended Release</option>
-																	<option value="2">Cream</option>
-																	<option value="2">Emulsion</option>
-																	<option value="2">Gas</option>
-																	<option value="2">Gel</option>
-																	<option value="2">Implant</option>
-																	<option value="2">Lotion</option>
-																	<option value="2">Lozenge</option>
-																	<option value="2">Ointment</option>
-																	<option value="2">Patch</option>
-																	<option value="2">Patch, Extended-Release</option>
-																	<option value="2">Powder</option>
-																	<option value="2">Powder For Solution</option>
-																	<option value="2">Powder For Suspension</option>
-																	<option value="2">Shampoo</option>
-																	<option value="2">Solution</option>
-																	<option value="2">Spray</option>
-																	<option value="2">Spray, Bag-On-Valve</option>
-																	<option value="2">Spray, Metered Dose</option>
-																	<option value="2">Stick</option>
-																	<option value="2">Strip</option>
-																	<option value="2">Suppository</option>
-																	<option value="2">Suspension</option>
-																	<option value="2">Syrup</option>
-																	<option value="2">Tablet</option>
-																	<option value="2">Tablet, Chewable</option>
-																	<option value="2">Tablet, Delayed Release</option>
-																	<option value="2">Tablet, Extended Release</option>
-																	<option value="2">Tablet, Orally Disintegrating</option>
-																	<option value="2">Wipe</option>
-																	<option value="2">Other</option>
+																	<option value="Aerosol">Aerosol</option>
+																	<option value="Bolus">Bolus</option>
+																	<option value="Capsule">Capsule</option>
+																	<option value="Capsule, Delayed Release">Capsule, Delayed Release</option>
+																	<option value="Capsule, Extended Release">Capsule, Extended Release</option>
+																	<option value="Cream">Cream</option>
+																	<option value="Emulsion">Emulsion</option>
+																	<option value="Gas">Gas</option>
+																	<option value="Gel">Gel</option>
+																	<option value="Implant">Implant</option>
+																	<option value="Lotion">Lotion</option>
+																	<option value="Lozenge">Lozenge</option>
+																	<option value="Ointment">Ointment</option>
+																	<option value="Patch">Patch</option>
+																	<option value="Patch, Extended-Release">Patch, Extended-Release</option>
+																	<option value="Powder">Powder</option>
+																	<option value="Powder For Solution">Powder For Solution</option>
+																	<option value="Powder For Suspension">Powder For Suspension</option>
+																	<option value="Shampoo">Shampoo</option>
+																	<option value="Solution">Solution</option>
+																	<option value="Spray">Spray</option>
+																	<option value="Spray, Bag-On-Valve">Spray, Bag-On-Valve</option>
+																	<option value="Spray, Metered Dose">Spray, Metered Dose</option>
+																	<option value="Stick">Stick</option>
+																	<option value="Strip">Strip</option>
+																	<option value="Suppository">Suppository</option>
+																	<option value="Suspension">Suspension</option>
+																	<option value="Syrup">Syrup</option>
+																	<option value="Tablet">Tablet</option>
+																	<option value="Tablet, Chewable">Tablet, Chewable</option>
+																	<option value="Tablet, Delayed Release">Tablet, Delayed Release</option>
+																	<option value="Tablet, Extended Release">Tablet, Extended Release</option>
+																	<option value="Tablet, Orally Disintegrating">Tablet, Orally Disintegrating</option>
+																	<option value="Wipe">Wipe</option>
+																	<option value="Other">Other</option>
 																</select>
+															</div>
+														</div>
+														<div id="doDrugProForm1AnimalHumanSrcDosFormOtherDiv" style="display:none">
+															<div class="col-sm-2">
+																<label class="control-label normalLabel" for="">Dosage Form Details</label>
+															</div>
+															<div class="col-sm-4">
+																<input type="text" class="form-control input-sm full-width" id="doDrugProForm1AnimalHumanSrcDosFormOther" />
 															</div>
 														</div>
 													</div>
@@ -361,48 +400,58 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 														</div>
 													</div>
 													<div id="doDrugProForm1RouteOfAdmRow1" class="row">
-														<div class="col-sm-3 form-group" id="doDrugProForm1RouteOfAdm1Grp">
+														<div class="col-sm-6 form-group group" id="doDrugProForm1RouteOfAdm1Grp">
 															<label class="control-label normalLabel-11pt" for="doDrugProForm1RouteOfAdm1">Route of Administration 1</label>
 															<div class="input-group">
-																<select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1" class="form-control input-sm col-sm-2">
+																<select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1" onchange="otherSelect(this, 'Other', doDrugProForm1RouteOfAdm1OtherSelect)" class="form-control input-sm col-sm-2">
 																	<option label=" "></option>
-																	<option value="1">Block/Infiltration</option>
-																	<option value="2">Buccal</option>
-																	<option value="3">Dental</option>
-																	<option value="4">Dialysis</option>
-																	<option value="5">Epidural</option>
-																	<option value="6">Inhalation</option>
-																	<option value="7">Intra-Arterial</option>
-																	<option value="8">Intra-Articular</option>
-																	<option value="9">Intrabursal</option>
-																	<option value="10">Intradermal</option>
-																	<option value="11">Intramammary</option>
-																	<option value="12">Intraocular</option>
-																	<option value="13">Intraperitoneal</option>
-																	<option value="14">Intrathecal</option>
-																	<option value="15">Intratracheal</option>
-																	<option value="16">Intravascular</option>
-																	<option value="17">Intravenous</option>
-																	<option value="18">Intravitreal</option>
-																	<option value="19">Irrigation</option>
-																	<option value="20">Nasal</option>
-																	<option value="21">Ophthalmic</option>
-																	<option value="22">Oral</option>
-																	<option value="23">Otic</option>
-																	<option value="24">Rectal</option>
-																	<option value="25">Subcutaneous</option>
-																	<option value="26">Sublingual</option>
-																	<option value="27">Topical</option>
-																	<option value="28">Transdermal</option>
-																	<option value="29">Urethral</option>
-																	<option value="30">Vaginal</option>
-																	<option value="31">Other</option>
+																	<option value="Block/Infiltration">Block/Infiltration</option>
+																	<option value="Buccal">Buccal</option>
+																	<option value="Dental">Dental</option>
+																	<option value="Dialysis">Dialysis</option>
+																	<option value="Epidural">Epidural</option>
+																	<option value="Inhalation">Inhalation</option>
+																	<option value="Intra-Arterial">Intra-Arterial</option>
+																	<option value="Intra-Articular">Intra-Articular</option>
+																	<option value="Intrabursal">Intrabursal</option>
+																	<option value="Intradermal">Intradermal</option>
+																	<option value="Intramammary">Intramammary</option>
+																	<option value="Intraocular">Intraocular</option>
+																	<option value="Intraperitoneal">Intraperitoneal</option>
+																	<option value="Intrathecal">Intrathecal</option>
+																	<option value="Intratracheal">Intratracheal</option>
+																	<option value="Intravascular">Intravascular</option>
+																	<option value="Intravenous">Intravenous</option>
+																	<option value="Intravitreal">Intravitreal</option>
+																	<option value="Irrigation">Irrigation</option>
+																	<option value="Nasal">Nasal</option>
+																	<option value="Ophthalmic">Ophthalmic</option>
+																	<option value="Oral">Oral</option>
+																	<option value="Otic">Otic</option>
+																	<option value="Rectal">Rectal</option>
+																	<option value="Subcutaneous">Subcutaneous</option>
+																	<option value="Sublingual">Sublingual</option>
+																	<option value="Topical">Topical</option>
+																	<option value="Transdermal">Transdermal</option>
+																	<option value="Urethral">Urethral</option>
+																	<option value="Vaginal">Vaginal</option>
+																	<option value="Other">Other</option>
 																</select>
 																<span class="input-group-btn">
 																	<button class="btn btn-danger btn-sm" onclick="deleteRouteOfAdm(this, 'doDrugProForm1RouteOfAdm')" id="doDrugProForm1RouteOfAdm1DelBut" type="button">
 																		<span class="glyphicon glyphicon-remove"></span>
 																	</button>
 																</span>
+															</div>
+															<div class="row other" style="margin-top:10px; display:none" id="doDrugProForm1RouteOfAdm1OtherSelect">
+																<div class="form-group">
+																	<div class="col-sm-5" style="padding-right:8px">
+																		<label class="control-label normalLabel" for="doDrugProForm1RouteOfAdm1Other">Route of Administration Details</label>
+																	</div>
+																	<div class="col-sm-7" style="padding-left:0">
+																		<input type="text" class="form-control input-sm full-width" id="doDrugProForm1RouteOfAdm1Other"/>
+																	</div>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -927,7 +976,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 												<ul id="doDrugProForm1MedIngrList" class="list-unstyled">
 													<li id="doDrugProForm1MedIngr1" class="displayBLOCK">
 														<details open="open" class="doMainDetails doDrugProForm1MedIngr">
-															<summary class="heightAdjust closeOpen">Medicinal Ingredient 1<button class="btn btn-danger btn-xs deleteRef" onclick="delFromList(this, true, 'Ingredient')" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary>
+															<summary class="heightAdjust closeOpen">Medicinal Ingredient 1<button class="btn btn-danger btn-xs deleteRef" onclick="delFromList(this, 'Ingredient', true)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary>
 															<div>
 																<div class="row">
 																	<div class="col-sm-4" style="padding-right:5px; padding-left:5px" >
@@ -969,7 +1018,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																	</div>
 																	<div class="col-sm-3" style="padding-right:5px; padding-left:5px">
 																		<label for="doDrugProForm1MedIngr1NanoMater" class="control-label">Nanomaterial?</label>
-																		<select id="doDrugProForm1MedIngr1NanoMater" class="form-control input-sm full-width">
+																		<select id="doDrugProForm1MedIngr1NanoMater" class="form-control input-sm full-width" onchange="otherSelect(this, 'Other', doDrugProForm1MedIngr1NanoMaterOtherDiv)">
 																			<option value="0"></option>
 																			<option value="1">Dendrimer</option>
 																			<option value="2">Liposomes</option>
@@ -979,21 +1028,30 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																			<option value="6">Nanoemulsions</option>
 																			<option value="7">Nanoparticle</option>
 																			<option value="8">Not a Nanomaterial</option>
-																			<option value="9">Other</option>
+																			<option value="Other">Other</option>
 																		</select>
 																	</div>
 																</div>
 																<div class="row">
-																	<div class="blackBorder col-sm-8" style="margin-top:10px; padding:10px">
-																		<div class="col-sm-4" style="padding-right:0">
+																	<!--<div class="col-sm-8">-->
+																		<div class="col-sm-3" style="padding-right:0; padding-left:5px">
 																			<label for="doDrugProForm1MedIngr1AniHumanSrc" class="control-label">Animal/Human Source?</label>
 																			<!--<select class="form-control input-sm" name="doDrugProForm1MedIngr1AniHumanSrc" id="doDrugProForm1MedIngr1AniHumanSrc" onchange="initialAppendix4(doDrugProForm1MedIngr1AppendixFourTab);displayAppendix4(doDrugProForm1MedIngr1,doDrugProForm1MedIngr1Name, this)">-->
-																			<select class="form-control input-sm" name="doDrugProForm1MedIngr1AniHumanSrc" id="doDrugProForm1MedIngr1AniHumanSrc" onchange="displayAnimalOrHumanSourceSelection(doDrugProForm1MedIngr1Name, this)">																		
-																				<option label=" "></option>
-																				<option value="1">Yes</option>
-																				<option value="2">No</option>
+																			<!--<select class="form-control input-sm" name="doDrugProForm1MedIngr1AniHumanSrc" id="doDrugProForm1MedIngr1AniHumanSrc" onchange="displayAnimalOrHumanSourceSelection(doDrugProForm1MedIngr1Name, this)">-->
+																			<select class="form-control input-sm" name="doDrugProForm1MedIngr1AniHumanSrc" id="doDrugProForm1MedIngr1AniHumanSrc" onchange="displayAnimalOrHumanSourceSelection(doDrugProForm1MedIngr1Name, this)">
+																				<option value="NO">NO</option>
+																				<option value="YES - Human">YES - Human</option>
+																				<option value="YES - Animal">YES - Animal</option>
 																			</select>
 																		</div>
+																		<div class="col-sm-5 expnd" style="visibility:hidden">
+																			<label class="control-label" style="margin-top:30.5px" id="doDrugProForm1MedIngr1UsedAs">Used As: Active Ingredient</label>
+																		</div>
+																		<div class="col-sm-3" style="padding-left:30px; padding-right:0; display:none" id="doDrugProForm1MedIngr1NanoMaterOtherDiv">
+																			<label class="control-label normalLabel" for="doDrugProForm1MedIngr1NanoMaterOther">Please indicate the nanomaterial type</label>
+																			<input type="text" class="form-control input-sm full-width" id="doDrugProForm1MedIngr1NanoMaterOther" />
+																		</div>
+																		<!--
 																		<div class="col-sm-8" id="doDrugProForm1MedIngr1AniHumanSrcSelect" style="display:none"> 
 																			<div class="row">
 																				<div class="col-sm-4">
@@ -1007,7 +1065,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																				</div>
 																			</div>
 																		</div>
-																	</div>
+																		-->
+																	<!--</div>-->
 																</div>
 															</div>
 															<div class="appendix4-full-tabs marginTop-15" id="doDrugProForm1MedIngr1AppendixFourTab" style="display:none">
@@ -1020,6 +1079,24 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																				<label class="checkbox-inline"><input type="checkbox" id="doDrugProForm1MedIngr1AniHumanSrcChk2" onchange="initialAppendix4(doDrugProForm1MedIngr1AniHumanSrcChk1, this, doDrugProForm1MedIngr1AppendixFourTab)" value="option2" /> Animal</label>
 																			</div>
 																		</div>-->
+																		<!--
+																		<div class="row">
+																			<div class="col-sm-2">
+																				<label class="control-label">Used As:</label>
+																			</div>
+																			<div class="checkbox" style="margin-top:0">
+																				<div class="col-sm-3">
+																					<label><input type="checkbox" value="Active Ingredient" /> Active Ingredient</label>
+																				</div>
+																				<div class="col-sm-3">
+																					<label><input type="checkbox" value="Non-Medicinal Ingredient" /> Non-Medicinal Ingredient</label>
+																				</div>
+																				<div class="col-sm-3">
+																					<label><input type="checkbox" value="Material used during manufacturing" /> Material used during manufacturing</label>
+																				</div>
+																			</div>
+																		</div>
+																		-->
 																		  <div class="wb-tabs print-active" id="doDrugProForm1MedIngr1AppendixFourTabMain" style="display:none">
 																			<div class="tabpanels">
 																				<details id="doDrugProForm1MedIngr1AppendixFourTab1" class="doMainDetails" open="open">
@@ -2197,10 +2274,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 												</ul>
 											</details>
 											<details id="doDrugProForm1Tab4" class="details-tab">
-												<summary>Animal and/or Human Sourced Material(s)</summary>
+												<summary>Animal and/or Human <br/>Sourced Material(s)<sup>1</sup></summary>
 												<div class="row marginTop-15">
 													<div class="col-sm-6">
-														<label class="control-label">Used at any stage in the manufacture of the drug</label>
+														<label class="control-label"><sup>1</sup>Used at any stage in the manufacture of the drug</label>
 													</div>
 													<div class="col-sm-3 col-sm-offset-1">
 														<button class=" btn btn-sm btn-default pull-right wb-toggle" type="button" data-toggle='{"selector": ".doDrugProForm1Material"}'>Collapse/Expand ALL Materials</button>
@@ -2684,7 +2761,7 @@ var numOfNonMedIngredients = 0;
 var numOfNonMedIngredientsCreated = 0;
 //var appendix4TextNonMedIngr = '<div class="appendix4-full-tabs marginTop-15" id="doDrugProForm1NonMedIngr1AppendixFourTab" style="display:none"> <h3>Appendix 4</h3> <div class="wb-tabs print-active"> <div class="tabpanels"> <details id="doDrugProForm1NonMedIngr1AppendixFourTab1"> <summary>Section 1</summary> <div id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo1"> <div class="row"> <div class="col-sm-12"> <p>Please provide the animal type(s) used for this ingredient. At least one type must be completed*</p> </div> </div> <div class="row"> <div class="form-horizontal noPadding"> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Non-human primate type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Aquatic species such as fish, molluscs and crustacean:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Avian such as chicken, turkey and duck:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Bovine such as cattle, bison type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Canine type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Caprine such as goat type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Cervidae such as deer, elk (wapiti) and moose type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Equine such as horse type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Feline such as cat type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Ovine type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Porcine such as pig type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Rodents such as mouse, hamster, rat and rabbit type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Other animal type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> </div> </div> <div class="row"> <div class="form-inline"> <label class="control-label col-sm-2 textAlignRight" for="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo1ControlPop">Controlled Population</label> <select class="form-control col-sm-2 input-sm" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo1ControlPop"> <option value=""> </option> <option value="1">Yes</option> <option value="2">No</option> <option value="3">Not Available</option> <option value="4">Not Known</option> </select> </div> <div class="form-inline"> <label class="control-label col-sm-2 textAlignRight" for="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo1BioDerived">Biotechnology-Derived Animal</label> <select class="form-control input-sm col-sm-2" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo1BioDerived"> <option value=""> </option> <option value="1">Yes</option> <option value="2">No</option> <option value="3">Not Available</option> <option value="4">Not Known</option> </select> </div> <div class="form-inline"> <label class="control-label col-sm-2 textAlignRight" for="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo1CellLine">Cell Line</label> <select class="form-control col-sm-2 input-sm" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo1CellLine"> <option value=""> </option> <option value="1">Yes</option> <option value="2">No</option> <option value="3">Not Available</option> <option value="4">Not Known</option> </select> </div> </div> </div> </details> <details id="doDrugProForm1NonMedIngr1AppendixFourTab2" open="open"> <summary>Section 2</summary> <div id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo2"> <div class="row"> <div class="form-group"> <div class="col-sm-3"> <label class="control-label">Sourced from</label> </div> <label class="checkbox-inline"><input type="checkbox" id="doDrugProForm1MedIngr1AniHumanSrcChk1" value="option1" /> Human</label> <label class="checkbox-inline"><input type="checkbox" id="doDrugProForm1NonMedIngr1AniHumanSrcChk2" onchange="displayAppendix4Sections(this,doDrugProForm1NonMedIngr1AppendixFourTab)" value="option2" /> Animal</label></div> </div> <h4>Tissues or Fluids Of Origin</h4> <ul class="listItems"> <div> <li class="list-group-item"> Nervous System <div class="material-switch pull-right"> <input id="doDrugProForm1NonMedIngr1NervSys" name="doDrugProForm1NonMedIngr1NervSys" onchange="changeMe(this, doDrugProForm1NonMedIngr1NervSysDiv)" type="checkbox"> <label for="doDrugProForm1NonMedIngr1NervSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1NonMedIngr1NervSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"><label><input value="" type="checkbox"> brain</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> brain stem</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> cerebellum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> cerebrospinal fluid</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> dorsal root ganglia</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> dura mater</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> hypothalmus</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> retina/optic nerve</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> spinal cord</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> trigeminal ganglia</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Digestive System <div class="material-switch pull-right"> <input id="doDrugProForm1NonMedIngr1DigSys" name="doDrugProForm1NonMedIngr1DigSys" onchange="changeMe(this, doDrugProForm1NonMedIngr1DigSysDiv)" type="checkbox"> <label for="doDrugProForm1NonMedIngr1DigSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1NonMedIngr1DigSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> appendix</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> bile</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> distal ileum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> large intestine</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> saliva/salivary gland</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> stomach</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> spinal cord</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> trigeminal ganglia</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> small intestine other than distal ileum</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Urinary System <div class="material-switch pull-right"> <input id="doDrugProForm1NonMedIngr1UrnSys" name="doDrugProForm1NonMedIngr1UrnSys" onchange="changeMe(this, doDrugProForm1NonMedIngr1UrnSysDiv)" type="checkbox"> <label for="doDrugProForm1NonMedIngr1UrnSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1NonMedIngr1UrnSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> milk/milk products</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> kidney</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> colostrum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> mammary glands</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> ovaries</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placent</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placental fluid</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> semen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> testes</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> urine</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Reproductive and Urinary System <div class="material-switch pull-right"> <input id="doDrugProForm1NonMedIngr1RepUrnSys" name="doDrugProForm1NonMedIngr1RepUrnSys" onchange="changeMe(this, doDrugProForm1NonMedIngr1RepUrnSysDiv)" type="checkbox"> <label for="doDrugProForm1NonMedIngr1RepUrnSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1NonMedIngr1RepUrnSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> milk/milk products</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> kidney</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> colostrum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> mammary glands</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> ovaries</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placent</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placental fluid</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> semen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> testes</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> urine</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Cardio-Respiratory System <div class="material-switch pull-right"> <input id="doDrugProForm1NonMedIngr1CardioRespSys" name="doDrugProForm1NonMedIngr1CardioRespSys" onchange="changeMe(this, doDrugProForm1NonMedIngr1CardioRespSysDiv)" type="checkbox"> <label for="doDrugProForm1NonMedIngr1CardioRespSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1NonMedIngr1CardioRespSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> milk/milk products</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> kidney</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> colostrum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> mammary glands</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> ovaries</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placent</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placental fluid</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> semen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> testes</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> urine</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Immune System <div class="material-switch pull-right"> <input id="doDrugProForm1NonMedIngr1ImmuneSys" name="doDrugProForm1NonMedIngr1ImmuneSys" onchange="changeMe(this, doDrugProForm1NonMedIngr1ImmuneSysDiv)" type="checkbox"> <label for="doDrugProForm1NonMedIngr1ImmuneSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1NonMedIngr1ImmuneSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> lymph nodes</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> spleen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> thymus</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> tonsils</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> ovaries</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Skin and Glandular System <div class="material-switch pull-right"> <input id="doDrugProForm1NonMedIngr1SkinGlandSys" name="doDrugProForm1NonMedIngr1SkinGlandSys" onchange="changeMe(this, doDrugProForm1NonMedIngr1SkinGlandSysDiv)" type="checkbox"> <label for="doDrugProForm1NonMedIngr1SkinGlandSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1NonMedIngr1SkinGlandSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> adrenal gland or tissue</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> hair, feathers, hooves</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> liver</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> pancreas</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> pituitary gland</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> skin/hides</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> thyroid/parathyroid</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Musculo-Skeletal System <div class="material-switch pull-right"> <input id="doDrugProForm1NonMedIngr1MuscSkelSys" name="doDrugProForm1NonMedIngr1MuscSkelSys" onchange="changeMe(this, doDrugProForm1NonMedIngr1MuscSkelSysDiv)" type="checkbox"> <label for="doDrugProForm1NonMedIngr1MuscSkelSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1NonMedIngr1MuscSkelSysDiv" class="marginTop-15" style="display:none"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> abdomen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> skull</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> collagen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> tendons/ ligaments</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> vertebral column</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> muscle</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> bones (other than vertebral column or skull) </label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Other Tissues or Fluids <div class="material-switch pull-right"> <input id="doDrugProForm1NonMedIngr1Other" name="doDrugProForm1NonMedIngr1Other" onchange="changeMe(this, doDrugProForm1NonMedIngr1OtherDiv)" type="checkbox"> <label for="doDrugProForm1NonMedIngr1Other" class="label-success2"></label> </div> </li> <div id="doDrugProForm1NonMedIngr1OtherDiv" class="marginTop-15" style="display:none"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> adipose tissue/omentum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> ascites</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> anter velvet</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> serum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> whole blood</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> plasma</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> embryonic tissue </label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> fetal tissue</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> bone marrow</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> eyes/cornea</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> gall bladder</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> </ul> </div> </details> <details id="doDrugProForm1NonMedIngr1AppendixFourTab3"> <summary>Section 3</summary> <div id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3" class="marginTop-15"> <div class="row"> <div class="form-inline"> <label class="control-label col-sm-4">Age of animals (in months) *</label> <input class="form-control col-sm-4 input-sm full-width"> </div> </div> <div id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3CountryList" class="marginTop-15"> <label class="control-label">Please indicate the country(ies) of origin of the animal(s)</label> <div class="row rowMain"> <div class="form-group"> <div class="col-sm-3"> <label for="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1" class="control-label normalLabel boldFont">Country of Origin 1</label> </div> <div class="col-sm-4"> <div class="input-group"> <input class="form-control input-sm full-width" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1" name="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1" onchange="countryAppendix4SelectUnknown(this, doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1Specify)" list="CountrySuggestionsPlusUnknown" type="text"> <datalist id="CountrySuggestionsPlusUnknown"><!--[if lte IE 9]><select><![endif]\-\-><option label=" "></option> <option value="Canada">Canada</option> <option value="United States">United States</option> <option value="Afghanistan">Afghanistan</option> <option value="Aland Islands">Aland Islands</option> <option value="Albania">Albania</option> <option value="Algeria">Algeria</option> <option value="American Samoa">American Samoa</option> <option value="Andorra">Andorra</option> <option value="Angola">Angola</option> <option value="Anguilla">Anguilla</option> <option value="Antarctica">Antarctica</option> <option value="Antigua and Barbuda">Antigua and Barbuda</option> <option value="Argentina">Argentina</option> <option value="Armenia">Armenia</option> <option value="Aruba">Aruba</option> <option value="Australia">Australia</option> <option value="Austria">Austria</option> <option value="Azerbaijan">Azerbaijan</option> <option value="Bahamas">Bahamas</option> <option value="Bahrain">Bahrain</option> <option value="Bangladesh">Bangladesh</option> <option value="Barbados">Barbados</option> <option value="Belarus">Belarus</option> <option value="Belgium">Belgium</option> <option value="Belize">Belize</option> <option value="Benin">Benin</option> <option value="Bermuda">Bermuda</option> <option value="Bhutan">Bhutan</option> <option value="Bolivia">Bolivia</option> <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option> <option value="Bostswana">Bostswana</option> <option value="Bouvet Island">Bouvet Island</option> <option value="Brazil">Brazil</option> <option value="British Indian Ocean Territory">British Indian Ocean Territory</option> <option value="Brunel Darussalam">Brunel Darussalam</option> <option value="Bulgaria">Bulgaria</option> <option value="Burkina Faso">Burkina Faso</option> <option value="Burundi">Burundi</option> <option value="Cambodia">Cambodia</option> <option value="Cameroon">Cameroon</option> <option value="Cape Verde">Cape Verde</option> <option value="Cayman Islands">Cayman Islands</option> <option value="Central African Republic">Central African Republic</option> <option value="Chad">Chad</option> <option value="Chile">Chile</option> <option value="China">China</option> <option value="Christmas Island">Christmas Island</option> <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option> <option value="Colombia">Colombia</option> <option value="Comoros">Comoros</option> <option value="Congo">Congo</option> <option value="Congo, the Democratic Republic of the ">Congo, the Democratic Republic of the </option> <option value="Cook Islands">Cook Islands</option> <option value="Costa Rica">Costa Rica</option> <option value="Cote d\'Ivoire">Cote d\'Ivoire</option> <option value="Croatia (Hrvatska)">Croatia (Hrvatska)</option> <option value="Cuba">Cuba</option> <option value="Cyprus">Cyprus</option> <option value="Czech Republic">Czech Republic</option> <option value="Denmark">Denmark</option> <option value="Djibouti">Djibouti</option> <option value="Dominica">Dominica</option> <option value="Dominican Republic">Dominican Republic</option> <option value="East Timor">East Timor</option> <option value="Ecuador">Ecuador</option> <option value="Egypt">Egypt</option> <option value="El Salvador">El Salvador</option> <option value="Equatorial Guinea">Equatorial Guinea</option> <option value="Eritrea">Eritrea</option> <option value="Estonia">Estonia</option> <option value="Ethiopia">Ethiopia</option> <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option> <option value="Faroe Islands">Faroe Islands</option> <option value="Fiji">Fiji</option> <option value="Finland">Finland</option> <option value="France">France</option> <option value="France, Metropolitan">France, Metropolitan</option> <option value="French Guiana">French Guiana</option> <option value="French Polynesia">French Polynesia</option> <option value="French Southern Territories">French Southern Territories</option> <option value="Gabon">Gabon</option> <option value="Gambia">Gambia</option> <option value="Georgia">Georgia</option> <option value="Germany">Germany</option> <option value="Ghana">Ghana</option> <option value="Gibraltar">Gibraltar</option> <option value="Greece">Greece</option> <option value="Greenland">Greenland</option> <option value="Grenada">Grenada</option> <option value="Guadeloupe">Guadeloupe</option> <option value="Guam">Guam</option> <option value="Guatemala">Guatemala</option> <option value="Guinea">Guinea</option> <option value="Guinea-Bissau">Guinea-Bissau</option> <option value="Guyana">Guyana</option> <option value="Haiti">Haiti</option> <option value="Heard and McDonald Islands">Heard and McDonald Islands</option> <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option> <option value="Honduras">Honduras</option> <option value="Hong Kong">Hong Kong</option> <option value="Hungary">Hungary</option> <option value="Iceland">Iceland</option> <option value="India">India</option> <option value="Indonesia">Indonesia</option> <option value="Iran (Islamic Republic of)">Iran (Islamic Republic of)</option> <option value="Iraq">Iraq</option> <option value="Ireland">Ireland</option> <option value="Israel">Israel</option> <option value="Italy">Italy</option> <option value="Jamaica">Jamaica</option> <option value="Japan">Japan</option> <option value="Jordan">Jordan</option> <option value="Kazakhstan">Kazakhstan</option> <option value="Kenya">Kenya</option> <option value="Kiribati">Kiribati</option> <option value="Korea, Democratic People\'s Republic of">Korea, Democratic People\'s Republic of</option> <option value="Korea, Republic of">Korea, Republic of</option> <option value="Kuwait">Kuwait</option> <option value="Kyrgyzstan">Kyrgyzstan</option> <option value="Lao People\'s Democratic Republic">Lao People\'s Democratic Republic</option> <option value="Latvia">Latvia</option> <option value="Lebanon">Lebanon</option> <option value="Lesotho">Lesotho</option> <option value="Liberia">Liberia</option> <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option> <option value="Liechtenstein">Liechtenstein</option> <option value="Lithuania">Lithuania</option> <option value="Luxembourg">Luxembourg</option> <option value="Macau">Macau</option> <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option> <option value="Madagascar">Madagascar</option> <option value="Malawi">Malawi</option> <option value="Malaysia">Malaysia</option> <option value="Maldives">Maldives</option> <option value="Mali">Mali</option> <option value="Marshall Islands">Marshall Islands</option> <option value="Martinique">Martinique</option> <option value="Mauritania">Mauritania</option> <option value="Mauritius">Mauritius</option> <option value="Mayotte">Mayotte</option> <option value="Mexico">Mexico</option> <option value="Micronesia, Federated States of">Micronesia, Federated States of</option> <option value="Moldova, Republic of">Moldova, Republic of</option> <option value="Monaco">Monaco</option> <option value="Mongolia">Mongolia</option> <option value="Montserrat">Montserrat</option> <option value="Morocco">Morocco</option> <option value="Mozambique">Mozambique</option> <option value="Myanmar">Myanmar</option> <option value="Namibia">Namibia</option> <option value="Nauru">Nauru</option> <option value="Nepal">Nepal</option> <option value="Netherlands">Netherlands</option> <option value="Netherlands Antilles">Netherlands Antilles</option> <option value="New Caledonia">New Caledonia</option> <option value="New Zealand">New Zealand</option> <option value="Nicaragua">Nicaragua</option> <option value="Niger">Niger</option> <option value="Nigeria">Nigeria</option> <option value="Niue">Niue</option> <option value="Norfolk Island">Norfolk Island</option> <option value="Northern Marian Islands">Northern Marian Islands</option> <option value="Norway">Norway</option> <option value="Oman">Oman</option> <option value="Pakistan">Pakistan</option> <option value="Palau">Palau</option> <option value="Panama">Panama</option> <option value="Papua New Guinea">Papua New Guinea</option> <option value="Paraguay">Paraguay</option> <option value="Peru">Peru</option> <option value="Philippines">Philippines</option> <option value="Pitcairn">Pitcairn</option> <option value="Poland">Poland</option> <option value="Portugal">Portugal</option> <option value="Puerto Rico">Puerto Rico</option> <option value="Qatar">Qatar</option> <option value="Reunion">Reunion</option> <option value="Romania">Romania</option> <option value="Russian Federation">Russian Federation</option> <option value="Rwanda">Rwanda</option> <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> <option value="Saint Lucia">Saint Lucia</option> <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option> <option value="Samoa">Samoa</option> <option value="San Marino">San Marino</option> <option value="Sao Tome and Principe">Sao Tome and Principe</option> <option value="Saudi Arabia">Saudi Arabia</option> <option value="Senegal">Senegal</option> <option value="Seychelles">Seychelles</option> <option value="Sierra Leone">Sierra Leone</option> <option value="Singapore">Singapore</option> <option value="Slovakia (Slovak Republic)">Slovakia (Slovak Republic)</option> <option value="Slovenia">Slovenia</option> <option value="Solomon Islands">Solomon Islands</option> <option value="Somalia">Somalia</option> <option value="South Africa">South Africa</option> <option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option> <option value="Spain">Spain</option> <option value="Sri Lanka">Sri Lanka</option> <option value="St. Helena">St. Helena</option> <option value="St. Pierre and Miquelon">St. Pierre and Miquelon</option> <option value="Sudan">Sudan</option> <option value="Suriname">Suriname</option> <option value="Svalbard and Jan Mayen Islands">Svalbard and Jan Mayen Islands</option> <option value="Swaziland">Swaziland</option> <option value="Sweden">Sweden</option> <option value="Switzerland">Switzerland</option> <option value="Syrian Arab Republic">Syrian Arab Republic</option> <option value="Taiwan, Province of China">Taiwan, Province of China</option> <option value="Tajikistan">Tajikistan</option> <option value="Tanzania, United Republic of">Tanzania, United Republic of</option> <option value="Thailand">Thailand</option> <option value="Togo">Togo</option> <option value="Tokelau">Tokelau</option> <option value="Tonga">Tonga</option> <option value="Trinidad and Tobago">Trinidad and Tobago</option> <option value="Tunisia">Tunisia</option> <option value="Turkey">Turkey</option> <option value="Turkmenistan">Turkmenistan</option> <option value="Turks and Caicos Islands">Turks and Caicos Islands</option> <option value="Tuvalu">Tuvalu</option> <option value="Uganda">Uganda</option> <option value="Ukraine">Ukraine</option> <option value="United Arab Emirates">United Arab Emirates</option> <option value="United Kingdom">United Kingdom</option> <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option> <option value="Uruguay">Uruguay</option> <option value="Uzbekistan">Uzbekistan</option> <option value="Vanuatu">Vanuatu</option> <option value="Venezuela">Venezuela</option> <option value="Viet Nam">Viet Nam</option> <option value="Virgin Islands (British)">Virgin Islands (British)</option> <option value="Virgin Islands (U.S.)">Virgin Islands (U.S.)</option> <option value="Wallis and Futuna Islands">Wallis and Futuna Islands</option> <option value="Western Sahara">Western Sahara</option> <option value="Yemen">Yemen</option> <option value="Yugoslavia">Yugoslavia</option> <option value="Zambia">Zambia</option> <option value="Zimbabwe">Zimbabwe</option> <option value="Unknown">Unknown</option><!--[if lte IE 9]></select><![endif]\-\-></datalist> <span class="input-group-btn"> <button class="btn btn-danger btn-sm" onclick="delCountryAppendix4(this, doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3CountryList)" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1DelBut" type="button"> <span class="glyphicon glyphicon-remove"></span> </button> </span> </div> </div> <div class="col-sm-4 addButton"> <button type="submit" class="btn btn-default btn-sm" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3CountryAddBut" onclick="addCountryAppendix4(doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3CountryList)">Add Country</button> </div> <div class="col-sm-12" style="margin-top:10px;display:none" id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1Specify"> <div class="row"> <div class="col-sm-offset-1 col-sm-2"> <label for="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1SpecifyInput" class="control-label normalLabel">Please Specify</label> </div> <div class="col-sm-8"> <input id="doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3Country1SpecifyInput" class="form-control input-sm full-width"> </div> </div> </div> </div> </div> </div> </div> </details> </div> </div></div>';
 function addNonMedIngredient(ulList, bolIngrOrVariant) {
-	var copyDelButtonText = '<button type="submit" class="btn btn-warning btn-xs deleteRef" style="margin-right: 20px" onclick="copyFromList(this)"><span class="fa fa-copy"></span> Copy</button><button class="btn btn-danger btn-xs" onclick="delFromList(this, false, \'Ingredient\')" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button>'
+	var copyDelButtonText = '<button type="submit" class="btn btn-warning btn-xs deleteRef" style="margin-right: 20px" onclick="copyFromList(this)"><span class="fa fa-copy"></span> Copy</button><button class="btn btn-danger btn-xs" onclick="delFromList(this, \'Ingredient\', false)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button>'
 	var variantText = '<div class="row" id="doDrugProForm1NonMedIngr1Variant1"> <div class="form-inline"> <label for="doDrugProForm1NonMedIngr1Variant1Name" class="control-label col-sm-2">Variant Name</label> <input id="doDrugProForm1NonMedIngr1Variant1Name" class="form-control input-sm col-sm-4"> </div> </div>';
 	numOfNonMedIngredients = $(ulList).children('li').length + 1;
 	numOfNonMedIngredientsCreated++;
@@ -2721,6 +2798,9 @@ function addNonMedIngredient(ulList, bolIngrOrVariant) {
 	//reset animal/human source radio buttons
 	$('#' + drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated + 'AniHumanSrcSelect').css('display', 'none');
 	
+	//change Used As label
+	$('#' + drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated + 'UsedAs').text('Used As: Non-Medicinal Ingredient');
+	
 	//replace original Appendix 4 Tabs (must be re-initialized)
 	var tabsID = drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated + 'AppendixFourTab';
 	$('#' + tabsID)[0].outerHTML = appendix4Text;
@@ -2729,26 +2809,108 @@ function addNonMedIngredient(ulList, bolIngrOrVariant) {
 		$('ul.generated li[role=presentation]').addClass('displayTableCell');
 	});
 	
-	
 	//initialAppendix4($('#' + tabsID)); //hide Appendix 4 initially
 }
 
-//for deleting medicinal and non-medicinal ingredients from a ul.list-unstyled
-function delFromList(delBut, bolMedOrNonMed, labelTitleWithoutId) {
+/**For Adding Material (Animal/Human Source) **/
+var numOfMaterials = 0;
+var numOfMaterialsCreated = 0;
+function addMaterial(list) {
+	var defaultMaterial = '<li id="doDrugProForm1AnimalHumanSrc1" class="displayBLOCK"><details open="open" class="doMainDetails doDrugProForm1Material"><summary class="heightAdjust closeOpen">Material 1<button class="btn btn-danger btn-xs deleteRef" onclick="delFromList(this, \'Material\')" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="row"><div class="col-sm-6"><label for="doDrugProForm1AnimalHumanSrc1Name" class="control-label">Material Name</label><input id="doDrugProForm1AnimalHumanSrc1Name" onchange="changeSummaryText(this);displayMaterialSelection(this, doDrugProForm1AnimalHumanSrc1FinalContainer)" class="form-control input-sm full-width" type="text"></div><div class="col-sm-6"><label for="doDrugProForm1AnimalHumanSrc1ChemServ" class="control-label">Chemical Abstracts Service</label><input id="doDrugProForm1AnimalHumanSrc1ChemServ" class="form-control input-sm full-width" type="text"></div></div><div class="row"><div class="col-sm-4"><label for="doDrugProForm1AnimalHumanSrc1Stand" class="control-label">Standard</label><input id="doDrugProForm1AnimalHumanSrc1Stand" class="form-control input-sm full-width" type="text"></div><div class="col-sm-3"><label for="doDrugProForm1AnimalHumanSrc1FinalContainer" class="control-label">Present in Final Container</label><select id="doDrugProForm1AnimalHumanSrc1FinalContainer" onchange="displayMaterialSelection(doDrugProForm1AnimalHumanSrc1Name, this)" name="doDrugProForm1AnimalHumanSrc1FinalContainer" class="form-control input-sm"><option label=" "></option><option value="1">Yes</option><option value="2">No</option></select></div></div></details></li>';
+	var appendix4 = '<div id="doDrugProForm1AnimalHumanSrc1Appendix" class="expnd" style="display:none"><div class="row"><div class="col-sm-3" style="padding-right:0; padding-left:5px"><label for="doDrugProForm1AnimalHumanSrc1AniHumanSrc" class="control-label">Animal/Human Source?</label><select class="form-control input-sm" name="doDrugProForm1AnimalHumanSrc1AniHumanSrc" id="doDrugProForm1AnimalHumanSrc1AniHumanSrc" onchange="displayAnimalOrHumanSourceSelectionMaterial(doDrugProForm1AnimalHumanSrc1Name, this)"><option value=""></option><option value="YES - Human">YES - Human</option><option value="YES - Animal">YES - Animal</option></select></div><div class="col-sm-5" style="visibility:hidden"><label class="control-label" style="margin-top:30.5px" id="doDrugProForm1AnimalHumanSrc1UsedAs">Used As: Material used during manufacturing</label></div></div><div class="appendix4-full-tabs marginTop-15" id="doDrugProForm1AnimalHumanSrc1AppendixFourTab" style="display:none"><div class="wb-tabs print-active" id="doDrugProForm1AnimalHumanSrc1AppendixFourTabMain" style="display:none"> <div class="tabpanels"> <details id="doDrugProForm1AnimalHumanSrc1AppendixFourTab1" class="doMainDetails" open="open"> <summary>Section 1</summary> <div id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo2"> <h4>Tissues or Fluids Of Origin</h4> <ul class="listItems"> <div> <li class="list-group-item"> Nervous System <div class="material-switch pull-right"> <input id="doDrugProForm1AnimalHumanSrc1NervSys" name="doDrugProForm1AnimalHumanSrc1NervSys" onchange="changeMe(this, doDrugProForm1AnimalHumanSrc1NervSysDiv)" type="checkbox"> <label for="doDrugProForm1AnimalHumanSrc1NervSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1AnimalHumanSrc1NervSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"><label><input value="" type="checkbox"> brain</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> brain stem</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> cerebellum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> cerebrospinal fluid</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> dorsal root ganglia</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> dura mater</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> hypothalmus</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> retina/optic nerve</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> spinal cord</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> trigeminal ganglia</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Digestive System <div class="material-switch pull-right"> <input id="doDrugProForm1AnimalHumanSrc1DigSys" name="doDrugProForm1AnimalHumanSrc1DigSys" onchange="changeMe(this, doDrugProForm1AnimalHumanSrc1DigSysDiv)" type="checkbox"> <label for="doDrugProForm1AnimalHumanSrc1DigSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1AnimalHumanSrc1DigSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> appendix</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> bile</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> distal ileum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> large intestine</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> saliva/salivary gland</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> stomach</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> spinal cord</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> trigeminal ganglia</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> small intestine other than distal ileum</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Urinary System <div class="material-switch pull-right"> <input id="doDrugProForm1AnimalHumanSrc1UrnSys" name="doDrugProForm1AnimalHumanSrc1UrnSys" onchange="changeMe(this, doDrugProForm1AnimalHumanSrc1UrnSysDiv)" type="checkbox"> <label for="doDrugProForm1AnimalHumanSrc1UrnSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1AnimalHumanSrc1UrnSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> milk/milk products</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> kidney</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> colostrum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> mammary glands</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> ovaries</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placent</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placental fluid</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> semen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> testes</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> urine</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Reproductive and Urinary System <div class="material-switch pull-right"> <input id="doDrugProForm1AnimalHumanSrc1RepUrnSys" name="doDrugProForm1AnimalHumanSrc1RepUrnSys" onchange="changeMe(this, doDrugProForm1AnimalHumanSrc1RepUrnSysDiv)" type="checkbox"> <label for="doDrugProForm1AnimalHumanSrc1RepUrnSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1AnimalHumanSrc1RepUrnSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> milk/milk products</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> kidney</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> colostrum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> mammary glands</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> ovaries</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placent</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placental fluid</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> semen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> testes</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> urine</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Cardio-Respiratory System <div class="material-switch pull-right"> <input id="doDrugProForm1AnimalHumanSrc1CardioRespSys" name="doDrugProForm1AnimalHumanSrc1CardioRespSys" onchange="changeMe(this, doDrugProForm1AnimalHumanSrc1CardioRespSysDiv)" type="checkbox"> <label for="doDrugProForm1AnimalHumanSrc1CardioRespSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1AnimalHumanSrc1CardioRespSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> milk/milk products</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> kidney</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> colostrum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> mammary glands</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> ovaries</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placent</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> placental fluid</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> semen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> testes</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> urine</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Immune System <div class="material-switch pull-right"> <input id="doDrugProForm1AnimalHumanSrc1ImmuneSys" name="doDrugProForm1AnimalHumanSrc1ImmuneSys" onchange="changeMe(this, doDrugProForm1AnimalHumanSrc1ImmuneSysDiv)" type="checkbox"> <label for="doDrugProForm1AnimalHumanSrc1ImmuneSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1AnimalHumanSrc1ImmuneSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> lymph nodes</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> spleen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> thymus</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> tonsils</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> ovaries</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Skin and Glandular System <div class="material-switch pull-right"> <input id="doDrugProForm1AnimalHumanSrc1SkinGlandSys" name="doDrugProForm1AnimalHumanSrc1SkinGlandSys" onchange="changeMe(this, doDrugProForm1AnimalHumanSrc1SkinGlandSysDiv)" type="checkbox"> <label for="doDrugProForm1AnimalHumanSrc1SkinGlandSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1AnimalHumanSrc1SkinGlandSysDiv" class="marginTop-15" style="display: none;"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> adrenal gland or tissue</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> hair, feathers, hooves</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> liver</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> pancreas</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> pituitary gland</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> skin/hides</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> thyroid/parathyroid</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Musculo-Skeletal System <div class="material-switch pull-right"> <input id="doDrugProForm1AnimalHumanSrc1MuscSkelSys" name="doDrugProForm1AnimalHumanSrc1MuscSkelSys" onchange="changeMe(this, doDrugProForm1AnimalHumanSrc1MuscSkelSysDiv)" type="checkbox"> <label for="doDrugProForm1AnimalHumanSrc1MuscSkelSys" class="label-success2"></label> </div> </li> <div id="doDrugProForm1AnimalHumanSrc1MuscSkelSysDiv" class="marginTop-15" style="display:none"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> abdomen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> skull</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> collagen</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> tendons/ ligaments</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> vertebral column</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> muscle</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> bones (other than vertebral column or skull) </label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> <div> <li class="list-group-item"> Other Tissues or Fluids <div class="material-switch pull-right"> <input id="doDrugProForm1AnimalHumanSrc1Other" name="doDrugProForm1AnimalHumanSrc1Other" onchange="changeMe(this, doDrugProForm1AnimalHumanSrc1OtherDiv)" type="checkbox"> <label for="doDrugProForm1AnimalHumanSrc1Other" class="label-success2"></label> </div> </li> <div id="doDrugProForm1AnimalHumanSrc1OtherDiv" class="marginTop-15" style="display:none"> <div class="row"> <div class="col-sm-12"> <span class="col-sm-3"> <label><input value="" type="checkbox"> adipose tissue/omentum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> ascites</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> anter velvet</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> serum</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> whole blood</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> plasma</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> embryonic tissue </label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> fetal tissue</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> bone marrow</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> eyes/cornea</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> gall bladder</label> </span> <span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> </div> </div> </div> </div> </ul> </div> </details> <details id="doDrugProForm1AnimalHumanSrc1AppendixFourTab2"> <summary>Section 2</summary> <div id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo1"> <div class="row"> <div class="col-sm-12"> <p>Please provide the animal type(s) used for this ingredient. At least one type must be completed*</p> </div> </div> <div class="row"> <div class="form-horizontal noPadding"> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Non-human primate type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Aquatic species such as fish, molluscs and crustacean:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Avian such as chicken, turkey and duck:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Bovine such as cattle, bison type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Canine type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Caprine such as goat type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Cervidae such as deer, elk (wapiti) and moose type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Equine such as horse type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Feline such as cat type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Ovine type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Porcine such as pig type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Rodents such as mouse, hamster, rat and rabbit type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> <div class="form-group col-sm-12"> <label class="col-sm-3 control-label">Other animal type:</label> <div class="col-sm-9"> <input class="form-control input-sm full-width"> </div> </div> </div> </div> <div class="row"> <div class="form-inline"> <label class="control-label col-sm-2 textAlignRight" for="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo1ControlPop">Controlled Population</label> <select class="form-control col-sm-2 input-sm" id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo1ControlPop"> <option value=""> </option> <option value="1">Yes</option> <option value="2">No</option> <option value="3">Not Available</option> <option value="4">Not Known</option> </select> </div> <div class="form-inline"> <label class="control-label col-sm-2 textAlignRight" for="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo1BioDerived">Biotechnology-Derived Animal</label> <select class="form-control input-sm col-sm-2" id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo1BioDerived"> <option value=""> </option> <option value="1">Yes</option> <option value="2">No</option> <option value="3">Not Available</option> <option value="4">Not Known</option> </select> </div> <div class="form-inline"> <label class="control-label col-sm-2 textAlignRight" for="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo1CellLine">Cell Line</label> <select class="form-control col-sm-2 input-sm" id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo1CellLine"> <option value=""> </option> <option value="1">Yes</option> <option value="2">No</option> <option value="3">Not Available</option> <option value="4">Not Known</option> </select> </div> </div> </div> </details> <details id="doDrugProForm1AnimalHumanSrc1AppendixFourTab3"> <summary>Section 3</summary> <div id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3" class="marginTop-15"> <div class="row"> <div class="form-inline"> <label class="control-label col-sm-4">Age of animals (in months) *</label> <input class="form-control col-sm-4 input-sm full-width"> </div> </div> <div id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3CountryList" class="marginTop-15"> <label class="control-label">Please indicate the country(ies) of origin of the animal(s)</label> <div class="row rowMain"> <div class="form-group"> <div class="col-sm-3"> <label for="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3Country1" class="control-label normalLabel boldFont">Country of Origin 1</label> </div> <div class="col-sm-4"> <div class="input-group"> <input class="form-control input-sm full-width" id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3Country1" name="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3Country1" onchange="countryAppendix4SelectUnknown(this, doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3Country1Specify)" list="CountrySuggestionsPlusUnknown" type="text"> <span class="input-group-btn"> <button class="btn btn-danger btn-sm" onclick="delCountryAppendix4(this, doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3CountryList)" id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3Country1DelBut" type="button"> <span class="glyphicon glyphicon-remove"></span> </button> </span> </div> </div> <div class="col-sm-4 addButton"> <button type="submit" class="btn btn-default btn-sm" id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3CountryAddBut" onclick="addCountryAppendix4(doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3CountryList, true)">Add Country</button> </div> <div class="col-sm-12" style="margin-top:10px;display:none" id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3Country1Specify"> <div class="row"> <div class="col-sm-offset-1 col-sm-2"> <label for="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3Country1SpecifyInput" class="control-label normalLabel">Please Specify</label> </div> <div class="col-sm-8"> <input id="doDrugProForm1AnimalHumanSrc1AppendixFourAnimalSrcInfo3Country1SpecifyInput" class="form-control input-sm full-width"> </div> </div> </div> </div> </div> </div> </div> </details> </div> </div></div></div>';
+	numOfMaterialsCreated++;
+	numOfMaterials = $(list).find('li').length + 1;
+	var listID = $(list).attr('id');
+	var drugFormId = listID.substring(0, listID.indexOf('Animal'));
+	
+	var newMaterial = replaceAll(defaultMaterial, 'doDrugProForm1AnimalHumanSrc1', drugFormId + 'AnimalHumanSrc' + numOfMaterialsCreated);
+	var newAppendix4 = replaceAll(appendix4, 'doDrugProForm1AnimalHumanSrc1', drugFormId + 'AnimalHumanSrc' + numOfMaterialsCreated);
+	
+	/*var newMaterial = defaultMaterial.replace(/doDrugProForm1/g, drugFormId);
+	defaultMaterial = newMaterial.replace(/AnimalHumanSrc1/g, 'AnimalHumanSrc' + numOfMaterialsCreated);
+	var newAppendix4 = appendix4.replace(/doDrugProForm1/g, drugFormId);
+	newAppendix4 = newAppendix4.replace(/AnimalHumanSrc1/g, 'AnimalHumanSrc' + numOfMaterialsCreated);
+	*/
+	newMaterial = newMaterial.replace('Material 1', 'Material ' + numOfMaterialsCreated);
+	$(list).append(newMaterial);
+	
+	//append Appendix 4
+	$('#' + drugFormId + 'AnimalHumanSrc' + numOfMaterialsCreated + ' > details').append(newAppendix4);
+	var tabsID = drugFormId + 'AnimalHumanSrc' + numOfMaterialsCreated + 'AppendixFourTab';
+	$('#' + tabsID).find('.wb-tabs').trigger('wb-init.wb-tabs');
+	$(document).on('wb-ready.wb', function(e) {
+		$('ul.generated li[role=presentation]').addClass('displayTableCell');
+	});
+}
+
+function displayMaterialSelection(materialName, presentFinalContainer) {
+	var materialNameId  = $(materialName).attr('id');
+	var materialId = materialNameId.substring(0, materialNameId.indexOf('Name'));
+	var presentFinalContainerValue = $(presentFinalContainer).val();
+	var materialNameValue = $(materialName).val();
+	
+	if ((materialNameValue != "") && (presentFinalContainerValue == '1')) {
+		$('#' + materialId + 'Appendix').css('display', 'block');
+		$('#' + materialId + 'UsedAs').css('visibility', 'visible');
+	} else {
+		$('#' + materialId + 'Appendix').css('display', 'none');
+		$('#' + materialId + 'UsedAs').css('visibility', 'hidden');
+	}
+}
+
+function displayAnimalOrHumanSourceSelectionMaterial(materialName, animalHumanSrc) {
+	var materialNameId = $(materialName).attr('id');
+	var materialId = materialNameId.substring(0, materialNameId.indexOf('Name'));
+	var materialNameValue = $(materialName).val();
+	var animalHumanSrcValue = $(animalHumanSrc).val();
+	
+	if ((materialNameValue != "") && (animalHumanSrcValue != '')) {
+		//$('#' + materialId + 'UsedAs').css('visibility', 'visible');
+		$('#' + materialId + 'AppendixFourTab').css('display', 'block');
+		$('#' + materialId + 'AppendixFourTab').addClass('expnd');
+		initialAppendix4(animalHumanSrc, $('#' + materialId + 'AppendixFourTab'));
+	} else {
+		//$('#' + materialId + 'UsedAs').css('visibility', 'hidden');
+		$('#' + materialId + 'AppendixFourTab').css('display', 'none');
+		$('#' + materialId + 'AppendixFourTab').removeClass('expnd');
+	}
+}
+
+function delMaterial(delBut, list) {
+	var closestLi = $(delBut).closest('li');
+	var toRemoveIndex = $(closestLi).index();
+	$(closestLi).remove();
+	numOfMaterials--;
+	var counter = numOfMaterials;
+	
+	var totalItems = $(list).find('li');
+	for (var n = counter-1; n >= toRemoveIndex; n--) {
+		var text = $(totalItems[n]).find('summary')[0].innerHTML;
+		var newStr = text.replace('Material ' + (n+2), 'Material ' + (n+1));
+		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
+	}
+}
+
+/*for deleting an item from a list
+bolMedOrNonMed is optional and is used to determine if the item being deleted is a medicinal or non-medicinal ingredient*/
+function delFromList(delBut, labelTitleWithoutId, bolMedOrNonMed) {
 	var closestLi = $(delBut).closest('li');
 	var closestLiId = $(closestLi).attr('id');
 	var ulParent = $(closestLi).parent('ul')[0];
-	
 	var toRemoveIndex = $(closestLi).index();
-	if (bolMedOrNonMed && ($(ulParent).children('li').length == 1)) {
-		//reset all inputs
-		$(closestLi).find('input[type=text], select').each(function() {
-			$(this).val('');
-		});
-		var appendix4Text = $(closestLi).find('#' + closestLiId + 'AppendixFourTab').prop('outerHTML');
-		appendix4Text = appendix4TextMedIngr.replace(/doDrugProForm1MedIngr1/g , closestLiId);
-		$(closestLi).find('#' + closestLiId + 'AppendixFourTab').prop('outerHTML', appendix4Text);
-		$(closestLi).find('.wb-tabs').trigger('wb-init.wb-tabs');
+	if (bolMedOrNonMed != undefined) {
+		if (bolMedOrNonMed && ($(ulParent).children('li').length == 1)) {
+			//reset all inputs
+			$(closestLi).find('input[type=text], select').each(function() {
+				$(this).val('');
+			});
+			var appendix4Text = $(closestLi).find('#' + closestLiId + 'AppendixFourTab').prop('outerHTML');
+			appendix4Text = appendix4TextMedIngr.replace(/doDrugProForm1MedIngr1/g , closestLiId);
+			$(closestLi).find('#' + closestLiId + 'AppendixFourTab').prop('outerHTML', appendix4Text);
+			$(closestLi).find('.wb-tabs').trigger('wb-init.wb-tabs');
+		} else {
+			$(closestLi).remove();
+		}
 	} else {
 		$(closestLi).remove();
 	}
@@ -2870,7 +3032,23 @@ function initialAppendix4(opt, appendix4Tabs) {
 	$(tab1).addClass('displayTableCell active');
 	//$(tabs).addClass('expnd');
 	var optValue = $(opt).val();
-	if (optValue == 'option1') {
+	if (optValue == 'YES - Human') {
+		$(tab2).addClass('displayNONE');
+		$(tab2).removeClass('displayTableCell active');
+		$(tab3).addClass('displayNONE');
+		$(tab3).removeClass('displayTableCell active');
+	} else if (optValue == 'YES - Animal') {
+		$(tab2).addClass('displayTableCell');
+		$(tab2).removeClass('displayNONE active');
+		$(tab3).addClass('displayTableCell');
+		$(tab3).removeClass('displayNONE active');
+	} else {
+		$(tabs).css('display', 'none');
+		//$(tabs).removeClass('expnd');
+	}
+	
+	//using radio buttons
+	/*if (optValue == 'option1') {
 		$(tab2).addClass('displayNONE');
 		$(tab2).removeClass('displayTableCell active');
 		$(tab3).addClass('displayNONE');
@@ -2884,6 +3062,7 @@ function initialAppendix4(opt, appendix4Tabs) {
 		$(tabs).css('display', 'none');
 		//$(tabs).removeClass('expnd');
 	}
+	*/
 	
 	/*
 	if ($(chk1)[0].checked && !($(chk2)[0].checked)) {
@@ -2915,6 +3094,21 @@ function displayAnimalOrHumanSourceSelection(activeIngrName, animalHumanSrc) {
 	var ingredientId = activeIngrNameId.substring(0, activeIngrNameId.indexOf('Name'));
 	var activeIngredientNameValue = $(activeIngrName).val();
 	var animalHumanSrcValue = $(animalHumanSrc).val();
+	
+	if ((activeIngredientNameValue != "") && (animalHumanSrcValue != 'NO')) {
+		$('#' + ingredientId + 'UsedAs').css('visibility', 'visible');
+		$('#' + ingredientId + 'AppendixFourTab').css('display', 'block');
+		$('#' + ingredientId + 'AppendixFourTab').addClass('expnd');
+		//displayAppendix4($("#" + ingredientId), animalHumanSrc);
+		initialAppendix4(animalHumanSrc, $('#' + ingredientId + 'AppendixFourTab'));
+	} else {
+		//displayAppendix4($("#" + ingredientId), animalHumanSrc);
+		$('#' + ingredientId + 'UsedAs').css('visibility', 'hidden');
+		$('#' + ingredientId + 'AppendixFourTab').css('display', 'none');
+		$('#' + ingredientId + 'AppendixFourTab').removeClass('expnd');
+	}
+	
+	/*
 	if ((activeIngredientNameValue != "") && (animalHumanSrcValue == '1')) {
 		$('#' + ingredientId + 'AniHumanSrcSelect').css('display', 'block');
 		//$('#' + ingredientId + 'AniHumanSrcSelect').addClass('expnd');
@@ -2922,6 +3116,7 @@ function displayAnimalOrHumanSourceSelection(activeIngrName, animalHumanSrc) {
 		$('#' + ingredientId + 'AniHumanSrcSelect').css('display', 'none');
 		//$('#' + ingredientId + 'AniHumanSrcSelect').removeClass('expnd');
 	}
+	*/
 }
 
 /*function displayAppendix4(ingredientLI, activeIngrName, animalHumanSrc) {*/
@@ -2939,7 +3134,9 @@ function displayAppendix4(ingredientLI, opt) {
 		$('#' + appendix4Id).removeClass('expnd'); //to keep track of whether the appendix 4 has been displayed
 	}
 	*/
+	//used radio buttons
 	var optValue = $(opt).val();
+	/*
 	if (optValue == 'option1') {
 		$('#' + appendix4Id).css('display', 'block');
 		$('#' + appendix4Id).addClass('expnd'); //to keep track of whether the appendix 4 has been displayed
@@ -2949,6 +3146,18 @@ function displayAppendix4(ingredientLI, opt) {
 	} else {
 		$('#' + ingredientId + 'AniHumanSrcSelect').css('display', 'none');
 		$('#' + ingredientId + 'AniHumanSrcSelect').removeClass('expnd');
+	}
+	*/
+	
+	if (optValue == 'YES - Human') {
+		$('#' + appendix4Id).css('display', 'block');
+		$('#' + appendix4Id).addClass('expnd'); //to keep track of whether the appendix 4 has been displayed
+	} else if (optValue == 'YES - Animal') {
+		$('#' + appendix4Id).css('display', 'block');
+		$('#' + appendix4Id).addClass('expnd'); //to keep track of whether the appendix 4 has been displayed
+	} else {
+		$('#' + appendix4Id).css('display', 'none');
+		$('#' + appendix4Id).removeClass('expnd');
 	}
 }
 
@@ -3255,51 +3464,20 @@ function delNonMedIngredient(delBut, list) {
 }
 */
 
-/**For Adding Material (Animal/Human Source) **/
-var numOfMaterials = 0;
-var numOfMaterialsCreated = 0;
-function addMaterial(list) {
-	var defaultMaterial = '<li id="doDrugProForm1AnimalHumanSrc1" class="displayBLOCK"><details open="open" class="doMainDetails doDrugProForm1Material"><summary class="heightAdjust">Material 1<button class="btn btn-danger btn-xs deleteRef" onclick="delMaterial(this, doDrugProForm1AnimalHumanSrcList)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="row"><div class="col-sm-6"><label for="doDrugProForm1AnimalHumanSrc1Name" class="control-label">Material Name</label><input id="doDrugProForm1AnimalHumanSrc1Name" class="form-control input-sm full-width" type="text"></div><div class="col-sm-6"><label for="doDrugProForm1AnimalHumanSrc1ChemServ" class="control-label">Chemical Abstracts Service</label><input id="doDrugProForm1AnimalHumanSrc1ChemServ" class="form-control input-sm full-width" type="text"></div></div><div class="row"><div class="col-sm-4"><label for="doDrugProForm1AnimalHumanSrc1Stand" class="control-label">Standard</label><input id="doDrugProForm1AnimalHumanSrc1Stand" class="form-control input-sm full-width" type="text"></div><div class="col-sm-3"><label for="doDrugProForm1AnimalHumanSrc1FinalContainer" class="control-label">Present in Final Container</label><select id="doDrugProForm1AnimalHumanSrc1FinalContainer" name="doDrugProForm1AnimalHumanSrc1FinalContainer" class="form-control input-sm"><option label=" "></option><option value="1">Yes</option><option value="2">No</option></select></div></div></details></li>';
-	numOfMaterialsCreated++;
-	numOfMaterials++;
-	var listID = $(list).attr('id');
-	var drugFormId = listID.substring(0, listID.indexOf('Animal'));
-	
-	var newMaterial = defaultMaterial.replace(/doDrugProForm1/g, drugFormId);
-	defaultMaterial = defaultMaterial.replace(/AnimalHumanSrc1/, 'AnimalHumanSrc' + numOfMaterialsCreated);
-	newMaterial = newMaterial.replace('Material 1', 'Material ' + numOfMaterialsCreated);
-	$(list).append(newMaterial);
-}
-
-function delMaterial(delBut, list) {
-	var closestLi = $(delBut).closest('li');
-	var toRemoveIndex = $(closestLi).index();
-	$(closestLi).remove();
-	numOfMaterials--;
-	var counter = numOfMaterials;
-	
-	var totalItems = $(list).find('li');
-	for (var n = counter-1; n >= toRemoveIndex; n--) {
-		var text = $(totalItems[n]).find('summary')[0].innerHTML;
-		var newStr = text.replace('Material ' + (n+2), 'Material ' + (n+1));
-		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
-	}
-}
-
 /**For Adding Route of Administration**/
 //parameters: but = button; drugFormlId = drug form id
 function addRouteOfAdm(but, drugFormId) {
   //get the number of div.row
-  var routeOfAdmRowCount = ($('#' + drugFormId + ' .row').length - 1);
+  var routeOfAdmRowCount = ($('#' + drugFormId + ' .row:not(.other)').length - 1);
   //count the number of DINs in each Row
   var routeOfAdmCount;
   if (routeOfAdmRowCount == 0) {
 	routeOfAdmCount = 0;
   } else {
-	routeOfAdmCount = $('#' + drugFormId).find('div.row div.col-sm-3').length;
+	routeOfAdmCount = $('#' + drugFormId).find('div.row:not(.other) div.group').length;
   }
   
-  var defaultRouteOfAdm = '<div class="col-sm-3 form-group" id="doDrugProForm1RouteOfAdm1Grp"><label class="control-label normalLabel-11pt" for="doDrugProForm1RouteOfAdm1">Route of Administration 1</label><div class="input-group"><select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1" class="form-control input-sm col-sm-2"><option label=" "></option><option value="1">Block/Infiltration</option><option value="2">Buccal</option><option value="3">Dental</option><option value="4">Dialysis</option><option value="5">Epidural</option><option value="6">Inhalation</option><option value="7">Intra-Arterial</option><option value="8">Intra-Articular</option><option value="9">Intrabursal</option><option value="10">Intradermal</option><option value="11">Intramammary</option><option value="12">Intraocular</option><option value="13">Intraperitoneal</option><option value="14">Intrathecal</option><option value="15">Intratracheal</option><option value="16">Intravascular</option><option value="17">Intravenous</option><option value="18">Intravitreal</option><option value="19">Irrigation</option><option value="20">Nasal</option><option value="21">Ophthalmic</option><option value="22">Oral</option><option value="23">Otic</option><option value="24">Rectal</option><option value="25">Subcutaneous</option><option value="26">Sublingual</option><option value="27">Topical</option><option value="28">Transdermal</option><option value="29">Urethral</option><option value="30">Vaginal</option><option value="31">Other</option></select><span class="input-group-btn"><button class="btn btn-danger btn-sm" id="doDrugProForm1RouteOfAdm1DelBut" type="button" onclick="deleteRouteOfAdm(this, \'doDrugProForm1RouteOfAdm\')"><span class="glyphicon glyphicon-remove"></span></button></span></div></div>';
+  var defaultRouteOfAdm = '<div class="col-sm-6 form-group group" id="doDrugProForm1RouteOfAdm1Grp"><label class="control-label normalLabel-11pt" for="doDrugProForm1RouteOfAdm1">Route of Administration 1</label><div class="input-group"><select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1"  onchange="otherSelect(this, "Other", doDrugProForm1RouteOfAdm1OtherSelect)" class="form-control input-sm col-sm-2"><option label=" "></option> <option value="Block/Infiltration">Block/Infiltration</option> <option value="Buccal">Buccal</option> <option value="Dental">Dental</option> <option value="Dialysis">Dialysis</option> <option value="Epidural">Epidural</option> <option value="Inhalation">Inhalation</option> <option value="Intra-Arterial">Intra-Arterial</option> <option value="Intra-Articular">Intra-Articular</option> <option value="Intrabursal">Intrabursal</option> <option value="Intradermal">Intradermal</option> <option value="Intramammary">Intramammary</option> <option value="Intraocular">Intraocular</option> <option value="Intraperitoneal">Intraperitoneal</option> <option value="Intrathecal">Intrathecal</option> <option value="Intratracheal">Intratracheal</option> <option value="Intravascular">Intravascular</option> <option value="Intravenous">Intravenous</option> <option value="Intravitreal">Intravitreal</option> <option value="Irrigation">Irrigation</option> <option value="Nasal">Nasal</option> <option value="Ophthalmic">Ophthalmic</option> <option value="Oral">Oral</option> <option value="Otic">Otic</option> <option value="Rectal">Rectal</option> <option value="Subcutaneous">Subcutaneous</option> <option value="Sublingual">Sublingual</option> <option value="Topical">Topical</option> <option value="Transdermal">Transdermal</option> <option value="Urethral">Urethral</option> <option value="Vaginal">Vaginal</option> <option value="Other">Other</option></select><span class="input-group-btn"><button class="btn btn-danger btn-sm" id="doDrugProForm1RouteOfAdm1DelBut" type="button" onclick="deleteRouteOfAdm(this, \'doDrugProForm1RouteOfAdm\')"><span class="glyphicon glyphicon-remove"></span></button></span></div><div class="row other" style="margin-top:10px; display:none" id="doDrugProForm1RouteOfAdm1OtherSelect"> <div class="form-group"> <div class="col-sm-5" style="padding-right:8px"> <label class="control-label normalLabel" for="doDrugProForm1RouteOfAdm1Other">Route of Administration Details</label> </div> <div class="col-sm-7" style="padding-left:0"> <input type="text" class="form-control input-sm full-width" id="doDrugProForm1RouteOfAdm1Other"/> </div> </div> </div></div>';
 	var replacedRouteOfAdm;
 	var newRouteOfAdm;
   if (routeOfAdmCount == 0) {
@@ -3308,7 +3486,7 @@ function addRouteOfAdm(but, drugFormId) {
 		newRouteOfAdm = replacedRouteOfAdm.replace('doDrugProForm1RouteOfAdm', drugFormId);
 	} else {
 //get the the id of the last DIN in the last row
-var routeOfAdmLastId = $('#' + drugFormId).find('div.row:eq(' + routeOfAdmRowCount + ') div.col-sm-3:last')[0].id;
+var routeOfAdmLastId = $('#' + drugFormId).find('div.row:not(.other):eq(' + routeOfAdmRowCount + ') div.group:last')[0].id;
 var routeOfAdmLastIndex1 = routeOfAdmLastId.indexOf('Adm');
 var routeOfAdmLastIndex2 = routeOfAdmLastId.indexOf('Grp');
 var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3, routeOfAdmLastIndex2);
@@ -3320,21 +3498,22 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
   newRouteOfAdm = replacedRouteOfAdm.replace('doDrugProForm1RouteOfAdm', drugFormId);
   //newRouteOfAdm = newRouteOfAdm.replace('Administration 1', 'Administration ' + (parseInt(routeOfAdmLastIndexId)+1));
   
+  //in last row
   var numOfDINInRow = 0;
-  $('#' + drugFormId).find('div.row:eq(' + routeOfAdmRowCount + ')').each(function() {
-	numOfDINInRow = $(this).find('div.col-sm-3').length;
+  $('#' + drugFormId).find('div.row:not(.other):eq(' + routeOfAdmRowCount + ')').each(function() {
+	numOfDINInRow = $(this).find('div.group').length;
   });
   
-  newRouteOfAdm = newRouteOfAdm.replace('Administration 1', 'Administration ' + (((routeOfAdmRowCount-1)*4) + (numOfDINInRow+1)));
+  newRouteOfAdm = newRouteOfAdm.replace('Administration 1', 'Administration ' + (((routeOfAdmRowCount-1)*2) + (numOfDINInRow+1)));
   }
   //get number of current DINs in the last row, and check if there is a need to create new row
   var lastRow = $('#' + drugFormId + 'Row' + routeOfAdmRowCount);
   //get the number of divs in the lastRow
   var numOfRouteOfAdmInLastRow;
   $(lastRow).each(function() {
-	numOfRouteOfAdmInLastRow = $(this).find('div.col-sm-3').length;
+	numOfRouteOfAdmInLastRow = $(this).find('div.group').length;
   });
-  if ((numOfRouteOfAdmInLastRow%4 == 0) && (numOfRouteOfAdmInLastRow != 0)) { //add new row (with newRouteOfAdm) beneath
+  if ((numOfRouteOfAdmInLastRow%2 == 0) && (numOfRouteOfAdmInLastRow != 0)) { //add new row (with newRouteOfAdm) beneath
 	routeOfAdmRowCount++;
 	var newRow = '<div class="row" id="' + drugFormId + 'Row' + routeOfAdmRowCount + '">' + newRouteOfAdm + '</div>';
 	$('#' + drugFormId).append(newRow);
@@ -3346,7 +3525,7 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 // parameters: but - button; drugFormId - related submission id (i.e. relEnrolmentRel1DIN)
   function deleteRouteOfAdm(delBut, drugFormId) {
 	  //get the parent div of but (i.e. the currentRow where but belongs to)
-	  var currentDiv = $(delBut).parent().closest('div.col-sm-3');
+	  var currentDiv = $(delBut).parent().closest('div.group');
 	  var deletedDivIndex = $(currentDiv).index();
 	  //get row where currentDiv belonged to
 	  var currentRow = $(currentDiv).parent().closest('div.row');
@@ -3365,24 +3544,24 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 	  var numOfDINsToGet;
 	  var numOfDINsInCurrentRow;
 	  //get the number of div.row
-	  var raDINRowCount = $('#' + drugFormId + ' .row').length;
+	  var raDINRowCount = $('#' + drugFormId + ' .row:not(.other)').length;
 	  while (currentRowIndex < (raDINRowCount-1)) {
 		//get the number of divs within the currentRow
 		$(currentRow).each(function(i) {
-		  numOfDINsInCurrentRow = $(this).find('div.col-sm-3').length;
+		  numOfDINsInCurrentRow = $(this).find('div.group').length;
 		});
-		numOfDINsToGet = 4 - numOfDINsInCurrentRow;
+		numOfDINsToGet = 2 - numOfDINsInCurrentRow;
 		//get the next row after currentRow
-		var nextRow = $('#' + drugFormId).find('div.row:eq(' + (currentRowIndex + 1) + ')');
+		var nextRow = $('#' + drugFormId).find('div.row:not(.other):eq(' + (currentRowIndex + 1) + ')');
 		//get the DINs from the nextRow and move them to the currentRow
 		for (var i = 0; i < numOfDINsToGet; i++) {
-		  var DINToGet = $(nextRow).find('div.col-sm-3:eq(' + i + ')');
+		  var DINToGet = $(nextRow).find('div.group:eq(' + i + ')');
 		  $(DINToGet).remove();
 		  $(currentRow).append(DINToGet);
 		  //$(nextRow).find(DINToGet).remove();
 		}
 		currentRowIndex++;
-		currentRow = $("#" + drugFormId + " div.row:eq(" + currentRowIndex + ")");
+		currentRow = $("#" + drugFormId + " div.row:not(.other):eq(" + currentRowIndex + ")");
 	  }
 	  //if lastRow contains no elements, remove it
 	  if ($(currentRow).children().length == 0) {
@@ -3396,17 +3575,17 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 	//get DIN at original position of DIN that was removedItemIndex
 	//var newDINAtRemovedPos = $('#' + drugFormId + ' div.row:eq(' + deletedRowIndex + ') div.col-sm-3:eq(' + deletedDivIndex + ')');
 	
-	var newLabelId = (deletedRowIndex-1)*4 + (deletedDivIndex+1);
+	var newLabelId = (deletedRowIndex-1)*2 + (deletedDivIndex+1);
 	var rowIndex = deletedRowIndex;
 	var rowDINCount = 0;
 	//var rowIndex = deletedRowIndex;
 	while (rowIndex <= (raDINRowCount-1)) {
 		//if (deletedDivIndex < 4) {
-			$('#' + drugFormId + ' div.row:eq(' + rowIndex + ')').each(function(i) {
-				rowDINCount = $(this).find('div.col-sm-3').length;
+			$('#' + drugFormId + ' div.row:not(.other):eq(' + rowIndex + ')').each(function(i) {
+				rowDINCount = $(this).find('div.group').length;
 			});
 			for (var k = deletedDivIndex; k < rowDINCount; k++) {
-				var DINToChangeLabel = $('#' + drugFormId + ' div.row:eq(' + rowIndex + ') div.col-sm-3:eq(' + k + ')');
+				var DINToChangeLabel = $('#' + drugFormId + ' div.row:not(.other):eq(' + rowIndex + ') div.group:eq(' + k + ')');
 				$(DINToChangeLabel).find('label').text('Route Of Administration ' + newLabelId);
 				newLabelId++;
 			}
@@ -3415,6 +3594,15 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 		deletedDivIndex = 0;
 	}
 	
+}
+
+//when other is selected as route of administration
+function otherSelect(select, valueToCompare, input) {
+	if ($(select).val() == valueToCompare) {
+		$(input).css('display', 'block');
+	} else {
+		$(input).css('display', 'none');
+	}
 }
 
 </script>
