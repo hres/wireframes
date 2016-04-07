@@ -2,7 +2,7 @@
 	background-color: #2C9BEC!important;
 }
 
-.nav-pills li {
+#navigation .nav-pills li {
 	float: none;
 	display: table-cell;
 	text-align: center;
@@ -86,15 +86,15 @@ label.hiddenLabel {
 	position: absolute !important;
 }
 
+.dropdown > .dropdown-menu {
+    margin-top: 0px;
+    right: 0;
+}
+
 .dropdown-menu a {
 	/*pointer-events: none;*/
 	cursor: default;
 	text-decoration: none;
-}
-
-.dropdown .pull-left> .dropdown-menu {
-	margin-top: 0px;
-	right: 0;
 }
 
 .dropdown-submenu>.dropdown-menu{
