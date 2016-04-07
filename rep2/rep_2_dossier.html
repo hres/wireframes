@@ -223,7 +223,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<div class="form-group col-sm-4">
 								<label for="doCanRefProduct1Dosage" class="control-label">Dosage Form:</label>
 								<div class="">
-									<select class="form-control input-sm full-width" name="doCanRefProduct1Dosage" id="doCanRefProduct1Dosage">
+									<select class="form-control input-sm full-width" name="doCanRefProduct1Dosage" onchange="otherSelect(this, 'Other', doCanRefProduct1DosageOther)" id="doCanRefProduct1Dosage">
 										<option label=" "></option>
 										<option value="Aerosol">Aerosol</option>
 										<option value="Bolus">Bolus</option>
@@ -266,6 +266,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<div class="form-group col-sm-4">
 								<label for="doCanRefProduct1Strength">Strength(s)</label>
 								<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1Strength" placeholder="Strength(s)" />
+							</div>
+						</div>
+						<div id="doCanRefProduct1DosageOther" class="row" style="display:none">
+							<div class="col-sm-6">
+								<label class="control-label normalLabel" for="">Dosage Form Details</label>
+								<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1DosageOther" />
 							</div>
 						</div>
 						<div class="row">
@@ -2034,6 +2040,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																											<span class="col-sm-3"> <label><input value="" type="checkbox"> spinal cord</label> </span> 
 																											<span class="col-sm-3"> <label><input value="" type="checkbox"> trigeminal ganglia</label> </span> 
 																											<span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> 
+																											<span class="col-sm-3"> <label><input value="" type="checkbox"> other</label> </span> 
 																											<span class="col-sm-3"> <label><input value="" type="checkbox"> small intestine other than distal ileum</label> </span> 
 																										</div> 
 																									</div> 
@@ -3312,6 +3319,9 @@ function addNewRefProduct() {
 	productFormHTML = productFormHTML.replace(/doCanRefProduct1/g, 'doCanRefProduct' + numOfRefProductsCreated);
 	productFormHTML = productFormHTML.replace('Product 1', 'Product ' + canRefProductCounter);
 	$(refProductListId).append(productFormHTML);
+	
+	//hide dosage form details
+	$('#doCanRefProduct' + numOfRefProductsCreated + 'DosageOther').css('display', 'none');
 }
 
 /*deletes from a ul list
