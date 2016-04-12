@@ -2852,7 +2852,16 @@ function copyDrugFormFromList(copyBut) {
 	drugFormArray[idx + 1].medIngrCountryOriginArray = drugFormArray[idx].medIngrCountryOriginArray;
 	drugFormArray[idx + 1].nonMedIngrCount = drugFormArray[idx].nonMedIngrCount;
 	drugFormArray[idx + 1].nonMedIngrCreatedCount = drugFormArray[idx].nonMedIngrCreatedCount;
-	drugFormArray[idx + 1].nonMedIngrCountryOriginArray = drugFormArray[idx].nonMedIngrCountryOriginArray;
+	//drugFormArray[idx + 1].nonMedIngrCountryOriginArray = drugFormArray[idx].nonMedIngrCountryOriginArray;
+	for (var h = 0; h < drugFormArray[idx].nonMedIngrCountryOriginArray.length; h++) {
+		var ingrId = drugFormArray[idx].nonMedIngrCountryOriginArray[h].id;
+		var ingrNum = ingrId.substring(ingrId.indexOf('Ingr') + 4);
+		drugFormArray[idx + 1].nonMedIngrCountryOriginArray.push({
+			id: 'doDrugProForm' + (parseInt(drugFormNum) + 1) + 'NonMedIngr' + ingrNum,
+			count: drugFormArray[idx].nonMedIngrCountryOriginArray[h].count,
+			createdCount: drugFormArray[idx].nonMedIngrCountryOriginArray[h].createdCount
+		});
+	}
 	drugFormArray[idx + 1].routeOfAdmCount = drugFormArray[idx].routeOfAdmCount;
 	drugFormArray[idx + 1].routeOfAdmCreatedCount = drugFormArray[idx].routeOfAdmCreatedCount;
 	
@@ -3085,7 +3094,7 @@ function addMedIngredient(ulList) {
 	//rename all ids of the elements for uniqueness
 	var ingredientFormHTML = $(ingredientForm).prop('outerHTML');
 	ingredientFormHTML = replaceAll(ingredientFormHTML, drugFormId + 'MedIngr1', drugFormId + 'MedIngr' + numOfMedIngredientsCreated);
-	appendix4Text = replaceAll(appendix4Text, drugFormId + 'MedIngr1', drugFormId + 'MedIngr' + numOfMedIngredientsCreated);
+	appendix4Text = replaceAll(appendix4Text, 'doDrugProForm1MedIngr1', drugFormId + 'MedIngr' + numOfMedIngredientsCreated);
 	//ingredientFormHTML = ingredientFormHTML.replace('Ingredient 1', 'Ingredient ' + numOfMedIngredients);
 	$(ulList).append(ingredientFormHTML);
 	
@@ -3139,7 +3148,7 @@ function addNonMedIngredient(ulList, bolIngrOrVariant) {
 	var numOfNonMedIngredientsCreated = drugFormArray[drugFormId].nonMedIngrCreatedCount + 1;*/
 	
 	//set for next ingredient (initial count)
-	drugFormArray[index].nonMedIngrCountryOriginArray.push(0);
+	drugFormArray[index].nonMedIngrCountryOriginArray.push({id: drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated, count: 0, createdCount: 0});
 	
 	//clone the same ingredient form from Medicinal Ingredient List
 	var medIngrList = '#' + drugFormId + 'MedIngrList';
@@ -3155,7 +3164,7 @@ function addNonMedIngredient(ulList, bolIngrOrVariant) {
 	var ingredientFormHTML = $(ingredientForm).prop('outerHTML');
 	ingredientFormHTML = replaceAll(ingredientFormHTML, drugFormId + 'MedIngr', drugFormId + 'NonMedIngr');
 	ingredientFormHTML = replaceAll(ingredientFormHTML, 'NonMedIngr1', 'NonMedIngr' + numOfNonMedIngredientsCreated);
-	var appendix4Text = replaceAll(appendix4TextMedIngr, drugFormId + 'MedIngr1', drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
+	var appendix4Text = replaceAll(appendix4TextMedIngr, 'doDrugProForm1MedIngr1', drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
 	//ingredientFormHTML = ingredientFormHTML.replace('Medicinal Ingredient 1', 'Non-Medicinal Ingredient ' + numOfNonMedIngredients);
 	ingredientFormHTML = ingredientFormHTML.replace('Active Ingredient Name', 'Non-Medicinal Ingredient Name');
 	$(ulList).append(ingredientFormHTML); //add to list
@@ -3327,6 +3336,7 @@ function delFromList(delBut, labelTitleWithoutId) {
 		$(closestLi).remove();
 		relabelLiItems(labelTitleWithoutId, ulParent, toRemoveIndex);
 		drugFormArray[index].animalSrcMaterialCount--;
+		drugFormArray[index].animalSrcMaterialCountryOriginArray.splice(index, 1);
 	} else if (labelTitleWithoutId == 'Medicinal Ingredient') {
 		drugFormId = closestLiId.substring(0, closestLiId.indexOf('Med'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
@@ -3464,11 +3474,15 @@ function copyNonMedIngrFromList(copyBut) {
 	var ulParent = $(closestLi).parent('ul');
 	
 	var index = findIndexById(drugFormArray, drugFormId);
+	var ingrIndex = findIndexById(drugFormArray[index].nonMedIngrCountryOriginArray, closestLiId);
 	
 	var numOfNonMedIngredients = drugFormArray[index].nonMedIngrCount;
 	var numOfNonMedIngredientsCreated = drugFormArray[index].nonMedIngrCreatedCount + 1;
 	//numOfNonMedIngredientsCreated++;
 	//numOfNonMedIngredients = $(ulParent).children('li').length + 1;
+	
+	var countryOfOriginCountOriginal = drugFormArray[index].nonMedIngrCountryOriginArray[ingrIndex].count;
+	drugFormArray[index].nonMedIngrCountryOriginArray.push({id: drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated, count: countryOfOriginCountOriginal});
 	
 	// copy all input values
 	$(closestLi).find('input:text').each(function() {
@@ -3655,6 +3669,7 @@ function displayAnimalOrHumanSourceSelection(activeIngrName, animalHumanSrc) {
 	var drugFormNum;
 	var ingredientNum = ingredientId.substring(ingredientId.indexOf('Ingr') + 4);
 	var index;
+	var ingrIndex;
 	
 	if ((activeIngredientNameValue != "") && (animalHumanSrcValue != 'NO')) {
 		$('#' + ingredientId + 'UsedAs').css('visibility', 'visible');
@@ -3667,9 +3682,11 @@ function displayAnimalOrHumanSourceSelection(activeIngrName, animalHumanSrc) {
 			drugFormId = ingredientId.substring(0, ingredientId.indexOf('NonMed'));
 			drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
 			index = findIndexById(drugFormArray, drugFormId);
+			ingrIndex = findIndexById(drugFormArray[index].nonMedIngrCountryOriginArray, ingredientId);
 			//if (animalHumanSrcValue == 'YES - Animal') {
-				if ((drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]) == 0) {
-				drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
+			if (drugFormArray[index].nonMedIngrCountryOriginArray[ingrIndex].count == 0) {
+				drugFormArray[index].nonMedIngrCountryOriginArray[ingrIndex].count++;
+				drugFormArray[index].nonMedIngrCountryOriginArray[ingrIndex].createdCount++;
 			}
 				/*if ((ingredientNum == '1') && (count == null)) {
 					drugFormArray[index].nonMedIngrCountryOriginArray.push(0);
@@ -3762,8 +3779,9 @@ function addCountryAppendix4(container, bolMedOrNonMed) {
 	var drugFormId;
 	var drugFormNum;
 	var index;
+	var ingrIndex; //for country of origin in appendix 4 for non-med. ingredients
 	var ingredientId = containerId.substring(0, containerId.indexOf('Ingr') + 4);
-	var materialNum = containerId.substring(0, containerId.indexOf('Src') + 3);
+	var materialNum = containerId.substring(containerId.indexOf('HumanSrc') + 8, containerId.indexOf('Appendix'));
 	
 	var numOfCountryOfOriginCreatedMedIngr;
 	var numOfCountryOfOriginCreatedNonMedIngr;
@@ -3775,20 +3793,22 @@ function addCountryAppendix4(container, bolMedOrNonMed) {
 		drugFormId = containerId.substring(0, containerId.indexOf('NonMed'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
 		index = findIndexById(drugFormArray, drugFormId);
-		drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
-		numOfCountryOfOriginCreatedNonMedIngr = drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1];
+		ingrIndex = findIndexById(drugFormArray[index].nonMedIngrCountryOriginArray, ingredientId + ingredientNum);
+		drugFormArray[index].nonMedIngrCountryOriginArray[ingrIndex].count++;
+		drugFormArray[index].nonMedIngrCountryOriginArray[ingrIndex].createdCount++;
+		numOfCountryOfOriginCreatedNonMedIngr = drugFormArray[index].nonMedIngrCountryOriginArray[ingrIndex].createdCount;
 		
-		defaultText = replaceAll(defaultText, 'doDrugProForm1NonMedIngr1', drugFormId + 'NonMed' + ingredientNum);
+		defaultText = replaceAll(defaultText, 'doDrugProForm1NonMedIngr1', drugFormId + 'NonMedIngr' + ingredientNum);
 		var newText = replaceAll(defaultText, 'AppendixFourAnimalSrcInfo3Country1', 'AppendixFourAnimalSrcInfo3Country' + numOfCountryOfOriginCreatedMedIngr);
 		newText = newText.replace('Origin 1', 'Origin ' + numOfCountryOfOriginCreatedNonMedIngr);
-	} else if (containerId.contains('Animal')) {
+	} else if (containerId.contains('AnimalHuman')) {
 		drugFormId = containerId.substring(0, containerId.indexOf('Animal'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
 		index = findIndexById(drugFormArray, drugFormId);
 		drugFormArray[index].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1]++;
 		numOfCountryOfOriginCreatedMaterial = drugFormArray[index].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1];
 		
-		defaultText = replaceAll(defaultText, 'doDrugProForm1NonMedIngr1', drugFormId + 'NonMed' + materialNum);
+		defaultText = replaceAll(defaultText, 'doDrugProForm1NonMedIngr1', drugFormId + 'AnimalHumanSrc' + materialNum);
 		var newText = replaceAll(defaultText, 'AppendixFourAnimalSrcInfo3Country1', 'AppendixFourAnimalSrcInfo3Country' + numOfCountryOfOriginCreatedMaterial);
 		newText = newText.replace('Origin 1', 'Origin ' + numOfCountryOfOriginCreatedMaterial);
 	} else {
@@ -3798,7 +3818,7 @@ function addCountryAppendix4(container, bolMedOrNonMed) {
 		drugFormArray[index].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
 		numOfCountryOfOriginCreatedMedIngr = drugFormArray[index].medIngrCountryOriginArray[parseInt(ingredientNum) - 1];
 		
-		defaultText = replaceAll(defaultText, 'doDrugProForm1NonMedIngr1', drugFormId + 'Med' + ingredientNum);
+		defaultText = replaceAll(defaultText, 'doDrugProForm1NonMedIngr1', drugFormId + 'MedIngr' + ingredientNum);
 		var newText = replaceAll(defaultText, 'AppendixFourAnimalSrcInfo3Country1', 'AppendixFourAnimalSrcInfo3Country' + numOfCountryOfOriginCreatedMedIngr);
 		newText = newText.replace('Origin 1', 'Origin ' + numOfCountryOfOriginCreatedMedIngr);
 	}
@@ -3845,13 +3865,15 @@ function delCountryAppendix4(delBut, container, bolMedOrNonMed) {
 	var drugFormId;
 	var drugFormNum;
 	var index;
+	var ingrIndex;
 	var ingredientNum = delButId.substring(delButId.indexOf('Ingr') + 4, delButId.indexOf('Appendix'));
 	var materialNum = delButId.substring(delButId.indexOf('Country') + 7, delButId.indexOf('Del') + 3);
 
 	if (delButId.contains('NonMed')) {
-		drugFormId = delButId.substring(0, delButId.indexOf('Med'));
+		drugFormId = delButId.substring(0, delButId.indexOf('NonMed'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
 		index = findIndexById(drugFormArray, drugFormId);
+		ingrIndex = findIndexById(drugFormArray[index].nonMedIngrCountryOriginArray, drugFormId + 'NonMedIngr' + ingredientNum);
 		if (currentNumOfCountryOfOrigin == 1) {
 			$('#' + drugFormId + 'NonMedIngr1AppendixFourAnimalSrcInfo3Country1').val("");
 			$('#' + drugFormId + 'NonMedIngr1AppendixFourAnimalSrcInfo3Country1SpecifyInput').val("");
@@ -3863,7 +3885,7 @@ function delCountryAppendix4(delBut, container, bolMedOrNonMed) {
 				$(previousRowForThisRow).find('.form-group').append(addCountryButText);
 			}
 			$(closestRowMain).remove();
-			drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]--;
+			drugFormArray[index].nonMedIngrCountryOriginArray[ingrIndex].count--;
 		}
 	} else if (delButId.contains('Animal')) { 
 		drugFormId = delButId.substring(0, containerId.indexOf('Animal'));
