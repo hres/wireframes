@@ -2833,10 +2833,28 @@ function copyDrugFormFromList(copyBut) {
 	
 	//var numOfDrugForms = drugFormArray.length + 1;
 	drugFormCreated++;
-	var index = findIndexById(drugFormArray, drugFormId);
-	var form = drugFormArray[index];
-	form.id = 'doDrugProForm' + drugFormCreated.toString();
-	drugFormArray.push(form);
+	//var index = findIndexById(drugFormArray, drugFormId);
+	//var form = drugFormArray[index];
+	//form.id = 'doDrugProForm' + drugFormCreated.toString();
+	//drugFormArray.push(form);
+	addDrugFormEntry('doDrugProForm' + drugFormCreated.toString());
+	
+	var idx = findIndexById(drugFormArray, drugFormId);
+	drugFormArray[idx + 1].animalSrcMaterialCount = drugFormArray[idx].animalSrcMaterialCount;
+	drugFormArray[idx + 1].animalSrcMaterialCreatedCount = drugFormArray[idx].animalSrcMaterialCreatedCount;
+	drugFormArray[idx + 1].animalSrcMaterialCountryOriginArray = drugFormArray[idx].animalSrcMaterialCountryOriginArray;
+	drugFormArray[idx + 1].containerTypeCount = drugFormArray[idx].containerTypeCount;
+	drugFormArray[idx + 1].containerTypeCreatedCount = drugFormArray[idx].containerTypeCreatedCount;
+	drugFormArray[idx + 1].countryOfManufactureCount = drugFormArray[idx].countryOfManufactureCount;
+	drugFormArray[idx + 1].countryOfManufactureCreatedCount = drugFormArray[idx].countryOfManufactureCreatedCount;
+	drugFormArray[idx + 1].medIngrCount = drugFormArray[idx].medIngrCount;
+	drugFormArray[idx + 1].medIngrCreatedCount = drugFormArray[idx].medIngrCreatedCount;
+	drugFormArray[idx + 1].medIngrCountryOriginArray = drugFormArray[idx].medIngrCountryOriginArray;
+	drugFormArray[idx + 1].nonMedIngrCount = drugFormArray[idx].nonMedIngrCount;
+	drugFormArray[idx + 1].nonMedIngrCreatedCount = drugFormArray[idx].nonMedIngrCreatedCount;
+	drugFormArray[idx + 1].nonMedIngrCountryOriginArray = drugFormArray[idx].nonMedIngrCountryOriginArray;
+	drugFormArray[idx + 1].routeOfAdmCount = drugFormArray[idx].routeOfAdmCount;
+	drugFormArray[idx + 1].routeOfAdmCreatedCount = drugFormArray[idx].routeOfAdmCreatedCount;
 	
 	/*
 	//create new DrugForm object for clone
@@ -3042,17 +3060,18 @@ function addMedIngredient(ulList) {
 	var ulListId = $(ulList).attr('id');
 	var drugFormId = ulListId.substring(0, ulListId.indexOf('Med'));
 	var drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+	var index = findIndexById(drugFormArray, drugFormId);
 	
 	//get the number of medicinal ingredients in the current drug product formulations and the number of ones that have been created
-	var numOfMedIngredients = drugFormArray[parseInt(drugFormNum) - 1].medIngrCount + 1;
-	var numOfMedIngredientsCreated = drugFormArray[parseInt(drugFormNum) - 1].medIngrCreatedCount + 1;
+	var numOfMedIngredients = drugFormArray[index].medIngrCount + 1;
+	var numOfMedIngredientsCreated = drugFormArray[index].medIngrCreatedCount + 1;
 	/*var numOfMedIngredients = drugFormArray[drugFormId].medIngrCount + 1;
 	var numOfMedIngredientsCreated = drugFormArray[drugFormId].medIngrCreatedCount + 1;*/
 	//numOfMedIngredients = $(ulList).children('li').length + 1;
 	//numOfMedIngredientsCreated++;
 	
 	//set for next ingredient (initial count)
-	drugFormArray[parseInt(drugFormNum) - 1].medIngrCountryOriginArray.push(0);
+	drugFormArray[index].medIngrCountryOriginArray.push(0);
 	
 	//clone the first medicinal ingredient of the current drug product formulation and reset all inputs
 	var ingredientForm = $(ulList).find('li:eq(0)').clone();
@@ -3094,8 +3113,8 @@ function addMedIngredient(ulList) {
 	//re-assign # of medicinal ingredients created and current #
 	/*drugFormArray[drugFormId].medIngrCount = numOfMedIngredients;
 	drugFormArray[drugFormId].medIngrCreatedCount = numOfMedIngredientsCreated;*/
-	drugFormArray[parseInt(drugFormNum) - 1].medIngrCount++;
-	drugFormArray[parseInt(drugFormNum) - 1].medIngrCreatedCount++;
+	drugFormArray[index].medIngrCount++;
+	drugFormArray[index].medIngrCreatedCount++;
 }
 
 //var numOfNonMedIngredients = 0;
@@ -3111,15 +3130,16 @@ function addNonMedIngredient(ulList, bolIngrOrVariant) {
 	var ulListId = $(ulList).attr('id');
 	var drugFormId = ulListId.substring(0, ulListId.indexOf('NonMed'));
 	var drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+	var index = findIndexById(drugFormArray, drugFormId);
 	
 	//get the number of medicinal ingredients in the current drug product formulations and the number of ones that have been created
-	var numOfNonMedIngredients = drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCount + 1;
-	var numOfNonMedIngredientsCreated = drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCreatedCount + 1;
+	var numOfNonMedIngredients = drugFormArray[index].nonMedIngrCount + 1;
+	var numOfNonMedIngredientsCreated = drugFormArray[index].nonMedIngrCreatedCount + 1;
 	/*var numOfNonMedIngredients = drugFormArray[drugFormId].nonMedIngrCount + 1;
 	var numOfNonMedIngredientsCreated = drugFormArray[drugFormId].nonMedIngrCreatedCount + 1;*/
 	
 	//set for next ingredient (initial count)
-	drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCountryOriginArray.push(0);
+	drugFormArray[index].nonMedIngrCountryOriginArray.push(0);
 	
 	//clone the same ingredient form from Medicinal Ingredient List
 	var medIngrList = '#' + drugFormId + 'MedIngrList';
@@ -3174,8 +3194,8 @@ function addNonMedIngredient(ulList, bolIngrOrVariant) {
 	//initialAppendix4($('#' + tabsID)); //hide Appendix 4 initially
 	
 	//set # of non-medicinal ingredients created and current #
-	drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCount++;
-	drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCreatedCount++;
+	drugFormArray[index].nonMedIngrCount++;
+	drugFormArray[index].nonMedIngrCreatedCount++;
 }
 
 /**For Adding Material (Animal/Human Source) **/
@@ -3188,10 +3208,11 @@ function addMaterial(list) {
 	var listID = $(list).attr('id');
 	var drugFormId = listID.substring(0, listID.indexOf('Animal'));
 	var drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+	var index = findIndexById(drugFormArray, drugFormId);
 	
 	//get current # of materials and # of ones created
-	var numOfMaterials = drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCount + 1;
-	var numOfMaterialsCreated = drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCreatedCount + 1;
+	var numOfMaterials = drugFormArray[index].animalSrcMaterialCount + 1;
+	var numOfMaterialsCreated = drugFormArray[index].animalSrcMaterialCreatedCount + 1;
 	//numOfMaterialsCreated++;
 	//numOfMaterials = $(list).find('li').length + 1;
 	
@@ -3207,8 +3228,8 @@ function addMaterial(list) {
 	$('#' + tabsID).find('.wb-tabs').trigger('wb-init.wb-tabs');
 	
 	//set # of materials and # of materials created
-	drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCount++;
-	drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCreatedCount++;
+	drugFormArray[index].animalSrcMaterialCount++;
+	drugFormArray[index].animalSrcMaterialCreatedCount++;
 }
 
 /** To Hide/Show Appendix div (contains Appendix 4) and "Used As" label for Animal/Human source materials **/
@@ -3222,16 +3243,17 @@ function displayMaterialSelection(materialName, presentFinalContainer) {
 	
 	var drugFormId = materialId.substring(0, materialId.indexOf('Animal'));
 	var drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+	index = findIndexById(drugFormArray, drugFormId);
 	
 	//if materialName is not empty and "Yes" is select in presentFinalContainer, display divs; otherwise hide them
 	if ((materialNameValue != "") && (presentFinalContainerValue == '1')) {
 		$('#' + materialId + 'Appendix').css('display', 'block');
 		$('#' + materialId + 'UsedAs').css('visibility', 'visible');
 		//initial count for country of origins for animal/human source materials
-		if (drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1] == 0) {
-			drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCountryOriginArray.push(0);
+		if (drugFormArray[index].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1] == 0) {
+			drugFormArray[index].animalSrcMaterialCountryOriginArray.push(0);
 		} else {
-			drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1] = 0;
+			drugFormArray[index].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1] = 0;
 		}
 	} else {
 		$('#' + materialId + 'Appendix').css('display', 'none');
@@ -3258,8 +3280,8 @@ function displayAnimalOrHumanSourceSelectionMaterial(materialName, animalHumanSr
 		$('#' + materialId + 'AppendixFourTab').addClass('expnd');
 		initialAppendix4(animalHumanSrc, $('#' + materialId + 'AppendixFourTab'));
 		//when appendix 4 appears, there is always only one country of origin; subsequent increments are added using a different function (addCountryAppendix4)
-		if (drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1] == 0) {
-			drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1]++;
+		if (drugFormArray[index].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1] == 0) {
+			drugFormArray[index].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1]++;
 		}
 	} else {
 		//$('#' + materialId + 'UsedAs').css('visibility', 'hidden');
@@ -3285,28 +3307,33 @@ function delFromList(delBut, labelTitleWithoutId) {
 	//set new # of items in drug product formulation object
 	var drugFormId;
 	var drugFormNum;
+	var index;
+	
 	if (labelTitleWithoutId == 'Type') {
 		drugFormId = closestLiId.substring(0, closestLiId.indexOf('Life'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-		if (drugFormArray[parseInt(drugFormNum) - 1].containerTypeCount > 1) {
+		index = findIndexById(drugFormArray, drugFormId);
+		if (drugFormArray[index].containerTypeCount > 1) {
 			$(closestLi).remove();
 			relabelLiItems(labelTitleWithoutId, ulParent, toRemoveIndex);
-			drugFormArray[parseInt(drugFormNum) - 1].containerTypeCount--;
+			drugFormArray[index].containerTypeCount--;
 		} else {
 			resetInputs(closestLi);
 		}
 	} else if (labelTitleWithoutId == 'Material') {
 		drugFormId = closestLiId.substring(0, closestLiId.indexOf('Animal'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+		index = findIndexById(drugFormArray, drugFormId);
 		$(closestLi).remove();
 		relabelLiItems(labelTitleWithoutId, ulParent, toRemoveIndex);
-		drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCount--;
+		drugFormArray[index].animalSrcMaterialCount--;
 	} else if (labelTitleWithoutId == 'Medicinal Ingredient') {
 		drugFormId = closestLiId.substring(0, closestLiId.indexOf('Med'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+		index = findIndexById(drugFormArray, drugFormId);
 		if (drugFormArray[parseInt(drugFormNum) -1].medIngrCount > 1) {
-			drugFormArray[parseInt(drugFormNum) - 1].medIngrCount--;
-			drugFormArray[parseInt(drugFormNum) - 1].medIngrCountryOriginArray.splice(parseInt(drugFormNum) - 1, 1);
+			drugFormArray[index].medIngrCount--;
+			drugFormArray[index].medIngrCountryOriginArray.splice(index, 1);
 			$(closestLi).remove();
 			relabelLiItems(labelTitleWithoutId, ulParent, toRemoveIndex);
 		} else {
@@ -3315,14 +3342,16 @@ function delFromList(delBut, labelTitleWithoutId) {
 	} else if (labelTitleWithoutId == 'Non-Medicinal Ingredient') {
 		drugFormId = closestLiId.substring(0, closestLiId.indexOf('NonMed'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-		drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCount--;
-		drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCountryOriginArray.splice(parseInt(drugFormNum) - 1, 1);
+		index = findIndexById(drugFormArray, drugFormId);
+		drugFormArray[index].nonMedIngrCount--;
+		drugFormArray[index].nonMedIngrCountryOriginArray.splice(index, 1);
 		$(closestLi).remove();
 		relabelLiItems(labelTitleWithoutId, ulParent, toRemoveIndex);
 	} else if (labelTitleWithoutId == 'Formulation') {
 		drugFormId = closestLiId;
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-		//var removedItems = drugFormArray.splice(parseInt(drugFormNum) - 1, 1);
+		index = findIndexById(drugFormArray, drugFormId);
+		//var removedItems = drugFormArray.splice(index, 1);
 		$(closestLi).remove();
 		//relabelLiItems(labelTitleWithoutId, ulParent, toRemoveIndex);
 		var index = findIndexById(drugFormArray, drugFormId);
@@ -3372,19 +3401,19 @@ function delFromList(delBut, labelTitleWithoutId) {
 		if (labelTitleWithoutId == 'Type') {
 			drugFormId = closestLiId.substring(0, closestLiId.indexOf('Life'));
 			drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-			drugFormArray[parseInt(drugFormNum) - 1].containerTypeCount--;
+			drugFormArray[index].containerTypeCount--;
 		} else if (labelTitleWithoutId == 'Material') {
 			drugFormId = closestLiId.substring(0, closestLiId.indexOf('Animal'));
 			drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-			drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCount--;
+			drugFormArray[index].animalSrcMaterialCount--;
 		} else if (labelTitleWithoutId == 'Medicinal Ingredient') {
 			drugFormId = closestLiId.substring(0, closestLiId.indexOf('Med'));
 			drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-			drugFormArray[parseInt(drugFormNum) - 1].medIngrCount--;
+			drugFormArray[index].medIngrCount--;
 		} else if (labelTitleWithoutId == 'Non-Medicinal Ingredient') {
 			drugFormId = closestLiId.substring(0, closestLiId.indexOf('NonMed'));
 			drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-			drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCount--;
+			drugFormArray[index].nonMedIngrCount--;
 		} else if (labelTitleWithoutId == 'Formulation') {
 			drugFormId = closestLiId;
 			drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
@@ -3434,8 +3463,10 @@ function copyNonMedIngrFromList(copyBut) {
 	var ingrId = closestLiId.substring(closestLiId.indexOf('Ingr') + 4);
 	var ulParent = $(closestLi).parent('ul');
 	
-	var numOfNonMedIngredients = drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCount;
-	var numOfNonMedIngredientsCreated = drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCreatedCount + 1;
+	var index = findIndexById(drugFormArray, drugFormId);
+	
+	var numOfNonMedIngredients = drugFormArray[index].nonMedIngrCount;
+	var numOfNonMedIngredientsCreated = drugFormArray[index].nonMedIngrCreatedCount + 1;
 	//numOfNonMedIngredientsCreated++;
 	//numOfNonMedIngredients = $(ulParent).children('li').length + 1;
 	
@@ -3450,8 +3481,8 @@ function copyNonMedIngrFromList(copyBut) {
 	cloneLiHTML = replaceAll(cloneLiHTML, drugFormId + 'NonMedIngr' + ingrId, drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
 	var appendix4Text = replaceAll(appendix4TextMedIngr, doDrugProForm1MedIngr1 , drugFormId + 'NonMedIngr' + numOfNonMedIngredientsCreated);
 	
-	var index = $(closestLi).index() + 2;
-	cloneLiHTML = cloneLiHTML.replace('Ingredient 1', 'Ingredient ' + index);
+	var idx = $(closestLi).index() + 2;
+	cloneLiHTML = cloneLiHTML.replace('Ingredient 1', 'Ingredient ' + idx);
 	
 	//add clone item after the list item that was cloned
 	$(closestLi).after(cloneLiHTML);
@@ -3484,7 +3515,7 @@ function copyNonMedIngrFromList(copyBut) {
 	//re-label list after adding new ingredient
 	var totalItems = $(ulParent).children('li');
 	var counter = $(totalItems).length;
-	for (var n = counter-1; n >= (index-1); n--) {
+	for (var n = counter-1; n >= (idx-1); n--) {
 		var text = $(totalItems[n]).find('summary')[0].innerHTML;
 		var id = text.substring(text.indexOf('Ingredient ') + 11, text.indexOf('<button'));
 		var newStr = text.replace('Ingredient ' + parseInt(id), 'Ingredient ' + (n+1));
@@ -3492,8 +3523,8 @@ function copyNonMedIngrFromList(copyBut) {
 	}
 	
 	//set # of non-medicinal ingredients for current drug product formulation
-	drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCount++;
-	drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCreatedCount++;
+	drugFormArray[index].nonMedIngrCount++;
+	drugFormArray[index].nonMedIngrCreatedCount++;
 }
 
 //for displaying content in list-group-items in Appendix 4
@@ -3623,6 +3654,7 @@ function displayAnimalOrHumanSourceSelection(activeIngrName, animalHumanSrc) {
 	var drugFormId;
 	var drugFormNum;
 	var ingredientNum = ingredientId.substring(ingredientId.indexOf('Ingr') + 4);
+	var index;
 	
 	if ((activeIngredientNameValue != "") && (animalHumanSrcValue != 'NO')) {
 		$('#' + ingredientId + 'UsedAs').css('visibility', 'visible');
@@ -3634,25 +3666,27 @@ function displayAnimalOrHumanSourceSelection(activeIngrName, animalHumanSrc) {
 		if (ingredientId.contains('NonMed')) {
 			drugFormId = ingredientId.substring(0, ingredientId.indexOf('NonMed'));
 			drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+			index = findIndexById(drugFormArray, drugFormId);
 			//if (animalHumanSrcValue == 'YES - Animal') {
-				if ((drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]) == 0) {
-				drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
+				if ((drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]) == 0) {
+				drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
 			}
 				/*if ((ingredientNum == '1') && (count == null)) {
-					drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCountryOriginArray.push(0);
+					drugFormArray[index].nonMedIngrCountryOriginArray.push(0);
 				}else {
-					drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
+					drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
 				}*/
 			//}
 		}else {
 			drugFormId = ingredientId.substring(0, ingredientId.indexOf('Med'));
 			drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-			if ((drugFormArray[parseInt(drugFormNum) - 1].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]) == 0) {
-				drugFormArray[parseInt(drugFormNum) - 1].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
+			index = findIndexById(drugFormArray, drugFormId);
+			if ((drugFormArray[index].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]) == 0) {
+				drugFormArray[index].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
 			}
-			//count = drugFormArray[parseInt(drugFormNum) - 1].medIngrCountryOriginArray[parseInt(ingredientNum) - 1] + 1;
+			//count = drugFormArray[index].medIngrCountryOriginArray[parseInt(ingredientNum) - 1] + 1;
 			/*if (animalHumanSrcValue == 'YES - Animal') {
-				drugFormArray[parseInt(drugFormNum) - 1].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
+				drugFormArray[index].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
 			}*/
 		}
 	} else {
@@ -3727,6 +3761,7 @@ function addCountryAppendix4(container, bolMedOrNonMed) {
 	var ingredientNum = containerId.substring(containerId.indexOf('Ingr') + 4, containerId.indexOf('Appendix'));
 	var drugFormId;
 	var drugFormNum;
+	var index;
 	var ingredientId = containerId.substring(0, containerId.indexOf('Ingr') + 4);
 	var materialNum = containerId.substring(0, containerId.indexOf('Src') + 3);
 	
@@ -3739,8 +3774,9 @@ function addCountryAppendix4(container, bolMedOrNonMed) {
 	if (containerId.contains('NonMed')) {
 		drugFormId = containerId.substring(0, containerId.indexOf('NonMed'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-		drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
-		numOfCountryOfOriginCreatedNonMedIngr = drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1];
+		index = findIndexById(drugFormArray, drugFormId);
+		drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
+		numOfCountryOfOriginCreatedNonMedIngr = drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1];
 		
 		defaultText = replaceAll(defaultText, 'doDrugProForm1NonMedIngr1', drugFormId + 'NonMed' + ingredientNum);
 		var newText = replaceAll(defaultText, 'AppendixFourAnimalSrcInfo3Country1', 'AppendixFourAnimalSrcInfo3Country' + numOfCountryOfOriginCreatedMedIngr);
@@ -3748,8 +3784,9 @@ function addCountryAppendix4(container, bolMedOrNonMed) {
 	} else if (containerId.contains('Animal')) {
 		drugFormId = containerId.substring(0, containerId.indexOf('Animal'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-		drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1]++;
-		numOfCountryOfOriginCreatedMaterial = drugFormArray[parseInt(drugFormNum) - 1].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1];
+		index = findIndexById(drugFormArray, drugFormId);
+		drugFormArray[index].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1]++;
+		numOfCountryOfOriginCreatedMaterial = drugFormArray[index].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1];
 		
 		defaultText = replaceAll(defaultText, 'doDrugProForm1NonMedIngr1', drugFormId + 'NonMed' + materialNum);
 		var newText = replaceAll(defaultText, 'AppendixFourAnimalSrcInfo3Country1', 'AppendixFourAnimalSrcInfo3Country' + numOfCountryOfOriginCreatedMaterial);
@@ -3757,8 +3794,9 @@ function addCountryAppendix4(container, bolMedOrNonMed) {
 	} else {
 		drugFormId = containerId.substring(0, containerId.indexOf('Med'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-		drugFormArray[parseInt(drugFormNum) - 1].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
-		numOfCountryOfOriginCreatedMedIngr = drugFormArray[parseInt(drugFormNum) - 1].medIngrCountryOriginArray[parseInt(ingredientNum) - 1];
+		index = findIndexById(drugFormArray, drugFormId);
+		drugFormArray[index].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]++;
+		numOfCountryOfOriginCreatedMedIngr = drugFormArray[index].medIngrCountryOriginArray[parseInt(ingredientNum) - 1];
 		
 		defaultText = replaceAll(defaultText, 'doDrugProForm1NonMedIngr1', drugFormId + 'Med' + ingredientNum);
 		var newText = replaceAll(defaultText, 'AppendixFourAnimalSrcInfo3Country1', 'AppendixFourAnimalSrcInfo3Country' + numOfCountryOfOriginCreatedMedIngr);
@@ -3766,7 +3804,7 @@ function addCountryAppendix4(container, bolMedOrNonMed) {
 	}
 		
 		//set initial Country of Origin for the first (and only) medicinal ingredient (for appendix 4)
-		//drugFormArray[parseInt(drugFormNum) - 1].medIngrCountryOriginArray[1] = 1;
+		//drugFormArray[index].medIngrCountryOriginArray[1] = 1;
 	
 	//defaultText = replaceAll(defaultText, 'doDrugProForm1NonMedIngr1', ingredientId + ingredientNum);
 	//var newText = replaceAll(defaultText, 'AppendixFourAnimalSrcInfo3Country1', 'AppendixFourAnimalSrcInfo3Country' + numOfCountryOfOriginCreatedMedIngr);
@@ -3806,11 +3844,14 @@ function delCountryAppendix4(delBut, container, bolMedOrNonMed) {
 	var delButId = $(delBut).attr('id');
 	var drugFormId;
 	var drugFormNum;
+	var index;
 	var ingredientNum = delButId.substring(delButId.indexOf('Ingr') + 4, delButId.indexOf('Appendix'));
+	var materialNum = delButId.substring(delButId.indexOf('Country') + 7, delButId.indexOf('Del') + 3);
 
 	if (delButId.contains('NonMed')) {
 		drugFormId = delButId.substring(0, delButId.indexOf('Med'));
 		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+		index = findIndexById(drugFormArray, drugFormId);
 		if (currentNumOfCountryOfOrigin == 1) {
 			$('#' + drugFormId + 'NonMedIngr1AppendixFourAnimalSrcInfo3Country1').val("");
 			$('#' + drugFormId + 'NonMedIngr1AppendixFourAnimalSrcInfo3Country1SpecifyInput').val("");
@@ -3822,11 +3863,30 @@ function delCountryAppendix4(delBut, container, bolMedOrNonMed) {
 				$(previousRowForThisRow).find('.form-group').append(addCountryButText);
 			}
 			$(closestRowMain).remove();
-			drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]--;
+			drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]--;
+		}
+	} else if (delButId.contains('Animal')) { 
+		drugFormId = delButId.substring(0, containerId.indexOf('Animal'));
+		drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+		index = findIndexById(drugFormArray, drugFormId);
+		
+		if (currentNumOfCountryOfOrigin == 1) {
+			$('#' + drugFormId + 'AnimalHumanSrc1AppendixFourAnimalSrcInfo3Country1').val("");
+			$('#' + drugFormId + 'AnimalHumanSrc1AppendixFourAnimalSrcInfo3Country1SpecifyInput').val("");
+			$('#' + drugFormId + 'AnimalHumanSrc1AppendixFourAnimalSrcInfo3Country1Specify').css('display', 'none');
+		} else {
+			if ($(closestFormGroup).find('.addButton').length > 0) {
+				var addCountryButText = '<div class="col-sm-4 addButton"><button type="submit" class="btn btn-default btn-sm" id="' + drugFormId + 'AnimalHumanSrc' + materialNum + 'AppendixFourAnimalSrcInfo3CountryAddBut" onclick="addCountryAppendix4(doDrugProForm1NonMedIngr1AppendixFourAnimalSrcInfo3, false)">Add Country</button></div>';
+				var previousRowForThisRow = $(container).find('.rowMain').eq($(closestRowMain).index() - 1);
+				$(previousRowForThisRow).find('.form-group').append(addCountryButText);
+			}
+			$(closestRowMain).remove();
+			drugFormArray[index].animalSrcMaterialCountryOriginArray[parseInt(materialNum) - 1]--;
 		}
 	} else {
 		 drugFormId = delButId.substring(0, delButId.indexOf('Med'));
 		 drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+		 index = findIndexById(drugFormArray, drugFormId);
 		if (currentNumOfCountryOfOrigin == 1) {
 			$('#' + drugFormId + 'MedIngr1AppendixFourAnimalSrcInfo3Country1').val("");
 			$('#' + drugFormId + 'MedIngr1AppendixFourAnimalSrcInfo3Country1SpecifyInput').val("");
@@ -3838,7 +3898,7 @@ function delCountryAppendix4(delBut, container, bolMedOrNonMed) {
 				$(previousRowForThisRow).find('.form-group').append(addCountryButText);
 			}
 			$(closestRowMain).remove();
-			drugFormArray[parseInt(drugFormNum) - 1].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]--;
+			drugFormArray[index].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]--;
 		}
 	}
 	
@@ -3856,7 +3916,7 @@ function delCountryAppendix4(delBut, container, bolMedOrNonMed) {
 				$(previousRowForThisRow).find('.form-group').append(addCountryButText);
 			}
 			$(closestRowMain).remove();
-			drugFormArray[parseInt(drugFormNum) - 1].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]--;
+			drugFormArray[index].medIngrCountryOriginArray[parseInt(ingredientNum) - 1]--;
 		}
 	} else {
 		drugFormId = delButId.substring(0, delButId.indexOf('Med'));
@@ -3872,7 +3932,7 @@ function delCountryAppendix4(delBut, container, bolMedOrNonMed) {
 				$(previousRowForThisRow).find('.form-group').append(addCountryButText);
 			}
 			$(closestRowMain).remove();
-			drugFormArray[parseInt(drugFormNum) - 1].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]--;
+			drugFormArray[index].nonMedIngrCountryOriginArray[parseInt(ingredientNum) - 1]--;
 		}
 	}*/
 }
@@ -4012,10 +4072,11 @@ function addContainerType(list) {
 	var listId = $(list).attr('id');
 	var drugFormId = listId.substring(0, listId.indexOf('Life'));
 	var drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+	var index = findIndexById(drugFormArray, drugFormId);
 	
 	//increment counter
-	var numOfContainerTypes = drugFormArray[parseInt(drugFormNum) - 1].containerTypeCount + 1;
-	var numOfContainerTypesCreated = drugFormArray[parseInt(drugFormNum) - 1].containerTypeCreatedCount + 1;
+	var numOfContainerTypes = drugFormArray[index].containerTypeCount + 1;
+	var numOfContainerTypesCreated = drugFormArray[index].containerTypeCreatedCount + 1;
 	
 	
 	var containerForm = $(list).find('li:eq(0)').clone();
@@ -4027,8 +4088,8 @@ function addContainerType(list) {
 	$(list).append(containerFormHTML);
 	
 	
-	drugFormArray[parseInt(drugFormNum) - 1].containerTypeCount++;
-	drugFormArray[parseInt(drugFormNum) - 1].containerTypeCreatedCount++;
+	drugFormArray[index].containerTypeCount++;
+	drugFormArray[index].containerTypeCreatedCount++;
 
 }
 
@@ -4060,8 +4121,9 @@ function addCountryOfManufacture(container) {
 	var containerId = $(container).attr('id');
 	var drugFormId = containerId.substring(0, containerId.indexOf('Life'));
 	var drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-	var numOfCountryManu = drugFormArray[parseInt(drugFormNum) - 1].countryOfManufactureCount + 1;
-	var numOfCountryManuCreated = drugFormArray[parseInt(drugFormNum) - 1].countryOfManufactureCreatedCount + 1;
+	var index = findIndexById(drugFormArray, drugFormId);
+	var numOfCountryManu = drugFormArray[index].countryOfManufactureCount + 1;
+	var numOfCountryManuCreated = drugFormArray[index].countryOfManufactureCreatedCount + 1;
 	
 	var newSelect = replaceAll(defaultSelect, 'doDrugProForm1', drugFormId);
 	newSelect = replaceAll(newSelect, 'CountryManu1', 'CountryManu' + numOfCountryManuCreated);
@@ -4073,8 +4135,8 @@ function addCountryOfManufacture(container) {
 	$(container).append(newSelect);
 	
 	//set # of countries of manufacture for current drug product formulation
-	drugFormArray[parseInt(drugFormNum) - 1].countryOfManufactureCount = numOfCountryManu;
-	drugFormArray[parseInt(drugFormNum) - 1].countryOfManufactureCreatedCount = numOfCountryManuCreated;
+	drugFormArray[index].countryOfManufactureCount = numOfCountryManu;
+	drugFormArray[index].countryOfManufactureCreatedCount = numOfCountryManuCreated;
 }
 
 function delCountryOfManufacture(delBut, container) {
@@ -4084,6 +4146,7 @@ function delCountryOfManufacture(delBut, container) {
 	var delButId = $(delBut).attr('id');
 	var drugFormId = delButId.substring(0, delButId.indexOf('Life'));
 	var drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+	var index = findIndexById(drugFormArray, drugFormId);
 	
 	if (numOfCountryManu == 1) {
 		$('#' + drugFormId + 'LifeTypeContainerCountryManu1').val("");
@@ -4096,7 +4159,7 @@ function delCountryOfManufacture(delBut, container) {
 			$(previousRowForThisRow).find('.form-group').append(addCountryText);	
 		}
 		$(closestRow).remove();
-		drugFormArray[parseInt(drugFormNum) - 1].countryOfManufactureCount--;
+		drugFormArray[index].countryOfManufactureCount--;
 	}
 }
 
@@ -4152,7 +4215,7 @@ function addRouteOfAdm(but) {
   var butId = $(but).attr('id');
   var drugFormId = butId.substring(0, butId.indexOf('Route'));
   var drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
-
+  var index = findIndexById(drugFormArray, drugFormId);
   //get the number of div.row
   var routeOfAdmRowCount = ($('#' + drugFormId + 'RouteOfAdm .row:not(.other)').length - 1);
   
@@ -4209,8 +4272,8 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
   }
   
   //set new # of route of administration
-  drugFormArray[parseInt(drugFormNum) - 1].routeOfAdmCount++;
-  drugFormArray[parseInt(drugFormNum) - 1].routeOfAdmCreatedCount++;
+  drugFormArray[index].routeOfAdmCount++;
+  drugFormArray[index].routeOfAdmCreatedCount++;
 }
 
 // parameters: but - button; drugFormId - related submission id (i.e. relEnrolmentRel1DIN)
@@ -4230,8 +4293,9 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 	  var delButId = $(delBut).attr('id');
 	  var drugFormId = delButId.substring(0, delButId.indexOf('Route'));
 	  var drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+	  var index = findIndexById(drugFormArray, drugFormId);
 	  
-	  var routeOfAdmCount = drugFormArray[parseInt(drugFormNum) - 1].routeOfAdmCount;
+	  var routeOfAdmCount = drugFormArray[index].routeOfAdmCount;
 	  if (routeOfAdmCount == 1) {
 		resetInputs(currentDiv);
 		} else {
@@ -4293,7 +4357,7 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 			deletedDivIndex = 0;
 		}
 		//set # of route of administration
-		drugFormArray[parseInt(drugFormNum) - 1].routeOfAdmCount--;
+		drugFormArray[index].routeOfAdmCount--;
 	}
 }
 
