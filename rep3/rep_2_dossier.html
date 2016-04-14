@@ -140,154 +140,156 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	</div>
 	<ul class="list-unstyled marginTop-15">
 		<li>
-		<details class="panel panel-primary doMainDetails">
-			<summary class="panel-heading"><h3 class="panel-title">STEP 2a - Dossier Information</h3></summary>
-				<div class="panel-body">
-				<!-- main information-->
-					<div id="doMainInfo">
-						<div class="row">
-							<div class="form-group col-sm-4">
-								<label for="doCompanyId">Company Id</label>
-								<input type="text" class="form-control input-sm full-width" id="doCompanyId" placeholder="Enter Company Id" />
+			<details class="panel panel-primary doMainDetails">
+				<summary class="panel-heading"><h3 class="panel-title">STEP 2a - Dossier Information</h3></summary>
+					<div class="panel-body">
+					<!-- main information-->
+						<div id="doMainInfo">
+							<div class="row">
+								<div class="form-group col-sm-4">
+									<label for="doCompanyId">Company Id</label>
+									<input type="text" class="form-control input-sm full-width" id="doCompanyId" placeholder="Enter Company Id" />
+								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="form-group col-sm-4">
-								<label for="doEnrolmentType" class="control-label">Dossier Type</label>
-								 <div class="">
-									<select class="form-control input-sm full-width" name="doEnrolmentType" id="doEnrolmentType">
-										<option label=" "></option>
-										<option value="1">Biologic</option>
-										<option value="2">Pharmaceutical</option>
-										<option value="3">Drug Master File</option>
-										<option value="4">Medical Device</option>
-									</select>
+							<div class="row">
+								<div class="form-group col-sm-4">
+									<label for="doEnrolmentType" class="control-label">Dossier Type</label>
+									 <div class="">
+										<select class="form-control input-sm full-width" name="doEnrolmentType" id="doEnrolmentType">
+											<option label=" "></option>
+											<option value="1">Biologic</option>
+											<option value="2">Pharmaceutical</option>
+											<option value="3">Drug Master File</option>
+											<option value="4">Medical Device</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-12">
+									<label for="doEnrolmentProductName">Brand or Proprietary or Product Name (should be the same as the brand name on the product label)*</label>
+									<input type="text" class="form-control input-sm full-width" id="doEnrolmentProductName" placeholder="Enter Name" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-12">
+									<label for="doEnrolmentProductName">Proper, Common or Non-Propietary Name</label>
+									<input type="text" class="form-control input-sm full-width" id="doEnrolmentProductName" placeholder="Enter Name" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-8">
+									<label for="doEnrolmentId">Related Dossier ID [If applicable]</label>
+									<input type="text" class="form-control input-sm full-width" id="doEnrolmentId" placeholder="Enter ID" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-8">
+									<label for="doEnrolmentClassification">Therapeutic Classification:</label>
+									<input type="text" class="form-control input-sm full-width" id="doEnrolmentClassification" placeholder="Enter Classification" />
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="form-group col-sm-12">
-								<label for="doEnrolmentProductName">Brand or Proprietary or Product Name (should be the same as the brand name on the product label)*</label>
-								<input type="text" class="form-control input-sm full-width" id="doEnrolmentProductName" placeholder="Enter Name" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="form-group col-sm-12">
-								<label for="doEnrolmentProductName">Proper, Common or Non-Propietary Name</label>
-								<input type="text" class="form-control input-sm full-width" id="doEnrolmentProductName" placeholder="Enter Name" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="form-group col-sm-8">
-								<label for="doEnrolmentId">Related Dossier ID [If applicable]</label>
-								<input type="text" class="form-control input-sm full-width" id="doEnrolmentId" placeholder="Enter ID" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="form-group col-sm-8">
-								<label for="doEnrolmentClassification">Therapeutic Classification:</label>
-								<input type="text" class="form-control input-sm full-width" id="doEnrolmentClassification" placeholder="Enter Classification" />
-							</div>
+						<!-- end of main information-->
+						
+						<!--expandable/collapsible content-->
+						<div class="panel panel-default">
+							<header class="panel-heading"><h4 class="panel-title">Canadian Reference Product(s)</h4></header>
+								<div class="panel-body">
+									<ul id="doCanRefProductList" class="list-unstyled">
+										<li id="doCanRefProduct1">
+											<details open="open" class="doMainDetails">
+												<summary class="heightAdjust">Canadian Reference Product 1<button class="btn btn-danger btn-xs deleteRef" onclick="deleteFromList(this, 'Product')" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary>
+												<!--Canadian Reference Product-->
+									
+										<!-- <h4>Canadian Reference Product</h4> -->
+										<div class="well well-sm">
+										<div class="row">
+											<div class="form-group col-sm-12">
+												<label for="doCanRefProduct1BrandName">Brand Name:</label>
+												<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1BrandName" placeholder="Enter Name" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-sm-12">
+												<label for="doCanRefProduct1MedIngre">Medicinal Ingredient</label>
+												<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1MedIngre" placeholder="Enter Ingredient" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-sm-4">
+												<label for="doCanRefProduct1Dosage" class="control-label">Dosage Form:</label>
+												<div class="">
+													<select class="form-control input-sm full-width" name="doCanRefProduct1Dosage" onchange="otherSelect(this, 'Other', doCanRefProduct1DosageOther)" id="doCanRefProduct1Dosage">
+														<option label=" "></option>
+														<option value="Aerosol">Aerosol</option>
+														<option value="Bolus">Bolus</option>
+														<option value="Capsule">Capsule</option>
+														<option value="Capsule, Delayed Release">Capsule, Delayed Release</option>
+														<option value="Capsule, Extended Release">Capsule, Extended Release</option>
+														<option value="Cream">Cream</option>
+														<option value="Emulsion">Emulsion</option>
+														<option value="Gas">Gas</option>
+														<option value="Gel">Gel</option>
+														<option value="Implant">Implant</option>
+														<option value="Lotion">Lotion</option>
+														<option value="Lozenge">Lozenge</option>
+														<option value="Ointment">Ointment</option>
+														<option value="Patch">Patch</option>
+														<option value="Patch, Extended-Release">Patch, Extended-Release</option>
+														<option value="Powder">Powder</option>
+														<option value="Powder For Solution">Powder For Solution</option>
+														<option value="Powder For Suspension">Powder For Suspension</option>
+														<option value="Shampoo">Shampoo</option>
+														<option value="Solution">Solution</option>
+														<option value="Spray">Spray</option>
+														<option value="Spray, Bag-On-Valve">Spray, Bag-On-Valve</option>
+														<option value="Spray, Metered Dose">Spray, Metered Dose</option>
+														<option value="Stick">Stick</option>
+														<option value="Strip">Strip</option>
+														<option value="Suppository">Suppository</option>
+														<option value="Suspension">Suspension</option>
+														<option value="Syrup">Syrup</option>
+														<option value="Tablet">Tablet</option>
+														<option value="Tablet, Chewable">Tablet, Chewable</option>
+														<option value="Tablet, Delayed Release">Tablet, Delayed Release</option>
+														<option value="Tablet, Extended Release">Tablet, Extended Release</option>
+														<option value="Tablet, Orally Disintegrating">Tablet, Orally Disintegrating</option>
+														<option value="Wipe">Wipe</option>
+														<option value="Other">Other</option>
+													</select>
+												</div>
+												</div>
+											<div class="form-group col-sm-4">
+												<label for="doCanRefProduct1Strength">Strength(s)</label>
+												<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1Strength" placeholder="Strength(s)" />
+											</div>
+										</div>
+										<div id="doCanRefProduct1DosageOther" class="row" style="display:none">
+											<div class="col-sm-6">
+												<label class="control-label normalLabel" for="">Dosage Form Details</label>
+												<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1DosageOther" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-sm-12">
+												<label for="doCanRefProduct1CoName">Company Name</label>
+												<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1CoName" placeholder="Enter Name" />
+											</div>
+										</div>
+										</div>
+									<!-- end of main Canadian Reference Product-->
+											</details>
+										</li>
+									</ul>
+									<div class="row">
+										<div class="col-sm-4">
+											<button class="btn btn-info btn-sm" onclick="addNewRefProduct()" type="submit">Add Another Canadian Reference Product</button>
+										</div>
+									</div>
+								</div>
 						</div>
 					</div>
-					<!-- end of main information-->
-					
-					<!--expandable/collapsible content-->
-					<div class="panel panel-default">
-						<header class="panel-heading"><h4 class="panel-title">Canadian Reference Product(s)</h4></header>
-						<div class="panel-body">
-						<div class="row">
-							<button class="btn btn-default btn-sm col-sm-4 pull-right" onclick="addNewRefProduct()" type="submit">Add Another Canadian Reference Product</button>
-						</div>
-					<ul id="doCanRefProductList" class="list-unstyled">
-						<li id="doCanRefProduct1">
-							<details open="open" class="doMainDetails">
-								<summary class="heightAdjust">Canadian Reference Product 1<button class="btn btn-danger btn-xs deleteRef" onclick="deleteFromList(this, 'Product')" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary>
-								<!--Canadian Reference Product-->
-					
-						<!-- <h4>Canadian Reference Product</h4> -->
-						<div class="well well-sm">
-						<div class="row">
-							<div class="form-group col-sm-12">
-								<label for="doCanRefProduct1BrandName">Brand Name:</label>
-								<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1BrandName" placeholder="Enter Name" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="form-group col-sm-12">
-								<label for="doCanRefProduct1MedIngre">Medicinal Ingredient</label>
-								<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1MedIngre" placeholder="Enter Ingredient" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="form-group col-sm-4">
-								<label for="doCanRefProduct1Dosage" class="control-label">Dosage Form:</label>
-								<div class="">
-									<select class="form-control input-sm full-width" name="doCanRefProduct1Dosage" onchange="otherSelect(this, 'Other', doCanRefProduct1DosageOther)" id="doCanRefProduct1Dosage">
-										<option label=" "></option>
-										<option value="Aerosol">Aerosol</option>
-										<option value="Bolus">Bolus</option>
-										<option value="Capsule">Capsule</option>
-										<option value="Capsule, Delayed Release">Capsule, Delayed Release</option>
-										<option value="Capsule, Extended Release">Capsule, Extended Release</option>
-										<option value="Cream">Cream</option>
-										<option value="Emulsion">Emulsion</option>
-										<option value="Gas">Gas</option>
-										<option value="Gel">Gel</option>
-										<option value="Implant">Implant</option>
-										<option value="Lotion">Lotion</option>
-										<option value="Lozenge">Lozenge</option>
-										<option value="Ointment">Ointment</option>
-										<option value="Patch">Patch</option>
-										<option value="Patch, Extended-Release">Patch, Extended-Release</option>
-										<option value="Powder">Powder</option>
-										<option value="Powder For Solution">Powder For Solution</option>
-										<option value="Powder For Suspension">Powder For Suspension</option>
-										<option value="Shampoo">Shampoo</option>
-										<option value="Solution">Solution</option>
-										<option value="Spray">Spray</option>
-										<option value="Spray, Bag-On-Valve">Spray, Bag-On-Valve</option>
-										<option value="Spray, Metered Dose">Spray, Metered Dose</option>
-										<option value="Stick">Stick</option>
-										<option value="Strip">Strip</option>
-										<option value="Suppository">Suppository</option>
-										<option value="Suspension">Suspension</option>
-										<option value="Syrup">Syrup</option>
-										<option value="Tablet">Tablet</option>
-										<option value="Tablet, Chewable">Tablet, Chewable</option>
-										<option value="Tablet, Delayed Release">Tablet, Delayed Release</option>
-										<option value="Tablet, Extended Release">Tablet, Extended Release</option>
-										<option value="Tablet, Orally Disintegrating">Tablet, Orally Disintegrating</option>
-										<option value="Wipe">Wipe</option>
-										<option value="Other">Other</option>
-									</select>
-								</div>
-								</div>
-							<div class="form-group col-sm-4">
-								<label for="doCanRefProduct1Strength">Strength(s)</label>
-								<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1Strength" placeholder="Strength(s)" />
-							</div>
-						</div>
-						<div id="doCanRefProduct1DosageOther" class="row" style="display:none">
-							<div class="col-sm-6">
-								<label class="control-label normalLabel" for="">Dosage Form Details</label>
-								<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1DosageOther" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="form-group col-sm-12">
-								<label for="doCanRefProduct1CoName">Company Name</label>
-								<input type="text" class="form-control input-sm full-width" id="doCanRefProduct1CoName" placeholder="Enter Name" />
-							</div>
-						</div>
-						</div>
-					<!-- end of main Canadian Reference Product-->
-							</details>
-						</li>
-					</ul>
-					</div>
-				</div>
-			</div>
 			</details>
 		</li>
 		<li>
@@ -296,18 +298,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<h3 class="panel-title">STEP 2b - Drug Product Formulation Information</h3>
 				</summary>
 				<div class="panel-body">
-					<div class="row" style="margin-bottom: 15px">
-						<div class="col-sm-4">
-							<button class="btn btn-default btn-sm full-width" id="doDrugProFormAddBut1" onclick="addNewDrugForm(doDrugProForm1List)" type="submit">Add Another Drug Product Formulation</button>
-						</div>
-						<!--
-						<div class="col-sm-4">
-							<button class="btn btn-default btn-sm full-width" id="doDrugProFormDelBut1" onclick="" type="submit">Remove Drug Product Formulation</button>
-						</div>
-						<div class="col-sm-4">
-							<button class="btn btn-default btn-sm full-width" id="doDrugProFormCopyBut1" onclick="" type="submit">Copy Drug Product Formulation</button>
-						</div>-->
-					</div>
 					<ul id="doDrugProForm1List" class="list-unstyled">
 						<li id="doDrugProForm1">
 							<details open="open" class="doMainDetails">
@@ -400,81 +390,79 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 														</div>
 													</div>
 													
-													<div id="doDrugProForm1RouteOfAdm" class="blackBorder">
-													<div class="row">
-														<div class="col-sm-3 col-sm-offset-9">
-															<button type="submit" class="btn btn-default btn-sm" onclick="addRouteOfAdm(this)" id="doDrugProForm1RouteOfAdm1Add">Add an Route of Administration</button>
-														</div>
-													</div>
-													<div id="doDrugProForm1RouteOfAdmRow1" class="row">
-														<div class="col-sm-6 form-group group" id="doDrugProForm1RouteOfAdm1Grp">
-															<label class="control-label normalLabel-11pt" for="doDrugProForm1RouteOfAdm1">Route of Administration 1</label>
-															<div class="input-group">
-																<select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1" onchange="otherSelect(this, 'Other', doDrugProForm1RouteOfAdm1OtherSelect)" class="form-control input-sm col-sm-2">
-																	<option label=" "></option>
-																	<option value="Block/Infiltration">Block/Infiltration</option>
-																	<option value="Buccal">Buccal</option>
-																	<option value="Dental">Dental</option>
-																	<option value="Dialysis">Dialysis</option>
-																	<option value="Epidural">Epidural</option>
-																	<option value="Inhalation">Inhalation</option>
-																	<option value="Intra-Arterial">Intra-Arterial</option>
-																	<option value="Intra-Articular">Intra-Articular</option>
-																	<option value="Intrabursal">Intrabursal</option>
-																	<option value="Intradermal">Intradermal</option>
-																	<option value="Intramammary">Intramammary</option>
-																	<option value="Intraocular">Intraocular</option>
-																	<option value="Intraperitoneal">Intraperitoneal</option>
-																	<option value="Intrathecal">Intrathecal</option>
-																	<option value="Intratracheal">Intratracheal</option>
-																	<option value="Intravascular">Intravascular</option>
-																	<option value="Intravenous">Intravenous</option>
-																	<option value="Intravitreal">Intravitreal</option>
-																	<option value="Irrigation">Irrigation</option>
-																	<option value="Nasal">Nasal</option>
-																	<option value="Ophthalmic">Ophthalmic</option>
-																	<option value="Oral">Oral</option>
-																	<option value="Otic">Otic</option>
-																	<option value="Rectal">Rectal</option>
-																	<option value="Subcutaneous">Subcutaneous</option>
-																	<option value="Sublingual">Sublingual</option>
-																	<option value="Topical">Topical</option>
-																	<option value="Transdermal">Transdermal</option>
-																	<option value="Urethral">Urethral</option>
-																	<option value="Vaginal">Vaginal</option>
-																	<option value="Other">Other</option>
-																</select>
-																<span class="input-group-btn">
-																	<button class="btn btn-danger btn-sm" onclick="deleteRouteOfAdm(this, 'doDrugProForm1RouteOfAdm')" id="doDrugProForm1RouteOfAdm1DelBut" type="button">
-																		<span class="glyphicon glyphicon-remove"></span>
-																	</button>
-																</span>
-															</div>
-															<div class="row other" style="margin-top:10px; display:none" id="doDrugProForm1RouteOfAdm1OtherSelect">
-																<div class="form-group">
-																	<div class="col-sm-5" style="padding-right:8px">
-																		<label class="control-label normalLabel" for="doDrugProForm1RouteOfAdm1Other">Route of Administration Details</label>
-																	</div>
-																	<div class="col-sm-7" style="padding-left:0">
-																		<input type="text" class="form-control input-sm full-width" id="doDrugProForm1RouteOfAdm1Other"/>
+												<div id="doDrugProForm1RouteOfAdm" class="blackBorder">
+													<div id="doDrugProForm1RouteOfAdmRows">
+														<div id="doDrugProForm1RouteOfAdmRow1" class="row">
+															<div class="col-sm-6 form-group group" id="doDrugProForm1RouteOfAdm1Grp">
+																<label class="control-label normalLabel-11pt" for="doDrugProForm1RouteOfAdm1">Route of Administration 1</label>
+																<div class="input-group">
+																	<select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1" onchange="otherSelect(this, 'Other', doDrugProForm1RouteOfAdm1OtherSelect)" class="form-control input-sm col-sm-2">
+																		<option label=" "></option>
+																		<option value="Block/Infiltration">Block/Infiltration</option>
+																		<option value="Buccal">Buccal</option>
+																		<option value="Dental">Dental</option>
+																		<option value="Dialysis">Dialysis</option>
+																		<option value="Epidural">Epidural</option>
+																		<option value="Inhalation">Inhalation</option>
+																		<option value="Intra-Arterial">Intra-Arterial</option>
+																		<option value="Intra-Articular">Intra-Articular</option>
+																		<option value="Intrabursal">Intrabursal</option>
+																		<option value="Intradermal">Intradermal</option>
+																		<option value="Intramammary">Intramammary</option>
+																		<option value="Intraocular">Intraocular</option>
+																		<option value="Intraperitoneal">Intraperitoneal</option>
+																		<option value="Intrathecal">Intrathecal</option>
+																		<option value="Intratracheal">Intratracheal</option>
+																		<option value="Intravascular">Intravascular</option>
+																		<option value="Intravenous">Intravenous</option>
+																		<option value="Intravitreal">Intravitreal</option>
+																		<option value="Irrigation">Irrigation</option>
+																		<option value="Nasal">Nasal</option>
+																		<option value="Ophthalmic">Ophthalmic</option>
+																		<option value="Oral">Oral</option>
+																		<option value="Otic">Otic</option>
+																		<option value="Rectal">Rectal</option>
+																		<option value="Subcutaneous">Subcutaneous</option>
+																		<option value="Sublingual">Sublingual</option>
+																		<option value="Topical">Topical</option>
+																		<option value="Transdermal">Transdermal</option>
+																		<option value="Urethral">Urethral</option>
+																		<option value="Vaginal">Vaginal</option>
+																		<option value="Other">Other</option>
+																	</select>
+																	<span class="input-group-btn">
+																		<button class="btn btn-danger btn-sm" onclick="deleteRouteOfAdm(this, 'doDrugProForm1RouteOfAdm')" id="doDrugProForm1RouteOfAdm1DelBut" type="button">
+																			<span class="glyphicon glyphicon-remove"></span>
+																		</button>
+																	</span>
+																</div>
+																<div class="row other" style="margin-top:10px; display:none" id="doDrugProForm1RouteOfAdm1OtherSelect">
+																	<div class="form-group">
+																		<div class="col-sm-5" style="padding-right:8px">
+																			<label class="control-label normalLabel" for="doDrugProForm1RouteOfAdm1Other">Route of Administration Details</label>
+																		</div>
+																		<div class="col-sm-7" style="padding-left:0">
+																			<input type="text" class="form-control input-sm full-width" id="doDrugProForm1RouteOfAdm1Other"/>
+																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
+													<div class="row">
+														<div class="col-sm-5">
+															<button type="submit" class="btn btn-info btn-sm" onclick="addRouteOfAdm(this)" id="doDrugProForm1RouteOfAdm1Add">Add Another Route of Administration</button>
+														</div>
+													</div>
 												</div>
 												<div class="blackBorder marginTop-15">
 												<div class="row">
-													<div class="col-sm-5 col-sm-offset-4">
-														<button class=" btn btn-sm btn-default pull-right wb-toggle" type="button" data-toggle='{"selector": ".doDrugProForm1LifeContainer", "print":"on", "state":"on"}'>Collapse/Expand ALL Life Container Types</button>
-													</div>
-													<div class="col-sm-3">
-														<button class="btn btn-sm btn-default pull-right" id="doDrugProForm1AddLifeTypeBut1" onclick="addContainerType(doDrugProForm1LifeTypeList)" type="submit">Add a Container Type</button>
-														<!--<button class="btn btn-default btn-sm full-width" id="doDrugProForm1AddLifeTypeBut1" onclick="addContainerType(doDrugProForm1LifeTypeContainer)" type="submit">Add a Container Type</button>-->
+													<div class="col-sm-5">
+														<button class=" btn btn-sm btn-default wb-toggle" type="button" data-toggle='{"selector": ".doDrugProForm1LifeContainer", "print":"on", "state":"on"}'>Collapse/Expand ALL Life Container Types</button>
 													</div>
 												</div>
 
-												<ul id="doDrugProForm1LifeTypeList"class="list-unstyled">
+												<ul id="doDrugProForm1LifeTypeList"class="list-unstyled marginTop-15">
 													<li id="doDrugProForm1LifeTypeContainer1" class="displayBLOCK">
 														<details open="open" class="doDrugProForm1LifeContainer doMainDetails">
 															<summary class="heightAdjust">Container Type 1<button class="btn btn-danger btn-xs deleteRef" onclick="delFromList(this, 'Type')" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary>
@@ -538,6 +526,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 														</details>
 													</li>
 												</ul>
+												<div class="row marginTop-15">
+													<div class="col-sm-4">
+														<button class="btn btn-sm btn-info" id="doDrugProForm1AddLifeTypeBut1" onclick="addContainerType(doDrugProForm1LifeTypeList)" type="submit">Add Another Container Type</button>
+														<!--<button class="btn btn-default btn-sm full-width" id="doDrugProForm1AddLifeTypeBut1" onclick="addContainerType(doDrugProForm1LifeTypeContainer)" type="submit">Add a Container Type</button>-->
+													</div>
+												</div>
 												</div>
 												<div id="doDrugProForm1LifeTypeContainerCountryManu" class="blackBorder marginTop-15">
 													<label class="control-label">Please indicate the country(ies) of manufacture for this drug product.</label>
@@ -802,7 +796,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															</div>
 														</div>
 														<div class="col-sm-2 addButton">
-															<button type="submit" class="btn btn-default btn-sm" id="doDrugProForm1LifeTypeContainerCountryManu1AddBut" onclick="addCountryOfManufacture(doDrugProForm1LifeTypeContainerCountryManu)">Add Country</button>
+															<button type="submit" class="btn btn-info btn-sm" id="doDrugProForm1LifeTypeContainerCountryManu1AddBut" onclick="addCountryOfManufacture(doDrugProForm1LifeTypeContainerCountryManu)">Add Country</button>
 														</div>
 													</div>
 												</div>
@@ -972,15 +966,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 											<details id="doDrugProForm1Tab2" class="details-tab">
 												<summary>Medicinal (Active) Ingredient(s)</summary>
 												<div class="row marginTop-15">
-													<div class="col-sm-5 col-sm-offset-2">
-														<button class=" btn btn-sm btn-default pull-right wb-toggle" type="button" data-toggle='{"selector": ".doDrugProForm1MedIngr", "state":"on"}'>Collapse/Expand ALL Medicinal Ingredients</button>
-													</div>
-													<div class="col-sm-3 col-sm-offset-1">
-														<button type="submit" class="btn btn-default btn-sm full-width" id="doDrugProForm1MedIngrAdd" onclick="addMedIngredient(doDrugProForm1MedIngrList)">Add an Ingredient</button>
-														<!--<button type="submit" class="btn btn-default btn-sm full-width" id="doDrugProForm1MedIngrAdd" onclick="addMedicalIngredient()">Add an Ingredient</button>-->
+													<div class="col-sm-5">
+														<button class=" btn btn-sm btn-default wb-toggle" type="button" data-toggle='{"selector": ".doDrugProForm1MedIngr", "state":"on"}'>Collapse/Expand ALL Medicinal Ingredients</button>
 													</div>
 												</div>
-												<ul id="doDrugProForm1MedIngrList" class="list-unstyled">
+												<ul id="doDrugProForm1MedIngrList" class="list-unstyled marginTop-15">
 													<li id="doDrugProForm1MedIngr1" class="displayBLOCK">
 														<details open="open" class="doMainDetails doDrugProForm1MedIngr">
 															<summary class="heightAdjust closeOpen">Medicinal Ingredient 1<button class="btn btn-danger btn-xs deleteRef" onclick="delFromList(this, 'Medicinal Ingredient')" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary>
@@ -1752,6 +1742,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 														</details>
 													</li>
 												</ul>
+												<div class="row marginTop-15">
+													<div class="col-sm-5">
+														<button type="submit" class="btn btn-info btn-sm full-width" id="doDrugProForm1MedIngrAdd" onclick="addMedIngredient(doDrugProForm1MedIngrList)">Add Another Medicinal Ingredient</button>
+														<!--<button type="submit" class="btn btn-default btn-sm full-width" id="doDrugProForm1MedIngrAdd" onclick="addMedicalIngredient()">Add an Ingredient</button>-->
+													</div>
+												</div>
 												<ul class="pager">
 													<li class="displayTableCell"><a href="#doDrugProForm1Tab1" class="wb-tabs-ext">Previous</a></li>
 													<li class="displayTableCell"><a href="#doDrugProForm1Tab3" class="wb-tabs-ext">Next</a></li>
@@ -1760,34 +1756,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 											<details id="doDrugProForm1Tab3" class="details-tab">
 												<summary>Non-Medicinal Ingredient(s)</summary>
 												<div class="row marginTop-15">
-													<div class="col-sm-5 col-sm-offset-2">
-														<button class=" btn btn-sm btn-default pull-right wb-toggle" type="button" data-toggle='{"selector": ".doDrugProForm1NonMedIngr", "state":"on"}'>Collapse/Expand ALL Non-Medicinal Ingredients</button>
-													</div>
-													<div class="col-sm-2 col-sm-offset-1">
-														<!--<button type="submit" class="btn btn-default btn-sm full-width" onclick="addNonMedIngredientOrVariant(doDrugProForm1NonMedIngrList, 'ingredient')" id="doDrugProForm1NonMedIngrAdd">Add an Ingredient</button>-->
-														<button type="submit" class="btn btn-default btn-sm full-width" onclick="addNonMedIngredient(doDrugProForm1NonMedIngrList, false)" id="doDrugProForm1NonMedIngrAdd">Add an Ingredient</button>
-													</div>
-													<div class="col-sm-2">
-														<button type="submit" class="btn btn-default btn-sm full-width" onclick="addNonMedIngredient(doDrugProForm1NonMedIngrList, true)" id="doDrugProForm1NonMedIngrVariantAdd">Add a Variant</button>
+													<div class="col-sm-6">
+														<button class=" btn btn-sm btn-default wb-toggle" type="button" data-toggle='{"selector": ".doDrugProForm1NonMedIngr", "state":"on"}'>Collapse/Expand ALL Non-Medicinal Ingredients</button>
 													</div>
 												</div>
-												<!--
-												<ul id="doDrugProForm1NonMedIngrVariantList" class="list-unstyled">
-													<li id="doDrugProForm1NonMedIngrVariant1">
-														<details open="open">
-															<summary class="heightAdjust">Variant Type 1</summary>
 															
-															<div class="mainDiv">-->
-															<!--
-															<div class="row">
-																<div class="form-inline">
-																	<label for="doDrugProForm1NonMedIngrVariant1Name" class="control-label col-sm-2">Variant Name</label>
-																	<input id="doDrugProForm1NonMedIngrVariant1Name" class="form-control input-sm col-sm-4"/>
-																	<button class="btn btn-default btn-sm col-sm-3 col-sm-offset-4" type="submit">Add an Ingredient</button>
-																</div>
-															</div>-->
-															
-															<ul id="doDrugProForm1NonMedIngrList" class="list-unstyled">
+															<ul id="doDrugProForm1NonMedIngrList" class="list-unstyled marginTop-15">
 															<!--
 																<li id="doDrugProForm1NonMedIngr1" class="nonMedIngrLI">
 																	<details open="open">
@@ -2271,11 +2245,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 																		</details></li>-->
 																		</ul>
-															<!--</div>
-														</details>
-													</li>
-												</ul>-->
-
+												<div class="row marginTop-15">
+													<div class="col-sm-5">
+														<!--<button type="submit" class="btn btn-default btn-sm full-width" onclick="addNonMedIngredientOrVariant(doDrugProForm1NonMedIngrList, 'ingredient')" id="doDrugProForm1NonMedIngrAdd">Add an Ingredient</button>-->
+														<button type="submit" class="btn btn-info btn-sm full-width" onclick="addNonMedIngredient(doDrugProForm1NonMedIngrList, false)" id="doDrugProForm1NonMedIngrAdd">Add Another Non-Medicinal Ingredient</button>
+													</div>
+													<div class="col-sm-2">
+														<button type="submit" class="btn btn-info btn-sm full-width" onclick="addNonMedIngredient(doDrugProForm1NonMedIngrList, true)" id="doDrugProForm1NonMedIngrVariantAdd">Add a Variant</button>
+													</div>
+												</div>
 												<ul class="pager">
 													<li class="displayTableCell"><a href="#doDrugProForm1Tab2" class="wb-tabs-ext">Previous</a></li>
 													<li class="displayTableCell"><a href="#doDrugProForm1Tab4" class="wb-tabs-ext">Next</a></li>
@@ -2287,14 +2265,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 													<div class="col-sm-6">
 														<label class="control-label"><sup>1</sup>Used at any stage in the manufacture of the drug</label>
 													</div>
-													<div class="col-sm-3 col-sm-offset-1">
-														<button class=" btn btn-sm btn-default pull-right wb-toggle" type="button" data-toggle='{"selector": ".doDrugProForm1Material"}'>Collapse/Expand ALL Materials</button>
-													</div>
-													<div class="col-sm-2">
-														<button type="submit" class="btn btn-default btn-sm" onclick="addMaterial(doDrugProForm1AnimalHumanSrcList)" id="doDrugProForm1AnimalHumanSrcAddBut">Add a Material</button>
+												</div>
+												<div class="row marginTop-15">
+													<div class="col-sm-4">
+														<button class=" btn btn-sm btn-default wb-toggle" type="button" data-toggle='{"selector": ".doDrugProForm1Material"}'>Collapse/Expand ALL Materials</button>
 													</div>
 												</div>
-												<ul class="list-unstyled" id="doDrugProForm1AnimalHumanSrcList">
+												<ul class="list-unstyled marginTop-15" id="doDrugProForm1AnimalHumanSrcList">
 													<!--<li id="doDrugProForm1AnimalHumanSrc1">
 														<details open="open">
 															<summary class="heightAdjust">Material 1</summary>
@@ -2323,6 +2300,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 														</details>
 													</li>-->
 												</ul>
+												<div class="row marginTop-15">
+													<div class="col-sm-4">
+														<button type="submit" class="btn btn-info btn-sm" onclick="addMaterial(doDrugProForm1AnimalHumanSrcList)" id="doDrugProForm1AnimalHumanSrcAddBut">Add a Material</button>
+													</div>
+												</div>
 												<ul class="pager">
 													<li class="displayTableCell"><a href="#doDrugProForm1Tab3" class="wb-tabs-ext">Previous</a></li>
 													<!--<li><a href="#doDrugProForm1Tab5" class="wb-tabs-ext">Next</a></li>-->
@@ -2599,11 +2581,20 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										</div>
 									</div>
 								</div>
-							</div>
+							
 			</details>
 		</li>
 	</ul>
-		
+	
+		<div class="row  marginTop-15">
+			<div class="col-sm-5">
+				<button class="btn btn-primary full-width" id="doDrugProFormAddBut1" onclick="addNewDrugForm(doDrugProForm1List)" type="submit">Add Another Drug Product Formulation</button>
+			</div>
+		</div>
+	</div>
+	</details>
+	</li>
+	</ul>
 		
 	</div>
 <div class="panel-footer text-center">
@@ -4136,7 +4127,7 @@ function addContainerType(list) {
 //var numOfCountryManu = 1; //temporary
 
 function addCountryOfManufacture(container) {
-	var defaultSelect = '<div class="row"><div class="form-group"><div class="col-sm-3"><label for="doDrugProForm1LifeTypeContainerCountryManu1" class="control-label normalLabel">Country of Manufacture 1</label></div><div class="col-sm-4"><div class="input-group"><input class="form-control input-sm full-width" type="text" id="doDrugProForm1LifeTypeContainerCountryManu1" name="doDrugProForm1LifeTypeContainerCountryManu1" list="CountrySuggestions"/><span class="input-group-btn"><button class="btn btn-danger btn-sm" id="doDrugProForm1LifeTypeContainerCountryManu1DelBut" onclick="delCountryOfManufacture(this, doDrugProForm1LifeTypeContainerCountryManu)" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-2 addButton"><button type="submit" class="btn btn-default btn-sm" onclick="addCountryOfManufacture(doDrugProForm1LifeTypeContainerCountryManu)"id="doDrugProForm1LifeTypeContainerCountryManuAddBut">Add Country</button></div></div></div>';
+	var defaultSelect = '<div class="row"><div class="form-group"><div class="col-sm-3"><label for="doDrugProForm1LifeTypeContainerCountryManu1" class="control-label normalLabel">Country of Manufacture 1</label></div><div class="col-sm-4"><div class="input-group"><input class="form-control input-sm full-width" type="text" id="doDrugProForm1LifeTypeContainerCountryManu1" name="doDrugProForm1LifeTypeContainerCountryManu1" list="CountrySuggestions"/><span class="input-group-btn"><button class="btn btn-danger btn-sm" id="doDrugProForm1LifeTypeContainerCountryManu1DelBut" onclick="delCountryOfManufacture(this, doDrugProForm1LifeTypeContainerCountryManu)" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-2 addButton"><button type="submit" class="btn btn-info btn-sm" onclick="addCountryOfManufacture(doDrugProForm1LifeTypeContainerCountryManu)"id="doDrugProForm1LifeTypeContainerCountryManuAddBut">Add Country</button></div></div></div>';
 	//var numOfCountryManu = $(container).find('.row').length;
 	//numOfCountryManu++;
 	
@@ -4175,7 +4166,7 @@ function delCountryOfManufacture(delBut, container) {
 	} else {
 		if ($(closestFormGroup).find('.addButton').length > 0) {
 			//var generalId = 'doDrugProForm1LifeTypeContainerCountryManu' + ($(closestRow).index() + 1);
-			var addCountryText = '<div class="col-sm-2 addButton"><button type="submit" class="btn btn-default btn-sm" onclick="addCountryOfManufacture(doDrugProForm1LifeTypeContainerCountryManu)"id="doDrugProForm1LifeTypeContainerCountryManuAddBut">Add Country</button></div>';
+			var addCountryText = '<div class="col-sm-2 addButton"><button type="submit" class="btn btn-info btn-sm" onclick="addCountryOfManufacture(doDrugProForm1LifeTypeContainerCountryManu)"id="doDrugProForm1LifeTypeContainerCountryManuAddBut">Add Country</button></div>';
 			addCountryText = replaceAll(addCountryText, 'doDrugProForm1', drugFormId);
 			var previousRowForThisRow = $(container).find('.row').eq($(closestRow).index() - 2);
 			$(previousRowForThisRow).find('.form-group').append(addCountryText);	
@@ -4239,14 +4230,14 @@ function addRouteOfAdm(but) {
   var drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
   var index = findIndexById(drugFormArray, drugFormId);
   //get the number of div.row
-  var routeOfAdmRowCount = ($('#' + drugFormId + 'RouteOfAdm .row:not(.other)').length - 1);
+  var routeOfAdmRowCount = $('#' + drugFormId + 'RouteOfAdmRows .row:not(.other)').length;
   
   //count the number of DINs in each Row
   var routeOfAdmCount;
   if (routeOfAdmRowCount == 0) {
 	routeOfAdmCount = 0;
   } else {
-	routeOfAdmCount = $('#' + drugFormId + 'RouteOfAdm').find('div.row:not(.other) div.group').length;
+	routeOfAdmCount = $('#' + drugFormId + 'RouteOfAdmRows').find('div.row:not(.other) div.group').length;
   }
   
   var defaultRouteOfAdm = '<div class="col-sm-6 form-group group" id="doDrugProForm1RouteOfAdm1Grp"><label class="control-label normalLabel-11pt" for="doDrugProForm1RouteOfAdm1">Route of Administration 1</label><div class="input-group"><select id="doDrugProForm1RouteOfAdm1" name="doDrugProForm1RouteOfAdm1"  onchange="otherSelect(this, \'Other\', doDrugProForm1RouteOfAdm1OtherSelect)" class="form-control input-sm col-sm-2"><option label=" "></option> <option value="Block/Infiltration">Block/Infiltration</option> <option value="Buccal">Buccal</option> <option value="Dental">Dental</option> <option value="Dialysis">Dialysis</option> <option value="Epidural">Epidural</option> <option value="Inhalation">Inhalation</option> <option value="Intra-Arterial">Intra-Arterial</option> <option value="Intra-Articular">Intra-Articular</option> <option value="Intrabursal">Intrabursal</option> <option value="Intradermal">Intradermal</option> <option value="Intramammary">Intramammary</option> <option value="Intraocular">Intraocular</option> <option value="Intraperitoneal">Intraperitoneal</option> <option value="Intrathecal">Intrathecal</option> <option value="Intratracheal">Intratracheal</option> <option value="Intravascular">Intravascular</option> <option value="Intravenous">Intravenous</option> <option value="Intravitreal">Intravitreal</option> <option value="Irrigation">Irrigation</option> <option value="Nasal">Nasal</option> <option value="Ophthalmic">Ophthalmic</option> <option value="Oral">Oral</option> <option value="Otic">Otic</option> <option value="Rectal">Rectal</option> <option value="Subcutaneous">Subcutaneous</option> <option value="Sublingual">Sublingual</option> <option value="Topical">Topical</option> <option value="Transdermal">Transdermal</option> <option value="Urethral">Urethral</option> <option value="Vaginal">Vaginal</option> <option value="Other">Other</option></select><span class="input-group-btn"><button class="btn btn-danger btn-sm" id="doDrugProForm1RouteOfAdm1DelBut" type="button" onclick="deleteRouteOfAdm(this, \'doDrugProForm1RouteOfAdm\')"><span class="glyphicon glyphicon-remove"></span></button></span></div><div class="row other" style="margin-top:10px; display:none" id="doDrugProForm1RouteOfAdm1OtherSelect"> <div class="form-group"> <div class="col-sm-5" style="padding-right:8px"> <label class="control-label normalLabel" for="doDrugProForm1RouteOfAdm1Other">Route of Administration Details</label> </div> <div class="col-sm-7" style="padding-left:0"> <input type="text" class="form-control input-sm full-width" id="doDrugProForm1RouteOfAdm1Other"/> </div> </div> </div></div>';
@@ -4258,7 +4249,7 @@ function addRouteOfAdm(but) {
 		newRouteOfAdm = replacedRouteOfAdm.replace('doDrugProForm1RouteOfAdm', drugFormId + 'RouteOfAdm');
 	} else {
 //get the the id of the last DIN in the last row
-var routeOfAdmLastId = $('#' + drugFormId + 'RouteOfAdm').find('div.row:not(.other):eq(' + routeOfAdmRowCount + ') div.group:last')[0].id;
+var routeOfAdmLastId = $('#' + drugFormId + 'RouteOfAdmRows').find('div.row:not(.other):eq(' + (routeOfAdmRowCount-1) + ') div.group:last')[0].id;
 var routeOfAdmLastIndex1 = routeOfAdmLastId.indexOf('Adm');
 var routeOfAdmLastIndex2 = routeOfAdmLastId.indexOf('Grp');
 var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3, routeOfAdmLastIndex2);
@@ -4272,7 +4263,7 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
   
   //in last row
   var numOfDINInRow = 0;
-  $('#' + drugFormId + 'RouteOfAdm').find('div.row:not(.other):eq(' + routeOfAdmRowCount + ')').each(function() {
+  $('#' + drugFormId + 'RouteOfAdmRows').find('div.row:not(.other):eq(' + (routeOfAdmRowCount-1) + ')').each(function() {
 	numOfDINInRow = $(this).find('div.group').length;
   });
   
@@ -4288,7 +4279,7 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
   if ((numOfRouteOfAdmInLastRow%2 == 0) && (numOfRouteOfAdmInLastRow != 0)) { //add new row (with newRouteOfAdm) beneath
 	routeOfAdmRowCount++;
 	var newRow = '<div class="row" id="' + drugFormId + 'RouteOfAdmRow' + routeOfAdmRowCount + '">' + newRouteOfAdm + '</div>';
-	$('#' + drugFormId + 'RouteOfAdm').append(newRow);
+	$('#' + drugFormId + 'RouteOfAdmRows').append(newRow);
   } else { //do not add row
 	$(lastRow).append(newRouteOfAdm);
   }
@@ -4329,7 +4320,7 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 		  var numOfDINsToGet;
 		  var numOfDINsInCurrentRow;
 		  //get the number of div.row
-		  var raDINRowCount = $('#' + drugFormId + 'RouteOfAdm .row:not(.other)').length;
+		  var raDINRowCount = $('#' + drugFormId + 'RouteOfAdmRows .row:not(.other)').length;
 		  while (currentRowIndex < (raDINRowCount-1)) {
 			//get the number of divs within the currentRow
 			$(currentRow).each(function(i) {
@@ -4337,7 +4328,7 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 			});
 			numOfDINsToGet = 2 - numOfDINsInCurrentRow;
 			//get the next row after currentRow
-			var nextRow = $('#' + drugFormId + 'RouteOfAdm').find('div.row:not(.other):eq(' + (currentRowIndex + 1) + ')');
+			var nextRow = $('#' + drugFormId + 'RouteOfAdmRows').find('div.row:not(.other):eq(' + (currentRowIndex + 1) + ')');
 			//get the DINs from the nextRow and move them to the currentRow
 			for (var i = 0; i < numOfDINsToGet; i++) {
 			  var DINToGet = $(nextRow).find('div.group:eq(' + i + ')');
@@ -4346,11 +4337,11 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 			  //$(nextRow).find(DINToGet).remove();
 			}
 			currentRowIndex++;
-			currentRow = $("#" + drugFormId + "RouteOfAdm div.row:not(.other):eq(" + currentRowIndex + ")");
+			currentRow = $("#" + drugFormId + "RouteOfAdmRows div.row:not(.other):eq(" + currentRowIndex + ")");
 		  }
 		  //if lastRow contains no elements, remove it
 		  if ($(currentRow).children().length == 0) {
-			if ((raDINRowCount-1) > 1) {
+			if ((raDINRowCount-1) >= 1) {
 				$(currentRow).remove();
 			//raDINRowCount--;
 			}
@@ -4360,17 +4351,17 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 		//get DIN at original position of DIN that was removedItemIndex
 		//var newDINAtRemovedPos = $('#' + drugFormId + ' div.row:eq(' + deletedRowIndex + ') div.col-sm-3:eq(' + deletedDivIndex + ')');
 		
-		var newLabelId = (deletedRowIndex-1)*2 + (deletedDivIndex+1);
+		var newLabelId = deletedRowIndex*2 + (deletedDivIndex+1);
 		var rowIndex = deletedRowIndex;
 		var rowDINCount = 0;
 		//var rowIndex = deletedRowIndex;
 		while (rowIndex <= (raDINRowCount-1)) {
 			//if (deletedDivIndex < 4) {
-				$('#' + drugFormId + 'RouteOfAdm div.row:not(.other):eq(' + rowIndex + ')').each(function(i) {
+				$('#' + drugFormId + 'RouteOfAdmRows div.row:not(.other):eq(' + rowIndex + ')').each(function(i) {
 					rowDINCount = $(this).find('div.group').length;
 				});
 				for (var k = deletedDivIndex; k < rowDINCount; k++) {
-					var DINToChangeLabel = $('#' + drugFormId + 'RouteOfAdm div.row:not(.other):eq(' + rowIndex + ') div.group:eq(' + k + ')');
+					var DINToChangeLabel = $('#' + drugFormId + 'RouteOfAdmRows div.row:not(.other):eq(' + rowIndex + ') div.group:eq(' + k + ')');
 					$(DINToChangeLabel).find('label').text('Route Of Administration ' + newLabelId);
 					newLabelId++;
 				}
