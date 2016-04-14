@@ -52,7 +52,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <section id="wb-lng" class="visible-md visible-lg text-right">
 <h2 class="wb-inv">Language selection</h2>
 <div class="row">
-<div class="col-sm-12">
+<div class="col-md-12">
 <ul class="list-inline margin-bottom-none">
 <li><a lang="fr" href="content-fr.html">Français</a></li>
 </ul>
@@ -60,7 +60,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </div>
 </section>
 <div class="row">
-<div class="brand col-xs-8 col-sm-9 col-sm-6">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
 <a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="../assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
 </div>
 <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
@@ -214,9 +214,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</header>
 				<div class="panel-body" id="doEnrolmentAmendCanRefBody">
-				<div class="row">
-					<button class="btn btn-default btn-sm col-sm-4 pull-right" disabled="true" onclick="addNewRefProduct(); enableDisableDivArray(doEnrolmentAmendCanRefInfo, [doAmendCanRefProductList])" type="submit">Add Another Canadian Reference Product</button>
-				</div>
 			<ul id="doAmendCanRefProductList" class="list-unstyled">
 				<li id="doAmendCanRefProduct1">
 					<details open="open">
@@ -266,9 +263,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</details>
 				</li>
 			</ul>
+			<div class="row">
+				<div class="col-sm-4">
+					<button class="btn btn-info btn-sm" disabled="true" onclick="addNewRefProduct(); enableDisableDivArray(doEnrolmentAmendCanRefInfo, [doAmendCanRefProductList])" type="submit">Add Another Canadian Reference Product</button>
+				</div>
 			</div>
 		</div>
-		
+		</div>
 		<div class="row">
 				<div class="col-sm-12">
 					<label class="control-label" for="doAmendReasonForAmend">Reason for filing this Amendment</label>
