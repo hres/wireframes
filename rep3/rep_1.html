@@ -53,7 +53,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <section id="wb-lng" class="visible-md visible-lg text-right">
 <h2 class="wb-inv">Language selection</h2>
 <div class="row">
-<div class="col-sm-12">
+<div class="col-md-12">
 <ul class="list-inline margin-bottom-none">
 <li><a lang="fr" href="content-fr.html">Français</a></li>
 </ul>
@@ -61,7 +61,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </div>
 </section>
 <div class="row">
-<div class="brand col-xs-8 col-sm-9 col-sm-6">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
 <a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="../assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
 </div>
 <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
@@ -174,295 +174,78 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			
 			<div id="enrolType" style="display: none;">
 				<div class="well well-sm">
-				<div class="row">
-					<div class="col-sm-8">
-						<div class="form-group">
-							<label for="enrolTypeOptionNEW" class="form-radio form-label-inline">
-							<input type="radio" name="enrolTypeOption" id="enrolTypeOptionNEW" onclick="optButtonSelect('NEW')" />
-									</label>
-						</div>
-					</div>
-				</div>
-				</div>
-				<div class="well well-sm">
-				<div class="row">
-					<div class="col-sm-8">
-						<div class="form-group">
-							<label for="enrolTypeOptionDRAFT" class="form-radio form-label-inline">
-							<input type="radio" name="enrolTypeOption" id="enrolTypeOptionDRAFT" onclick="optButtonSelect('DRAFT')"/>
-								</label>
-						</div>
-					</div>
-				</div>
-				
-				<div id="enrolDrftGrp" style="display:none">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="form-group">
-							<label for="enrolDrftFileUpload ">Upload DRAFT Enrolment file</label>
-							<input type="file" id="enrolDrftFileUpload" accept="text/xml"/>
-						</div>
-					</div>
-				</div>
-				</div>
-				</div>
-				<div class="well well-sm">
-				<div class="row">
-					<div class="col-sm-12">
-					<div class="form-group">
-						<label for="enrolTypeOptionAMEND" class="form-radio form-label-inline">
-						<input type="radio" name="enrolTypeOption" id="enrolTypeOptionAMEND" onclick="optButtonSelect('AMEND')"/>
-							</label>
-					</div>
-					</div>
-				</div>
-				<div id="enrolAmdGrp" style="display:none">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="form-group">
-							<label for="enrolAmdFileUpload">Upload Enrolment file that you wish to AMEND</label>
-							<input type="file" id="enrolAmdFileUpload" accept="text/xml"/>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-1 fixedSmallSize">
-					<div class="form-group">
-						<label class="control-label smallLabel" for="enrolAmdFileVersion">Amended Version</label>
-						<input type="text" class="input-sm form-control" id="enrolAmdFileVersion" readonly />
-					</div>
-					</div>
-					<div class="col-xs-2 fixedSmallSize">
-						<p class="smallLabel textAlignCenter">replaces</p>
-					</div>
-					<div class="col-xs-2 fixedSmallSize">
-					<div class="form-group">
-						<label class="control-label smallLabel" for="enrolAmdFileRepVersion">Uploaded Version</label>
-						<input type="text" class="input-sm form-control" id="coAmdFileRepVersion" readonly />
-					</div>
-					</div>
-				</div>
-				</div>
-				</div>
-				</div>
-			
-				<!--
-				<div id="coType" style="display: none;">
-				<div class="well well-sm">
-				<div class="row">
-					<div class="col-sm-8">
-						<div class="form-group">
-							<label for="coTypeOptionNew" class="form-radio form-label-inline">
-							<input type="radio" name="coTypeOption" id="coTypeOptionNew" onclick="optButtonSelect('co','New')" />
-									Start a NEW Company Enrolment</label>
-						</div>
-					</div>
-				</div>
-				</div>
-				<div class="well well-sm">
-				<div class="row">
-					<div class="col-sm-8">
-						<div class="form-group">
-							<label for="coTypeOptionDraft" class="form-radio form-label-inline">
-							<input type="radio" name="coTypeOption" id="coTypeOptionDraft" onclick="optButtonSelect('co','Draft')"/>
-								Complete your DRAFT Company</label>
-						</div>
-					</div>
-				</div>
-				
-				<div id="coDrftGrp" style="display:none">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="form-group">
-							<label for="coDrftFileUpload ">Upload Draft Enrolment file:</label>
-							<input type="file" id="coDrftFileUpload" accept="text/xml"/>
-						</div>
-					</div>
-				</div>
-				</div>
-				</div>
-				<div class="well well-sm">
-				<div class="row">
-					<div class="col-sm-12">
-					<div class="form-group">
-						<label for="coTypeOptionAmend" class="form-radio form-label-inline">
-						<input type="radio" name="coTypeOption" id="coTypeOptionAmend" onclick="optButtonSelect('co','Amend')"/>
-							AMEND you Company Enrolment File</label>
-					</div>
-					</div>
-				</div>
-				<div id="coAmdGrp" style="display:none">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="form-group">
-							<label for="coAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-							<input type="file" id="coAmdFileUpload" accept="text/xml"/>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-1 fixedSmallSize">
-					<div class="form-group">
-						<label class="control-label smallLabel" for="coAmdFileVersion">Amended Version</label>
-						<input type="text" class="input-sm form-control" id="coAmdFileVersion" readonly />
-					</div>
-					</div>
-					<div class="col-xs-2 fixedSmallSize">
-						<p class="smallLabel textAlignCenter">replaces</p>
-					</div>
-					<div class="col-xs-2 fixedSmallSize">
-					<div class="form-group">
-						<label class="control-label smallLabel" for="coAmdFileRepVersion">Uploaded Version</label>
-						<input type="text" class="input-sm form-control" id="coAmdFileRepVersion" readonly />
-					</div>
-					</div>
-				</div>
-				</div>
-				</div>
-				</div>
-				
-				<div id="doType" style="display: none;">
-					<div class="well well-sm">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group">
-									<label for="doTypeOptionNew" class="form-radio form-label-inline">
-									<input type="radio" name="doTypeOption" id="doTypeOptionNew" onclick="optButtonSelect('do','New')"/>
-										Start a NEW Dossier Enrolment</label>
-								</div>
+					<div class="row">
+						<div class="col-sm-8">
+							<div class="form-group">
+								<label for="enrolTypeOptionNEW" class="form-radio form-label-inline">
+								<input type="radio" name="enrolTypeOption" id="enrolTypeOptionNEW" onclick="optButtonSelect('NEW')" />
+										</label>
 							</div>
 						</div>
 					</div>
-					<div class="well well-sm">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group">
-									<label for="doTypeOptionDraft" class="form-radio form-label-inline">
-									<input type="radio" name="doTypeOption" id="doTypeOptionDraft" onclick="optButtonSelect('do','Draft')"/>
-										Complete your DRAFT Dossier</label>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group" id="doDrftGrp" style="display:none">
-									<label for="doDrftFileUpload">Upload Draft Enrolment file:</label>
-									<input type="file" id="doDrftFileUpload"   accept="text/xml"/>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="well well-sm">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group">
-									<label for="doTypeOptionAmend" class="form-radio form-label-inline">
-									<input type="radio" name="doTypeOption" id="doTypeOptionAmend" onclick="optButtonSelect('do','Amend')" />
-										AMEND you Dossier Enrolment File</label>
-								</div>
-							</div>
-						</div>
-						<div id="doAmdGrp" style="display:none">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group">
-									<label for="doAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-									<input type="file" id="doAmdFileUpload"   accept="text/xml"/>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-					<div class="col-xs-2 fixedSmallSize">
-					<div class="form-group">
-						<label class="control-label smallLabel" for="doAmdFileVersion">Amended Version</label>
-						<input type="text" class="input-sm form-control" id="doAmdFileVersion" readonly />
-					</div>
-					</div>
-					<div class="col-xs-2 fixedSmallSize">
-						<p class="smallLabel textAlignCenter">replaces</p>
-					</div>
-					<div class="col-xs-1 fixedSmallSize">
-					<div class="form-group">
-						<label class="control-label smallLabel" for="doAmdFileRepVersion">Uploaded Version</label>
-						<input type="text" class="input-sm form-control" id="doAmdFileRepVersion" readonly />
-					</div>
-					</div>
 				</div>
-					</div>
-					</div>
-					
-					
-				<div id="raType" style="display: none;">
 				<div class="well well-sm">
 					<div class="row">
-					<div class="col-sm-12">
-					<div class="form-group">
-						<label for="raTypeOptionNew" class="form-radio form-label-inline">
-						<input type="radio" name="raTypeOption" id="raTypeOptionNew" onclick="optButtonSelect('ra','New')" />
-							Start a NEW Regulatory Activity Enrolment</label>
-					</div>
-					</div>
-					</div>
-					</div>
-					<div class="well well-sm">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group">
-									<label for="raTypeOptionDraft" class="form-radio form-label-inline">
-									<input type="radio" name="raTypeOption" id="raTypeOptionDraft" onclick="optButtonSelect('ra','Draft')"/>
-										Complete your DRAFT Regulatory Activity</label>
-								</div>
-							</div>
-						</div>
-						
-						<div class="row" id="raDrftGrp" style="display:none">
-							<div class="col-sm-12">
-								<div class="form-group">
-									<label for="raDrftFileUpload">Upload Draft Enrolment file:</label>
-									<input type="file" id="raDrftFileUpload"   accept="text/xml"/>
-								</div>
+						<div class="col-sm-8">
+							<div class="form-group">
+								<label for="enrolTypeOptionDRAFT" class="form-radio form-label-inline">
+								<input type="radio" name="enrolTypeOption" id="enrolTypeOptionDRAFT" onclick="optButtonSelect('DRAFT')"/>
+									</label>
 							</div>
 						</div>
 					</div>
-					<div class="well well-sm">
+				
+					<div id="enrolDrftGrp" style="display:none">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="form-group">
-									<label for="raTypeOptionAmend" class="form-radio form-label-inline">
-									<input type="radio" name="raTypeOption" id="raTypeOptionAmend" onclick="optButtonSelect('ra','Amend')"/>
-										AMEND you Regulatory Activity Enrolment File</label>
+									<label for="enrolDrftFileUpload">Upload DRAFT Enrolment file</label>
+									<input type="file" id="enrolDrftFileUpload" accept="text/xml"/>
 								</div>
 							</div>
 						</div>
-						<div id="raAmdGrp" style="display:none">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="form-group">
-									<label for="raAmdFileUpload">Upload Enrolment file that you wish to amend:</label>
-									<input type="file" id="raAmdFileUpload"   accept="text/xml"/>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-					<div class="col-xs-1 fixedSmallSize">
-					<div class="form-group">
-						<label class="control-label smallLabel" for="raAmdFileVersion">Amended Version</label>
-						<input type="text" class="input-sm form-control" id="raAmdFileVersion" readonly />
-					</div>
-					</div>
-					<div class="col-xs-2 fixedSmallSize">
-						<p class="smallLabel textAlignCenter">replaces</p>
-					</div>
-					<div class="col-xs-1 fixedSmallSize">
-					<div class="form-group">
-						<label class="control-label smallLabel" for="raAmdFileRepVersion">Uploaded Version</label>
-						<input type="text" class="input-sm form-control" id="draAmdFileRepVersion" readonly/>
-					</div>
 					</div>
 				</div>
+				<div class="well well-sm">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="form-group">
+								<label for="enrolTypeOptionAMEND" class="form-radio form-label-inline">
+								<input type="radio" name="enrolTypeOption" id="enrolTypeOptionAMEND" onclick="optButtonSelect('AMEND')"/>
+									</label>
+							</div>
+						</div>
+					</div>
+					<div id="enrolAmdGrp" style="display:none">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="enrolAmdFileUpload">Upload Enrolment file that you wish to AMEND</label>
+									<input type="file" id="enrolAmdFileUpload" accept="text/xml"/>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-1 fixedSmallSize">
+								<div class="form-group">
+									<label class="control-label smallLabel" for="enrolAmdFileVersion">Amended Version</label>
+									<input type="text" class="input-sm form-control" id="enrolAmdFileVersion" readonly />
+								</div>
+							</div>
+							<div class="col-xs-2 fixedSmallSize">
+								<p class="smallLabel textAlignCenter">replaces</p>
+							</div>
+							<div class="col-xs-2 fixedSmallSize">
+								<div class="form-group">
+									<label class="control-label smallLabel" for="enrolAmdFileRepVersion">Uploaded Version</label>
+									<input type="text" class="input-sm form-control" id="enrolAmdFileRepVersion" readonly />
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				</div>
-				-->
+			</div>
+	
 				<div id="rtType" style="display: none;">
 					<div class="form-group">
 						<div class="form-group">
@@ -489,10 +272,8 @@ information, Regulatory Activity information)</label>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div> <!--end of step 1B-->
-	</div>
+	 </div><!--end of step 1B-->
+	 </div>
 	<div id="step1c" class="panel panel-primary" style="display: none;">
 		<div class="panel-heading">
 			<h2 class="panel-title">STEP 1C - Administrative Information for THIS Enrolment Process</h2>
@@ -520,8 +301,7 @@ information, Regulatory Activity information)</label>
 				</div>
 			</div>
 			<div class="row">
-					<button class="btn btn-default btn-sm col-sm-2 pull-right" id="contactAddBut" onclick="addNewContact()" type="submit">Add Another Contact</button>
-				</div>
+			<div class="col-sm-12">
 			<ul id="contactInfoList" class="list-unstyled">
 				<li id="contactInfo1">
 					<details open="open">
@@ -534,7 +314,7 @@ information, Regulatory Activity information)</label>
 							<label for="contactInfo1Salutation" class="control-label">Salutation*</label>
                             <div class="">
                                 <select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" >
-                                    <option label=" "></option>
+                                    <option value="0"></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
                                     <option value="3">Ms.</option>
@@ -564,7 +344,7 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-2">
 							<label for="contactInfo1Lang" class="control-label">Language</label>
 							<select id="contactInfo1Lang" name="contact1InfoLang" class="form-control input-sm full-width">
-								<option label=""></option>
+								<option value=""></option>
 								<option value="1">English</option>
 								<option value="2">French</option>
 							</select>
@@ -572,9 +352,9 @@ information, Regulatory Activity information)</label>
 					</div>
 					<div class="row">
 						<div class="form-group col-sm-3">
-							<label for="contactInfo1TelNo" class="control-label">Telephone No*</label>
+							<label for="contactInfo1TelNo" class="control-label">Telephone Number*</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone No."  >
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone Number"  >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
@@ -590,9 +370,9 @@ information, Regulatory Activity information)</label>
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
-							<label for="contactInfo1FaxNo" class="control-label">Fax No.</label>
+							<label for="contactInfo1FaxNo" class="control-label">Fax Number</label>
 							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax No."  >
+								<input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax Number"  >
 							</div>
 						</div>
 					</div>
@@ -601,6 +381,13 @@ information, Regulatory Activity information)</label>
 					</details>
 				</li>
 			</ul>
+			</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<button class="btn btn-info btn-sm" id="contactAddBut" onclick="addNewContact()" type="submit">Add Another Contact</button>
+				</div>
+			</div>
 			<!--
 			<h4>Main Contact Information (Recommended: Two Contact Submissions)</h4>
 			<div id="MCInfo" class="wb-frmvld well well-sm">
@@ -728,7 +515,7 @@ information, Regulatory Activity information)</label>
 						</div>
 					</div>
 			</div> -->
-	</div>
+</div>
 </div>
 <div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
@@ -840,7 +627,7 @@ information, Regulatory Activity information)</label>
 <![endif]-->
 <script src="../js/theme.min.js"></script>
 <script src="../js/rep.js"></script>
-<script type="text/javascript" id="">
+<script type="text/javascript">
 var contactCounter = 1;
 var contactArray = ['Main', 'Secondary', 'Tertiary'];
 var numOfContactsCreated = 1;
@@ -1115,7 +902,7 @@ function changeLabelText(elementForArray, txtToChangeToArray, bolAddAfterNextEle
 //adds contact
 function addNewContact() {
 	if (contactCounter < 3) {
-		var newContact = '<li id="contactInfo1"><details open="open"><summary>Main Contact Information <button class="btn btn-danger btn-xs deleteRef" onclick="deleteContact(contactInfo1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div id="contactInfo1Main" class="wb-frmvld well well-sm"><div class="row"><div class="form-group col-sm-2"><label for="contactInfo1Salutation" class="control-label">Salutation*</label><div class=""><select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" ><option label=" "></option><option value="1">Mr.</option><option value="2">Mrs.</option><option value="3">Ms.</option><option value="4">Dr.</option></select></div></div><div class="form-group col-sm-3"><label for="contactInfo1GivenName" class="control-label">Given Name*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name"></div></div><div class="form-group col-sm-3"><label for="contactInfo1Surname" class="control-label">Surname*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Title" class="control-label">Title*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title" ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Lang" class="control-label">Language</label><select id="contactInfo1Lang" name="contact1InfoLang" class="form-control input-sm full-width"><option label=""></option><option value="1">English</option><option value="2">French</option></select></div></div><div class="row"><div class="form-group col-sm-3"><label for="contactInfo1TelNo" class="control-label">Telephone No*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone No."  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1TelExt" class="control-label">Ext</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  ></div></div><div class="form-group col-sm-4"><label for="contactInfo1Email" class="control-label">Email*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  /></div></div><div class="form-group col-sm-3"><label for="contactInfo1FaxNo" class="control-label">Fax No.</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax No."  ></div></div></div></div></details></li>';
+		var newContact = '<li id="contactInfo1"><details open="open"><summary>Main Contact Information <button class="btn btn-danger btn-xs deleteRef" onclick="deleteContact(contactInfo1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div id="contactInfo1Main" class="wb-frmvld well well-sm"><div class="row"><div class="form-group col-sm-2"><label for="contactInfo1Salutation" class="control-label">Salutation*</label><div class=""><select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" ><option value=""></option><option value="1">Mr.</option><option value="2">Mrs.</option><option value="3">Ms.</option><option value="4">Dr.</option></select></div></div><div class="form-group col-sm-3"><label for="contactInfo1GivenName" class="control-label">Given Name*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name"></div></div><div class="form-group col-sm-3"><label for="contactInfo1Surname" class="control-label">Surname*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Title" class="control-label">Title*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title" ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Lang" class="control-label">Language</label><select id="contactInfo1Lang" name="contact1InfoLang" class="form-control input-sm full-width"><option value=""></option><option value="1">English</option><option value="2">French</option></select></div></div><div class="row"><div class="form-group col-sm-3"><label for="contactInfo1TelNo" class="control-label">Telephone No*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone Number"  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1TelExt" class="control-label">Ext</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  ></div></div><div class="form-group col-sm-4"><label for="contactInfo1Email" class="control-label">Email*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  /></div></div><div class="form-group col-sm-3"><label for="contactInfo1FaxNo" class="control-label">Fax Number</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax Number"  ></div></div></div></div></details></li>';
 		//increment counter
 		contactCounter++;
 		numOfContactsCreated++;
