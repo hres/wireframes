@@ -91,7 +91,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <section id="wb-lng" class="visible-md visible-lg text-right">
 <h2 class="wb-inv">Language selection</h2>
 <div class="row">
-<div class="col-sm-12">
+<div class="col-md-12">
 <ul class="list-inline margin-bottom-none">
 <li><a lang="fr" href="content-fr.html">Français</a></li>
 </ul>
@@ -99,7 +99,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </div>
 </section>
 <div class="row">
-<div class="brand col-xs-8 col-sm-9 col-sm-6">
+<div class="brand col-xs-8 col-sm-9 col-md-6">
 <a href="http://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data="./assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
 </div>
 <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
@@ -335,11 +335,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="panel panel-default">
 							<header class="panel-heading"><h4 class="panel-title">Related Regulatory Activities</h4></header>
 							<div class="panel-body">
-						<div class="row">
-							<div class="col-sm-3 col-sm-offset-9">
-								<button class="btn btn-default btn-sm" onclick="addNewRelSubmission()" type="submit">Add Another Related Submission</button>
-							</div>
-						</div>
 						<ul id="raEnrolmentRelList" class="list-unstyled">
 							<li id="raEnrolmentRel1">
 								<details open="open">
@@ -394,10 +389,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<div id="raEnrolmentRel1DIN">
 								<div class="row">
 									<label for="raEnrolmentRel1DINLabel" class=" col-sm-10 control-label">Associated DINs</label>
-									<div class="form-group col-sm-2" id="raEnrolmentRel1DINAddBut">
-										<button class="btn btn-default btn-sm" type="submit" id="raEnrolmentRel1AddBut" onclick="addDIN(raEnrolmentRel1AddBut,'raEnrolmentRel1DIN')">Add a DIN</button>
-									</div>
 								</div>
+								<div id="raEnrolmentRel1DINRows">
 								<div class="row" id="raEnrolmentRel1DINRow1">
 									<!--
 									<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp">
@@ -462,11 +455,22 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										</div>
 									</div>
 								</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-sm-2" id="raEnrolmentRel1DINAddBut">
+										<button class="btn btn-default btn-sm" type="submit" id="raEnrolmentRel1AddBut" onclick="addDIN(raEnrolmentRel1AddBut,'raEnrolmentRel1DIN')">Add a DIN</button>
+									</div>
+								</div>
 							</div>
 							</div>
 							</details>
 							</li>
 						</ul>
+						<div class="row">
+							<div class="col-sm-4">
+								<button class="btn btn-info btn-sm" onclick="addNewRelSubmission()" type="submit">Add Another Related Submission</button>
+							</div>
+						</div>
 						</div>
 						</div>
 						</div>
@@ -819,7 +823,7 @@ var raRelCount = 1; //keeps track of the number of Related Regulatory Activity S
 var numOfRefProductsCreated = 1;
 //adds a new reference product
 function addNewRelSubmission() {
-	var newRelSub = '<li id="raEnrolmentRel1"><details open="open"><summary class="heightAdjust">Related Regulatory Activity 1 [Referred to in this Submission]<button class="btn btn-danger btn-xs deleteRef" onclick="deleteRelSubmission(raEnrolmentRel1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1ActivityType" class="control-label">Regulatory Activity Type:</label><div class=""><select class="form-control input-sm full-width" name="raEnrolmentRel1ActivityType" id="raEnrolmentRel1ActivityType"><option label=" "></option><option value="1"></option><option value="2"></option></select></div></div></div><div class="row"><div class="form-group col-sm-3"><label for="raEnrolmentRel1DateCleared" ><span class="field-name">Date Cleared</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label><input class="form-control input-sm full-width" type="date" id="raEnrolmentRel1DateCleared" name="raEnrolmentRel1DateCleared" data-rule-dateiso="true"></div><div class="form-group col-sm-3"><label for="raEnrolmentRel1ControlNo" class="control-label">Control No.</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ControlNo"></div></div><div class="form-group col-sm-3"><label for="raEnrolmentRel1FilNo" class="control-label">File No.</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1FilNo"></div></div></div><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1ManuName" class="control-label">Manufacturer / Sponsor Name [Full Legal Name - No Abbreviations]</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ManuName"></div></div></div><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1SubReason" class="control-label">Reason for Submission</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1SubReason"></div></div></div><div id="raEnrolmentRel1DIN"><div class="row"><label for="raEnrolmentRel1DINLabel" class=" col-sm-10 control-label">Associated DINs</label><div class="form-group col-sm-2" id="raEnrolmentRel1DINAddBut"><button class="btn btn-default btn-sm" type="submit" id="raEnrolmentRel1AddBut" onclick="addDIN(raEnrolmentRel1AddBut,\'raEnrolmentRel1DIN\')">Add a DIN</button></div></div><div class="row" id="raEnrolmentRel1DINRow1"><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN1DelBut" type="button"><span class="glyphicon glyphicon-remove removeSize"></span></button></span></div></div><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN2Grp"><label class="wb-inv" for="raEnrolmentRel1DIN2">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN2" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN2DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN2DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN3Grp"><label class="wb-inv" for="raEnrolmentRel1DIN3">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN3" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN3DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN3DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN4Grp"><label class="wb-inv" for="raEnrolmentRel1DIN4">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN4" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN4DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN4DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div></div></div></div></details></li>';
+	var newRelSub = '<li id="raEnrolmentRel1"><details open="open"><summary class="heightAdjust">Related Regulatory Activity 1 [Referred to in this Submission]<button class="btn btn-danger btn-xs deleteRef" onclick="deleteRelSubmission(raEnrolmentRel1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1ActivityType" class="control-label">Regulatory Activity Type:</label><div class=""><select class="form-control input-sm full-width" name="raEnrolmentRel1ActivityType" id="raEnrolmentRel1ActivityType"><option label=" "></option><option value="1"></option><option value="2"></option></select></div></div></div><div class="row"><div class="form-group col-sm-3"><label for="raEnrolmentRel1DateCleared" ><span class="field-name">Date Cleared</span><span class="datepicker-format"> (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span>: </label><input class="form-control input-sm full-width" type="date" id="raEnrolmentRel1DateCleared" name="raEnrolmentRel1DateCleared" data-rule-dateiso="true"></div><div class="form-group col-sm-3"><label for="raEnrolmentRel1ControlNo" class="control-label">Control No.</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ControlNo"></div></div><div class="form-group col-sm-3"><label for="raEnrolmentRel1FilNo" class="control-label">File No.</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1FilNo"></div></div></div><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1ManuName" class="control-label">Manufacturer / Sponsor Name [Full Legal Name - No Abbreviations]</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1ManuName"></div></div></div><div class="row"><div class="form-group col-sm-12"><label for="raEnrolmentRel1SubReason" class="control-label">Reason for Submission</label><div class=""><input type="text" class="form-control input-sm full-width" id="raEnrolmentRel1SubReason"></div></div></div><div id="raEnrolmentRel1DIN"><div class="row"><label for="raEnrolmentRel1DINLabel" class=" col-sm-10 control-label">Associated DINs</label></div><div id="raEnrolmentRel1DINRows"><div class="row" id="raEnrolmentRel1DINRow1"><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN1DelBut" type="button"><span class="glyphicon glyphicon-remove removeSize"></span></button></span></div></div><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN2Grp"><label class="wb-inv" for="raEnrolmentRel1DIN2">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN2" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN2DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN2DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN3Grp"><label class="wb-inv" for="raEnrolmentRel1DIN3">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN3" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN3DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN3DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-3 form-group" id="raEnrolmentRel1DIN4Grp"><label class="wb-inv" for="raEnrolmentRel1DIN4">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN4" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN4DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN4DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div></div></div></div><div class="row"><div class="form-group col-sm-2" id="raEnrolmentRel1DINAddBut"><button class="btn btn-default btn-sm" type="submit" id="raEnrolmentRel1AddBut" onclick="addDIN(raEnrolmentRel1AddBut,\'raEnrolmentRel1DIN\')">Add a DIN</button></div></div></div></details></li>';
 	//increment counter
 	raRelCount++;
 	numOfRefProductsCreated++;
@@ -875,13 +879,13 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
 //parameters: but = button; relId = related submission Id (i.e. relEnrolmentRel1DIN)
       function addDIN(but, relId) {
           //get the number of div.row
-          var raDINRowCount = ($('#' + relId + ' .row').length - 1);
+          var raDINRowCount = $('#' + relId + 'Rows .row').length;
           //count the number of DINs in each Row
           var raDINCount;
           if (raDINRowCount == 0) {
             raDINCount = 0;
           } else {
-            raDINCount = $('#' + relId).find('div.row div.col-sm-3').length;
+            raDINCount = $('#' + relId + 'Rows').find('div.row div.col-sm-3').length;
           }
 		  
 		  var defaultDIN = '<div class="col-sm-3 form-group" id="raEnrolmentRel1DIN1Grp"><label class="wb-inv" for="raEnrolmentRel1DIN1">DIN</label><div class="input-group"><input type="text" class="form-control input-sm col-sm-2" id="raEnrolmentRel1DIN1" placeholder=""><span class="input-group-btn"><button class="btn btn-danger btn-sm" onclick="deleteDIN(raEnrolmentRel1DIN1DelBut, \'raEnrolmentRel1DIN\')" id="raEnrolmentRel1DIN1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div>';
@@ -893,7 +897,7 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
 		  } else {
 		
 		//get the the id of the last DIN in the last row
-		var raLastDINId = $('#' + relId).find('div.row:eq(' + raDINRowCount + ') div.col-sm-3:last')[0].id;
+		var raLastDINId = $('#' + relId + 'Rows').find('div.row:eq(' + (raDINRowCount-1) + ') div.col-sm-3:last')[0].id;
 		var raLastDINIndex1 = raLastDINId.indexOf('DIN');
 		var raLastDINIndex2 = raLastDINId.indexOf('Grp');
 		var raLastDINIndexId = raLastDINId.substring(raLastDINIndex1 + 3, raLastDINIndex2);
@@ -913,7 +917,7 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
           if ((numOfDINsInLastRow%4 == 0) && (numOfDINsInLastRow != 0)) { //add new row (with newDIN) beneath
             raDINRowCount++;
             var newRow = '<div class="row" id="' + relId + 'Row' + raDINRowCount + '">' + newDIN + '</div>';
-            $('#' + relId).append(newRow);
+            $('#' + relId + 'Rows').append(newRow);
           } else { //do not add row
             $(lastRow).append(newDIN);
           }
@@ -939,7 +943,7 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
           var numOfDINsToGet;
           var numOfDINsInCurrentRow;
 		  //get the number of div.row
-          var raDINRowCount = $('#' + relId + ' .row').length;
+          var raDINRowCount = $('#' + relId + 'Rows .row').length;
           while (currentRowIndex < (raDINRowCount-1)) {
             //get the number of divs within the currentRow
             $(currentRow).each(function(i) {
@@ -947,7 +951,7 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
             });
             numOfDINsToGet = 4 - numOfDINsInCurrentRow;
             //get the next row after currentRow
-            var nextRow = $('#' + relId).find('div.row:eq(' + (currentRowIndex + 1) + ')');
+            var nextRow = $('#' + relId + 'Rows').find('div.row:eq(' + (currentRowIndex + 1) + ')');
             //get the DINs from the nextRow and move them to the currentRow
             for (var i = 0; i < numOfDINsToGet; i++) {
               var DINToGet = $(nextRow).find('div.col-sm-3:eq(' + i + ')');
@@ -956,11 +960,11 @@ function changeSuggestions(txtBoxCountryValue, txtBoxProvStateId) {
               //$(nextRow).find(DINToGet).remove();
             }
             currentRowIndex++;
-            currentRow = $("#" + relId + " div.row:eq(" + currentRowIndex + ")");
+            currentRow = $("#" + relId + "Rows div.row:eq(" + currentRowIndex + ")");
           }
           //if lastRow contains no elements, remove it
           if ($(currentRow).children().length == 0) {
-			if ((raDINRowCount-1) > 1) {
+			if ((raDINRowCount-1) >= 1) {
 				$(currentRow).remove();
             //raDINRowCount--;
 			}
