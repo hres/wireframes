@@ -189,21 +189,28 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 											<input type="text" class="form-control input-sm full-width" id="raCompanyId" placeholder="Enter Company Id" />
 										</div>
 									</div>
+									<div class="col-sm-5">
+										<label>Dossier Id</label>
+										<div class="input-group">
+										  <span class="input-group-addon input-sm" id="raEnrolmentDosIdPrefix">HC6-24-</span>
+										  <input type="text" class="form-control input-sm" value="Enter Dossier Id" aria-describedby="raEnrolmentDosIdPrefix">
+										</div>
+									</div>
+									<!--
 										<div style="padding-right: 0px; width: 95px" class="col-sm-2">
 											<div class="form-group">
 												<label for="raDossierId">Dossier Id</label>
-												<input class="form-control input-sm full-width" style="border-top-right-radius:0; border-bottom-right-radius:0; border:1px solid black; border-right:none"id="raDossierId" placeholder="HC6-24-" readonly="readonly" type="text">
-												
+												<input class="form-control input-sm full-width" style="border-top-right-radius:0; border-bottom-right-radius:0; border:1px solid black; border-right:none"id="raDossierId" value="HC6-24-" readonly="readonly" type="text">
 											</div>
 										</div>
 										
 										<div class="col-sm-4" style="padding-left:0px;">
 											<div class="form-group" style="padding-top: 28px;">
-
+												<label for="raDossierId2" style="visibility:hidden">Dossier</label>
 												<input type="text" class="form-control input-sm full-width" style="border-top-left-radius:0; border-bottom-left-radius:0; border:1px solid black; border-left:none"id="raDossierId2" placeholder="Enter Dossier Id" />
-												
 											</div>
 										</div>
+										-->
 								</div>
 							<div class="row">
 								<div class="col-sm-3">
@@ -296,18 +303,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								</div>
 							</div>
 								<div class="row">
-									<div class="col-sm-8">
 										<div class="form-group">
-											<label for="raEnrolmentSubThirdParty" class="control-label">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</label>
-										</div>
-									</div>
-									<div class="col-sm-2">
-										<div class="form-group">
-												<select class="form-control input-sm" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty" onchange="checkRaEnrolmentSubThirdPartySelection()">
+											<label for="raEnrolmentSubThirdParty" class="control-label col-sm-8">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</label>
+											<select class="form-control input-sm col-sm-2" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty" onchange="checkRaEnrolmentSubThirdPartySelection()">
 												<option label=" "></option>
 												<option value="1">Yes</option>
 												<option value="2">No</option>
-												</select>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -561,6 +563,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										</div>
 										<div class="row">
 											<div class="col-sm-12">
+												<label><input type="checkbox" value="" />Change in expiry period/storage conditions</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
 												<label><input type="checkbox" value="" onchange="otherCheckBox(this, otherRationale2)"> Other  (please specify):</label>
 											</div>
 										</div>
@@ -596,11 +603,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										<div class="row">
 											<div class="col-sm-12">
 												<label><input type="checkbox" value="" /> Change in packaging material composition</label>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-12">
-												<label><input type="checkbox" value="" />Change in expiry period/storage conditions</label>
 											</div>
 										</div>
 									</div>
