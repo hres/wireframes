@@ -321,7 +321,7 @@ text-decoration:none;
 }
 */
  .drugForm-full-tabs .appendix4-full-tabs ul li.active:not(.list-group-item) {
-	background-color: #5499c7!important;
+	background-color: #1C5E77 !important;
 }
 
 /*
@@ -354,7 +354,7 @@ text-decoration:none;
 	font-weight: bold;
 }
 .drugForm-full-tabs ul li.active:not(.list-group-item ) {
-	background-color: #249ED7 !important;
+	background-color: #135C8D !important;
 }
 
 
@@ -382,4 +382,28 @@ text-decoration:none;
 	background-color:#f9f9f9;
 	z-index:10000;
 	border-bottom: 3px solid #af3c43;
+}
+
+/** Colour Contrast Analyzer  -> Changes **/
+.panel-primary {
+	border-color: #0C5A9F;
+}
+
+.panel-primary > .panel-heading {
+	background-color: #0C5A9F;
+	border-color: #0C5A9F;
+}
+
+.panel-warning > .panel-heading {
+	color: #634615;
+}
+
+.btn-danger {
+	background-color: #A71E1E;
+}
+
+details summary.panel-heading:focus {
+	outline:thin dotted;
+	outline:5px auto -webkit-focus-ring-color;
+	outline-offset:-2px;
 }
