@@ -401,9 +401,21 @@ var prevURL = readCookie("currentURL");
 var canRefProductCounter = 1; //keeps track of number of current referenced products
 var numOfRefProductsCreated = 1;
 
+//For Keyboard Focus on "Delete" buttons
+$(document).on('keydown', '.delItem', function(e) {
+	var code = (e.keyCode ? e.keyCode : e.which);
+	var delButId = $(this).attr('id');
+    if (code == 13) {
+        //alert('Enter Key Pressed');
+		if (delButId.contains('CanRefProduct')) { //Canadian Reference Product
+			deleteRefProduct(this);
+		}
+    }
+});
+
 //adds a new reference product
 function addNewRefProduct() {
-	var newRefProduct = '<li id="doAmendCanRefProduct1"><details open="open"><summary class="heightAdjust">Canadian Reference Product 1<button class="btn btn-danger btn-xs deleteRef" disabled="true" onclick="deleteRefProduct(doAmendCanRefProduct1)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1BrandName">Brand Name</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1BrandName" placeholder="Enter Name" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1MedIngre">Medicinal Ingredient*</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1MedIngre" placeholder="Enter Ingredient" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-4"><label for="doAmendCanRefProduct1Dosage" class="control-label">Dosage Form:*</label><div class=""><select class="form-control input-sm full-width" name="doAmendCanRefProduct1Dosage" id="doAmendCanRefProductDosage" disabled="true"><option label=" "></option><option value="1">Biologic</option><option value="2">Pharmaceutical</option><option value="3">Drug Master File</option><option value="4">Medical Device</option></select></div></div><div class="form-group col-sm-4"><label for="doAmendCanRefProduct1Strength">Strength(s)*</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1Strength" placeholder="Strength(s)" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1CoName">Company Name</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1CoName" placeholder="Enter Name" disabled="true"/></div></div></div></div></li>';
+	var newRefProduct = '<li id="doAmendCanRefProduct1"><details open="open"><summary tabindex="0" class="heightAdjust">Canadian Reference Product 1<button id="doAmendCanRefProduct1DelBut" class="btn btn-danger btn-xs deleteRef delItem" disabled="true" onclick="deleteRefProduct()" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1BrandName">Brand Name</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1BrandName" placeholder="Enter Name" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1MedIngre">Medicinal Ingredient*</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1MedIngre" placeholder="Enter Ingredient" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-4"><label for="doAmendCanRefProduct1Dosage" class="control-label">Dosage Form:*</label><div class=""><select class="form-control input-sm full-width" name="doAmendCanRefProduct1Dosage" id="doAmendCanRefProductDosage" disabled="true"><option label=" "></option><option value="1">Biologic</option><option value="2">Pharmaceutical</option><option value="3">Drug Master File</option><option value="4">Medical Device</option></select></div></div><div class="form-group col-sm-4"><label for="doAmendCanRefProduct1Strength">Strength(s)*</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1Strength" placeholder="Strength(s)" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1CoName">Company Name</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1CoName" placeholder="Enter Name" disabled="true"/></div></div></div></div></li>';
 	//increment counter
 	canRefProductCounter++;
 	numOfRefProductsCreated++;
@@ -420,9 +432,10 @@ function replaceAll(str, find, rep) {
 }
 */
 //deletes a reference product
-function deleteRefProduct(i) {
-	var removedItemIndex = $('#doAmendCanRefProductList').find(i).index();
-	$('#doAmendCanRefProductList').find(i).remove();
+function deleteRefProduct(delBut) {
+	var closestLi = $(delBut).closest('li');
+	var removedItemIndex = $(closestLi).index();
+	$(closestLi).remove();
 	//decrement counter
 	canRefProductCounter--;
 	
@@ -438,15 +451,6 @@ function deleteRefProduct(i) {
 		//items[n].id = newLabel;
 	}
 }
-
-/*
-function enableDisableDivArray(opt, contentArray) {
-	for (var i = 0; i < contentArray.length; i++) {
-		$(contentArray[i]).find('input, select, button').not('.readOnly').each(function() {
-			$(this).prop("disabled", !(opt.checked));
-		});
-	}
-}*/
 </script>
 </body>
 </html>
