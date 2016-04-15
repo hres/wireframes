@@ -133,7 +133,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	<br /><br />
 	<div id="step1A" class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">STEP 1A - Select Product Line</h3>
+            <h2 class="panel-title">STEP 1A - Select Product Line</h2>
 		</div>
 		<div class="panel-body">
 			<div class="form-group">
@@ -152,7 +152,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	
 	<div id="step1B" class="panel panel-primary">
 		<div class="panel-heading">
-			<h3 class="panel-title">STEP 1B - Select Enrolment Type</h3>
+			<h2 class="panel-title">STEP 1B - Select Enrolment Type</h2>
 		</div>
 		<div class="panel-body">
 		<div class="row" id="selectEnrolType">
@@ -200,7 +200,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<div class="col-sm-12">
 								<div class="form-group">
 									<label for="enrolDrftFileUpload">Upload DRAFT Enrolment file</label>
-									<input type="file" id="enrolDrftFileUpload" accept="text/xml"/>
+									<input type="file" class="uploadFile" id="enrolDrftFileUpload" name="enrolDrftFileUpload" accept="text/xml"/>
 								</div>
 							</div>
 						</div>
@@ -221,7 +221,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<div class="col-sm-12">
 								<div class="form-group">
 									<label for="enrolAmdFileUpload">Upload Enrolment file that you wish to AMEND</label>
-									<input type="file" id="enrolAmdFileUpload" accept="text/xml"/>
+									<input type="file" class="uploadFile" id="enrolAmdFileUpload" name="enrolAmdFileUpload" accept="text/xml"/>
 								</div>
 							</div>
 						</div>
@@ -250,15 +250,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<div class="form-group">
 						<div class="form-group">
 							<label for="rtCOFileUpload">Upload and confirm your Company Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtCOFileUpload"   accept="text/xml"/>
+							<input type="file" id="rtCOFileUpload" name="rtCOFileUpload"  accept="text/xml"/>
 						</div>
 						<div class="form-group">
 							<label for="rtDOFileUpload">Upload and confirm your Dossier Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtDOFileUpload"   accept="text/xml"/>
+							<input type="file" id="rtDOFileUpload" name="rtDOFileUpload"  accept="text/xml"/>
 						</div>
 						<div class="form-group">
 							<label for="rtRAFileUpload">Upload and confirm your Regulatory Activity Enrolment file that you wish to create a regulatory transaction for:</label>
-							<input type="file" id="rtRAFileUpload"   accept="text/xml"/>
+							<input type="file" id="rtRAFileUpload"  name="rtRAFileUpload" accept="text/xml"/>
 						</div>
 						<div class="checkbox">
 						<label><input type="checkbox" id="rtCheck1"  onclick="rtCheck()" /> I confirm that the uploaded files are the most current version of the
@@ -926,6 +926,15 @@ $(document).on('keydown', '.delRefContact', function(e) {
         //alert('Enter Key Pressed');
 		deleteContact(this);
     }
+});
+
+//For Keyboard Focus on "Browse" buttons
+$(document).on('keydown', '.uploadFile', function(e) {
+     var key = (e.keyCode ? e.keyCode : e.which);
+	 if (key == '13') {
+        //key.preventDefault();
+         $(this).click();
+      }
 });
 
 function deleteContact(delBut) {
