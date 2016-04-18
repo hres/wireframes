@@ -282,7 +282,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 											</details>
 										</li>
 									</ul>
-									<div class="row">
+									<div class="row marginTop-15">
 										<div class="col-sm-4">
 											<button class="btn btn-info btn-sm" onclick="addNewRefProduct()" type="submit">Add Another Canadian Reference Product</button>
 										</div>
@@ -3461,23 +3461,6 @@ function delFromList(delBut, labelTitleWithoutId) {
 	}*/
 }
 
-/** Re-label li items by changing label text in summary
-- labelTItleWithoutId: prefix statement of label (i.e. Medicinal Ingredient ____)
-- ulParent: parent ul containing the li item
-- toRemoveIndex: index of the li item before it is removed from ulParent
-**/
-function relabelLiItems(labelTitleWithoutId, ulParent, toRemoveIndex) {
-	//re-label list after item was deleted
-	var totalItems = $(ulParent).children('li');
-	var counter = $(totalItems).length;
-	//Starting from the end of the list (start at the last li in ulParent), decrement n to change the label until toRemoveIndex is reached
-	for (var n = counter-1; n >= toRemoveIndex; n--) {
-		var text = $(totalItems[n]).find('summary')[0].innerHTML;
-		var newStr = text.replace(labelTitleWithoutId + ' ' + (n+2), labelTitleWithoutId + ' ' + (n+1));
-		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
-	}
-}
-
 function findIndexById(arraytosearch, valuetosearch) {
 	for (var i = 0; i < arraytosearch.length; i++) {
 		if (arraytosearch[i].id == valuetosearch) {
@@ -4406,24 +4389,6 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 		}
 		//set # of route of administration
 		drugFormArray[index].routeOfAdmCount--;
-	}
-}
-
-//when other is selected as route of administration
-function otherSelect(select, valueToCompare, input) {
-	if ($(select).val() == valueToCompare) {
-		$(input).css('display', 'block');
-	} else {
-		$(input).css('display', 'none');
-	}
-}
-
-//when other is selected as route of administration
-function otherSelectVisibility(select, valueToCompare, input) {
-	if ($(select).val() == valueToCompare) {
-		$(input).css('visibility', 'visible');
-	} else {
-		$(input).css('visibility', 'visible');
 	}
 }
 
