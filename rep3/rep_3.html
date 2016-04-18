@@ -126,7 +126,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     	<li><a href="rep_1.html" class="boldFont" id="navStep1">Step 1</a></li>
     	<li><a href="#" class="boldFont" id="navStep2">Step 2</a></li>
     	<li class="active"><a href="#" class="boldFont" id="navStep3">Step 3</a></li>
-		<li><a class="boldFont" href="rep_HCInternal.html" id="navStep4">HC Internal</a></li>
+		<li><a class="boldFont" href="#" id="navStep4">HC Internal</a></li>
     </ul>
 </div>
 <section>
@@ -248,9 +248,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 						<div class="row">
 						<div class="form-group col-sm-3">
-							<label for="enrolAttestAuthTelNo" class="control-label">Telephone No</label>
+							<label for="enrolAttestAuthTelNo" class="control-label">Telephone Number</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthTelNo" placeholder="Enter Telephone No." >
+								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthTelNo" placeholder="Enter Telephone Number" >
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
@@ -260,9 +260,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
-							<label for="enrolAttestAuthFaxNo" class="control-label">Fax No.</label>
+							<label for="enrolAttestAuthFaxNo" class="control-label">Fax Number</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthFaxNo" placeholder="Enter Fax No." >
+								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthFaxNo" placeholder="Enter Fax Number" >
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
@@ -458,6 +458,7 @@ function displayContent() {
 		$('#enrolStep3AttestC').css('display', 'none');
 		$('#enrolAttestAuthSameAs').css('display', 'block');
 		$('#navStep2').prop('href', 'rep_2_regTransaction.html');
+		$('#navStep4').prop('href', '');
 		$('#returnBut').prop('href', 'rep_2_regTransaction.html');
 	} else {
 		changeNavPills(navREP, '');
