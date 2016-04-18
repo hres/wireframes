@@ -216,46 +216,83 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="panel-body" id="doEnrolmentAmendCanRefBody">
 			<ul id="doAmendCanRefProductList" class="list-unstyled">
 				<li id="doAmendCanRefProduct1">
-					<details open="open">
-						<summary class="heightAdjust">Canadian Reference Product 1</summary>
+					<details open="open" class="doMainDetails">
+						<summary class="heightAdjust">Canadian Reference Product 1<button class="btn btn-danger btn-xs deleteRef delItem" id="doAmendCanRefProduct1DelBut" disabled="true" onclick="deleteFromList(this, 'Product')" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary>
 						<!--Canadian Reference Product-->
 			
 				<!-- <h4>Canadian Reference Product</h4> -->
 				<div class="well well-sm">
 				<div class="row">
 					<div class="form-group col-sm-12">
-						<label for="doAmendCanRefProductBrandName1">Brand Name:</label>
-						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProductBrandName1" placeholder="Enter Name" disabled="true"/>
+						<label for="doAmendCanRefProduct1BrandName">Brand Name:</label>
+						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1BrandName" placeholder="Enter Name" disabled="true"/>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-sm-12">
-						<label for="doAmendCanRefProductMedIngre1">Medicinal Ingredient*</label>
-						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProductMedIngre1" placeholder="Enter Ingredient" disabled="true"/>
+						<label for="doAmendCanRefProduct1MedIngre">Medicinal Ingredient</label>
+						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1MedIngre" placeholder="Enter Ingredient" disabled="true"/>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-sm-4">
-						<label for="doAmendCanRefProductDosage1" class="control-label">Dosage Form:*</label>
+						<label for="doAmendCanRefProduct1Dosage" class="control-label">Dosage Form:</label>
 						<div class="">
-							<select class="form-control input-sm full-width" name="doAmendCanRefProductDosage1" id="doAmendCanRefProductDosage1" disabled="true">
+							<select class="form-control input-sm full-width" name="doAmendCanRefProduct1Dosage" onchange="otherSelect(this, 'Other', doAmendCanRefProduct1DosageOther)" id="doAmendCanRefProduct1Dosage" >
 								<option label=" "></option>
-								<option value="1">Biologic</option>
-								<option value="2">Pharmaceutical</option>
-								<option value="3">Drug Master File</option>
-								<option value="4">Medical Device</option>
+								<option value="Aerosol">Aerosol</option>
+								<option value="Bolus">Bolus</option>
+								<option value="Capsule">Capsule</option>
+								<option value="Capsule, Delayed Release">Capsule, Delayed Release</option>
+								<option value="Capsule, Extended Release">Capsule, Extended Release</option>
+								<option value="Cream">Cream</option>
+								<option value="Emulsion">Emulsion</option>
+								<option value="Gas">Gas</option>
+								<option value="Gel">Gel</option>
+								<option value="Implant">Implant</option>
+								<option value="Lotion">Lotion</option>
+								<option value="Lozenge">Lozenge</option>
+								<option value="Ointment">Ointment</option>
+								<option value="Patch">Patch</option>
+								<option value="Patch, Extended-Release">Patch, Extended-Release</option>
+								<option value="Powder">Powder</option>
+								<option value="Powder For Solution">Powder For Solution</option>
+								<option value="Powder For Suspension">Powder For Suspension</option>
+								<option value="Shampoo">Shampoo</option>
+								<option value="Solution">Solution</option>
+								<option value="Spray">Spray</option>
+								<option value="Spray, Bag-On-Valve">Spray, Bag-On-Valve</option>
+								<option value="Spray, Metered Dose">Spray, Metered Dose</option>
+								<option value="Stick">Stick</option>
+								<option value="Strip">Strip</option>
+								<option value="Suppository">Suppository</option>
+								<option value="Suspension">Suspension</option>
+								<option value="Syrup">Syrup</option>
+								<option value="Tablet">Tablet</option>
+								<option value="Tablet, Chewable">Tablet, Chewable</option>
+								<option value="Tablet, Delayed Release">Tablet, Delayed Release</option>
+								<option value="Tablet, Extended Release">Tablet, Extended Release</option>
+								<option value="Tablet, Orally Disintegrating">Tablet, Orally Disintegrating</option>
+								<option value="Wipe">Wipe</option>
+								<option value="Other">Other</option>
 							</select>
 						</div>
 						</div>
 					<div class="form-group col-sm-4">
-						<label for="doAmendCanRefProductStrength1">Strength(s)*</label>
-						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProductStrength1" placeholder="Strength(s)" disabled="true"/>
+						<label for="doAmendCanRefProduct1Strength">Strength(s)</label>
+						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1Strength" placeholder="Strength(s)" disabled="true"/>
+					</div>
+				</div>
+				<div id="doAmendCanRefProduct1DosageOther" class="row" style="display:none">
+					<div class="col-sm-6">
+						<label class="control-label normalLabel" for="">Dosage Form Details</label>
+						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1DosageOther" disabled="true"/>
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-sm-12">
-						<label for="doAmendCanRefProductCoName1">Company Name</label>
-						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProductCoName1" placeholder="Enter Name" disabled="true"/>
+						<label for="doAmendCanRefProduct1CoName">Company Name</label>
+						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1CoName" placeholder="Enter Name" disabled="true"/>
 					</div>
 				</div>
 				</div>
@@ -415,6 +452,7 @@ $(document).on('keydown', '.delItem', function(e) {
 
 //adds a new reference product
 function addNewRefProduct() {
+	/*
 	var newRefProduct = '<li id="doAmendCanRefProduct1"><details open="open"><summary tabindex="0" class="heightAdjust">Canadian Reference Product 1<button id="doAmendCanRefProduct1DelBut" class="btn btn-danger btn-xs deleteRef delItem" disabled="true" onclick="deleteRefProduct()" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div class="well well-sm"><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1BrandName">Brand Name</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1BrandName" placeholder="Enter Name" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1MedIngre">Medicinal Ingredient*</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1MedIngre" placeholder="Enter Ingredient" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-4"><label for="doAmendCanRefProduct1Dosage" class="control-label">Dosage Form:*</label><div class=""><select class="form-control input-sm full-width" name="doAmendCanRefProduct1Dosage" id="doAmendCanRefProductDosage" disabled="true"><option label=" "></option><option value="1">Biologic</option><option value="2">Pharmaceutical</option><option value="3">Drug Master File</option><option value="4">Medical Device</option></select></div></div><div class="form-group col-sm-4"><label for="doAmendCanRefProduct1Strength">Strength(s)*</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1Strength" placeholder="Strength(s)" disabled="true"/></div></div><div class="row"><div class="form-group col-sm-12"><label for="doAmendCanRefProduct1CoName">Company Name</label><input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1CoName" placeholder="Enter Name" disabled="true"/></div></div></div></div></li>';
 	//increment counter
 	canRefProductCounter++;
@@ -424,6 +462,25 @@ function addNewRefProduct() {
 	var newId = newRefProduct.replace(/doAmendCanRefProduct1/g, 'doAmendCanRefProduct' + canRefProductCounter);
 	newId = newId.replace('Product 1', 'Product ' + numOfRefProductsCreated);
 	$('#doAmendCanRefProductList').append(newId);
+	*/
+	
+	var refProductListId = $('#doAmendCanRefProductList');
+
+	//increment counter
+	canRefProductCounter = $(refProductListId).children('li').length + 1;
+	numOfRefProductsCreated++;
+	
+	var productForm = $(refProductListId).find('li:eq(0)').clone();
+	$(productForm).find('input[type=text]').val('');
+	$(productForm).find('select').val('0'); //must change for all selects
+	
+	var productFormHTML = $(productForm).prop('outerHTML');
+	productFormHTML = productFormHTML.replace(/doAmendCanRefProduct1/g, 'doAmendCanRefProduct' + numOfRefProductsCreated);
+	productFormHTML = productFormHTML.replace('Product 1', 'Product ' + canRefProductCounter);
+	$(refProductListId).append(productFormHTML);
+	
+	//hide dosage form details
+	$('#doAmendCanRefProduct' + numOfRefProductsCreated + 'DosageOther').css('display', 'none');
 
 }
 /*
@@ -432,7 +489,8 @@ function replaceAll(str, find, rep) {
 }
 */
 //deletes a reference product
-function deleteRefProduct(delBut) {
+//function deleteRefProduct(delBut) {
+	/*
 	var closestLi = $(delBut).closest('li');
 	var removedItemIndex = $(closestLi).index();
 	$(closestLi).remove();
@@ -450,6 +508,26 @@ function deleteRefProduct(delBut) {
 		$(items[n]).find('summary')[0].innerHTML = newStr;
 		//items[n].id = newLabel;
 	}
+	*/
+/*deletes from a ul list
+The li element and ul element are determined based on the delBut.
+The summaryLabelText is the label text in the summary of the li element that will be replacedRouteOfAdm*/
+function deleteFromList(delBut, summaryLabelText) {
+	var closestLi = $(delBut).closest('li');
+	var closestLiId = $(closestLi).attr('id');
+	var ulParent = $(closestLi).parent('ul')[0];
+	
+	var toRemoveIndex = $(closestLi).index();
+	if ($(ulParent).children('li').length == 1) {
+		//reset all inputs
+		$(closestLi).find('input[type=text], select').each(function() {
+			$(this).val('');
+		});
+	} else {
+		$(closestLi).remove();
+	}
+	
+	relabelLiItems(summaryLabelText, ulParent, toRemoveIndex);
 }
 </script>
 </body>
