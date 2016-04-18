@@ -117,9 +117,13 @@ label.hiddenLabel {
 	height: 100%;
 }
 
-.dropdown-submenu:hover > .dropdown-menu {
+.dropdown-submenu:hover   > .dropdown-menu {
 	display:block;
 	top: 0px!important;
+	outline:thin dotted;
+	outline:5px auto -webkit-focus-ring-color;
+	outline-offset:-2px;
+	/*overflow-x:scroll;*/
 }
 
 .dropdown-submenu>a:after{
@@ -137,12 +141,12 @@ label.hiddenLabel {
 }
 
 .scroll-menu {
-	overflow-x:hidden;
+	/*overflow-x:auto;*/
 	overflow-y: auto;
 	max-height: 350px;
 }
 
-.dropdown-submenu:hover>a:after{
+.dropdown-submenu:hover  >a:after{
 	border-left-color:#ffffff;
 }
 
