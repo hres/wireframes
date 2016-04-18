@@ -127,3 +127,38 @@ $(window).bind('scroll', function () {
         $('.nvg').removeClass('fixed');
     }
 });
+
+/** Re-label li items by changing label text in summary
+- labelTItleWithoutId: prefix statement of label (i.e. Medicinal Ingredient ____)
+- ulParent: parent ul containing the li item
+- toRemoveIndex: index of the li item before it is removed from ulParent
+**/
+function relabelLiItems(labelTitleWithoutId, ulParent, toRemoveIndex) {
+	//re-label list after item was deleted
+	var totalItems = $(ulParent).children('li');
+	var counter = $(totalItems).length;
+	//Starting from the end of the list (start at the last li in ulParent), decrement n to change the label until toRemoveIndex is reached
+	for (var n = counter-1; n >= toRemoveIndex; n--) {
+		var text = $(totalItems[n]).find('summary')[0].innerHTML;
+		var newStr = text.replace(labelTitleWithoutId + ' ' + (n+2), labelTitleWithoutId + ' ' + (n+1));
+		$(totalItems[n]).find('summary')[0].innerHTML = newStr;
+	}
+}
+
+//when other is selected, set input element's display to block, otherwise none
+function otherSelect(select, valueToCompare, input) {
+	if ($(select).val() == valueToCompare) {
+		$(input).css('display', 'block');
+	} else {
+		$(input).css('display', 'none');
+	}
+}
+
+//when other is selected, set input element's visibility to visible, otherwise hidden
+function otherSelectVisibility(select, valueToCompare, input) {
+	if ($(select).val() == valueToCompare) {
+		$(input).css('visibility', 'visible');
+	} else {
+		$(input).css('visibility', 'hidden');
+	}
+}
