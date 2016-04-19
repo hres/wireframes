@@ -131,7 +131,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <section>
 
 	<br /><br />
-	<p>TEST</p>
+
 	<div id="step1A" class="panel panel-primary">
         <div class="panel-heading">
             <h2 class="panel-title">STEP 1A - Select Product Line</h2>
@@ -158,20 +158,20 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		<div class="panel-body">
 		<div class="row" id="selectEnrolType">
 			<div class="col-sm-8">
-			<div class="form-group"> 
-				<!-- <p><strong>Select a specific Inspection Line for additional search options:</strong> -->
-				<p>
-				<select id="iline" name="iline" required="" onchange="checkEnrolTypeSelection()" disabled="true">
-				<option value=""></option>
-				<option value="co">Company (CO)</option>
-				<option value="do">Dossier (DO)</option>
-				<option value="ra">Regulatory Activity (RA)</option>
-				<option value="rt">Regulatory Transaction (RT)</option>
-				</select>
-				</p>
+				<div class="form-group"> 
+					<!-- <p><strong>Select a specific Inspection Line for additional search options:</strong> -->
+					<p>
+						<select id="iline" name="iline" required="" onchange="checkEnrolTypeSelection()" disabled="true">
+							<option value=""></option>
+							<option value="co">Company (CO)</option>
+							<option value="do">Dossier (DO)</option>
+							<option value="ra">Regulatory Activity (RA)</option>
+							<option value="rt">Regulatory Transaction (RT)</option>
+						</select>
+					</p>
 				</div>
 			</div>
-			</div>
+		</div>
 			
 			<div id="enrolType" style="display: none;">
 				<div class="well well-sm">
@@ -248,7 +248,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</div>
 	
 				<div id="rtType" style="display: none;">
-					<div class="form-group">
+					<div class="row">
 						<div class="form-group">
 							<label for="rtCOFileUpload">Upload and confirm your Company Enrolment file that you wish to create a regulatory transaction for:</label>
 							<input type="file" id="rtCOFileUpload" name="rtCOFileUpload"  accept="text/xml"/>
@@ -262,11 +262,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<input type="file" id="rtRAFileUpload"  name="rtRAFileUpload" accept="text/xml"/>
 						</div>
 						<div class="checkbox">
-						<label><input type="checkbox" id="rtCheck1"  onclick="rtCheck()" /> I confirm that the uploaded files are the most current version of the
+						<label><input type="checkbox" id="rtCheck1"  name="rtCheck1" onclick="rtCheck()" /> I confirm that the uploaded files are the most current version of the
 Enrolment XML files.</label>
 						</div>
 						<div class="checkbox">
-							<label><input type="checkbox" id="rtCheck2"  onclick="rtCheck()" /> I confirm that All the information within the enrolment files are
+							<label><input type="checkbox" id="rtCheck2" name="rtCheck2" onclick="rtCheck()" /> I confirm that All the information within the enrolment files are
 current and that NOTHING has changed. (i.e.: no changes to
 Company information, Brand Name, Common name, Dossier
 information, Regulatory Activity information)</label>
@@ -313,34 +313,26 @@ information, Regulatory Activity information)</label>
 					<div class="row">
 						<div class="form-group col-sm-2">
 							<label for="contactInfo1Salutation" class="control-label">Salutation*</label>
-                            <div class="">
-                                <select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" >
-                                    <option value="0"></option>
-                                    <option value="1">Mr.</option>
-                                    <option value="2">Mrs.</option>
-                                    <option value="3">Ms.</option>
-									<option value="4">Dr.</option>
-                                </select>
-                            </div>
+							<select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" >
+								<option value="0"></option>
+								<option value="1">Mr.</option>
+								<option value="2">Mrs.</option>
+								<option value="3">Ms.</option>
+								<option value="4">Dr.</option>
+							</select>
 						</div>
 						
 						<div class="form-group col-sm-3">
 							<label for="contactInfo1GivenName" class="control-label">Given Name*</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name" >
-							</div>
+							<input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" name="contactInfo1GivenName" placeholder="Enter Given Name" >
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="contactInfo1Surname" class="control-label">Surname*</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  >
-							</div>
+							<input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" name="contactInfo1Surname" placeholder="Enter Surname"  >
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="contactInfo1Title" class="control-label">Title*</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title"  >
-							</div>
+							<input type="text" class="form-control full-width input-sm" id="contactInfo1Title" name="contactInfo1Title" placeholder="Enter Title"  >
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="contactInfo1Lang" class="control-label">Language</label>
@@ -354,27 +346,19 @@ information, Regulatory Activity information)</label>
 					<div class="row">
 						<div class="form-group col-sm-3">
 							<label for="contactInfo1TelNo" class="control-label">Telephone Number*</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone Number"  >
-							</div>
+							<input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" name="contactInfo1TelNo" placeholder="Enter Telephone Number"  >
 						</div>
 						<div class="form-group col-sm-2">
-							<label for="contactInfo1TelExt" class="control-label">Ext</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  >
-							</div>
+							<label for="contactInfo1TelExt" class="control-label">Extension</label>
+							<input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" name="contactInfo1TelExt" placeholder="Enter Extension"  >
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="contactInfo1Email" class="control-label">Email*</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  />
-							</div>
+							<input type="text" class="form-control full-width input-sm" id="contactInfo1Email" name="contactInfo1Email" placeholder="Enter Email"  />
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="contactInfo1FaxNo" class="control-label">Fax Number</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax Number"  >
-							</div>
+							<input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" name="contactInfo1FaxNo" placeholder="Enter Fax Number"  >
 						</div>
 					</div>
 					<!-- </form> -->
@@ -389,133 +373,6 @@ information, Regulatory Activity information)</label>
 					<button class="btn btn-info btn-sm" id="contactAddBut" onclick="addNewContact()" type="submit">Add Another Contact</button>
 				</div>
 			</div>
-			<!--
-			<h4>Main Contact Information (Recommended: Two Contact Submissions)</h4>
-			<div id="MCInfo" class="wb-frmvld well well-sm">
-				
-					<div class="row">
-						<div class="form-group col-sm-2">
-							<label for="MCInfoSalutation" class="control-label">Salutation*</label>
-                            <div class="">
-                                <select class="form-control full-width input-sm" name="MCInfoSalutation" id="MCInfoSalutation" >
-                                    <option label=" "></option>
-                                    <option value="1">Mr.</option>
-                                    <option value="2">Mrs.</option>
-                                    <option value="3">Ms.</option>
-									<option value="4">Dr.</option>
-                                </select>
-                            </div>
-						</div>
-						
-						<div class="form-group col-sm-4">
-							<label for="MCInfoGivenName" class="control-label">Given Name*</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoGivenName" placeholder="Enter Given Name" >
-							</div>
-						</div>
-						<div class="form-group col-sm-4">
-							<label for="MCInfoSurname" class="control-label">Surname*</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoSurname" placeholder="Enter Surname"  >
-							</div>
-						</div>
-						<div class="form-group col-sm-2">
-							<label for="MCInfoTitle" class="control-label">Title*</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoTitle" placeholder="Enter Title"  >
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-sm-3">
-							<label for="MCInfoTelNo" class="control-label">Telephone No*</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoTelNo" placeholder="Enter Telephone No."  >
-							</div>
-						</div>
-						<div class="form-group col-sm-2">
-							<label for="MCInfoTelExt" class="control-label">Ext</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoTelExt" placeholder="Enter Extension"  >
-							</div>
-						</div>
-						<div class="form-group col-sm-4">
-							<label for="MCInfoEmail" class="control-label">Email*</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoEmail" placeholder="Enter Email"  />
-							</div>
-						</div>
-						<div class="form-group col-sm-3">
-							<label for="MCInfoFaxNo" class="control-label">Fax No.</label>
-							<div class="">
-								<input type="text" class="form-control full-width input-sm" id="MCInfoFaxNo" placeholder="Enter Fax No."  >
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<h4>Secondary Contact Information</h4>
-			<div id="SCInfo" class="wb-frmvld well well-sm">
-				
-					<div class="row">
-						<div class="form-group col-sm-2">
-							<label for="SCInfoSalutation" class="control-label">Salutation*</label>
-                            <div class="">
-                                <select class="form-control full-width" name="SCInfoSalutation" id="SCInfoSalutation" >
-                                    <option label=" "></option>
-                                    <option value="1">Mr.</option>
-                                    <option value="2">Mrs.</option>
-                                    <option value="3">Ms.</option>
-									<option value="4">Dr.</option>
-                                </select>
-                            </div>
-						</div>
-						<div class="form-group col-sm-4">
-							<label for="SCInfoGivenName" class="control-label">Given Name*</label>
-							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoGivenName" placeholder="Enter Given Name"  >
-							</div>
-						</div>
-						<div class="form-group col-sm-4">
-							<label for="SCInfoSurname" class="control-label">Surname*</label>
-							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoSurname" placeholder="Enter Surname"  >
-							</div>
-						</div>
-						<div class="form-group col-sm-2">
-							<label for="SCInfoTitle" class="control-label">Title*</label>
-							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoTitle" placeholder="Enter Title"  >
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-sm-3">
-							<label for="SCInfoTelNo" class="control-label">Telephone No*</label>
-							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoTelNo" placeholder="Enter Telephone No."  >
-							</div>
-						</div>
-						<div class="form-group col-sm-2">
-							<label for="SCInfoTelExt" class="control-label">Ext</label>
-							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoTelExt" placeholder="Enter Extension"  >
-							</div>
-						</div>
-						<div class="form-group col-sm-4">
-							<label for="SCInfoEmail" class="control-label">Email*</label>
-							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoEmail" placeholder="Enter Email"  >
-							</div>
-						</div>
-						<div class="form-group col-sm-3">
-							<label for="SCInfoFaxNo" class="control-label">Fax No.</label>
-							<div class="">
-								<input type="text" class="form-control full-width" id="SCInfoFaxNo" placeholder="Enter Fax No."  >
-							</div>
-						</div>
-					</div>
-			</div> -->
 </div>
 </div>
 <div class="panel-footer text-center">
@@ -917,14 +774,20 @@ function changeLabelText(elementForArray, txtToChangeToArray, bolAddAfterNextEle
 //adds contact
 function addNewContact() {
 	if (contactCounter < 3) {
-		var newContact = '<li id="contactInfo1"><details open="open"><summary tabindex="0">Main Contact Information <button class="btn btn-danger btn-xs deleteRef delRefContact" onclick="deleteContact(this)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary><div id="contactInfo1Main" class="wb-frmvld well well-sm"><div class="row"><div class="form-group col-sm-2"><label for="contactInfo1Salutation" class="control-label">Salutation*</label><div class=""><select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" ><option value=""></option><option value="1">Mr.</option><option value="2">Mrs.</option><option value="3">Ms.</option><option value="4">Dr.</option></select></div></div><div class="form-group col-sm-3"><label for="contactInfo1GivenName" class="control-label">Given Name*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1GivenName" placeholder="Enter Given Name"></div></div><div class="form-group col-sm-3"><label for="contactInfo1Surname" class="control-label">Surname*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Surname" placeholder="Enter Surname"  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Title" class="control-label">Title*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Title" placeholder="Enter Title" ></div></div><div class="form-group col-sm-2"><label for="contactInfo1Lang" class="control-label">Language</label><select id="contactInfo1Lang" name="contact1InfoLang" class="form-control input-sm full-width"><option value=""></option><option value="1">English</option><option value="2">French</option></select></div></div><div class="row"><div class="form-group col-sm-3"><label for="contactInfo1TelNo" class="control-label">Telephone No*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelNo" placeholder="Enter Telephone Number"  ></div></div><div class="form-group col-sm-2"><label for="contactInfo1TelExt" class="control-label">Ext</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1TelExt" placeholder="Enter Extension"  ></div></div><div class="form-group col-sm-4"><label for="contactInfo1Email" class="control-label">Email*</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1Email" placeholder="Enter Email"  /></div></div><div class="form-group col-sm-3"><label for="contactInfo1FaxNo" class="control-label">Fax Number</label><div class=""><input type="text" class="form-control full-width input-sm" id="contactInfo1FaxNo" placeholder="Enter Fax Number"  ></div></div></div></div></details></li>';
+		var delBut = '<button class="btn btn-danger btn-xs deleteRef delRefContact" onclick="deleteContact(this)" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete this contact</button>';
+		
 		//increment counter
 		contactCounter++;
 		numOfContactsCreated++;
+		var clone = $('#contactInfo1').clone();
+		var cloneHTML = $(clone).prop('outerHTML');
+		
 		//replace substrings
-		var newId = newContact.replace(/contactInfo1/g, 'contactInfo' + numOfContactsCreated);
-		newId = newId.replace('Main', contactArray[contactCounter-1]);
-		$('#contactInfoList').append(newId);
+		cloneHTML = cloneHTML.replace(/contactInfo1/g, 'contactInfo' + numOfContactsCreated);
+		cloneHTML = cloneHTML.replace('Main Contact Information (Recommended: Two Contact Submissions)', contactArray[contactCounter-1] + ' Contact Information');
+
+		$('#contactInfoList').append(cloneHTML);
+		$('#contactInfo' + numOfContactsCreated).find("summary").append(delBut);
 	}
 	//disable "Add Contact" Button when # of contacts > 3
 	if (contactCounter == 3) {
@@ -962,14 +825,9 @@ function deleteContact(delBut) {
 	
 	var items = document.getElementById('contactInfoList').getElementsByTagName('li');
 	for (var n = contactCounter-1; n >= removedItemIndex; n--) {
-		//var currLabel = 'contactInfo' + (n+2);
-		//var newLabel = 'contactInfo' + (n+1);
-		//var currContent = items[n].innerHTML;
-		//var newContent = replaceAll(currContent, currLabel, newLabel);
 		var text = $(items[n]).find('summary')[0].innerHTML;
 		var newStr = text.replace(contactArray[n+1], contactArray[n]);
 		$(items[n]).find('summary')[0].innerHTML = newStr;
-		//items[n].id = newLabel;
 	}
 	//re-enable "Add Contact Button"
 	$('#contactAddBut').prop('disabled', false);
@@ -984,15 +842,6 @@ function rtCheck() {
 		$('#nextStep2but').prop('href', '');
 	}
 }
-
-/*
-function enableDisableDivArray(opt, contentArray) {
-	for (var i = 0; i < contentArray.length; i++) {
-		$(contentArray[i]).find('input, select').not('.readOnly').each(function() {
-			$(this).prop("disabled", !(opt.checked));
-		});
-	}
-}*/
 </script>
 </body>
 </html>
