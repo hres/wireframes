@@ -144,58 +144,58 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<h3 class="panel-tile marginTop-15">A - Dossier Information</h3>
 						</div>
 						<div class="col-sm-4">
-							<div class="checkbox">
-								<label><input id="doEnrolmentAmendMainInfo" type="checkbox" value="" onclick="enableDisableDivArray(this, [doAmendMainInfoBody])" />Amend Dossier Info.</label>
-							</div>
+							<fieldset>
+								<div class="checkbox">
+									<label><input id="doEnrolmentAmendMainInfo" type="checkbox" value="" onclick="enableDisableDivArray(this, [doAmendMainInfoBody])" />Amend Dossier Info.</label>
+								</div>
+							</fieldset>
 						</div>
 					</div>
 				</header>
-			<div class="panel-body" id="doAmendMainInfoBody">
-			<div class="row">
-				<div class="form-group col-sm-4">
-					<label for="doAmendCompanyId">Company Id</label>
-					<input type="text" class="form-control input-sm full-width readOnly" disabled="true" id="doAmendCompanyId" placeholder="Enter Company Id" />
+				<div class="panel-body" id="doAmendMainInfoBody">
+					<div class="row">
+						<div class="form-group col-sm-4">
+							<label for="doAmendCompanyId">Company Id</label>
+							<input type="text" class="form-control input-sm full-width readOnly" disabled="true" id="doAmendCompanyId" name="doAmendCompanyId" placeholder="Enter Company Id" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-4">
+							<label for="doAmendEnrolmentType" class="control-label">Dossier Type*</label>
+							<select class="form-control input-sm full-width readOnly" name="doAmendEnrolmentType" id="doAmendEnrolmentType" disabled="true">
+								<option label=" "></option>
+								<option value="1">Biologic</option>
+								<option value="2">Pharmaceutical</option>
+								<option value="3">Drug Master File</option>
+								<option value="4">Medical Device</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-12">
+							<label for="doAmendEnrolmentProductName">Brand or Proprietary or Product Name (should be the same as the brand name on the product label)*</label>
+							<input type="text" class="form-control input-sm full-width" id="doAmendEnrolmentProductName" name="doAmendEnrolmentProductName" placeholder="Enter Name" disabled="true"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-12">
+							<label for="doAmendEnrolmentProductName">Proper, Common or Non-Propietary Name*</label>
+							<input type="text" class="form-control input-sm full-width" id="doAmendEnrolmentProductName" name="doAmendEnrolmentProductName" placeholder="Enter Name" disabled="true"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-8">
+							<label for="doAmendEnrolmentId">Related Dossier ID [If applicable]</label>
+							<input type="text" class="form-control input-sm full-width readOnly" id="doAmendEnrolmentId" name="doAmendEnrolmentId" placeholder="Enter ID" readonly />
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-sm-8">
+							<label for="doAmendEnrolmentClassification">Therapeutic Classification:*</label>
+							<input type="text" class="form-control input-sm full-width" id="doAmendEnrolmentClassification" name="doAmendEnrolmentClassification" placeholder="Enter Classification" disabled="true"/>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-sm-4">
-					<label for="doAmendEnrolmentType" class="control-label">Dossier Type*</label>
-                     <div class="">
-						<select class="form-control input-sm full-width readOnly" name="doAmendEnrolmentType" id="doAmendEnrolmentType" disabled="true">
-                            <option label=" "></option>
-                            <option value="1">Biologic</option>
-                            <option value="2">Pharmaceutical</option>
-							<option value="3">Drug Master File</option>
-							<option value="4">Medical Device</option>
-                        </select>
-                    </div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-sm-12">
-					<label for="doAmendEnrolmentProductName">Brand or Proprietary or Product Name (should be the same as the brand name on the product label)*</label>
-					<input type="text" class="form-control input-sm full-width" id="doAmendEnrolmentProductName" placeholder="Enter Name" disabled="true"/>
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-sm-12">
-					<label for="doAmendEnrolmentProductName">Proper, Common or Non-Propietary Name*</label>
-					<input type="text" class="form-control input-sm full-width" id="doAmendEnrolmentProductName" placeholder="Enter Name" disabled="true"/>
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-sm-8">
-					<label for="doAmendEnrolmentId">Related Dossier ID [If applicable]</label>
-					<input type="text" class="form-control input-sm full-width readOnly" id="doAmendEnrolmentId" placeholder="Enter ID" readonly />
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-sm-8">
-					<label for="doAmendEnrolmentClassification">Therapeutic Classification:*</label>
-					<input type="text" class="form-control input-sm full-width" id="doAmendEnrolmentClassification" placeholder="Enter Classification" disabled="true"/>
-				</div>
-			</div>
-			</div>
 			</div>
 			<!-- end of main information-->
 			
@@ -207,119 +207,122 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<h3 class="panel-title marginTop-15">B - Canadian Reference Product</h3>
 						</div>
 						<div class="col-sm-4">
-							<div class="checkbox">
-								<label><input id="doEnrolmentAmendCanRefInfo" type="checkbox" value="" onclick="enableDisableDivArray(this, [doEnrolmentAmendCanRefBody])" />Amend Canadian Reference Product Info.</label>
-							</div>
+							<fieldset>
+								<div class="checkbox">
+									<label><input id="doEnrolmentAmendCanRefInfo" type="checkbox" value="" onclick="enableDisableDivArray(this, [doEnrolmentAmendCanRefBody])" />Amend Canadian Reference Product Info.</label>
+								</div>
+							</fieldset>
 						</div>
 					</div>
 				</header>
 				<div class="panel-body" id="doEnrolmentAmendCanRefBody">
-			<ul id="doAmendCanRefProductList" class="list-unstyled">
-				<li id="doAmendCanRefProduct1">
-					<details open="open" class="doMainDetails">
-						<summary class="heightAdjust">Canadian Reference Product 1<button class="btn btn-danger btn-xs deleteRef delItem" id="doAmendCanRefProduct1DelBut" disabled="true" onclick="deleteFromList(this, 'Product')" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete</button></summary>
-						<!--Canadian Reference Product-->
-			
-				<!-- <h4>Canadian Reference Product</h4> -->
-				<div class="well well-sm">
-				<div class="row">
-					<div class="form-group col-sm-12">
-						<label for="doAmendCanRefProduct1BrandName">Brand Name:</label>
-						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1BrandName" placeholder="Enter Name" disabled="true"/>
-					</div>
-				</div>
-				<div class="row">
-					<div class="form-group col-sm-12">
-						<label for="doAmendCanRefProduct1MedIngre">Medicinal Ingredient</label>
-						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1MedIngre" placeholder="Enter Ingredient" disabled="true"/>
-					</div>
-				</div>
-				<div class="row">
-					<div class="form-group col-sm-4">
-						<label for="doAmendCanRefProduct1Dosage" class="control-label">Dosage Form:</label>
-						<div class="">
-							<select class="form-control input-sm full-width" name="doAmendCanRefProduct1Dosage" onchange="otherSelect(this, 'Other', doAmendCanRefProduct1DosageOther)" id="doAmendCanRefProduct1Dosage" >
-								<option label=" "></option>
-								<option value="Aerosol">Aerosol</option>
-								<option value="Bolus">Bolus</option>
-								<option value="Capsule">Capsule</option>
-								<option value="Capsule, Delayed Release">Capsule, Delayed Release</option>
-								<option value="Capsule, Extended Release">Capsule, Extended Release</option>
-								<option value="Cream">Cream</option>
-								<option value="Emulsion">Emulsion</option>
-								<option value="Gas">Gas</option>
-								<option value="Gel">Gel</option>
-								<option value="Implant">Implant</option>
-								<option value="Lotion">Lotion</option>
-								<option value="Lozenge">Lozenge</option>
-								<option value="Ointment">Ointment</option>
-								<option value="Patch">Patch</option>
-								<option value="Patch, Extended-Release">Patch, Extended-Release</option>
-								<option value="Powder">Powder</option>
-								<option value="Powder For Solution">Powder For Solution</option>
-								<option value="Powder For Suspension">Powder For Suspension</option>
-								<option value="Shampoo">Shampoo</option>
-								<option value="Solution">Solution</option>
-								<option value="Spray">Spray</option>
-								<option value="Spray, Bag-On-Valve">Spray, Bag-On-Valve</option>
-								<option value="Spray, Metered Dose">Spray, Metered Dose</option>
-								<option value="Stick">Stick</option>
-								<option value="Strip">Strip</option>
-								<option value="Suppository">Suppository</option>
-								<option value="Suspension">Suspension</option>
-								<option value="Syrup">Syrup</option>
-								<option value="Tablet">Tablet</option>
-								<option value="Tablet, Chewable">Tablet, Chewable</option>
-								<option value="Tablet, Delayed Release">Tablet, Delayed Release</option>
-								<option value="Tablet, Extended Release">Tablet, Extended Release</option>
-								<option value="Tablet, Orally Disintegrating">Tablet, Orally Disintegrating</option>
-								<option value="Wipe">Wipe</option>
-								<option value="Other">Other</option>
-							</select>
+					<ul id="doAmendCanRefProductList" class="list-unstyled">
+						<li id="doAmendCanRefProduct1">
+							<details open="open" class="doMainDetails">
+								<summary class="heightAdjust">Canadian Reference Product 1<button class="btn btn-danger btn-xs deleteRef delItem" id="doAmendCanRefProduct1DelBut" disabled="true" onclick="deleteFromList(this, 'Product')" type="submit"><span class="glyphicon glyphicon-trash"></span> Delete this reference product</button></summary>
+								<!--Canadian Reference Product-->
+					
+						<!-- <h4>Canadian Reference Product</h4> -->
+								<div class="well well-sm">
+									<div class="row">
+										<div class="form-group col-sm-12">
+											<label for="doAmendCanRefProduct1BrandName">Brand Name:</label>
+											<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1BrandName" name="doAmendCanRefProduct1BrandName" placeholder="Enter Name" disabled="true"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-sm-12">
+											<label for="doAmendCanRefProduct1MedIngre">Medicinal Ingredient</label>
+											<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1MedIngre" name="doAmendCanRefProduct1MedIngre" placeholder="Enter Ingredient" disabled="true"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-sm-4">
+											<label for="doAmendCanRefProduct1Dosage" class="control-label">Dosage Form:</label>
+											<div class="">
+												<select class="form-control input-sm full-width" name="doAmendCanRefProduct1Dosage" onchange="otherSelect(this, 'Other', doAmendCanRefProduct1DosageOther)" id="doAmendCanRefProduct1Dosage" >
+													<option label=" "></option>
+													<option value="Aerosol">Aerosol</option>
+													<option value="Bolus">Bolus</option>
+													<option value="Capsule">Capsule</option>
+													<option value="Capsule, Delayed Release">Capsule, Delayed Release</option>
+													<option value="Capsule, Extended Release">Capsule, Extended Release</option>
+													<option value="Cream">Cream</option>
+													<option value="Emulsion">Emulsion</option>
+													<option value="Gas">Gas</option>
+													<option value="Gel">Gel</option>
+													<option value="Implant">Implant</option>
+													<option value="Lotion">Lotion</option>
+													<option value="Lozenge">Lozenge</option>
+													<option value="Ointment">Ointment</option>
+													<option value="Patch">Patch</option>
+													<option value="Patch, Extended-Release">Patch, Extended-Release</option>
+													<option value="Powder">Powder</option>
+													<option value="Powder For Solution">Powder For Solution</option>
+													<option value="Powder For Suspension">Powder For Suspension</option>
+													<option value="Shampoo">Shampoo</option>
+													<option value="Solution">Solution</option>
+													<option value="Spray">Spray</option>
+													<option value="Spray, Bag-On-Valve">Spray, Bag-On-Valve</option>
+													<option value="Spray, Metered Dose">Spray, Metered Dose</option>
+													<option value="Stick">Stick</option>
+													<option value="Strip">Strip</option>
+													<option value="Suppository">Suppository</option>
+													<option value="Suspension">Suspension</option>
+													<option value="Syrup">Syrup</option>
+													<option value="Tablet">Tablet</option>
+													<option value="Tablet, Chewable">Tablet, Chewable</option>
+													<option value="Tablet, Delayed Release">Tablet, Delayed Release</option>
+													<option value="Tablet, Extended Release">Tablet, Extended Release</option>
+													<option value="Tablet, Orally Disintegrating">Tablet, Orally Disintegrating</option>
+													<option value="Wipe">Wipe</option>
+													<option value="Other">Other</option>
+												</select>
+											</div>
+											</div>
+										<div class="form-group col-sm-4">
+											<label for="doAmendCanRefProduct1Strength">Strength(s)</label>
+											<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1Strength" name="doAmendCanRefProduct1Strength" placeholder="Strength(s)" disabled="true"/>
+										</div>
+									</div>
+									<div id="doAmendCanRefProduct1DosageOther" class="row" style="display:none">
+										<div class="col-sm-6">
+											<label class="control-label normalLabel" for="">Dosage Form Details</label>
+											<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1DosageOther" name="doAmendCanRefProduct1DosageOther" disabled="true"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-sm-12">
+											<label for="doAmendCanRefProduct1CoName">Company Name</label>
+											<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1CoName" name="doAmendCanRefProduct1DosageOther" placeholder="Enter Name" disabled="true"/>
+										</div>
+									</div>
+								</div>
+					<!-- end of main Canadian Reference Product-->
+							</details>
+						</li>
+					</ul>
+					<div class="row">
+						<div class="col-sm-4">
+							<button class="btn btn-info btn-sm" disabled="true" onclick="addNewRefProduct(); enableDisableDivArray(doEnrolmentAmendCanRefInfo, [doAmendCanRefProductList])" type="submit">Add Another Canadian Reference Product</button>
 						</div>
-						</div>
-					<div class="form-group col-sm-4">
-						<label for="doAmendCanRefProduct1Strength">Strength(s)</label>
-						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1Strength" placeholder="Strength(s)" disabled="true"/>
 					</div>
-				</div>
-				<div id="doAmendCanRefProduct1DosageOther" class="row" style="display:none">
-					<div class="col-sm-6">
-						<label class="control-label normalLabel" for="">Dosage Form Details</label>
-						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1DosageOther" disabled="true"/>
-					</div>
-				</div>
-				<div class="row">
-					<div class="form-group col-sm-12">
-						<label for="doAmendCanRefProduct1CoName">Company Name</label>
-						<input type="text" class="form-control input-sm full-width" id="doAmendCanRefProduct1CoName" placeholder="Enter Name" disabled="true"/>
-					</div>
-				</div>
-				</div>
-			<!-- end of main Canadian Reference Product-->
-					</details>
-				</li>
-			</ul>
-			<div class="row">
-				<div class="col-sm-4">
-					<button class="btn btn-info btn-sm" disabled="true" onclick="addNewRefProduct(); enableDisableDivArray(doEnrolmentAmendCanRefInfo, [doAmendCanRefProductList])" type="submit">Add Another Canadian Reference Product</button>
 				</div>
 			</div>
-		</div>
-		</div>
-		<div class="row">
+			<div class="row">
 				<div class="col-sm-12">
 					<label class="control-label" for="doAmendReasonForAmend">Reason for filing this Amendment</label>
 					<textarea class="form-control input-sm full-width" id="doAmendReasonForAmend" rows="4" cols="col-sm-12"></textarea>
 				</div>
-		</div>
+			</div>
 		
-	</div><!-- end of Step 2 Company Enrolment-->
-<div class="panel-footer text-center">
-        <div class="form-group mrgn-bttm-0">
-            <a class="btn btn-primary" href="rep_1.html">&lt; Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
-        </div>
-</div>
+		</div><!-- end of Step 2 Company Enrolment-->
+		<div class="panel-footer text-center">
+				<div class="form-group mrgn-bttm-0">
+					<a class="btn btn-primary" href="rep_1.html">&lt; Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
+				</div>
+		</div>
+	</div>
 </section>
 <div class="form-group">
 <div class="col-sm-offset-3 col-sm-9">
