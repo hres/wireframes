@@ -143,7 +143,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</header>
 				<div class="panel-body">
 				<h4>Company Information:</h4>
-				<div id="coEnrolmentManuCompInfo" class="well well-sm">
+				<div id="coEnrolmentManuCompInfo" class="well well-sm" style="margin-bottom: 0px">
 					<div class="row">
 						<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 							<div class="form-group col-sm-12">
@@ -154,7 +154,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 				</div>
 				<h4>Address Information:</h4>
-				<div id="coEnrolmentManuAddrInfo" class="well well-sm">
+				<div id="coEnrolmentManuAddrInfo" class="well well-sm"  style="margin-bottom: 0px">
 						<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 						<div class="row">
 							<div class="form-group col-sm-12">
@@ -498,10 +498,19 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-sm-5">
 						<h4>Company Representative Information:</h4>
 					</div>
-					<div class="col-sm-5 col-sm-offset-1">
+					<legend class="label-like col-sm-5" style="color: rgb(176, 21, 21); padding-top:26px">Same as Main Contact Information (From Step 1a)?</legend>
+					<fieldset class="col-sm-2" style="padding-top:26px">
+						<div class="radio-inline">
+							<label for="coEnrolmentManuCompRepSameAsMain1"><input type="radio" onclick="prePopulate(['coEnrolmentManuCompRepInfo'], 'true')" name="coEnrolmentManuCompRepSameAsMain" value="1" id="coEnrolmentManuCompRepSameAsMain1" />&#160;&#160;Yes</label>
+						</div>
+						<div class="radio-inline">
+							<label for="coEnrolmentManuCompRepSameAsMain2"><input type="radio"  onclick="prePopulate(['coEnrolmentManuCompRepInfo'], 'false')" name="coEnrolmentManuCompRepSameAsMain" value="2" id="coEnrolmentManuCompRepSameAsMain2" />&#160;&#160;No</label>
+						</div>
+					</fieldset>
+					<!--<div class="col-sm-5 col-sm-offset-1">
 						<p style="color: rgb(176, 21, 21)" class="boldFont">Same as Main Contact Information (From Step 1a)?</p>
 					</div>
 					<div class="col-sm-2">
@@ -513,7 +522,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								<label for="coEnrolmentManuCompRepSameAsMain2"><input type="radio"  onclick="prePopulate(['coEnrolmentManuCompRepInfo'], 'false')" name="coEnrolmentManuCompRepSameAsMain" value="2" id="coEnrolmentManuCompRepSameAsMain2" />&#160;&#160;No</label>
 							</div>
 						</fieldset>
-					</div>
+					</div>-->
 				</div>
 				<div id="coEnrolmentManuCompRepInfo" class="well well-sm">
 						<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
