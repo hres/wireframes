@@ -161,8 +161,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="form-group"> 
 					<!-- <p><strong>Select a specific Inspection Line for additional search options:</strong> -->
 					<p>
-						<select id="iline" name="iline" required="" onchange="checkEnrolTypeSelection()" disabled="true">
-							<option value=""></option>
+						<select id="iline" name="iline" required="" onchange="checkEnrolTypeSelection()" disabled>
+							<!--<option value=""></option>-->
+							<option disabled selected value> -- Select an option -- </option>
 							<option value="co">Company (CO)</option>
 							<option value="do">Dossier (DO)</option>
 							<option value="ra">Regulatory Activity (RA)</option>
@@ -314,7 +315,7 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-2">
 							<label for="contactInfo1Salutation" class="control-label">Salutation*</label>
 							<select class="form-control full-width input-sm" name="contactInfo1Salutation" id="contactInfo1Salutation" >
-								<option value="0"></option>
+								<option disabled selected value> -- Select a salutation -- </option>
 								<option value="1">Mr.</option>
 								<option value="2">Mrs.</option>
 								<option value="3">Ms.</option>
@@ -337,7 +338,7 @@ information, Regulatory Activity information)</label>
 						<div class="form-group col-sm-2">
 							<label for="contactInfo1Lang" class="control-label">Language</label>
 							<select id="contactInfo1Lang" name="contact1InfoLang" class="form-control input-sm full-width">
-								<option value=""></option>
+								<option disabled selected value> -- Select a language -- </option>
 								<option value="1">English</option>
 								<option value="2">French</option>
 							</select>
@@ -386,7 +387,6 @@ information, Regulatory Activity information)</label>
 
 </div>
 </div>
-</form>
 <div class="row pagedetails">
 <div class="col-xs-6 datemod">
 <dl id="wb-dtmd">
