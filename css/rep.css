@@ -411,3 +411,28 @@ details summary.panel-heading:focus {
 	outline:5px auto -webkit-focus-ring-color;
 	outline-offset:-2px;
 }
+
+
+.alert {
+    padding: 20px;
+    background-color: #4099FF; /* Blue */
+    color: white;
+    margin-bottom: 15px;
+    opacity: 1;
+    transition: opacity 0.6s; // 600ms to fade out
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: black;
+}
