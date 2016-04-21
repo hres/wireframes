@@ -436,3 +436,29 @@ details summary.panel-heading:focus {
 .closebtn:hover {
     color: black;
 }
+
+.label-like {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size:medium;
+	border: none;
+}
+
+/*
+ * Row with equal height columns (doesn't work for IE9 and below)
+ * --------------------------------------------------
+ */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Move to bottom of a container */
+.moveToBottom {
+	position: absolute;
+	bottom:0px;
+}
