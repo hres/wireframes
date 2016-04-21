@@ -180,13 +180,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<div class="form-group col-sm-4">
 						<label for="raEnrolmentAmendCompanyId">Company Id</label>
-						<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompanyId" placeholder="Enter Company Id" />
+						<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompanyId" name="raEnrolmentAmendCompanyId" placeholder="Enter Company Id" />
 					</div>
 					<div class="col-sm-5">
 						<label>Dossier Id</label>
 						<div class="input-group">
 						  <span class="input-group-addon input-sm" id="raEnrolmentAmendDosIdPrefix">HC6-24-</span>
-						  <input type="text" class="form-control input-sm" value="Enter Dossier Id" aria-describedby="raEnrolmentAmendDosIdPrefix">
+						  <input type="text" class="form-control input-sm" value="Enter Dossier Id" id="raEnrolmentAmmendDossierId" name="raEnrolmentAmmendDossierId" aria-describedby="raEnrolmentAmendDosIdPrefix">
 						</div>
 					</div>
 					<!--
@@ -210,7 +210,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="row">
 				<div class="form group col-sm-3">
 					<div class="checkbox">
-						<label><input id="raEnrolmentAmendActivityInfoChk" type="checkbox" value="" onclick="enableDisableDivArray(this, [raEnrolmentAmendActivityInfo])" />Amend Reg. Activity Info.</label>
+						<label><input id="raEnrolmentAmendActivityInfoChk" name="raEnrolmentAmendActivityInfoChk" type="checkbox" value="" onclick="enableDisableDivArray(this, [raEnrolmentAmendActivityInfo])" />Amend Reg. Activity Info.</label>
 					</div>
 				</div>
 				<div id="raEnrolmentAmendActivityInfo">
@@ -219,10 +219,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<label for="raEnrolmentAmendActivityType" class="control-label">Regulatory Activity Type*</label>
 					</div>
 					<div class="col-sm-8">
-						<!--<input class="form-control input-sm full-width" type="text" id="raEnrolmentAmendActivityType" name="raEnrolmentAmendActivityType" list="raRegActivityTypeSuggestions" disabled="true"/>-->
-						<select class="form-control input-sm full-width" id="raEnrolmentAmendActivityType" disabled="true">
+						<!--<input class="form-control input-sm full-width" type="text" id="raEnrolmentAmendActivityType" name="raEnrolmentAmendActivityType" list="raRegActivityTypeSuggestions" disabled/>-->
+						<select class="form-control input-sm full-width" id="raEnrolmentAmendActivityType" name="raEnrolmentAmendActivityType" disabled>
 							<!--[if lte IE 9]><select><![endif]-->
-							<option label=" "></option>
+							<option label=" " value selected disabled> -- Select a regulatory activity type --</option>
 							<option value="Abbreviated New Drug Submission (ANDS)">Abbreviated New Drug Submission (ANDS)</option>
 							<option value="Administrative manufacturer name/product name change/licensing agreements (ADMIN)">Administrative manufacturer name/product name change/licensing agreements (ADMIN)</option>
 							<option value="Clinical Trial Application (CTA)">Clinical Trial Application (CTA)</option>
@@ -250,15 +250,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<div class="col-sm-3 form-group">
 						<div class="checkbox">
-						<label><input id="raEnrolmentAmendThirdPartyInfoChk" type="checkbox" value="" onclick="enableDisableDivArray(this, [raEnrolmentAmendThirdPartyInfo])" />Amend Third Party info.</label>
+							<label><input id="raEnrolmentAmendThirdPartyInfoChk" name="raEnrolmentAmendThirdPartyInfoChk" type="checkbox" value="" onclick="enableDisableDivArray(this, [raEnrolmentAmendThirdPartyInfo])" />Amend Third Party info.</label>
 						</div>
 					</div>
 					<div class="col-sm-9" id="raEnrolmentAmendThirdPartyInfo">
 						<div class="row">
 							<div class="form-group">
 								<label for="raEnrolmentAmendSubThirdParty" class="col-sm-10 control-label">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?*</label>
-									<select class="col-sm-2 form-control input-sm" onchange="checkRaEnrolmentSubThirdPartySelection()" name="raEnrolmentAmendSubThirdParty" id="raEnrolmentAmendSubThirdParty" disabled="true">
-									<option label=" "></option>
+									<select class="col-sm-2 form-control input-sm" onchange="checkRaEnrolmentSubThirdPartySelection()" name="raEnrolmentAmendSubThirdParty" id="raEnrolmentAmendSubThirdParty" disabled>
+									<option label=" " value disabled selected> </option>
 									<option value="1">Yes</option>
 									<option value="2">No</option>
 									</select>
@@ -267,19 +267,20 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="row" id="raAutLetter" style="display:none">
 									<div class="col-sm-4">
 										<div class="form-group">
-											<label for="raAutLetterFileUpload" class="control-label" >Please upload Authorization letter:</label>
+											<p class="control-label label-like" >Please upload Authorization letter:</p>
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label class="wb-inv" for="uploadFile">Select File</label>
-											<input class="form-control input-sm full-width" id="uploadFile" placeholder="Select File" disabled="disabled" readonly />
+											<input class="form-control input-sm full-width" id="uploadFile" name="uploadFile" placeholder="Select File" disabled="disabled" readonly />
 										</div>
 									</div>
 									<div class="col-sm-2">
 										<div class="form-group fileUpload btn btn-primary btn-sm">
 											<span>Select file</span>
-											<input type="file"  class="full-width upload input-sm" onchange="uploadBtn()" id="raAutLetterFileUpload"/>
+											<label for="raAutLetterFileUpload" class="control-label wb-inv" >File Upload</label>
+											<input type="file"  class="full-width upload input-sm" onchange="uploadBtn()" name="raAutLetterFileUpload" id="raAutLetterFileUpload"/>
 										</div>
 									</div>
 								</div>
@@ -287,7 +288,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<!--<div class="row">
 							<div class="form-group">
 								<label for="raAutLetterFileUpload" class="col-sm-5">If YES, please upload Authorization letter:</label>
-								<input type="file" class="col-sm-7 input-sm" id="raAutLetterFileUpload" disabled="true"/>
+								<input type="file" class="col-sm-7 input-sm" id="raAutLetterFileUpload" disabled/>
 							</div>
 						</div>-->
 					</div>
@@ -303,7 +304,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-6">
 						<div class="checkbox">
-							<label><input id="raEnrolmentAmendRegActivityContact" type="checkbox" value="" onclick="enableDisableDivArray(this, [raEnrolmentAmendRegActivityContactBody])" />AMEND CONTACT MAILING ADDRESS [for THIS Regulatory Activity]:</label>
+							<label><input id="raEnrolmentAmendRegActivityContact" name="raEnrolmentAmendRegActivityContact" type="checkbox" value="" onclick="enableDisableDivArray(this, [raEnrolmentAmendRegActivityContactBody])" />AMEND CONTACT MAILING ADDRESS [for THIS Regulatory Activity]:</label>
 						</div>
 					</div>
 				</div>
@@ -317,7 +318,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-						<label><input id="raEnrolmentAmendCompInfoSamAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentAmendCompInfo)" disabled="true"/> Same as Manufacturer / Sponsor Company Information</label>
+						<label><input id="raEnrolmentAmendCompInfoSamAs" name="raEnrolmentAmendCompInfoSamAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentAmendCompInfo)" disabled/> Same as Manufacturer / Sponsor Company Information</label>
 					</div>
 					</div>
 				</div>
@@ -326,9 +327,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<!-- <form class="form-horizontal" role="form" method="get" action="#"> -->
 						<div class="form-group col-sm-8">
 							<label for="raEnrolmentAmendCompName" class="control-label">Company Name [Full Legal Name]*</label>
-							<div class="">
-								<input type="text" class="form-control input-sm  full-width" id="raEnrolmentAmendCompName" placeholder="Enter Company Name" disabled="true">
-							</div>
+							<input type="text" class="form-control input-sm  full-width" id="raEnrolmentAmendCompName" name="raEnrolmentAmendCompName" placeholder="Enter Company Name" disabled>
 						</div>
 					<!-- </form> -->
 				</div>
@@ -343,7 +342,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-							<label><input id="raEnrolmentAmendAddrInfoSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentAmendAddrInfo)" disabled="true"/> Same as Manufacturer / Sponsor Address Information</label>
+							<label><input id="raEnrolmentAmendAddrInfoSameAs" name="raEnrolmentAmendAddrInfoSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentAmendAddrInfo)" disabled /> Same as Manufacturer / Sponsor Address Information</label>
 						</div>
 					</div>
 				</div>
@@ -353,7 +352,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-12">
 							<label for="raEnrolmentAmendAddrStr" class="control-label">Street / Suite *</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendAddrStr" placeholder="Enter Street/Suite" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendAddrStr" name="raEnrolmentAmendAddrStr" placeholder="Enter Street/Suite" disabled>
 							</div>
 						</div>
 					</div>
@@ -361,12 +360,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAmendAddrCity" class="control-label">City / Town*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendAddrCity" placeholder="Enter City/Town" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendAddrCity" name="raEnrolmentAmendAddrCity" placeholder="Enter City/Town" disabled>
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAmendAddrCountry" class="control-label">Country*</label>
-							<input class="form-control input-sm full-width" type="text" id="raEnrolmentAmendAddrCountry" disabled="true" name="raEnrolmentAmendAddrCountry" list="CountrySuggestions" onchange="changeSuggestions(this.value, 'raEnrolmentAmendAddrProv')"/>
+							<input class="form-control input-sm full-width" type="text" id="raEnrolmentAmendAddrCountry" disabled name="raEnrolmentAmendAddrCountry" list="CountrySuggestions" onchange="changeSuggestions(this.value, 'raEnrolmentAmendAddrProv')"/>
 									<datalist id="CountrySuggestions">
 										<!--[if lte IE 9]><select><![endif]-->
 										<option label=" "></option>
@@ -614,7 +613,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAmendAddrProv" class="control-label">Province/State*</label>
-							<input class="form-control input-sm full-width" type="text" id="raEnrolmentAmendAddrProv" name="raEnrolmentAmendAddrProv" list="" disabled="true"/>
+							<input class="form-control input-sm full-width" type="text" id="raEnrolmentAmendAddrProv" name="raEnrolmentAmendAddrProv" disabled/>
 									<datalist id="canProvSuggestions">
 									<!--[if lte IE 9]><select><![endif]-->
 										<option label=" "></option>
@@ -690,7 +689,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAmendAddrPostal" class="control-label">Postal / ZIP Code*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendAddrPostal" placeholder="Enter Postal/ZIP Code" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendAddrPostal" placeholder="Enter Postal/ZIP Code" disabled>
 							</div>
 						</div>
 						</div>
@@ -706,7 +705,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-							<label><input id="raEnrolmentAmendCompRepInfoSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentAmendCompRepInfo)" disabled="true"/> Same as Manufacturer / Sponsor Contact Information</label>
+							<label><input id="raEnrolmentAmendCompRepInfoSameAs" name="raEnrolmentAmendCompRepInfoSameAs" type="checkbox" value="" onclick="ShowHideDivGen(this, raEnrolmentAmendCompRepInfo)" disabled/> Same as Manufacturer / Sponsor Contact Information</label>
 						</div>
 					</div>
 				</div>
@@ -716,7 +715,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentAmendCompRepSal" class="control-label">Salutation*</label>
                             <div class="">
-                                <select class="form-control input-sm full-width" name="raEnrolmentAmendCompRepSal" id="raEnrolmentAmendCompRepSal" disabled="true"/>
+                                <select class="form-control input-sm full-width" name="raEnrolmentAmendCompRepSal" id="raEnrolmentAmendCompRepSal" disabled>
                                     <option label=" "></option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -728,31 +727,31 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentAmendCompRepGivenName" class="control-label">Given Name*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepGivenName" placeholder="Enter Given Name" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepGivenName" name="raEnrolmentAmendCompRepGivenName" placeholder="Enter Given Name" disabled>
 							</div>
 						</div>
 						<div class="form-group col-sm-1">
 							<label for="raEnrolmentAmendCompRepInit" class="control-label">Initials</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepInit" placeholder="Enter Surname" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepInit" name="raEnrolmentAmendCompRepInit" placeholder="Enter Surname" disabled>
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAmendCompRepSurname" class="control-label">Surname*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepSurname" placeholder="Enter Surname" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepSurname" name="raEnrolmentAmendCompRepSurname" placeholder="Enter Surname" disabled>
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentAmendCompRepTitle" class="control-label">Title*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepTitle" placeholder="Enter Title" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepTitle" name="raEnrolmentAmendCompRepTitle" placeholder="Enter Title" disabled>
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentAmendCompRepLang" class="control-label">Language*</label>
                             <div class="">
-                                <select class="form-control input-sm full-width" name="raEnrolmentAmendCompRepLang" id="raEnrolmentAmendCompRepLang" disabled="true">
+                                <select class="form-control input-sm full-width" name="raEnrolmentAmendCompRepLang" id="raEnrolmentAmendCompRepLang" disabled>
                                     <option label=" "></option>
                                     <option value="1">English</option>
                                     <option value="2">French</option>
@@ -762,27 +761,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="row">
 						<div class="form-group col-sm-3">
-							<label for="raEnrolmentAmendCompRepTelNo" class="control-label">Telephone No*</label>
+							<label for="raEnrolmentAmendCompRepTelNo" class="control-label">Telephone Number</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepTelNo" placeholder="Enter Telephone No." disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepTelNo" name="raEnrolmentAmendCompRepTelNo" placeholder="Enter Telephone Number" disabled>
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentAmendCompRepTelExt" class="control-label">Ext</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepTelExt" placeholder="Enter Extension" disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepTelExt" name="raEnrolmentAmendCompRepTelExt" placeholder="Enter Extension" disabled>
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
-							<label for="raEnrolmentAmendCompRepFaxNo" class="control-label">Fax No.</label>
+							<label for="raEnrolmentAmendCompRepFaxNo" class="control-label">Fax Number</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepFaxNo" placeholder="Enter Fax No." disabled="true">
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepFaxNo" name="raEnrolmentAmendCompRepFaxNo" placeholder="Enter Fax Number" disabled>
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="raEnrolmentAmendCompRepEmail" class="control-label">Email*</label>
 							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepEmail" placeholder="Enter Email" disabled="true"/>
+								<input type="text" class="form-control input-sm full-width" id="raEnrolmentAmendCompRepEmail" name="raEnrolmentAmendCompRepEmail" placeholder="Enter Email" disabled />
 							</div>
 						</div>
 					<!-- </form> -->
@@ -805,7 +804,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 </div>
 </div>
-</form>
 <div class="row pagedetails">
 <div class="col-xs-6 datemod">
 <dl id="wb-dtmd">
