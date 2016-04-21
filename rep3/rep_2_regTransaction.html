@@ -212,11 +212,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="table-responsive">
 					<table id="ectdTable" class="ectdTableBorder">
 						<thead>
-							<th class="col-sm-1 boldFont">Sequence Number</th>
-							<th class="col-sm-2 boldFont">Date Field</th>
-							<th class="col-sm-1 boldFont">Control Number</th>
-							<th class="col-sm-7 boldFont">Sequence Description</th>
-							<!-- <th class="col-sm-1 boldFont noBorder"></th>-->
+							<tr>
+								<th class="col-sm-1 boldFont">Sequence Number</th>
+								<th class="col-sm-2 boldFont">Date Field</th>
+								<th class="col-sm-1 boldFont">Control Number</th>
+								<th class="col-sm-7 boldFont">Sequence Description</th>
+								<!-- <th class="col-sm-1 boldFont noBorder"></th>-->
+							</tr>
 						</thead>
 						<tbody>
 							<tr id="rtEctd1Row">
@@ -242,12 +244,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									<div class="col-sm-1" style="padding-left: 0">
 									<ul class="nav nav-pills">
 										<li class="dropdown">
-											<!--
-											<div class="col-sm-11">
-												<input type="text" class="form-control input-sm full-width"/>
-											</div>-->
-												<a data-toggle="dropdown" class="dropdown-toggle form-control input-sm" id="rtEctd1dropDownToggleBut" style="padding: 5px 10px;"><span class="smallIconAnchor glyphicon glyphicon-chevron-down"></span></a>
-											<ul class="dropdown-menu dropMenu" role="menu" aria-labelledby="dropdownMenu" style="display:none; position: static; margin-bottom: 5px; *width: 180px;">
+												<a data-toggle="dropdown" class="dropdown-toggle form-control input-sm" id="rtEctd1dropDownToggleBut" style="padding: 5px 10px;"><span class="smallIconAnchor glyphicon glyphicon-chevron-down"></span>
+												</a>
+											<ul class="dropdown-menu dropMenu" role="menu"  style="display:none; position: static; margin-bottom: 5px; *width: 180px;">
 											  <li class="dropdown-submenu">
 												<a tabindex="-1" class="filterMe pharma" id="pharma">Pharmaceutical</a>
 												<ul class="dropdown-menu">
@@ -990,8 +989,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										</li>
 									</ul>
 									</div>
+								</div>
 								</td>
-								<td class="col-sm-1 noBorder"></td>
+								<!-- <td class="col-sm-1 noBorder"></td> -->
 							</tr>
 						</tbody>
 					</table>
@@ -1069,13 +1069,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="form-group">
-							<label for="sequenceDescription" class="control-label">Sequence Description</labeL>
+							<label class="control-label">Sequence Description</labeL>
 						</div>
 					</div>
 					<div class="col-sm-8">
 						<div class="row">
 									<div class="col-sm-11" style="padding-right:0">
-										<div id="rtEctd1SeqDescDiv" class="seqDescDiv form-control input-sm full-width" style="height: 100%; overflow: auto"><div class="form-inline"> &nbsp;</div></div>
+										<div id="nonECTDrtEctd1SeqDescDiv" class="seqDescDiv form-control input-sm full-width" style="height: 100%; overflow: auto"><div id="sequenceDescription" class="form-inline"> &nbsp;</div></div>
 									</div>
 									<div class="col-sm-1" style="padding-left: 0">
 									<ul class="nav nav-pills">
@@ -1084,10 +1084,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 											<div class="col-sm-11">
 												<input type="text" class="form-control input-sm full-width"/>
 											</div>-->
-												<a data-toggle="dropdown" class="dropdown-toggle form-control input-sm" id="rtEctd1dropDownToggleBut" style="padding: 5px 10px;"><span class="smallIconAnchor glyphicon glyphicon-chevron-down"></span></a>
-											<ul class="dropdown-menu dropMenu" role="menu" aria-labelledby="dropdownMenu" style="display:none; position: static; margin-bottom: 5px; *width: 180px;">
+												<a data-toggle="dropdown" class="dropdown-toggle form-control input-sm" id="nonECTDrtEctd1dropDownToggleBut" style="padding: 5px 10px;"><span class="smallIconAnchor glyphicon glyphicon-chevron-down"></span></a>
+											<ul class="dropdown-menu dropMenu" role="menu" style="display:none; position: static; margin-bottom: 5px; *width: 180px;">
 											  <li class="dropdown-submenu">
-												<a tabindex="-1" class="filterMe pharma" id="pharma">Pharmaceutical</a>
+												<a tabindex="-1" class="filterMe pharma" id="nonECTDpharma">Pharmaceutical</a>
 												<ul class="dropdown-menu">
 													<li class="dropdown-submenu">
 														<a>All pre-submission meetings</a>
@@ -1451,7 +1451,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 												</ul>
 											  </li>
 											  <li class="dropdown-submenu">
-												<a tabindex="-1"  class="bio" id="bio">Biologic</a>
+												<a tabindex="-1"  class="bio" id="nonECTDbio">Biologic</a>
 												<ul class="dropdown-menu scrollable">
 													<li class="dropdown-submenu">
 														<a>All pre-submission meetings</a>
@@ -1951,10 +1951,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<div class="row" style="margin-top: 10px">
 				<div class="form-group">
 					<div class="col-sm-6">
-							<label for="" class="control-label">Same Regulatory Activity Contact for this transaction? [YES/NO]</label>
+							<label for="sameRegActCon" class="control-label">Same Regulatory Activity Contact for this transaction? [YES/NO]</label>
 					</div>
 					<div class="col-sm-2">
-						<select class="form-control input-sm" name="sameRegActivityContact" id="" onchange="checkSameRegActivityContactSelection(this)">
+						<select class="form-control input-sm" name="sameRegActivityContact" id="sameRegActCon" onchange="checkSameRegActivityContactSelection(this)">
 							<option label=" "></option>
 							<option value="1">Yes</option>
 							<option value="2">No</option>
@@ -2270,7 +2270,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAddrProv" class="control-label">Province/State</label>
-                            <input class="form-control input-sm full-width" id="raEnrolmentAddrProv" name="raEnrolmentAddrProv" list="" type="text">
+                            <input class="form-control input-sm full-width" id="raEnrolmentAddrProv" name="raEnrolmentAddrProv" type="text">
 									<datalist id="canProvSuggestions">
 									<!--[if lte IE 9]><select><![endif]-->
 										<option label=" "></option>
@@ -2471,7 +2471,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 </div>
 </div>
-</form>
+
 <div class="row pagedetails">
 <div class="col-xs-6 datemod">
 <dl id="wb-dtmd">
@@ -2570,7 +2570,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="../js/theme.min.js"></script>
 <script src="../js/rep.js"></script>
-<script type="text/javascript" id="">
+<script type="text/javascript">
 $(document).ready(function() {
    setCookie("currentURL",window.location.href);
    setCookie("typeREP", "rt");
