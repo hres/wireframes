@@ -140,28 +140,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		
 		<div id="mainInfo">
 			<div class="well well-sm">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="form-group">
-						<label for="rtEnrolmenteCTD" class="control-label">Is this an eCTD transaction?</label>
-						</div>
-					</div>
+				<div class="row form-group">
+					<label for="rtEnrolmenteCTD" class="control-label col-sm-4">Is this an eCTD transaction?</label>
 					<div class="col-sm-2">
-						<div class="form-group">
 						<select class="form-control input-sm" name="rtEnrolmenteCTD" id="rtEnrolmenteCTD" onchange="checkOptioneCTD(this)">
 							<option label=" "></option>
 							<option value="1">Yes</option>
 							<option value="2">No</option>
 						</select>
-						</div>
 					</div>
 				</div>		
-				<div class="row" id="rtInitialSeqDiv" style="display:none">
-					<div class="col-sm-4">
-						<div class="form-group">
-							<label for="rtEnrolmentInitialSeq" class="control-label">Is this transaction the initial sequence?</label>
-						</div>
-					</div>
+				<div class="row form-group" id="rtInitialSeqDiv" style="display:none">
+					<label for="rtEnrolmentInitialSeq" class="control-label col-sm-4">Is this transaction the initial sequence?</label>
 					<div class="col-sm-2">
 						<select class="form-control input-sm" name="rtEnrolmentInitialSeq" id="rtEnrolmentInitialSeq" onchange="checkSelectShowHide(this, [rtInitalSeq], ['0', '2']); checkSameRegActivityContactSelectionInitial(this)">
 							<option label=" "></option>
@@ -170,10 +160,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</select>
 					</div>
 					<div class="col-sm-6" id="rtInitalSeq" style="display:none">
-						<div class="form-group">
-							<label for="rtInitalSeqFileUpload">Upload the latest Reg. Transaction XML file that you wish to add a sequence to.</label>
-							<input type="file" id="rtInitalSeqFileUpload" accept="text/xml"/>
-						</div>
+						<label for="rtInitalSeqFileUpload">Upload the latest Reg. Transaction XML file that you wish to add a sequence to.</label>
+						<input type="file" id="rtInitalSeqFileUpload" name="rtInitalSeqFileUpload" accept="text/xml"/>
 					</div>
 				</div>
 			<div class="row">
@@ -186,7 +174,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<label for="rtEctdCompName" class="control-label">Company ID
 							</label>
 							
-							<input style="box-shadow: 0 0 25px #4099FF;"  type="text" class="form-control input-sm full-width" id="rtEctdCompName">
+							<input style="box-shadow: 0 0 25px #4099FF;"  type="text" class="form-control input-sm full-width" id="rtEctdCompName" name="rtEctdCompName" value="This is will be populated">
 						</div>
 					</div>
 			
@@ -194,14 +182,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group">
 							
 							<label for="rtEctdDossierName" class="control-label">Dossier Name</label>
-							<input style="box-shadow: 0 0 25px #4099FF;" type="text" class="form-control input-sm full-width" id="rtEctdDossierName">
+							<input style="box-shadow: 0 0 25px #4099FF;" type="text" class="form-control input-sm full-width" id="rtEctdDossierName" name="rtEctdDossierName" value="This is will be populated">
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="form-group">
 							
 							<label for="rtEctdDossierId" class="control-label">Dossier ID</label>
-							<input style="box-shadow: 0 0 25px #4099FF;" type="text" class="form-control input-sm full-width" id="rtEctdDossierId">
+							<input style="box-shadow: 0 0 25px #4099FF;" type="text" class="form-control input-sm full-width" id="rtEctdDossierId" name="rtEctdDossierId" value="This is will be populated">
 						</div>
 					</div>
 				<!--	<div class="col-sm-2 col-sm-offset-10">
@@ -224,7 +212,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<tr id="rtEctd1Row">
 								<td class="col-sm-1">
 									<label class="control-label hiddenLabel" for="rtEctd1SeqNum">Sequence Number</label>
-									<input type="text" class="form-control input-sm full-width" id="rtEctd1SeqNum" maxlength="4"/>
+									<input type="text" class="form-control input-sm full-width" id="rtEctd1SeqNum" name="rtEctd1SeqNum" maxlength="4"/>
 								</td>
 								<td class="col-sm-2">
 									<div class="form-group" style="margin-top:15px">
@@ -234,7 +222,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								</td>
 								<td class="col-sm-2">
 									<label class="control-label hiddenLabel" for="rtEctd1ControlNum">Control Number</label>
-									<input type="text" class="form-control input-sm full-width" id="rtEctd1ControlNum" maxlength="6"/>
+									<input type="text" class="form-control input-sm full-width" id="rtEctd1ControlNum" name="rtEctd1ControlNum" maxlength="6"/>
 								</td>
 								<td class="col-sm-8">
 								<div class="row">
@@ -1022,11 +1010,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="well well-sm">
 			
 			
-			<div class="row" style="margin-top: 10px">
-				<div class="form-group">
-					<div class="col-sm-3">
-							<label for="rtEnrolmentSolInfo" class="control-label">Is this solicited information?</label>
-					</div>
+			<div class="row form-group" style="margin-top: 10px">
+							<label for="rtEnrolmentSolInfo" class="control-label col-sm-3">Is this solicited information?</label>
 					<div class="col-sm-2">
 						<select class="form-control input-sm" name="rtEnrolmentSolInfo" id="rtEnrolmentSolInfo" onchange="checkSelectShowHide(this, [rtSolInfo], ['1'])">
 							<option label=" "></option>
@@ -1035,12 +1020,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</select>
 					</div>
 					<div id="rtSolInfo" style="display:none">
-					<div class="col-sm-4 form-group">
-							<label for="rtEnrolmentReqSolInfo" class="control-label">Requester of Solicited Information</label>
-						</div>
-						<div class="col-sm-3 form-group">
-							<input type="text" class="form-control input-sm full-width" id="rtEnrolmentReqSolInfo"/>
-						</div>
+							<label for="rtEnrolmentReqSolInfo" class="control-label col-sm-4">Requester of Solicited Information</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm full-width" id="rtEnrolmentReqSolInfo" name="rtEnrolmentReqSolInfo" />
 						</div>
 				</div>
 			</div>
@@ -1054,11 +1036,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				
 				<div class="col-sm-6 form-group">
 					<label for="rtRegProjManagerName1">Name 1:</label>
-					<input type="text" class="form-control input-sm full-width" id="rtRegProjManagerName1">
+					<input type="text" class="form-control input-sm full-width" id="rtRegProjManagerName1" name="rtRegProjManagerName1">
 				</div>
 				<div class="col-sm-6 form-group">
 					<label for="rtRegProjManagerName2">Name 2:</label>
-					<input type="text" class="form-control input-sm full-width" id="rtRegProjManagerName2">
+					<input type="text" class="form-control input-sm full-width" id="rtRegProjManagerName2" name="rtRegProjManagerName2">
 				</div>
 				</div>
 			</div>
@@ -1066,12 +1048,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 			<div id="rtBox" class="well well-sm" style="display:none">
 				
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="form-group">
-							<label class="control-label">Sequence Description</labeL>
-						</div>
-					</div>
+				<div class="row form-group">
+					<p class="control-label label-like col-sm-4">Sequence Description</p>
 					<div class="col-sm-8">
 						<div class="row">
 									<div class="col-sm-11" style="padding-right:0">
@@ -1948,11 +1926,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<div class="well well-sm">
 			
 			
-			<div class="row" style="margin-top: 10px">
-				<div class="form-group">
-					<div class="col-sm-6">
-							<label for="sameRegActCon" class="control-label">Same Regulatory Activity Contact for this transaction? [YES/NO]</label>
-					</div>
+			<div class="row form-group" style="margin-top: 10px">
+							<label for="sameRegActCon" class="control-label col-sm-6">Same Regulatory Activity Contact for this transaction? [YES/NO]</label>
 					<div class="col-sm-2">
 						<select class="form-control input-sm" name="sameRegActivityContact" id="sameRegActCon" onchange="checkSameRegActivityContactSelection(this)">
 							<option label=" "></option>
@@ -1960,7 +1935,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<option value="2">No</option>
 						</select>
 					</div>
-				</div>
 			</div>
 			</div> 
 			
@@ -1973,7 +1947,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-						<label><input id="raEnrolmentCompInfoSamAs" value="" onclick="ShowHideDivGen(this, raEnrolmentCompInfo)" type="checkbox"> Same as Manufacturer / Sponsor Company Information</label>
+						<label for="raEnrolmentCompInfoSamAs"><input id="raEnrolmentCompInfoSamAs" name="raEnrolmentCompInfoSamAs" value="" onclick="ShowHideDivGen(this, raEnrolmentCompInfo)" type="checkbox"> Same as Manufacturer / Sponsor Company Information</label>
 					</div>
 					</div>
 				</div>
@@ -1983,7 +1957,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-8">
 							<label for="raEnrolmentCompName" class="control-label">Company Name [Full Legal Name]</label>
 							<div class="">
-								<input class="form-control input-sm  full-width" id="raEnrolmentCompName" placeholder="Enter Company Name" type="text">
+								<input class="form-control input-sm  full-width" id="raEnrolmentCompName" name="raEnrolmentCompName" placeholder="Enter Company Name" type="text">
 							</div>
 						</div>
 					<!-- </form> -->
@@ -1999,7 +1973,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</div>
 					<div class="col-sm-5">
 						<div class="checkbox">
-							<label><input id="raEnrolmentAddrInfoSameAs" value="" onclick="ShowHideDivGen(this, raEnrolmentAddrInfo)" type="checkbox"> Same as Manufacturer / Sponsor Address Information</label>
+							<label for="raEnrolmentAddrInfoSameAs"><input id="raEnrolmentAddrInfoSameAs" name="raEnrolmentAddrInfoSameAs" value="" onclick="ShowHideDivGen(this, raEnrolmentAddrInfo)" type="checkbox"> Same as Manufacturer / Sponsor Address Information</label>
 						</div>
 					</div>
 				</div>
@@ -2008,17 +1982,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label for="raEnrolmentAddrStr" class="control-label">Street / Suite</label>
-							<div class="">
-								<input class="form-control input-sm full-width" id="raEnrolmentAddrStr" size="100" placeholder="Enter Street/Suite" type="text">
-							</div>
+							<input class="form-control input-sm full-width" id="raEnrolmentAddrStr" name="raEnrolmentAddrStr" placeholder="Enter Street/Suite" type="text">
 						</div>
 					</div>
 					<div class="row">
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAddrCity" class="control-label">City / Town</label>
-							<div class="">
-								<input class="form-control input-sm full-width" id="raEnrolmentAddrCity" placeholder="Enter City/Town" type="text">
-							</div>
+							<input class="form-control input-sm full-width" id="raEnrolmentAddrCity" name="raEnrolmentAddrCity" placeholder="Enter City/Town" type="text">
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAddrCountry" class="control-label">Country</label>
@@ -2345,9 +2315,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentAddrPostal" class="control-label">Postal / ZIP Code</label>
-							<div class="">
-								<input class="form-control input-sm full-width" id="raEnrolmentAddrPostal" placeholder="Enter Postal/ZIP Code" type="text">
-							</div>
+							<input class="form-control input-sm full-width" id="raEnrolmentAddrPostal" name="raEnrolmentAddrPostal" placeholder="Enter Postal/ZIP Code" type="text">
 						</div>
 						</div> 
 					<!-- </form> -->
@@ -2365,7 +2333,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						<div class="col-sm-5">
 							<div class="checkbox">
-								<label><input id="raEnrolmentCompRepInfoSameAs" value="" onclick="ShowHideDivGen(this, raEnrolmentCompRepInfo)" type="checkbox"> Same as Manufacturer / Sponsor Contact Information</label>
+								<label for="raEnrolmentCompRepInfoSameAs"><input id="raEnrolmentCompRepInfoSameAs" name="raEnrolmentCompRepInfoSameAs" value="" onclick="ShowHideDivGen(this, raEnrolmentCompRepInfo)" type="checkbox"> Same as Manufacturer / Sponsor Contact Information</label>
 							</div>
 						</div>
 					</div>
@@ -2386,62 +2354,52 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 							<div class="form-group col-sm-2">
 								<label for="raEnrolmentCompRepGivenName" class="control-label">Given Name</label>
-								<div class="">
-									<input class="form-control input-sm full-width" id="raEnrolmentCompRepGivenName" placeholder="Enter Given Name" type="text">
-								</div>
+								<input class="form-control input-sm full-width" id="raEnrolmentCompRepGivenName" name="raEnrolmentCompRepGivenName" placeholder="Enter Given Name" type="text">
 							</div>
 							<div class="form-group col-sm-1">
 								<label for="raEnrolmentCompRepInit" class="control-label">Initials</label>
-								<div class="">
-									<input class="form-control input-sm full-width" id="raEnrolmentCompRepInit" placeholder="Enter Surname" type="text">
-								</div>
+									<input class="form-control input-sm full-width" id="raEnrolmentCompRepInit" name="raEnrolmentCompRepInit" placeholder="Enter Surname" type="text">
 							</div>
 							<div class="form-group col-sm-3">
 								<label for="raEnrolmentCompRepSurname" class="control-label">Surname</label>
-								<div class="">
-									<input class="form-control input-sm full-width" id="raEnrolmentCompRepSurname" placeholder="Enter Surname" type="text">
-								</div>
+									<input class="form-control input-sm full-width" id="raEnrolmentCompRepSurname" name="raEnrolmentCompRepSurname" placeholder="Enter Surname" type="text">
 							</div>
 							<div class="form-group col-sm-2">
 								<label for="raEnrolmentCompRepTitle" class="control-label">Title</label>
-								<div class="">
-									<input class="form-control input-sm full-width" id="raEnrolmentCompRepTitle" placeholder="Enter Title" type="text">
-								</div>
+									<input class="form-control input-sm full-width" id="raEnrolmentCompRepTitle" name="raEnrolmentCompRepTitle" placeholder="Enter Title" type="text">
 							</div>
 							<div class="form-group col-sm-2">
 								<label for="raEnrolmentCompRepLang" class="control-label">Language</label>
-                <div class="">
                   <select class="form-control input-sm full-width" name="raEnrolmentCompRepLang" id="raEnrolmentCompRepLang">
                       <option label=" "></option>
                       <option value="1">English</option>
                       <option value="2">French</option>
                   </select>
-              	</div>
 							</div>
 						</div>
 						<div class="row">
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentCompRepTelNo" class="control-label">Telephone No</label>
 							<div class="">
-								<input class="form-control input-sm full-width" id="raEnrolmentCompRepTelNo" placeholder="Enter Telephone Number" type="text">
+								<input class="form-control input-sm full-width" id="raEnrolmentCompRepTelNo" name="raEnrolmentCompRepTelNo" placeholder="Enter Telephone Number" type="text">
 							</div>
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="raEnrolmentCompRepTelExt" class="control-label">Ext</label>
 							<div class="">
-								<input class="form-control input-sm full-width" id="raEnrolmentCompRepTelExt" placeholder="Enter Extension" type="text">
+								<input class="form-control input-sm full-width" id="raEnrolmentCompRepTelExt" name="raEnrolmentCompRepTelExt" placeholder="Enter Extension" type="text">
 							</div>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="raEnrolmentCompRepFaxNo" class="control-label">Fax Number</label>
 							<div class="">
-								<input class="form-control input-sm full-width" id="raEnrolmentCompRepFaxNo" placeholder="Enter Fax Number" type="text">
+								<input class="form-control input-sm full-width" id="raEnrolmentCompRepFaxNo" name="raEnrolmentCompRepFaxNo" placeholder="Enter Fax Number" type="text">
 							</div>
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="raEnrolmentCompRepEmail" class="control-label">Email</label>
 							<div class="">
-								<input class="form-control input-sm full-width" id="raEnrolmentCompRepEmail" placeholder="Enter Email" type="text">
+								<input class="form-control input-sm full-width" id="raEnrolmentCompRepEmail" name="raEnrolmentCompRepEmail" placeholder="Enter Email" type="text">
 							</div>
 						</div>
 					<!-- </form> -->
