@@ -140,6 +140,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			<form>
 			<div class="well wells-sm" id="enrolStep3AttestA" style="display:none">
 				<div class="row">
+					<div class="col-sm-12">
+						<fieldset>
+							<div class="checkbox">
+								<label for="enrolStep3AttestAChk"><input type="checkbox" value="" id="enrolStep3AttestAChk" name="enrolStep3AttestAChk" /> I, the undersigned, certify that the information in this request is accurate and complete.</label>
+							</div>
+						</fieldset>
+					</div>
+				<!--
 					<div class="col-sm-6">
 						<p>I, the undersigned, certify that the information in this request is accurate and complete.</p>
 					</div>
@@ -150,10 +158,19 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 						</fieldset>
 					</div>
+				-->
 				</div>
 			</div>
 			<div class="well wells-sm" id="enrolStep3AttestB" style="display:none">
 				<div class="row">
+					<div class="col-sm-12">
+						<fieldset>
+							<div class="checkbox">
+								<label for="enrolStep3AttestBChk"><input type="checkbox" value="" id="enrolStep3AttestBChk" name="enrolStep3AttestBChk" /> I, the undersigned, certify that the Dossier ID issued from this request will be used within 6 months of the date-of-issue.</label>
+							</div>
+						</fieldset>
+					</div>
+				<!--
 					<div class="col-sm-6">
 						<p>I, the undersigned, certify that the Dossier ID issued from this request will be used within 6 months of the date-of-issue.</p>
 					</div>
@@ -164,10 +181,19 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 						</fieldset>
 					</div>
+				-->
 				</div>
 			</div>
 			<div class="well wells-sm" id="enrolStep3AttestC" style="display:none">
 				<div class="row">
+					<div class="col-sm-12">
+						<fieldset>
+							<div class="checkbox">
+								<label for="enrolStep3AttestCChk"><input type="checkbox" value="" id="enrolStep3AttestCChk" name="enrolStep3AttestCChk" /> I, the undersigned, certify that the Dossier ID issued from this request will be used within 6 weeks of the date-of-issue.</label>
+							</div>
+						</fieldset>
+					</div>
+				<!--
 					<div class="col-sm-6">
 						<p>I, the undersigned, certify that the Dossier ID issued from this request will be used within 6 weeks of the date-of-issue.</p>
 					</div>
@@ -178,12 +204,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 						</fieldset>
 					</div>
+				-->
 				</div>
 			</div>
 			</form>
 			<div class="panel panel-warning" id="enrolAuthInfo">
 				<div class="panel-heading">
-					<h3 class="panel-title">
 						<!--<div class="row">
 							<div class="col-sm-6 col-sm-offset-6">
 								<div class="checkbox" id="enrolAttestAuthSameAs">
@@ -191,9 +217,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								</div>
 							</div>
 						</div> -->
-						<div class="row">
+						<div class="row marginTop-15">
 							<div class="col-sm-6">
-								<h4>Authorized Official Information</h4>
+								<h3 class="panel-title">Authorized Official Information</h3>
 							</div>
 							<div class="col-sm-4">
 								<p>Same as Main Contact (From Step 1a)?</p>
@@ -209,7 +235,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								</fieldset>
 							</div>
 						</div>
-					</h3>
 				</div>
 				<div class="panel-body">
 				<div id="attestationStep3">
@@ -217,59 +242,43 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				<div class="row">
 						<div class="form-group col-sm-2">
 							<label for="enrolAttestAuthSal" class="control-label">Salutation</label>
-                            <div class="">
-                                <select class="form-control input-sm full-width" name="enrolAttestAuthSal" id="enrolAttestAuthSal">
-                                    <option label=" "></option>
-                                    <option value="1">Mr.</option>
-                                    <option value="2">Mrs.</option>
-                                    <option value="3">Ms.</option>
-									<option value="4">Dr.</option>
-                                </select>
-                            </div>
+							<select class="form-control input-sm full-width" name="enrolAttestAuthSal" id="enrolAttestAuthSal">
+								<option label=" "></option>
+								<option value="1">Mr.</option>
+								<option value="2">Mrs.</option>
+								<option value="3">Ms.</option>
+								<option value="4">Dr.</option>
+							</select>
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="enrolAttestAuthGivenName" class="control-label">Given Name</label>
-							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentAuthGivenName" placeholder="Enter Given Name">
-							</div>
+							<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthGivenName" name="enrolAttestAuthGivenName" placeholder="Enter Given Name">
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="enrolAttestAuthSurname" class="control-label">Surname</label>
-							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthSurname" placeholder="Enter Surname" >
-							</div>
+							<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthSurname" name="enrolAttestAuthSurname" placeholder="Enter Surname" >
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="enrolAttestAuthTitle" class="control-label">Title</label>
-							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthTitle" placeholder="Enter Title" >
-							</div>
+							<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthTitle" name="enrolAttestAuthTitle" placeholder="Enter Title" >
 						</div>
 					</div>
 						<div class="row">
 						<div class="form-group col-sm-3">
 							<label for="enrolAttestAuthTelNo" class="control-label">Telephone Number</label>
-							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthTelNo" placeholder="Enter Telephone Number" >
-							</div>
+							<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthTelNo" name="enrolAttestAuthTelNo" placeholder="Enter Telephone Number" >
 						</div>
 						<div class="form-group col-sm-2">
 							<label for="enrolAttestAuthTelExt" class="control-label">Ext</label>
-							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthTelExt" placeholder="Enter Extension" >
-							</div>
+							<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthTelExt" name="enrolAttestAuthTelExt" placeholder="Enter Extension" >
 						</div>
 						<div class="form-group col-sm-3">
 							<label for="enrolAttestAuthFaxNo" class="control-label">Fax Number</label>
-							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthFaxNo" placeholder="Enter Fax Number" >
-							</div>
+							<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthFaxNo" name="enrolAttestAuthFaxNo" placeholder="Enter Fax Number" >
 						</div>
 						<div class="form-group col-sm-4">
 							<label for="enrolAttestAuthEmail" class="control-label">Email</label>
-							<div class="">
-								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthEmail" placeholder="Enter Email" />
-							</div>
+							<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthEmail" name="enrolAttestAuthEmail" placeholder="Enter Email" />
 						</div>
 					</div>
 					</div>
@@ -277,7 +286,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="form-group col-sm-12">
 							<label for="enrolAttestAuthCompName" class="control-label">Name of Company that the Authorized Official Belongs</label>
                             <div class="well well-sm">
-								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthCompName" placeholder="Enter Company Name" >
+								<input type="text" class="form-control input-sm full-width" id="enrolAttestAuthCompName" name="enrolAttestAuthCompName" placeholder="Enter Company Name" >
 							</div>
 						</div>
 					</div>
@@ -290,13 +299,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             <a class="btn btn-primary" id="returnBut" href="">&lt; Return to Step 2</a> <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="" id="butGenerate"></a>
         </div>
 </div>
+</div>
 </section>
 <div class="form-group">
 <div class="col-sm-offset-3 col-sm-9">
 
 </div>
 </div>
-</form>
+
 <div class="row pagedetails">
 <div class="col-xs-6 datemod">
 <dl id="wb-dtmd">
@@ -395,7 +405,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="../js/theme.min.js"></script>
 <script src="../js/rep.js"></script>
-<script type="text/javascript" id="">
+<script type="text/javascript">
 /*
 $(document).ready(function() {
    setCookie("currentURL",window.location.href);
