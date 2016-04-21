@@ -417,7 +417,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 							<div class="form-group col-sm-3">
 								<label for="coEnrolmentManuAddrProv" class="control-label">Province / State</label>
-								<input class="form-control input-sm full-width" type="text" id="coEnrolmentManuAddrProv" name="coEnrolmentManuAddrProv" list="" />
+								<input class="form-control input-sm full-width" type="text" id="coEnrolmentManuAddrProv" name="coEnrolmentManuAddrProv" />
 									<datalist id="canProvSuggestions">
 									<!--[if lte IE 9]><select><![endif]-->
 										<option label=" "></option>
@@ -501,12 +501,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<div class="col-sm-5">
 						<h4>Company Representative Information:</h4>
 					</div>
-					<legend class="label-like col-sm-5" style="color: rgb(176, 21, 21); padding-top:26px">Same as Main Contact Information (From Step 1a)?</legend>
-					<fieldset class="col-sm-2" style="padding-top:26px">
-						<div class="radio-inline">
+					<!--<legend class="label-like col-sm-5" style="color: rgb(176, 21, 21); padding-top:26px">Same as Main Contact Information (From Step 1a)?</legend>-->
+					<fieldset class="col-sm-7" style="padding-top:26px">
+						<legend class="label-like col-sm-8" style="color: rgb(176, 21, 21); padding-top:26px">Same as Main Contact Information (From Step 1a)?</legend>
+						<div class="radio-inline col-sm-2">
 							<label for="coEnrolmentManuCompRepSameAsMain1"><input type="radio" onclick="prePopulate(['coEnrolmentManuCompRepInfo'], 'true')" name="coEnrolmentManuCompRepSameAsMain" value="1" id="coEnrolmentManuCompRepSameAsMain1" />&#160;&#160;Yes</label>
 						</div>
-						<div class="radio-inline">
+						<div class="radio-inline col-sm-2">
 							<label for="coEnrolmentManuCompRepSameAsMain2"><input type="radio"  onclick="prePopulate(['coEnrolmentManuCompRepInfo'], 'false')" name="coEnrolmentManuCompRepSameAsMain" value="2" id="coEnrolmentManuCompRepSameAsMain2" />&#160;&#160;No</label>
 						</div>
 					</fieldset>
@@ -636,7 +637,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="row">
 							<div class="form-group col-sm-12">
 								<label for="coEnrolmentRegMailAddrStr" class="control-label">Street / Suite / PO Box</label>
-								<input type="text" class="form-control input-sm full-width" id="coEnrolmentRegMailAddrStr" name="coEnrolmentRegMailAddrStr" size="100"placeholder="Enter Street/Suite">
+								<input type="text" class="form-control input-sm full-width" id="coEnrolmentRegMailAddrStr" name="coEnrolmentRegMailAddrStr" placeholder="Enter Street/Suite">
 							</div>
 						</div>
 						<div class="row">
@@ -705,7 +706,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								</div>
 								<div class="form-group col-sm-3">
 									<label for="coEnrolmentRegMailAddrCompRepSurname" class="control-label">Surname</label>
-									<input type="text" class="form-control input-sm full-width" id="coEnrolmentRegMailAddrRepSurname" hame="coEnrolmentRegMailAddrRepSurname" placeholder="Enter Surname">
+									<input type="text" class="form-control input-sm full-width" id="coEnrolmentRegMailAddrCompRepSurname" name="coEnrolmentRegMailAddrCompRepSurname" placeholder="Enter Surname">
 								</div>
 								<div class="form-group col-sm-2">
 									<label for="coEnrolmentRegMailAddrCompRepTitle" class="control-label">Title</label>
@@ -806,7 +807,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									</div>
 									<div class="form-group col-sm-3">
 										<label for="coEnrolmentCanImporterAddrProv" class="control-label">Province/State</label>
-										<input class="form-control input-sm" type="text" id="coEnrolmentCanImporterAddrProv" name="coEnrolmentCanImporterAddrProv" list="" />
+										<input class="form-control input-sm" type="text" id="coEnrolmentCanImporterAddrProv" name="coEnrolmentCanImporterAddrProv" />
 									</div>
 									<div class="form-group col-sm-3">
 										<label for="coEnrolmentCanImporterAddrPostal" class="control-label">Postal / ZIP Code</label>
@@ -878,7 +879,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								</div>
 								<div class="form-group col-sm-3">
 									<label for="coEnrolmentBillingAddrProv" class="control-label">Province /State</label>
-									<input type="text" id="coEnrolmentBillingAddrProv" name="coEnrolmentBillingAddrProv" list="" />
+									<input type="text" id="coEnrolmentBillingAddrProv" name="coEnrolmentBillingAddrProv"  />
 								</div>
 								<div class="form-group col-sm-3">
 									<label for="coEnrolmentBillingAddrPostal" class="control-label">Postal / ZIP Code</label>
@@ -930,7 +931,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								</div>
 								<div class="form-group col-sm-3">
 									<label for="coEnrolmentBillingAddrCompRepSurname" class="control-label">Surname</label>
-									<input type="text" class="form-control input-sm full-width" id="coEnrolmentBillingAddrRepSurname" name="coEnrolmentBillingAddrRepSurname" placeholder="Enter Surname" >
+									<input type="text" class="form-control input-sm full-width" id="coEnrolmentBillingAddrCompRepSurname" name="coEnrolmentBillingAddrCompRepSurname" placeholder="Enter Surname" >
 								</div>
 								<div class="form-group col-sm-2">
 									<label for="coEnrolmentBillingAddrCompRepTitle" class="control-label">Title</label>
@@ -976,13 +977,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
         </div>
 	</div>
 </div>
+</div>
 </section>
 <div class="form-group">
 <div class="col-sm-offset-3 col-sm-9">
 
 </div>
 </div>
-</form>
 <div class="row pagedetails">
 <div class="col-xs-6 datemod">
 <dl id="wb-dtmd">
@@ -1081,7 +1082,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="../js/theme.min.js"></script>
 <script src="../js/rep.js"></script>
-<script type="text/javascript" id="">
+<script type="text/javascript">
 
 $(document).ready(function() {
    setCookie("currentURL",window.location.href);
