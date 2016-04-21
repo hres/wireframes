@@ -221,9 +221,9 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								<div class="col-sm-9">
 									<div class="form-group">
 										<select class="form-control input-sm full-width" name="raEnrolmentActivityLead" id="raEnrolmentActivityLead">
-											<option label=" "></option>
-											<option value="1"></option>
-											<option value="2"></option>
+											<option label=" " value="0"></option>
+											<option label=" " value="1"></option>
+											<option label=" " value="2"></option>
 										</select>
 									</div>
 								</div>
@@ -231,7 +231,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							<div class="row">
 									<div class="col-sm-3">
 										<div class="form-group">
-											<label for="raEnrolmentActivityType" class="control-label">Regulatory Activity Type</label>
+											<label for="raRegActivityTypeSuggestions" class="control-label" >Regulatory Activity Type</label>
 										</div>
 									</div>
 									<div class="col-sm-9">
@@ -272,8 +272,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									<div class="form-group">
 										<select class="form-control input-sm" name="raEnrolmentFeeClass" id="raEnrolmentFeeClass">
 										<option label=" "></option>
-										<option value="1"></option>
-										<option value="2"></option>
+										<option label=" " value="1"></option>
+										<option label=" " value="2"></option>
 										</select>
 									</div>
 								</div>
@@ -298,7 +298,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								<div class="col-sm-12">
 									<div class="form-group">
 										<label class="control-label" for="regEnrolmentRegActReason">Reason for filing this Regulatory Activity:</label>
-										<textarea class="form-control input-sm full-width" rows="4" cols="col-sm-12" id="regEnrolmentRegActReason"></textarea>
+										<textarea class="form-control input-sm full-width" rows="4" id="regEnrolmentRegActReason"></textarea>
 									</div>
 								</div>
 							</div>
@@ -313,7 +313,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 										</div>
 									</div>
 								</div>
-								<div class="row" id="raAutLetter" style="display:none">
+								
+								<div class="row" id="raAutLetter" style="display:none; padding-top: 5px;">
 									<div class="col-sm-4">
 										<div class="form-group">
 											<label for="raAutLetterFileUpload" class="control-label" >Please upload Authorization letter:</label>
@@ -348,8 +349,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									<div class="">
 										<select class="form-control input-sm full-width" name="raEnrolmentRel1ActivityType" id="raEnrolmentRel1ActivityType">
 										<option label=" "></option>
-										<option value="1"></option>
-										<option value="2"></option>
+										<option label=" " value="1"></option>
+										<option label=" " value="2"></option>
 										</select>
 									</div>
 								</div>
@@ -390,7 +391,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 							</div>
 							<div id="raEnrolmentRel1DIN">
 								<div class="row">
-									<label for="raEnrolmentRel1DINLabel" class=" col-sm-10 control-label">Associated DINs</label>
+									<label for="raEnrolmentRel1DIN1" class=" col-sm-10 control-label">Associated DINs</label>
 								</div>
 								<div id="raEnrolmentRel1DINRows">
 								<div class="row" id="raEnrolmentRel1DINRow1">
@@ -475,7 +476,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</div>
 						</div>
 						</div>
-						</div>
+						
 				</details>
 			</li>
 			<li>
@@ -639,17 +640,15 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						<div class="col-sm-12">
 							<div class="form-group">
 								<label for="">Is the investigational product obtained from the Canadian market?  </label>	
-							 	<span><input value="" type="checkbox"> Yes</span> <!-- radio vs select -->
-							 	<!--<span><input value="" type="checkbox"> No</span>	 
+							 	<span><input value="" type="checkbox"> Yes</span> radio vs select
+							 	<span><input value="" type="checkbox"> No</span>	 
 							</div>
 						</div>
 					</div> 
 				</div>
 			</div>-->
 
-		</div>
-	</div>
-	</div>
+		
 <div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
             <a class="btn btn-primary" href="rep_1.html">&lt; Return to Step 1</a> <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
@@ -657,12 +656,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 </div>
 
 </section>
-<div class="form-group">
-<div class="col-sm-offset-3 col-sm-9">
 
-</div>
-</div>
-</form>
 <div class="row pagedetails">
 <div class="col-xs-6 datemod">
 <dl id="wb-dtmd">
@@ -761,14 +755,13 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src="../js/theme.min.js"></script>
 <script src="../js/rep.js"></script>
-<script type="text/javascript" id="">
+<script type="text/javascript" >
 
 $(document).ready(function() {
    setCookie("currentURL",window.location.href);
    setCookie("typeREP", "ra");
    setCookie("actionREP", "NEW");
 });
-
 $(document).on('change', '.btn-file :file', function() {
   var input = $(this),
       numFiles = 1,
