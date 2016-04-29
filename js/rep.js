@@ -162,3 +162,9 @@ function otherSelectVisibility(select, valueToCompare, input) {
 		$(input).css('visibility', 'hidden');
 	}
 }
+
+//clicking help button -> displays pop-up
+$(document).on('click', '.helpButton', function() {
+	alert('Help text for this section will appear here');
+});
+
