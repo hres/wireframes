@@ -32,6 +32,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- End Google Tag Manager -->
 
 <link rel="stylesheet" href="../css/rep.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 
 </head>
@@ -132,13 +133,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <section>
 
 	<br /><br />
-	<div class="panel panel-primary">
-        <div class="panel-heading">
-            <h2 class="panel-title">STEP 2 - REGULATORY TRANSACTION INFORMATION</h2>
+	
+	<div class="row">
+		<div class="col-sm-offset-9 col-sm-3">
+			<button class=" btn btn-sm btn-default wb-toggle" type="button" data-toggle='{"selector": ".rtMainDetails"}'>Collapse/Expand ALL</button>
 		</div>
-		<div class="panel-body">
-		
-		<div id="mainInfo">
+	</div>
+	<ul class="list-unstyled marginTop-15">
+		<li>
+			<details class="panel panel-primary rtMainDetails">
+				<summary class="panel-heading"><h2 class="panel-title">STEP 2a - Dossier Information     <a class="btn helpButton pull-right"><span class="fa fa-question-circle fa-lg"></span></a></h2></summary>
+				<div class="panel-body">
+				<div id="mainInfo">
 			<div class="well well-sm">
 				<div class="row form-group">
 					<label for="rtEnrolmenteCTD" class="control-label col-sm-4">Is this an eCTD transaction?</label>
@@ -1045,10 +1051,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 				</div>
 			</div>
 		</div>
-
-			<div id="rtBox" class="well well-sm" style="display:none">
-				
-				<div class="row form-group">
+		<div id="rtBox" style="display:none">
+					<div class="row form-group">
 					<p class="control-label label-like col-sm-4">Sequence Description</p>
 					<div class="col-sm-8">
 						<div class="row">
@@ -1808,122 +1812,19 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 									</div>
 					</div>
 				</div>
-<!--
-				 <div class="row">
-						<div class="col-sm-4">
-							<div class="form-group">
-							<label for="rtEnrolmentDossierType" class="control-label">Dossier Type:</label>
-							</div>
-						</div>
-						<div class="col-sm-8">
-						<div class="form-group">
-								<select class="full-width form-control input-sm" name="rtEnrolmentDossierType" id="rtEnrolmentDossierType" onchange="ectdFilter1(this, rtEnrolmentRegActivityType, rtEnrolmentSeqDesc)">
-									<option value="all"></option>
-									<option value="pharma">Pharmaceutical</option>
-									<option value="bio">Biologic</option>
-							</select>
-							</div>
-						</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="form-group">
-						<label for="rtEnrolmentRegActivityType" class="control-label">Regulatory Activity Type:</label>
-						</div>
-					</div>
-						<div class="col-sm-8">
-						<div class="form-group">
-							<select class="full-width form-control input-sm" name="rtEnrolmentRegActivityType" id="rtEnrolmentRegActivityType" onchange="ectdFilter2(this, rtEnrolmentSeqDesc)" disabled="true">
-								<option class="all pharma bio" value="all"></option>
-								<option class="all pharma bio" value="preSubMeetings">All pre-submission meetings</option>
-								<option class="all pharma bio" value="ANDS">ANDS</option>
-								<option class="all pharma bio" value="DINA">DINA</option>
-								<option class="all pharma bio" value="DINB">DINB</option>
-								<option class="all pharma bio" value="EUNDS">EUNDS</option>
-								<option class="all pharma bio" value="EUSNDS">EUSNDS</option>
-								<option class="all pharma bio" value="LevelIII">Level III</option>
-								<option class="all pharma bio" value="NC">NC</option>
-								<option class="all pharma bio" value="NDS">NDS</option>
-								<option class="all pharma bio" value="PDC">PDC</option>
-								<option class="all pharma bio" value="PDC-B">PDC-B</option>
-								<option class="all pharma bio" value="PSUR-C">PSUR-C</option>
-								<option class="all pharma bio" value="PSUR-PV">PSUR-PV</option>
-								<option class="all pharma bio" value="RMP-PV">RMP-PV</option>
-								<option class="all pharma bio" value="SANDS">SANDS</option>
-								<option class="all pharma bio" value="SNDS">SNDS</option>
-								<option class="all pharma bio" value="SNDS-C">SNDS-C</option>
-								<option class="all pharma bio" value="UD-PV">UD-PV</option>
-								<option class="all pharma bio" value="UDRA">UDRA</option>
-								<option class="all pharma bio" value="UpConsul">Upon Consultation</option>
-								<option class="all bio" value="YBPR">YBPR</option>
-							</select>
-							</div>
-						</div>
-				</div>
-				<div class="row"> 
-					<div class="col-sm-4">
-						<div class="form-group">
-						<label for="rtEnrolmentSeqDesc" class="control-label">Sequence Description:</label>
-						</div>
-					</div>
-						<div class="col-sm-8">
-						<div class="form-group">
-							<select class="form-control input-sm full-width" name="rtEnrolmentSeqDesc" id="rtEnrolmentSeqDesc" disabled="true">
-								<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA UpConsul YBPR" value="all"></option>
-								<option class="all pharma bio UD-PV" value="BftRiskAssess">Benefit Risk Assessment</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC SANDS SNDS" value="Admin">Administrative</option>
-								<option class="all pharma bio preSubMeetings LevelIII NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SNDS-C UDRA YBPR" value="CancelLetter">Cancellation Letter</option>
-								<option class="all pharma bio DINA DINB" value="changeDIN">Change to DIN</option>
-								<option class="all pharma bio NDS" value="CommentND">Comments on Notice of Decision dated mmm. dd, yyyy</option>
-								<option class="all pharma bio EUNDS EUSNDS NC NDS SNDS" value="CommentSBD">Comments on Summary Basis of Decision dated mmm. dd, yyyy</option>
-								<option class="all pharma bio UDRA" value="DINDiscont">DIN Discontinued</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="DNF">Drug Notification Form</option>
-								<option class="all pharma bio PSUR-C PSUR-PV YBPR" value="Period">For Period of mmm. dd, yyyy to mmm. dd, yyyy</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS NDS" value="init">INITIAL</option>
-								<option class="all pharma bio preSubMeetings" value="MinMeet">Minutes of Meeting, mmm. dd, yyyy</option>
-								<option class="all pharma bio UD-PV" value="NotifChange">Notification of Change in benefit-risk profile</option>
-								<option class="all pharma bio UpConsul" value="panApp">Pandemic Application</option>
-								<option class="all pharma bio PDC PDC-B" value="posAutDiv">Post-Authorization Division 1 Change</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="posClearData">Post Clearance Data</option>
-								<option class="all pharma bio UD-PV" value="posMarkSurv">Post Marketing Surveillance</option>
-								<option class="all pharma bio EUSNDS NC SANDS SNDS SNDS-C" value="posNOCChange">Post NOC Change</option>
-								<option class="all pharma bio DINA DINB NC NDS SNDS" value="preSubMeetPk">Pre-Submission Meeting Package</option>
-								<option class="all pharma bio NDS SNDS" value="priRevReq">Priority Review Request</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="pristinePM">Pristine PM</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="pristinePMSL">Pristine PM - Second Language</option>
-								<option class="all pharma bio UDRA" value="responseAdviseLetter">Response to Advisement Letter dated mmm. dd, yyyy</option>
-								<option class="all pharma bio ANDS NDS SANDS SNDS" value="responseBEClariReq">Response to BE Clarification Request dated mmm. dd, yyyy</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS PSUR-C SANDS SNDS SNDS-C" value="responseClinicalClariReq">Response to Clinical Clarification Request dated mmm. dd, yyyy</option>
-								<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseEReq">Response to e-mail Request dated mmm. dd, yyyy</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseLabClariReq">Response to Labeling Clarification Request dated mmm. dd, yyyy</option>
-								<option class="all pharma bio UD-PV" value="responseMHPDReq">Response to MHPD Requests dated mmm. dd, yyyy</option>
-								<option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNOC">Response to NOC/c-QN dated mmm.dd, yyyy</option>
-								<option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNOD">Response to NOD dated mmm. dd, yyyy</option>
-								<option class="all pharma bio NC" value="responseNOL">Response to NOL dated mmm. dd, yyyy</option>
-								<option class="all pharma bio ANDS EUNDS EUSNDS NDS SANDS SNDS SNDS-C" value="responseNON">Response to NON dated mmm. dd, yyyy</option>
-								<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseProcessClariReq">Response to Processing Clarification Request dated mmm. dd, yyyy</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="responseQualClinicClariReq">Response to Quality and Clinical Clarification Request dated mmm. dd, yyyy</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS" value="responseClariReq">Response to Quality Clarification Request dated mmm. dd, yyyy</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseScreenAcptLetter">Response to Screening Acceptance Letter dated mmm. dd, yyyy</option>
-								<option class="all pharma bio ANDS DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseScreenClariReq">Response to Screening Clarification Request dated mmm. dd, yyyy</option>
-								<option class="all pharma bio ANDS EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C" value="responseSDN">Response to SDN dated mmm. dd, yyyy</option>
-								<option class="all pharma bio preSubMeetings ANDS DINA DINB EUNDS EUSNDS LevelIII NC NDS PDC PDC-B PSUR-C PSUR-PV RMP-PV SANDS SNDS SNDS-C UD-PV UDRA YBPR" value="responseTelReq">Response to Telephone Request dated mmm. dd, yyyy</option>
-								<option class="all pharma bio UD-PV" value="riskComDoc">Risk communication document</option>
-								<option class="all pharma bio RMP-PV" value="RMPNum">RMP version &lt;number&gt; dated mmm. dd, yyyy</option>
-								<option class="all pharma bio UD-PV" value="signalWrkUp">Signal Work Up</option>
-								<option class="all pharma bio DINA DINB EUNDS EUSNDS NC NDS SANDS SNDS SNDS-C UDRA" value="unSolData">Unsolicited Data, &lt;Brief Description&gt; </option>
-								<option class="all pharma bio LevelIII" value="yearListChangeNum">Year, list of change number (for example: 2012, 15, 19a,….)</option>
-							</select>
-							</div>
-						</div> -->
 					</div> 
+					</div>
 			</div>
-			
-				<div class="panel panel-warning">
-				<header class="panel-heading"><h3 class="panel-title">Regulatory Activity Contact [for THIS Regulatory Activity]:</h3></header>
+			</details>
+		</li>
+		<li>
+			<details class="panel panel-primary rtMainDetails">
+				<summary class="panel-heading"><h2 class="panel-title">STEP 2b - Regulatory Activity Contact [for THIS Regulatory Activity]     <a class="btn helpButton pull-right"><span class="fa fa-question-circle fa-lg"></span></a></h2></summary>
 				<div class="panel-body">
-					<div class="well well-sm">
+
+				
+				
+			
 			
 			
 			<div class="row form-group" style="margin-top: 10px">
@@ -1936,7 +1837,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 						</select>
 					</div>
 			</div>
-			</div> 
 			
 			<div class="readOnlyDisabled">
 			<div class="form-group" id="raEnrolmentCompInfoDiv" style="border: 1px solid; padding:15px">
@@ -2408,9 +2308,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			</div>
 		</div>
 	</div>
-</div>
-</div>
+
 		</div>
+			</details>
+		</li>
+		</ul>
+		
+		
+		
+		
+
+			
 	
 
 
