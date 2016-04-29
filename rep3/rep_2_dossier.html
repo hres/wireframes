@@ -141,7 +141,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	<ul class="list-unstyled marginTop-15">
 		<li>
 			<details class="panel panel-primary doMainDetails">
-				<summary class="panel-heading"><h2 class="panel-title">STEP 2a - Dossier Information</h2></summary>
+				<summary class="panel-heading"><h2 class="panel-title">STEP 2a - Dossier Information     <a class="btn helpButton pull-right"><span class="fa fa-question-circle fa-lg"></span></a></h2></summary>
 				<div class="panel-body">
 				<!-- main information-->
 					<div id="doMainInfo">
@@ -181,10 +181,32 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 								<input type="text" class="form-control input-sm full-width" id="doEnrolmentId" name="doEnrolmentId" placeholder="Enter ID" />
 							</div>
 						</div>
-						<div class="row">
+						<!--<div class="row">
 							<div class="form-group col-sm-8">
 								<label for="doEnrolmentClassification">Therapeutic Classification:</label>
 								<input type="text" class="form-control input-sm full-width" id="doEnrolmentClassification" name="doEnrolmentClassification" placeholder="Enter Classification" />
+							</div>
+						</div>-->
+						<div class="row">
+							<div id="doEnrolmentTherapeuticClass" class="blackBorder" style="margin: 0px 15px 15px 15px">
+								<label class="control-label">Therapeutic Classification(s)</label>
+								<div class="row form-group">
+									<label for="doEnrolmentTherapeuticClass1" class="control-label normalLabel col-sm-3">Therapeutic Classification 1</label>
+									<div class="col-sm-5">
+										<!--<input id="doDrugProForm1LifeTypeContainerCountryManu11" type="text" class="form-control input-sm full-width" />-->
+										<div class="input-group">
+											<input class="form-control input-sm full-width theraChangeText" id="doEnrolmentTherapeuticClass1" name="doEnrolmentTherapeuticClass1" type="text">
+											<span class="input-group-btn">
+												<button class="btn btn-danger btn-sm" onclick="delTherapeuticClass(this, doEnrolmentTherapeuticClass)" id="doEnrolmentTherapeuticClass1DelBut" type="button">
+													<span class="glyphicon glyphicon-remove"></span>
+												</button>
+											</span>
+										</div>
+									</div>
+									<div class="col-sm-4 addButton">
+										<button type="submit" class="btn btn-info btn-sm theraDelete" id="doEnrolmentTherapeuticClassAddBut" onclick="addTherapeuticClass(doEnrolmentTherapeuticClass)">Add Another Therapeutic Class</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -291,7 +313,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		<li>
 			<details class="panel panel-primary doMainDetails">
 				<summary class="panel-heading">
-					<h2 class="panel-title">STEP 2b - Drug Product Formulation Information</h2>
+					<h2 class="panel-title">STEP 2b - Drug Product Formulation Information     <a class="btn helpButton pull-right"><span class="fa fa-question-circle fa-lg"></span></a></h2>
 				</summary>
 				<div class="panel-body">
 					<ul id="doDrugProForm1List" class="list-unstyled">
@@ -365,12 +387,26 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 															</div>
 														</div>
 													</div>
+													<div class="row">
+														<div id="doDrugProForm1TherapeuticClass" class="blackBorder theraGroup" style="margin: 0px 15px 15px 15px">
+															<label class="control-label">Therapeutic/Pharmacological Classification(s)</label>
+															<div class="row form-group">
+																<label for="doDrugProForm1TherapeuticClass1" class="control-label normalLabel col-sm-3">Therapeutic Classification 1</label>
+																<div class="col-sm-5">
+																	<input class="form-control input-sm full-width" id="doDrugProForm1TherapeuticClass1" name="doDrugProForm1TherapeuticClass1" type="text" readonly>
+																</div>
+															</div>
+															
+														</div>
+													</div>
+													<!--
 													<div class="row form-group">
 														<label for="doDrugProForm1AnimalHumanSrcClassification" class="control-label col-sm-6">Therapeutic/Pharmacological Classification</label>
 														<div class="col-sm-6">
 															<input type="text" id="doDrugProForm1AnimalHumanSrcClassification" name="doDrugProForm1AnimalHumanSrcClassification" class="form-control input-sm full-width"/>
 														</div>
 													</div>
+													-->
 													
 													<div id="doDrugProForm1RouteOfAdm" class="blackBorder">
 														<div id="doDrugProForm1RouteOfAdmRows">
@@ -448,7 +484,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 																			<div class="col-sm-3">
 																				<div class="form-group moveToBottom">
 																					<label for="doDrugProForm1LifeTypeContainer1Type" class="control-label">Container Type</label>
-																					<input id="doDrugProForm1LifeTypeContainer1Type" name="doDrugProForm1LifeTypeContainer1Type" type="text" class="form-control input-sm full-width"/>
+																					<input id="doDrugProForm1LifeTypeContainer1Type" name="doDrugProForm1LifeTypeContainer1Type" onchange="changeSummaryText(this)" type="text" class="form-control input-sm full-width"/>
 																				</div>
 																			</div>
 																			<div class="col-sm-3">
@@ -2185,7 +2221,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					</ul>
 					<div class="row  marginTop-15">
 						<div class="col-sm-5">
-							<button class="btn btn-primary full-width" id="doDrugProFormAddBut1" onclick="addNewDrugForm(doDrugProForm1List)" type="submit">Add Another Drug Product Formulation</button>
+							<button class="btn btn-info full-width" id="doDrugProFormAddBut1" onclick="addNewDrugForm(doDrugProForm1List)" type="submit">Add Another Drug Product Formulation</button>
 						</div>
 					</div>
 				</div>
@@ -2436,6 +2472,33 @@ function addNewDrugForm(list) {
 	//change summary label in details
 	var summaryText = $('#' + newDrugFormId).find('details summary:first').prop('innerHTML');
 	$('#' + newDrugFormId).find('details summary:first').prop('innerHTML', summaryText.replace('Formulation 1', 'Formulation ' + drugFormListlength));
+	
+	//copy the therapeutic classification fields from step 2a
+	var theraClassFromStep2aRows = $('#doEnrolmentTherapeuticClass').children('.row');
+	$('#' + newDrugFormId + 'TherapeuticClass').children('.row').remove();
+	
+	for (var i = 0; i < $(theraClassFromStep2aRows).length; i++) {
+		var row = $(theraClassFromStep2aRows).eq(i);
+		//var parentDivId = $('.theraChange').attr('id');
+		//var drugFormId = parentDivId.substring(0, parentDivId.indexOf('Thera'));
+		
+		var text = $(row).prop('outerHTML');
+		text = text.replace(/doEnrolment/g, newDrugFormId);
+		
+		$('#' + newDrugFormId + 'TherapeuticClass').append(text);
+		
+		
+		//remove the delete button
+		var inputField = $('#' + newDrugFormId + 'TherapeuticClass').find('.row:eq(' + i + ') input');
+		$(inputField).attr('readonly', true);
+		$('#' + newDrugFormId + 'TherapeuticClass').find('.row:eq(' + i + ') .input-group').remove();
+		$('#' + newDrugFormId + 'TherapeuticClass').find('.row:eq(' + i + ') .col-sm-5').append(inputField);
+		//remove add button
+		$('#' + newDrugFormId + 'TherapeuticClass').find('.addButton').remove();
+		
+		var value = $(row).find('input').val();
+		$('#' + newDrugFormId + 'TherapeuticClass').find('.row:eq(' + i + ') input').val(value);
+	}
 }
 
 function copyDrugFormFromList(copyBut) {
@@ -3131,8 +3194,7 @@ function changeMe(chk, div) {
 	}
 }
 
-/** Changing Summary Text Dynamically**/
-//txtBox = 
+/** Changing Summary Text of polyfill Dynamically**/
 function changeSummaryText(txtBox) {
 	var text = $(txtBox).val();
 	var summaryParentText = $(txtBox).closest('details').children('summary').prop('innerHTML');
@@ -3705,6 +3767,10 @@ function addContainerType(list) {
 	containerFormHTML = containerFormHTML.replace('Container Type 1', 'Container Type ' + numOfContainerTypes);
 	$(list).append(containerFormHTML);
 	
+	//reset summary label text
+	var summary = $('#' + drugFormId + 'LifeTypeContainer' + numOfContainerTypesCreated).find('details summary')[0];
+	var summaryText = $(summary).prop('innerHTML');
+	$(summary).prop('innerHTML', replaceBetween(0, summaryText.indexOf('<button'), summaryText, 'Container Type ' + numOfContainerTypes));
 	
 	drugFormArray[index].containerTypeCount++;
 	drugFormArray[index].containerTypeCreatedCount++;
@@ -3988,6 +4054,115 @@ var routeOfAdmLastIndexId = routeOfAdmLastId.substring(routeOfAdmLastIndex1 + 3,
 		drugFormArray[index].routeOfAdmCount--;
 	}
 }
+
+var therapeuticClassCount = 1;
+var therapeuticClassCreatedCount = 1;
+
+function addTherapeuticClass(container) {
+	var defaultSelect = '<div class="row form-group"><label for="doEnrolmentTherapeuticClass1" class="control-label normalLabel col-sm-3">Therapeutic Classification 1</label><div class="col-sm-5"><div class="input-group"><input class="form-control input-sm full-width theraChangeText" id="doEnrolmentTherapeuticClass1" name="doEnrolmentTherapeuticClass1" type="text"><span class="input-group-btn"><button class="btn btn-danger btn-sm theraDelete" onclick="delTherapeuticClass(this, doEnrolmentTherapeuticClass)" id="doEnrolmentTherapeuticClass1DelBut" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div></div><div class="col-sm-4 addButton"><button type="submit" class="btn btn-info btn-sm theraChangeBut" id="doEnrolmentTherapeuticClassAddBut" onclick="addTherapeuticClass(doEnrolmentTherapeuticClass)">Add Another Therapeutic Class</button></div></div>';
+	var containerId = $(container).attr('id');
+
+	var newSelect = replaceAll(defaultSelect, 'doEnrolmentTherapeuticClass1', containerId + therapeuticClassCreatedCount);
+	therapeuticClassCount++;
+	therapeuticClassCreatedCount++;
+	//newSelect = replaceAll(newSelect, 'CountryManu1', 'CountryManu' + numOfCountryManuCreated);
+	newSelect = newSelect.replace('Classification 1', 'Classification ' + therapeuticClassCount);
+	//get previous row/countryOfManufacture
+	var previous = $(container).find('.row:last');
+	//remove add button
+	$(previous).find('.addButton').remove();
+	$(container).append(newSelect);
+	
+	$('.theraGroup').trigger('updateTheraClass');
+	
+}
+
+function delTherapeuticClass(delBut, container) {
+	var closestRow = $(delBut).closest('.row'); // index in container
+	var closestRowIndex = $(closestRow).index();
+	//var closestFormGroup = $(closestRow).find('.form-group');
+	var numOfTheraClass = $(container).find('.row').length;
+	var delButId = $(delBut).attr('id');
+	var containerId = $(container).attr('id');
+	//var classId = delButId.substring(0, delButId.indexOf('Thera'));
+	//var drugFormNum = drugFormId.substring(drugFormId.indexOf('Form') + 4);
+	//var index = findIndexById(drugFormArray, drugFormId);
+	
+	if (numOfTheraClass == 1) {
+		$('#doEnrolmentTherapeuticClass1').val("");
+	} else {
+		if ($(closestRow).find('.addButton').length > 0) {
+			var addClassText = '<div class="col-sm-3 addButton"><button type="submit" class="btn btn-info btn-sm theraChangeBut" onclick="addTherapeuticClass(doEnrolmentTherapeuticClass)" id="doEnrolmentTherapeuticClassAddBut">Add Another Therapeutic Class</button></div>';
+			var previousRowForThisRow = $(container).find('.row').eq($(closestRow).index() - 2);
+			$(previousRowForThisRow).append(addClassText);	
+		}
+		$(closestRow).remove();
+		therapeuticClassCount--;
+	}
+	
+	//re-label therapeutic classification labels
+	var rows = $(container).children('div.row');
+	//get the # of rows
+	var rowCount = $(rows).length;
+	for (var i = 0; i < rowCount; i++) {
+		$(rows).eq(i).children('label').prop('innerHTML', 'Therapeutic Classification ' + (i+1));
+	}
+	
+	$('.theraGroup').trigger('delTheraClass', [closestRowIndex - 1]);
+	
+}
+
+$(document).on('change', 'input.theraChangeText' ,function(e) {
+	//alert('You');
+	//$('.theraGroup').trigger('updateTheraClass');
+	$('.theraGroup').trigger('updateTheraClassText');
+});
+
+$(document).on('updateTheraClassText', '.theraGroup', function(e) {
+	var step2aTheraClassRows = $('#doEnrolmentTherapeuticClass').children('.row');
+	var parentDiv = e.currentTarget;
+	var parentRows = $(parentDiv).children('.row');
+	
+	for (var i = 0; i < $(parentRows).length; i++) {
+		var value = $(step2aTheraClassRows).eq(i).find('input').val();
+		$(parentRows).eq(i).find('input').val(value);
+	}
+});
+
+$(document).on('updateTheraClass', '.theraGroup', function(e) {
+
+	var step2aTheraClassRow = $('#doEnrolmentTherapeuticClass').children('.row:eq(0)');
+	var text = $(step2aTheraClassRow).prop('outerHTML');
+	var parentDiv = e.currentTarget;
+	var parentDivId = $(parentDiv).attr('id');
+	var drugFormId = parentDivId.substring(0, parentDivId.indexOf('Thera'));
+	
+	var numOfRows = $('#' + drugFormId + 'TherapeuticClass').find('.row').length;
+	text = text.replace(/doEnrolment/g, drugFormId);
+	text = replaceAll(text, 'Class1', 'Class' + (numOfRows+1));
+	text = text.replace('Classification 1', 'Classification ' + (numOfRows+1));
+	//append text
+	$(parentDiv).append(text);
+	//$('#' + drugFormId + 'TherapeuticClass').find('.row:eq(' + i + ')').val($(row).val());
+	
+	//remove the delete button
+	var inputField = $('#' + drugFormId + 'TherapeuticClass').find('.row:eq(' + numOfRows + ') input');
+	$(inputField).attr('readonly', true);
+	$('#' + drugFormId + 'TherapeuticClass').find('.row:eq(' + numOfRows + ') .input-group').remove();
+	$('#' + drugFormId + 'TherapeuticClass').find('.row:eq(' + numOfRows + ') .col-sm-5').append(inputField);
+	//remove add button
+	$('#' + drugFormId + 'TherapeuticClass').find('.addButton').remove();
+});
+
+$(document).on('delTheraClass', '.theraGroup', function(e, index) {
+	var parentDiv = $(e.currentTarget).children('.row:eq(' + index + ')').remove();
+	
+	//re-label
+	var rowCount = $(e.currentTarget).children('.row').length;
+	for (var i = index; i < rowCount; i++) {
+		$(e.currentTarget).children('.row').eq(i).children('label').prop('innerHTML', 'Therapeutic Classification ' + (i+1));
+	}
+});
 
 </script>
 </body>
