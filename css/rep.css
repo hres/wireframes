@@ -466,5 +466,6 @@ details summary.panel-heading:focus {
 }
 .helpButton:hover {
 	background-color: transparent;
-	color: #fff;
+	color: inherit;
 }
+
