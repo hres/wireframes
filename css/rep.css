@@ -459,3 +459,12 @@ details summary.panel-heading:focus {
 	position: absolute;
 	bottom:0px;
 }
+
+.helpButton {
+	padding: 0px;
+	line-height: normal;
+}
+.helpButton:hover {
+	background-color: transparent;
+	color: #fff;
+}
