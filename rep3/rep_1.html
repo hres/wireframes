@@ -33,6 +33,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <!-- End Google Tag Manager -->
 
 <link rel="stylesheet" href="../css/rep.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 
 </head>
 <body vocab="http://schema.org/" typeof="WebPage"> <!--onload="myFunction()">-->
@@ -134,7 +136,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 	<div id="step1A" class="panel panel-primary">
         <div class="panel-heading">
-            <h2 class="panel-title">STEP 1A - Select Product Line</h2>
+            <h2 class="panel-title">STEP 1A - Select Product Line     <a class="btn helpButton pull-right"><span class="fa fa-question-circle fa-lg"></span></a></h2>
 		</div>
 		<div class="panel-body">
 			<div class="form-group">
@@ -153,7 +155,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	
 	<div id="step1B" class="panel panel-primary">
 		<div class="panel-heading">
-			<h2 class="panel-title">STEP 1B - Select Enrolment Type</h2>
+			<h2 class="panel-title">STEP 1B - Select Enrolment Type     <a class="btn helpButton pull-right"><span class="fa fa-question-circle fa-lg"></span></a></h2>
 		</div>
 		<div class="panel-body">
 		<div class="row" id="selectEnrolType">
@@ -595,7 +597,7 @@ function checkEnrolTypeSelection() { //previously obj
 		step1c.style.display = "none";
 		raAntDate.style.display = "none";
 		
-		changeNavPills(navREP, 'Regulatory Transaction');
+		changeNavPills(navREP, 'NEW Regulatory Transaction Enrolment');
 		$('#navStep2').prop('href', 'rep_2_regTransaction.html');
 		$('#navStep3').prop('href', 'rep_3.html');
 		//$('#navStep4').prop('href', 'rep_HCInternal.html');
