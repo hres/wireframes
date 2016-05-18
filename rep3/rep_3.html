@@ -146,6 +146,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 					<option value="2">No</option>
 				</select>
 			</div>
+			
+			<div class="row" id="raAutLetter" style="display:none; padding-top: 5px;">
+				<div class="col-sm-4">
+					<div class="form-group">
+					    <p class="control-label label-like" >Please upload Authorization letter:</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+					    <label class="wb-inv" for="uploadFile">Select File</label>
+					    <input class="form-control input-sm full-width" name="uploadFile" id="uploadFile" placeholder="Select File" disabled="disabled" />
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="form-group fileUpload btn btn-primary btn-sm">
+					    <span>Select file</span>
+					    <label for="raAutLetterFileUpload" class="wb-inv">File Upload</label>
+					    <input type="file"  class="full-width upload input-sm" onchange="uploadBtn()" id="raAutLetterFileUpload" name="raAutLetterFileUpload"/>
+					</div>
+				</div>
+			</div>
 			<br>
 			<br>
 			<br>
@@ -503,6 +524,10 @@ function checkRaEnrolmentSubThirdPartySelection(){
 	else {
 		div.style.display = "none";
 	}
+}
+
+function uploadBtn() {
+	document.getElementById("uploadFile").value = document.getElementById('raAutLetterFileUpload').value;
 }
 
 $('#butGenerate').click(function() {
