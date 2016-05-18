@@ -492,6 +492,17 @@ function displayContent() {
 	}
 }
 
+function checkRaEnrolmentSubThirdPartySelection(){
+	var obj = document.getElementsByName('raEnrolmentSubThirdParty')[0];
+	var div = document.getElementById('raAutLetter');
+	if (obj.value == '1') {
+		div.style.display = "block";
+	} 
+	else {
+		div.style.display = "none";
+	}
+}
+
 $('#butGenerate').click(function() {
 	alert('Submit To Health Canada');
 });
