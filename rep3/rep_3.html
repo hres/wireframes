@@ -139,17 +139,17 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		</div>
 		<div class="panel-body">
 			<form>
+			<div class="form-group">
+				<label for="raEnrolmentSubThirdParty" class="control-label col-sm-8">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</label>
+				<select class="form-control input-sm col-sm-2" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty" onchange="checkRaEnrolmentSubThirdPartySelection()">
+					<option label=" " value disabled selected></option>
+					<option value="1">Yes</option>
+					<option value="2">No</option>
+				</select>
+			</div>
+			
 			<div class="well wells-sm" id="enrolStep3AttestA" style="display:none">
 				<div class="row">
-					<div class="form-group">
-						<label for="raEnrolmentSubThirdParty" class="control-label col-sm-8">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</label>
-						<select class="form-control input-sm col-sm-2" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty" onchange="checkRaEnrolmentSubThirdPartySelection()">
-							<option label=" " value disabled selected></option>
-							<option value="1">Yes</option>
-							<option value="2">No</option>
-						</select>
-					</div>
-					
 					<div class="col-sm-12">
 						<fieldset>
 							<div class="checkbox">
