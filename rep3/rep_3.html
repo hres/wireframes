@@ -176,41 +176,41 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
             <h2 class="panel-title">STEP 3 - Attestation     <a class="btn helpButton pull-right"><span class="fa fa-question-circle fa-lg"></span></a></h2>
 		</div>
 		<div class="panel-body">
-			<div class="row">
-				<div class="form-group">
-					<label for="raEnrolmentSubThirdParty" class="control-label col-sm-8">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</label>
-					<select class="form-control input-sm col-sm-2" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty" onchange="checkRaEnrolmentSubThirdPartySelection()">
-						<option label=" " value disabled selected></option>
-						<option value="1">Yes</option>
-						<option value="2">No</option>
-					</select>
+			<div class="well wells-sm" id="EnrolmentSubThirdPartyAttestation" style="display:none">
+				<div class="row">
+					<div class="form-group">
+						<label for="raEnrolmentSubThirdParty" class="control-label col-sm-8">Will the submission be signed / filed by a third party on behalf of the manufacturer / sponsor?</label>
+						<select class="form-control input-sm col-sm-2" name="raEnrolmentSubThirdParty" id="raEnrolmentSubThirdParty" onchange="checkRaEnrolmentSubThirdPartySelection()">
+							<option label=" " value disabled selected></option>
+							<option value="1">Yes</option>
+							<option value="2">No</option>
+						</select>
+					</div>
+				</div>
+				
+				
+				<div class="row" id="raAutLetter" style="display:none; padding-top: 5px;">
+					<div class="col-sm-4">
+						<div class="form-group">
+						    <p class="control-label label-like" >Please upload Authorization letter:</p>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+						    <label class="wb-inv" for="uploadFile">Select File</label>
+						    <input class="form-control input-sm full-width" name="uploadFile" id="uploadFile" placeholder="Select File" disabled="disabled" />
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="form-group fileUpload btn btn-primary btn-sm">
+						    <span>Select file</span>
+						    <label for="raAutLetterFileUpload" class="wb-inv">File Upload</label>
+						    <input type="file"  class="full-width upload input-sm" onchange="uploadBtn()" id="raAutLetterFileUpload" name="raAutLetterFileUpload"/>
+						</div>
+					</div>
 				</div>
 			</div>
 			
-			
-			<div class="row" id="raAutLetter" style="display:none; padding-top: 5px;">
-				<div class="col-sm-4">
-					<div class="form-group">
-					    <p class="control-label label-like" >Please upload Authorization letter:</p>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="form-group">
-					    <label class="wb-inv" for="uploadFile">Select File</label>
-					    <input class="form-control input-sm full-width" name="uploadFile" id="uploadFile" placeholder="Select File" disabled="disabled" />
-					</div>
-				</div>
-				<div class="col-sm-2">
-					<div class="form-group fileUpload btn btn-primary btn-sm">
-					    <span>Select file</span>
-					    <label for="raAutLetterFileUpload" class="wb-inv">File Upload</label>
-					    <input type="file"  class="full-width upload input-sm" onchange="uploadBtn()" id="raAutLetterFileUpload" name="raAutLetterFileUpload"/>
-					</div>
-				</div>
-			</div>
-			<br>
-			<br>
-			<br>
 			<form>
 			<div class="well wells-sm" id="enrolStep3AttestA" style="display:none">
 				<div class="row">
@@ -497,6 +497,7 @@ function displayContent() {
 		$('#enrolStep3AttestA').css('display', 'block');
 		$('#enrolStep3AttestB').css('display', 'none');
 		$('#enrolStep3AttestC').css('display', 'none');
+		$('#EnrolmentSubThirdPartyAttestation').css('display', 'none');
 		$('#enrolAttestAuthSameAs').css('display', 'none');
 		if (repAction == 'NEW' || repAction == 'DRAFT') {
 			$('#navStep2').prop('href', 'rep_2_company.html');
@@ -511,6 +512,7 @@ function displayContent() {
 		$('#enrolStep3AttestA').css('display', 'block');
 		$('#enrolStep3AttestB').css('display', 'block');
 		$('#enrolStep3AttestC').css('display', 'none');
+		$('#EnrolmentSubThirdPartyAttestation').css('display', 'block');
 		$('#enrolAttestAuthSameAs').css('display', 'none');
 		if (repAction == 'NEW' || repAction == 'DRAFT') {
 			$('#navStep2').prop('href', 'rep_2_dossier.html');
@@ -525,6 +527,7 @@ function displayContent() {
 		$('#enrolStep3AttestA').css('display', 'block');
 		$('#enrolStep3AttestB').css('display', 'none');
 		$('#enrolStep3AttestC').css('display', 'block');
+		$('#EnrolmentSubThirdPartyAttestation').css('display', 'block');
 		$('#enrolAttestAuthSameAs').css('display', 'none');
 		if (repAction == 'NEW' || repAction == 'DRAFT') {
 			$('#navStep2').prop('href', 'rep_2_regActivity.html');
@@ -540,6 +543,7 @@ function displayContent() {
 		$('#enrolStep3AttestA').css('display', 'block');
 		$('#enrolStep3AttestB').css('display', 'none');
 		$('#enrolStep3AttestC').css('display', 'none');
+		$('#EnrolmentSubThirdPartyAttestation').css('display', 'none');
 		$('#enrolAttestAuthSameAs').css('display', 'block');
 		$('#navStep2').prop('href', 'rep_2_regTransaction.html');
 		$('#navStep4').prop('href', '');
@@ -550,6 +554,7 @@ function displayContent() {
 		$('#enrolStep3AttestA').css('display', 'none');
 		$('#enrolStep3AttestB').css('display', 'none');
 		$('#enrolStep3AttestC').css('display', 'none');
+		$('#EnrolmentSubThirdPartyAttestation').css('display', 'none');
 		$('#navStep2').prop('href', '');
 		$('#returnBut').prop('href', '');
 		$('#enrolAttestAuthSameAs').css('display', 'none');
