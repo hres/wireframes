@@ -974,12 +974,46 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	</div><!-- end of Step 2 Company Enrolment-->
 	<div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
-            <a class="btn btn-primary" href="rep_1.html">&lt;Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
+            <a class="btn btn-primary" href="rep_1.html">&lt;Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" id="SaveAsXML" href="#" onclick="GenerateXMLFunction();return false;" download>Save as XML</a> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
         </div>
 	</div>
 </div>
 </div>
 </section>
+
+<script type="text/javascript">
+	
+	function GenerateXMLFunction() 
+	{   
+		var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+		var fso = new ActiveXObject("Scripting.FileSystemObject");
+		var FILENAME = 'C:\\TestFile.xml';
+		var file = fso.CreateTextFile(FILENAME, true);
+		
+		var companyFullLegalName = document.getElementById("coEnrolmentManuCompName");
+		var companyAddressStreet = document.getElementById("coEnrolmentManuAddrStr");
+		var companyAddressCity = document.getElementById("coEnrolmentManuAddrCity");
+		var companyAddressCountry = document.getElementById("coEnrolmentManuAddrCountry");
+		var companyAddressProvince = document.getElementById("coEnrolmentManuAddrProv");
+		var companyAddressPostalCode = document.getElementById("coEnrolmentManuAddrPostal");
+		
+		file.WriteLine('<?xml version="1.0" encoding="utf-8"?>\n');
+		file.WriteLine('<companyEnrolment>\n');
+		file.WriteLine('    <company_Full_Legal_Name>' + companyFullLegalName + '</company_Full_Legal_Name>\n');
+		file.WriteLine('    <company_Address_Street>' + companyAddressStreet + '</company_Address_Street>\n');
+		file.WriteLine('    <company_Address_City>' + companyAddressCity + '</company_Address_City>\n');
+		file.WriteLine('    <company_Address_Country>' + companyAddressCountry + '</company_Address_Country>\n');
+		file.WriteLine('    <company_Address_Province>' + companyAddressProvince + '</company_Address_Province>\n');
+		file.WriteLine('    <company_Address_Postal_Code>' + companyAddressPostalCode + '</company_Address_Postal_Code>\n');
+		file.WriteLine('</companyEnrolment>\n');
+
+		file.Close();
+	
+	} // end GenerateXMLFunction() --------------------
+
+</script>
+
+
 <div class="form-group">
 <div class="col-sm-offset-3 col-sm-9">
 
