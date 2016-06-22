@@ -994,7 +994,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		var companyRepresentative = document.getElementById("coEnrolmentManuAddrCity").value;
 		
 		var textToSave = '<?xml version="1.0" encoding="utf-8"?>\n' +
-		'<?xml-stylesheet type="text/xsl" href="example.xsl"?>\n' +
+		'<?xml-stylesheet type="text/xsl" href="Test Style Sheet.xsl"?>\n' +
 		'<companyEnrolment>\n' + 
 		'    <company_Full_Legal_Name>' + companyFullLegalName + '</company_Full_Legal_Name>\n' +
 		'    <company_Address_Street>' + companyAddressStreet + '</company_Address_Street>\n' +
@@ -1006,7 +1006,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		
 		var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
     		var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-		var fileNameToSaveAs = "TestFile.xml";
+		var fileNameToSaveAs = "Test Style Sheet.xml";
 		
 		var downloadLink = document.createElement("a");
 		downloadLink.download = fileNameToSaveAs;
