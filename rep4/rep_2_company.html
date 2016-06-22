@@ -988,7 +988,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
 		var fso = new ActiveXObject("Scripting.FileSystemObject");
 		var FILENAME = 'C:\\TestFile.xml';
-		var file = fso.CreateTextFile(FILENAME, true);
+		var file = xmlDoc.CreateTextFile(FILENAME, true);
 		
 		var companyFullLegalName = document.getElementById("coEnrolmentManuCompName");
 		var companyAddressStreet = document.getElementById("coEnrolmentManuAddrStr");
