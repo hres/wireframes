@@ -974,7 +974,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	</div><!-- end of Step 2 Company Enrolment-->
 	<div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
-            <a class="btn btn-primary" href="rep_1.html">&lt;Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <a class="btn btn-primary" id="SaveAsXML" onclick="GenerateXMLFunction()" href="">Save as XML</a> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
+            <a class="btn btn-primary" href="rep_1.html">&lt;Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <button class="btn btn-primary" id="SaveAsXML" onclick="GenerateXMLFunction()" href="">Save as XML</a> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
         </div>
 	</div>
 </div>
@@ -986,19 +986,19 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	function GenerateXMLFunction()
 	{   
 		var companyFullLegalName = document.getElementById("coEnrolmentManuCompName").value;
-		var companyAddressStreet = document.getElementById("coEnrolmentManuAddrStr").value;
-		var companyAddressCity = document.getElementById("coEnrolmentManuAddrCity").value;
-		var companyAddressCountry = document.getElementById("coEnrolmentManuAddrCountry").value;
-		var companyAddressProvince = document.getElementById("coEnrolmentManuAddrProv").value;
-		var companyAddressPostalCode = document.getElementById("coEnrolmentManuAddrPostal").value;
+		//var companyAddressStreet = document.getElementById("coEnrolmentManuAddrStr").value;
+		//var companyAddressCity = document.getElementById("coEnrolmentManuAddrCity").value;
+		//var companyAddressCountry = document.getElementById("coEnrolmentManuAddrCountry").value;
+		//var companyAddressProvince = document.getElementById("coEnrolmentManuAddrProv").value;
+		//var companyAddressPostalCode = document.getElementById("coEnrolmentManuAddrPostal").value;
 		
 		var textToSave = "<companyEnrolment>\n" + 
 		"    <company_Full_Legal_Name>" + companyFullLegalName + "</company_Full_Legal_Name>\n" +
-		"    <company_Address_Street>" + companyAddressStreet + "</company_Address_Street>\n" +
-		"    <company_Address_City>" + companyAddressCity + "</company_Address_City>\n" +
-		"    <company_Address_Country>" + companyAddressCountry + "</company_Address_Country>\n" +
-		"    <company_Address_Province>" + companyAddressProvince + "</company_Address_Province>\n" +
-		"    <company_Address_Postal_Code>" + companyAddressPostalCode + "</company_Address_Postal_Code>\n" +
+		//"    <company_Address_Street>" + companyAddressStreet + "</company_Address_Street>\n" +
+		//"    <company_Address_City>" + companyAddressCity + "</company_Address_City>\n" +
+		//"    <company_Address_Country>" + companyAddressCountry + "</company_Address_Country>\n" +
+		//"    <company_Address_Province>" + companyAddressProvince + "</company_Address_Province>\n" +
+		//"    <company_Address_Postal_Code>" + companyAddressPostalCode + "</company_Address_Postal_Code>\n" +
 		"</companyEnrolment>\n";
 		
 		var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
@@ -1006,7 +1006,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		var fileNameToSaveAs = "TestFile.xml";
 		
 		var downloadLink = document.createElement("a");
-		downloadLink.download = FILENAME;
+		downloadLink.download = fileNameToSaveAs;
 		downloadLink.innerHTML = "Download File";
 		downloadLink.href = textToSaveAsURL;
 		downloadLink.onclick = destroyClickedElement;
