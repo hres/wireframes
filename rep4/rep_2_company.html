@@ -991,12 +991,12 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		var FILENAME = 'C:\\TestFile.xml';
 		set file = fso.CreateTextFile(FILENAME, true);
 		
-		var companyFullLegalName = document.getElementById("coEnrolmentManuCompName");
-		var companyAddressStreet = document.getElementById("coEnrolmentManuAddrStr");
-		var companyAddressCity = document.getElementById("coEnrolmentManuAddrCity");
-		var companyAddressCountry = document.getElementById("coEnrolmentManuAddrCountry");
-		var companyAddressProvince = document.getElementById("coEnrolmentManuAddrProv");
-		var companyAddressPostalCode = document.getElementById("coEnrolmentManuAddrPostal");
+		var companyFullLegalName = document.getElementById("coEnrolmentManuCompName").innerText;
+		var companyAddressStreet = document.getElementById("coEnrolmentManuAddrStr").innerText;
+		var companyAddressCity = document.getElementById("coEnrolmentManuAddrCity").innerText;
+		var companyAddressCountry = document.getElementById("coEnrolmentManuAddrCountry").innerText;
+		var companyAddressProvince = document.getElementById("coEnrolmentManuAddrProv").innerText;
+		var companyAddressPostalCode = document.getElementById("coEnrolmentManuAddrPostal").innerText;
 		
 		file.WriteLine('<?xml version="1.0" encoding="utf-8"?>\n');
 		file.WriteLine('<companyEnrolment>\n');
@@ -1009,8 +1009,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		file.WriteLine('</companyEnrolment>\n');
 
 		file.Close();
-	
-		return file;
+
 	} // end GenerateXMLFunction() --------------------
 
 </script>
