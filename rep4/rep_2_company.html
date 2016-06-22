@@ -985,10 +985,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	
 	function GenerateXMLFunction() 
 	{   
-		var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-		var fso = new ActiveXObject("Scripting.FileSystemObject");
+		//var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+		//var fso = new ActiveXObject("Scripting.FileSystemObject");
+		set fso = CreateObject("Scripting.FileSystemObject");
 		var FILENAME = 'C:\\TestFile.xml';
-		var file = xmlDoc.CreateTextFile(FILENAME, true);
+		set file = fso.CreateTextFile(FILENAME, true);
 		
 		var companyFullLegalName = document.getElementById("coEnrolmentManuCompName");
 		var companyAddressStreet = document.getElementById("coEnrolmentManuAddrStr");
