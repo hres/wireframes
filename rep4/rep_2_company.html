@@ -1026,28 +1026,107 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 	function GenerateXSLFunction()
 	{   
-		var companyFullLegalName = document.getElementById("coEnrolmentManuCompName").value;
-		var companyAddressStreet = document.getElementById("coEnrolmentManuAddrStr").value;
-		var companyAddressCity = document.getElementById("coEnrolmentManuAddrCity").value;
-		var companyAddressCountry = document.getElementById("coEnrolmentManuAddrCountry").value;
-		var companyAddressProvince = document.getElementById("coEnrolmentManuAddrProv").value;
-		var companyAddressPostalCode = document.getElementById("coEnrolmentManuAddrPostal").value;
-		var companyRepresentative = document.getElementById("coEnrolmentManuAddrCity").value;
-		
 		var textToSave = '<?xml version="1.0" encoding="utf-8"?>\n' +
-		'<?xml-stylesheet type="text/xsl" href="Test Style Sheet.xsl"?>\n' +
-		'<companyEnrolment>\n' + 
-		'    <company_Full_Legal_Name>' + companyFullLegalName + '</company_Full_Legal_Name>\n' +
-		'    <company_Address_Street>' + companyAddressStreet + '</company_Address_Street>\n' +
-		'    <company_Address_City>' + companyAddressCity + '</company_Address_City>\n' +
-		'    <company_Address_Country>' + companyAddressCountry + '</company_Address_Country>\n' +
-		'    <company_Address_Province>' + companyAddressProvince + '</company_Address_Province>\n' +
-		'    <company_Address_Postal_Code>' + companyAddressPostalCode + '</company_Address_Postal_Code>\n' +
-		'</companyEnrolment>\n';
+		'<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">\n' +
+		'	<xsl:template match="/">\n' +
+		'		<style type="text/css">\n' +
+		'			.labels\n' +
+		'			{\n' +
+		'			display:block;\n' +
+		'			font-weight:bold;\n' +
+		'			color:green;\n' +
+		'			}\n' +
+		'			.companyEnrolment-company_Full_Legal_Name\n' +
+		'			{\n' +
+		'			display:block;\n' +
+		'			font-weight:bold;\n' +
+		'			color:blue;\n' +
+		'			}\n' +
+		'			.companyEnrolment-company_Address_Street\n' +
+		'			{\n' +
+		'			display:block;\n' +
+		'			font-weight:bold;\n' +
+		'			color:red;\n' +
+		'			}\n' +
+		'			.companyEnrolment-company_Address_City\n' +
+		'			{\n' +
+		'			display:block;\n' +
+		'			font-weight:bold;\n' +
+		'			}\n' +
+		'			.companyEnrolment-company_Address_Country\n' +
+		'			{\n' +
+		'			display:block;\n' +
+		'			font-weight:bold;\n' +
+		'			}\n' +
+		'			.companyEnrolment-company_Address_Province\n' +
+		'			{\n' +
+		'			display:block;\n' +
+		'			font-weight:bold;\n' +
+		'			}\n' +
+		'			.companyEnrolment-company_Address_Postal_Code\n' +
+		'			{\n' +
+		'			display:block;\n' +
+		'			font-weight:bold;\n' +
+		'			}\n' +
+		'		</style>\n' +
+		'		<html>\n' +
+		'			<body>\n' +
+		'				<h1>Test</h1>\n' +
+		'				<TABLE border="1" cellspacing="2" cellpadding="2">\n' +
+		'						<xsl:apply-templates select="companyEnrolment"></xsl:apply-templates>\n' +
+		'				</TABLE>\n' +
+		'			</body>\n' +
+		'		</html>\n' +
+		'	</xsl:template>\n' +
+		'	<xsl:template match="companyEnrolment">\n' +
+		'		<TR>\n' +
+		'			<TD> <span class="labels"> Company Name [Full Legal Name] </span> </TD>\n' +
+		'				<xsl:apply-templates select="company_Full_Legal_Name" />\n' +
+		'		</TR>\n' +
+		'		<TR>\n' +
+		'			<TD> <span class="labels"> Address (Street/Suite/PO Box) </span> </TD>\n' +
+		'				<xsl:apply-templates select="company_Address_Street" />\n' +
+		'		</TR>\n' +
+		'		<TR>\n' +
+		'			<TD> <span class="labels"> Address (City/Town) </span> </TD>\n' +
+		'				<xsl:apply-templates select="company_Address_City" />\n' +
+		'		</TR>\n' +
+		'		<TR>\n' +
+		'			<TD> <span class="labels"> Address (Country) </span> </TD>\n' +
+		'				<xsl:apply-templates select="company_Address_Country" />\n' +
+		'		</TR>\n' +
+		'		<TR>\n' +
+		'			<TD> <span class="labels"> Address (Province/State) </span> </TD>\n' +
+		'			<xsl:apply-templates select="company_Address_Province"/>\n' +
+		'		</TR>\n' +
+		'		<TR>\n' +
+		'			<TD> <span class="labels"> Address (Postal/ZIP Code) </span> </TD>\n' +
+		'			<xsl:apply-templates select="company_Address_Postal_Code"/>\n' +
+		'		</TR>\n' +
+		'	</xsl:template>\n' +
+		'	<xsl:template match="company_Full_Legal_Name">\n' +
+		'		<TD> <span class="companyEnrolment-company_Full_Legal_Name"> <xsl:apply-templates /> </span> </TD>\n' +
+		'	</xsl:template>\n' +
+		'	<xsl:template match="company_Address_Street">\n' +
+		'		<TD> <span class="companyEnrolment-company_Address_Street"> <xsl:apply-templates /> </span> </TD>\n' +
+		'	</xsl:template>\n' +
+		'	<xsl:template match="company_Address_City">\n' +
+		'		<TD> <span class="companyEnrolment-company_Address_City"> <xsl:apply-templates /> </span> </TD>\n' +
+		'	</xsl:template>\n' +
+		'	<xsl:template match="company_Address_Country">\n' +
+		'		<TD> <span class="companyEnrolment-company_Address_Country"> <xsl:apply-templates /> </span> </TD>\n' +
+		'	</xsl:template>\n' +
+		'	<xsl:template match="company_Address_Province">\n' +
+		'		<TD> <span class="companyEnrolment-company_Address_Province"> <xsl:apply-templates /> </span> </TD>\n' +
+		'	</xsl:template>\n' +
+		'	<xsl:template match="company_Address_Postal_Code">\n' +
+		'		<TD> <span class="companyEnrolment-company_Address_Postal_Code"> <xsl:apply-templates /> </span> </TD>\n' +
+		'	</xsl:template>\n' +
+		'</xsl:stylesheet>\n';
 		
 		var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
     		var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-		var fileNameToSaveAs = "Test Style Sheet.xml";
+		var fileNameToSaveAs = "Test Style Sheet.xsl";
 		
 		var downloadLink = document.createElement("a");
 		downloadLink.download = fileNameToSaveAs;
