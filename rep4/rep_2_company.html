@@ -974,7 +974,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	</div><!-- end of Step 2 Company Enrolment-->
 	<div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
-            <a class="btn btn-primary" href="rep_1.html">&lt;Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <button class="btn btn-primary" id="SaveAsXML" onclick="GenerateXMLFunction()">Save as XML</button> <button class="btn btn-primary" id="GenerateXSL" onclick="GenerateXSLFunction()">Generate XSL</button> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
+            <a class="btn btn-primary" href="rep_1.html">&lt;Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <button class="btn btn-primary" id="SaveAsXML" onclick="GenerateXMLFunction()">Save as XML</button> <button class="btn btn-primary" id="GenerateXSL" onclick="GenerateXSLFunction()">Generate XSL</button> <button class="btn btn-primary" id="UploadXML" onclick="UploadXML()">Upload XML</button> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
         </div>
 	</div>
 </div>
@@ -1138,6 +1138,23 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		 
 		downloadLink.click();
 	}
+	
+	function UploadXML(){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+		    if (xhttp.readyState == 4 && xhttp.status == 200) {
+		    UploadXMLIntoFields(xhttp);
+		    }
+		};
+		xhttp.open("GET", "Test File.xml", true);
+		xhttp.send();
+	}
+	
+	function UploadXMLIntoFields(xml) {
+	    var xmlDoc = xml.responseXML;
+	    document.getElementById("coEnrolmentManuCompName").value = xmlDoc.getElementsByTagName("company_Full_Legal_Name")[0].nodeValue;
+	}
+	
 </script>
 
 
