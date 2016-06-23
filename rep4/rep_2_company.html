@@ -1177,9 +1177,11 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			var doc=new ActiveXObject('Microsoft.XMLDOM');
 			doc.async='false';
 			doc.loadXML(text);
+			alert("stringtoxml");
 		} else {
 			var parser=new DOMParser();
 			var doc=parser.parseFromString(text,'text/xml');
+			alert("stringtoxml2");
 		}
 		return doc;
 	}
