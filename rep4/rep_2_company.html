@@ -974,7 +974,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	</div><!-- end of Step 2 Company Enrolment-->
 	<div class="panel-footer text-center">
         <div class="form-group mrgn-bttm-0">
-            <a class="btn btn-primary" href="rep_1.html">&lt;Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <button class="btn btn-primary" id="SaveAsXML" onclick="GenerateXMLFunction()">Save as XML</button> <button class="btn btn-primary" id="GenerateXSL" onclick="GenerateXSLFunction()">Generate XSL</button> <label for="UploadXML" class="btn btn-primary">Upload XML</label> <input class="btn btn-primary" id="UploadXML" name="UploadXML" onclick="UploadXML()" type="file" style="visibility: hidden; position: absolute;"> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
+            <a class="btn btn-primary" href="rep_1.html">&lt;Return to Step 1</a>  <a class="btn btn-primary" href="">Save as Draft</a> <button class="btn btn-primary" id="SaveAsXML" onclick="GenerateXMLFunction()">Save as XML</button> <button class="btn btn-primary" id="GenerateXSL" onclick="GenerateXSLFunction()">Generate XSL</button> <label for="UploadXML" class="btn btn-primary">Upload XML</label> <input class="btn btn-primary" id="UploadXML" name="UploadXML" type="file" style="visibility: hidden; position: absolute;" onchange="handleFiles(this.files)" accept=".xml"> <a class="btn btn-primary" href="rep_3.html">Continue to Step 3 &gt;</a>
         </div>
 	</div>
 </div>
@@ -1139,25 +1139,61 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		downloadLink.click();
 	}
 	
-	function loadFileAsXML()
-	{
-		
+	function handleFiles(files) {
+	        // Check for the various File API support.
+	        if (window.FileReader) {
+	        	// FileReader are supported.
+	        	UploadXML(files[0]);
+	        } else {
+	        	alert('FileReader are not supported in this browser.');
+	        }
+      	}
+
+	function UploadXML(fileToRead) {
+		var reader = new FileReader();
+		// Handle errors load
+		reader.onload = loadHandler;
+		reader.onerror = errorHandler;
+		// Read file into memory as UTF-8      
+		reader.readAsText(fileToRead);
 	}
 	
-	function UploadXML(){
-		var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() {
-		    if (xhttp.readyState == 4 && xhttp.status == 200) {
-		    UploadXMLIntoFields(xhttp);
-		    }
-		};
-		xhttp.open("GET", "Test File.xml", true);
-		xhttp.send();
+	function loadHandler(event) {
+		var xml = event.target.result;
+		//alert(xml);   
+		doc=StringtoXML(xml); 
+		searchXML(doc);         
+	}
+	
+	function errorHandler(evt) {
+		if(evt.target.error.name == "NotReadableError") {
+			alert("Cannot read file!");
+		}
+	}
+	
+	function StringtoXML(text){
+		if (window.ActiveXObject){
+			var doc=new ActiveXObject('Microsoft.XMLDOM');
+			doc.async='false';
+			doc.loadXML(text);
+		} else {
+			var parser=new DOMParser();
+			var doc=parser.parseFromString(text,'text/xml');
+		}
+		return doc;
+	}
+	
+	function searchXML(xmlDoc){
+		x = xmlDoc.getElementsByTagName("company_Full_Legal_Name");
+		divText=""
+		divText+=xmlDoc.getElementsByTagName("company_Full_Legal_Name")[0].nodeValue;
+
+		document.getElementById("coEnrolmentManuCompName").Value= divText;
 	}
 	
 	function UploadXMLIntoFields(xml) {
-	    var xmlDoc = xml.responseXML;
-	    document.getElementById("coEnrolmentManuCompName").value = xmlDoc.getElementsByTagName("company_Full_Legal_Name")[0].nodeValue;
+		var xmlDoc = xml.responseXML;
+		document.getElementById("coEnrolmentManuCompName").value = xmlDoc.getElementsByTagName("company_Full_Legal_Name")[0].nodeValue;
 	}
 	
 </script>
