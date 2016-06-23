@@ -1162,7 +1162,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		var xml = event.target.result;
 		alert(xml);   
 		doc=StringtoXML(xml);
-		divText=xmlDoc.getElementsByTagName("company_Full_Legal_Name")[0].childNodes[0].nodeValue;
+		divText=doc.getElementsByTagName("company_Full_Legal_Name")[0].childNodes[0].nodeValue;
 		alert(divText);
 		searchXML(doc);         
 	}
