@@ -1190,7 +1190,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	function searchXML(xmlDoc){
 		x = xmlDoc.getElementsByTagName("company_Full_Legal_Name");
 		divText="";
-		divText+=xmlDoc.getElementsByTagName("company_Full_Legal_Name")[0].nodeValue;
+		divText+=xmlDoc.getElementsByTagName("company_Full_Legal_Name")[0].childNodes[0].nodeValue;
 		alert(divText);
 		document.getElementById("coEnrolmentManuCompName").Value= divText;
 	}
