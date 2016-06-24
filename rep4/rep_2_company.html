@@ -991,7 +991,6 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 		var companyAddressCountry = document.getElementById("coEnrolmentManuAddrCountry").value;
 		var companyAddressProvince = document.getElementById("coEnrolmentManuAddrProv").value;
 		var companyAddressPostalCode = document.getElementById("coEnrolmentManuAddrPostal").value;
-		var companyRepresentative = document.getElementById("coEnrolmentManuAddrCity").value;
 		
 		var textToSave = '<?xml version="1.0" encoding="utf-8"?>\n' +
 		'<?xml-stylesheet type="text/xsl" href="Test Style Sheet.xsl"?>\n' +
@@ -1140,9 +1139,7 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	}
 	
 	function handleFiles(files) {
-	        // Check for the various File API support.
 	        if (window.FileReader) {
-	        	// FileReader are supported.
 	        	UploadXML(files[0]);
 	        } else {
 	        	alert('FileReader are not supported in this browser.');
@@ -1151,19 +1148,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 
 	function UploadXML(fileToRead) {
 		var reader = new FileReader();
-		// Handle errors load
 		reader.onload = loadHandler;
 		reader.onerror = errorHandler;
-		// Read file into memory as UTF-8      
 		reader.readAsText(fileToRead);
 	}
 	
 	function loadHandler(event) {
 		var xml = event.target.result;
-		alert(xml);   
 		doc=StringtoXML(xml);
-		divText=doc.getElementsByTagName("company_Full_Legal_Name")[0].childNodes[0].nodeValue;
-		alert(divText);
 		searchXML(doc);         
 	}
 	
@@ -1178,21 +1170,27 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 			var doc=new ActiveXObject('Microsoft.XMLDOM');
 			doc.async='false';
 			doc.loadXML(text);
-			alert("stringtoxml");
 		} else {
 			var parser=new DOMParser();
 			var doc=parser.parseFromString(text,'text/xml');
-			alert(doc);
 		}
 		return doc;
 	}
 	
 	function searchXML(xmlDoc){
-		x = xmlDoc.getElementsByTagName("company_Full_Legal_Name");
-		divText="";
-		divText+=xmlDoc.getElementsByTagName("company_Full_Legal_Name")[0].childNodes[0].nodeValue;
-		alert(divText);
-		document.getElementById("coEnrolmentManuCompName").value= divText;
+		var companyFullLegalName = xmlDoc.getElementsByTagName("company_Full_Legal_Name")[0].childNodes[0].nodeValue;
+		var companyAddressStreet = xmlDoc.getElementsByTagName("company_Address_Street")[0].childNodes[0].nodeValue;
+		var companyAddressCity = xmlDoc.getElementsByTagName("company_Address_City")[0].childNodes[0].nodeValue;
+		var companyAddressCountry = xmlDoc.getElementsByTagName("company_Address_Country")[0].childNodes[0].nodeValue;
+		var companyAddressProvince = xmlDoc.getElementsByTagName("company_Address_Province")[0].childNodes[0].nodeValue;
+		var companyAddressPostalCode = xmlDoc.getElementsByTagName("company_Address_Postal_Code")[0].childNodes[0].nodeValue;
+
+		document.getElementById("coEnrolmentManuCompName").value = companyFullLegalName;
+		document.getElementById("coEnrolmentManuAddrStr").value = companyAddressStreet;
+		document.getElementById("coEnrolmentManuAddrCity").value = companyAddressCity;
+		document.getElementById("coEnrolmentManuAddrCountry").value = companyAddressCountry;
+		document.getElementById("coEnrolmentManuAddrProv").value = companyAddressProvince;
+		document.getElementById("coEnrolmentManuAddrPostal").value = companyAddressPostalCode;
 	}
 	
 	function UploadXMLIntoFields(xml) {
