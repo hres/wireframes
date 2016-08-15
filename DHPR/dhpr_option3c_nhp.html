@@ -159,15 +159,18 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
     </div>
     <div id="home" class="tab-pane fade in active">
       <br>
-      <p class="font-large">Search for licenced natural health products.</p>
-      <p class="font-large">You may search using 3 ways: </p>
-      <p class="font-large">1) Brand name 
-      <br />2) Medicinal ingredients 
-      <br />3) Natural Product Number</p>
+      <p class="font-large">Search for natural health products that have been issued a product licence by Health Canada.</p>
+      <p class="font-large">You may search using 4 ways: </p>
+      <ol class="font-large">
+        <li>Licence Holder</li>
+        <li>Brand Name</li>
+        <li>Medicinal Ingredient</li>
+        <li>Natural Product Number (NPN) or Homeopathic Medicine Number (DIN-HM)</li>
+      </ol>
       <p class="font-large">Use the asterisk (*) to broaden or refine your search. This symbol will help you find everything related to your search term.</p>
       <form action="results-resultats-eng.php" method="get">
         <div>
-          <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="Search by brand name, medicinal ingredients and Natural Product Number" class="full-width form-control" />
+          <input name="trm" type="text" id="drugsearch" list="list-liste" placeholder="[Enter text here to search for a drug by licence holder, brand name, medicinal ingredient or NPN/DIN-HM]" class="full-width form-control" />
           <datalist id="list-liste" data-ajax-replace=".././list-liste-eng.txt"> </datalist> 
         </div>
       </form>
