@@ -1,0 +1,114 @@
+<!--tombstone data start -->
+<BRANDNAME>TEMPRA INFANT DROPS</BRANDNAME>
+<COMPANY>PALADIN LABS INC </COMPANY>
+<DIN>00875988</DIN>
+<AI>ACETAMINOPHEN</AI>
+<STRENGTH>80 MG / ML</STRENGTH>
+<FORM>Drops</FORM>
+<ROUTE>ORAL</ROUTE>
+<!--tombstone data finish -->
+
+<!-- start drug facts table -->
+<DOSAGEUNIT>Acetaminophen 80MG/ML </DOSAGEUNIT>
+
+<PURPOSE>Pain reliever or fever reducer</PURPOSE>
+
+<USES>
+	<USE>Reduces fever </USE>
+	<USE>Temporarily relieves mild to moderate aches and pain due to </USE>
+	<USE>headache</USE>
+	<USE>backache </USE>
+	<USE>migraine </USE>
+	<USE>sore throat </USE>
+	<USE>arthritis or rheumatism </USE>
+	<USE>pre-menstrual/menstrual cramps </USE>
+	<USE>muscle sprains and strains </USE>
+	<USE>toothache / teething pain </USE>
+	<USE>common cold and flu </USE>
+	<USE>immunization</USE>
+</USES>
+
+<WARNINGS>
+	<WARNINGHEADER>Liver warning:</WARNINGHEADER>
+		<WARNINGBODY>Acetaminophen may cause <strong>severe or possibly fatal liver damage</strong> if you take <ul><li>more than the recommended dose in 24 hours </li><li>with other drugs containing acetaminophen </li><li> while drinking 3 or more alcoholic drinks every day (adult products only) Symptoms of liver damage may include </li><li>yellow skin or eyes </li><li>dark urine </li><li>sweating </li><li>nausea </li><li>vomiting </li><li>stomach pain </li><li>unusual tiredness </li><li>loss of appetite</li></ul></WARNINGBODY>
+	<WARNINGHEADER>Allergy alert:</WARNINGHEADER>
+		<WARNINGBODY>Acetaminophen may cause serious skin reactions. Symptoms may include<ul> <li>skin reddening  </li><li> blisters </li><li>rash <strong>If any of the above noted symptoms occur, stop use and seek medical help right away.</strong></li></ul></WARNINGBODY>
+	<WARNINGHEADER>Do not use</WARNINGHEADER>
+		<WARNINGBODY><ul><li>with any other drug containing <strong>acetaminophen</strong> </li><li>if you are allergic to acetaminophen or any other ingredient in this product. If you are not sure whether a drug contains acetaminophen, ask a doctor or pharmacist.</li></ul></WARNINGBODY>
+	<WARNINGHEADER>Ask a doctor before use if</WARNINGHEADER>
+		<WARNINGBODY>your child has liver or kidney disease.</WARNINGBODY>
+	<WARNINGHEADER>Ask a doctor or pharmacist before use if</WARNINGHEADER>
+		<WARNINGBODY>your child takes the blood thinning drug warfarin.</WARNINGBODY>
+	<WARNINGHEADER>Stop use and ask a doctor if</WARNINGHEADER>
+		<WARNINGBODY><ul><li> pain lasts for more than 5 days </li><li> fever lasts more than 3 days.</li></ul></WARNINGBODY>
+	<WARNINGHEADER>Keep out of reach of children</WARNINGHEADER>
+		<WARNINGBODY>In case of overdose, call a Poison Control Centre or get medical help right away. Quick medical attention is critical even if you do not notice any signs or symptoms.</WARNINGBODY>
+</WARNINGS>
+
+<DIRECTIONS>
+	<DIRECTION>Do not give your child more than directed (see liver warnings)</DIRECTION>
+	<DIRECTION>Infants:
+		<SUBDIRECTION>Administer single dose orally, every 4-6 hours</SUBDIRECTION>
+		<SUBDIRECTION>Dose by body weight, otherwise use age</SUBDIRECTION>
+		<SUBDIRECTION>Do not take more than 5 doses in 24 hours</SUBDIRECTION>
+		<SUBDIRECTION>Use only the dropper provided</SUBDIRECTION>
+	</DIRECTION>
+	<TABLE>
+		<tr>
+		<th>Weight</th>
+		<th>Age</th>
+		<th>Dose</th>
+		</tr>
+		<tr>
+		<th>kg</th>
+		<th>lb/lbs</th>
+		<th>mos.</th>
+		<th>mL</th>
+		</tr>
+		<tr>
+		<td>2 - 5.4</td>
+		<td>6 - 11</td>
+		<td>0 - 3</td>
+		<td>0.5</td>
+		</tr>
+		<tr>
+		<td>5.5 - 7.9</td>
+		<td>12 - 17</td>
+		<td>4 - 11</td>
+		<td>1</td>
+		</tr>
+		<tr>
+		<td>8 - 10.9</td>
+		<td>18 - 23</td>
+		<td>12 - 23</td>
+		<td>1.5</td>
+		</tr>
+	</TABLE>			
+</DIRECTIONS>
+
+<INACTIVE>
+	<INGREDIENT> polyethylene glycol</INGREDIENT> 
+	<INGREDIENT> propylene glycol </INGREDIENT> 
+	<INGREDIENT> glycerin </INGREDIENT> 
+	<INGREDIENT> sodium saccharin</INGREDIENT> 
+	<INGREDIENT> sodium citrate </INGREDIENT> 
+	<INGREDIENT> citric acid </INGREDIENT> 
+	<INGREDIENT> artificial flavour </INGREDIENT> 
+	<INGREDIENT> purified water</INGREDIENT> 
+</INACTIVE>
+
+<LABELS>
+			<CAPTION>Outer Label</CAPTION>
+				<IMAGE> tempera.jpg" </IMAGE>
+			<CAPTION>Inner Label</CAPTION>
+				<IMAGE> tempera2.jpg" </IMAGE>
+</LABELS>
+
+<QUESTIONS>
+	<CONTACT>Call 1-888-867-7426</CONTACT>
+</QUESTIONS>
+<!-- end drug facts table -->
+
+<!-- start metadata -->
+<DATEMODIFIED>20151019</DATEMODIFIED>
+<!-- end metadata -->
