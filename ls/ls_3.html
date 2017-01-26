@@ -1,3 +1,4 @@
+
 <!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" dir="ltr">
 <!--<![endif]-->
@@ -471,8 +472,39 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <![endif]-->
 <script src=".././js/theme.min.js"></script>
 
-
-            <details>
+<details>
+    <summary class="h2">
+        <h2>Main collapsible bar TITLE</h2>
+    </summary>
+    <div class="wb-tabs">
+            <details open="open">
+                <div class="boxed">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default wb-toggle" data-toggle='{"selector": "details", "parent": ".boxed", "type": "on"}'>OPEN ALL</button>
+                        <button type="button" class="btn btn-default wb-toggle" data-toggle='{"selector": "details", "parent": ".boxed", "type": "off"}'>CLOSE ALL</button>
+                    </div>
+                    <details>
+                        <summary>
+                            <h4>Nested collapsible bar TITLE 1 (2013-14 tab)</h4>
+                        </summary>
+                        <div>
+                            Nested collapsible bar TITLE 1 content (2013-14 tab)
+                        </div>
+                    </details>
+                    <details>
+                        <summary>
+                            <h4>Nested collapsible bar TITLE 2 (2013-14 tab)</h4>
+                        </summary>
+                        <div>
+                            Nested collapsible bar TITLE2 content (2013-14 tab)
+                        </div>
+                    </details>
+                </div>
+            </details>
+            <details >
+                <summary>
+                    <h3>2012-13 tab</h3>
+                </summary>
                 <div class="parent-boxTabs2">
                     <div class="btn-group">
                         <button type="button" class="btn btn-default wb-toggle" data-toggle='{"selector": "details", "parent": ".parent-boxTabs2", "type": "on"}'>OPEN ALL</button>
@@ -496,7 +528,8 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
                     </details>
                 </div>
             </details>
-
+    </div>
+</details>
 
 </body>
 </html>
