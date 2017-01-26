@@ -195,15 +195,29 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
       <div class="clear"></div>
       <hr>
       <h3>Drug Facts Table</h3>
+	  <p>Alternate formats:<br />
+	  <a href="acetaminophen.xml" download>XML</a>
+	  <a href="acetaminophen.pdf" download>PDF</a>
+	  </p>
+	  
 <!--add expand/collapse all section button-->	  
 <div>
- <script src=".././js/workers/expandcollapseall.js"></script>
- <script src=".././js/sass/_expandcollapseall.scss"></script>
+
+<!-- attempts to get expand all working
+
 <div class="wet-boew-expandcollapseall toggle toggle-open toggle-close accent-first print-open"></div>
+<a href="#" role="button" class="button button-accent" aria-controls="details_0 details_1 details_2" data-type="toggle" data-title-close="Collapse all sections of content" data-title-open="Expand all sections of content" title="Expand all sections of content"  onclick="javascript:expandcollapseall();">Toggle all</a>
+ <script src="expandcollapseall.js"></script>
+ <script src="_expandcollapseall.scss"></script>
+  
+attempts to collapse end -->
+
+
+
 <!--create bullet points as expandable sections-->
 <ul class="list-unstyled">
 	<li>
-		<details>
+		<details open="open">
 			<summary>Active ingredient (in each dosage unit)</summary>
 			<p>Acetaminophen 80MG/ML </p>
 		</details>
@@ -346,7 +360,10 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 	<li>
 		<details open="open">
 			<summary>Labels</summary>
-			<p><font color="red"> insert image of label here</font></p>
+			<h3>Outer Label</h3>
+			<img src="tempera.jpg" /><br />
+			<h3>Inner Label</h3>
+			<img src="tempera2.jpg" />
 		</details>
 	</li>
 	<li>
