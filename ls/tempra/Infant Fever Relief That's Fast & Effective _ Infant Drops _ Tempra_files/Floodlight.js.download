@@ -1,0 +1,28 @@
+function callFloodlight_new(source, type, cat) {
+	var tag_url="http://fls.doubleclick.net/activityi;src=" + source + ";type=" + type + ";cat=" + cat + ";ord=1;num="+Math.floor(Math.random()*999999)+"?";
+	if(document.getElementById("DCLK_FLDiv")){var flDiv=document.getElementById("DCLK_FLDiv");}
+	else{var flDiv=document.body.appendChild(document.createElement("div"));flDiv.id="DCLK_FLDiv";flDiv.style.display="none";}
+	var DCLK_FLIframe=document.createElement("iframe");
+	DCLK_FLIframe.id="DCLK_FLIframe_"+Math.floor(Math.random()*999999);
+	DCLK_FLIframe.src=tag_url;
+	flDiv.appendChild(DCLK_FLIframe);
+}
+function callFloodlight_same(source, type, cat) {
+	var tag_url="http://fls.doubleclick.net/activityi;src=" + source + ";type=" + type + ";cat=" + cat + ";ord=1;num="+Math.floor(Math.random()*999999)+"?";
+	if(document.getElementById("DCLK_FLDiv")){var flDiv=document.getElementById("DCLK_FLDiv");}
+	else{var flDiv=document.body.appendChild(document.createElement("div"));flDiv.id="DCLK_FLDiv";flDiv.style.display="none";}
+	var DCLK_FLIframe=document.createElement("iframe");
+	DCLK_FLIframe.id="DCLK_FLIframe_"+Math.floor(Math.random()*999999);
+	DCLK_FLIframe.src=tag_url;
+	flDiv.appendChild(DCLK_FLIframe);
+	setTimeout("window.location.href = 'http://www.google.com/';", 1000);
+
+}
+
+function callStaticFL(source, type, cat) {
+	var axel = Math.random() + "";
+	var num = axel * 1000000000000000000;
+	var tag_url = new Image();
+	tag_url.src = "http://ad.doubleclick.net/activity;src=" + source + ";type=" + type + ";cat=" + cat + ";ord=1;num="+num+"?";
+
+}

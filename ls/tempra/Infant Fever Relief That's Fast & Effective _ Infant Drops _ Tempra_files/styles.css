@@ -1,0 +1,339 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video{side-resource-about-fr
+margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+body{line-height:1;}
+article,aside,canvas,detaiprols,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary{display:block;}
+nav ul{list-style:none;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after,
+q:before, q:after{content:'';content:none;}
+a{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent;}
+ins{background-color:#ff9;color:#000;text-decoration:none;}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}
+del{text-decoration:line-through;}
+abbr[title], dfn[title]{border-bottom:1px dotted #000;cursor:help;}
+table{border-collapse:collapse;border-spacing:0;}
+hr{display:block;height:1px;border:0;border-top:1px solid #cccccc;margin:1em 0;padding:0;}
+input, select{vertical-align:middle;}
+iframe{border:none;}
+*, html{margin:0px;padding:0px;}
+.rounded{border-radius:7px;-webkit-border-radius:7px;-moz-border-radius:7px;}
+body{background:url(../images/bg-header-repeat.png) repeat-x left top;font-family:Arial;font-size:12px;}
+sup{font-size:43%;}
+h2{color:#0e4d7d;font-size:21px;font-weight:normal;margin-bottom:12px;}
+h3{font-size:14px;margin-bottom:8px;text-shadow:0px 1px 1px #FFFFFF;}
+p{margin-bottom:10px;}
+a{color:#039fd1;text-decoration:none;}
+.clear{clear:both;}
+.wrap{width:995px;margin:0px auto;position:relative;}
+.wrapper{width:995px;margin:0px auto;}
+select{background:#fdfefe url(../images/bg-dropdown.png) no-repeat right top;color:#7e7e7e;font-size:17px;-webkit-appearance:none;padding:5px 30px 8px 10px;border:1px #c2c2c2 solid;}
+.left-col{background:url(../images/bg-header-left-col.png) no-repeat left top;height:508px;width:400px;margin:-35px 0px 0px -12px;float:left;}
+.left-col .box{width:364px;height:460px;margin-top:223px;margin-left:15px;}
+.right-col{float:left;width:600px;}
+.dropdown{background:#fff url(../images/bg-dropdown.png) no-repeat right top;border:1px #c2c2c2 solid;color:#7e7e7e;font-size:17px;padding:5px 30px 8px 10px;border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;}
+.dropdown .selected{height:21px;padding-bottom:6px;}
+.dropdown ul{display:none;background:#ffffff;border:1px solid #c1c1c1;margin-left:-7px;margin-top:-1px;position:absolute;width:66px;z-index:10000;-moz-box-radius:0px 0px 5px 5px;-webkit-border-radius:0px 0px 5px 5px;border-radius:0px 0px 5px 5px;}
+.dropdown.open ul{display:block}
+.dropdown ul li{border-bottom:1px solid #c1c1c1;color:#0c3f6e;display:block;font-size:17px;font-family:Arial, sans-serif;padding:5px 5px 5px 10px;width:51px;}
+.dropdown ul li:hover{background:#e9e9e9;}
+.dropdown ul li.last{border-bottom:0px;-moz-box-radius:0px 0px 5px 5px;-webkit-border-radius:0px 0px 5px 5px;border-radius:0px 0px 5px 5px;}
+.dropdown ul li a{color:#0c3f6e;font-size:17px;font-family:Arial, sans-serif;text-decoration:none;display:block;}
+.dropdown.big{background:url(../images/bg-dropdown-big.png) no-repeat right top;height:23px;padding:10px 30px 8px 10px;}
+.dropdown.big ul{margin-top:4px;width:220px;margin-left:0px;}
+.dropdown.big ul li{width:205px;}
+.download{background:url(../images/bg-download.png) no-repeat left top;display:block;margin:30px 0px 30px 0px;width:226px;height:55px;padding:0px 0px 0px 5px;color:white;text-decoration:none;font-size:16px;}
+.download .icon{background:url(../images/icon-button-fever.png) no-repeat 5px 5px;padding:10px 0px 15px 50px;font-size:14px;display:block;text-align:center;}
+.tabs{list-style:none;width:240px;margin:0px 0px 30px -60px;}
+.tabs li{font-size:17px;border-bottom:1px #abdced solid;padding:3px 0px 3px 25px;}
+.tabs li a{color:#0c3f6e;text-decoration:none;}
+.tabs .current a{color:#ed1c24;}
+.tabs .last{border-bottom:0px;}
+.accordion{list-style:none;}
+.accordion > li{border-bottom:1px #d4d4d4 solid;}
+.accordion h3{background:url(../images/bg-accordion.png) no-repeat right top;color:#6d6d6d;cursor:pointer;font-size:18px;font-weight:normal;margin:4px 0px 4px 0px;height:21px;}
+.accordion h3.selected{background:url(../images/bg-accordion-selected.png) no-repeat right top;}
+table{margin:5px 0px 10px 0px;border-collapse:collapse;font-size:16px;}
+table td{width:107px;color:#6d6d6d;}
+table .first{border-left:0px;}
+table .long{width:157px;color:#1f5281;border-right:0px;}
+table .highlight{background:#d7e8f0;}
+table thead tr{}
+table thead td{background:#e8f0f4;font-weight:bold;font-size:12px;text-transform:uppercase;padding:15px 5px 5px 10px;border:1px #aebac0 solid;border-left-color:#d1dfe5;border-right-color:#d1dfe5;}
+table tbody td{color:#454545;padding:8px 5px 5px 10px;border:1px #aebac0 solid;border-top:0px;border-left-color:#d1dfe5;border-right-color:#d1dfe5;}
+.content .tabs{list-style:none;width:240px;margin:0px 0px 30px -60px;}
+.content .dropdown ul{padding-left:0px;}
+.content h1{color:#3b3b3b;font-size:22px;font-weight:normal;margin-bottom:35px;}
+.content h2{color:#06335c;font-size:18px;margin:0px 0px 0px 0px;line-height:22px;}
+.content ul{list-style:square url(../images/bg-dot.png);padding-left:35px;margin-top:8px;}
+.content .accordion{list-style:none;padding-left:0px;line-height:inherit;}
+.content .accordion ul li{padding-bottom:5px;line-height:1.2em;}
+.content ul,
+.content p{margin-bottom:25px;}
+.content p{line-height:17px;}
+.content ul li{color:#6d6d6d;}
+.tabs-content > .selected{display:block;opacity:1;visibility:visible;}
+#dose-calculator{background:url(../images/bg-dose-calculator.png) repeat-x left top;float:left;height:145px;margin:35px 0px 0px 128px;padding:15px 30px 25px 30px;width:494px;position:relative;}
+#dose-calculator ul{list-style:none;margin:0px;padding:0px;}
+#dose-calculator h2{color:#0e4d7d;font-weight:normal;margin-bottom:10px;font-family:"HelveticaNeue-Light", "Helvetica Neue", Arial;font-size:31px;}
+#dose-calculator h3{font-weight:normal;}
+#dose-calculator ul li{float:left;}
+#dose-calculator ul .weight{width:205px;margin-right:50px;}
+.fr_CA #dose-calculator ul .weight{width:217px;}
+#dose-calculator .weight h3{color:#5aa5c3;}
+#dose-calculator ul .weight .dropdown{width:35px;}
+#dose-calculator ul .weight input,
+#dose-calculator ul .weight .dropdown{float:left;}
+#dose-calculator ul .age{width:225px;}
+#dose-calculator ul .age .dropdown{width:130px;}
+#dose-calculator ul .age .dropdown ul{width:140px;}
+#dose-calculator ul .age .dropdown ul li{width:125px;}
+#dose-calculator .age h3{color:#1e5180;}
+#dose-calculator ul .or{position:absolute;left:220px;top:87px;font-size:32px;color:#DFE5E8;text-shadow:0px -1px 0px rgba(0, 0, 0, 0.45);text-transform:uppercase;}
+#dose-calculator .button{background:url(../images/bg-button.png) repeat-x left top;border-top:#196981;cursor:pointer;width:120px;color:#fff;height:22px;font-size:12px;margin-top:15px;padding:9px 0px 0px 0px;text-transform:uppercase;text-align:center;}
+#dose-calculator input,
+#dose-calculator .dropdown{width:70px;}
+#dose-calculator input[type="text"]{color:#7e7e7e;border:1px #c2c2c2 solid;height:33px;line-height:33px;font-size:12px;padding:0px 0px 0px 0px;text-transform:uppercase;text-align:center;width:95px;margin-right:5px;height:30px;}
+#dose-calculator .dropdown{height:18px;}
+#dose-calculator .eyedropper{background:url(../images/eyedropper.png) repeat-x left top;width:197px;height:178px;position:absolute;top:-30px;right:-18px;}
+#dose-calculator .dose-note{font-size:11px;color:#bebebd;position:relative;}
+#dose-calculator .dose-note > div{position:absolute;top:17px;left:142px;width:350px;}
+#main-header{height:508px;}
+#main-header .wrap{height:508px;}
+#main-header #main-header-left-col{background:url(../images/bg-header-left-col.png) no-repeat left top;height:508px;left:-12px;position:absolute;top:0px;text-indent:-9999px;width:400px;}
+#main-header-logo{background:url(../images/tempra-logo.png) no-repeat left top;height:63px;left:85px;position:absolute;top:92px;text-indent:-9999px;width:210px;z-index:1;}
+.other #main-header #main-header-logo{left:75px;top:75px;z-index:1;}
+#main-header #product-navigator{position:absolute;bottom:2px;left:377px;}
+#main-header #product-navigator .title{color:#06335c;font-size:15px;font-weight:bold;padding:0px 0px 5px 30px;}
+#main-header #product-navigator ul{list-style:none;}
+#main-header #product-navigator .nav li{background:#0e4d7d;border-bottom:1px #9ae3f6 solid;color:#fff;padding:10px 30px 10px 30px;font-size:17px;width:138px;}
+#main-header #product-navigator .nav li a{color:#fff;font-size:17px;text-decoration:none;}
+#main-header #product-navigator .nav li.current{background:url(../images/bg-product-selector-current.jpg) no-repeat left center;}
+#main-header #product-navigator .nav .last{border-bottom:0px;}
+#main-header #baby{background:url(../images/baby1.png) no-repeat left top;height:457px;right:0px;position:absolute;top:49px;width:450px;z-index:-1;}
+#main-header #baby.baby1{background:url(../images/baby1.png) no-repeat left top;}
+#main-header #baby.baby2{background:url(../images/baby2.png) no-repeat left top;}
+#main-header #baby.baby3{background:url(../images/baby3.png) no-repeat left top;right:-100px;}
+#main-header #main-header-slogan{color:#fff;font-family:Helvetica;font-size:33px;left:390px;position:absolute;top:150px;width:320px;}
+.fr_CA #main-header #main-header-slogan{top:130px;font-size:29px;}
+#main-header .products{left:-340px;position:absolute;top:-68px;width:250px;text-align:center;}
+#main-header .products .new{}
+.fr_CA #main-header .products{left:-340px;position:absolute;top:-34px;width:250px;text-align:center;}
+#main-header .products li{position:absolute;left:30px;opacity:0;}
+#main-header nav ul{font-size:12px;font-weight:bold;text-transform:uppercase;list-style:none;}
+#main-header nav ul li{float:left;border-right:1px #0085b3 solid;}
+#main-header nav ul li a{float:left;color:#fff;padding:10px 12px 9px 12px;text-decoration:none;}
+#main-header nav ul li a:hover{background:#032247;}
+#main-header #main-header-nav{margin-top:1px;width:450px;position:absolute;right:147px;z-index:100;}
+#main-header #main-header-nav ul li a{padding:9px 12px 10px 12px;}
+#main-header #main-header-nav ul li.current a{color:#99d0e4;background:url(../images/bg-menu-selected.png) no-repeat center bottom;}
+#main-header #main-header-nav ul #main-header-primary-nav-faq.current a{background:url(../images/bg-menu-selected-small.png) no-repeat center bottom;}
+#main-header #main-header-nav ul #main-header-primary-nav-faq{border-right:0px;padding-right:0px;}
+#main-header #secondary-header-nav{background:#032247;border:1px #18476e solid;font-size:11px;position:absolute;top:7px;right:0px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;z-index:100;}
+#main-header #secondary-header-nav li{border-right:0px;}
+#main-header #secondary-header-nav a{color:#CCCED3;font-size:11px;font-weight:bold;padding:3px 12px 3px 12px;}
+#main-header #secondary-header-nav .current a{color:#fff;}
+#main-content{border-bottom:1px #abb2b4 solid;-webkit-box-shadow:0px 1px 2px 1px rgba(171, 178, 180, 0.6);min-height:400px;padding-bottom:40px;}
+#footer{background:#fff url(../images/bg-footer.png) repeat-x left top;color:#5c5d5d;height:165px;padding:20px 0px}
+#footer h2{color:#5c5d5d;font-size:13px;font-weight:bold;margin-bottom:5px;}
+#footer ul{list-style:none;}
+#footer ul.cols{margin-left:405px;}
+#footer ul.cols > li{float:left;padding:0px 95px 0px 0px;}
+.fr_CA #footer ul.cols .menu{padding:0px 41px 0px 0px;}
+#footer ul.cols > li li{margin:3px 0px 3px 0px;}
+#footer a{color:#5c5d5d;font-size:13px;font-weight:bold;text-decoration:none;}
+#footer .contact a{font-weight:normal;}
+#footer .copyright{font-size:11px;}
+#footer .copyright a{font-size:11px;font-weight:normal;}
+#footer ul.cols .last{padding-right:0px;position:absolute;right:0px;width:200px;}
+.fr_CA #footer ul.cols .last{width:208px;}
+#footer ul.cols .last li{float:left;}
+#footer ul.cols .last .separator{margin:5px 8px 0px 8px;background:#818485;border-right:1px #c0c7ca solid;width:1px;height:12px;}
+#footer .warning{margin:15px 0px 0px 405px;padding-top:13px;border-top:1px #ABB2B4 solid;}
+.quick-link{float:left;border-left:1px #bbcdda solid;margin-right:10px;height:108px;width:395px;}
+.quick-link li{float:left;border-right:1px #bbcdda solid;text-align:center;text-decoration:none;}
+.quick-link li a{color:#0e4d7d;display:block;font-size:16px;height:43px;text-decoration:none;width:86px;padding:65px 3px 0px 3px;}
+.fr_CA .quick-link li a{font-size:15px;}
+.quick-link #fever-chart-icon{background:url(../images/icon-fever.png) no-repeat center top;}
+.quick-link #fever-diary-icon{background:url(../images/icon-diary.png) no-repeat center top;}
+.quick-link #dosage-chart-icon{background:url(../images/icon-dosage.png) no-repeat center top;}
+.quick-link #facebook-chart-icon{background:url(../images/icon-facebook.png) no-repeat center top;}
+.quick-link #facebook-chart-icon{display:none;}
+#default-index ul{list-style:none;}
+#default-index #child-symptom{color:#0c4070;float:left;font-family:"HelveticaNeue-Light", "Helvetica Neue", Arial;font-size:28px;padding:78px 0px 0px 0px;width:329px;}
+#default-index #child-symptom .dropdown{color:#737576;width:230px;margin-top:10px;}
+#default-index #dose-calculator{background:url(../images/bg-dose-calculator.png) repeat-x left top;float:left;height:145px;margin:35px 0px 30px 49px;padding:15px 30px 25px 30px;width:494px;position:relative;}
+#default-index #dose-calculator h2{color:#0e4d7d;font-weight:normal;margin-bottom:10px;font-family:"HelveticaNeue-Light", "Helvetica Neue", Arial;font-size:31px;}
+#default-index #dose-calculator h3{font-weight:normal;}
+#default-index #dose-calculator ul li{float:left;}
+#default-index #dose-calculator ul .weight{width:205px;margin-right:50px;}
+.fr_CA #default-index #dose-calculator .weight{width:217px;}
+#default-index #dose-calculator .weight h3{color:#5aa5c3;}
+#default-index #dose-calculator ul .weight .dropdown{width:35px;}
+#default-index #dose-calculator ul .weight input,
+#default-index #dose-calculator ul .weight .dropdown{float:left;}
+#dose-calculator ul .weight .dropdown ul{width:40px;}
+#dose-calculator ul .weight .dropdown li{width:25px;}
+#default-index #dose-calculator ul .age{width:225px;}
+#default-index #dose-calculator ul .age .dropdown{width:130px;}
+#dose-calculator ul .age .dropdown ul{width:135px;}
+#dose-calculator ul .age .dropdown ul li{width:120px;}
+#default-index #dose-calculator .age h3{color:#1e5180;}
+#default-index #dose-calculator ul .or{position:absolute;left:225px;top:87px;font-size:32px;color:#DFE5E8;text-shadow:0px -1px 0px rgba(0, 0, 0, 0.45);text-transform:uppercase;}
+.fr_CA #default-index #dose-calculator ul .or{left:227px;}
+#default-index #dose-calculator input[type=submit]{line-height:24px;height:28px;width:120px;border:0px;background:url(../images/bg-button.png) repeat-x left top;border-top:#196981;color:#fff;font-size:12px;margin-top:15px;text-transform:uppercase;text-align:center;}
+#default-index #dose-calculator input,
+#default-index #dose-calculator .dropdown{width:70px;}
+#default-index #dose-calculator input[type="text"]{color:#7e7e7e;border:1px #c2c2c2 solid;height:33px;line-height:33px;font-size:12px;padding:0px 0px 0px 0px;text-transform:uppercase;text-align:center;width:95px;margin-right:5px;height:30px;}
+#default-index #dose-calculator .dropdown{height:18px;}
+#default-index #dose-calculator .eyedropper{background:url(../images/eyedropper.png) repeat-x left top;width:197px;height:178px;position:absolute;top:-30px;right:-18px;}
+#default-index .description{float:left;width:490px;color:#383838;margin-top:25px;font-size:14px;line-height:17px;}
+.fr_CA #default-index .description{margin-top:10px;}
+#default-index .separator{border-top:1px #0f4476 solid;margin:0px 68px 0px 0px;padding:30px 0px 0px 0px;}
+#product-navigator .sticker{background:url(../images/sticker-roll-over.png) no-repeat top left;height:170px;position:absolute;top:0px;left:-401px;width:142px;}
+.fr_CA #product-navigator .sticker{background:url(../images/sticker-roll-over-fr.png) no-repeat top left;top:35px;}
+body.product{background:#fff url(../images/bg-header-other-repeat.png) repeat-x left top;}
+.product #main-header{border-bottom:0px;height:372px;}
+.product #main-header .wrap{height:35px;}
+.product #main-content{-webkit-box-shadow:none;margin-top:-338px;}
+#product-index .left-col .product-box{width:317px;height:530px;margin-top:200px;margin-left:40px;}
+#product-index .left-col .product-box .products{list-style:none;pointer-events:none;}
+#product-index .left-col .product-box .products li{position:absolute;z-index:100;}
+#product-index .left-col .product-box .new-tag{display:none;}
+.fr_CA #product-index .left-col .product-box .new-tag{background:url(../images/sticker-roll-over-fr.png) no-repeat top left;}
+#product-index .left-col .product-box.product1-1 .new-tag,
+#product-index .left-col .product-box.product1-2 .new-tag,
+#product-index .left-col .product-box.product1-3 .new-tag{margin-left:-25px;}
+#product-index .small{font-size:12px;}
+#product-index .left-col .product-box .actions{color:#0f4678;font-size:20px;width:206px;text-align:center;padding:468px 0px 0px 34px;margin-left:36px;}
+#product-index .left-col .product-box .actions .action-content{display:block;font-size:11px;color:#6E6D6D;margin:20px 0px 0px -26px;}
+#product-index .left-col .product-box .actions .title{background:#faf9f9;border:1px #c2c2c2 solid;border-radius:7px 7px 0px 0px;color:#6d6d6d;font-size:12px;font-weight:bold;text-align:center;text-transform:uppercase;padding:6px 0px 6px 0px;}
+#product-index .left-col .product-box .actions ul{list-style:none;border-radius:7px;background:url(../images/bg-button-action.png) repeat-x left top;box-shadow:inset 0px 1px 1px 1px rgba(0,0,0,0.5);height:26px;width:180px;margin:0px 0px 0px 0px;}
+#product-index .left-col .product-box .actions ul li{}
+#product-index .left-col .product-box .actions ul li a{color:#fff;display:block;padding:7px 0px 5px 0px;font-size:12px;font-weight:bold;text-decoration:none;width:100%;}
+#product-index .right-col{float:left;width:600px;}
+.right-col .content{color:#383838;font-size:15px;min-height:330px;padding:30px 10px 30px 15px;}
+#product-index .right-col .content h1{width:490px;font-size:28px;font-family:Arial;color:#0f4678;margin-bottom:35px;}
+.fr_CA #product-index .right-col .content h1{width:490px;}
+#product-index .right-col .content h1 span{display:block;color:#6d6d6d;font-size:13px;font-weight:bold;margin-top:4px;}
+#product-index .right-col .content h2{font-size:20px;margin:20px 0px 5px 0px;}
+#product-index .right-col .content h3{color:#06335c;font-weight:normal;}
+.right-col .section-menu{list-style:none;margin:68px 0px 0px -10px;height:80px;padding-left:16px;}
+.right-col .section-menu li{float:left;padding-left:12px;}
+.right-col .section-menu .current{background:url(../images/bg-product-menu-selected.png) no-repeat left bottom;}
+.right-col .section-menu .current .title{color:#06335c;}
+.right-col .section-menu li a{color:#fff;border-left:1px #fff solid;display:block;width:174px;height:80px;font-size:15px;font-family:"Helvetica Neue", Arial, sans-serif;padding-left:10px;text-decoration:none;}
+.right-col .section-menu li a .icon{float:left;width:50px;height:65px;padding-right:5px;}
+.right-col .section-menu #nav-product-1 a .icon{background:url(../images/products/menu-product1.png) no-repeat left top;}
+.right-col .section-menu #nav-product-2 a .icon{background:url(../images/products/menu-product2.png) no-repeat left top;}
+.right-col .section-menu #nav-product-3 a .icon{background:url(../images/products/menu-product3.png) no-repeat left top;}
+.fr_CA .right-col .section-menu #nav-product-1 a .icon{background:url(../images/products/menu-product1-fr.png) no-repeat left top;}
+.fr_CA .right-col .section-menu #nav-product-2 a .icon{background:url(../images/products/menu-product2-fr.png) no-repeat left top;}
+.fr_CA .right-col .section-menu #nav-product-3 a .icon{background:url(../images/products/menu-product3-fr.png) no-repeat left top;}
+.right-col .section-menu.product li a{color:#fff;border-left:1px #fff solid;display:block;width:174px;height:80px;font-size:15px;font-family:"Helvetica Neue", Arial, sans-serif;padding-left:10px;text-decoration:none;}
+.right-col .section-menu.product li a .icon{background:url(../images/products/thumb-product1.png) no-repeat left top;}
+.right-col .section-menu li a .title{color:#fff;padding:8px 0px 0px 0px;}
+.fr_CA #product-index .right-col .section-menu li a .title{font-size:14px;}
+.right-col .section-menu li.current a .title{color:#06335c;}
+#product-index .table{margin:20px 0px 5px 0px;}
+#product-index .table .legend{color:#383838;font-size:13px;}
+#product-index table{margin:5px 0px 10px 0px;border-collapse:collapse;font-size:16px;}
+#product-index table td{width:107px;color:#6d6d6d;}
+#product-index table .first{border-left:0px;}
+#product-index table .long{width:157px;border-right:0px;}
+#product-index table tbody .long{color:#1f5281;}
+#product-index table .highlight{background:#d7e8f0;}
+#product-index table thead tr{}
+#product-index table thead td{background:#e8f0f4;font-weight:bold;font-size:12px;text-transform:uppercase;padding:15px 5px 5px 10px;border:1px #aebac0 solid;border-left-color:#d1dfe5;border-right-color:#d1dfe5;}
+#product-index table tbody td{color:#454545;padding:8px 5px 5px 10px;border:1px #aebac0 solid;border-top:0px;border-left-color:#d1dfe5;border-right-color:#d1dfe5;}
+#product-index .dropdown{width:260px;padding-bottom:0px;padding-top:8px;font-size:16px;height:23px;}
+#product-index .dropdown ul{width:268px;margin-left:-5px;margin-top:0px;}
+#product-index .dropdown ul li{width:auto;font-size:16px;}
+#product-index .dropdown .selected{padding-bottom:2px;}
+#product-index .flavor{list-style:none;padding-left:0px;}
+#product-index .flavor li{float:left;height:43px;width:43px;margin:8px 8px 0px 0px;}
+#product-index .flavor .banana{background:url(../images/icon-flavor-banana.png) no-repeat left top;}
+#product-index .flavor .chery{background:url(../images/icon-flavor-chery.png) no-repeat left top;}
+body.other{background:#fff url(../images/bg-header-other-repeat.png) repeat-x left top;}
+.other #main-header{border-bottom:0px;height:372px;}
+.other #main-header .wrap{height:35px;}
+.other #main-content{-webkit-box-shadow:none;margin-top:-338px;}
+.other #main-content .top-content h1{font-size:20px;font-weight:normal;color:#fff;height:48px;margin:75px 0px 23px 16px;}
+.other #main-content .top-content h1 span{display:block;color:#06335c;}
+#about-index .left-col .box{background:url(../images/bg-about-baby.png) no-repeat left top;left:0px;}
+#about-index .left-col{height:600px;}
+#about-index #main-content .content{padding-top:50px;}
+.right-col .section-menu li a{color:#06335c;font-size:20px;}
+.right-col .section-menu li a.current{color:#fff;}
+.right-col .section-menu li a .icon{background:no-repeat center center;float:left;width:50px;height:65px;padding-right:5px;}
+.right-col .section-menu #nav-resource-about a .icon{background-image:url(../images/bg-section-fever.png);}
+.right-col .section-menu #nav-resource-calculator a .icon{background-image:url(../images/bg-section-calculator.png);}
+.right-col .section-menu #nav-resource-information a .icon{background-image:url(../images/bg-section-info.png);}
+#about-index .left-col .box{background:url(../images/bg-about-baby.png) no-repeat center top;}
+#resource-about-index .left-col .box,
+#resource-dose-calculator-index .left-col .box,
+#resource-information-index .left-col .box{background:url(../images/side/side-resource-about.png) no-repeat center top;}
+.fr_CA #resource-about-index .left-col .box,
+.fr_CA #resource-dose-calculator-index .left-col .box,
+.fr_CA #resource-information-index .left-col .box{background:url(../images/side/side-resource-about-fr.png) no-repeat center top;}
+#resource-information-index ul ul{list-style:none;margin-bottom:0px;}
+#resource-dose-calculator-index h1{color:#06335c;font-size:25px;font-weight:normal;margin:20px 0px 15px 0px;}
+#resource-dose-calculator-index #dose-calculator{background:url(../images/bg-resources-dose-calculator.png) repeat-x left top;float:none;height:110px;margin:0px 0px 0px 0px;padding:20px 30px 25px 30px;}
+#dose-calculator ul .or{left:221px;top:44px;}
+.fr_CA #dose-calculator ul .or{left:229px;}
+#dose-calculator .button{width:143px;}
+#dose-calculator .button span{background:url(../images/bg-view-result-icon.png) no-repeat left top;margin:0px 15px 0px 15px;padding:1px 0px 1px 20px;display:block;}
+#resource-dose-calculator-index .results{margin:50px 0px 40px 0px;}
+#resource-dose-calculator-index .results .item{position:relative;margin:50px 0px 20px 0px;}
+#resource-dose-calculator-index .item .description{background:#eaf4f9;font-size:14px;width:250px;padding:10px 30px 10px 10px;}
+#resource-dose-calculator-index .item .title{color:#859196;}
+#resource-dose-calculator-index .item .description h3{color:#06335c;font-size:34px;font-weight:normal;margin-top:-7px;text-align:right;border-bottom:1px #bbc3c7 solid;}
+#resource-dose-calculator-index .item .product{background:#fff;height:165px;left:270px;top:-20px;width:283px;position:absolute;}
+#resource-dose-calculator-index .item .product .product-image{height:155px;float:left;margin:10px 0px 0px -16px;width:118px;}
+#resource-dose-calculator-index .item .product .product-image img{height:155px;}
+#resource-dose-calculator-index .item .product .product-image.product2,
+#resource-dose-calculator-index .item .product .product-image.product3{margin:10px 0px 0px -23px;}
+#resource-dose-calculator-index .item .product .product-content{float:left;width:175px;}
+#resource-dose-calculator-index .item .product h2{font-size:19px;font-weight:normal;margin-top:20px;}
+#resource-dose-calculator-index .item .product a{background:url(../images/bg-button-small.png) repeat-x left top;border-top:#196981;display:block;cursor:pointer;width:80px;color:white;height:18px;font-size:12px;margin-top:0px;padding:6px 0px 0px 0px;text-transform:uppercase;text-decoration:none;text-align:center;}
+#resource-dose-calculator-index .footer{border-top:1px #b8b8b8 solid;color:#717171;font-size:12px;padding-top:15px;}
+#resource-dose-calculator-index .download .icon{background:url(../images/icon-button-dossage.png) no-repeat 5px 5px;padding-top:15px;}
+.en_CA #resource-dose-calculator-index .download .icon{padding-top:20px;}
+#resource-dose-calculator-index .message{position:absolute;left:296px;bottom:40px;font-size:11px;width:125px;color:rgb(190, 190, 189);}
+#sitemap-index{padding:0px 0px 0px 0px;}
+#sitemap-index a{color:#0085b3;text-decoration:none;}
+#sitemap-index ul{list-style:none;margin-bottom:0px;}
+#sitemap-index ul > li{padding:0px 0px 5px 0px;font-weight:bold;}
+#sitemap-index ul ul{padding-left:20px;}
+#sitemap-index ul ul li{font-weight:normal;}
+#resource-fever-chart h1{color:#06335c;font-size:25px;}
+#resource-fever-chart .download .icon{background:url(../images/icon-button-fever.png) no-repeat 5px 5px;}
+.en_CA #resource-fever-chart .download .icon{padding-top:15px;}
+#resource-fever-chart table .first{width:140px;border-left:0px;}
+#resource-fever-chart table .second{width:240px;}
+#resource-fever-chart table .third{width:60px;vertical-align:top;padding:20px 0px 0px 0px;text-align:center;}
+#resource-fever-chart table .third span{display:block;padding-bottom:21px;}
+#resource-fever-chart table .icons{width:50px;float:right;}
+#resource-fever-chart table .last{font-size:12px;width:195px;border-right:0px;}
+#resource-fever-chart p{margin-bottom:8px;}
+#resource-fever-chart .icon-tech{display:block;height:41px;width:50px;}
+#resource-fever-chart .small{font-size:12px;font-weight:bold;}
+#resource-fever-chart .tech{display:block;float:right;width:86px;}
+#resource-fever-chart .icon-tech.rectal{background:url(../images/icon-rectal.png) no-repeat left top;}
+#resource-fever-chart .icon-tech.mouth{background:url(../images/icon-mouth.png) no-repeat left top;}
+#resource-fever-chart .icon-tech.ear{background:url(../images/icon-ear.png) no-repeat left top;}
+#resource-fever-chart .icon-tech.armpit{background:url(../images/icon-armpit.png) no-repeat left top;}
+#resource-fever-diary .download .icon{background:url(../images/icon-button-diary.png) no-repeat 5px 5px;padding-top:15px;}
+.en_CA #resource-fever-diary .download .icon{padding-top:20px;}
+#faq-index .left-col .box{background:url(../images/bg-faq-baby.png) no-repeat left top;left:0px;}
