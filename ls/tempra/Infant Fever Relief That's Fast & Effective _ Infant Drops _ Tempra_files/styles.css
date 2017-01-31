@@ -133,7 +133,7 @@ table tbody td{color:#454545;padding:8px 5px 5px 10px;border:1px #aebac0 solid;b
 #main-header .products li{position:absolute;left:30px;opacity:0;}
 #main-header nav ul{font-size:12px;font-weight:bold;text-transform:uppercase;list-style:none;}
 #main-header nav ul li{float:left;border-right:1px #0085b3 solid;}
-#main-header nav ul li a{float:left;color:#fff;padding:10px 12px 9px 12px;text-decoration:none;}
+#main-header nav ul li a{float:left;color:#18476e;padding:10px 12px 9px 12px;text-decoration:none;}
 #main-header nav ul li a:hover{background:#032247;}
 #main-header #main-header-nav{margin-top:1px;width:450px;position:absolute;right:147px;z-index:100;}
 #main-header #main-header-nav ul li a{padding:9px 12px 10px 12px;}
