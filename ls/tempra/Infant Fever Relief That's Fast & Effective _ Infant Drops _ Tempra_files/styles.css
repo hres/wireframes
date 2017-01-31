@@ -165,10 +165,10 @@ table tbody td{color:#454545;padding:8px 5px 5px 10px;border:1px #aebac0 solid;b
 .quick-link li{float:left;border-right:1px #bbcdda solid;text-align:center;text-decoration:none;}
 .quick-link li a{color:#0e4d7d;display:block;font-size:16px;height:43px;text-decoration:none;width:86px;padding:65px 3px 0px 3px;}
 .fr_CA .quick-link li a{font-size:15px;}
-.quick-link #fever-chart-icon{background:url(../images/icon-fever.png) no-repeat center top;}
-.quick-link #fever-diary-icon{background:url(../images/icon-diary.png) no-repeat center top;}
-.quick-link #dosage-chart-icon{background:url(../images/icon-dosage.png) no-repeat center top;}
-.quick-link #facebook-chart-icon{background:url(../images/icon-facebook.png) no-repeat center top;}
+.quick-link #fever-chart-icon{background:url(./../images/icon-fever.png) no-repeat center top;}
+.quick-link #fever-diary-icon{background:url(./../images/icon-diary.png) no-repeat center top;}
+.quick-link #dosage-chart-icon{background:url(./../images/icon-dosage.png) no-repeat center top;}
+.quick-link #facebook-chart-icon{background:url(./../images/icon-facebook.png) no-repeat center top;}
 .quick-link #facebook-chart-icon{display:none;}
 #default-index ul{list-style:none;}
 #default-index #child-symptom{color:#0c4070;float:left;font-family:"HelveticaNeue-Light", "Helvetica Neue", Arial;font-size:28px;padding:78px 0px 0px 0px;width:329px;}
