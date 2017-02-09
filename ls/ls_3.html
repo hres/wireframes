@@ -1,458 +1,177 @@
 
-<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" dir="ltr">
 <!--<![endif]-->
 <head>
-<meta charset="utf-8">
-<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
-wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-<title>The Drug and Health Product Register</title>
-<meta content="width=device-width,initial-scale=1" name="viewport">
-<!-- Meta data -->
-<meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
-<!-- Meta data-->
-<!--[if gte IE 9 | !IE ]><!-->
-<link href=".././assets/favicon.ico" rel="icon" type="image/x-icon">
-<link rel="stylesheet" href=".././css/wet-boew.min.css">
-<!--<![endif]-->
-<link rel="stylesheet" href=".././css/theme.min.css">
-<!--[if lt IE 9]>
-<link href=".././assets/favicon.ico" rel="shortcut icon" />
-<link rel="stylesheet" href=".././css/ie8-wet-boew.min.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src=".././js/ie8-wet-boew.min.js"></script>
-<![endif]-->
-<!--[if lte IE 9]>
-<![endif]-->
-<noscript><link rel="stylesheet" href=".././css/noscript.min.css" /></noscript>
-<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
-<script>dataLayer1 = [];</script>
-<!-- End Google Tag Manager -->
-<link rel="stylesheet" href=".././css/dropdown.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta charset="utf-8" />
+    <!-- Web Experience Toolkit (WET) / Bo�te � outils de l'exp�rience Web (BOEW)
+        wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>Drug Facts Table</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="dcterms.language" title="ISO639-2" content="eng" />
+    <meta name="dcterms.title" content="Drug and health product inspections" />
+    <meta name="description" content="Find the latest results from the Government's drug and health product inspections." />
+    <meta name="dcterms.subject" title="scheme" content="" />
+    <meta name="dcterms.creator" content="Government of Canada, Health Canada and the Public health Agency of Canada" />
+    <meta name="dcterms.contributor" content="" />
+    <meta name="dcterms.type" title="gctype" content="" />
+    <meta name="dcterms.audience" title="gcaudience" content="" />
+    <meta name="dcterms.issued" title="W3CDTF" content="2015-04-21" />
+    <meta name="dcterms.modified" title="W3CDTF" content="2016-03-18" />
+    <meta name="review_date" content="" />
+    <meta name="meta_date" content="" />
+
+    <!-- Load closure template scripts -->
+    <script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_22/cdts/compiled/soyutils.js"></script>
+    <script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_22/cdts/compiled/wet-en.js"></script>
+    <script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_22/cdts/compiled/plugins-en.js"></script>
+    <!--<script type="text/javascript" src="./gcweb_4.0.22/wet-en.js"></script>
+    <script type="text/javascript" src="./gcweb_4.0.22/plugins-en.js"></script>-->
+    <!-- Load closure template scripts -->
+    <noscript>
+        <link rel="import" href="./StaticFallbackFiles/gcweb/refTop.html">
+    </noscript>
+    <!-- Write closure template -->
+    <script type="text/javascript">
+            document.write(wet.builder.refTop({
+                cdnEnv: "prod"
+            }));
+    </script>
+    <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+    <script>dataLayer1 = [];</script>
+    <!-- End Google Tag Manager -->
+
 </head>
-<body vocab="https://schema.org/" typeof="WebPage">
-<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
-<noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
-<!-- End Google Tag Manager -->
-<ul id="wb-tphp">
-<li class="wb-slc">
-<a class="wb-sl" href="#wb-cont">Skip to main content</a>
-</li>
-<li class="wb-slc visible-sm visible-md visible-lg">
-<a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
-</li>
-</ul>
-<header role="banner">
-<div id="wb-bnr" class="container">
-<section id="wb-lng" class="visible-md visible-lg text-right">
-<h2 class="wb-inv">Language selection</h2>
-<div class="row">
-<div class="col-md-12">
-<ul class="list-inline margin-bottom-none">
-<li><a lang="fr" href="content-fr.html">Français</a></li>
-</ul>
-</div>
-</div>
-</section>
-
-<div class="row">
-<div class="brand col-xs-8 col-sm-9 col-md-6">
-<a href="https://www.canada.ca/en/index.html"><object type="image/svg+xml" tabindex="-1" data=".././assets/sig-blk-en.svg"></object><span class="wb-inv"> Government of Canada</span></a>
-</div>
-<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
-<h2>Search and menus</h2>
-<ul class="list-inline text-right chvrn">
-<li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a></li>
-</ul>
-<div id="mb-pnl"></div>
-</section>
-<section id="wb-srch" class="col-xs-6 text-right visible-md visible-lg">
-<h2 class="wb-inv">Search</h2>
-<form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
-<div class="form-group">
-<label for="wb-srch-q" class="wb-inv">Search website</label>
-<input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search" value="" size="27" maxlength="150" placeholder="Search Canada.ca">
-<datalist id="wb-srch-q-ac">
-<!--[if lte IE 9]><select><![endif]-->
-<!--[if lte IE 9]></select><![endif]-->
-</datalist>
-</div>
-<div class="form-group submit">
-<button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub"><span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
-</div>
-</form>
-</section>
-</div>
-</div>
-<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" data-ajax-fetch=".././ajax/sitemenu-en.html" typeof="SiteNavigationElement">
-<h2 class="wb-inv">Topics menu</h2>
-<div class="container nvbar">
-<div class="row">
-<ul class="list-inline menu">
-<li><a href="https://www.esdc.gc.ca/en/jobs/index.page">Jobs</a></li>
-<li><a href="https://www.cic.gc.ca/english/index.asp">Immigration</a></li>
-<li><a href="https://travel.gc.ca/">Travel</a></li>
-<li><a href="https://www.canada.ca/en/services/business/index.html">Business</a></li>
-<li><a href="https://www.canada.ca/en/services/benefits/index.html">Benefits</a></li>
-<li><a href="https://healthycanadians.gc.ca/index-eng.php">Health</a></li>
-<li><a href="https://www.canada.ca/en/services/taxes/index.html">Taxes</a></li>
-<li><a href="https://www.canada.ca/en/services/index.html">More services</a></li>
-</ul>
-</div>
-</div>
-</nav>
-<nav role="navigation" id="wb-bc" class="" property="breadcrumb">
-<h2 class="wb-inv">You are here:</h2>
-<div class="container">
-<div class="row">
-<ol class="breadcrumb">
-<li><a href="https://www.canada.ca/en/index.html">Home</a></li>
-<li>The Drug and Health Product Register</li>
-</ol>
-</div>
-</div>
-</nav>
-</header>
+<body>
 <main role="main" property="mainContentOfPage" class="container">
-<h1 property="name" id="wb-cont">The Drug and Health Product Register</h1>
-<section>
+    <h1 property="name" id="wb-cont">The Drug and Health Product Register</h1>
+    <p align="center"><img src="images/tempra_df.png" align="middle"></p>
+      <section class="panel panel-default" id="tables">
+        <header class="panel-heading">
+            <h2 class="panel-title">Drug Facts</h2>
+        </header>
+        <table class="table table-hover table-bordered table-responsive" summary="">
+            <tr>
+                <td><strong>Active ingredient (in each dosage unit)</strong><br/>Acetaminophen XX mg</td>
+                <td><strong>Purpose</strong><br/>Pain reliever, fever reducer</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Uses</strong><br/>
+                    <ul>
+                        <LI>Reduces fever </LI>
+                        <LI>Temporarily relieves mild to moderate aches and pain due to </LI>
+                        <LI>headache</LI>
+                        <LI>backache</LI>
+                        <LI>migraine</LI>
+                        <LI>sore throat</LI>
+                        <LI>arthritis or rheumatism</LI>
+                        <LI> pre-menstrual/menstrual cramps</LI>
+                        <LI> muscle sprains and strains</LI>
+                        <LI> toothache / teething pain</LI>
+                        <LI>common cold and flu</LI>
+                        <LI>immunization</LI>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Warnings</strong><br/>
+                <span class="text-danger"><strong>Liver warning: </strong></span>Acetaminophen may cause <strong>severe or possibly fatal liver damage</strong> if you take:<br/> 
+                <ul>
+                    <LI>more than the recommended dose in 24 hours</LI>
+                    <LI>with other drugs containing acetaminophen</LI>
+                    <LI>
+                        while drinking 3 or more alcoholic drinks every day (adult products only)<br/> Symptoms of liver damage may include
+                    </LI>
+                    <LI>yellow skin or eyes </LI>
+                    <LI>dark urine </LI>
+                    <LI>sweating </LI>
+                    <LI>nausea </LI>
+                    <LI>vomiting </LI>
+                    <LI>stomach pain </LI>
+                    <LI>unusual tiredness </LI>
+                    <LI>loss of appetite</LI>
+                </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Alergy alert: </strong>Acetaminophen may cause serious skin reactions. Symptoms may include: <br/>
+                <ul>
+                    <LI>skin reddening</LI>
+                    <LI>blisters</LI>
+                    <li>rash <strong>If any of the above noted symptoms occur, stop use and seek medical help right away.</strong></li>
+                </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Do not use </strong><br/>
+                    <ul>
+                        <LI>with any other drug containing <strong>acetaminophen</strong> </LI>
+                        <LI>if you are allergic to acetaminophen or any other ingredient in this product. If you are not sure whether a drug contains acetaminophen, ask
+                            a doctor or pharmacist.
+                        </LI>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Ask a doctor before use if you </strong>have liver or kidney disease.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Ask a doctor or pharmacist before use if you </strong>take the blood thinning drug warfarin.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Stop use and ask a doctor if: </strong><br/>
+                    <ul>
+                        <li>pain lasts for more than 5 days</li>
+                        <li>fever lasts more than 3 days</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong>If pregnant or breastfeeding</strong>, ask a healthcare professional before use.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong>Keep out of reach of children. </strong>This package contains enough drug to seriously harm a child (if greater than 3.2 grams of acetaminophen in the package). In case of overdose, call a Poison Control Centre or get medical help right away. Quick medical attention is critical even if you do not notice any signs or symptoms.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong>Directions</strong><br />
+                    <ul>
+                        <li>Do not take more than directed (see liver warnings) Adults and children 12 years and over:</li>
+                        <li>take 1(tablet/caplet/etc.) every 4 to 6 hours </li>
+                        <li>if pain or fever does not respond to 1 (tablet/caplet/etc.), take 2 (tablets/caplets/etc.) at next dose </li>
+                        <li>do not take more than X mg (xx tablets) in 24 hours</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong>Other information</strong><br />
+                    <ul>
+                        <li>(if no information here, delete this heading)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong>Inactive ingredients </strong>List all NMIs
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong>Questions? </strong>Call 1-XXX-XXX-XXXX (or other contact information)
+                </td>
+            </tr>
 
-
-  <div>
-    <div>
-      <ul class="nav nav-tabs">
-        <li class="active panel-title"><a data-toggle="tab" href="dhpr_option3d.html">Search for Drugs</a></li>
-        
-        
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Summary Reports
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="dhpr_rds_3d.html">Regulatory Decision Summaries (RDS)</a></li>
-            <li><a href="dhpr_sbd_3d.html">Summary Basis of Decision (SBD)</a></li> 
-            <li><a href="dhpr_ssr_3d.html">Summary Safety Review (SSR)</a></li>
-          </ul>
-        </li>
-        <li><a href="dhpr_report_se.html">Report a Side Effect</a></li>
-        
-
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">About
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="dhpr_option3d_whatsnew.html">What’s New?  </a></li>
-            <li><a href="dhpr_about.html">The Drug and Health Product Register</a></li>
-            <li >
-                <a  href="dhpr_drug_ds.html">Data / Regulatory Information</a>
-              </li>
-            <li><a href="dhpr_se_disclaimer.html">Reported Side Effects - Disclaimers</a></li>
-            <li><a href="dhpr_feedback.html">Feedback</a></li>
-            <li><a href="dhpr_qa.html">Questions and Answers</a></li>
-            
-          </ul>
-        </li>
-      </ul>      
-    </div>
-    <!--Main content-->
-      <main role="main" property="mainContentOfPage" class="container">
-      <h2 id="wb-cont">Details for: <strong>TEMPRA INFANT DROPS</strong></h2>
-      <h2 id="wb-cont">Company: PALADIN LABS INC </h2>
-
-            <table class="table table-hover table-bordered table-responsive" summary="">
-               <thead>
-                  <tr>
-                     <th scope="col" rowspan="1" colspan="1" id="din">DIN</th>
-                     <th scope="col" rowspan="1" colspan="1" id="active">Active Ingredient(s)</th>
-                     <th scope="col" rowspan="1" colspan="1" id="strength">Strength</th>
-                     <th scope="col" rowspan="1" colspan="1" id="form">Dosage Form</th>
-                     <th scope="col" rowspan="1" colspan="1" id="route">Route of Administration</th>
-                  </tr>
-               </thead>
-			   
-               <tbody>                    
-                  <tr>
-                     <td rowspan="1" colspan="1" headers="din">00875988</td>
-                     <td rowspan="1" colspan="1" headers="active">ACETAMINOPHEN</td>
-                     <td rowspan="1" colspan="1" headers="strength">80 MG / ML</td>
-                     <td rowspan="1" colspan="1" headers="form">Drops</td>
-                     <td rowspan="1" colspan="1" headers="route">ORAL</td>
-                  </tr>
-               </tbody>
-            </table>
-         <!--<span class="col-md-3">-->
-         <p><a href="dhpr_report_se.html">Report a Side Effect</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="dhpr_view_report_se_3d.html">View Reported Side Effects</a></p><!--</span>-->
-      <hr>
-      <h3>Summary Reports</h3>
-      <ul>
-        <li><a href="https://dhpr-demo.hres.ca/reg-content/summary-safety-review-detail.php?lang=en&linkID=SSR00136">Summary Safety Review - Phenylephrine and acetaminophen - Drug-drug interaction</a></li>
-        <li><a href="https://dhpr-demo.hres.ca/reg-content/summary-safety-review-detail.php?lang=en&linkID=SSR00120">Summary Safety Review - Acetaminophen - Liver Injury</a></li>
-      </ul>
-
-      <!--</span>-->
-<details open="open">
-    <summary class="h2">
-        <h3>Drug Facts Table</h3>
-    </summary>
-    <div>
-            <details open="open">
-			<div>
-							  <p>
-							  Alternate formats:<br />
-							  <a href="acetaminophen.xml" download>XML</a>
-							  <a href="acetaminophen.pdf" download>PDF</a>
-							  </p>			
-			</div>				  
-                <div class="boxed">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default wb-toggle" data-toggle='{"selector": "details", "parent": ".boxed", "type": "on"}'>OPEN ALL</button>
-                        <button type="button" class="btn btn-default wb-toggle" data-toggle='{"selector": "details", "parent": ".boxed", "type": "off"}'>CLOSE ALL</button>
-
-                    </div>
-		<details>
-			<summary>Active ingredient (in each dosage unit)</summary>
-			<div>Acetaminophen 80MG/ML </div>
-		</details>
-		<details>
-			<summary>Purpose</summary>
-			<div>Pain reliever or fever reducer</div>
-		</details>
-		<details>
-			<summary>Uses</summary>
-			<div><ul>
-				<li> Reduces fever </li>
-				<li> Temporarily relieves mild to moderate aches and pain due to </li>
-				<li> headache</li>
-				<li>backache </li>
-				<li>migraine </li>
-				<li>sore throat </li>
-				<li>arthritis or rheumatism </li>
-				<li> pre-menstrual/menstrual cramps </li>
-				<li> muscle sprains and strains </li>
-				<li> toothache / teething pain </li>
-				<li>common cold and flu </li>
-				<li>immunization</li>
-				</ul></div>
-		</details>
-		<details>
-			<summary>Warnings</summary>
-			
-				
-					<details>
-					<summary>Liver warning:</summary>
-					<div>Acetaminophen may cause <strong>severe or possibly fatal liver damage</strong> if you take <ul><li>more than the recommended dose in 24 hours </li><li>with other drugs containing acetaminophen </li><li> while drinking 3 or more alcoholic drinks every day (adult products only) Symptoms of liver damage may include </li><li>yellow skin or eyes </li><li>dark urine </li><li>sweating </li><li>nausea </li><li>vomiting </li><li>stomach pain </li><li>unusual tiredness </li><li>loss of appetite</li></ul></div>
-					</details>
-				
-				
-					<details>
-					<summary>Allergy alert:</summary>
-					<div>Acetaminophen may cause serious skin reactions. Symptoms may include<ul> <li>skin reddening  </li><li> blisters </li><li>rash <strong>If any of the above noted symptoms occur, stop use and seek medical help right away.</strong></li></ul></div>
-					</details>
-				
-				
-					<details>
-					<summary>Do not use</summary>
-					<div><ul><li>with any other drug containing <strong>acetaminophen</strong> </li><li>if you are allergic to acetaminophen or any other ingredient in this product. If you are not sure whether a drug contains acetaminophen, ask a doctor or pharmacist.</li></ul></div>
-					</details>
-				
-				
-					<details>
-					<summary>Ask a doctor before use if</summary>
-					<div>your child has liver or kidney disease.</div>
-					</details>
-				
-				
-					<details>
-					<summary>Ask a doctor or pharmacist before use if</summary>
-					<div>your child takes the blood thinning drug warfarin.</div>
-					</details>
-				
-				
-					<details>
-					<summary>Stop use and ask a doctor if</summary>
-					<div><ul><li> pain lasts for more than 5 days </li><li> fever lasts more than 3 days.</li></ul></div>
-					</details>
-				
-				
-					<details>
-					<summary>Keep out of reach of children</summary>
-					<div>In case of overdose, call a Poison Control Centre or get medical help right away. Quick medical attention is critical even if you do not notice any signs or symptoms.</div>
-					</details>
-				
-			
-		</details>
-		<details>
-			<summary>Directions</summary>
-			<div><ul>
-			<li>Do not give your child more than directed (see liver warnings) 
-			<br />
-			Infants:
-				<li>Administer single dose orally, every 4-6 hours</li>
-				<li>Dose by body weight, otherwise use age</li>
-				<li>Do not take more than 5 doses in 24 hours</li>
-				<li>Use only the dropper provided</li>
-			</li>
-				</ul>
-			<table class="table table-hover table-bordered table-responsive">
-				<tr>
-				<th colspan="2">Weight</th>
-				<th>Age</th>
-				<th>Dose</th>
-				</tr>
-				<tr>
-				<th>kg</th>
-				<th>lb/lbs</th>
-				<th>mos.</th>
-				<th>mL</th>
-				</tr>
-				<tr>
-				<td>2 - 5.4</td>
-				<td>6 - 11</td>
-				<td>0 - 3</td>
-				<td>0.5</td>
-				</tr>
-				<tr>
-				<td>5.5 - 7.9</td>
-				<td>12 - 17</td>
-				<td>4 - 11</td>
-				<td>1</td>
-				</tr>
-				<tr>
-				<td>8 - 10.9</td>
-				<td>18 - 23</td>
-				<td>12 - 23</td>
-				<td>1.5</td>
-				</tr>
-			</table></div>			
-		</details>
-		<details>
-			<summary>Inactive ingredients</summary>
-			<div><ul>
-			<li>polyethylene glycol</li>
-			<li> propylene glycol 
-			</li><li> glycerin 
-			</li><li> sodium saccharin
-			</li><li> sodium citrate 
-			</li><li> citric acid 
-			</li><li> artificial flavour 
-			</li><li> purified water</li>
-				</ul></div>
-		</details>
-		<details>
-			<summary>Labels</summary>
-			<div><h3>Outer Label</h3></div>
-			<img src="tempera.jpg" /><br />
-			<div><h3>Inner Label</h3></div>
-			<img src="tempera2.jpg" />
-		</details>
-		<details>
-			<summary>Questions?</summary>
-			<p>Call 1-888-867-7426</p>
-		</details>
-                </div>
-            </details>
-    </div>
-</details>	
-
+        </table>
+    </section>
 </main>
-</div>
-<div class="col-xs-6 text-right">
-<a href="https://www.canada.ca/en/contact/feedback.html" class="btn btn-default"><span class="glyphicon glyphicon-comment mrgn-rght-sm"></span>Feedback<span class="wb-inv"> about this web site</span></a>
-</div>
-</div>
-</main>
-
-
-<footer role="contentinfo" id="wb-info">
-<nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
-<h2 class="wb-inv">About this site</h2>
-<div class="row">
-<div class="col-sm-3 col-lg-3">
-<section>
-<h3>Contact information</h3>
-<ul class="list-unstyled">
-<li><a href="#">Link 1</a></li>
-<li><a href="#">Link 2</a></li>
-<li><a href="#">Link 3</a></li>
-</ul>
-</section>
-<section>
-<h3>News</h3>
-<ul class="list-unstyled">
-<li><a href="https://news.gc.ca/web/index-en.do">Newsroom</a></li>
-<li><a href="https://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=1">News releases</a></li>
-<li><a href="https://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=3">Media advisories</a></li>
-<li><a href="https://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=970">Speeches</a></li>
-<li><a href="https://news.gc.ca/web/nwsprdct-en.do?mthd=tp&amp;crtr.tp1D=980">Statements</a></li>
-</ul>
-</section>
-</div>
-<section class="col-sm-3 col-lg-3">
-<h3>Government</h3>
-<ul class="list-unstyled">
-<li><a href="https://www.canada.ca/en/gov/system/index.html">How government works</a></li>
-<li><a href="https://www.canada.ca/en/gov/dept/index.html">Departments &amp; agencies</a></li>
-<li><a href="https://pm.gc.ca/eng">Prime Minister</a></li>
-<li><a href="https://www.canada.ca/en/gov/ministers/index.html">Ministers</a></li>
-<li><a href="https://www.canada.ca/en/gov/policy/index.html">Policies, regulations &amp; laws</a></li>
-<li><a href="https://www.canada.ca/en/gov/libraries/index.html">Libraries</a></li>
-<li><a href="https://www.canada.ca/en/gov/publications/index.html">Publications</a></li>
-<li><a href="https://www.canada.ca/en/gov/statistics/index.html">Statistics &amp; data</a></li>
-<li><a href="https://www.canada.ca/en/newsite.html">About Canada.ca</a></li>
-</ul>
-</section>
-<section class="col-sm-3 col-lg-3 brdr-lft">
-<h3>Transparency</h3>
-<ul class="list-unstyled">
-<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
-<li><a href="https://open.canada.ca/en/">Open government</a></li>
-<li><a href="https://www.canada.ca/en/transparency/disclosure.html">Proactive disclosure</a></li>
-<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms &amp; conditions</a></li>
-<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-</ul>
-</section>
-<div class="col-sm-3 col-lg-3 brdr-lft">
-<section>
-<h3>Feedback</h3>
-<p><a href="https://www.canada.ca/en/contact/feedback.html"><img src=".././assets/feedback.png" alt="Feedback about this Web site"></a></p>
-</section>
-<section>
-<h3>Social media</h3>
-<p><a href="https://www.canada.ca/en/social/index.html"><img src=".././assets/social.png" alt="Social media"></a></p>
-</section>
-<section>
-<h3>Mobile centre</h3>
-<p><a href="https://www.canada.ca/en/mobile/index.html"><img src=".././assets/mobile.png" alt="Mobile centre"></a></p>
-</section>
-</div>
-</div>
-</nav>
-<div class="brand">
-<div class="container">
-<div class="row">
-<div class="col-xs-6 visible-sm visible-xs tofpg">
-<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-</div>
-<div class="col-xs-6 col-md-12 text-right">
-<object type="image/svg+xml" tabindex="-1" role="img" data=".././assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
-</div>
-</div>
-</div>
-</div>
-</footer>
-<!--[if gte IE 9 | !IE ]><!-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src=".././js/wet-boew.min.js"></script>
-<!--<![endif]-->
-<!--[if lt IE 9]>
-<script src=".././js/ie8-wet-boew2.min.js"></script>
-<![endif]-->
-<script src=".././js/theme.min.js"></script>
-
-
-
-</body>
+</body>       
 </html>
