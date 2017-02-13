@@ -71,7 +71,7 @@ table .long{width:157px;color:#1f5281;border-right:0px;}
 table .highlight{background:#d7e8f0;}
 table thead tr{}
 table thead td{background:#e8f0f4;font-weight:bold;font-size:12px;text-transform:uppercase;padding:15px 5px 5px 10px;border:1px #aebac0 solid;border-left-color:#d1dfe5;border-right-color:#d1dfe5;}
-table tbody td{color:#454545;padding:8px 5px 5px 10px;border:5px #aebac0 solid;border-top:0px;border-left-color:#d1dfe5;border-right-color:#d1dfe5;}
+table tbody td{color:#454545;padding:8px 5px 5px 10px;border:1px #aebac0 solid;border-top:0px;border-left-color:#d1dfe5;border-right-color:#d1dfe5;}
 .content .tabs{list-style:none;width:240px;margin:0px 0px 30px -60px;}
 .content .dropdown ul{padding-left:0px;}
 .content h1{color:#3b3b3b;font-size:22px;font-weight:normal;margin-bottom:35px;}
