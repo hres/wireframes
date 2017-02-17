@@ -41,29 +41,6 @@
     <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
     <script>dataLayer1 = [];</script>
     <!-- End Google Tag Manager -->
-<style type="text/css">
-                .column
-                {
-                border-left: 1px black;
-                padding-left:1%;
-                float: left;
-                width: 32%;
-                }
-                #footer
-                {
-                border-top: 1px black;
-                clear: both;
-                }
-                </style>	
-<style type="text/css">
-                .row
-                {
-                border-top: 1px black;
-                border-bottom: 1px black;
-                padding-top:1%;
-                float: top;
-                }
-                </style>	
 				
 </head>
 <body>
@@ -73,50 +50,21 @@
      <!-- commented out this and table below  <section border="5" class="panel panel-default" id="tables"> -->
 
 <!-- inserting div columns for WCAG compliancy -->	
-<div class="row">
-<div title="column one" class="column">				
-				<div title="column one" class="column">
-                <h3>Block 1</h3>
-                <p> The objective of this technique is to be able to present content 
-                without introducing horizontal scroll bars by using layout 
-                techniques that adapt to the available horizontal space.
-                </p>
-                </div>
-                <div title="column two" class="column">
-                <h3>Block 2</h3>
-                <p> This is a very simple example of a page layout that adapts as the
-                text size changes.
-                </p>
-                </div>
-                <div title="column three" class="column">
-                <h3>Block 3</h3>
-                <p> For techniques that support more complex page layouts, see the
-                Resources listed below.
-                </p>
-                </div>	
-</div>				
-<div class="row">				
-				<div title="column one" class="column">
-                <h3>Block 1</h3>
-                <p> The objective of this technique is to be able to present content 
-                without introducing horizontal scroll bars by using layout 
-                techniques that adapt to the available horizontal space.
-                </p>
-                </div>
-                <div title="column two" class="column">
-                <h3>Block 2</h3>
-                <p> This is a very simple example of a page layout that adapts as the
-                text size changes.
-                </p>
-                </div>
-                <div title="column three" class="column">
-                <h3>Block 3</h3>
-                <p> For techniques that support more complex page layouts, see the
-                Resources listed below.
-                </p>
-                </div>	
+<div class="span-3">
+  <p>top left</p>
 </div>
-	      
+<div class="span-3">
+  <p>top right</p>
+</div>
+<div class="span-6">
+  <p>row 1 full</p>
+</div>
+<div class="span-6">
+  <p>row 2 full</p>
+</div>
+<div class="clear"></div>
+
+
 <!--	      
 <table border="5px">
 <th colspan="2" align="left"><font face="Helvetica" size="5">Drug Facts</font></th>
