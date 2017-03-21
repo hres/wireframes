@@ -249,10 +249,10 @@ font-size:12pt;
   <div class="tgl-panel"> <p>Complete all mandatory fields, marked by a *, and provide as much detail as possible for the remaining fields.</p>
 				<p>The "Reference #" field, should be used by the reporter, as a way to easily locate the side effect report should Health Canada need to follow up for more information; do not  use the name of the person who had the side effect.</p> </div>
   </details> <details class="acc-group"> <summary class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>About</summary>
-  <div class="tgl-panel"> <h2>What is a Side Effect?</h2>
+  <div class="tgl-panel"> <h4>What is a Side Effect?</h4>
         <p>Side effects are troublesome symptoms or feelings that occur when taking a health product. Side effects can range from minor irritations, such as a skin rash, to serious and life-threatening reactions, such as a heart attack of liver damage. A side effect can also be when a product has no effect or has not performed the intended treatment. They can occur within minutes after taking a medicine, or can take years to develop.</p>
         <p>Side effects are troublesome symptoms or feelings that you may not expect that show up when you are taking a medicine. Side effects are sometimes also called adverse reactions, especially by doctors and other health professionals. </p>
-        <h2>What types of Side Effects should be reported?</h2>
+        <h4>What types of Side Effects should be reported?</h4>
         <p>All suspected side effects should be reported, especially those that are:</p>
         <ul>
         	<li><em>Unexpected</em>, regardless of their severity, i.e., not consistent with product information or labelling; or</li>
@@ -267,7 +267,102 @@ font-size:12pt;
   <p class="text-danger font-small">* Mandatory Field</p>
   <div class="accordion">
     <div class="tabpanels"> 
-	<div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>A. About the person who had the side effect.</div>
+	<div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><strong>A. Reporter Information</strong></div>
+      <div class="tgl-panel">
+        	<div class="form-group">
+	   <!-- The tag was changed from label to legend -->
+		<label for="reporterName" class="required">Name:</label><br/>
+		<input id="reporterName" name="reporterName" type="text" placeholder="John Smith" class="width-40"  maxlength="40" required="required" value=""/>
+	</div>
+	<div class="form-group">
+		<fieldset>
+			<legend class="required"><label for="reporterPhone2">Telephone:</label></legend><br/>
+			(area code)&nbsp;(
+			<input title="Phone area code" id="reporterPhone1" name="reporterPhone1" type="text" placeholder="xxx"  maxlength="3" required="required" value=""/>)&nbsp;
+			<input title="Phone part 1"    id="reporterPhone2" name="reporterPhone2" type="text" placeholder="xxx" maxlength="3" required="required" value=""/>&nbsp;&mdash;&nbsp;
+			<input title="Phone part 2"    id="reporterPhone3" name="reporterPhone3" type="text" placeholder="xxxx" maxlength="4" required="required" value=""/>&nbsp;ext.&nbsp;
+			<input title="Phone ext" name="reporterPhone4" type="text" placeholder="xxxxx" maxlength="8" value=""/>
+		</fieldset>
+	</div>
+	<div class="form-group">
+		<label for="reporterAddress">Address:</label><br />
+		<input id="reporterAddress" name="reporterAddress" type="text" placeholder="123 1st Street" class="width-100"  maxlength="100" value=""/>
+	</div>
+	<div class="form-group">
+		<label for="reporterCity">City:</label><br />
+		<input id="reporterCity" name="reporterCity" type="text" placeholder="Ottawa" class="width-100"  maxlength="100" value=""/>
+	</div>
+	<div class="form-group">
+		<label for="reporterProvince">Province/Territory:</label><br />
+		<select name="reporterProvince" id="reporterProvince" >
+            <option value="">Select</option>
+			<option value="AB">Alberta</option>
+			<option value="BC">British Columbia</option>
+			<option value="MB">Manitoba</option>
+			<option value="NB">New Brunswick</option>
+			<option value="NL">Newfoundland and Labrador</option>
+			<option value="NT">Northwest Territories</option>
+			<option value="NS">Nova Scotia</option>
+			<option value="NU">Nunavut</option>
+			<option value="ON">Ontario</option>
+			<option value="PE">Prince Edward Island</option>
+			<option value="QC">Quebec</option>
+			<option value="SK">Saskatchewan</option>
+			<option value="YT">Yukon</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="reporterEmail">Email Address:</label><br />
+		<input id="reporterEmail" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" name="reporterEmail" type="email" placeholder="yourname@website.com" class="width-60"  maxlength="60" value=""/>
+	</div>
+	<div class="form-group">
+		<fieldset>
+		<legend><label>Preferred language:</label></legend><br/>
+			<label for="reporterLanguage" class="form-radio form-label-inline">
+			<input type="radio" name="reporterLanguage" id="reporterLanguage" value="English:;:anglais"/>
+			English</label>
+			<label for="french" class="form-radio form-label-inline">
+			<input type="radio" name="reporterLanguage" id="french" value="French:;:fran&ccedil;ais"/>
+			French</label>
+		</fieldset>
+	</div> 
+	<div class="form-group">
+		<label for="reporterOrg">Organization (if applicable):</label><br />
+		<input id="reporterOrg" name="reporterOrg" type="text" placeholder="" class="width-100"  maxlength="200" value=""/>
+	</div>
+	<div class="form-group">
+		<fieldset>
+			<legend><label>Select one that best describes you:</label></legend><br/>
+			<label for="reporterDescribe" class="form-radio">
+			<input type="radio" name="reporterDescribe" id="reporterDescribe" value="Patient" onchange="swapField('other', 'textreporterDescribe')"/>
+			Consumer/Patient</label><br />
+			<label for="physician" class="form-radio">
+			<input type="radio" name="reporterDescribe" id="physician" value="Physician:;:Médecin" onchange="swapField('other', 'textreporterDescribe')"/>
+			Physician</label><br />
+			<label for="pharmacist" class="form-radio">
+			<input type="radio" name="reporterDescribe" id="pharmacist" value="Pharmacist:;:Pharmacien" onchange="swapField('other', 'textreporterDescribe')"/>
+			Pharmacist</label><br />
+			<label for="other" class="form-radio">
+			<input type="radio" name="reporterDescribe" id="other" value="Other:;:Autre" onchange="swapField('other', 'textreporterDescribe')"/>
+			Other (specify)</label>
+			<input id= "textreporterDescribe" title="textreporterDescribe" name="textreporterDescribe" type="text" class="other width-60"  maxlength="60" value=""/>
+		</fieldset>
+	</div>
+    <script type="text/javascript">
+		function InvalidMsg(textbox){
+			if (textbox.value == ''){
+				textbox.setCustomValidity(''); //textbox.setCustomValidity('The email address is formatted incorrectly.');
+			}else if (textbox.validity.typeMismatch){
+				textbox.setCustomValidity('The email address is formatted incorrectly.');
+			}else{
+			   textbox.setCustomValidity('');
+			}
+			return true;
+		}
+	</script>
+      </div>
+	
+	<div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><strong>B. About the person who had the side effect</strong></div>
       <div class="tgl-panel">
         	<div class="form-group">
 	    <fieldset>
@@ -384,101 +479,8 @@ font-size:12pt;
 	}
 </script>
       </div>
-       <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>B. Reporter Information</div>
-      <div class="tgl-panel">
-        	<div class="form-group">
-	   <!-- The tag was changed from label to legend -->
-		<label for="reporterName" class="required">Name:</label><br/>
-		<input id="reporterName" name="reporterName" type="text" placeholder="John Smith" class="width-40"  maxlength="40" required="required" value=""/>
-	</div>
-	<div class="form-group">
-		<fieldset>
-			<legend class="required"><label for="reporterPhone2">Telephone:</label></legend><br/>
-			(area code)&nbsp;(
-			<input title="Phone area code" id="reporterPhone1" name="reporterPhone1" type="text" placeholder="xxx"  maxlength="3" required="required" value=""/>)&nbsp;
-			<input title="Phone part 1"    id="reporterPhone2" name="reporterPhone2" type="text" placeholder="xxx" maxlength="3" required="required" value=""/>&nbsp;&mdash;&nbsp;
-			<input title="Phone part 2"    id="reporterPhone3" name="reporterPhone3" type="text" placeholder="xxxx" maxlength="4" required="required" value=""/>&nbsp;ext.&nbsp;
-			<input title="Phone ext" name="reporterPhone4" type="text" placeholder="xxxxx" maxlength="8" value=""/>
-		</fieldset>
-	</div>
-	<div class="form-group">
-		<label for="reporterAddress">Address:</label><br />
-		<input id="reporterAddress" name="reporterAddress" type="text" placeholder="123 1st Street" class="width-100"  maxlength="100" value=""/>
-	</div>
-	<div class="form-group">
-		<label for="reporterCity">City:</label><br />
-		<input id="reporterCity" name="reporterCity" type="text" placeholder="Ottawa" class="width-100"  maxlength="100" value=""/>
-	</div>
-	<div class="form-group">
-		<label for="reporterProvince">Province/Territory:</label><br />
-		<select name="reporterProvince" id="reporterProvince" >
-            <option value="">Select</option>
-			<option value="AB">Alberta</option>
-			<option value="BC">British Columbia</option>
-			<option value="MB">Manitoba</option>
-			<option value="NB">New Brunswick</option>
-			<option value="NL">Newfoundland and Labrador</option>
-			<option value="NT">Northwest Territories</option>
-			<option value="NS">Nova Scotia</option>
-			<option value="NU">Nunavut</option>
-			<option value="ON">Ontario</option>
-			<option value="PE">Prince Edward Island</option>
-			<option value="QC">Quebec</option>
-			<option value="SK">Saskatchewan</option>
-			<option value="YT">Yukon</option>
-		</select>
-	</div>
-	<div class="form-group">
-		<label for="reporterEmail">Email Address:</label><br />
-		<input id="reporterEmail" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" name="reporterEmail" type="email" placeholder="yourname@website.com" class="width-60"  maxlength="60" value=""/>
-	</div>
-	<div class="form-group">
-		<fieldset>
-		<legend><label>Preferred language:</label></legend><br/>
-			<label for="reporterLanguage" class="form-radio form-label-inline">
-			<input type="radio" name="reporterLanguage" id="reporterLanguage" value="English:;:anglais"/>
-			English</label>
-			<label for="french" class="form-radio form-label-inline">
-			<input type="radio" name="reporterLanguage" id="french" value="French:;:fran&ccedil;ais"/>
-			French</label>
-		</fieldset>
-	</div> 
-	<div class="form-group">
-		<label for="reporterOrg">Organization (if applicable):</label><br />
-		<input id="reporterOrg" name="reporterOrg" type="text" placeholder="" class="width-100"  maxlength="200" value=""/>
-	</div>
-	<div class="form-group">
-		<fieldset>
-			<legend><label>Select one that best describes you:</label></legend><br/>
-			<label for="reporterDescribe" class="form-radio">
-			<input type="radio" name="reporterDescribe" id="reporterDescribe" value="Patient" onchange="swapField('other', 'textreporterDescribe')"/>
-			Consumer/Patient</label><br />
-			<label for="physician" class="form-radio">
-			<input type="radio" name="reporterDescribe" id="physician" value="Physician:;:Médecin" onchange="swapField('other', 'textreporterDescribe')"/>
-			Physician</label><br />
-			<label for="pharmacist" class="form-radio">
-			<input type="radio" name="reporterDescribe" id="pharmacist" value="Pharmacist:;:Pharmacien" onchange="swapField('other', 'textreporterDescribe')"/>
-			Pharmacist</label><br />
-			<label for="other" class="form-radio">
-			<input type="radio" name="reporterDescribe" id="other" value="Other:;:Autre" onchange="swapField('other', 'textreporterDescribe')"/>
-			Other (specify)</label>
-			<input id= "textreporterDescribe" title="textreporterDescribe" name="textreporterDescribe" type="text" class="other width-60"  maxlength="60" value=""/>
-		</fieldset>
-	</div>
-    <script type="text/javascript">
-		function InvalidMsg(textbox){
-			if (textbox.value == ''){
-				textbox.setCustomValidity(''); //textbox.setCustomValidity('The email address is formatted incorrectly.');
-			}else if (textbox.validity.typeMismatch){
-				textbox.setCustomValidity('The email address is formatted incorrectly.');
-			}else{
-			   textbox.setCustomValidity('');
-			}
-			return true;
-		}
-	</script>
-      </div>
-       <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>C. Side Effect</div>
+       
+       <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><strong>C. Side Effect</strong></div>
       <div class="tgl-panel">
         	<div class="form-group">
 		<fieldset>
@@ -548,7 +550,7 @@ font-size:12pt;
 		<textarea maxlength="3000" id="descSideEffect" name="descSideEffect" class="width-100" rows="6" cols="100" required="required" placeholder="(timelines, treatment, etc.)"></textarea>
 	</div>
       </div>
-       <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'>D. Suspected Health Product</div>
+       <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><strong>D. Suspected Health Product</strong></div>
       <div class="tgl-panel">
         	<div class="form-group">
 		<label for="productName" class="required">Product name:</label><br/>
@@ -682,7 +684,7 @@ font-size:12pt;
 	</div>
 	<div class="form-group">
 	    <fieldset>
-			<legend>Likelihood that product caused the side effect:</legend><br/>
+			<legend>What is the likelihood that the product caused the side effect?:</legend><br/>
 			<label for="causedEffectCertain" class="form-radio">
 			<input type="radio" name="productCausedEffect" id="causedEffectCertain" value="Certain"/>
 			Certain</label><br />
@@ -704,7 +706,7 @@ font-size:12pt;
 		</fieldset>
 	</div>
 	<div class="form-group">
-		<label for="otherProductsTaken" class="dddtooltip">Other health products taken at the time of the side effect, excluding treatment:<span class="helperText">(length of use, timelines, etc.)</span>	</label><br />
+		<label for="otherProductsTaken" class="dddtooltip">Were other products taken at the time of the side effect, excluding the treatment of the side effect?</label><br />
 		<textarea id="otherProductsTaken" name="otherProductsTaken" class="width-100" rows="6" cols="100" maxlength="3000" placeholder="(length of use, timelines, etc.)"></textarea>
 	</div>
 	<div class="form-group">
