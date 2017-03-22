@@ -387,6 +387,7 @@ font-size:12pt;
 		</fieldset>
 	</div>
 	<div class="form-group">
+		<table><tr><td>
 			<label for="height1"><span class="field-name">Height:</span></label><br/>
 			<input type="radio" name="height1" id="height1" value="cm" onchange="swapHeight('cm-1', 'height')"/>
 			<label for="height" class="form-radio form-label-inline">cm</label>
@@ -398,8 +399,8 @@ font-size:12pt;
 			<input id="height2" title="height2" name="height2" type="text" size = "6" placeholder="e.g. 5" value=""/>
 			<label for="height3" class="form-radio form-label-inline">&nbsp;in&nbsp;</label>
 			<input id="height3" name="height3" type="text" size = "6" placeholder="e.g. 6" value=""/>
-	</div>
-	<div class="form-group">
+	</td>
+	<td>
 			<label for="weight1"><span class="field-name">Weight:</span></label><br/>
 			<input type="radio" name="weight1" id="weight1" value="kgs" onchange="swapWeight('cm-1', 'height')"/>
 			<label for="weight" class="form-radio form-label-inline">kg</label>
@@ -411,6 +412,7 @@ font-size:12pt;
 			<input id="weight2" name="weight2" title="weight2" type="text" size = "6" placeholder="e.g. 169" value=""/>
 			<label for="weight3" class="form-radio form-label-inline">&nbsp;oz&nbsp;</label>
 			<input name="weight3" id="weight3" type="text" size = "6" placeholder="e.g. 169" value=""/>
+		</td></tr></table>
 	</div>
 	<div class="form-group">
 		<label for="patientMedHistory" class="dddtooltip"><span class="field-name"> Medical history and other related information</span><span class="helperText"> (allergies, pregnancy, smoking/alcohol use, liver disease, etc.)</span></label>
@@ -538,7 +540,7 @@ font-size:12pt;
 </td>
 	<td>
 	&nbsp;&nbsp;&nbsp;<label for="endDate">Side effect end date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
-	<input id="endDate" name="endDate" class="width-80" type="date" value=""/><br /></td></tr></table>
+	&nbsp;&nbsp;&nbsp;<input id="endDate" name="endDate" class="width-80" type="date" value=""/><br /></td></tr></table>
 </div>
    <!-- 
 	<div class="form-group">
