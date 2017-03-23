@@ -489,7 +489,7 @@ font-size:12pt;
         		<label>Seriousness of the side effect:</label><br/>
 			<label for="seriousness[]" class="form-radio">
 			<input type="checkbox" name="seriousness[]" id="seriousness[]" value="Death:;:Décès" onchange="swapField('seriousness[]', 'textdeathDate')"/>
-			Death (provide date) (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
+			Death (provide date) (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br />
 			<input  name="textseriousness" id="textdeathDate" class="width-40" type="date" value="" /><br />
 			<label for="lifeThreat" class="form-radio">
 			<input type="checkbox" name="seriousness[]" id="lifeThreat" value="Life-threatening:;:Met la vie en danger" onchange="swapField('seriousness[]', 'textdeathDate')"/>
@@ -509,7 +509,7 @@ font-size:12pt;
 			<label for="medAttention" class="form-radio">
 			<input type="checkbox" name="seriousness[]" id="medAttention" value="Needed medical attention:;:Besoin d'intervention médical" onchange="swapField('seriousness[]', 'textdeathDate')"/>
 			Needed medical attention</label>
-		</td><td>
+		</td><td valign = "top">
 			<legend class="required"><strong>Recovered after side effect:</strong></legend><br/>
 			<label for="recovered" class="form-radio">Yes</label>
 			<input type="radio" name="recovered" id="recovered" required="required" value="Yes:;:Oui" onchange="swapField('recovering', 'textrecovered')"/>
