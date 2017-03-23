@@ -486,7 +486,7 @@ font-size:12pt;
       <div class="tgl-panel">
         	<div class="form-group">
 		<fieldset>
-        				<label>Seriousness of the side effect:</label><br/>
+        		<label>Seriousness of the side effect:</label><br/>
 			<label for="seriousness[]" class="form-radio">
 			<input type="checkbox" name="seriousness[]" id="seriousness[]" value="Death:;:Décès" onchange="swapField('seriousness[]', 'textdeathDate')"/>
 			Death (provide date) (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
@@ -537,8 +537,8 @@ font-size:12pt;
 		<table>
 <tr>
 <td>
-	<label for="startDate" class="required">Side effect start date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
-	<input id="startDate" name="startDate" class="width-80" type="date" required="required" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	<label for="startDate" class="required">Side effect start date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	<input id="startDate" name="startDate" class="width-80" type="date" required="required" value=""/><br />
 </td>
 	<td>
 	<label for="endDate">Side effect end date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
@@ -621,7 +621,7 @@ font-size:12pt;
 	</div>
 	<div class="form-group">
 		<table><tr><td>
-		<label for="prodStartDate" class="required">Product start date: <abbr title="Four digits year, dash, two digits month, dash, two digits day"> (YYYY-MM-DD</abbr>)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+		<label for="prodStartDate" class="required">Product start date: <abbr title="Four digits year, dash, two digits month, dash, two digits day"> (YYYY-MM-DD</abbr>)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 		<input id="prodStartDate" name="prodStartDate" class="width-80" type="date" required="required" value=""/><br />
 	</td><td>
 	    <!-- Class required was deleted as the end date is no longer mandatory -->
@@ -631,18 +631,18 @@ font-size:12pt;
 	</div>
 	<div class="form-group">
     	
-		
-			<legend><strong>At time of side effect specify:</strong></legend>
+		<legend><strong>At time of side effect specify:</strong></legend>
 		<table><tr><td>	
 		<label for="productDosage" class="required">Dosage:</label><br/>
 			<input id="productDosage" name="productDosage" type="text" required="required" placeholder="(strength and quantity)" class="width-60"  maxlength="200" value=""/><br />
 			</td><td>
 			<label for="productFrequency">Frequency:</label><br/>
 			<input id="productFrequency" name="productFrequency" type="text" placeholder="(e.g. twice daily)" class="width-60"  maxlength="200" value=""/><br />
+			</td></tr><tr><td>
 			<label for="productHowTaken" class="required">How the product was taken:</label><br/>
 			<input id="productHowTaken" name="productHowTaken" type="text" required="required" placeholder="(e.g. by mouth)" class="width-60"  maxlength="200" value=""/>
 		
-	</td></tr><tr><td>
+	</td><td>
 		
 		<label for="productTakenFor">What was the product prescribed/taken for?</label><br />
 		<input id="productTakenFor" name="productTakenFor" type="text" placeholder="" class="width-60"  maxlength="500" value=""/>
