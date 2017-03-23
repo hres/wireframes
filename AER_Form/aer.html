@@ -366,7 +366,7 @@ font-size:12pt;
         	<div class="form-group">
 	    <fieldset>
 		<!-- class required was added and the tag was changed from label to legend -->
-		<legend>Reference # (if applicable):</legend> <span class="helperText"><strong>The "Reference #" field, should be used by the reporter, as a way to easily locate the side effect report should Health Canada need to follow up for more information; do not use the name of the person who had the side effect.</strong></span><br />
+		<legend><strong>Reference # (if applicable):</strong></legend> <span class="helperText"><strong>The "Reference #" field, should be used by the reporter, as a way to easily locate the side effect report should Health Canada need to follow up for more information; do not use the name of the person who had the side effect.</strong></span><br />
 		<input id="patientReference" name="patientReference" type="text" placeholder="" class="width-100"  maxlength="60" value=""/>
 	  </fieldset>
 	</div>
@@ -401,11 +401,11 @@ font-size:12pt;
 			&nbsp;
 			<input id="height2" title="height2" name="height2" type="text" size = "6" placeholder="e.g. 5" value=""/>
 			<label for="height3" class="form-radio form-label-inline">&nbsp;in&nbsp;</label>
-			<input id="height3" name="height3" type="text" size = "6" placeholder="e.g. 6" value=""/>
+			<input id="height3" name="height3" type="text" size = "6" placeholder="e.g. 6" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	</td>
 	<td>
-			&nbsp;&nbsp;&nbsp;<label for="weight1"><span class="field-name">Weight:</span></label><br />
-			&nbsp;&nbsp;&nbsp;<input type="radio" name="weight1" id="weight1" value="kgs" onchange="swapWeight('cm-1', 'height')"/>
+			<label for="weight1"><span class="field-name">Weight:</span></label><br />
+			<input type="radio" name="weight1" id="weight1" value="kgs" onchange="swapWeight('cm-1', 'height')"/>
 			<label for="weight" class="form-radio form-label-inline">kg</label>
 			&nbsp;
 			<input id="weight" title="weight" name="weight" type="text" size = "6" placeholder="e.g. 169" value=""/>
