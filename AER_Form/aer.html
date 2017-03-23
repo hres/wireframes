@@ -485,7 +485,7 @@ font-size:12pt;
        <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><strong>C. Side Effect</strong></div>
       <div class="tgl-panel">
         	<div class="form-group">
-		<fieldset>
+		<table><tr><td>
         		<label>Seriousness of the side effect:</label><br/>
 			<label for="seriousness[]" class="form-radio">
 			<input type="checkbox" name="seriousness[]" id="seriousness[]" value="Death:;:Décès" onchange="swapField('seriousness[]', 'textdeathDate')"/>
@@ -509,10 +509,7 @@ font-size:12pt;
 			<label for="medAttention" class="form-radio">
 			<input type="checkbox" name="seriousness[]" id="medAttention" value="Needed medical attention:;:Besoin d'intervention médical" onchange="swapField('seriousness[]', 'textdeathDate')"/>
 			Needed medical attention</label>
-		</fieldset>
-	</div>
-	<div class="form-group">
-		<fieldset>
+		</td><td>
 			<legend class="required"><strong>Recovered after side effect:</strong></legend><br/>
 			<label for="recovered" class="form-radio">Yes</label>
 			<input type="radio" name="recovered" id="recovered" required="required" value="Yes:;:Oui" onchange="swapField('recovering', 'textrecovered')"/>
@@ -526,7 +523,7 @@ font-size:12pt;
 			<label for="recovering" class="form-radio">Recovering (explain)</label>
 			<input type="radio" name="recovered" id="recovering" value="Recovering:;:En récupération" onchange="swapField('recovering', 'textrecovered')"/>
 			<input id="textrecovered" title="textrecovered" name="textrecovered" type="text" class="other width-60"  maxlength="500" value="" />
-		</fieldset>
+		</td></tr></table>
 	</div>
 	<!-- 
 	<div class="form-group">
@@ -621,7 +618,7 @@ font-size:12pt;
 	</div>
 	<div class="form-group">
 		<table><tr><td>
-		<label for="prodStartDate" class="required">Product start date: <abbr title="Four digits year, dash, two digits month, dash, two digits day"> (YYYY-MM-DD</abbr>)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+		<label for="prodStartDate" class="required">Product start date: <abbr title="Four digits year, dash, two digits month, dash, two digits day"> (YYYY-MM-DD</abbr>)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 		<input id="prodStartDate" name="prodStartDate" class="width-80" type="date" required="required" value=""/><br />
 	</td><td>
 	    <!-- Class required was deleted as the end date is no longer mandatory -->
