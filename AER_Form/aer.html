@@ -586,7 +586,7 @@ font-size:12pt;
 	<div class="form-group">
 		<table>
 			<tr><td>
-		<fieldset>
+		
 			<legend><strong>Country of purchase:</strong></legend><br/>
 			<label for="countryCnd" class="form-radio">
 			<input name="purchaseCountry" type="radio" id="countryCnd" value="Canada" onchange="swapField('countryOther', 'textpurchaseCountry')"/>
@@ -597,25 +597,25 @@ font-size:12pt;
 			<label for="countryOther" class="form-radio">
 			<input type="radio" name="purchaseCountry" id="countryOther" value="other:;:autre" onchange="swapField('countryOther', 'textpurchaseCountry')"/>
 			Other (specify)</label>
-			<input id="textpurchaseCountry" title="textpurchaseCountry" name="textpurchaseCountry" type="text" class="other width-60"  maxlength="300" value="" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		</fieldset>
-			</td><td>&nbsp;&nbsp;&nbsp;
-		<fieldset>
+			<input id="textpurchaseCountry" title="textpurchaseCountry" name="textpurchaseCountry" type="text" class="other width-60"  maxlength="300" value="" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+			</td><td>
+		
 			<legend><strong>How it was purchased/obtained:</strong></legend><br/>
-			&nbsp;&nbsp;&nbsp;<label for="howPharmacy" class="form-radio">
+			<label for="howPharmacy" class="form-radio">
 			<input type="radio" name="purchaseHow" id="howPharmacy" value="Pharmacy" onchange="swapField('howOther', 'textpurchaseHow')"/>
 			Pharmacy</label><br />
-			&nbsp;&nbsp;&nbsp;<label for="howGrocery" class="form-radio">
+			<label for="howGrocery" class="form-radio">
 			<input type="radio" name="purchaseHow" id="howGrocery" value="Grocery Store" onchange="swapField('howOther', 'textpurchaseHow')"/>
 			Grocery Store</label><br />
-			&nbsp;&nbsp;&nbsp;<label for="howInternernet" class="form-radio">
+			<label for="howInternernet" class="form-radio">
 			<input type="radio" name="purchaseHow" id="howInternernet" value="Internet" onchange="swapField('howOther', 'textpurchaseHow')"/>
 			Internet</label><br />
-			&nbsp;&nbsp;&nbsp;<label for="howOther" class="form-radio">
+			<label for="howOther" class="form-radio">
 			<input type="radio" name="purchaseHow" id="howOther" value="other:;:autre" onchange="swapField('howOther', 'textpurchaseHow')"/>
 			Other (specify)</label>
-			<input id="textpurchaseHow" title="textpurchaseHow" name="textpurchaseHow" type="text" class="other width-60"  maxlength="300" value="" />
-        </fieldset>
+			<input id="textpurchaseHow" title="textpurchaseHow" name="textpurchaseHow" type="text" class="other width-60"  maxlength="300" value="" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
 			</td></tr></table>
 			
 	</div>
@@ -625,8 +625,8 @@ font-size:12pt;
 		<input id="prodStartDate" name="prodStartDate" class="width-80" type="date" required="required" value=""/><br />
 	</td><td>
 	    <!-- Class required was deleted as the end date is no longer mandatory -->
-		&nbsp;&nbsp;&nbsp;<label for="prodEndDate">Product end date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
-		&nbsp;&nbsp;&nbsp;<input id="prodEndDate" name="prodEndDate" class="width-80" type="date" value=""/><br />
+		<label for="prodEndDate">Product end date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
+		<input id="prodEndDate" name="prodEndDate" class="width-80" type="date" value=""/><br />
 			</td></tr></table>
 	</div>
 	<div class="form-group">
