@@ -630,20 +630,23 @@ font-size:12pt;
 			</td></tr></table>
 	</div>
 	<div class="form-group">
-    	<fieldset>
+    	<table><tr><td>
+		
 			<legend><strong>At time of side effect specify:</strong></legend>
 			<label for="productDosage" class="required">Dosage:</label><br/>
 			<input id="productDosage" name="productDosage" type="text" required="required" placeholder="(strength and quantity)" class="width-60"  maxlength="200" value=""/><br />
+			</td><td>
 			<label for="productFrequency">Frequency:</label><br/>
 			<input id="productFrequency" name="productFrequency" type="text" placeholder="(e.g. twice daily)" class="width-60"  maxlength="200" value=""/><br />
 			<label for="productHowTaken" class="required">How the product was taken:</label><br/>
 			<input id="productHowTaken" name="productHowTaken" type="text" required="required" placeholder="(e.g. by mouth)" class="width-60"  maxlength="200" value=""/>
-		</fieldset>
-	</div>
-	<div class="form-group">
+		
+	</td></tr><tr><td>
+		
 		<label for="productTakenFor">What was the product prescribed/taken for?</label><br />
 		<input id="productTakenFor" name="productTakenFor" type="text" placeholder="" class="width-60"  maxlength="500" value=""/>
-	</div>
+	</td></tr></table>
+		</div>
 	<div class="form-group">
     	<fieldset>
 			<legend><strong>Did use of the product stop after the side effect appeared?</strong></legend><br/>
