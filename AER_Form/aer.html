@@ -273,21 +273,28 @@ font-size:12pt;
 	
 	    <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><h3>A. Reporter Information</h3></div>
       <div class="tgl-panel">
-        	<div class="form-group">
+        	<div class="form-group"> 
+			<fieldset>
+				<p><strong>Please complete one of the following methods of contact (phone, address or email) This will allow Health Canada to contact you should there be a need for further clarifications or questions on this report.</strong></p>
+			</fieldset>
+		</div>
+	
+	      
+	      <div class="form-group">
 	   <!-- The tag was changed from label to legend -->
-		<table><tr><td>
+		<fieldset>
 		<label for="reporterName" class="required">Name:</label><br/>
 		<input id="reporterName" name="reporterName" type="text" placeholder="John Smith" class="width-40"  maxlength="40" required="required" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	</td><td>
+		</fieldset>
 		<fieldset>
 			<legend><label for="reporterPhone2">Telephone:</label></legend><br/>
 			<strong>(area code)&nbsp;(</strong>
-			<input title="Phone area code" id="reporterPhone1" name="reporterPhone1" type="text" size="3" placeholder="xxx"  maxlength="3" required="required" value=""/><strong>)&nbsp;&nbsp;(</strong>
-			<input title="Phone part 1"    id="reporterPhone2" name="reporterPhone2" type="text" size="3" placeholder="xxx" maxlength="3" required="required" value=""/><strong>)&nbsp;&mdash;&nbsp;(</strong>
-			<input title="Phone part 2"    id="reporterPhone3" name="reporterPhone3" type="text" size="4" placeholder="xxxx" maxlength="4" required="required" value=""/><strong>)&nbsp;ext.&nbsp;</strong>
+			<input title="Phone area code" id="reporterPhone1" name="reporterPhone1" type="text" size="3" placeholder="xxx"  maxlength="3" required="required" value=""/><strong>)&nbsp;&nbsp;</strong>
+			<input title="Phone part 1"    id="reporterPhone2" name="reporterPhone2" type="text" size="3" placeholder="xxx" maxlength="3" required="required" value=""/><strong>&nbsp;&mdash;&nbsp;</strong>
+			<input title="Phone part 2"    id="reporterPhone3" name="reporterPhone3" type="text" size="4" placeholder="xxxx" maxlength="4" required="required" value=""/><strong>&nbsp;ext.&nbsp;</strong>
 			<input title="Phone ext" name="reporterPhone4" type="text" size="5" placeholder="xxxxx" maxlength="8" value=""/>
 		</fieldset>
-			</td></tr></table>
+			
 	</div>
 	<div class="form-group">
 		<label for="reporterAddress">Address:</label>&nbsp;&nbsp;
