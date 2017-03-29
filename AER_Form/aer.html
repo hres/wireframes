@@ -404,6 +404,8 @@ font-size:12pt;
 			<input type="radio" name="patientSex" id="patientSex" required="required" value="Male:;:Homme"/>
 			<label for="female" class="form-radio form-label-inline"><span class="field-name">Female</span></label>
 			<input type="radio" name="patientSex" id="female" value="Female:;:Femme"/>
+			<label for="female" class="form-radio form-label-inline"><span class="field-name">Unknown</span></label>
+			<input type="radio" name="patientSex" id="unknown" value="Unknown:;:Inconnu"/>
 		<td></tr></table>
 	</div>
 	<div class="form-group">
@@ -435,7 +437,7 @@ font-size:12pt;
 		</td></tr></table>
 	</div>
 	<div class="form-group">
-		<label for="patientMedHistory" class="dddtooltip"><span class="field-name"> Medical history and other related information</span><span class="helperText"> (allergies, pregnancy, smoking/alcohol use, liver disease, etc.)</span></label>
+		<label for="patientMedHistory" class="dddtooltip"><span class="field-name"> Medical history and other related information</span><span class="helperText"> (allergies, pregnancy, smoking/alcohol use, liver disease, etc.):</span></label>
 		<textarea maxlength="3000" id="patientMedHistory" name="patientMedHistory" class="width-100" rows="3" cols="100" placeholder="(allergies, pregnancy, smoking/alcohol use, liver disease, etc.)"></textarea>
 	</div>
 <script type="text/javascript">
@@ -500,14 +502,14 @@ font-size:12pt;
 </script>
       </div>
        
-       <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><h3>C. Side Effect</h3></div>
+       <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><h3>C. Information on the side effect</h3></div>
       <div class="tgl-panel">
         	<div class="form-group">
 		<table><tr><td>
         		<label>Seriousness of the side effect:</label><br/>
 			<label for="seriousness[]" class="form-radio">
 			<input type="checkbox" name="seriousness[]" id="seriousness[]" value="Death:;:Décès" onchange="swapField('seriousness[]', 'textdeathDate')"/>
-			Death (provide date): (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br />
+			Death (provide date) (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br />
 			<input  name="textseriousness" id="textdeathDate" class="width-40" type="date" value="" /><br />
 			<label for="lifeThreat" class="form-radio">
 			<input type="checkbox" name="seriousness[]" id="lifeThreat" value="Life-threatening:;:Met la vie en danger" onchange="swapField('seriousness[]', 'textdeathDate')"/>
@@ -552,11 +554,11 @@ font-size:12pt;
 		<table>
 <tr>
 <td>
-	<label for="startDate">Side effect start date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	<label for="startDate">Side effect start date (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 	<input id="startDate" name="startDate" class="width-80" type="date" required="required" value=""/><br />
 </td>
 	<td>
-	<label for="endDate">Side effect end date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
+	<label for="endDate">Side effect end date (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):</label><br />
 	<input id="endDate" name="endDate" class="width-80" type="date" value=""/><br /></td></tr></table>
 </div>
    <!-- 
@@ -566,7 +568,7 @@ font-size:12pt;
 	</div>
 	-->
 	<div class="form-group">
-		<label for="descSideEffect" class="required"><span class="dddtooltip">Describe the side effect: <span class="helperText">(timelines, treatment, etc.)</span></span></label><br />
+		<label for="descSideEffect" class="required"><span class="dddtooltip">Describe the side effect <span class="helperText">(timelines, treatment, etc.):</span></span></label><br />
 		<textarea maxlength="3000" id="descSideEffect" name="descSideEffect" class="width-100" rows="6" cols="100" required="required" placeholder="(timelines, treatment, etc.)"></textarea>
 	</div>
       </div>
@@ -616,7 +618,7 @@ font-size:12pt;
 		
 			</td><td>
 		
-			<legend><strong>How it was purchased/obtained:</strong></legend><br/>
+			<legend><strong>How was it purchased/obtained:</strong></legend><br/>
 			<label for="howPharmacy" class="form-radio">
 			<input type="radio" name="purchaseHow" id="howPharmacy" value="Pharmacy" onchange="swapField('howOther', 'textpurchaseHow')"/>
 			Pharmacy</label><br />
@@ -733,12 +735,12 @@ font-size:12pt;
 		</table>
 	</div>
 	<div class="form-group">
-		<label for="otherProductsTaken" class="dddtooltip">Were other products taken at the time of the side effect, excluding the treatment of the side effect?</label><br />
+		<label for="otherProductsTaken" class="dddtooltip">Were other products taken at the time of the side effect, excluding for the treatment of the side effect?</label><br />
 		<textarea id="otherProductsTaken" name="otherProductsTaken" class="width-100" rows="6" cols="100" maxlength="3000" placeholder="(length of use, timelines, etc.)"></textarea>
 	</div>
 	<div class="form-group">
 		<label for="relatedTestResults">Related test/laboratory results:</label><br />
-		<textarea id="relatedTestResults" name="relatedTestResults" class="width-100" rows="6" cols="100" maxlength="3000"></textarea>
+		<textarea id="relatedTestResults" name="relatedTestResults" class="width-100" rows="6" cols="100" maxlength="3000" placeholder="(patient's lab tests/results, e.g. CT scan normal)"></textarea>
 	</div>
       </div>
       </div>
