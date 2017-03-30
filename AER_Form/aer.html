@@ -605,14 +605,14 @@ font-size:12pt;
 			<tr><td valign = "top">
 		
 			<legend>Country of purchase:</legend><br/>
-			<label for="countryCnd" class="form-radio">
+			<label for="countryCnd" class="form-radio" style="font-weight:normal">
 			<input name="purchaseCountry" type="radio" id="countryCnd" value="Canada" onchange="swapField('countryOther', 'textpurchaseCountry')" />
 			Canada</label><br />
-			<label for="countryUSA" class="form-radio">
-			<input type="radio" name="purchaseCountry" id="countryUSA" value="united states:;:états-unis" onchange="swapField('countryOther', 'textpurchaseCountry')" style="font-weight:normal"/>
+			<label for="countryUSA" class="form-radio" style="font-weight:normal">
+			<input type="radio" name="purchaseCountry" id="countryUSA" value="united states:;:états-unis" onchange="swapField('countryOther', 'textpurchaseCountry')" />
 			United States</label><br />
-			<label for="countryOther" class="form-radio">
-			<input type="radio" name="purchaseCountry" id="countryOther" value="other:;:autre" onchange="swapField('countryOther', 'textpurchaseCountry')" style="font-weight:normal"/>
+			<label for="countryOther" class="form-radio" style="font-weight:normal">
+			<input type="radio" name="purchaseCountry" id="countryOther" value="other:;:autre" onchange="swapField('countryOther', 'textpurchaseCountry')" />
 			Other (specify)</label>
 			<input id="textpurchaseCountry" title="textpurchaseCountry" name="textpurchaseCountry" type="text" class="other width-60"  maxlength="300" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		
@@ -638,108 +638,108 @@ font-size:12pt;
 	</div>
 	<div class="form-group">
 		<table><tr><td>
-		<label for="prodStartDate">Product start date: <abbr title="Four digits year, dash, two digits month, dash, two digits day"> (YYYY-MM-DD</abbr>)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+		<label for="prodStartDate" style="font-weight:normal">Product start date: <abbr title="Four digits year, dash, two digits month, dash, two digits day"> (YYYY-MM-DD</abbr>)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 		<input id="prodStartDate" name="prodStartDate" class="width-80" type="date" required="required" value=""/><br />
 	</td><td>
 	    <!-- Class required was deleted as the end date is no longer mandatory -->
-		<label for="prodEndDate">Product end date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
+		<label for="prodEndDate" style="font-weight:normal">Product end date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
 		<input id="prodEndDate" name="prodEndDate" class="width-80" type="date" value=""/><br />
 			</td></tr></table>
 	</div>
 	<div class="form-group">
     	
-		<legend><strong>At time of side effect specify:</strong></legend>
+		<legend>At time of side effect specify:</legend>
 		<table><tr><td>	
-		<label for="productDosage" >Dosage:</label><br/>
+		<label for="productDosage" style="font-weight:normal">Dosage:</label><br/>
 			<input id="productDosage" name="productDosage" type="text" required="required" placeholder="(strength and quantity)" class="width-60"  maxlength="200" value=""/><br />
 			</td><td>
-			<label for="productFrequency">Frequency:</label><br/>
+			<label for="productFrequency" style="font-weight:normal">Frequency:</label><br/>
 			<input id="productFrequency" name="productFrequency" type="text" placeholder="(e.g. twice daily)" class="width-60"  maxlength="200" value=""/><br />
 			</td></tr><tr><td>
-			<label for="productHowTaken">How the product was taken:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br/>
+			<label for="productHowTaken" style="font-weight:normal">How the product was taken:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br/>
 			<input id="productHowTaken" name="productHowTaken" type="text" required="required" placeholder="(e.g. by mouth)" class="width-60"  maxlength="200" value=""/>
 		
 	</td><td>
 		
-		<label for="productTakenFor">What was the product prescribed/taken for?</label><br />
+		<label for="productTakenFor" style="font-weight:normal">What was the product prescribed/taken for?</label><br />
 		<input id="productTakenFor" name="productTakenFor" type="text" placeholder="" class="width-60"  maxlength="500" value=""/>
 	</td></tr></table>
 		</div>
 		<table>
 			<tr>
-			<td valign = "top"><legend><strong>Did use of the product stop after the side effect appeared?</strong></legend></td>
-			<td><label for="stoppedYes" class="form-radio">
+			<td valign = "top"><legend>Did use of the product stop after the side effect appeared?</legend></td>
+			<td><label for="stoppedYes" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productStopped" id="stoppedYes" value="Yes:;:Oui"/>
 			Yes</label><br />
-			<label for="stoppedNo" class="form-radio">
+			<label for="stoppedNo" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productStopped" id="stoppedNo" value="No:;:Non"/>
 			No</label><br /><br /></td>
 			</tr>
 			<tr>
-			<td valign = "top"><legend><strong>If the product was stopped did the side effect stop?</strong></legend></td>
-			<td><label for="effectStoppedYes" class="form-radio">
+			<td valign = "top"><legend>If the product was stopped did the side effect stop?</legend></td>
+			<td><label for="effectStoppedYes" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productEffectStopped" id="effectStoppedYes" value="Yes:;:Oui"/>
 			Yes</label><br />
-			<label for="effectStoppedNo" class="form-radio">
+			<label for="effectStoppedNo" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productEffectStopped" id="effectStoppedNo" value="No:;:Non"/>
 			No</label><br />
-			<label for="effectStoppedNotApply" class="form-radio">
+			<label for="effectStoppedNotApply" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productEffectStopped" id="effectStoppedNotApply" value="Does not apply:;:Ne s'applique pas"/>
 			Does not apply</label><br /><br /></td>
 			</tr>
 			<tr>
-			<td valign = "top"><legend><strong>Was the product restarted after the side effect stopped?</strong></legend></td>
-			<td><label for="restartedYes" class="form-radio">
+			<td valign = "top"><legend>Was the product restarted after the side effect stopped?</legend></td>
+			<td><label for="restartedYes" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productRestarted" id="restartedYes" value="Yes:;:Oui"/>
 			Yes</label><br />
-			<label for="restartedNo" class="form-radio">
+			<label for="restartedNo" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productRestarted" id="restartedNo" value="No:;:Non"/>
 			No</label><br />
-			<label for="restartedNotApply" class="form-radio">
+			<label for="restartedNotApply" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productRestarted" id="restartedNotApply" value="Does not apply:;:Ne s'applique pas"/>
 			Does not apply</label><br /><br /></td>
 			</tr>
 			<tr>
-			<td valign = "top"><legend><strong>If the product was restarted, did the side effect return?</strong></legend></td>
-			<td><label for="effectsReturnYes" class="form-radio">
+			<td valign = "top"><legend>If the product was restarted, did the side effect return?</legend></td>
+			<td><label for="effectsReturnYes" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productRestartedEffectReturn" id="effectsReturnYes" value="Yes:;:Oui"/>
 			Yes</label><br />
-			<label for="effectsReturnNo" class="form-radio">
+			<label for="effectsReturnNo" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productRestartedEffectReturn" id="effectsReturnNo" value="No:;:Non"/>
 			No</label><br />
-			<label for="effectsReturnNotApply" class="form-radio">
+			<label for="effectsReturnNotApply" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productRestartedEffectReturn" id="effectsReturnNotApply" value="Does not apply:;:Ne s'applique pas"/>
 			Does not apply</label><br /><br /></td>
 			</tr>
 			<tr>
-			<td valign = "top"><legend><strong>What is the likelihood that the product caused the side effect?:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></legend></td>
-			<td><label for="causedEffectCertain" class="form-radio">
+			<td valign = "top"><legend>What is the likelihood that the product caused the side effect?:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</legend></td>
+			<td><label for="causedEffectCertain" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productCausedEffect" id="causedEffectCertain" value="Certain"/>
 			Certain</label><br />
-			<label for="causedEffectProbably" class="form-radio">
+			<label for="causedEffectProbably" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productCausedEffect" id="causedEffectProbably" value="Probably - Likely:;:Probablement - vraisemblablement"/>
 			Probably/Likely</label><br />
-			<label for="causedEffectPossible" class="form-radio">
+			<label for="causedEffectPossible" class="form-radio" style="font-weight:normal"> 
 			<input type="radio" name="productCausedEffect" id="causedEffectPossible" value="Possible:;:Possiblement"/>
 			Possible</label><br />
-			<label for="causedEffectNA" class="form-radio">
+			<label for="causedEffectNA" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productCausedEffect" id="causedEffectNA" value="Not available/Not assessable :;: Pas disponible/incapable de vérifier"/>
 			Not available/Not assessable</label><br />
-			<label for="causedEffectUnlikely" class="form-radio">
+			<label for="causedEffectUnlikely" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productCausedEffect" id="causedEffectUnlikely" value="Unlikely"/>
 			Unlikely</label><br />
-			<label for="causedEffectUnrelated" class="form-radio">
+			<label for="causedEffectUnrelated" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productCausedEffect" id="causedEffectUnrelated" value="Unrelated:;:Sans rapport" />
 			Unrelated</label><br /><br /></td>
 			</tr>
 		</table>
 	</div>
 	<div class="form-group">
-		<label for="otherProductsTaken" class="dddtooltip">Were other products taken at the time of the side effect, excluding for the treatment of the side effect?</label><br />
+		<label for="otherProductsTaken" class="dddtooltip" style="font-weight:normal">Were other products taken at the time of the side effect, excluding for the treatment of the side effect?</label><br />
 		<textarea id="otherProductsTaken" name="otherProductsTaken" class="width-100" rows="6" cols="100" maxlength="3000" placeholder="(length of use, timelines, etc.)"></textarea>
 	</div>
 	<div class="form-group">
-		<label for="relatedTestResults">Related test/laboratory results:</label><br />
+		<label for="relatedTestResults" style="font-weight:normal">Related test/laboratory results:</label><br />
 		<textarea id="relatedTestResults" name="relatedTestResults" class="width-100" rows="6" cols="100" maxlength="3000" placeholder="(patient's lab tests/results, e.g. CT scan normal)"></textarea>
 	</div>
       </div>
