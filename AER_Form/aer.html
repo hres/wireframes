@@ -390,7 +390,7 @@ font-size:12pt;
 	</div>
 	<div class="form-group">
 		<table><tr><td>
-			<label for="age"><span class="field-name"><span style="font-weight:normal">Age:</span></span></label>&nbsp;&nbsp;
+			<label for="age"><span class="field-name" style="font-weight:normal">Age:</span></label>&nbsp;&nbsp;
 			<input id="age" title="age" name="age" placeholder="e.g. 21" size = "6" required="required" type="number"  value=""/>
 			<label for="age1" class="form-radio form-label-inline"><span class="field-name" style="font-weight:normal">years</span></label>
 			<input type="radio" name="age1" id="age1"  value="years:;:ans"/>
@@ -399,31 +399,31 @@ font-size:12pt;
 			</td><td>
 	
 		
-			<label class="required"><span class="field-name"><strong>Sex:</strong></span></label>&nbsp;&nbsp;
-			<label for="patientSex" class="form-radio form-label-inline"><span class="field-name">Male</span></label>
+			<label class="required"><span class="field-name" style="font-weight:normal">Sex:</span></label>&nbsp;&nbsp;
+			<label for="patientSex" class="form-radio form-label-inline"><span class="field-name" style="font-weight:normal">Male</span></label>
 			<input type="radio" name="patientSex" id="patientSex" required="required" value="Male:;:Homme"/>
-			<label for="female" class="form-radio form-label-inline"><span class="field-name">Female</span></label>
+			<label for="female" class="form-radio form-label-inline"><span class="field-name" style="font-weight:normal">Female</span></label>
 			<input type="radio" name="patientSex" id="female" value="Female:;:Femme"/>
-			<label for="female" class="form-radio form-label-inline"><span class="field-name">Unknown</span></label>
+			<label for="female" class="form-radio form-label-inline"><span class="field-name" style="font-weight:normal">Unknown</span></label>
 			<input type="radio" name="patientSex" id="unknown" value="Unknown:;:Inconnu"/>
 		<td></tr></table>
 	</div>
 	<div class="form-group">
 		<table><tr><td>
-			<label for="height1"><span class="field-name">Height:</span></label><br />
+			<label for="height1"><span class="field-name" style="font-weight:normal">Height:</span></label><br />
 			<input type="radio" name="height1" id="height1" value="cm" onchange="swapHeight('cm-1', 'height')"/>
-			<label for="height" class="form-radio form-label-inline">cm</label>
+			<label for="height" class="form-radio form-label-inline" style="font-weight:normal">cm</label>
 			<input id="height" title="height" name="height" type="text" size = "6" placeholder="e.g. 174"   value=""/>
-			&nbsp;<strong>or</strong>&nbsp;
+			&nbsp;or&nbsp;
 			<input type="radio" name="height1" id="ft-1" value="ft:;:pi" onchange="swapHeight('ft-1', 'height2')"/>
-			<label for="ft-1" class="form-radio form-label-inline">&nbsp;ft</label>
+			<label for="ft-1" class="form-radio form-label-inline" style="font-weight:normal">&nbsp;ft</label>
 			&nbsp;
 			<input id="height2" title="height2" name="height2" type="text" size = "6" placeholder="e.g. 5" value=""/>
-			<label for="height3" class="form-radio form-label-inline">&nbsp;in&nbsp;</label>
-			<input id="height3" name="height3" type="text" size = "6" placeholder="e.g. 6" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="height3" class="form-radio form-label-inline" style="font-weight:normal">&nbsp;in&nbsp;</label>
+			<input id="height3" name="height3" type="text" size = "6" placeholder="e.g. 6" value="" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	</td>
 	<td>
-			<label for="weight1"><span class="field-name">Weight:</span></label><br />
+			<label for="weight1"><span class="field-name" style="font-weight:normal">Weight:</span></label><br />
 			<input type="radio" name="weight1" id="weight1" value="kgs" onchange="swapWeight('cm-1', 'height')"/>
 			<label for="weight" class="form-radio form-label-inline">kg</label>
 			&nbsp;
