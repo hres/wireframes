@@ -289,9 +289,9 @@ font-size:12pt;
 		<fieldset>
 			<legend><label for="reporterPhone2"><span style="font-weight:normal">Telephone:</span></label></legend><br/>
 			(area code)&nbsp;(
-			<input title="Phone area code" id="reporterPhone1" name="reporterPhone1" type="text" size="3" placeholder="xxx"  maxlength="3" required="required" value=""/><strong>)&nbsp;&nbsp;</strong>
-			<input title="Phone part 1"    id="reporterPhone2" name="reporterPhone2" type="text" size="3" placeholder="xxx" maxlength="3" required="required" value=""/><strong>&nbsp;&mdash;&nbsp;</strong>
-			<input title="Phone part 2"    id="reporterPhone3" name="reporterPhone3" type="text" size="4" placeholder="xxxx" maxlength="4" required="required" value=""/><strong>&nbsp;ext.&nbsp;</strong>
+			<input title="Phone area code" id="reporterPhone1" name="reporterPhone1" type="text" size="3" placeholder="xxx"  maxlength="3" required="required" value=""/>)&nbsp;&nbsp;
+			<input title="Phone part 1"    id="reporterPhone2" name="reporterPhone2" type="text" size="3" placeholder="xxx" maxlength="3" required="required" value=""/>&nbsp;&mdash;&nbsp;
+			<input title="Phone part 2"    id="reporterPhone3" name="reporterPhone3" type="text" size="4" placeholder="xxxx" maxlength="4" required="required" value=""/>&nbsp;ext.&nbsp;
 			<input title="Phone ext" name="reporterPhone4" type="text" size="5" placeholder="xxxxx" maxlength="8" value=""/>
 		</fieldset>
 			
@@ -337,24 +337,24 @@ font-size:12pt;
 		</fieldset>
 	</div> 
 	<div class="form-group">
-		<label for="reporterOrg">Organization (if applicable):</label><br />
+		<label for="reporterOrg"><span style="font-weight:normal">Organization (if applicable):</span></label><br />
 		<input id="reporterOrg" name="reporterOrg" type="text" placeholder="" class="width-100"  maxlength="200" value=""/>
 	</div>
 	<div class="form-group">
 		<fieldset>
-			<legend><label>Select one that best describes you:</label></legend><br/>
+			<legend><label><span style="font-weight:normal">Select one that best describes you:</span></label></legend><br/>
 			<label for="reporterDescribe" class="form-radio">
 			<input type="radio" name="reporterDescribe" id="reporterDescribe" value="Patient" onchange="swapField('other', 'textreporterDescribe')"/>
-			Consumer/Patient</label><br />
+			<span style="font-weight:normal">Consumer/Patient</span></label><br />
 			<label for="physician" class="form-radio">
 			<input type="radio" name="reporterDescribe" id="physician" value="Physician:;:Médecin" onchange="swapField('other', 'textreporterDescribe')"/>
-			Physician</label><br />
+			<span style="font-weight:normal">Physician</span></label><br />
 			<label for="pharmacist" class="form-radio">
 			<input type="radio" name="reporterDescribe" id="pharmacist" value="Pharmacist:;:Pharmacien" onchange="swapField('other', 'textreporterDescribe')"/>
-			Pharmacist</label><br />
+			<span style="font-weight:normal">Pharmacist</span></label><br />
 			<label for="other" class="form-radio">
 			<input type="radio" name="reporterDescribe" id="other" value="Other:;:Autre" onchange="swapField('other', 'textreporterDescribe')"/>
-			Other (specify)</label>
+			<span style="font-weight:normal">Other (specify)</span></label>
 			<input id= "textreporterDescribe" title="textreporterDescribe" name="textreporterDescribe" type="text" class="other width-60"  maxlength="60" value=""/>
 		</fieldset>
 	</div>
@@ -372,29 +372,29 @@ font-size:12pt;
 	</script>
       </div>
 	
-	<div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><h3>B. About the person who had the side effect</h3></div>
+	<div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><strong>B. About the person who had the side effect</strong></div>
       <div class="tgl-panel">
         	<div class="form-group">
 	    <fieldset>
 		<!-- class required was added and the tag was changed from label to legend -->
-		<legend class="required"><strong>Reference # (if applicable):</strong></legend><br />
+		<legend class="required">Reference # (if applicable):</legend><br />
 		<input id="patientReference" name="patientReference" type="text" placeholder="" class="width-100"  maxlength="60" value=""/>
 	  </fieldset>
 	</div>
 	      <div class="form-group">
 	    <fieldset>
 		
-		<legend class="required"><strong>Patient ID:</strong></legend><br />
+		<legend class="required">Patient ID:</legend><br />
 		<input id="patientID" name="patientID" type="text" placeholder="" class="width-100"  maxlength="60" value=""/>
 	  </fieldset>
 	</div>
 	<div class="form-group">
 		<table><tr><td>
-			<label for="age"><span class="field-name">Age:</span></label>&nbsp;&nbsp;
+			<label for="age"><span class="field-name"><span style="font-weight:normal">Age:</span></span></label>&nbsp;&nbsp;
 			<input id="age" title="age" name="age" placeholder="e.g. 21" size = "6" required="required" type="number"  value=""/>
-			<label for="age1" class="form-radio form-label-inline"><span class="field-name">years</span></label>
+			<label for="age1" class="form-radio form-label-inline"><span class="field-name" style="font-weight:normal">years</span></label>
 			<input type="radio" name="age1" id="age1"  value="years:;:ans"/>
-			<label for="months-1" class="form-radio form-label-inline"><span class="field-name">months</span></label>
+			<label for="months-1" class="form-radio form-label-inline"><span class="field-name" style="font-weight:normal">months</span></label>
 			<input type="radio" name="age1" id="months-1" value="months:;:mois"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			</td><td>
 	
