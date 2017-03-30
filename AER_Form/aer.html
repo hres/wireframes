@@ -425,19 +425,19 @@ font-size:12pt;
 	<td>
 			<label for="weight1"><span class="field-name" style="font-weight:normal">Weight:</span></label><br />
 			<input type="radio" name="weight1" id="weight1" value="kgs" onchange="swapWeight('cm-1', 'height')"/>
-			<label for="weight" class="form-radio form-label-inline">kg</label>
+			<label for="weight" class="form-radio form-label-inline" style="font-weight:normal">kg</label>
 			&nbsp;
 			<input id="weight" title="weight" name="weight" type="text" size = "6" placeholder="e.g. 169" value=""/>
-			&nbsp;<strong>or</strong>&nbsp;
+			&nbsp;or&nbsp;
 			<input type="radio" name="weight1" id="lbs-1" value="lbs" onchange="swapWeight('cm-1', 'height')"/>
-			<label for="lbs-1" class="form-radio form-label-inline">lb&nbsp;</label>
+			<label for="lbs-1" class="form-radio form-label-inline" style="font-weight:normal">lb&nbsp;</label>
 			<input id="weight2" name="weight2" title="weight2" type="text" size = "6" placeholder="e.g. 169" value=""/>
-			<label for="weight3" class="form-radio form-label-inline">&nbsp;oz&nbsp;</label>
+			<label for="weight3" class="form-radio form-label-inline" style="font-weight:normal">&nbsp;oz&nbsp;</label>
 			<input name="weight3" id="weight3" type="text" size = "6" placeholder="e.g. 169" value=""/>
 		</td></tr></table>
 	</div>
 	<div class="form-group">
-		<label for="patientMedHistory" class="dddtooltip"><span class="field-name"> Medical history and other related information</span><span class="helperText"> (allergies, pregnancy, smoking/alcohol use, liver disease, etc.):</span></label>
+		<label for="patientMedHistory" class="dddtooltip"><span class="field-name" style="font-weight:normal"> Medical history and other related information</span><span class="helperText"> (allergies, pregnancy, smoking/alcohol use, liver disease, etc.):</span></label>
 		<textarea maxlength="3000" id="patientMedHistory" name="patientMedHistory" class="width-100" rows="3" cols="100" placeholder="(allergies, pregnancy, smoking/alcohol use, liver disease, etc.)"></textarea>
 	</div>
 <script type="text/javascript">
@@ -502,42 +502,42 @@ font-size:12pt;
 </script>
       </div>
        
-       <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><h3>C. Information on the side effect</h3></div>
+       <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><strong>C. Information on the side effect</strong></div>
       <div class="tgl-panel">
         	<div class="form-group">
 		<table><tr><td>
-        		<label>Seriousness of the side effect:</label><br/>
+        		<label style="font-weight:normal">Seriousness of the side effect:</label><br/>
 			<label for="seriousness[]" class="form-radio">
-			<input type="checkbox" name="seriousness[]" id="seriousness[]" value="Death:;:Décès" onchange="swapField('seriousness[]', 'textdeathDate')"/>
+			<input type="checkbox" name="seriousness[]" id="seriousness[]" value="Death:;:Décès" onchange="swapField('seriousness[]', 'textdeathDate')" style="font-weight:normal"/>
 			Death (provide date) (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br />
 			<input  name="textseriousness" id="textdeathDate" class="width-40" type="date" scrollinput="false" value="" /><br />
 			<label for="lifeThreat" class="form-radio">
-			<input type="checkbox" name="seriousness[]" id="lifeThreat" value="Life-threatening:;:Met la vie en danger" onchange="swapField('seriousness[]', 'textdeathDate')"/>
+			<input type="checkbox" name="seriousness[]" id="lifeThreat" value="Life-threatening:;:Met la vie en danger" onchange="swapField('seriousness[]', 'textdeathDate')" style="font-weight:normal"/>
 			Life-threatening</label><br />
 			<label for="admHosp" class="form-radio">
-			<input type="checkbox" name="seriousness[]" id="admHosp" value="Admitted to hospital:;:Hospitalisation" onchange="swapField('seriousness[]', 'textdeathDate')"/>
+			<input type="checkbox" name="seriousness[]" id="admHosp" value="Admitted to hospital:;:Hospitalisation" onchange="swapField('seriousness[]', 'textdeathDate')" style="font-weight:normal"/>
 			Admitted to hospital</label><br />
 			<label for="hospStay" class="form-radio">
-			<input type="checkbox" name="seriousness[]" id="hospStay" value="Lengthened hospital stay:;:Prolongation d'une hospitalisation" onchange="swapField('seriousness[]', 'textdeathDate')"/>
+			<input type="checkbox" name="seriousness[]" id="hospStay" value="Lengthened hospital stay:;:Prolongation d'une hospitalisation" onchange="swapField('seriousness[]', 'textdeathDate')" style="font-weight:normal"/>
 			Lengthened hospital stay</label><br />
 			<label for="disability" class="form-radio">
-			<input type="checkbox" name="seriousness[]" id="disability" value="Disability:;:Incapacité" onchange="swapField('seriousness[]', 'textdeathDate')"/>
+			<input type="checkbox" name="seriousness[]" id="disability" value="Disability:;:Incapacité" onchange="swapField('seriousness[]', 'textdeathDate')" style="font-weight:normal"/>
 			Disability</label><br />
 			<label for="birthDefect" class="form-radio">
-			<input type="checkbox" name="seriousness[]" id="birthDefect" value="Birth Defect:;:Malformation congénitale" onchange="swapField('seriousness[]', 'textdeathDate')"/>
+			<input type="checkbox" name="seriousness[]" id="birthDefect" value="Birth Defect:;:Malformation congénitale" onchange="swapField('seriousness[]', 'textdeathDate')" style="font-weight:normal"/>
 			Birth Defect</label><br />
 			<label for="medAttention" class="form-radio">
-			<input type="checkbox" name="seriousness[]" id="medAttention" value="Needed medical attention:;:Besoin d'intervention médical" onchange="swapField('seriousness[]', 'textdeathDate')"/>
+			<input type="checkbox" name="seriousness[]" id="medAttention" value="Needed medical attention:;:Besoin d'intervention médical" onchange="swapField('seriousness[]', 'textdeathDate')" style="font-weight:normal"/>
 			Needed medical attention</label>
 		</td><td valign = "top">
-			<legend class="required"><strong>Recovered after side effect:</strong></legend><br/>
-			<label for="recovered" class="form-radio">Yes</label>
+			<legend class="required">Recovered after side effect:</legend><br/>
+			<label for="recovered" class="form-radio" style="font-weight:normal">Yes</label>
 			<input type="radio" name="recovered" id="recovered" required="required" value="Yes:;:Oui" onchange="swapField('recovering', 'textrecovered')"/>
 			<br/>
-			<label for="recoveredNo" class="form-radio">No </label>
+			<label for="recoveredNo" class="form-radio" style="font-weight:normal">No </label>
 			<input type="radio" name="recovered" id="recoveredNo" value="No:;:Non" onchange="swapField('recovering', 'textrecovered')"/>
 			<br/>
-			<label for="recoveredUn" class="form-radio">Unknown</label>
+			<label for="recoveredUn" class="form-radio" style="font-weight:normal">Unknown</label>
 			<input type="radio" name="recovered" id="recoveredUn" value="Unknown:;:Inconnu" onchange="swapField('recovering', 'textrecovered')"/>
 			<br/>
 			<label for="recovering" class="form-radio">Recovering (explain)</label>
@@ -554,11 +554,11 @@ font-size:12pt;
 		<table>
 <tr>
 <td>
-	<label for="startDate">Side effect start date (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	<label for="startDate" style="font-weight:normal">Side effect start date (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 	<input id="startDate" name="startDate" class="width-80" type="date" required="required" value=""/><br />
 </td>
 	<td>
-	<label for="endDate">Side effect end date (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):</label><br />
+	<label for="endDate" style="font-weight:normal">Side effect end date (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):</label><br />
 	<input id="endDate" name="endDate" class="width-80" type="date" value=""/><br /></td></tr></table>
 </div>
    <!-- 
@@ -568,35 +568,35 @@ font-size:12pt;
 	</div>
 	-->
 	<div class="form-group">
-		<label for="descSideEffect" class="required"><span class="dddtooltip">Describe the side effect <span class="helperText">(timelines, treatment, etc.):</span></span></label><br />
+		<label for="descSideEffect" class="required"><span class="dddtooltip" style="font-weight:normal">Describe the side effect <span class="helperText">(timelines, treatment, etc.):</span></span></label><br />
 		<textarea maxlength="3000" id="descSideEffect" name="descSideEffect" class="width-100" rows="6" cols="100" required="required" placeholder="(timelines, treatment, etc.)"></textarea>
 	</div>
       </div>
-       <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><h3>D. Suspected Health Product</h3></div>
+       <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><strong>D. Suspected Health Product</strong></div>
       <div class="tgl-panel">
         	<div class="form-group">
 		
 			
 		<table><tr><td>
-		<label for="productName" class="required">Product name:</label><br/>
+		<label for="productName" class="required" style="font-weight:normal">Product name:</label><br/>
 		<input id="productName" name="productName" type="text" placeholder="" class="width-60"  maxlength="500" required="required" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	</td>
 		<td>	
-		<label for="productStrength">Strength:</label><br/>
+		<label for="productStrength" style="font-weight:normal">Strength:</label><br/>
 		<input id="productStrength" name="productStrength" type="text" placeholder="" class="width-60"  maxlength="200" value=""/>
 		</td>
 		</tr>
 <tr><td>	
-		<label for="productManufacturer">Manufacturer:</label><br/>
+		<label for="productManufacturer" style="font-weight:normal">Manufacturer:</label><br/>
 		<input id="productManufacturer" name="productManufacturer" type="text" placeholder="" class="width-60"  maxlength="200" value=""/>
 	</td></tr>
 			<tr>
 <td>	
-		<label>Lot #:</label><br/>
+		<label style="font-weight:normal">Lot #:</label><br/>
 		<input id="productLot" name="productLot" type="text" placeholder="" class="width-60"  maxlength="200" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	</td>
 			<td>
-		<label>DIN #/NPN #:</label><br/>
+		<label style="font-weight:normal">DIN #/NPN #:</label><br/>
 		<input id="productDIN" name="productDIN" type="text" placeholder="" class="width-60"  maxlength="200" value=""/>
 	</td></tr></table>
 			</div>
@@ -604,31 +604,31 @@ font-size:12pt;
 		<table>
 			<tr><td valign = "top">
 		
-			<legend><strong>Country of purchase:</strong></legend><br/>
+			<legend>Country of purchase:</legend><br/>
 			<label for="countryCnd" class="form-radio">
-			<input name="purchaseCountry" type="radio" id="countryCnd" value="Canada" onchange="swapField('countryOther', 'textpurchaseCountry')"/>
+			<input name="purchaseCountry" type="radio" id="countryCnd" value="Canada" onchange="swapField('countryOther', 'textpurchaseCountry')" style="font-weight:normal"/>
 			Canada</label><br />
 			<label for="countryUSA" class="form-radio">
-			<input type="radio" name="purchaseCountry" id="countryUSA" value="united states:;:états-unis" onchange="swapField('countryOther', 'textpurchaseCountry')"/>
+			<input type="radio" name="purchaseCountry" id="countryUSA" value="united states:;:états-unis" onchange="swapField('countryOther', 'textpurchaseCountry')" style="font-weight:normal"/>
 			United States</label><br />
 			<label for="countryOther" class="form-radio">
-			<input type="radio" name="purchaseCountry" id="countryOther" value="other:;:autre" onchange="swapField('countryOther', 'textpurchaseCountry')"/>
+			<input type="radio" name="purchaseCountry" id="countryOther" value="other:;:autre" onchange="swapField('countryOther', 'textpurchaseCountry')" style="font-weight:normal"/>
 			Other (specify)</label>
-			<input id="textpurchaseCountry" title="textpurchaseCountry" name="textpurchaseCountry" type="text" class="other width-60"  maxlength="300" value="" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input id="textpurchaseCountry" title="textpurchaseCountry" name="textpurchaseCountry" type="text" class="other width-60"  maxlength="300" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		
 			</td><td>
 		
-			<legend><strong>How was it purchased/obtained:</strong></legend><br/>
-			<label for="howPharmacy" class="form-radio">
+			<legend>How was it purchased/obtained:</legend><br/>
+			<label for="howPharmacy" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="purchaseHow" id="howPharmacy" value="Pharmacy" onchange="swapField('howOther', 'textpurchaseHow')"/>
 			Pharmacy</label><br />
-			<label for="howGrocery" class="form-radio">
+			<label for="howGrocery" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="purchaseHow" id="howGrocery" value="Grocery Store" onchange="swapField('howOther', 'textpurchaseHow')"/>
 			Grocery Store</label><br />
-			<label for="howInternernet" class="form-radio">
+			<label for="howInternernet" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="purchaseHow" id="howInternernet" value="Internet" onchange="swapField('howOther', 'textpurchaseHow')"/>
 			Internet</label><br />
-			<label for="howOther" class="form-radio">
+			<label for="howOther" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="purchaseHow" id="howOther" value="other:;:autre" onchange="swapField('howOther', 'textpurchaseHow')"/>
 			Other (specify)</label>
 			<input id="textpurchaseHow" title="textpurchaseHow" name="textpurchaseHow" type="text" class="other width-60"  maxlength="300" value="" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
