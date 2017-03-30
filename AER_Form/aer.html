@@ -271,11 +271,11 @@ font-size:12pt;
   <div class="accordion">
     <div class="tabpanels"> 
 	
-	    <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><h3>A. Reporter Information</h3></div>
+	    <div class="wb-toggle tgl-tab" data-toggle='{"parent": ".accordion", "group": ".acc-group"}'><strong>A. Reporter Information</strong></div>
       <div class="tgl-panel">
         	<div class="form-group"> 
 			<fieldset>
-				<p><strong>Please complete one of the following methods of contact (phone, address or email) This will allow Health Canada to contact you should there be a need for further clarifications or questions on this report.</strong></p>
+				<p>Please complete one of the following methods of contact (phone, address or email) This will allow Health Canada to contact you should there be a need for further clarifications or questions on this report.</p>
 			</fieldset>
 		</div>
 	
@@ -287,8 +287,8 @@ font-size:12pt;
 		<input id="reporterName" name="reporterName" type="text" placeholder="John Smith" class="width-40"  maxlength="40" required="required" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		
 		<fieldset>
-			<legend><label for="reporterPhone2">Telephone:</label></legend><br/>
-			<strong>(area code)&nbsp;(</strong>
+			<legend><label for="reporterPhone2"><span style="font-weight:normal">Telephone:</span></label></legend><br/>
+			(area code)&nbsp;(
 			<input title="Phone area code" id="reporterPhone1" name="reporterPhone1" type="text" size="3" placeholder="xxx"  maxlength="3" required="required" value=""/><strong>)&nbsp;&nbsp;</strong>
 			<input title="Phone part 1"    id="reporterPhone2" name="reporterPhone2" type="text" size="3" placeholder="xxx" maxlength="3" required="required" value=""/><strong>&nbsp;&mdash;&nbsp;</strong>
 			<input title="Phone part 2"    id="reporterPhone3" name="reporterPhone3" type="text" size="4" placeholder="xxxx" maxlength="4" required="required" value=""/><strong>&nbsp;ext.&nbsp;</strong>
@@ -297,13 +297,13 @@ font-size:12pt;
 			
 	</div>
 	<div class="form-group">
-		<label for="reporterAddress">Address:</label>&nbsp;&nbsp;
+		<label for="reporterAddress"><span style="font-weight:normal">Address:</span></label>&nbsp;&nbsp;
 		<input id="reporterAddress" name="reporterAddress" type="text" placeholder="123 1st Street" class="width-100"  maxlength="100" value=""/>&nbsp;&nbsp;
 	
-		<label for="reporterCity">City:</label>&nbsp;&nbsp;
+		<label for="reporterCity"><span style="font-weight:normal">City:</span></label>&nbsp;&nbsp;
 		<input id="reporterCity" name="reporterCity" type="text" placeholder="Ottawa" class="width-100"  maxlength="100" value=""/>&nbsp;&nbsp;
 	
-		<label for="reporterProvince">Province/Territory:</label>&nbsp;&nbsp;
+		<label for="reporterProvince"><span style="font-weight:normal">Province/Territory:</span></label>&nbsp;&nbsp;
 		<select name="reporterProvince" id="reporterProvince" >
             <option value="">Select</option>
 			<option value="AB">Alberta</option>
@@ -322,18 +322,18 @@ font-size:12pt;
 		</select>
 	</div>
 	<div class="form-group">
-		<label for="reporterEmail">Email Address:</label><br />
+		<label for="reporterEmail"><span style="font-weight:normal">Email Address:</span></label><br />
 		<input id="reporterEmail" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" name="reporterEmail" type="email" placeholder="yourname@website.com" class="width-60"  maxlength="60" value=""/>
 	</div>
 	<div class="form-group">
 		<fieldset>
-		<legend><label>Preferred language:</label></legend><br/>
+		<legend><label><span style="font-weight:normal">Preferred language:</span></label></legend><br/>
 			<label for="reporterLanguage" class="form-radio form-label-inline">
 			<input type="radio" name="reporterLanguage" id="reporterLanguage" value="English:;:anglais"/>
-			English</label>
+			<span style="font-weight:normal">English</span></label>
 			<label for="french" class="form-radio form-label-inline">
 			<input type="radio" name="reporterLanguage" id="french" value="French:;:fran&ccedil;ais"/>
-			French</label>
+			<span style="font-weight:normal">French</span></label>
 		</fieldset>
 	</div> 
 	<div class="form-group">
