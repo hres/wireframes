@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!-->
@@ -77,12 +78,7 @@ font-weight: bold;
 }
 .label{
 font-weight: bold !important;
-}
-.form-radio{
-font-weight: normal !important;
-}
-
-	
+}		
 </style>
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
@@ -346,10 +342,10 @@ font-weight: normal !important;
 		<legend><label><span style="font-weight:bold">Preferred language:</span></label></legend><br/>
 			<label for="reporterLanguage" class="form-radio form-label-inline">
 			<input type="radio" name="reporterLanguage" id="reporterLanguage" value="English:;:anglais"/>
-			<span style="font-weight:bold">English</span></label>
+			<span style="font-weight:normal">English</span></label>
 			<label for="french" class="form-radio form-label-inline">
 			<input type="radio" name="reporterLanguage" id="french" value="French:;:fran&ccedil;ais"/>
-			<span style="font-weight:bold">French</span></label>
+			<span style="font-weight:normal">French</span></label>
 		</fieldset>
 	</div> 
 	<div class="form-group">
@@ -361,16 +357,16 @@ font-weight: normal !important;
 			<legend><label><span style="font-weight:bold">Select one that best describes you:</span></label></legend><br/>
 			<label for="reporterDescribe" class="form-radio">
 			<input type="radio" name="reporterDescribe" id="reporterDescribe" value="Patient" onchange="swapField('other', 'textreporterDescribe')"/>
-			<span style="font-weight:bold">Consumer/Patient</span></label><br />
+			<span style="font-weight:normal">Consumer/Patient</span></label><br />
 			<label for="physician" class="form-radio">
 			<input type="radio" name="reporterDescribe" id="physician" value="Physician:;:Médecin" onchange="swapField('other', 'textreporterDescribe')"/>
-			<span style="font-weight:bold">Physician</span></label><br />
+			<span style="font-weight:normal">Physician</span></label><br />
 			<label for="pharmacist" class="form-radio">
 			<input type="radio" name="reporterDescribe" id="pharmacist" value="Pharmacist:;:Pharmacien" onchange="swapField('other', 'textreporterDescribe')"/>
-			<span style="font-weight:bold">Pharmacist</span></label><br />
+			<span style="font-weight:normal">Pharmacist</span></label><br />
 			<label for="other" class="form-radio">
 			<input type="radio" name="reporterDescribe" id="other" value="Other:;:Autre" onchange="swapField('other', 'textreporterDescribe')"/>
-			<span style="font-weight:bold">Other (specify)</span></label>
+			<span style="font-weight:normal">Other (specify)</span></label>
 			<input id= "textreporterDescribe" title="textreporterDescribe" name="textreporterDescribe" type="text" class="other width-60"  maxlength="60" value=""/>
 		</fieldset>
 	</div>
@@ -394,20 +390,20 @@ font-weight: normal !important;
         	<div class="form-group">
 	    <fieldset>
 		<!-- class required was added and the tag was changed from label to legend -->
-		<legend class="required">Reference # (if applicable):</legend><br />
+		<legend class="required" style="font-weight:bold">Reference # (if applicable):</legend><br />
 		<input id="patientReference" name="patientReference" type="text" placeholder="" class="width-100"  maxlength="60" value=""/>
 	  </fieldset>
 	</div>
 	      <div class="form-group">
 	    <fieldset>
 		
-		<legend class="required">Patient ID:</legend><br />
+		<legend class="required" style="font-weight:bold">Patient ID:</legend><br />
 		<input id="patientID" name="patientID" type="text" placeholder="" class="width-100"  maxlength="60" value=""/>
 	  </fieldset>
 	</div>
 	<div class="form-group">
 		<table><tr><td>
-			<label for="age"><span class="field-name" style="font-weight:normal">Age:</span></label>&nbsp;&nbsp;
+			<label for="age"><span class="field-name" style="font-weight:bold">Age:</span></label>&nbsp;&nbsp;
 			<input id="age" title="age" name="age" placeholder="e.g. 21" size = "6" required="required" type="number"  value=""/>
 			<label for="age1" class="form-radio form-label-inline"><span class="field-name" style="font-weight:normal">years</span></label>
 			<input type="radio" name="age1" id="age1"  value="years:;:ans"/>
@@ -416,7 +412,7 @@ font-weight: normal !important;
 			</td><td>
 	
 		
-			<label class="required"><span class="field-name" style="font-weight:normal">Sex:</span></label>&nbsp;&nbsp;
+			<label class="required"><span class="field-name" style="font-weight:bold">Sex:</span></label>&nbsp;&nbsp;
 			<label for="patientSex" class="form-radio form-label-inline"><span class="field-name" style="font-weight:normal">Male</span></label>
 			<input type="radio" name="patientSex" id="patientSex" required="required" value="Male:;:Homme"/>
 			<label for="female" class="form-radio form-label-inline"><span class="field-name" style="font-weight:normal">Female</span></label>
@@ -427,7 +423,7 @@ font-weight: normal !important;
 	</div>
 	<div class="form-group">
 		<table><tr><td>
-			<label for="height1"><span class="field-name" style="font-weight:normal">Height:</span></label><br />
+			<label for="height1"><span class="field-name" style="font-weight:bold">Height:</span></label><br />
 			<input type="radio" name="height1" id="height1" value="cm" onchange="swapHeight('cm-1', 'height')"/>
 			<label for="height" class="form-radio form-label-inline" style="font-weight:normal">cm</label>
 			<input id="height" title="height" name="height" type="text" size = "6" placeholder="e.g. 174"   value=""/>
@@ -440,7 +436,7 @@ font-weight: normal !important;
 			<input id="height3" name="height3" type="text" size = "6" placeholder="e.g. 6" value="" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	</td>
 	<td>
-			<label for="weight1"><span class="field-name" style="font-weight:normal">Weight:</span></label><br />
+			<label for="weight1"><span class="field-name" style="font-weight:bold">Weight:</span></label><br />
 			<input type="radio" name="weight1" id="weight1" value="kgs" onchange="swapWeight('cm-1', 'height')"/>
 			<label for="weight" class="form-radio form-label-inline" style="font-weight:normal">kg</label>
 			&nbsp;
@@ -454,7 +450,7 @@ font-weight: normal !important;
 		</td></tr></table>
 	</div>
 	<div class="form-group">
-		<label for="patientMedHistory" class="dddtooltip"><span class="field-name" style="font-weight:normal"> Medical history and other related information</span><span class="helperText" style="font-weight:normal"> (allergies, pregnancy, smoking/alcohol use, liver disease, etc.):</span></label>
+		<label for="patientMedHistory" class="dddtooltip"><span class="field-name" style="font-weight:bold"> Medical history and other related information</span><span class="helperText" style="font-weight:normal"> (allergies, pregnancy, smoking/alcohol use, liver disease, etc.):</span></label>
 		<textarea maxlength="3000" id="patientMedHistory" name="patientMedHistory" class="width-100" rows="3" cols="100" placeholder="(allergies, pregnancy, smoking/alcohol use, liver disease, etc.)"></textarea>
 	</div>
 <script type="text/javascript">
@@ -524,7 +520,7 @@ font-weight: normal !important;
       <div class="tgl-panel">
         	<div class="form-group">
 		<table><tr><td>
-        		<label style="font-weight:normal">Seriousness of the side effect:</label><br/>
+        		<label style="font-weight:bold">Seriousness of the side effect:</label><br/>
 			<label for="seriousness[]" class="form-radio" style="font-weight:normal">
 			<input type="checkbox" name="seriousness[]" id="seriousness[]" value="Death:;:Décès" onchange="swapField('seriousness[]', 'textdeathDate')" style="font-weight:normal" style="font-weight:normal"/>
 			Death (provide date) (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br />
@@ -548,7 +544,7 @@ font-weight: normal !important;
 			<input type="checkbox" name="seriousness[]" id="medAttention" value="Needed medical attention:;:Besoin d'intervention médical" onchange="swapField('seriousness[]', 'textdeathDate')"/>
 			Needed medical attention</label>
 		</td><td valign = "top">
-			<legend class="required" style="font-weight:normal">Recovered after side effect:</legend><br/>
+			<legend class="required" style="font-weight:bold">Recovered after side effect:</legend><br/>
 			<label for="recovered" class="form-radio" style="font-weight:normal">Yes</label>
 			<input type="radio" name="recovered" id="recovered" required="required" value="Yes:;:Oui" onchange="swapField('recovering', 'textrecovered')"/>
 			<br/>
@@ -572,11 +568,11 @@ font-weight: normal !important;
 		<table>
 <tr>
 <td>
-	<label for="startDate" style="font-weight:normal">Side effect start date (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	<label for="startDate" style="font-weight:bold">Side effect start date (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 	<input id="startDate" name="startDate" class="width-80" type="date" required="required" value=""/><br />
 </td>
 	<td>
-	<label for="endDate" style="font-weight:normal">Side effect end date (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):</label><br />
+	<label for="endDate" style="font-weight:bold">Side effect end date (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>):</label><br />
 	<input id="endDate" name="endDate" class="width-80" type="date" value=""/><br /></td></tr></table>
 </div>
    <!-- 
@@ -586,7 +582,7 @@ font-weight: normal !important;
 	</div>
 	-->
 	<div class="form-group">
-		<label for="descSideEffect" class="required"><span class="dddtooltip" style="font-weight:normal">Describe the side effect <span class="helperText">(timelines, treatment, etc.):</span></span></label><br />
+		<label for="descSideEffect" class="required"><span class="dddtooltip" style="font-weight:bold">Describe the side effect <span class="helperText">(timelines, treatment, etc.):</span></span></label><br />
 		<textarea maxlength="3000" id="descSideEffect" name="descSideEffect" class="width-100" rows="6" cols="100" required="required" placeholder="(timelines, treatment, etc.)"></textarea>
 	</div>
       </div>
@@ -598,25 +594,25 @@ font-weight: normal !important;
 		
 			
 		<table><tr><td>
-		<label for="productName" class="required" style="font-weight:normal">Product name:</label><br/>
+		<label for="productName" class="required" style="font-weight:bold">Product name:</label><br/>
 		<input id="productName" name="productName" type="text" placeholder="" class="width-60"  maxlength="500" required="required" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	</td>
 		<td>	
-		<label for="productStrength" style="font-weight:normal">Strength:</label><br/>
+		<label for="productStrength" style="font-weight:bold">Strength:</label><br/>
 		<input id="productStrength" name="productStrength" type="text" placeholder="" class="width-60"  maxlength="200" value=""/>
 		</td>
 		</tr>
 <tr><td>	
-		<label for="productManufacturer" style="font-weight:normal">Manufacturer:</label><br/>
+		<label for="productManufacturer" style="font-weight:bold">Manufacturer:</label><br/>
 		<input id="productManufacturer" name="productManufacturer" type="text" placeholder="" class="width-60"  maxlength="200" value=""/>
 	</td></tr>
 			<tr>
 <td>	
-		<label style="font-weight:normal">Lot #:</label><br/>
+		<label style="font-weight:bold">Lot #:</label><br/>
 		<input id="productLot" name="productLot" type="text" placeholder="" class="width-60"  maxlength="200" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	</td>
 			<td>
-		<label style="font-weight:normal">DIN #/NPN #:</label><br/>
+		<label style="font-weight:bold">DIN #/NPN #:</label><br/>
 		<input id="productDIN" name="productDIN" type="text" placeholder="" class="width-60"  maxlength="200" value=""/>
 	</td></tr></table>
 			</div>
@@ -624,7 +620,7 @@ font-weight: normal !important;
 		<table>
 			<tr><td valign = "top">
 		
-			<legend>Country of purchase:</legend><br/>
+			<legend style="font-weight:bold">Country of purchase:</legend><br/>
 			<label for="countryCnd" class="form-radio" style="font-weight:normal">
 			<input name="purchaseCountry" type="radio" id="countryCnd" value="Canada" onchange="swapField('countryOther', 'textpurchaseCountry')" />
 			Canada</label><br />
@@ -638,7 +634,7 @@ font-weight: normal !important;
 		
 			</td><td>
 		
-			<legend>How was it purchased/obtained:</legend><br/>
+			<legend style="font-weight:bold">How was it purchased/obtained:</legend><br/>
 			<label for="howPharmacy" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="purchaseHow" id="howPharmacy" value="Pharmacy" onchange="swapField('howOther', 'textpurchaseHow')"/>
 			Pharmacy</label><br />
@@ -658,36 +654,36 @@ font-weight: normal !important;
 	</div>
 	<div class="form-group">
 		<table><tr><td>
-		<label for="prodStartDate" style="font-weight:normal">Product start date: <abbr title="Four digits year, dash, two digits month, dash, two digits day"> (YYYY-MM-DD</abbr>)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+		<label for="prodStartDate" style="font-weight:bold">Product start date: <abbr title="Four digits year, dash, two digits month, dash, two digits day"> (YYYY-MM-DD</abbr>)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 		<input id="prodStartDate" name="prodStartDate" class="width-80" type="date" required="required" value=""/><br />
 	</td><td>
 	    <!-- Class required was deleted as the end date is no longer mandatory -->
-		<label for="prodEndDate" style="font-weight:normal">Product end date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
+		<label for="prodEndDate" style="font-weight:bold">Product end date: (<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</label><br />
 		<input id="prodEndDate" name="prodEndDate" class="width-80" type="date" value=""/><br />
 			</td></tr></table>
 	</div>
 	<div class="form-group">
     	
-		<legend>At time of side effect specify:</legend>
+		<legend style="font-weight:bold">At time of side effect specify:</legend>
 		<table><tr><td>	
-		<label for="productDosage" style="font-weight:normal">Dosage:</label><br/>
+		<label for="productDosage" style="font-weight:bold">Dosage:</label><br/>
 			<input id="productDosage" name="productDosage" type="text" required="required" placeholder="(strength and quantity)" class="width-60"  maxlength="200" value=""/><br />
 			</td><td>
-			<label for="productFrequency" style="font-weight:normal">Frequency:</label><br/>
+			<label for="productFrequency" style="font-weight:bold">Frequency:</label><br/>
 			<input id="productFrequency" name="productFrequency" type="text" placeholder="(e.g. twice daily)" class="width-60"  maxlength="200" value=""/><br />
 			</td></tr><tr><td>
-			<label for="productHowTaken" style="font-weight:normal">How the product was taken:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br/>
+			<label for="productHowTaken" style="font-weight:bold">How the product was taken:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br/>
 			<input id="productHowTaken" name="productHowTaken" type="text" required="required" placeholder="(e.g. by mouth)" class="width-60"  maxlength="200" value=""/>
 		
 	</td><td>
 		
-		<label for="productTakenFor" style="font-weight:normal">What was the product prescribed/taken for?</label><br />
+		<label for="productTakenFor" style="font-weight:bold">What was the product prescribed/taken for?</label><br />
 		<input id="productTakenFor" name="productTakenFor" type="text" placeholder="" class="width-60"  maxlength="500" value=""/>
 	</td></tr></table>
 		</div>
 		<table>
 			<tr>
-			<td valign = "top"><legend>Did use of the product stop after the side effect appeared?</legend></td>
+			<td valign = "top"><legend style="font-weight:bold">Did use of the product stop after the side effect appeared?</legend></td>
 			<td><label for="stoppedYes" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productStopped" id="stoppedYes" value="Yes:;:Oui"/>
 			Yes</label><br />
@@ -696,7 +692,7 @@ font-weight: normal !important;
 			No</label><br /><br /></td>
 			</tr>
 			<tr>
-			<td valign = "top"><legend>If the product was stopped did the side effect stop?</legend></td>
+			<td valign = "top"><legend style="font-weight:bold">If the product was stopped did the side effect stop?</legend></td>
 			<td><label for="effectStoppedYes" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productEffectStopped" id="effectStoppedYes" value="Yes:;:Oui"/>
 			Yes</label><br />
@@ -708,7 +704,7 @@ font-weight: normal !important;
 			Does not apply</label><br /><br /></td>
 			</tr>
 			<tr>
-			<td valign = "top"><legend>Was the product restarted after the side effect stopped?</legend></td>
+			<td valign = "top"><legend style="font-weight:bold">Was the product restarted after the side effect stopped?</legend></td>
 			<td><label for="restartedYes" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productRestarted" id="restartedYes" value="Yes:;:Oui"/>
 			Yes</label><br />
@@ -720,7 +716,7 @@ font-weight: normal !important;
 			Does not apply</label><br /><br /></td>
 			</tr>
 			<tr>
-			<td valign = "top"><legend>If the product was restarted, did the side effect return?</legend></td>
+			<td valign = "top"><legend style="font-weight:bold">If the product was restarted, did the side effect return?</legend></td>
 			<td><label for="effectsReturnYes" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productRestartedEffectReturn" id="effectsReturnYes" value="Yes:;:Oui"/>
 			Yes</label><br />
@@ -732,7 +728,7 @@ font-weight: normal !important;
 			Does not apply</label><br /><br /></td>
 			</tr>
 			<tr>
-			<td valign = "top"><legend>What is the likelihood that the product caused the side effect?:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</legend></td>
+			<td valign = "top"><legend style="font-weight:bold">What is the likelihood that the product caused the side effect?:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</legend></td>
 			<td><label for="causedEffectCertain" class="form-radio" style="font-weight:normal">
 			<input type="radio" name="productCausedEffect" id="causedEffectCertain" value="Certain"/>
 			Certain</label><br />
@@ -755,11 +751,11 @@ font-weight: normal !important;
 		</table>
 	</div>
 	<div class="form-group">
-		<label for="otherProductsTaken" class="dddtooltip" style="font-weight:normal">Were other products taken at the time of the side effect, excluding for the treatment of the side effect?</label><br />
+		<label for="otherProductsTaken" class="dddtooltip" style="font-weight:bold">Were other products taken at the time of the side effect, excluding for the treatment of the side effect?</label><br />
 		<textarea id="otherProductsTaken" name="otherProductsTaken" class="width-100" rows="6" cols="100" maxlength="3000" placeholder="(length of use, timelines, etc.)"></textarea>
 	</div>
 	<div class="form-group">
-		<label for="relatedTestResults" style="font-weight:normal">Related test/laboratory results:</label><br />
+		<label for="relatedTestResults" style="font-weight:bold">Related test/laboratory results:</label><br />
 		<textarea id="relatedTestResults" name="relatedTestResults" class="width-100" rows="6" cols="100" maxlength="3000" placeholder="(patient's lab tests/results, e.g. CT scan normal)"></textarea>
 </div>		
 	</div>
@@ -1008,3 +1004,4 @@ defFooter.outerHTML = wet.builder.footer({
 </script>
 
 <!-- jquery ui for search box autocomplete -->
+
