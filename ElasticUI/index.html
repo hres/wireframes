@@ -6,7 +6,19 @@
     <script src="./hcElasticClient.js"></script>
   </head>
   <body>
-    <select id="indexes">
-    </select>
+    <form onsubmit="return false;">
+      <select id="indexes">
+      </select>
+      <input id="searchquery" type="text" placeholder="Search...">
+      <select id="match">
+        <option value="lenient">lenient</option>
+        <option value="strict">strict</option>
+      </select>
+      <input type="submit" value="search icon" onclick="perfSearch()">
+    </form>
+    <div>google like
+      <div id="google">
+      </div>
+    </div>
   </body>
 </html>

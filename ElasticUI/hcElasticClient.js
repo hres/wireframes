@@ -1,13 +1,14 @@
 //hcElasticClient.js
 
+//jQuery connection setup to elastic server
 var client = new $.es.Client({
-  hosts: "http://elastic-gate.hc.local",
+  hosts: "https://elastic-gate.hc.local",
   log: "trace"
 });
 
 $(document).ready(function () {
 
-  //populate dropdown menu to contain current list of indexes
+  //populate dropdown menu to current list of indexes
 
   client.cat.indices({
     format: "json",
@@ -22,3 +23,26 @@ $(document).ready(function () {
     $("#indexes").html(disp);
   });
 });
+
+function perfSearch () {
+
+  var index = $("#indexes").val();
+
+  if ($("#match").val() == "lenient") {
+    client.search({
+      index: index,
+      body: {
+        query: {
+          match: "pfizer"
+        }
+      }
+    })
+  }
+  else {
+  }
+}
+
+function postToGoogle (jsondata) {
+
+  $("#google").html(data);
+}
