@@ -2,7 +2,8 @@
   <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./elasticsearch-js/elasticsearch.jquery.min.js"></script>
+    <!-- <script src="./elasticsearch-js/elasticsearch.jquery.min.js"></script> -->
+    <script src="./elasticsearch-js/elasticsearch.min.js"></script>
     <script src="./hcElasticClient.js"></script>
   </head>
   <body>
@@ -10,10 +11,6 @@
       <select id="indexes">
       </select>
       <input id="searchquery" type="text" placeholder="Search...">
-      <select id="match">
-        <option value="lenient">lenient</option>
-        <option value="strict">strict</option>
-      </select>
       <input type="submit" value="search icon" onclick="perfSearch()">
     </form>
     <div>google like
