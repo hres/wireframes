@@ -1,10 +1,19 @@
 //hcElasticClient.js
 
+//JavaScript connection setup to elastic server
+
+var client = new elasticsearch.Client({
+  host: "https://elastic-gate.hc.local",
+  log: "trace"
+})
+
 //jQuery connection setup to elastic server
+/*
 var client = new $.es.Client({
   hosts: "https://elastic-gate.hc.local",
   log: "trace"
 });
+*/
 
 $(document).ready(function () {
 
@@ -28,21 +37,44 @@ $(document).ready(function () {
   });
 });
 
-function perfSearch () {
+function perfSearch() {
 
   var index = $("#indexes").val();
+  var str = $("#searchquery").val();
 
+  if (str.indexOf(" ") <= 0) {
     client.search({
       index: index,
       body: {
         query: {
-          match_all: {}
+          match: {
+            "_all": str
+          }
         }
       }
+    }).then(function (response) {
+      postToGoogle(response);
     });
+  }
+  else {
+    client.search({
+      index: index,
+      body: {
+        query: {
+          match_phrase: {
+            "_all": str
+          }
+        }
+      }
+    }).then(function (response) {
+      postToGoogle(response);
+    });
+  }
 }
 
-function postToGoogle (jsondata) {
+function postToGoogle(jsondata) {
+
+  var data = JSON.stringify(jsondata);
 
   $("#google").html(data);
 }
