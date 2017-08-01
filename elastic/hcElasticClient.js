@@ -1,19 +1,18 @@
 //hcElasticClient.js
 
 //JavaScript connection setup to elastic server
-
+/*
 var client = new elasticsearch.Client({
   host: "https://elastic-gate.hc.local",
   log: "trace"
 });
-
+*/
 //jQuery connection setup to elastic server
-/*
+
 var client = new $.es.Client({
   hosts: "https://elastic-gate.hc.local",
   log: "trace"
 });
-*/
 
 $(document).ready(function () {
 
