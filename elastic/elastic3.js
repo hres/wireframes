@@ -10,7 +10,7 @@ var password = getQueryString('p');
 
 function start() {
   $.ajax({
-    url: "http://elastic-gate.hres.ca/_cat/indices?format=json",
+    url: "https://elastic-gate.hres.ca/_cat/indices?format=json",
     method: "GET",
     beforeSend: function (xhr) {
       xhr.setRequestHeader ("Authorization", "Basic " + btoa(username + ":" + password));
