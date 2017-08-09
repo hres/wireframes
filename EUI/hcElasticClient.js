@@ -3,7 +3,7 @@
 //JavaScript connection setup to elastic server
 
 var client = new elasticsearch.Client({
-  host: "https://elastic-gate.hc.local",
+  host: "https://elastic-gate.hc.local:443",
   log: "trace"
 })
 
