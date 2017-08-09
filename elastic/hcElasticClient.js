@@ -10,7 +10,7 @@ var client = new elasticsearch.Client({
 //jQuery connection setup to elastic server
 
 var client = new $.es.Client({
-  hosts: "192.168.177.71",
+  hosts: "https://elastic-gate.hc.local:443",
   log: "trace"
 });
 
