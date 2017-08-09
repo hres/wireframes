@@ -11,6 +11,10 @@ var client = new elasticsearch.Client({
 
 var client = new $.es.Client({
   hosts: "https://elastic-gate.hc.local:443",
+    ssl: {
+    rejectUnauthorized: true
+  }
+  
   log: "trace"
 });
 
