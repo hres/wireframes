@@ -12,6 +12,7 @@ var client = new elasticsearch.Client({
 var client = new $.es.Client({
   hosts: "https://elastic-gate.hc.local:443",
   ssl: {
+    ca: fs.readFileSync('./cacert.pem'),
     rejectUnauthorized: true
   },
   log: "trace"
