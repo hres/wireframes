@@ -7,6 +7,7 @@ var getQueryString = function ( field, url ) {
 
 var username = getQueryString('u');
 var password = getQueryString('p');
+console.log(username + " " + password);
 
 function start() {
   $.ajax({
