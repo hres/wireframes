@@ -1,0 +1,30 @@
+<main role="main" property="mainContentOfPage" class="container gc-theme">
+    <div class="row profile">
+        <h1 property="name" id="wb-cont">Medical Device Incidents</h1>
+    </div>
+    <div class="row">
+        <div>
+            <form name="searchForm" onsubmit="return false" class="form-horizontal">
+                <fieldset class="mrgn-tp-lg">
+                    <legend style="text-align: center">Enter search term(s):</legend>
+                    <input id="search" type="text" class="form-control" style="width: 45vw; max-width: 600px; min-width: 250px; margin: auto">
+                </fieldset>
+                <div class="form-group">
+                    <div style="text-align: center">
+                        <input type="submit" onclick="passRequest()" value="Search" class="btn btn-primary mrgn-tp-md" style="width: 175px">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div>
+            <a href="https://dhpr-demo.hres.ca/files/2018-11-30%20extract.zip">Download the Entire Medical Device Incident Extract</a>
+        </div>
+    </div>
+    <div class="pagedetails">
+        <dl id="wb-dtmd">
+            <dt>Last refresh:&#32;</dt>
+            <dd><time id="refresh" property="dateModified"></time></dd>
+        </dl>
+
+    </div>
+</main>
