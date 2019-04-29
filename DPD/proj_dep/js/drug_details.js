@@ -4,7 +4,7 @@ var documentURL = _DRUG.END_POINT+ "dpd_json";
 var monographURL = "https://rest-dev.hres.ca/rest-dev/product_monographs";
 
 
-
+//TODO :filesize
 $(document).ready(function() {
     var drugCode=_getDrugCode();
     const url = documentURL + "?select=*&drug_code=eq." + drugCode;
