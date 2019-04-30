@@ -172,11 +172,11 @@ function get_filesize(url, callback) {
 }
 function temp() {
 
-    /*   get_filesize("https://pdf.hres.ca/dpd_pm/00049126.PDF", function(size) {
+       get_filesize("https://pdf.hres.ca/dpd_pm/00049126.PDF", function(size) {
            alert("The size of foo.exe is: " + size + " bytes.");
-       });*/
+       });
 
-    var xhr = new XMLHttpRequest();
+    /*var xhr = new XMLHttpRequest();
     xhr.open('GET', "https://pdf.hres.ca/dpd_pm/00049126.PDF", true);
 
     xhr.onreadystatechange = function () {
@@ -185,21 +185,23 @@ function temp() {
         }
     };
 
-    xhr.send();
+    xhr.send();*/
 }
-/*
-var contentLength = null;
+/**
+function temp2() {
+    var contentLength = null;
 
-if (checkHeaders(e.target, ['*','Content-Length'])) {
-    // YOU CAN ACCESS HEADER
-    contentLength = parseInt(e.target.getResponseHeader("Content-Length"));
-} else {
-    // YOU CAN NOT ACCESS HEADER
-    console.log('Content-Length NOT AVAILABLE');
+    if (checkHeaders(e.target, ['*', 'Content-Length'])) {
+        // YOU CAN ACCESS HEADER
+        contentLength = parseInt(e.target.getResponseHeader("Content-Length"));
+    } else {
+        // YOU CAN NOT ACCESS HEADER
+        console.log('Content-Length NOT AVAILABLE');
+    }
 }
 
 function checkHeaders(request, headers) {
     return (headers.some(function (elem) {
         return (request.getResponseHeader("Access-Control-Expose-Headers").includes(elem));
     }));
-}*/
+}**/
