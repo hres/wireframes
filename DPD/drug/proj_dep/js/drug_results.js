@@ -49,7 +49,6 @@ function _checkForLang(query){
  * @private
  */
 function _uiSetTermsDisplay(q) {
-    console.log(q)
     if (!q) return;
     $("#"+_DRUG.TERMS_TAG).text(" "+q);
 }
@@ -103,7 +102,6 @@ function initTableWet() {
             {
                 'data': 'drug_product.schedule',
                 'render': function (data, type, full, meta) {
-                    console.log(data);
                    if(!data ||data.length==0) return "";
                      return arrayNameDisplay(data);
                 }
@@ -291,9 +289,4 @@ function passRequestToResults() {
     window.location.href = _DRUG.RESULTS_PAGE_NAME
 }
 
-//TODO delete this. Not needed, table remembers state
-function setResultsPage(){
-    var table=$("#results-table").DataTable();
-    console.log("This is the page"+table.page());
-    table.page(0).draw( 'page' );;
-}
+

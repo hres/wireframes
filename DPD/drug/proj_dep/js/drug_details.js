@@ -19,10 +19,14 @@ $(document).ready(function() {
 
         var statusDate =   DRUG.NOT_APPLICABLE;
         var marketDate =   DRUG.NOT_APPLICABLE;
-
+        var product_status=drug.status_current;
+       /* if(isFrench()){
+            product_status=status.status_current_fr;
+        }*/
         if (status.history_date) statusDate = makeDate(status.history_date);
         if (status.original_market_date) marketDate = makeDate(status.original_market_date);
 
+        $("#status-product").html(product_status);
         $("#status-date").html(statusDate);
         $("#market").html(marketDate);
         $("#product").html(drug.brand_name);
@@ -56,7 +60,7 @@ $(document).ready(function() {
             });
 
             $("#status").html("<strong>" + status.status_f + "</strong>");
-            $("#rmp").html("Un Plan de Gestion des Risques (PGR) pour ce produit " + (drug.risk_man_plan == "N" ? "n'a pas été" : "a été") + " soumis.");
+        /*    $("#rmp").html("Un Plan de Gestion des Risques (PGR) pour ce produit " + (drug.risk_man_plan == "N" ? "n'a pas été" : "a été") + " soumis.");*/
 
             if (drug.product_monograph_fr_url) {
                 $("#monograph").html("<a href='" + drug.product_monograph_fr_url + "' target='_blank'>Monographie électronique (" + makeDate(drug.pm_date) + ")</a>");
@@ -82,7 +86,7 @@ $(document).ready(function() {
             });
 
             $("#status").html("<strong>" + status.status + "</strong>");
-            $("#rmp").html("A Risk Management Plan (RMP) for this product " + (drug.risk_man_plan == "N" ? "was not" : "was") + " submitted.");
+           /* $("#rmp").html("A Risk Management Plan (RMP) for this product " + (drug.risk_man_plan == "N" ? "was not" : "was") + " submitted.");*/
 
             if (drug.product_monograph_en_url) {
                 $("#monograph").html("<a href='" + drug.product_monograph_en_url + "' target='_blank'>Electronic Monograph (" + makeDate(drug.pm_date) + ")</a>");
@@ -171,37 +175,7 @@ function get_filesize(url, callback) {
     xhr.send();
 }
 function temp() {
-
-       get_filesize("https://pdf.hres.ca/dpd_pm/00049126.PDF", function(size) {
+      get_filesize("https://pdf.hres.ca/dpd_pm/00049126.PDF", function(size) {
            alert("The size of foo.exe is: " + size + " bytes.");
        });
-
-    /*var xhr = new XMLHttpRequest();
-    xhr.open('GET', "https://pdf.hres.ca/dpd_pm/00049126.PDF", true);
-
-    xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(xhr.responseURL);
-        }
-    };
-
-    xhr.send();*/
 }
-/**
-function temp2() {
-    var contentLength = null;
-
-    if (checkHeaders(e.target, ['*', 'Content-Length'])) {
-        // YOU CAN ACCESS HEADER
-        contentLength = parseInt(e.target.getResponseHeader("Content-Length"));
-    } else {
-        // YOU CAN NOT ACCESS HEADER
-        console.log('Content-Length NOT AVAILABLE');
-    }
-}
-
-function checkHeaders(request, headers) {
-    return (headers.some(function (elem) {
-        return (request.getResponseHeader("Access-Control-Expose-Headers").includes(elem));
-    }));
-}**/

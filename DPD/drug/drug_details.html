@@ -138,15 +138,19 @@
     <div class="row">
         <button class="btn btn-primary mrgn-bttm-lg" onclick="returnToResults()">Return to Results</button>
     </div>
-    <div class="row">
-        <button class="btn btn-primary mrgn-bttm-lg" onclick="temp()">test</button>
+    <div class="row ">
+        <p class="col-sm-4"><strong>Current status:</strong></p>
+        <p  class="col-sm-8"><strong id="status-product"></strong></p>
     </div>
+
     <div class="row ">
         <p class="col-sm-4"><strong>Current status date:</strong></p>
         <p id="status-date" class="col-sm-8"></p>
     </div>
     <div class="row">
-        <p class="col-sm-4"><strong>Original market date:</strong></p>
+        <p class="col-sm-4"><strong>Original market date:</strong>
+            <sup id="fn1-rf"><a class="fn-lnk" href="#fn1"><span class="wb-inv">See footnote </span>1</a></sup>
+        </p>
         <p id="market" class="col-sm-8"></p>
     </div>
     <div class="row">
@@ -155,7 +159,7 @@
     </div>
     <div class="row">
         <p class="col-sm-4"><strong>DIN:</strong></p>
-        <p class="col-sm-8"><span id="din">02415046</span><span id="monograph" class="well well-sm mrgn-lft-md"></span>
+        <p class="col-sm-8"><span id="din"></span><span id="monograph" class="well well-sm mrgn-lft-md"></span>
         </p>
     </div>
     <div class="row">
@@ -187,22 +191,29 @@
         <p id="schedule" class="col-sm-8"></p>
     </div>
     <div class="row">
-        <p class="col-sm-4"><strong>American Hospital Formulary Service (AHFS):</strong></p>
+        <p class="col-sm-4"><strong>American Hospital Formulary Service (AHFS):</strong>
+            <sup id="fn2-rf"><a class="fn-lnk" href="#fn2"><span class="wb-inv">See footnote </span>2</a></sup>
+        </p>
         <p id="ahfs" class="col-sm-8"></p>
     </div>
     <div class="row">
-        <p class="col-sm-4"><strong>Anatomical Therapeutic Chemical (ATC):</strong></p>
+        <p class="col-sm-4"><strong>Anatomical Therapeutic Chemical (ATC):</strong>
+            <sup id="fn3-rf"><a class="fn-lnk" href="#fn3"><span class="wb-inv">See footnote </span>3</a></sup>
+        </p>
         <p id="atc" class="col-sm-8"></p>
     </div>
     <div class="row">
-        <p class="col-sm-4"><strong>Active ingredient group (AIG) number:</strong></p>
+        <p class="col-sm-4"><strong>Active ingredient group (AIG) number:</strong>
+            <sup id="fn4-rf"><a class="fn-lnk" href="#fn4"><span class="wb-inv">See footnote </span>4</a></sup>
+        </p>
         <p id="aig" class="col-sm-8"></p>
     </div>
-    <div class="row">
+   <!-- <div class="row">
         <p class="col-sm-4"><strong>List of active ingredients:</strong></p>
-    </div>
+    </div>-->
     <div class="table-responsive mrgn-tp-lg">
-        <table class="table table-striped">
+        <table class="table table-striped dataTables_info table-bordered data-wb-tables={'ordering' : false}">
+            <caption class="text-left">List of active ingredient(s)</caption>
             <thead>
             <tr>
                 <th scope="col">Active ingredient</th>
@@ -212,16 +223,46 @@
             <tbody id="ingredients-content"></tbody>
         </table>
     </div>
-    <div class="row mrgn-tp-md">
+<!--    <div class="row mrgn-tp-md">
         <p class="col-sm-4"><strong>Risk Management Plans:</strong></p>
     </div>
     <div class="row">
         <p id="rmp" class="col-sm-8"></p>
-    </div>
+    </div>-->
     <div class="row mrgn-tp-md mrgn-bttm-md">
         <button class="btn btn-primary" onclick="returnToResults()">Return to Results</button>
     </div>
     <p class="mrgn-tp-lg" style="font-size: 1.4rem">Retrieved from: <a id="api-call"></a></p>
+    <aside class="wb-fnote wb-fnote-inited wb-init" role="note">
+        <h3 id="fn">Footnotes</h3>
+        <dl>
+            <dt id="fn1-dt">Footnote 1</dt>
+            <dd aria-labelledby="fn1-dt" tabindex="-1" id="fn1">
+                <p>The earliest marketed date recorded in the Drug Product Database.</p>
+                <p class="fn-rtn"><a href="#fn1-rf"><span class="wb-inv">Return to footnote </span>1<span class="wb-inv"> referrer</span></a></p>
+            </dd>
+            <dt id="fn2-dt">Footnote 2</dt>
+            <dd aria-labelledby="fn2-dt" tabindex="-1" id="fn2">
+                <p>The American Hospital Formulary Service permits an easy review of information on a group of drugs with similar activities and uses and allows the reader to determine quickly the similarities and differences among drugs within a group.</p>
+                <p class="fn-rtn"><a href="#fn3-rf"><span class="wb-inv">Return to footnote </span>2<span class="wb-inv"> referrer</span></a></p>
+            </dd>
+            <dt id="fn3-dt">Footnote 3</dt>
+            <dd aria-labelledby="fn3-dt" tabindex="-1" id="fn3">
+                <p>The purpose of the World Health Organization (WHO) Anatomical Therapeutic Chemical (<abbr>ATC</abbr>) classification system is to be used as a tool for drug utilization research in order to improve quality of drug use. Drugs are divided into different groups according to the organ or system on which they act and their chemical, pharmacological and therapeutical properties.</p>
+                <p class="fn-rtn"><a href="#fn4-rf"><span class="wb-inv">Return to footnote </span>3<span class="wb-inv"> referrer</span></a></p>
+            </dd>
+            <dt id="fn4-dt">Footnote 4</dt>
+            <dd aria-labelledby="fn4-dt" tabindex="-1" id="fn4">
+                <p>The <abbr>AIG</abbr> number is a 10 digit number that identifies products that have the same active ingredient(s) and ingredient strength(s). The <abbr>AIG</abbr> is comprised of three portions:
+                </p><ul>
+                <li>the first portion (2 digits) identifies the number of active ingredients,</li>
+                <li>the second portion (5 digits) identifies the unique groups of active ingredients(s),</li>
+                <li>the last portion (3 digits) identifies the active ingredient group strength. The strength group has a tolerance of ‑2% to +10%.</li>
+            </ul>
+                <p class="fn-rtn"><a href="#fn5-rf"><span class="wb-inv">Return to footnote </span>4<span class="wb-inv"> referrer</span></a></p>
+            </dd>
+        </dl>
+    </aside>
     <div class="pagedetails">
         <dl id="wb-dtmd">
             <dt>Last refresh:</dt>

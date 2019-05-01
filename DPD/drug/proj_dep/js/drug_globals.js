@@ -6,6 +6,7 @@
     var DRUG={};
     DRUG.BRAND_TYPE="brand name";
     DRUG.COMPANY_TYPE="company";
+    DRUG.STATUS_TYPE="status";
     DRUG.NOT_APPLICABLE="NA";
     DRUG.INGREDIENT_TYPE="ingredient";
     DRUG.QUERY_EQUAL="q=";
@@ -35,6 +36,8 @@ $(document).ready(function() {
     if (document && document.documentElement && document.documentElement.lang === "fr"){
         window.DRUG.BRAND_TYPE="dispositif";
         window.DRUG.COMPANY_TYPE="entreprise";
+        window.DRUG.INGREDIENT_TYPE="ingrédient";
+        window.DRUG.STATUS_TYPE="état";
       //  window.DRUG.DISCLAIMER_PAGE="/static/content/mdidisclaim.php?lang=fr";
     }
 });

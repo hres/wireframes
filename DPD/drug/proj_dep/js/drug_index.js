@@ -88,7 +88,9 @@ function processAutoCompleteTerms(query, data) {
            return([
                obj.brand_name + " " + _DRUG.START_AUTO + _DRUG.BRAND_TYPE + _DRUG.END_AUTO,
                obj.company_name + " " + _DRUG.START_AUTO + _DRUG.COMPANY_TYPE + _DRUG.END_AUTO,
-               obj.ingredient + " " + _DRUG.START_AUTO + _DRUG.INGREDIENT_TYPE + _DRUG.END_AUTO
+               obj.ingredient + " " + _DRUG.START_AUTO + _DRUG.INGREDIENT_TYPE + _DRUG.END_AUTO,
+               obj.status_current + " " + _DRUG.START_AUTO + _DRUG.STATUS_TYPE + _DRUG.END_AUTO,
+               obj.status_current_fr + " " + _DRUG.START_AUTO + _DRUG.STATUS_TYPE + _DRUG.END_AUTO
            ]);
     });
     keywords.forEach((keyword) => {
