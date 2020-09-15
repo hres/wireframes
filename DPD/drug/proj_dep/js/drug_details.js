@@ -7,6 +7,7 @@ var monographURL = "https://rest-dev.hres.ca/rest-dev/product_monographs";
 
 $(document).ready(function() {
     var drugCode=_getDrugCode();
+    var fileSize="";
     const url = documentURL + "?select=*&drug_code=eq." + drugCode;
 
     $.get(url, function(data,status)  {
@@ -89,7 +90,8 @@ $(document).ready(function() {
            /* $("#rmp").html("A Risk Management Plan (RMP) for this product " + (drug.risk_man_plan == "N" ? "was not" : "was") + " submitted.");*/
 
             if (drug.product_monograph_en_url) {
-                $("#monograph").html("<a href='" + drug.product_monograph_en_url + "' target='_blank'>Electronic Monograph (" + makeDate(drug.pm_date) + ")</a>");
+                (setLink(drug.product_monograph_en_url,drug));
+               // $("#monograph").html("<a href='" + drug.product_monograph_en_url + "' target='_blank'>Electronic Monograph (" + makeDate(drug.pm_date) +" PDF version 176 Kb "+")</a>");
             }
             else {
                 $("#monograph").html("No Electronic Monograph Available");
@@ -165,17 +167,71 @@ function get_filesize(url, callback) {
                                  //  to get only the header
     xhr.onreadystatechange = function() {
         if (this.readyState == this.DONE) {
-            console.log(xhr.getResponseHeader("Content-Type"));
-            console.log(xhr.getResponseHeader("Status"));
-            var headers = xhr.getAllResponseHeaders();
-            console.log(headers);
+
+            //var headers = xhr.getAllResponseHeaders();
             callback(parseInt(xhr.getResponseHeader("Content-Length")));
         }
     };
     xhr.send();
 }
-function temp() {
-      get_filesize("https://pdf.hres.ca/dpd_pm/00049126.PDF", function(size) {
-           alert("The size of foo.exe is: " + size + " bytes.");
+function getFileBytes(url,fileSize) {
+
+   fileSize= get_filesize(url, function(size) {
+       return size;
+       //console.log(fileSize);
+    });
+    console.log(fileSize);
+
+}
+
+
+async function temp() {
+    let foo="";
+    foo= await get_filesize("https://pdf.hres.ca/dpd_pm/00049126.PDF", function(size) {
+           //alert("The size of foo.exe is: " + size + " bytes.");
+          return size
        });
+     return foo
+
+}
+async  function setLink(url,drug) {
+    //to do french
+    await getFileSize(url).then(function(response) {
+        let size=(bytesToSize(response));
+        $("#monograph").html("<a href='" + drug.product_monograph_en_url + "' target='_blank'>Electronic Monograph (" + makeDate(drug.pm_date) +" PDF version "+size+")</a>");
+        return size;
+    }, function(error) {
+        //return(0);
+        console.warn(error);
+    });
+}
+
+
+    function getFileSize(url) {
+    return new Promise((resolve, reject) => {
+        const request = new XMLHttpRequest();
+        request.open('HEAD', url, true)
+        request.onreadystatechange = () => {
+            if (request.readyState >= 2) {
+                resolve(request.getResponseHeader("Content-Length"));
+                request.abort()
+            }
+        }
+
+        request.onerror = (e) => {
+            reject(e)
+        }
+
+        request.send()
+    })
+}
+
+
+
+
+  function bytesToSize(bytes) {
+    let sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+    if (bytes == 0) return '0 Byte';
+    let i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+    return Math.round((bytes / Math.pow(1024, i)*100))/100+ ' ' + sizes[i];
 }
