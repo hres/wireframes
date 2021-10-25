@@ -2,7 +2,7 @@
 <?php
 $text = $_POST['text'];
 function get_contents2(){
-    $headersResult = [];
+    #$headersResult = [];
     $ch=curl_init();
     $rangeReturned=-1;
     $headersSend =[
@@ -37,8 +37,10 @@ function get_contents2(){
     // var_dump($header);
     //$body = substr($output, $header_size);
    // var_dump(json_encode($output));
-    return  (($output));
+    return $rangeReturned;
+    #return  (($output));
 }
 
-echo get_contents2()
-?>
+echo get_contents2();
+
+
