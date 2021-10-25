@@ -28,17 +28,21 @@ function get_contents2(){
             return $len;
         }
     );
+    print_r("Before the extec");
     $output=curl_exec($ch);
     // print_r($headersResult);
     //print_r($rangeReturned);
 
-    //$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-    //$header = substr($output, 0, $header_size);
-    // var_dump($header);
-    //$body = substr($output, $header_size);
-   // var_dump(json_encode($output));
-    return $rangeReturned;
-    #return  (($output));
+    #$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    #$header = substr($output, 0, $header_size);
+    # var_dump($header);
+    #$body = substr($output, $header_size);
+   #var_dump(json_encode($output));
+    #return $rangeReturned;
+    $myObj=new stdClass();
+    $myObj->count = $rangeReturned;
+    $myObj->data=json_decode($output);
+     return (json_encode($myObj));
 }
 
 echo get_contents2();
