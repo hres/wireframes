@@ -1,0 +1,311 @@
+var dataList="";
+//var lastFocused=null;
+
+function getProtocolTitleValue(){
+    return $('#protocol-title').val()
+}
+
+function getDrugNameValue(){
+    return $('#drug-name').val()
+}
+function getConditionValue(){
+    return $('#condition-name').val()
+}
+
+function getSponsorNameValue(){
+    return $('#sponsor-name').val()
+}
+function getProtocolIdValue(){
+    return $('#protocol-id').val()
+}
+function getControlIdValue(){
+    return $('#control-id').val()
+}
+function getStatusIdValue(){
+    return $('#status-list').val()
+}
+function getPopulationIdValue(){
+    return $('#population-list').val()
+}
+
+
+function filterRecords() {
+    sessionStorage.setItem("title", $('#protocol-title').val());
+    sessionStorage.setItem("drug", $('#drug-name').val());
+    sessionStorage.setItem("protocolId", $('#protocol-id').val());
+    sessionStorage.setItem("controlId", $('#control-id').val());
+    $('#cta-results-table').DataTable().search("").draw();
+
+}
+function clearFilter(){
+    console.warn('start')
+    sessionStorage.clear();
+    $('#filter-form').trigger("reset");
+    //document.getElementById("filter-form").reset();
+
+    $('#cta-results-table').DataTable().search("").draw();
+}
+
+
+/*async function postData() {
+    // Default options are marked with *
+    const response = await fetch('http://dotnet-dev.hc.local/api/clinical-trial/status?count=500&lang=en')
+    const  data = await response.json()
+    console.warn(data);
+    return data
+}*/
+
+
+$(document).ready(function() {
+
+    sessionStorage.clear();
+    loadStatus();
+    loadPopulation();
+
+    window['wb-tables']= ( {
+      "searching":false,
+      "processing": true, // control the processing indicator.
+        "serverSide": true, // recommended to use serverSide when data is more than 10000 rows for performance reasons
+
+        "columnDefs": [ {
+            "targets": [ 2,3],
+            "orderable": true}
+
+         ],
+        keys: {
+            blurable: false
+        },
+        "ajax": {
+            // "url":"https://localhost:44329/api/clinical-trial?title="+title,
+            "url": "scripts/serverSideProcessing.php",
+            error: function(jqXHR, ajaxOptions, thrownError) {
+                //alert(thrownError + "\r\n" + jqXHR.statusText + "\r\n" + jqXHR.responseText + "\r\n" + ajaxOptions.responseText);
+                alert("Connection error with data source. Try refreshing the page.")
+            },
+              "cache": false,
+                "type": "POST",
+            "data": function ( d ) {
+               d.title = getProtocolTitleValue();
+               d.drug= getDrugNameValue();
+               d.sponsor=getSponsorNameValue();
+               d.protocol=getProtocolIdValue();
+               d.control=getControlIdValue();
+               d.status=getStatusIdValue();
+               d.condition=getConditionValue();
+               d.population=getPopulationIdValue();
+               console.warn(d.population);
+            },
+          },
+            //'incident.incident_id brandManufacturerList'
+            "columns": [
+              {'data': 'brandManufacturerList',
+              'render': function (data, type, full, meta) {
+                  //dataList=meta.settings.aoData;
+                  sessionStorage.dataList= JSON.stringify( meta.settings.aoData);
+                  var result="";
+                  if(data && data.length>0){
+                      data.forEach(element =>
+                      result=result+", "+element["brand_name"])
+                      result=result.substring(2);
+                  }
+                  return "<a href='"+meta.row+"' aria-rowindex='"+meta.row+ "' role='button'>"+result+"</a>"
+                 // return result;
+                }
+              },
+
+              {'data': 'medConditionList',
+                'render': function (data, type, full, meta) {
+                    var result=[];
+
+                    if(!data && data.length<1) return data;
+                  data.forEach(element =>
+                       result.push(element["med_condition"]))
+                    var unique=new Set(result);
+                    var html="";
+                    for (let item of unique.values()){
+                        html=html+item+", ";
+                    }
+                    if(html && html.length>2) {
+                        html = html.substring(0, html.length - 2)
+                    }
+                    return html
+                  }
+                },
+           {
+               'data': 'protocol_title',
+               'render': function (data, type, full, meta) {
+                   return data
+               }
+           },
+           {
+               'data': 'status',
+               'render': function (data, type, full, meta) {
+                   return data
+               }
+           },
+            {
+                'data': 'studyPopulationList',
+                'render': function (data, type, full, meta) {
+                    var result=[];
+
+                    if(!data && data.length<1) return data;
+                    data.forEach(element =>
+                        result.push(element["study_population"]))
+                    var unique=new Set(result);
+                    var html="";
+                    for (let item of unique.values()){
+                        html=html+item+", ";
+                    }
+                    if(html && html.length>2) {
+                        html = html.substring(0, html.length - 2)
+                    }
+                    return html
+                }
+            }
+
+        ],
+    });
+} );
+
+
+function isEnglish() {
+    return document.documentElement.lang === "en"
+}
+
+function isFrench() {
+    return !isEnglish();
+}
+function getLanguage(){
+    if(isFrench()) return "fr";
+    return "en";
+}
+
+function loadStatus()
+{
+    let select = document.getElementById("status-list");
+    let option = document.createElement('option');
+    option.text = "All";
+    option.value = "";
+
+    select.add(option, 0);
+    fetch("http://localhost:93/PhpProject2b/scripts/helper-cta.php?lang="+getLanguage(), {
+        method: "Get",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        },
+    })
+        .then((response) =>(response.text()))
+        .then((res) =>
+            {
+                if(!res) return;
+                let data=JSON.parse(res).data;
+                let sortedList=[];
+                let n=1;
+                data.forEach(function(element) {
+                    let option = document.createElement('option');
+                    option.text = element.cta_status;
+                    option.value = element.cta_status_id;
+                    select.add(option, n);
+                    n++;
+                })
+
+
+            }
+        )
+}
+
+function loadPopulation()
+{
+    let select = document.getElementById("population-list");
+    let option = document.createElement('option');
+    option.text = "All"; //lang
+    option.value = "";
+    //$(location).attr('hostname');                //origin URL
+    // $(location).attr('pathname');                // path name
+    // $(location).attr('hash');
+
+    select.add(option, 0);
+    fetch("http://localhost:93/PhpProject2b/scripts/cta-population.php?lang="+getLanguage(), {
+        method: "Get",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        },
+    })
+        .then((response) =>(response.text()))
+        .then((res) =>
+            {
+                if(!res) return;
+                let data=JSON.parse(res).data;
+                let sortedList=[];
+                let n=1;
+                data.forEach(function(element) {
+                    let option = document.createElement('option');
+                    option.text = element.study_population;
+                    option.value = element.study_population_id;
+                    select.add(option, n);
+                    n++;
+                })
+
+
+            }
+        )
+}
+
+
+
+/**
+ * Concats array data for dsiplay. Each on new line
+ * @param data- array to process
+ * @returns {string}
+ */
+function arrayNameDisplay(data) {
+    var displayName = "";
+    if (!data) return "";
+    if (!Array.isArray(data)) return $.trim(data);
+    for (var i = 0; i < data.length; i++) {
+        displayName += data[i] + " " + "<br>";
+        //TODO relying on the space for csv download
+    }
+    displayName = displayName.substring(0, displayName.length - 4);
+    return displayName;
+}
+
+/**
+ * Exports table data to a csv- function take from review Desicions
+ * @param $table -the table to process
+ * @param filename -file
+ * @constructor
+ */
+function ExportTableToCSV($table, filename) {
+
+    var $rows = $table.find('tr:has(td),tr:has(th)'),
+        tmpColDelim = String.fromCharCode(11), // vertical tab character
+        tmpRowDelim = String.fromCharCode(0), // null character
+
+        // actual delimiter characters for CSV format
+        colDelim = '","',
+        rowDelim = '"\r\n"',
+
+        // Grab text from table into CSV formatted string
+        csv = '"' + $rows.map(function (i, row) {
+            var $row = $(row), $cols = $row.find('td,th');
+
+            return $cols.map(function (j, col) {
+                var $col = $(col), text = $col.text();
+                return text.replace(/"/g, '""'); // escape double quotes
+
+            }).get().join(tmpColDelim);
+
+        }).get().join(tmpRowDelim)
+            .split(tmpRowDelim).join(rowDelim)
+            .split(tmpColDelim).join(colDelim) + '"',
+        // Data URI
+        csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+
+    if (window.navigator.msSaveBlob) { // IE 10+
+        //alert('IE' + csv);
+        window.navigator.msSaveOrOpenBlob(new Blob([csv], {type: "text/plain;charset=utf-8;"}), filename)
+    } else {
+        $(this).attr({'download': filename, 'href': csvData, 'target': '_blank'});
+    }
+}
