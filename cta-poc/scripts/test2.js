@@ -27,6 +27,15 @@ function getStatusIdValue(){
 function getPopulationIdValue(){
     return $('#population-list').val()
 }
+function getNolStartValue(){
+    return $('#nol-startdate').val()
+}
+
+
+function getNolEndValue(){
+    return $('#nol-enddate').val()
+}
+
 
 
 function filterRecords() {
@@ -65,7 +74,9 @@ function loadFilters(){
 
 
 }
-
+$( document ).on( "wb-ready.wb", function( event ) {
+    console.warn("dfgfdgdfdgdfdgd")
+});
 /*async function postData() {
     // Default options are marked with *
     const response = await fetch('http://dotnet-dev.hc.local/api/clinical-trial/status?count=500&lang=en')
@@ -112,6 +123,8 @@ $(document).ready(function() {
                d.status=getStatusIdValue();
                d.condition=getConditionValue();
                d.population=getPopulationIdValue();
+               d.nolStart=getNolStartValue();
+               d.nolEnd=getNolEndValue();
 
             },
           },
@@ -120,7 +133,7 @@ $(document).ready(function() {
               {'data': 'brandManufacturerList',
               'render': function (data, type, full, meta) {
                   //dataList=meta.settings.aoData;
-
+                  console.error(data);
                   sessionStorage.dataList= JSON.stringify( meta.settings.aoData);
 
                   var result="";

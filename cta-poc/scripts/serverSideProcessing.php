@@ -11,12 +11,14 @@ $input_control_id=urlencode((string)$requestData['control']);
 $input_condition=urlencode((string)$requestData['condition']);
 $input_population=urlencode((string)$requestData['population']);
 $input_status=urlencode((string)$requestData['status']);
-
+$input_nol_start=urlencode((string)$requestData['nolStart']);
+$input_nol_end=urlencode((string)$requestData['nolEnd']);
 
 $encoded_vals=(http_build_query($requestData));
 $url_concat='http://dotnet-dev.hc.local/api/clinical-trial?drugName='.$input_drug_name.'&title='.$input_protocol_title.
     '&sponsor='.$input_sponsor_name.'&protocolId='.$input_protocol_id.'&controlNumber='.$input_control_id
-    .'&pop='.$input_population.'&status='.$input_status .'&condition='.$input_condition;
+    .'&pop='.$input_population.'&status='.$input_status .'&condition='.$input_condition.'&nolStartDate='.$input_nol_start
+    .'&nolEndDate='.$input_nol_end;
 //http://dotnet-dev.hc.local/api/clinical-trial/fullsearch?count=500&lang=en&title=tt&drugName=ner&sortAsc=true
 curl_setopt_array($curl, array(
     CURLOPT_URL => $url_concat,
