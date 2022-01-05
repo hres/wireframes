@@ -127,8 +127,8 @@
     <h1 property="name" id="wb-cont">Clinical Trials</h1>
 
     <p>Use any of the fields to filter the table of clinical trials.</p>
-    <details id="search-param" open="">
-        <summary>Filter query fields</summary>
+    <details id="search-param" open="" onclick="loadFilters()">
+        <summary id="search-summary">Filter query fields</summary>
         <form id="filter-form" action="javascript:void(0)">
             <div class="form-group">
                 <label for="protocol-title">Protocol title</label>
