@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./GCWeb/css/theme.min.css">
-    <link rel="stylesheet" href="css/cts.css">
+    <link rel="stylesheet" href="./css/cts.css">
     <link rel="stylesheet" href="js/overlay.min.css">
     <noscript>
         <link rel="stylesheet" href="./wet-boew/css/noscript.min.css"/>
@@ -127,7 +127,7 @@
     <h1 property="name" id="wb-cont">Clinical Trials</h1>
 
     <p>Use any of the fields to filter the table of clinical trials.</p>
-    <details open="">
+    <details id="search-param" open="">
         <summary>Filter query fields</summary>
         <form id="filter-form" action="javascript:void(0)">
             <div class="form-group">
@@ -211,6 +211,9 @@
                 </div>
                 <div class="col-md-2">
                 <button class="btn btn-default" type="reset" onclick="clearFilter()">Clear filters</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-default" type="reset" onclick="collapseFilter()">Collapse section</button>
                 </div>
             </div>
         </form>

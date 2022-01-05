@@ -38,7 +38,7 @@ function filterRecords() {
 
 }
 function clearFilter(){
-    console.warn('start')
+
     sessionStorage.clear();
     $('#filter-form').trigger("reset");
     //document.getElementById("filter-form").reset();
@@ -46,6 +46,9 @@ function clearFilter(){
     $('#cta-results-table').DataTable().search("").draw();
 }
 
+function collapseFilter(){
+    $('#search-param').removeAttr("open")
+}
 
 /*async function postData() {
     // Default options are marked with *
