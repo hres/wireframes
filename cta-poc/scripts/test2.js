@@ -47,7 +47,23 @@ function clearFilter(){
 }
 
 function collapseFilter(){
-    $('#search-param').removeAttr("open")
+  // $('#search-param').removeAttr("open")
+    $('#search-summary').click();
+}
+function loadFilters(){
+
+
+    let attr = $('#search-param').attr('open');
+    if(!attr)
+    {
+        $('#protocol-title').val(sessionStorage.getItem("title"));
+        $('#drug-name').val(sessionStorage.getItem("drug"));
+        $('#protocol-id').val(sessionStorage.getItem("protocolId"));
+        $('#control-id').val(sessionStorage.getItem("controlId"));
+
+    }
+
+
 }
 
 /*async function postData() {
@@ -71,7 +87,7 @@ $(document).ready(function() {
         "serverSide": true, // recommended to use serverSide when data is more than 10000 rows for performance reasons
 
         "columnDefs": [ {
-            "targets": [ 2,3],
+            "targets": [ 3,4],
             "orderable": true}
 
          ],
@@ -104,17 +120,21 @@ $(document).ready(function() {
               {'data': 'brandManufacturerList',
               'render': function (data, type, full, meta) {
                   //dataList=meta.settings.aoData;
+
                   sessionStorage.dataList= JSON.stringify( meta.settings.aoData);
+
                   var result="";
                   if(data && data.length>0){
                       data.forEach(element =>
                       result=result+", "+element["brand_name"])
                       result=result.substring(2);
                   }
-                  return "<a href='"+meta.row+"' aria-rowindex='"+meta.row+ "' role='button'>"+result+"</a>"
-                 // return result;
+
+                 return "<a href='"+meta.row+"' aria-rowindex='"+meta.row+ "' role='button'>"+result+"</a>"
+
                 }
               },
+
 
               {'data': 'medConditionList',
                 'render': function (data, type, full, meta) {
