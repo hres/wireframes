@@ -93,7 +93,7 @@ $(document).ready(function() {
                d.status=getStatusIdValue();
                d.condition=getConditionValue();
                d.population=getPopulationIdValue();
-               console.warn(d.population);
+
             },
           },
             //'incident.incident_id brandManufacturerList'
@@ -188,7 +188,7 @@ function loadStatus()
     option.value = "";
 
     select.add(option, 0);
-    fetch("http://localhost:93/PhpProject2b/scripts/helper-cta.php?lang="+getLanguage(), {
+    fetch("./scripts/helper-cta.php?lang="+getLanguage(), {
         method: "Get",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
@@ -198,6 +198,7 @@ function loadStatus()
         .then((res) =>
             {
                 if(!res) return;
+                console.warn(res);
                 let data=JSON.parse(res).data;
                 let sortedList=[];
                 let n=1;
@@ -220,12 +221,10 @@ function loadPopulation()
     let option = document.createElement('option');
     option.text = "All"; //lang
     option.value = "";
-    //$(location).attr('hostname');                //origin URL
-    // $(location).attr('pathname');                // path name
-    // $(location).attr('hash');
+
 
     select.add(option, 0);
-    fetch("http://localhost:93/PhpProject2b/scripts/cta-population.php?lang="+getLanguage(), {
+    fetch("./scripts/cta-population.php?lang="+getLanguage(), {
         method: "Get",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
