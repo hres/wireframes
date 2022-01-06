@@ -74,9 +74,7 @@ function loadFilters(){
 
 
 }
-$( document ).on( "wb-ready.wb", function( event ) {
-    console.warn("dfgfdgdfdgdfdgd")
-});
+
 /*async function postData() {
     // Default options are marked with *
     const response = await fetch('http://dotnet-dev.hc.local/api/clinical-trial/status?count=500&lang=en')
@@ -100,11 +98,8 @@ $(document).ready(function() {
         "columnDefs": [ {
             "targets": [ 3,4],
             "orderable": true}
-
          ],
-        keys: {
-            blurable: false
-        },
+
         "ajax": {
             // "url":"https://localhost:44329/api/clinical-trial?title="+title,
             "url": "scripts/serverSideProcessing.php",
