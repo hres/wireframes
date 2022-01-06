@@ -13,12 +13,17 @@ $input_population=urlencode((string)$requestData['population']);
 $input_status=urlencode((string)$requestData['status']);
 $input_nol_start=urlencode((string)$requestData['nolStart']);
 $input_nol_end=urlencode((string)$requestData['nolEnd']);
+$input_study_start_from=urlencode((string)$requestData['studyStartFrom']);
+$input_study_start_to=urlencode((string)$requestData['studyStartTo']);
+$input_study_end_from=urlencode((string)$requestData['studyEndFrom']);
+$input_study_end_to=urlencode((string)$requestData['studyEndTo']);
 
 $encoded_vals=(http_build_query($requestData));
 $url_concat='http://dotnet-dev.hc.local/api/clinical-trial?drugName='.$input_drug_name.'&title='.$input_protocol_title.
     '&sponsor='.$input_sponsor_name.'&protocolId='.$input_protocol_id.'&controlNumber='.$input_control_id
     .'&pop='.$input_population.'&status='.$input_status .'&condition='.$input_condition.'&nolStartDate='.$input_nol_start
-    .'&nolEndDate='.$input_nol_end;
+    .'&nolEndDate='.$input_nol_end.'&trialStartDateFrom'.$input_study_start_from.'&trialStartDateTo'.$input_study_start_to
+    .'&trialEndDateFrom'.$input_study_end_from.'&trialEndDateTo'.$input_study_end_to;
 //http://dotnet-dev.hc.local/api/clinical-trial/fullsearch?count=500&lang=en&title=tt&drugName=ner&sortAsc=true
 curl_setopt_array($curl, array(
     CURLOPT_URL => $url_concat,

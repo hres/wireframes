@@ -35,7 +35,19 @@ function getNolStartValue(){
 function getNolEndValue(){
     return $('#nol-enddate').val()
 }
+function getStudyStartFromDate(){
+    return $('#study-start-startdate').val()
+}
+function getStudyStartToDate(){
+    return $('#study-start-enddate').val()
+}
+function getStudyEndFromDate(){
+    return $('#study-end-startdate').val()
+}
 
+function getStudyEndToDate(){
+    return $('#study-end-enddate').val()
+}
 
 
 function filterRecords() {
@@ -74,7 +86,9 @@ function loadFilters(){
 
 
 }
-
+$( document ).on( "wb-ready.wb", function( event ) {
+    console.warn("dfgfdgdfdgdfdgd")
+});
 /*async function postData() {
     // Default options are marked with *
     const response = await fetch('http://dotnet-dev.hc.local/api/clinical-trial/status?count=500&lang=en')
@@ -98,8 +112,11 @@ $(document).ready(function() {
         "columnDefs": [ {
             "targets": [ 3,4],
             "orderable": true}
-         ],
 
+         ],
+        keys: {
+            blurable: false
+        },
         "ajax": {
             // "url":"https://localhost:44329/api/clinical-trial?title="+title,
             "url": "scripts/serverSideProcessing.php",
@@ -120,6 +137,10 @@ $(document).ready(function() {
                d.population=getPopulationIdValue();
                d.nolStart=getNolStartValue();
                d.nolEnd=getNolEndValue();
+               d.studyStartFrom=getStudyStartFromDate();
+               d.studyStartTo=getStudyStartToDate();
+               d.studyEndFrom=getStudyEndFromDate();
+               d.studyEndTo=getStudyEndToDate();
 
             },
           },
@@ -300,6 +321,9 @@ function arrayNameDisplay(data) {
     displayName = displayName.substring(0, displayName.length - 4);
     return displayName;
 }
+
+
+
 
 /**
  * Exports table data to a csv- function take from review Desicions
