@@ -26,7 +26,7 @@ wb.doc.on( "click vclick", "#overlay-open-btn", function( event ) {
 document.onclick = function (e) {
 	e = e ||  window.event;
 	var element = e.target || e.srcElement;
-	if (element.tagName == 'A') {
+	if (element.tagName === 'A' && element.className==="cta-details-link") {
 		window.lastElement=element;
 		someFunction(element.getAttribute('aria-rowindex'));
 		return false; // prevent default action and stop event propagation
@@ -37,10 +37,11 @@ document.onclick = function (e) {
 
 function someFunction(index)
 {
-
+	if(!index) return
 	//var detailsData=window.dataList[href]._aData;
 	let parsedData= JSON.parse(sessionStorage.dataList)
 	if(!parsedData) return;
+	if(index>parsedData.length) return;
 	let detailsData= parsedData[index]._aData;
 	if(!detailsData) return;
 	document.getElementById('data-nol').innerHTML=detailsData.nol_date;
@@ -84,6 +85,6 @@ function someFunction(index)
 }
 
 $( document ).on( "closed.wb-overlay", ".wb-overlay", function( event ) {
-	console.warn("trggered")
+
 	window.lastElement.focus();
 });

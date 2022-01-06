@@ -133,7 +133,7 @@ $(document).ready(function() {
               {'data': 'brandManufacturerList',
               'render': function (data, type, full, meta) {
                   //dataList=meta.settings.aoData;
-                  console.error(data);
+
                   sessionStorage.dataList= JSON.stringify( meta.settings.aoData);
 
                   var result="";
@@ -141,9 +141,10 @@ $(document).ready(function() {
                       data.forEach(element =>
                       result=result+", "+element["brand_name"])
                       result=result.substring(2);
+
                   }
 
-                 return "<a href='"+meta.row+"' aria-rowindex='"+meta.row+ "' role='button'>"+result+"</a>"
+                 return "<a class='cta-details-link' href='"+meta.row+"' aria-rowindex='"+meta.row+ "' role='button'>"+result+"</a>"
 
                 }
               },
@@ -234,7 +235,7 @@ function loadStatus()
         .then((res) =>
             {
                 if(!res) return;
-                console.warn(res);
+
                 let data=JSON.parse(res).data;
                 let sortedList=[];
                 let n=1;
