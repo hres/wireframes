@@ -51,10 +51,19 @@ function getStudyEndToDate(){
 
 
 function filterRecords() {
-    sessionStorage.setItem("title", $('#protocol-title').val());
-    sessionStorage.setItem("drug", $('#drug-name').val());
-    sessionStorage.setItem("protocolId", $('#protocol-id').val());
-    sessionStorage.setItem("controlId", $('#control-id').val());
+    sessionStorage.setItem("title", getProtocolTitleValue());
+    sessionStorage.setItem("drug", getDrugNameValue());
+    sessionStorage.setItem("protocolId", getProtocolIdValue());
+    sessionStorage.setItem("controlId", getControlIdValue());
+    sessionStorage.setItem("conditions", getConditionValue());
+    sessionStorage.setItem("studyEndTo", getStudyEndToDate());
+    sessionStorage.setItem("studyEndFrom", getStudyEndFromDate());
+    sessionStorage.setItem("studyStartTo", getStudyStartToDate());
+    sessionStorage.setItem("studyStartFrom", getStudyStartFromDate());
+    sessionStorage.setItem("nolEnd", getNolEndValue());
+    sessionStorage.setItem("nolStart", getNolStartValue());
+    sessionStorage.setItem("populationId",getPopulationIdValue());
+    sessionStorage.setItem("statusId", getStatusIdValue());
     $('#cta-results-table').DataTable().search("").draw();
 
 }
@@ -68,7 +77,7 @@ function clearFilter(){
 }
 
 function collapseFilter(){
-  // $('#search-param').removeAttr("open")
+    // $('#search-param').removeAttr("open")
     $('#search-summary').click();
 }
 function loadFilters(){
@@ -81,6 +90,15 @@ function loadFilters(){
         $('#drug-name').val(sessionStorage.getItem("drug"));
         $('#protocol-id').val(sessionStorage.getItem("protocolId"));
         $('#control-id').val(sessionStorage.getItem("controlId"));
+        $('#condition-name').val(sessionStorage.getItem("conditions"));
+        $('#study-end-enddate').val(sessionStorage.getItem("studyEndTo"));
+        $('#study-end-startdate').val(sessionStorage.getItem("studyEndFrom"));
+        $('#study-start-enddate').val(sessionStorage.getItem("studyStartTo"));
+        $('#study-start-startdate').val(sessionStorage.getItem("studyStartFrom"));
+        $('#nol-startdate').val(sessionStorage.getItem("nolStart"));
+        $('#nol-enddate').val(sessionStorage.getItem("nolEnd"));
+        $('#population-list').val(sessionStorage.getItem("populationId"));
+        $('#status-list').val(sessionStorage.getItem("statusId"));
 
     }
 
@@ -105,15 +123,15 @@ $(document).ready(function() {
     loadPopulation();
 
     window['wb-tables']= ( {
-      "searching":false,
-      "processing": true, // control the processing indicator.
+        "searching":false,
+        "processing": true, // control the processing indicator.
         "serverSide": true, // recommended to use serverSide when data is more than 10000 rows for performance reasons
 
         "columnDefs": [ {
             "targets": [ 3,4],
             "orderable": true}
 
-         ],
+        ],
         keys: {
             blurable: false
         },
@@ -124,55 +142,55 @@ $(document).ready(function() {
                 //alert(thrownError + "\r\n" + jqXHR.statusText + "\r\n" + jqXHR.responseText + "\r\n" + ajaxOptions.responseText);
                 alert("Connection error with data source. Try refreshing the page.")
             },
-              "cache": false,
-                "type": "POST",
+            "cache": false,
+            "type": "POST",
             "data": function ( d ) {
-               d.title = getProtocolTitleValue();
-               d.drug= getDrugNameValue();
-               d.sponsor=getSponsorNameValue();
-               d.protocol=getProtocolIdValue();
-               d.control=getControlIdValue();
-               d.status=getStatusIdValue();
-               d.condition=getConditionValue();
-               d.population=getPopulationIdValue();
-               d.nolStart=getNolStartValue();
-               d.nolEnd=getNolEndValue();
-               d.studyStartFrom=getStudyStartFromDate();
-               d.studyStartTo=getStudyStartToDate();
-               d.studyEndFrom=getStudyEndFromDate();
-               d.studyEndTo=getStudyEndToDate();
+                d.title = getProtocolTitleValue();
+                d.drug= getDrugNameValue();
+                d.sponsor=getSponsorNameValue();
+                d.protocol=getProtocolIdValue();
+                d.control=getControlIdValue();
+                d.status=getStatusIdValue();
+                d.condition=getConditionValue();
+                d.population=getPopulationIdValue();
+                d.nolStart=getNolStartValue();
+                d.nolEnd=getNolEndValue();
+                d.studyStartFrom=getStudyStartFromDate();
+                d.studyStartTo=getStudyStartToDate();
+                d.studyEndFrom=getStudyEndFromDate();
+                d.studyEndTo=getStudyEndToDate();
 
             },
-          },
-            //'incident.incident_id brandManufacturerList'
-            "columns": [
-              {'data': 'brandManufacturerList',
-              'render': function (data, type, full, meta) {
-                  //dataList=meta.settings.aoData;
+        },
+        //'incident.incident_id brandManufacturerList'
+        "columns": [
+            {'data': 'brandManufacturerList',
+                'render': function (data, type, full, meta) {
+                    //dataList=meta.settings.aoData;
 
-                  sessionStorage.dataList= JSON.stringify( meta.settings.aoData);
+                    sessionStorage.dataList= JSON.stringify( meta.settings.aoData);
 
-                  var result="";
-                  if(data && data.length>0){
-                      data.forEach(element =>
-                      result=result+", "+element["brand_name"])
-                      result=result.substring(2);
+                    var result="";
+                    if(data && data.length>0){
+                        data.forEach(element =>
+                            result=result+", "+element["brand_name"])
+                        result=result.substring(2);
 
-                  }
+                    }
 
-                 return "<a class='cta-details-link' href='"+meta.row+"' aria-rowindex='"+meta.row+ "' role='button'>"+result+"</a>"
+                    return "<a class='cta-details-link' href='"+meta.row+"' aria-rowindex='"+meta.row+ "' role='button'>"+result+"</a>"
 
                 }
-              },
+            },
 
 
-              {'data': 'medConditionList',
+            {'data': 'medConditionList',
                 'render': function (data, type, full, meta) {
                     var result=[];
 
                     if(!data && data.length<1) return data;
-                  data.forEach(element =>
-                       result.push(element["med_condition"]))
+                    data.forEach(element =>
+                        result.push(element["med_condition"]))
                     var unique=new Set(result);
                     var html="";
                     for (let item of unique.values()){
@@ -182,20 +200,20 @@ $(document).ready(function() {
                         html = html.substring(0, html.length - 2)
                     }
                     return html
-                  }
-                },
-           {
-               'data': 'protocol_title',
-               'render': function (data, type, full, meta) {
-                   return data
-               }
-           },
-           {
-               'data': 'status',
-               'render': function (data, type, full, meta) {
-                   return data
-               }
-           },
+                }
+            },
+            {
+                'data': 'protocol_title',
+                'render': function (data, type, full, meta) {
+                    return data
+                }
+            },
+            {
+                'data': 'status',
+                'render': function (data, type, full, meta) {
+                    return data
+                }
+            },
             {
                 'data': 'studyPopulationList',
                 'render': function (data, type, full, meta) {
