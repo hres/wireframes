@@ -1,11 +1,12 @@
 table#cta-results-table th:nth-child(1) span.sorting-icons,
-table#cta-results-table th:nth-child(2) span.sorting-icons,
+table#cta-results-table th:nth-child(3) span.sorting-icons,
 table#cta-results-table th:nth-child(5) span.sorting-icons
 {
     display: none;
 }
 .modal-larger {
     width: 40%;
+
 }
 
 
