@@ -143,8 +143,14 @@ $(document).ready(function () {
 
             { "orderable": false, "targets": [0,2,4] },
             { "width": "25%", "targets": [0] },
-            { "width": "30%", "targets": [1] }
+            { "width": "30%", "targets": [1] },
+            {
+                "targets": [ 5 ],
+                "visible": false,
+                "searchable": false
+            },
         ],
+        "order": [[ 5, "desc" ]],
         keys: {
             blurable: false
         },
@@ -246,7 +252,13 @@ $(document).ready(function () {
                     }
                     return html
                 }
-            }
+            },
+            {
+                'data': 'submission_no',
+                'render': function (data, type, full, meta) {
+                    return data
+                }
+            },
 
         ],
     });
