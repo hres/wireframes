@@ -139,10 +139,9 @@ $(document).ready(function () {
         "processing": true, // control the processing indicator.
         "serverSide": true, // recommended to use serverSide when data is more than 10000 rows for performance reasons
 
-        "columnDefs": [{
-            "targets": [3, 4],
-            "orderable": true
-        },
+        "columnDefs": [
+
+            { "orderable": false, "targets": [0,2,4] },
             { "width": "25%", "targets": [0] },
             { "width": "30%", "targets": [1] }
         ],
