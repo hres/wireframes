@@ -13,7 +13,6 @@ wb.doc.on( "click vclick", "#overlay-open-btn", function( event ) {
 	} else {
 		event.cancelBubble = true;
 	}
-	console.log("hjere")
 	$( "#" + $( "#overlay-select" ).val() ).trigger( "open.wb-overlay" );
 } );
 
@@ -24,18 +23,17 @@ wb.doc.on( "click vclick", "#overlay-open-btn", function( event ) {
 
 
 document.onclick = function (e) {
-	e = e ||  window.event;
-	var element = e.target || e.srcElement;
-	if (element.tagName === 'A' && element.className==="cta-details-link") {
-		window.lastElement=element;
-		someFunction(element.getAttribute('aria-rowindex'));
+	var element = e.target  ;
+	if (element.tagName === 'INPUT' && element.className.includes("cta-details-link")) {
+		window.lastElement=element; //storage only saves text
+		populateOverlay(element.getAttribute('aria-rowindex'));
 		return false; // prevent default action and stop event propagation
 	}
 };
 
 
 
-function someFunction(index)
+function populateOverlay(index)
 {
 	if(!index) return
 	//var detailsData=window.dataList[href]._aData;
@@ -87,4 +85,5 @@ function someFunction(index)
 $( document ).on( "closed.wb-overlay", ".wb-overlay", function( event ) {
 
 	window.lastElement.focus();
+	window.lastElement=null;
 });

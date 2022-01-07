@@ -1,51 +1,61 @@
-var dataList="";
+var dataList = "";
+
 //var lastFocused=null;
 
-function getProtocolTitleValue(){
+function getProtocolTitleValue() {
     return $('#protocol-title').val()
 }
 
-function getDrugNameValue(){
+function getDrugNameValue() {
     return $('#drug-name').val()
 }
-function getConditionValue(){
+
+function getConditionValue() {
     return $('#condition-name').val()
 }
 
-function getSponsorNameValue(){
+function getSponsorNameValue() {
     return $('#sponsor-name').val()
 }
-function getProtocolIdValue(){
+
+function getProtocolIdValue() {
     return $('#protocol-id').val()
 }
-function getControlIdValue(){
+
+function getControlIdValue() {
     return $('#control-id').val()
 }
-function getStatusIdValue(){
+
+function getStatusIdValue() {
     return $('#status-list').val()
 }
-function getPopulationIdValue(){
+
+function getPopulationIdValue() {
     return $('#population-list').val()
 }
-function getNolStartValue(){
+
+function getNolStartValue() {
     return $('#nol-startdate').val()
 }
 
 
-function getNolEndValue(){
+function getNolEndValue() {
     return $('#nol-enddate').val()
 }
-function getStudyStartFromDate(){
+
+function getStudyStartFromDate() {
     return $('#study-start-startdate').val()
 }
-function getStudyStartToDate(){
+
+function getStudyStartToDate() {
     return $('#study-start-enddate').val()
 }
-function getStudyEndFromDate(){
+
+function getStudyEndFromDate() {
     return $('#study-end-startdate').val()
 }
 
-function getStudyEndToDate(){
+function getStudyEndToDate() {
     return $('#study-end-enddate').val()
 }
 
@@ -62,12 +72,13 @@ function filterRecords() {
     sessionStorage.setItem("studyStartFrom", getStudyStartFromDate());
     sessionStorage.setItem("nolEnd", getNolEndValue());
     sessionStorage.setItem("nolStart", getNolStartValue());
-    sessionStorage.setItem("populationId",getPopulationIdValue());
+    sessionStorage.setItem("populationId", getPopulationIdValue());
     sessionStorage.setItem("statusId", getStatusIdValue());
     $('#cta-results-table').DataTable().search("").draw();
 
 }
-function clearFilter(){
+
+function clearFilter() {
 
     sessionStorage.clear();
     $('#filter-form').trigger("reset");
@@ -76,16 +87,16 @@ function clearFilter(){
     $('#cta-results-table').DataTable().search("").draw();
 }
 
-function collapseFilter(){
+function collapseFilter() {
     // $('#search-param').removeAttr("open")
     $('#search-summary').click();
 }
-function loadFilters(){
+
+function loadFilters() {
 
 
     let attr = $('#search-param').attr('open');
-    if(!attr)
-    {
+    if (!attr) {
         $('#protocol-title').val(sessionStorage.getItem("title"));
         $('#drug-name').val(sessionStorage.getItem("drug"));
         $('#protocol-id').val(sessionStorage.getItem("protocolId"));
@@ -104,7 +115,8 @@ function loadFilters(){
 
 
 }
-$( document ).on( "wb-ready.wb", function( event ) {
+
+$(document).on("wb-ready.wb", function (event) {
     console.warn("dfgfdgdfdgdfdgd")
 });
 /*async function postData() {
@@ -116,21 +128,23 @@ $( document ).on( "wb-ready.wb", function( event ) {
 }*/
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     sessionStorage.clear();
     loadStatus();
     loadPopulation();
 
-    window['wb-tables']= ( {
-        "searching":false,
+    window['wb-tables'] = ({
+        "searching": false,
         "processing": true, // control the processing indicator.
         "serverSide": true, // recommended to use serverSide when data is more than 10000 rows for performance reasons
 
-        "columnDefs": [ {
-            "targets": [ 3,4],
-            "orderable": true}
-
+        "columnDefs": [{
+            "targets": [3, 4],
+            "orderable": true
+        },
+            { "width": "25%", "targets": [0] },
+            { "width": "30%", "targets": [1] }
         ],
         keys: {
             blurable: false
@@ -138,68 +152,49 @@ $(document).ready(function() {
         "ajax": {
             // "url":"https://localhost:44329/api/clinical-trial?title="+title,
             "url": "scripts/serverSideProcessing.php",
-            error: function(jqXHR, ajaxOptions, thrownError) {
+            error: function (jqXHR, ajaxOptions, thrownError) {
                 //alert(thrownError + "\r\n" + jqXHR.statusText + "\r\n" + jqXHR.responseText + "\r\n" + ajaxOptions.responseText);
                 alert("Connection error with data source. Try refreshing the page.")
             },
             "cache": false,
             "type": "POST",
-            "data": function ( d ) {
+            "data": function (d) {
                 d.title = getProtocolTitleValue();
-                d.drug= getDrugNameValue();
-                d.sponsor=getSponsorNameValue();
-                d.protocol=getProtocolIdValue();
-                d.control=getControlIdValue();
-                d.status=getStatusIdValue();
-                d.condition=getConditionValue();
-                d.population=getPopulationIdValue();
-                d.nolStart=getNolStartValue();
-                d.nolEnd=getNolEndValue();
-                d.studyStartFrom=getStudyStartFromDate();
-                d.studyStartTo=getStudyStartToDate();
-                d.studyEndFrom=getStudyEndFromDate();
-                d.studyEndTo=getStudyEndToDate();
+                d.drug = getDrugNameValue();
+                d.sponsor = getSponsorNameValue();
+                d.protocol = getProtocolIdValue();
+                d.control = getControlIdValue();
+                d.status = getStatusIdValue();
+                d.condition = getConditionValue();
+                d.population = getPopulationIdValue();
+                d.nolStart = getNolStartValue();
+                d.nolEnd = getNolEndValue();
+                d.studyStartFrom = getStudyStartFromDate();
+                d.studyStartTo = getStudyStartToDate();
+                d.studyEndFrom = getStudyEndFromDate();
+                d.studyEndTo = getStudyEndToDate();
 
             },
         },
         //'incident.incident_id brandManufacturerList'
         "columns": [
-            {'data': 'brandManufacturerList',
+            {
+                'data': 'brandManufacturerList',
                 'render': function (data, type, full, meta) {
                     //dataList=meta.settings.aoData;
 
-                    sessionStorage.dataList= JSON.stringify( meta.settings.aoData);
+                    sessionStorage.dataList = JSON.stringify(meta.settings.aoData);
 
-                    var result="";
-                    if(data && data.length>0){
+                    var result = "";
+                    if (data && data.length > 0) {
                         data.forEach(element =>
-                            result=result+", "+element["brand_name"])
-                        result=result.substring(2);
+                            result = result + ", " + element["brand_name"])
+                        result = result.substring(2);
 
                     }
+                    return'<input type="submit" name="action" value="'+result+'" aria-rowindex="'+meta.row+'" style="height:100%;text-align: left;white-space: normal;" class=" btn-link btn-block cta-details-link">';
+                    //return "<a class='cta-details-link' href='" + meta.row + "' aria-rowindex='" + meta.row + "' role='button'>" + result + "</a>"
 
-                    return "<a class='cta-details-link' href='"+meta.row+"' aria-rowindex='"+meta.row+ "' role='button'>"+result+"</a>"
-
-                }
-            },
-
-
-            {'data': 'medConditionList',
-                'render': function (data, type, full, meta) {
-                    var result=[];
-
-                    if(!data && data.length<1) return data;
-                    data.forEach(element =>
-                        result.push(element["med_condition"]))
-                    var unique=new Set(result);
-                    var html="";
-                    for (let item of unique.values()){
-                        html=html+item+", ";
-                    }
-                    if(html && html.length>2) {
-                        html = html.substring(0, html.length - 2)
-                    }
-                    return html
                 }
             },
             {
@@ -209,6 +204,26 @@ $(document).ready(function() {
                 }
             },
             {
+                'data': 'medConditionList',
+                'render': function (data, type, full, meta) {
+                    var result = [];
+
+                    if (!data && data.length < 1) return data;
+                    data.forEach(element =>
+                        result.push(element["med_condition"]))
+                    var unique = new Set(result);
+                    var html = "";
+                    for (let item of unique.values()) {
+                        html = html + item + ", ";
+                    }
+                    if (html && html.length > 2) {
+                        html = html.substring(0, html.length - 2)
+                    }
+                    return html
+                }
+            },
+
+            {
                 'data': 'status',
                 'render': function (data, type, full, meta) {
                     return data
@@ -217,17 +232,17 @@ $(document).ready(function() {
             {
                 'data': 'studyPopulationList',
                 'render': function (data, type, full, meta) {
-                    var result=[];
+                    var result = [];
 
-                    if(!data && data.length<1) return data;
+                    if (!data && data.length < 1) return data;
                     data.forEach(element =>
                         result.push(element["study_population"]))
-                    var unique=new Set(result);
-                    var html="";
-                    for (let item of unique.values()){
-                        html=html+item+", ";
+                    var unique = new Set(result);
+                    var html = "";
+                    for (let item of unique.values()) {
+                        html = html + item + ", ";
                     }
-                    if(html && html.length>2) {
+                    if (html && html.length > 2) {
                         html = html.substring(0, html.length - 2)
                     }
                     return html
@@ -236,7 +251,7 @@ $(document).ready(function() {
 
         ],
     });
-} );
+});
 
 
 function isEnglish() {
@@ -246,34 +261,33 @@ function isEnglish() {
 function isFrench() {
     return !isEnglish();
 }
-function getLanguage(){
-    if(isFrench()) return "fr";
+
+function getLanguage() {
+    if (isFrench()) return "fr";
     return "en";
 }
 
-function loadStatus()
-{
+function loadStatus() {
     let select = document.getElementById("status-list");
     let option = document.createElement('option');
     option.text = "All";
     option.value = "";
 
     select.add(option, 0);
-    fetch("./scripts/helper-cta.php?lang="+getLanguage(), {
+    fetch("./scripts/helper-cta.php?lang=" + getLanguage(), {
         method: "Get",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
         },
     })
-        .then((response) =>(response.text()))
-        .then((res) =>
-            {
-                if(!res) return;
+        .then((response) => (response.text()))
+        .then((res) => {
+                if (!res) return;
 
-                let data=JSON.parse(res).data;
-                let sortedList=[];
-                let n=1;
-                data.forEach(function(element) {
+                let data = JSON.parse(res).data;
+                let sortedList = [];
+                let n = 1;
+                data.forEach(function (element) {
                     let option = document.createElement('option');
                     option.text = element.cta_status;
                     option.value = element.cta_status_id;
@@ -286,8 +300,7 @@ function loadStatus()
         )
 }
 
-function loadPopulation()
-{
+function loadPopulation() {
     let select = document.getElementById("population-list");
     let option = document.createElement('option');
     option.text = "All"; //lang
@@ -295,20 +308,19 @@ function loadPopulation()
 
 
     select.add(option, 0);
-    fetch("./scripts/cta-population.php?lang="+getLanguage(), {
+    fetch("./scripts/cta-population.php?lang=" + getLanguage(), {
         method: "Get",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
         },
     })
-        .then((response) =>(response.text()))
-        .then((res) =>
-            {
-                if(!res) return;
-                let data=JSON.parse(res).data;
-                let sortedList=[];
-                let n=1;
-                data.forEach(function(element) {
+        .then((response) => (response.text()))
+        .then((res) => {
+                if (!res) return;
+                let data = JSON.parse(res).data;
+                let sortedList = [];
+                let n = 1;
+                data.forEach(function (element) {
                     let option = document.createElement('option');
                     option.text = element.study_population;
                     option.value = element.study_population_id;
@@ -320,7 +332,6 @@ function loadPopulation()
             }
         )
 }
-
 
 
 /**
@@ -339,8 +350,6 @@ function arrayNameDisplay(data) {
     displayName = displayName.substring(0, displayName.length - 4);
     return displayName;
 }
-
-
 
 
 /**
