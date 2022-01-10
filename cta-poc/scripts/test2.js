@@ -118,6 +118,7 @@ function loadFilters() {
 
 $(document).on("wb-ready.wb", function (event) {
     console.warn("dfgfdgdfdgdfdgd")
+    //loadFilters();
 });
 /*async function postData() {
     // Default options are marked with *
@@ -130,9 +131,10 @@ $(document).on("wb-ready.wb", function (event) {
 
 $(document).ready(function () {
 
-    sessionStorage.clear();
+    //sessionStorage.clear();
     loadStatus();
     loadPopulation();
+    loadFilters();
 
     window['wb-tables'] = ({
         "searching": false,
@@ -178,7 +180,7 @@ $(document).ready(function () {
                 d.studyStartTo = getStudyStartToDate();
                 d.studyEndFrom = getStudyEndFromDate();
                 d.studyEndTo = getStudyEndToDate();
-
+                d.lang=getLanguage();
             },
         },
         //'incident.incident_id brandManufacturerList'
