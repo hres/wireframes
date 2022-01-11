@@ -63,6 +63,7 @@ function getStudyEndToDate() {
 function filterRecords() {
     sessionStorage.setItem("title", getProtocolTitleValue());
     sessionStorage.setItem("drug", getDrugNameValue());
+    sessionStorage.setItem("sponsor", getSponsorNameValue());
     sessionStorage.setItem("protocolId", getProtocolIdValue());
     sessionStorage.setItem("controlId", getControlIdValue());
     sessionStorage.setItem("conditions", getConditionValue());
@@ -99,6 +100,7 @@ function loadFilters() {
     if (!attr) {
         $('#protocol-title').val(sessionStorage.getItem("title"));
         $('#drug-name').val(sessionStorage.getItem("drug"));
+        $('#sponsor-name').val(sessionStorage.getItem("sponsor"))
         $('#protocol-id').val(sessionStorage.getItem("protocolId"));
         $('#control-id').val(sessionStorage.getItem("controlId"));
         $('#condition-name').val(sessionStorage.getItem("conditions"));
