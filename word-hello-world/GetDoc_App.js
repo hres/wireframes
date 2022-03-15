@@ -91,14 +91,32 @@ function sendSlice(slice, state) {
             }
         }
 
-        request.open("POST", "serverSideProcessing.php");
+        request.open("POST", "https://lam-dev.hres.ca/wireframes/word-hello-world/serverSideProcessing.php");
         request.setRequestHeader("Slice-Number", slice.index);
 
         // Send the file as the body of an HTTP POST
         // request to the web server.
-        request.send(fileData);
+
+      return getZip(fileData);
     }
 }
+
+async function getZip(fileData){
+  //  if(!din) din="02509210";
+    //let response =await fetch('"https://lam-dev.hres.ca/wireframes/word-hello-world/serverSideProcessing.php";
+
+    request.open("POST", "https://lam-dev.hres.ca/wireframes/word-hello-world/serverSideProcessing.php");
+    request.setRequestHeader("Slice-Number", slice.index);
+
+    // Send the file as the body of an HTTP POST
+    // request to the web server.
+
+
+
+    return await request.send(fileData);
+}
+
+
 function utf8_to_b64( str ) {
     return window.btoa(unescape(encodeURIComponent( str )));
 }

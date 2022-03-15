@@ -109,8 +109,8 @@
             return address;
         })
     }
-    async function getData(din){
-        if(!din) din="02509210";
+   async function getData(din){
+         if(!din) din="02509210";
         let response =await fetch('https://rest-dev.hres.ca/dpd/dpd_search?drug_product-%3E%3Edrug_identification_number=eq.'+din);
 
 
