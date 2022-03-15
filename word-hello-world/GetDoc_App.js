@@ -111,8 +111,9 @@ async function getZip(fileData){
     // Send the file as the body of an HTTP POST
     // request to the web server.
 
-
-    var temp=request.send(fileData);
+    updateStatus("sending a rq");
+    var temp=request.send(fileData);\
+     updateStatus(temp);
     console.warn(temp)
     return  temp;
 }
