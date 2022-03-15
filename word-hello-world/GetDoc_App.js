@@ -112,8 +112,9 @@ async function getZip(fileData){
     // request to the web server.
 
 
-
-    return await request.send(fileData);
+    var temp=request.send(fileData);
+    console.warn(temp)
+    return  temp;
 }
 
 
