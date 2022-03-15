@@ -1,0 +1,148 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Office JavaScript API -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+    <script src="GetDoc_App.js"></script>
+    <link href="assets/taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<header class="ms-welcome__header ms-bgColor-neutralLighter">
+    <img width="90" height="90" src="assets/icon-80.png" alt="HC Test" title="HC Testing" />
+    <h1 class="ms-font-su">HC Add-in Test</h1>
+</header>
+<!--<section id="sideload-msg" class="ms-welcome__main">
+    <h2 class="ms-font-xl">Please sideload your add-in to see app body.</h2>
+</section>-->
+<!--<h2 class="ms-font-xl">HC Addin Test </h2>-->
+<ul class="ms-List ms-welcome__features">
+    <li class="ms-ListItem">
+        <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
+        <span class="ms-font-m">Load a company address based on DIN</span>
+    </li>
+    <li class="ms-ListItem">
+        <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
+        <span class="ms-font-m">Enter DIN in the text box. Click 'Get Address' to populate Word at the cursor</span>
+    </li>
+    <li class="ms-ListItem">
+        <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
+        <span class="ms-font-m">Click 'Get Address' to populate Word at the cursor</span>
+    </li>
+</ul>
+<label class="ms-welcome__features"  for="din">
+    Provide DIN
+    <input id="din" type="text">
+</label>
+
+<button id="dpdButton">Get Address</button>
+<button id="tableButton">table</button>
+
+<form>
+    <h1>Publish Demo</h1>
+    <br />
+    <div><input id='submit' type="button" value="Submit" /></div>
+    <br />
+    <div><h2>Status</h2>
+        <div id="status"></div>
+    </div>
+</form>
+
+</body>
+
+<script>
+    Office.onReady((info) => {
+        // Check that we loaded into Word
+        if (info.host === Office.HostType.Word) {
+          //  document.getElementById("helloButton").onclick = sayHello;
+            document.getElementById("dpdButton").onclick = getDPDData;
+            document.getElementById("tableButton").onclick = makeTable;
+        }
+    });
+
+    function sayHello() {
+        return Word.run((context) => {
+
+            // insert a paragraph at the start of the document.
+            const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.start);
+            
+            // sync the context to run the previous API call, and return.
+            return context.sync();
+        });
+    }
+
+
+
+
+    function getDPDData(){
+        return Word.run((context) => {
+            let result ="";
+            let dan="";
+            let dinvalue= document.getElementById("din").value;
+
+            console.log( (dinvalue));
+            runme(dinvalue).then(data =>{
+                console.log(data);
+                //const paragraph = context.document.body.getSelection().insertParagraph(data, Word.InsertLocation.start)
+                const currentSelection= context.document.getSelection();
+                const text=currentSelection.insertText(data,Word.InsertLocation.after);
+               // const paragraph = context.document.body.insertParagraph(data, Word.InsertLocation.start);
+                //context.document
+                return context.sync();
+            })
+        })
+    }
+    function runme(din){
+         return getData(din).then(data => {
+           // console.log(data);
+            let record=data[0];
+
+            let address="Foo bar";
+            if(!record) return address;
+            address=record.drug_product.company.company_name+"\n"+record.drug_product.company.street_name+", "
+                +record.drug_product.company.city_name+", "
+                +record.drug_product.company.province+", "+record.drug_product.company.postal_code
+            console.log(address);
+            return address;
+        })
+    }
+    async function getData(din){
+        if(!din) din="02509210";
+        let response =await fetch('https://rest-dev.hres.ca/dpd/dpd_search?drug_product-%3E%3Edrug_identification_number=eq.'+din);
+
+
+        let data=await response.json();
+        return data
+    }
+
+    async function makeTable() {
+        try {
+            await Word.run(async (context) => {
+
+                var body = context.document.body;
+                var range = context.document.getSelection();
+                var myArray = [["a", "b"], ["c", "d"]];
+                var table = range.insertTable(2, 2, "Before", myArray);
+                table.styleBuiltIn="Header";
+                // Synchronize the document state by executing the queued commands,
+                // and return a promise to indicate task completion.
+                await context.sync().then(function () {
+                    console.log('Table added before the start of the range.');
+                });;
+            });
+        }
+        catch (error) {
+           // OfficeHelpers.UI.notify(error);
+           // OfficeHelpers.Utilities.log(error);
+            console.log(error);
+        }//
+    }
+
+
+
+</script>
+
+</html>
