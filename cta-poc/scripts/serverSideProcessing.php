@@ -28,7 +28,7 @@ $url_concat='http://dotnet-dev.hc.local:5008/api/clinical-trial?drugName='.$inpu
     .'&trialEndDateFrom='.$input_study_end_from.'&trialEndDateTo='.$input_study_end_to.'&lang='.$input_lang;
 //http://dotnet-dev.hc.local/api/clinical-trial/fullsearch?count=500&lang=en&title=tt&drugName=ner&sortAsc=true
 
-
+echo $url_concat;
 curl_setopt_array($curl, array(
     CURLOPT_URL => $url_concat,
     CURLOPT_RETURNTRANSFER => true,
