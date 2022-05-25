@@ -335,13 +335,15 @@ function loadPopulation() {
                 if (!res) return;
                 let data = JSON.parse(res).data;
 
-               alert(data);
+
                 let sortedList = [];
                 let n = 1;
                 data.forEach(function (element) {
                     let option = document.createElement('option');
                     option.text = element.study_population;
                     option.value = element.study_population_id;
+                    alert(element);
+                    alert(element.study_population)
                     select.add(option, n);
                     n++;
                 })
