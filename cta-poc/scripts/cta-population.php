@@ -5,7 +5,7 @@ if(empty($lang)) $lang="en";
 $ch = curl_init();
 
 // set URL and other appropriate options
-curl_setopt($ch, CURLOPT_URL, "http://dotnet-dev.hc.local/api/clinical-trial/studypopulation?count=500&lang=".$lang);
+curl_setopt($ch, CURLOPT_URL, "http://dotnet-dev.hc.local:5008/api/clinical-trial/studypopulation?count=500&lang=".$lang);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 
 // grab URL and pass it to the browser
