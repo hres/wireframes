@@ -331,9 +331,11 @@ function loadPopulation() {
     })
         .then((response) => (response.text()))
         .then((res) => {
-            console.warn(res);
+
                 if (!res) return;
                 let data = JSON.parse(res).data;
+
+               alert(data);
                 let sortedList = [];
                 let n = 1;
                 data.forEach(function (element) {
