@@ -28,7 +28,7 @@ $encoded_vals=(http_build_query($requestData));
        .'&nolEndDate='.$input_nol_end.'&trialStartDateFrom='.$input_study_start_from.'&trialStartDateTo='.$input_study_start_to
        .'&trialEndDateFrom='.$input_study_end_from.'&trialEndDateTo='.$input_study_end_to.'&lang='.$input_lang;
 
-//http://dotnet-dev.hc.local/api/clinical-trial/fullsearch?count=500&lang=en&title=tt&drugName=ner&sortAsc=true
+ //http://dotnet-dev.hc.local/api/clinical-trial/fullsearch?count=500&lang=en&title=tt&drugName=ner&sortAsc=true
 
 curl_setopt_array($curl, array(
     CURLOPT_URL => $url_concat,
