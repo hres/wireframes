@@ -245,7 +245,7 @@ $(document).ready(function () {
 
                     if (!data && data.length < 1) return data;
                     data.forEach(element =>
-                        result.push(element["study_population"]))
+                        result.push(element["population"]))
                     var unique = new Set(result);
                     var html = "";
                     for (let item of unique.values()) {
@@ -304,7 +304,7 @@ function loadStatus() {
                 let n = 1;
                 data.forEach(function (element) {
                     let option = document.createElement('option');
-                    option.text = element.cta_status;
+                    option.text = element.status;
                     option.value = element.cta_status_id;
                     select.add(option, n);
                     n++;
@@ -340,10 +340,8 @@ function loadPopulation() {
                 let n = 1;
                 data.forEach(function (element) {
                     let option = document.createElement('option');
-                    option.text = element.study_population;
+                    option.text = element.population;
                     option.value = element.study_population_id;
-                    alert(element);
-                    alert(element.study_population)
                     select.add(option, n);
                     n++;
                 })
