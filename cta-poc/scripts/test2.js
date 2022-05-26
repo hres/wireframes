@@ -164,7 +164,11 @@ $(document).ready(function () {
             error: function (jqXHR, ajaxOptions, thrownError) {
                 //alert(thrownError + "\r\n" + jqXHR.statusText + "\r\n" + jqXHR.responseText + "\r\n" + ajaxOptions.responseText);
                 alert("Connection error with data source. Try refreshing the page.")
-            },
+            }.fail(function(jqXHR, textStatus, errorThrown) {
+                //handle error here
+                alert(xhr.status);
+                alert(thrownError);
+            }),
             "cache": false,
             "type": "POST",
             "data": function (d) {
