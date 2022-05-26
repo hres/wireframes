@@ -22,7 +22,7 @@ $input_lang=urlencode((string)$requestData['lang']);
 
 $encoded_vals=(http_build_query($requestData));
 
-    $url_concat='http://dotnet-dev.hc.local:5008/api/clinical-trial?count=500&lang=en&title=tt&drugName=ner&sortAsc=true';
+    $url_concat='http://dotnet-dev.hc.local:5008/api/clinical-trial?lang=en';
 
 //http://dotnet-dev.hc.local/api/clinical-trial/fullsearch?count=500&lang=en&title=tt&drugName=ner&sortAsc=true
 
