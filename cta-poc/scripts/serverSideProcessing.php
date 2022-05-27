@@ -44,7 +44,7 @@ curl_setopt_array($curl, array(
         'Content-Type: application/x-www-form-urlencoded'
     ),
 ));
-
+$response = curl_exec($curl);
 curl_close($curl);
 /*if(empty($response)){
     $response="{data:[]}";
