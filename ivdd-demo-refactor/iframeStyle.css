@@ -1,0 +1,11 @@
+/*
+body {
+    overflow-x:hidden;
+    height:100%; //optional, but it can't hurt.
+}*/
+iframe,
+textrarea {
+    height: max-content;
+    overflow: hidden;
+
+}
